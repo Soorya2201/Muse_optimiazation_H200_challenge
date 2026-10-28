@@ -615,6 +615,34 @@ alignment prefix ends at byte 215,216, and the compact mailbox ends at 231,600â€
 This is a concrete v32 follow-up only if H200 profiling shows the six-stage pipeline works and is
 latency-limited; preparing it earlier would violate the evidence-first measurement order.
 
+### Public-source refresh (Oct 28, 11:15 PDT; no OKC run)
+
+An authenticated GitHub code/repository search was repeated after the owner resumed the work.
+It found two recently updated, permissively licensed BF16 campaigns that were not part of the
+original leader search:
+
+- `lee101/openkernels` (Apache-2.0) publishes a long native-CUDA experiment series. Its README
+  reports a best BF16 check of **1.149x** for v11. The useful route is a single concatenated
+  hi/lo router GEMM above m32; its later C12 RS-WGMMA diagnostics are already incorporated in the
+  reduction-tail analysis above. Both aggregate evidence points are below our 1.1158x-to-v18
+  upgrade path and far below v18's published 1.518570x, so none merits an OKC check before v18.
+- `ozgureyilmaz/okc-muse-kernels` (MIT) publishes 28 BF16 variants and complete negative-result
+  notes. Its best check is **1.180353x** and scored result **1.171773x**. The composition uses
+  small-router register accumulation, concatenated hi/lo router GEMMs, FlashInfer TinyGEMM, and
+  selective DeepGEMM. Those techniques are either already represented in v18/v30 or measured
+  below the queued public baseline, so importing the file would add compile risk without a
+  plausible score advantage.
+
+The same search surfaced starter-level or lower-scoring implementations from `vjeux/okc-2026`,
+`lilaclilac09/open-kernel-challenge`, and several campaign repositories, but no public source or
+receipt from current leader `colinlikescode`. This refresh therefore changes neither attribution
+nor check order. It is negative evidence against spending scarce H200 checks on generic
+TinyGEMM/DeepGEMM/router recombinations. The reset queue remains exact v18, v30, v31, v20-v22,
+then v32; a seven-stage v32 variant remains conditional on the six-stage H200 profile.
+
+Public sources: https://github.com/lee101/openkernels and
+https://github.com/ozgureyilmaz/okc-muse-kernels.
+
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 
 Existing v5/v6: TMA a compressed ring into shared memory, decode in the consumer, and read a raw
