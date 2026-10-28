@@ -7912,12 +7912,25 @@ def prepare(weights: Weights) -> dict:
             "v29": pool.submit(_v29_build_o_ext),
             "v30": pool.submit(_v30_build_qkv_ext),
         }
-        extensions = {name: future.result() for name, future in pending.items()}
-    state["v28_qkv"] = _v28_prepare_qkv(weights["qkv_gate"], extensions["v28"])
+        extensions = {}
+        for name, future in pending.items():
+            try:
+                extensions[name] = future.result()
+            except Exception as error:
+                # The three modules are independent experiments. Keep the exact
+                # v25 fallback and every module that did build instead of losing
+                # the whole check to one speculative compile failure.
+                detail = str(error).replace("\n", " ")[-512:]
+                print(f"[v30] {name} extension unavailable: {type(error).__name__}: {detail}")
+                extensions[name] = None
+    state["v28_qkv"] = (_v28_prepare_qkv(weights["qkv_gate"], extensions["v28"])
+                         if extensions["v28"] is not None else {"ext": None, "plans": []})
     _v28_autotune(weights["qkv_gate"], state)
-    state["v29_o"] = _v29_prepare_o(weights["o"], extensions["v29"])
+    state["v29_o"] = (_v29_prepare_o(weights["o"], extensions["v29"])
+                       if extensions["v29"] is not None else {"ext": None, "plans": []})
     _v29_autotune_o(weights["o"], state)
-    state["v30_qkv"] = _v30_prepare_qkv(weights["qkv_gate"], extensions["v30"])
+    state["v30_qkv"] = (_v30_prepare_qkv(weights["qkv_gate"], extensions["v30"])
+                         if extensions["v30"] is not None else {"ext": None, "plans": []})
     _v30_autotune(weights["qkv_gate"], state)
     return state
 

@@ -153,7 +153,10 @@ v26's WR=2/4 o geometry at m1/m8 against the v28-selected route. V30 finally val
 WR=2/4 qkv32 geometry against v29. V30 now starts from v25 once and compiles those three independent
 experimental extensions concurrently, then retains the original sequential qkv16→o→qkv32 GPU
 validation and autotune order. Prefix, syntax, and mocked state/order checks pass, but H200 prepare
-time is still unmeasured. Descend v30→v29→v28 on compile/resource/prepare-time failure;
+time is still unmeasured. Each experimental build is now failure-isolated: if one module does not
+compile, v30 prints the bounded error, keeps exact v25 plus the other successful modules, and skips
+only that module's validation/autotune. Mock tests cover the success path and each of the three
+isolated failures. Descend v30→v29→v28 only on a top-level resource/prepare-time failure;
 V25 is the no-new-compilation
 fallback; V23 and v24 are isolation diagnostics only; v19 is a narrower fallback. The separately prepared
 `submission_v26_o_c12_geometry.py` keeps the exact C12 decoder but tests legal WR=2/4 `o` routes

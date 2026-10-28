@@ -308,6 +308,14 @@ Their union reaches only 1.551944x, still 5.46% below the 1.6367 leader even bef
 the demonstrated non-transfer at o M8. These techniques may complement a future winner, but they
 cannot replace the broad compression/scheduling work required for rank one.
 
+The final v30 preparation boundary now treats qkv16, o, and qkv32 extension compilation as three
+independent experiments. Previously, an exception from any one build discarded exact v25 and both
+other builds, wasting the entire check before validation or timing. V30 now records a bounded build
+error, installs an empty plan for only the failed module, and continues through the unchanged
+qkv16→o→qkv32 validation/autotune order. Python compilation, the exact v25→v28→v29→v30
+prefix chain, the normal mocked prepare path, and all three one-failure mocked paths pass. This is
+a check-efficiency safeguard, not measured H200 performance; no OKC run was consumed.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
