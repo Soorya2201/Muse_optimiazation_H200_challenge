@@ -114,8 +114,9 @@ four K slices, eliminating the intra-CTA atomic reduction without adding MMA wor
 original qkv mapping at m=1 with row partition only at m=8. Do not run more BF16 checks on
 Oct 28 under the reserved-budget policy.
 
-Final Oct 28 rank refresh: overall **#656**; MoE **#529** at 1.6329x; attention **#761** at
-1.2954x; BF16 **#1087** at 1.1158x; decode **#697** at 1.2326x; prefill **#456** at 1.1184x.
+Latest Oct 28 rank refresh after the BF16 research checkpoint: overall **#658**; MoE **#530**
+at 1.6329x; attention **#763** at 1.2954x; BF16 **#1087** at 1.1158x; decode **#698** at
+1.2326x; prefill **#458** at 1.1184x.
 Ranks are dynamic.
 
 Post-budget preparation (no additional OKC run): v13 is the planned qkv hybrid that keeps the
