@@ -1,0 +1,85 @@
+# `muse_attention_decode` optimization record
+
+The current verified submission is `submission.py` = `submission_v6.py`.
+
+## Current result and bottleneck
+
+Scored job `b38b60919dfb42e6` passed at **1.2491x** (SGLang 3,766.3 us, ours
+3,015.2 us; 95% CI 1.2304-1.2678). The identical check job
+`637b6a93b70c4f1a` saved the complete profile. As of 2026-10-27 this was rank
+#756; first place was 3.0316x.
+
+The custom fused decode kernel wins on all six decode shapes: 1.39-1.85x. It is one launch
+that performs QK norm, optional RoPE, FP8 cache store, split-KV attention, cluster/global
+merge, output norm, and gate. Full-context batch-32 decode is the longest custom phase at
+about 278 us. Its TASK floor is 126 us, so it reaches about 45% of the ideal roofline; random
+128-byte page-1 gathers make the 4.8 TB/s floor optimistic.
+
+Verify is the remaining bottleneck. At B=1 sliding verify, the custom fused kernel takes about
+12.7 us and gives 1.40x. At B=16/32, v4's custom mode-18 path took about 31/59 us and lost to
+FA3 because it processed verify tokens as separate virtual requests and reread the window.
+v6 therefore selects the custom path only for B=1 sliding verify and SGLang/FA3 for all other
+verify shapes. Full-context B=32 verify is about 391 us versus a 127 us ideal floor; FA3's
+main attention kernel is over 95% of profiled time.
+
+## Optimization inventory
+
+| Optimization | Status | Result |
+|---|---|---|
+| Fuse QK norm, RoPE, cache write, attention, output norm and gate | Tried, retained for custom shapes | Removes the baseline's multi-launch chain. |
+| FP8 E4M3 queries against the existing FP8 KV cache | Tried, retained | Allowed by the rules and passes all 16 tests. |
+| Split KV along context to fill 132 SMs | Tried, retained | Essential for batch-1 full attention. |
+| Thread-block clusters and on-chip partial merge | Tried, retained | Avoids a separate global combine when one cluster suffices. |
+| Global last-arriver merge for multiple clusters | Tried, retained | Covers 80K and 1M contexts with graph-safe counters. |
+| Deep `cp.async` gather pipeline | Tried, retained | Keeps scattered page-1 K/V requests in flight. |
+| Pair both local KV heads in one CTA | Tried, retained | Uses each 128-byte cache row as a full line. |
+| Shape-specific custom/FA3 selection | Tried in v4-v6, retained | v6 improved scored speedup from 1.2023x to 1.2491x. |
+| Treat eight verify tokens as separate virtual requests | Tried in v4, rejected for B>=16 | Re-reads the same window; only retained at B=1 where fusion wins. |
+| Pack 8 tokens x 8 query heads into one WGMMA tile | Not yet implemented | Highest-priority verify optimization. |
+| FP8 WGMMA for QK | Not yet implemented | Estimated 10-25% on verify compute; precision must be rechecked. |
+| DSMEM split-KV merge across clusters | Not yet implemented | Clusters cannot directly span GPCs; needs hierarchical design. |
+
+## Version and OKC history
+
+| Version | Job | Result | Notes |
+|---|---|---:|---|
+| v4 | `de9fbaaf2108416b` check | 1.1952x | Recovered custom cluster kernel. |
+| v4 / old `submission.py` | `41a3fc2bdbe84169` submit | 1.2023x | First scored attention result. |
+| v5 | `6f6fa502d1df4355` check | 1.2080x | FA3 for every verify shape; lost the B=1 custom win. |
+| v6 | `637b6a93b70c4f1a` check | 1.2488x | Hybrid: custom B=1 sliding verify, FA3 otherwise. |
+| v6 / current `submission.py` | `b38b60919dfb42e6` submit | **1.2491x** | Scored hybrid result. |
+
+## Novel next ideas
+
+### 1. One-read 64-row verify tile
+
+Existing: mode-18 turns each verify token into a virtual request, so eight tokens reread almost
+the same K/V window. Proposed: pack `8 tokens x 8 query heads per KV head = 64` query rows into
+one Hopper WGMMA M=64 tile. Load each K/V page once, update 64 online-softmax states, and apply
+the intra-block causal mask per row. Estimated gain: **1.5-2.5x on sliding verify and 15-35% on
+full verify**. Risk: high register/shared-memory pressure and softmax exponent throughput. Start
+with B=1 sliding, then split context across clusters for full attention.
+
+### 2. FP8 QK WGMMA plus BF16/FP16 PV
+
+Existing: the custom kernel converts cache values around warp-level MMA. Proposed: quantize the
+normalized query to E4M3 (explicitly allowed), use E4M3 x E4M3 WGMMA for QK at twice BF16 tensor
+throughput, and keep probabilities/value accumulation at higher precision. Estimated gain:
+**10-25% on verify**; decode is primarily memory-bound. Risk: medium-high because output error is
+data-dependent and every test must remain within its query-derived tolerance.
+
+### 3. Persistent page-index producer
+
+Existing: each split independently walks `seq_lens -> page_table -> cache`, paying dependent
+latency. Proposed: one producer warp per request gathers a long page-index strip into shared or
+cluster DSMEM while consumer warps issue K/V copies; double-buffer indices separately from K/V.
+Estimated gain: **5-12% on page-size-1 full attention**. Risk: medium; the producer can become a
+serialization point and DSMEM only spans one GPC.
+
+### 4. Cross-layer page-table reuse in the serving patch
+
+Existing: every attention layer rereads identical page-table entries, and the challenge flushes
+L2 only before the whole timed layer call. In whole-layer/serving code, build a compact physical-row
+schedule once per step and reuse it across the 46 sliding and 16 full layers. Estimated gain:
+**3-8% of attention time** plus reduced TLB pressure. Risk: low-medium if the schedule is built as
+normal step metadata rather than cached from fresh tensor values inside a kernel submission.
