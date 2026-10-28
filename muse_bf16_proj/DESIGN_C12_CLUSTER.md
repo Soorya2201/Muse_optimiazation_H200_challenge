@@ -78,7 +78,7 @@ device pieces instantiate together. V32 now embeds the raw-pointer Torch extensi
 pack-time tensor construction, random and multi-column one-hot GPU tests, and cold-L2 activation
 gate; none has executed on H200 yet.
 The audited generated-source SHA-256 is
-`ac7381931b8e5c18209f1d8fae06934a3fceca886aebb5162d034a70d069cc85`.
+`ae9463b3162442b80a240e1843407d2fce713052d87f0ce703d6c1db2f0433ff`.
 
 The actual PyTorch packer was also exercised on a full 4,096x8,192 CPU tensor generated as FP32
 then rounded to BF16, matching the public weight distribution. It produced exactly 50,331,648
@@ -95,11 +95,12 @@ opt-in block limit:
 
 | m | stages | bytes/stage | DSMEM reduction | modeled total | headroom |
 |---:|---:|---:|---:|---:|---:|
-| 128 | 6 | 30,720 | 17,408 | 202,912 | 29,536 |
-| 256 | 4 | 47,104 | 33,792 | 223,344 | 9,104 |
+| 128 | 6 | 30,720 | 17,408 | 201,888 | 30,560 |
+| 256 | 4 | 47,104 | 33,792 | 222,320 | 10,128 |
 
-The total includes 1,024-byte alignment, three 8-byte barriers per stage, a small fixed header,
-and the four-float padding needed by each remote accumulator row. The eight patch records and
+The total uses NVCC's emitted 1,024-byte alignment directly and includes three 8-byte barriers per
+stage, a small fixed header, and the four-float padding needed by each remote accumulator row. The
+eight patch records and
 one-byte count stay in their small global per-tile table and are consumed by the decoder before
 the decoded-ready barrier. Unpooler has no DSMEM reduction and therefore more margin.
 The m256 pooler case is tight: source generation must compute the exact dynamic allocation and

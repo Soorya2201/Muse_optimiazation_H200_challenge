@@ -126,8 +126,8 @@ void c12_pooler128(
 
   extern __shared__ __align__(1024) uint8_t raw[];
   const uint32_t raw_address = saddr(raw);
-  const uint32_t base = (raw_address + 1023u) & ~1023u;
-  uint8_t* shared = raw + (base - raw_address);
+  const uint32_t base = raw_address;
+  uint8_t* shared = raw;
   const uint32_t full = base + NSTAGE * STAGE_BYTES;
   const uint32_t decoded_ready = full + NSTAGE * 8;
   const uint32_t empty = decoded_ready + NSTAGE * 8;
@@ -324,7 +324,7 @@ static int v32_make_x_map(CUtensorMap* map, void* x) {
 int v32_launch(
     uint64_t packed, uint64_t patches, uint64_t patch_counts, uint64_t x, uint64_t output,
     int base4, uint64_t stream, int query) {
-  constexpr int dynamic_shared = 202912;
+  constexpr int dynamic_shared = 201888;
   static bool attributes_set = false;
   if (!attributes_set) {
     cudaError_t error = cudaFuncSetAttribute(

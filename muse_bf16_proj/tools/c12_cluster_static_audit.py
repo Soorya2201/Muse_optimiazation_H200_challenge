@@ -11,7 +11,7 @@ DECODED_BYTES = 8192
 X_BYTES = 16384
 NACC = 64
 REDUCTION_STRIDE = NACC + 4
-DYNAMIC_SHARED = 202912
+DYNAMIC_SHARED = 201888
 
 
 def audit_resources() -> None:
@@ -21,12 +21,11 @@ def audit_resources() -> None:
     qbar_padding = 16
     mailbox = 2 * 32 * REDUCTION_STRIDE * 4
     used_from_aligned_base = stage_ring + barrier_arrays + qbar_padding + mailbox
-    worst_alignment = 1023
     assert stage_bytes == 30720
     assert stage_ring == 184320
     assert mailbox == 17408
     assert used_from_aligned_base == 201888
-    assert used_from_aligned_base + worst_alignment == DYNAMIC_SHARED - 1
+    assert used_from_aligned_base == DYNAMIC_SHARED
 
 
 def audit_barrier_phases() -> None:
@@ -104,7 +103,7 @@ def audit_deferred_seven_stage_layout() -> None:
     assert peer_offset == 215216
     assert compact_mailbox == 16384
     assert total == 231600
-    assert DYNAMIC_SHARED + 29536 == 232448  # documented H200 opt-in limit
+    assert DYNAMIC_SHARED + 30560 == 232448  # documented H200 opt-in limit
     assert 232448 - total == 848
 
     addresses = set()
@@ -128,7 +127,7 @@ def main() -> None:
     audit_deferred_seven_stage_layout()
     print(
         "c12 cluster static audit passed: "
-        "shared=202912 reduction_tx=16384 packed=50331648 output=128x4096 "
+        "shared=201888 reduction_tx=16384 packed=50331648 output=128x4096 "
         "deferred_7stage=231600"
     )
 

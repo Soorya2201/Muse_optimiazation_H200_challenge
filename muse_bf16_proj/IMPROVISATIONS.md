@@ -96,7 +96,7 @@ is essential.
 | v29 all small-route autotune | not run | `submission_v29_all_small_autotune.py`; v28 is an exact 655,295-byte prefix and the complete file is 659,779 bytes. The appended o routes use 512/1024 threads, 256/128 CTAs, and 4,096 total warps each. Syntax, prefix, geometry, and size checks pass; its two added extension compilations versus exact v18 have not been timed on H200. |
 | v30 all-small plus qkv32 | not run | `submission_v30_all_small_qkv32.py`; v29 is an exact 659,779-byte prefix and the complete file is 666,501 bytes. Qkv32 WR=2/4 use 256/512 threads, 288/144 CTAs, and the same 2,304 total warps as v18. Its three independent NVCC builds run through the existing prepare thread-pool pattern, followed by the unchanged sequential qkv16/o/qkv32 validation and cold-L2 gates. Source anchors, syntax, mocked state/order, prefixes, geometry, and size pass; H200 preparation remains unverified. |
 | v31 pooler32 geometry | not run | `submission_v31_pooler32_geometry.py`; v19 is an exact prefix and the file is 643,310 bytes. WR=2/4 use 512/1024 threads and 128/64 CTAs, preserve 2,048 warps, and require exact/random validation, positive capacity, no local spill, and a strict timing win. |
-| v32 C12 decode-to-shared pooler128 | not run | `submission_v32_c12_cluster_pooler128.py`; its first 633,375 bytes hash exactly to public v18 (`111630ff...`). It embeds generated CUDA hash `ac738193...`, builds one six-stage bulk/TMA → decode-warpgroup → SS-WGMMA → two-CTA DSMEM pipeline, rejects patch overflow, validates random plus eight one-hot columns, and activates only after a 1%/0.08 us cold-L2 win. NVCC 13.0 compiles the complete raw-pointer host/device source at 122 registers, three barriers, and zero spills. The full representative CPU pack/roundtrip passes with max four of eight patches; H200 compilation, correctness, and timing are pending. Run only after v21/v22 establishes the uncompressed cluster baseline. |
+| v32 C12 decode-to-shared pooler128 | not run | `submission_v32_c12_cluster_pooler128.py`; its first 633,375 bytes hash exactly to public v18 (`111630ff...`). It embeds generated CUDA hash `ae9463b3...`, builds one six-stage bulk/TMA → decode-warpgroup → SS-WGMMA → two-CTA DSMEM pipeline, rejects patch overflow, validates random plus eight one-hot columns, and activates only after a 1%/0.08 us cold-L2 win. NVCC 13.0 compiles the complete raw-pointer host/device source at 122 registers, three barriers, and zero spills. The full representative CPU pack/roundtrip passes with max four of eight patches; H200 compilation, correctness, and timing are pending. Run only after v21/v22 establishes the uncompressed cluster baseline. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -561,8 +561,8 @@ register/shared WGMMA reaches 15.24/22.66/19.46 us for qkv/pooler/unpooler m128,
 uncompressed shared/shared cluster/no-reduction routes are already faster at
 13.99/20.49/19.37 us. The proposed hybrid bulk-loads C12, expands it with a decoder warpgroup into
 a swizzled BF16 shared tile, patches exact exceptions before a barrier, and retains shared/shared
-WGMMA plus cluster DSMEM reduction. Exact prototype accounting is 202,912 B at m128 and
-223,344 B at m256 for pooler, including padded remote accumulators and under the 232,448 B opt-in limit.
+WGMMA plus cluster DSMEM reduction. Exact prototype accounting is 201,888 B at m128 and
+222,320 B at m256 for pooler, including padded remote accumulators and under the 232,448 B opt-in limit.
 Uniform 20% improvement over all eight large
 dense shapes reaches 1.62272x; 25% reaches 1.65364x, so it can be a rank-one component only when
 broadly successful or combined with v30/v31. Full pipeline, exactness, resource arithmetic, and
@@ -585,7 +585,7 @@ packing roundtrip, overflow fallback, and dispatch capture all pass offline. GPU
 and H200 timing remain pending. No OKC run was consumed.
 
 The follow-up static control-flow audit is executable as `tools/c12_cluster_static_audit.py`. It
-proves the 202,912-byte allocation includes the worst 1,023-byte alignment loss, all six ring-slot
+proves the 201,888-byte aligned allocation, all six ring-slot
 phase expressions are bounded, the remote mbarrier expects exactly the 16,384 bytes sent by two
 warps, the padded DSMEM mailbox rows do not overlap, the 50,331,648-byte packed address range is
 contiguous, and the two ranks write every 128x4,096 output coordinate exactly once. NVIDIA's PTX
@@ -600,8 +600,8 @@ inferred from these scores, and the measurement order is unchanged.
 
 One additional resource result is now proved but deliberately deferred. NVCC 13.0 emits the
 dynamic array as `.extern .shared .align 1024 .b8 raw[]`; NVIDIA's PTX ISA specifies that `.align`
-aligns the array's starting address. V32's extra worst-case 1,023-byte realignment reserve is thus
-not needed by a new build. A compact mailbox indexed as
+aligns the array's starting address. V32 now uses that address directly and requests 201,888 bytes,
+removing its extra worst-case 1,023-byte realignment reserve. A compact mailbox indexed as
 `[sending warp][float4 group][lane][float4]` keeps every DSMEM transaction 16-byte aligned and
 uses 16,384 rather than 17,408 bytes. With seven stages, the ring is 215,040 bytes, the barrier and
 alignment prefix ends at byte 215,216, and the compact mailbox ends at 231,600—848 bytes below the

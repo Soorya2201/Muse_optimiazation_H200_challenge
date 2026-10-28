@@ -227,8 +227,8 @@ The resulting post-reset architecture is specified in `muse_bf16_proj/DESIGN_C12
 Instead of Madhavan's slower register/shared compressed m128 path (15.24/22.66/19.46 us for
 qkv/pooler/unpooler), decode C12 with a dedicated warpgroup into a swizzled BF16 shared tile, patch
 rare exceptions there, and preserve v18's faster shared/shared WGMMA plus cluster DSMEM epilogue
-(13.99/20.49/19.37 us). Exact prototype pooler accounting is 202,912 B at m128 and 223,344 B at
-m256, under the 232,448 B opt-in limit; m256 has 9,104 B margin.
+(13.99/20.49/19.37 us). Exact prototype pooler accounting is 201,888 B at m128 and 222,320 B at
+m256, under the 232,448 B opt-in limit; m256 has 10,128 B margin.
 Across all eight large non-router shapes,
 uniform 20% and 25% wins model to 1.62272x and 1.65364x. This is the first plausible broad rank-one
 component. Its isolated pooler-m128 implementation is prepared but unmeasured; the broader
@@ -249,7 +249,7 @@ The full compile-only pooler-m128 pipeline generator is
 decode-to-shared, SS-WGMMA, and the two-CTA DSMEM epilogue. NVCC 13.0 with explicit
 `compute_90a,sm_90a` gencode reports 122 registers, three barrier resources, zero stack, and zero
 spills. `muse_bf16_proj/submission_v32_c12_cluster_pooler128.py` now embeds that generated source
-(SHA `ac738193...`) on an exact 633,375-byte v18 prefix and adds the raw-pointer Torch wrapper,
+(SHA `ae9463b3...`) on an exact 633,375-byte v18 prefix and adds the raw-pointer Torch wrapper,
 full lossless packer, overflow fallback, random/eight-column one-hot checks, and 1%/0.08 us cold-L2
 gate. A representative full CPU pack produced 50,331,648 bytes with maximum four of eight patches
 and passed the byte-stream roundtrip; direct-BF16 RNG deliberately triggered overflow and fallback.
@@ -328,15 +328,16 @@ frontier is #1 1.6367x, #2 1.5933x, #3 1.5899x, #4 1.5893x, and #5 1.5876x. Web 
 authenticated GitHub code search for all four new #2-#5 team names and exact job IDs found no
 public kernel source or receipt, so there is no attributable implementation to reproduce.
 `muse_bf16_proj/tools/c12_cluster_static_audit.py` now guards v32's offline invariants:
-202,912-byte worst-case
+201,888-byte exact aligned
 shared-memory bound, six-slot phase reuse, exact 16,384-byte peer completion count, disjoint padded
 DSMEM mailboxes, contiguous 50,331,648-byte packed range, and one-write coverage of all 128x4,096
 outputs. It passes locally. This does not replace the pending H200 runtime check or change its order.
 
 NVCC 13.0 PTX generation was then rerun specifically for the dynamic-shared declaration and emits
 `.extern .shared .align 1024 .b8 raw[]`, consistent with NVIDIA's PTX alignment contract. This makes
-a deferred seven-stage variant statically possible without the redundant 1,023-byte realignment
-reserve: transpose the peer mailbox as `[warp][float4 group][lane][float4]`, keeping every vector
+a deferred seven-stage variant statically possible and allowed v32's redundant 1,023-byte
+realignment reserve to be removed. A future variant can transpose the peer mailbox as
+`[warp][float4 group][lane][float4]`, keeping every vector
 16-byte aligned while shrinking it from 17,408 to 16,384 bytes. Seven 30,720-byte stages, 21
 barriers, aligned qbar/peer storage, and that mailbox total 231,600 bytes, leaving 848 bytes under
 the 232,448-byte opt-in limit. The static audit proves address uniqueness and this arithmetic.
