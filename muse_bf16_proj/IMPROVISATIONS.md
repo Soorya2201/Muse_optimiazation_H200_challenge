@@ -560,8 +560,8 @@ register/shared WGMMA reaches 15.24/22.66/19.46 us for qkv/pooler/unpooler m128,
 uncompressed shared/shared cluster/no-reduction routes are already faster at
 13.99/20.49/19.37 us. The proposed hybrid bulk-loads C12, expands it with a decoder warpgroup into
 a swizzled BF16 shared tile, patches exact exceptions before a barrier, and retains shared/shared
-WGMMA plus cluster DSMEM reduction. Modeled shared memory with eight bounded patch records per
-stage is 202,080 B at m128 and 222,448 B at m256 for pooler, under the 232,448 B opt-in limit.
+WGMMA plus cluster DSMEM reduction. Exact prototype accounting is 202,912 B at m128 and
+223,344 B at m256 for pooler, including padded remote accumulators and under the 232,448 B opt-in limit.
 Uniform 20% improvement over all eight large
 dense shapes reaches 1.62272x; 25% reaches 1.65364x, so it can be a rank-one component only when
 broadly successful or combined with v30/v31. Full pipeline, exactness, resource arithmetic, and
@@ -574,6 +574,10 @@ The matching shared-memory microkernel also compiles for `sm_90a` under NVCC 13.
 one barrier resource, and zero stack/spills; PTX retains the intended shared loads/stores,
 `lop3`, `prmt`, and three synchronization points. Full pipeline integration, GPU correctness, and
 performance remain unimplemented.
+The complete compile-only pooler-m128 pipeline generator now instantiates packed bulk copies, TMA
+x, decoder, SS-WGMMA, and a two-CTA DSMEM epilogue together. NVCC 13.0/PTXAS accepts the explicit
+`compute_90a,sm_90a` target at 122 registers, three barrier resources, zero stack, and zero spills.
+Torch integration, GPU correctness, and timing remain pending.
 
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 

@@ -69,6 +69,16 @@ confirmed shared-memory loads/stores, all three `bar.sync` points, and retained 
 `prmt.b32` instructions. This compile proves device syntax and resource allocation only; it does
 not prove runtime correctness, barrier ordering inside the future three-role pipeline, or latency.
 
+`tools/c12_cluster_pooler128_source.py` now emits the first complete compile-only pipeline:
+six packed/decoded/x stages, bulk packed-weight copies, TMA x loads, the 128-thread decoder,
+shared/shared WGMMA, and the two-CTA cluster-DSMEM epilogue for pooler m128. NVCC 13.0 requires
+the explicit `-gencode=arch=compute_90a,code=sm_90a` pair for its WGMMA PTX target; with that flag,
+PTXAS reports 122 registers, three barrier resources, zero stack, and zero spills. This proves all
+device pieces instantiate together, but the source still lacks its Torch wrapper, pack-time tensor
+construction, GPU correctness tests, and timing gate.
+The audited generated-source SHA-256 is
+`7ca033c0bc8860edc84a90c46bda38af921049fa4f6df6cbbbce21954a7d34ce`.
+
 ## Static H200 resource bound
 
 For the first pooler route (`NR=64`, cluster split two), the proposed stage counts fit the 227 KiB
@@ -76,11 +86,13 @@ opt-in block limit:
 
 | m | stages | bytes/stage | DSMEM reduction | modeled total | headroom |
 |---:|---:|---:|---:|---:|---:|
-| 128 | 6 | 30,720 | 16,384 | 202,080 | 30,368 |
-| 256 | 4 | 47,104 | 32,768 | 222,448 | 10,000 |
+| 128 | 6 | 30,720 | 17,408 | 202,912 | 29,536 |
+| 256 | 4 | 47,104 | 33,792 | 223,344 | 9,104 |
 
 The total includes 1,024-byte alignment, three 8-byte barriers per stage, a small fixed header,
-and eight 32-bit patch slots per stage. Unpooler has no DSMEM reduction and therefore more margin.
+and the four-float padding needed by each remote accumulator row. The eight patch records and
+one-byte count stay in their small global per-tile table and are consumed by the decoder before
+the decoded-ready barrier. Unpooler has no DSMEM reduction and therefore more margin.
 The m256 pooler case is tight: source generation must compute the exact dynamic allocation and
 reject anything over the device-reported opt-in limit. Do not add another full decoded stage.
 

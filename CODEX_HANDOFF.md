@@ -227,8 +227,8 @@ The resulting post-reset architecture is specified in `muse_bf16_proj/DESIGN_C12
 Instead of Madhavan's slower register/shared compressed m128 path (15.24/22.66/19.46 us for
 qkv/pooler/unpooler), decode C12 with a dedicated warpgroup into a swizzled BF16 shared tile, patch
 rare exceptions there, and preserve v18's faster shared/shared WGMMA plus cluster DSMEM epilogue
-(13.99/20.49/19.37 us). Static pooler accounting with eight bounded patch records per stage is
-202,080 B at m128 and 222,448 B at m256, under the 232,448 B opt-in limit; m256 has 10,000 B margin.
+(13.99/20.49/19.37 us). Exact prototype pooler accounting is 202,912 B at m128 and 223,344 B at
+m256, under the 232,448 B opt-in limit; m256 has 9,104 B margin.
 Across all eight large non-router shapes,
 uniform 20% and 25% wins model to 1.62272x and 1.65364x. This is the first plausible broad rank-one
 component, but it is not implemented or measured. Do not move it ahead of v18/v30/v31/v20-v22;
@@ -242,6 +242,11 @@ The matching standalone shared-memory device contract is
 `sm_90a` at 22 registers, one barrier resource, zero stack, and zero spills; PTX shows shared
 loads/stores, three `bar.sync` points, and the intended `lop3`/`prmt` decode. Full cluster-pipeline
 integration, runtime correctness, and H200 timing are still pending.
+The full compile-only pooler-m128 pipeline generator is
+`muse_bf16_proj/tools/c12_cluster_pooler128_source.py`. It combines six-stage bulk/TMA input,
+decode-to-shared, SS-WGMMA, and the two-CTA DSMEM epilogue. NVCC 13.0 with explicit
+`compute_90a,sm_90a` gencode reports 122 registers, three barrier resources, zero stack, and zero
+spills. It still needs a Torch wrapper, prepared tensors, GPU correctness, and cold-L2 gating.
 
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
