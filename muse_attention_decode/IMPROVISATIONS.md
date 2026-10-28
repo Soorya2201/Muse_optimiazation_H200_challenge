@@ -51,6 +51,9 @@ main attention kernel is over 95% of profiled time.
 | v7 | `4cc63346dc924fdd` check | 1.2091x | Existing L8 kernel correctly reused each K/V tile across 64 query rows, but the all-resident planner forced C2 with 8/4 cross-cluster merges; B16/B32 sliding verify regressed to 38.95/49.26 us. |
 | v8 | `f8057bf43de7434a` check | 1.1911x | Natural C16/C8 clusters avoided global combine but synchronization and queued tails worsened B16/B32 sliding verify to 48.67/56.12 us; rejected. |
 | v9 | `6c982f5b856040ad` check | 1.2237x | One-wave C8/C4 plans reduced B16 to 35.07 us paired/32.1 us profiled, but B32 remained 49.84/46.9 us; both still lost to v6 FA3 at 29.33/34.61 us. |
+| v10 | `956826766cad4fed` check | 1.2177x | Replacing C8/C4 with C2 reduced B32's profile to 38.6 us, but B16 rose to 34.2 us; paired 39.84/48.29 us confirmed merge overhead still leaves both behind FA3. |
+| v11 | `ba1b8a40f6bd454c` check | 1.1848x | Five cp.async stages globally forced C2 plans and hurt sliding/B1, but improved B16/B32 full decode paired times by 17.45/42.57 us. The next variant specializes NST5 to those two shapes. |
+| v12 | `50948bd6edc344dc` check | **1.3012x** | Hybrid NST4/NST5 retained every v6 dispatch and used five stages only for B16/B32 full decode, cutting them to 129.49/237.95 us paired. CI 1.2816-1.3277 clears v6 and qualifies for submit. |
 
 ## Novel next ideas
 
