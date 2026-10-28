@@ -160,9 +160,10 @@ bridge rather than a rank-one design. Prefix, syntax, C12 layout emulation, and 
 checks pass. The isolated four-kernel device translation unit also compiles cleanly through NVCC
 13.0 for sm_90a: 32-40 registers, one barrier, 24-72 B static shared memory, and zero stack or
 spills. A second pass compiled the entire CUDA translation unit against a minimal ATen API stub,
-covering its host wrappers and launches too. The real PyTorch binding, runtime correctness, H200
-timing, and full prepare duration remain unmeasured. Each experimental build is failure-isolated:
-if one module does not
+covering its host wrappers and launches too. The exact generated pybind wrapper also syntax-compiled,
+linked, imported, and exported both functions against the installed real Torch 2.8/Python 3.9
+headers and libraries. Judge Torch 2.14 CUDA integration, runtime correctness, H200 timing, and full
+prepare duration remain unmeasured. Each experimental build is failure-isolated: if one module does not
 compile, v30 prints the bounded error, keeps exact v25 plus the other successful modules, and skips
 only that module's validation/autotune. Mock tests cover the success path and each of the three
 original failures plus the fourth M1 failure. Descend v30→v29→v28 only on a top-level

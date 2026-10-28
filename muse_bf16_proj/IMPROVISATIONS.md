@@ -385,6 +385,17 @@ overload; after matching the real interface, NVCC compiled every host wrapper, s
 and device specialization cleanly and reproduced the same ptxas resources. This adds host-wrapper
 syntax coverage, but deliberately does not claim PyTorch ABI or generated pybind coverage.
 
+The installed CPU-only Torch 2.8 package supplied real C++ and pybind headers for the remaining
+binding audit. `load_inline` generated the exact wrapper source but could not invoke a compiler
+because Ninja is not installed; no package was installed or environment changed. Compiling that
+generated source directly initially exposed two audit-command omissions—the matching Python 3.9
+header path and Ninja's usual `TORCH_EXTENSION_NAME` define. With those standard flags restored,
+Apple clang syntax-compiled and linked the wrapper against real `libtorch`, `libtorch_cpu`,
+`libtorch_python`, and `libc10`; Python imported it and found both `v30m1_cgemv` and
+`v30m1_rgemv` callables. This validates the exact prototypes, Torch tensor type casters, pybind
+generation, symbol naming, linking, and module loading on Torch 2.8. The judge uses Torch 2.14 with
+CUDA, so its full extension build and execution remain the authoritative gate.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
