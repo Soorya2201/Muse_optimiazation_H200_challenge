@@ -237,6 +237,11 @@ Its CPU contract now lives at `muse_bf16_proj/tools/c12_cluster_emulator.py`: se
 all 65,536 BF16 patterns, 20,480 patch-field cases, 4,096 normal-like tiles sharing one calibrated
 base (median 0, p99 2, max 4 patches; capacity 8), adversarial inputs, and the 128-byte swizzle.
 This proves the pack/decode semantics only; the CUDA kernel and H200 timing remain pending.
+The matching standalone shared-memory device contract is
+`muse_bf16_proj/tools/c12_cluster_decoder.cu`. Compiler Explorer NVCC 13.0 compiled it for
+`sm_90a` at 22 registers, one barrier resource, zero stack, and zero spills; PTX shows shared
+loads/stores, three `bar.sync` points, and the intended `lop3`/`prmt` decode. Full cluster-pipeline
+integration, runtime correctness, and H200 timing are still pending.
 
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while

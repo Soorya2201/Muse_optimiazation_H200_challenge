@@ -570,7 +570,10 @@ reset baseline checks.
 The offline contract is now executable: `tools/c12_cluster_emulator.py` passed exhaustive BF16
 bits, every patch-field boundary, 4,096 fixed-global-base normal-like tiles, adversarial values,
 and the WGMMA swizzle. The sampled patch maximum was four versus the reserved capacity eight.
-CUDA instruction mapping and performance remain unimplemented.
+The matching shared-memory microkernel also compiles for `sm_90a` under NVCC 13.0 at 22 registers,
+one barrier resource, and zero stack/spills; PTX retains the intended shared loads/stores,
+`lop3`, `prmt`, and three synchronization points. Full pipeline integration, GPU correctness, and
+performance remain unimplemented.
 
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 

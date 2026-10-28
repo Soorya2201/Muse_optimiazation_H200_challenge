@@ -59,6 +59,16 @@ swizzle roundtrip. The normal-like tiles had median zero, p99 two, and maximum f
 exceeded the eight-record capacity. This proves the proposed 6,144-byte input and 8,192-byte
 decoded layout in CPU semantics, not CUDA instruction mapping or H200 performance.
 
+`tools/c12_cluster_decoder.cu` is the matching standalone device contract: one 128-thread
+warpgroup decodes four groups per thread directly into the swizzled tile, then applies up to eight
+packed high-byte XOR patches in place. It exists to compile and inspect the exact Hopper device
+mapping before that code is embedded in the cluster pipeline; it is not a timed kernel candidate.
+Compiler Explorer's NVCC 13.0 accepted it with `-O3 -std=c++20 -arch=sm_90a -c -Xptxas=-v`:
+22 registers, one barrier resource, zero stack, and zero spill loads/stores. A separate PTX build
+confirmed shared-memory loads/stores, all three `bar.sync` points, and retained `lop3.b32` and
+`prmt.b32` instructions. This compile proves device syntax and resource allocation only; it does
+not prove runtime correctness, barrier ordering inside the future three-role pipeline, or latency.
+
 ## Static H200 resource bound
 
 For the first pooler route (`NR=64`, cluster split two), the proposed stage counts fit the 227 KiB
