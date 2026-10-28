@@ -57,7 +57,7 @@ is essential.
 | v27 qkv16 clustered CTA geometry | Prepared, untested | Keeps v18's exact C12 decode and four-block cluster reduction while changing WR=1→2/4. All variants execute 2,304 warps, but the grid falls from 576 to 288/144 CTAs. Candidate-specific launch bounds, no-local-spill checks, exhaustive one-hot/random validation, and the conservative timing gate protect fixed v18. |
 | v28 history/cross + qkv16 | Prepared, untested | Primary post-v18 candidate. Runs v25 first, then compares validated WR=2/4 qkv16 routes against v25's selected qkv16 winner. Thus one check can retain history/cross and geometry gains independently; every other route remains v25/fixed-v18. |
 | v29 all small-route autotune | Prepared, untested | Adds v26's independently gated o m1/m8 geometry after v28. One check can retain history/cross, qkv16, and o gains shape by shape. V28 remains the single-new-extension fallback if the second compilation threatens prepare time. |
-| v30 all-small plus qkv32 | Prepared, untested | Adds WR=2/4 qkv32 geometry after v29, targeting a 12.16 us route with an 8.0 us stated floor. Its three independent experimental extensions now compile concurrently before the original sequential validation/autotune order. This is the maximal check-efficient candidate; v29→v28→v25 form the staged fallback ladder. |
+| v30 all-small plus qkv32 | Prepared, untested | Adds the spill-free WR4 qkv32 geometry after v29, targeting a 12.16 us route with an 8.0 us stated floor. Offline NVCC rejected WR2's 32-byte local spill before H200 measurement. Its independent experimental extensions compile concurrently before the original sequential validation/autotune order. This is the maximal check-efficient candidate; v29→v28→v25 form the staged fallback ladder. |
 | v31 pooler32 geometry | Prepared, untested | Isolated WR=2 test on v18's no-reduction C12 route: 128 CTAs versus 256, with 2,048 total warps unchanged. NVCC proved WR4 spills 104 local bytes per thread, so it was removed before H200 measurement. Kept outside v30 until measured. |
 | v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 | v21 cluster-dense m128/m256 | Prepared, untested | Extends v20 with v18's dormant TM256 WGMMA schedule. Two generated modules independently gate pooler/unpooler at m128 and m256, retaining captured outputs during graph timing. All four routes use 128 CTAs and fit Hopper's dynamic shared-memory limit; any non-winning route falls back to v19. |
@@ -94,7 +94,7 @@ is essential.
 | v27 qkv16 clustered CTA geometry | not run | `submission_v27_qkv16_c12_geometry.py`; v19 is an exact 637,846-byte prefix. Generated WR=2/4 instances use 256/512 threads, 288/144 CTAs, 2,304 total warps, and 8,192/16,384 bytes of reduction storage. Source-anchor, geometry, syntax, and size checks pass; CUDA/H200 evidence is pending. |
 | v28 history/cross + qkv16 | not run | `submission_v28_history_cross_qkv16.py`; v25 is an exact 649,127-byte prefix and the complete file is 655,295 bytes. The overlay validates and gates qkv16 against v25 after its 52-graph search. Exact v18's published 53.8 s cold prepare leaves headroom under the 300 s prepare limit, but combined H200 preparation and timing remain unverified. |
 | v29 all small-route autotune | not run | `submission_v29_all_small_autotune.py`; v28 is an exact 655,295-byte prefix and the complete file is 659,779 bytes. The appended o routes use 512/1024 threads, 256/128 CTAs, and 4,096 total warps each. Syntax, prefix, geometry, and size checks pass; its two added extension compilations versus exact v18 have not been timed on H200. |
-| v30 all-small plus qkv32 | not run | `submission_v30_all_small_qkv32.py`; v29 is an exact 659,779-byte prefix and the complete file is 682,082 bytes after the isolated public-M1 module. Qkv32 WR=2/4 use 256/512 threads, 288/144 CTAs, and the same 2,304 total warps as v18. Its four independent NVCC builds run through the existing prepare thread-pool pattern, followed by the unchanged sequential qkv16/o/qkv32/M1 validation and cold-L2 gates. Source anchors, syntax, mocked state/order, prefixes, geometry, and size pass; H200 preparation remains unverified. |
+| v30 all-small plus qkv32 | not run | `submission_v30_all_small_qkv32.py`; v29 is an exact 659,779-byte prefix and the complete 681,934-byte file includes the isolated public-M1 module. Retained qkv32 WR4 uses 512 threads and 144 CTAs, preserves the original 2,304 total warps, and compiles at 101 registers with zero stack/spills. WR2 compiled with 32-byte spill stores/loads and was removed. Its four independent NVCC builds run through the existing prepare thread-pool pattern, followed by sequential qkv16/o/qkv32/M1 validation and cold-L2 gates. Source anchors, syntax, mocked state/order, prefixes, geometry, and size pass; H200 preparation remains unverified. |
 | v31 pooler32 geometry | not run | `submission_v31_pooler32_geometry.py`; v19 is an exact prefix. The retained WR2 plan uses 512 threads and 128 CTAs, preserves 2,048 warps, compiles at 90 registers with zero reported stack, and requires exact/random validation, positive capacity, no local spill, and a strict timing win. WR4's 1,024-thread instantiation compiled at the architectural 64-register ceiling with 104 local bytes per thread and was removed. |
 | v32 C12 decode-to-shared pooler128 | not run | `submission_v32_c12_cluster_pooler128.py`; its first 633,375 bytes hash exactly to public v18 (`111630ff...`). It embeds generated CUDA hash `ae9463b3...`, builds one six-stage bulk/TMA → decode-warpgroup → SS-WGMMA → two-CTA DSMEM pipeline, rejects patch overflow, validates random plus eight one-hot columns, and activates only after a 1%/0.08 us cold-L2 win. NVCC 13.0 compiles the complete raw-pointer host/device source at 122 registers, three barriers, and zero spills. The full representative CPU pack/roundtrip passes with max four of eight patches; H200 compilation, correctness, and timing are pending. Run only after v21/v22 establishes the uncompressed cluster baseline. |
 
@@ -229,9 +229,9 @@ but it compiles a second new extension; v28 is deliberately retained as the fall
 the 300-second prepare ceiling or exposes a resource/compilation issue.
 
 V30 applies the qkv16 geometry hypothesis to qkv32, whose v18 time is 12.16 us against the 8.0 us
-stated floor. The original and WR=2/4 variants all execute 2,304 warps, but use 576/288/144 CTAs.
-The new plans retain exact C12 decode and split-4 cluster reduction, reject local spill, reproduce
-all 8,192 columns exactly, and validate random m=9,16,17,24,32 inputs. They are compared against
+stated floor. The original and retained WR4 variants both execute 2,304 warps, but use 576/144 CTAs.
+WR4 retains exact C12 decode and split-4 cluster reduction, rejects local spill, reproduces
+all 8,192 columns exactly, and validates random m=9,16,17,24,32 inputs. It is compared against
 v29's already-selected qkv32 route. V30 is the maximal combined candidate; if its third extension
 causes compilation or prepare-time trouble, descend through v29, v28, then no-compile v25. To
 reduce that risk, v30 now starts from v25 once, compiles the qkv16, o, and qkv32 extensions in
@@ -239,6 +239,12 @@ parallel using the already-established prepare pool, and only then performs the 
 validation and autotune sequence on the main CUDA stream. A mocked call-order test proves that
 the same state keys and qkv16→o→qkv32 timing dependencies are preserved; only build wall time can
 change.
+
+Offline NVCC 13 compilation of V28, V29, and V30's complete geometry translation units found both
+qkv16 variants spill-free at 77/80 registers, both o variants spill-free at 49 registers, and qkv32
+WR4 spill-free at 101 registers. Qkv32 WR2 used 80 registers but emitted a 32-byte stack frame with
+32-byte spill stores and loads; because the runtime attribute gate would reject it, WR2 was removed
+before H200 measurement.
 
 V31 isolates pooler m32 rather than burdening v30 with a fourth extension. V18's no-reduction C12
 route uses 256 CTAs × 256 threads; WR=2 gives a near one-wave 128-CTA grid and WR=4 deliberately

@@ -150,7 +150,8 @@ three range-validated cross-small C12 plans: 52 graphs over 23 changed
 shapes, fixed v18 elsewhere, and a 1%/0.08 us activation gate, then independently validates and
 gates v27's WR=2/4 qkv16 geometry against the v25-selected route. V29 then independently tests
 v26's WR=2/4 o geometry at m1/m8 against the v28-selected route. V30 finally validates and gates
-WR=2/4 qkv32 geometry against v29. V30 now starts from v25 once and compiles those three independent
+the spill-free WR4 qkv32 geometry against v29. Offline NVCC proved WR2 emits 32-byte spill
+stores/loads, so it was removed before H200 measurement. V30 now starts from v25 once and compiles those three independent
 experimental extensions concurrently, then retains the original sequential qkv16→o→qkv32 GPU
 validation and autotune order. A fourth independently compiled module now adds only the public
 Madhavan profile's strongest m1 routes: lossless direct C12 qkv/o/unpooler and exact-FP32 router.
@@ -375,7 +376,9 @@ parses every queued candidate, verifies every problem marker, checks the v19→v
 v21→v22, v23→v25→v28→v29→v30, v19→v31, and v18→v32 byte-prefix contracts, proves live
 `submission.py` still equals archived v3, checks the authenticated v18 hash, and verifies v32's
 embedded CUDA byte-for-byte against generator stdout and its declared SHA. This is structural
-preflight only; it cannot replace H200 compilation, correctness, or timing.
+preflight also locks V30 to spill-free qkv32 WR4 and V31 to spill-free pooler32 WR2 so the removed
+compile-known spill paths cannot silently return. It cannot replace H200 compilation, correctness,
+or timing.
 Descend v29/v28/v25 only after an actual top-level resource or prepare-time failure. No OKC run was
 used.
 

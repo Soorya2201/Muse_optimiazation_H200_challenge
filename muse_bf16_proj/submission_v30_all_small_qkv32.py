@@ -7794,7 +7794,7 @@ def kernel_fn(data: Inputs, state: dict) -> torch.Tensor:
 
 # v30: retain v29, then test fewer/larger CTAs for the exact C12 qkv m=32 route.
 _V30_BASE_PREPARE, _V30_BASE_KERNEL = prepare, kernel_fn
-_V30_GEOMETRIES = (("wr2", (2, 4, 8, 4)), ("wr4", (4, 4, 8, 4)))
+_V30_GEOMETRIES = (("wr4", (4, 4, 8, 4)),)
 
 
 def _v30_cuda_source():
@@ -7805,8 +7805,7 @@ def _v30_cuda_source():
     src = src.replace(bounds, "__launch_bounds__(NTMAX,(NTMAX==128?5:(NTMAX==256?3:1)))")
     old = """case 0:return m32x_q_launch_t<1,4,1,1,5,0,128,0,2304,8192,1,4,8,4,7,1,0>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);
 case 1:return m32x_q_launch_t<0,4,1,1,5,0,128,0,2304,8192,1,4,8,4,7,1,0>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);"""
-    new = """case 0:return m32x_q_launch_t<1,4,1,1,5,0,256,0,2304,8192,2,4,8,4,7,1,0>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);
-case 1:return m32x_q_launch_t<1,4,1,1,5,0,512,0,2304,8192,4,4,8,4,7,1,0>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);"""
+    new = """case 0:return m32x_q_launch_t<1,4,1,1,5,0,512,0,2304,8192,4,4,8,4,7,1,0>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);"""
     if src.count(old) != 1:
         raise RuntimeError("v30 instance anchor drift")
     return src.replace(old, new)

@@ -98,12 +98,30 @@ def audit_v32_payload() -> None:
     print(f"v32 CUDA ok: {declared_sha} ({len(generated):,} bytes)")
 
 
+def audit_pruned_geometries() -> None:
+    expected = {
+        "submission_v30_all_small_qkv32.py": (
+            "_V30_GEOMETRIES",
+            (("wr4", (4, 4, 8, 4)),),
+        ),
+        "submission_v31_pooler32_geometry.py": (
+            "_V31_GEOMETRIES",
+            (("wr2", (2, 8, 16, 1)),),
+        ),
+    }
+    for relative, (name, value) in expected.items():
+        tree = ast.parse((TRACK / relative).read_text())
+        assert assignment(tree, name) == value, f"compile-known spill geometry returned: {relative}"
+        print(f"pruned geometry ok: {relative} {value}")
+
+
 def main() -> None:
     audit_queue()
     audit_prefixes()
     audit_live_submission()
     audit_v18()
     audit_v32_payload()
+    audit_pruned_geometries()
     print("BF16 reset preflight passed")
 
 
