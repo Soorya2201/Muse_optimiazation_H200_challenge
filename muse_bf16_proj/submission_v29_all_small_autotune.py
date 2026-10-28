@@ -7582,13 +7582,18 @@ case 1:return r3_qkv16_qkv_gate_push_d9_cap6_a_m32x_q_launch_t<1,2,1,1,5,0,512,0
     return src.replace(old, new)
 
 
-def _v28_prepare_qkv(weight):
+def _v28_build_ext():
     src = _v28_cuda_source()
-    ext = load_inline("v28_qkv16_" + hashlib.sha256(src.encode()).hexdigest()[:12],
+    return load_inline("v28_qkv16_" + hashlib.sha256(src.encode()).hexdigest()[:12],
         b2q_tt_v10_m32x__Q_CPP, cuda_sources=src,
         functions=["r3_qkv16_qkv_gate_push_d9_cap6_a_m32x_q_launch"],
         extra_cuda_cflags=["-O3", "-lineinfo", "-gencode=arch=compute_90a,code=sm_90a"],
         no_implicit_headers=True, with_pytorch_error_handling=False, verbose=False)
+
+
+def _v28_prepare_qkv(weight, ext=None):
+    if ext is None:
+        ext = _v28_build_ext()
     packed = b2q_tt_v10_m32x_m32x_pack_format(weight, 1, 0, 5)
     plans = []
     if packed is None:
@@ -7691,10 +7696,16 @@ _V29_O_GEOMETRIES = (
 )
 
 
-def _v29_prepare_o(weight):
+def _v29_build_o_ext():
     instances = [inst for _, inst, _ in _V29_O_GEOMETRIES]
     digest = hashlib.sha256(repr(instances).encode()).hexdigest()[:12]
-    ext = v18s_build(instances, "v29_o_c12_" + digest)
+    return v18s_build(instances, "v29_o_c12_" + digest)
+
+
+def _v29_prepare_o(weight, ext=None):
+    instances = [inst for _, inst, _ in _V29_O_GEOMETRIES]
+    if ext is None:
+        ext = _v29_build_o_ext()
     ids = {inst: i for i, inst in enumerate(instances)}
     packs, streams, plans = {}, {}, []
     for name, inst, cfg in _V29_O_GEOMETRIES:
