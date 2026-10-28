@@ -426,6 +426,19 @@ use v29/v28/v25 only if the judge reports an actual top-level prepare/resource f
 v18 and v30 pass local Python compilation, and the vendored v18 SHA-256 remains
 `111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`. No OKC run was consumed.
 
+A separate timed-path compliance audit started from the final `kernel_fn` and inspected only its
+reachable new v28-v30 helpers. Dispatch depends on `config` shape/layer metadata and immutable
+prepare-time choices; it never reads activation values on the host. `_v30_launch` and
+`_v30m1_launch` allocate only their returned output tensors and call the selected extension on the
+current CUDA stream, matching the graph-capturable allocation pattern already used by judged v18.
+The M1 CUDA/host translation unit contains zero device/stream synchronizations, `cudaMalloc`,
+`cudaFree`, `cudaMemcpy`, `printf`, or host I/O. Its `TORCH_CHECK`s inspect tensor shapes, and its
+`C10_CUDA_KERNEL_LAUNCH_CHECK`s report immediate host launch status without waiting for GPU work.
+All weight inspection, integer conversion, lossless-pack proof, correctness evaluation, event
+timing, synchronization, and printing remain inside `prepare()`. The new projection routes retain
+BF16 activations and reconstruct exact BF16 weights; the router reads the original FP32 weights and
+returns FP32. No OKC run was consumed.
+
 An Oct 28 authenticated GitHub code-search refresh found no public repository belonging to any of
 the current top-five BF16 teams. It did surface two previously unrecorded lower-scoring artifacts.
 `PostTrainLLM/posttrainllm` commit `07897a4d0d5d99b9eb63ea3b49fc71df43159749` publishes an exact

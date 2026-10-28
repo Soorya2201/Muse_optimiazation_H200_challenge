@@ -293,6 +293,14 @@ and v30, and exact v18's SHA remains `111630ff363e5988ca57f28434a2e1a7e9c1d52407
 Descend v29/v28/v25 only after an actual top-level resource or prepare-time failure. No OKC run was
 used.
 
+V30's final timed dispatch also passed a focused rules audit. Its new branches use only public shape
+metadata and immutable prepare choices. The two launch helpers allocate only their returned output
+and enqueue on the current stream. The M1 translation unit has no synchronize, CUDA allocation,
+memcpy, printing, I/O, or activation-value host read; shape guards and immediate launch-status
+checks are host-only and graph-safe. Packing, correctness checks, timing, synchronization, and logs
+are confined to `prepare()`. BF16 projection weights are reconstructed exactly, activations remain
+BF16, and the router reads original FP32 weights. No OKC run was used.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
