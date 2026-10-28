@@ -339,6 +339,24 @@ times: qkv m1 8.59 us, qkv m32 11.22 us, unpooler m1 2.87 us, and router m1 3.32
 duplicating v30's qkv32 search and turns the source into a targeted attributed follow-up rather than
 another broad speculative check. No OKC run was used for this audit.
 
+The public qkv-m32 route was then audited down to its exact `qkv32_r208` specialization. It owns
+24 output rows per CTA, launches 96 CTAs of 288 threads (four consumer warps, one producer warp,
+and four escape-correction warps), and processes eight 64-column units per stage. Each stage is
+51,200 bytes: 32,768 bytes of activations plus 18,432 bytes of compressed weights. A 208 KiB ring
+fits four stages; barriers, correction buffers, the escape table, and the zero row bring the exact
+dynamic-shared-memory requirement to **219,552 bytes per CTA**. The route is CL=1, so it avoids a
+cross-CTA reduction, and its row-balancing permutation evens escape work across the 96 CTAs.
+
+This is not a small geometry transplant. A standalone extraction needs roughly 41 KiB of CUDA
+common/mbarrier/TMA/kernel code plus its packing, row balancing, escape-table construction, tensor
+map, and launch wrapper. For comparison, v30's already prepared qkv-m32 CUDA module is about 35 KiB
+and tests 256- and 512-thread direct C12 geometries. Adding the public route before measuring v30
+would create a fifth extension build, increase concurrent compiler memory pressure, and duplicate
+the same shape without evidence that v30 misses the 11.22 us public threshold. Defer it as a
+post-v30 isolated candidate: add it only if v30's selected qkv-m32 time is above 11.22 us (allowing
+for cross-run noise), or if v30's qkv module fails while the rest of v30 succeeds. No OKC run was
+used for this audit.
+
 The targeted follow-up is now folded into hardened v30 rather than left as a plan. One new
 independent extension contains the Apache-attributed public M1 kernels only: row-major lossless C12
 GEMV for qkv, o, and the 1,024-row unpooler slice, plus the original-FP32 router GEMV. Pooler M1 is

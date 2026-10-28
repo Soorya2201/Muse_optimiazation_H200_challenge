@@ -260,6 +260,21 @@ strongest public thresholds—qkv m1 8.59 us, qkv m32 11.22 us, unpooler m1 2.87
 3.32 us. The three M1 thresholds are now represented directly in v30; qkv m32 remains covered by
 v30's independent geometry search. This evidence does not displace exact v18 or v30 at the reset.
 
+The public qkv-m32 signal was audited more deeply without consuming an OKC run. Its exact
+`qkv32_r208` route launches 96 CTAs of 288 threads, uses four consumer warps plus one producer and
+four correction warps, and fits four 51,200-byte stages in a 208 KiB ring. Including barriers,
+correction buffers, the escape table, and the zero row, it requests 219,552 bytes of dynamic shared
+memory per CTA. The standalone path requires about 41 KiB of CUDA plus nontrivial TMA tensor-map,
+row-balancing, packing, and escape-table machinery; v30's existing qkv-m32 module is already about
+35 KiB and tests two direct C12 geometries. Do not add this as a fifth pre-reset build. Isolate it
+after v30 only if v30's selected qkv-m32 time fails to reach the public 11.22 us threshold (allowing
+for cross-run noise), or if only v30's qkv extension fails to build. The measurement order is
+unchanged.
+
+Read-only board refresh after this audit: overall **#664**; MoE **#536** at 1.6329x;
+attention **#770** at 1.2954x; BF16 **#1092** at 1.1158x; decode **#704** at 1.2326x;
+prefill **#467** at 1.1184x. Prefill remains a separate board, and all ranks are dynamic.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
