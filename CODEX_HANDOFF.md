@@ -130,10 +130,20 @@ in `muse_bf16_proj/IMPROVISATIONS.md`.
 `submission_v14_direct_compressed.py` implements an original simplified version for qkv/pooler
 m=1/8 only. CPU tests prove its 12-bit packed-fragment layout and sparse corrections reconstruct
 the BF16 weights exactly; Python syntax and diff checks pass. It has not compiled or run on CUDA.
-At the next BF16 budget reset, check v14 before v13 because its expected upside is much larger.
-If it fails compilation/correctness, fix v14 in-place as the same experiment and log the run. If
-it passes and strictly improves, extend the same direct engine to o and m=16 using the public
-configuration table. Keep `submission.py` untouched until a qualifying check passes.
+
+The exact newer public v18 source was subsequently found at `NathenFernandes/muse-bf16-proj`
+and vendored, with MIT license and result evidence, under `muse_bf16_proj/upstream_nathen_v18/`.
+Source SHA-256 `111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`
+matches its manifest. Published judge job `66d8b007f6c641ee` passed 9/9 at **1.518570x**
+(CI 1.4958-1.5413); this repository historically reached #1, though v18 did not beat
+the current 1.6367x leader. It is much stronger than our simplified v14 and adds stream-ordered
+per-warp escape patches, WGMMA/TMA/cluster routes, pinned cuBLASLt plans, and better router paths.
+
+At the next BF16 budget reset, first check
+`muse_bf16_proj/upstream_nathen_v18/submission.py` byte-for-byte. If it reproduces a strict win,
+promote and submit it with attribution, then use remaining checks to improve its documented weak
+shapes. If environment drift makes it fail, diagnose that exact artifact before falling back to
+v14 and then v13. Keep the current `submission.py` untouched until a qualifying check passes.
 
 #### Oct 28 prefill continuation
 

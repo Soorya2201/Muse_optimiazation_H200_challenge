@@ -44,6 +44,8 @@ is essential.
 | Per-warp shared partials instead of atomics | Tried, rejected | Explicit partial stores and epilogue summation regressed to 1.0986x; Hopper shared atomics were cheaper. |
 | Row-partitioned qkv consumers | Tried, promising only for m=8 | Removed intra-CTA atomics with unchanged MMA count; v12 reached 1.1179x and profiled qkv m8 at 11.7 us, but m1/aggregate did not strictly beat v3. Next specialize only m8. |
 | Direct global-load compressed GEMV | Prepared, untested | v14 targets qkv/pooler m1/m8 with 16 streaming warps, one prefetched 64-K group per warp, 12-bit fragment decode, and a seventeenth exact-correction warp. Await the next reserved check window. |
+| Nathen Fernandes v18 public kernel | Vendored, awaiting our check | Exact MIT-licensed judged artifact: 1.5186x, 9/9, CI 1.4958-1.5413 (`66d8b007f6c641ee`). It combines stream-ordered exact C12 GEMV, per-warp in-register escape patches, WGMMA/TMA/cluster kernels, a scalar FP32 router specialization, and pinned cuBLASLt plans. |
+| vjeux public BF16 kernel | Researched, not queued | The public `vjeux/okc-2026` source is architecturally advanced, but its authoritative leaderboard entry is 1.5014x at rank 173 (`08c28ade42034919`), below Nathen v18's 1.5186x/rank 121. Do not spend the first reset check on it. |
 
 ## Version and OKC history
 
@@ -64,6 +66,7 @@ is essential.
 | v12 qkv row partition | `f73b3d06dcef4761` check | 1.1179x | Correct; two consumer warps each owned one 16-row slice and traversed all four K slices, removing intra-CTA atomics without adding MMA work. qkv m1/m8 profiles were 9.9/11.7 us. Aggregate 4321.5 us, CI 1.1011-1.1346: recovered v11 but did not strictly beat the prior 1.1189-1.122 checks. Do not promote; next isolate this mapping to m=8. |
 | v13 qkv row partition only at m=8 | not run | Prepared from v12; m=1 uses the original four-consumer topology and only qkv m=8 uses row ownership. Held for the next daily check budget. |
 | v14 direct compressed qkv/pooler m1/m8 | not run | New architecture based on public H200 evidence: matrix-wide 3-bit exponent window, exact sparse FP32 corrections, direct non-allocating global loads, software-prefetched decode/MMA, and a concurrent exception warp. CPU layout and lossless reconstruction tests pass; CUDA/H200 validation pending. |
+| upstream Nathen v18 | upstream job `66d8b007f6c641ee`; not yet run by us | Exact source SHA-256 `111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`, vendored from commit `86aff75e6aca72511bf9b41b6dc190bf1e763373`. Published result 1.518570x, CI 1.4958-1.5413, 9/9. First candidate for our next reset; preserve attribution and license. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -100,6 +103,21 @@ decode/MMA; and one extra warp applying rare exact corrections concurrently. Its
 [measured report](https://thethings.ai/p/okc/muse-bf16-proj-report).
 No public implementation from the current rank-1 team `colinlikescode` was found; this is a
 public former-leading design, not a claim about the private current winner.
+
+After that note was written, the underlying MIT-licensed repository was located at
+[NathenFernandes/muse-bf16-proj](https://github.com/NathenFernandes/muse-bf16-proj). Its newer
+v18 is substantially stronger than the tutorial snapshot: **1.518570x** on judged job
+`66d8b007f6c641ee` with CI 1.4958-1.5413 and all 9 tests passing. The exact artifact and evidence
+are vendored under `upstream_nathen_v18/`; its source hash matches the repository manifest.
+This still is not the current #1 team's source, but it is authoritative evidence from a kernel
+that historically reached #1 and now sits only about 7.8% in speedup ratio behind today's leader.
+
+V18's per-shape evidence shows where the extra jump over the 1.33x tutorial design came from:
+router m=1/8/16/32 at 3.94/4.34/4.23/5.04 us, pooler m=128/256 at 20.49/24.19 us, and dense
+m=16 paths at 10.25/5.48/13.98/13.74 us. Its C12 escape handling is packed per streaming warp
+and patched directly into decoded registers rather than evaluated as a separate arithmetic tail.
+It also retains specialized WGMMA/TMA/cluster and cuBLASLt routes for larger shapes. These are
+the largest remaining architectural gaps in our v3/v14 line.
 
 ## Novel next ideas
 
