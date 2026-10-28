@@ -286,6 +286,15 @@ group-count field with `NR`, so no stage depth was changed. V20-v22 now carry a 
 source-generation guard against oversized future configurations. This consumed no OKC run and
 does not change the reset measurement order.
 
+The V20-V22 evidence is now stronger than source generation alone. Their exact generated CUDA was
+extracted without importing Torch and the four complete V21/V22 pooler/unpooler translation units
+were compiled concurrently with NVCC 13.0 for `sm_90a`, including host launch wrappers. All 16
+kernel instances compile: m128 uses 90 registers, m256 pooler 166, and m256 unpooler 172; cluster
+pooler uses two barriers and no-reduction unpooler one. PTXAS reports zero-byte stack frames and
+zero spill stores/loads for every instance. V20's two m128 configurations are exact subsets of
+these units. H200 launchability, numerical correctness, and timing remain unproved, so the check
+order is unchanged.
+
 A subsequent Oct 28 public search found no source for the newly risen #3-#5 BF16 teams. It did
 find an independent attributed exact-v18 reproduction at 1.53155x check / 1.52107x submit (job
 `0babd4cb0aca4510`), strengthening the first-reset choice. Two reported follow-ups are deliberately
