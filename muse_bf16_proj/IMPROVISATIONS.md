@@ -378,6 +378,13 @@ device syntax, template instantiation, and ptxas code generation; it does not co
 binding or establish graph capture, correctness, prepare time, or H200 performance. Those remain
 gated on the remote check. No OKC run was consumed.
 
+A third compile pass retained the complete CUDA translation unit and replaced only the unavailable
+ATen headers with a minimal interface stub for `Tensor::size`, typed/untyped `data_ptr`, and the
+current CUDA stream. The first stub correctly failed because it omitted ATen's untyped `data_ptr()`
+overload; after matching the real interface, NVCC compiled every host wrapper, shape guard, launch,
+and device specialization cleanly and reproduced the same ptxas resources. This adds host-wrapper
+syntax coverage, but deliberately does not claim PyTorch ABI or generated pybind coverage.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
