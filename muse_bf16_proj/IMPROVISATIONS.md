@@ -553,6 +553,20 @@ produces a much larger H200 timing delta than the byte model predicts.
 
 ## Novel next ideas
 
+### 0. C12 decode-to-shared with cluster DSMEM (post-reset priority)
+
+Public evidence now isolates why neither large-m line is sufficient alone: Madhavan's C12
+register/shared WGMMA reaches 15.24/22.66/19.46 us for qkv/pooler/unpooler m128, while exact v18's
+uncompressed shared/shared cluster/no-reduction routes are already faster at
+13.99/20.49/19.37 us. The proposed hybrid bulk-loads C12, expands it with a decoder warpgroup into
+a swizzled BF16 shared tile, patches exact exceptions before a barrier, and retains shared/shared
+WGMMA plus cluster DSMEM reduction. Modeled shared memory is 201,984 B at m128 and 222,384 B at
+m256 for pooler, under the 232,448 B opt-in limit. Uniform 20% improvement over all eight large
+dense shapes reaches 1.62272x; 25% reaches 1.65364x, so it can be a rank-one component only when
+broadly successful or combined with v30/v31. Full pipeline, exactness, resource arithmetic, and
+rollout are in `DESIGN_C12_CLUSTER.md`. This is not implemented or measured and must follow the
+reset baseline checks.
+
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 
 Existing v5/v6: TMA a compressed ring into shared memory, decode in the consumer, and read a raw

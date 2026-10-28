@@ -223,6 +223,16 @@ gain. Full arithmetic and the format/decode analysis are in `muse_bf16_proj/IMPR
 Per-block windows were also rejected offline: block sizes 32-256 reduce escapes only to
 1.11-1.26%, and their base metadata leaves merely 0.34-1.33% byte savings with eight-byte records.
 
+The resulting post-reset architecture is specified in `muse_bf16_proj/DESIGN_C12_CLUSTER.md`.
+Instead of Madhavan's slower register/shared compressed m128 path (15.24/22.66/19.46 us for
+qkv/pooler/unpooler), decode C12 with a dedicated warpgroup into a swizzled BF16 shared tile, patch
+rare exceptions there, and preserve v18's faster shared/shared WGMMA plus cluster DSMEM epilogue
+(13.99/20.49/19.37 us). Static pooler accounting is 201,984 B at m128 and 222,384 B at m256, under
+the 232,448 B opt-in limit; m256 has only 10,064 B margin. Across all eight large non-router shapes,
+uniform 20% and 25% wins model to 1.62272x and 1.65364x. This is the first plausible broad rank-one
+component, but it is not implemented or measured. Do not move it ahead of v18/v30/v31/v20-v22;
+use the measured winning cluster pipeline as its base, start with pooler m128, and gate every route.
+
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
 8% across all non-router projections models to about 1.6363x. The public vjeux v141 artifact is
