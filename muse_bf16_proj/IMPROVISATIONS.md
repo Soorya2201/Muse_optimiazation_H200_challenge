@@ -365,7 +365,18 @@ synchronized after each of its 128 samples; it now records the same alternating 
 and synchronizes once per route, as the established v25-v30 tuners do. Static guards prove event
 collection precedes the batch synchronization and elapsed-time reads. This changes prepare overhead,
 not the kernels or activation gate. Apple clang cannot compile CUDA and no nvcc is installed locally,
-so the remote H200 remains the authoritative compilation test. No OKC run was consumed.
+so local end-to-end extension compilation is unavailable and the remote H200 remains authoritative.
+No OKC run was consumed.
+
+Because the candidate is already public on GitHub, the isolated device translation unit was then
+sent to [Compiler Explorer](https://godbolt.org/) with minimal CUDA-only wrappers that instantiate
+all four kernels. NVCC 13.0 accepted `-O3 -std=c++20 -arch=sm_90a -c` with no diagnostics. A second
+`-Xptxas=-v` build reported: router M1, 32 registers/32 B shared; o M1 C12, 32 registers/24 B;
+unpooler M1 C12, 40 registers/40 B; qkv M1 C12, 40 registers/72 B. Every specialization uses one
+barrier and reports zero stack frame, zero spill stores, and zero spill loads. This proves CUDA
+device syntax, template instantiation, and ptxas code generation; it does not compile the ATen
+binding or establish graph capture, correctness, prepare time, or H200 performance. Those remain
+gated on the remote check. No OKC run was consumed.
 
 ### Public-source landscape and the next architectural target
 
