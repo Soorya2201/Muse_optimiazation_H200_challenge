@@ -7319,7 +7319,24 @@ _V20_CONFIGS = {
 }
 
 
+def _v20_dynamic_smem_bytes(config: tuple[int, ...]) -> int:
+    nr, _, tm, splits, stages, pipeline, reduction = config
+    kt = 2 if pipeline & 32 else 1
+    nv = nr * tm // 4
+    own = ((nv // 128 + splits - 1) // splits) * 128 if reduction >= 4 else (
+        (nv + splits - 1) // splits if pipeline & 16 else
+        ((nv + 128 * splits - 1) // (128 * splits)) * 128
+    )
+    reduction_bytes = 0
+    if splits > 1 and reduction != 3:
+        reduction_bytes = ((splits - 1) if reduction >= 4 else splits) * own * 16
+    return stages * kt * (nr + tm) * 128 + stages * 16 + 16 + reduction_bytes
+
+
 def _v20_dense_cuda_source(n: int, k: int, config: tuple[int, ...]) -> str:
+    requested = _v20_dynamic_smem_bytes(config)
+    if requested > 227 * 1024:
+        raise RuntimeError(f"v20 config requests {requested} B shared memory (>227 KiB)")
     source = tt_v14_qkv_QKVBIG_CUDA
     # Kernel-side output rows and the launch helper each define LR separately.
     source = source.replace("LR=(2304+G-1)/G", f"LR=({n}+G-1)/G")

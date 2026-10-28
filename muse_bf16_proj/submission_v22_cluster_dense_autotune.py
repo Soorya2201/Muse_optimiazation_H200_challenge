@@ -7322,9 +7322,27 @@ _V21_CONFIGS = {
 }
 
 
+def _v21_dynamic_smem_bytes(config: tuple[int, ...]) -> int:
+    nr, _, tm, splits, stages, pipeline, reduction = config
+    kt = 2 if pipeline & 32 else 1
+    nv = nr * tm // 4
+    own = ((nv // 128 + splits - 1) // splits) * 128 if reduction >= 4 else (
+        (nv + splits - 1) // splits if pipeline & 16 else
+        ((nv + 128 * splits - 1) // (128 * splits)) * 128
+    )
+    reduction_bytes = 0
+    if splits > 1 and reduction != 3:
+        reduction_bytes = ((splits - 1) if reduction >= 4 else splits) * own * 16
+    return stages * kt * (nr + tm) * 128 + stages * 16 + 16 + reduction_bytes
+
+
 def _v21_dense_cuda_source(n: int, k: int, configs: list[tuple[int, ...]]) -> str:
     if not configs or any(config[5] & 32 for config in configs):
         raise RuntimeError("v21 supports only the contiguous-weight KT=1 path")
+    oversized = [(_v21_dynamic_smem_bytes(config), config) for config in configs
+                 if _v21_dynamic_smem_bytes(config) > 227 * 1024]
+    if oversized:
+        raise RuntimeError(f"v21 config exceeds Hopper's 227 KiB block limit: {oversized}")
     source = tt_v14_qkv_QKVBIG_CUDA
     source = source.replace("LR=(2304+G-1)/G", f"LR=({n}+G-1)/G")
     source = source.replace("group*2304/G", f"group*{n}/G")

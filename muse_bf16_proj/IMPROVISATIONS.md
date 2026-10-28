@@ -267,6 +267,18 @@ WGMMA at CUTLASS-like efficiency, and cluster/DSMEM reduction. This is public ev
 our no-global-tail direction, not evidence about the private leader. Implement that broader design
 only after v21/v22 measurements; do not mistake the report for a ready 1.67x submission.
 
+The Oct 28 pre-reset static audit then exercised the deferred CUDA generators rather than merely
+running `py_compile`. The exact v18 SHA-256 still matches its manifest; the v25→v28→v29→v30 and
+v21→v22 byte-prefix chains remain intact; v30/v31 resolve both replacement dispatch cases; and
+v21/v22 generate all pooler/unpooler cases with no leftover placeholders or qkv output constants.
+An initial manual reading incorrectly treated the config's group count as `NR` and therefore
+overestimated unpooler shared memory. Evaluating the kernel's exact formula showed the largest
+v22 plan uses 221,344 B, below the
+[NVIDIA Hopper limit](https://docs.nvidia.com/cuda/hopper-tuning-guide/) of 227 KiB per block. The schedules were
+left unchanged. V20-v22 now compute and reject oversized configurations during source generation,
+so a future tile edit cannot silently spend an H200 check on an impossible launch. No OKC run was
+used and the promoted submission remains untouched.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.

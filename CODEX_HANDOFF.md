@@ -212,6 +212,14 @@ writes BF16 tiles into shared memory, shared/shared WGMMA instead of the measure
 register-A path, and cluster/DSMEM reduction instead of the observed 4-6 us global split-K tail.
 Treat this as public design evidence, not a reconstruction of private leader code.
 
+The same Oct 28 closed-budget window was used for a deferred-source audit. Python syntax, exact
+v18's manifest hash, candidate prefix chains, v30/v31 dispatch replacement, and every v21/v22
+generated CUDA case passed. Exact shared-memory accounting puts the largest v22 plan at 221,344 B,
+under Hopper's documented 227 KiB per-block maximum; an early manual estimate had confused the
+group-count field with `NR`, so no stage depth was changed. V20-v22 now carry a formula-based
+source-generation guard against oversized future configurations. This consumed no OKC run and
+does not change the reset measurement order.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
