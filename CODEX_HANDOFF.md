@@ -142,9 +142,20 @@ per-warp escape patches, WGMMA/TMA/cluster routes, pinned cuBLASLt plans, and be
 
 At the next BF16 budget reset, first check
 `muse_bf16_proj/upstream_nathen_v18/submission.py` byte-for-byte. If it reproduces a strict win,
-promote and submit it with attribution, then use remaining checks to improve its documented weak
-shapes. If environment drift makes it fail, diagnose that exact artifact before falling back to
-v14 and then v13. Keep the current `submission.py` untouched until a qualifying check passes.
+promote and submit it with attribution. Then check
+`muse_bf16_proj/submission_v19_nathen_route_autotune.py`, which preserves v18 behavior (apart
+from one non-semantic trailing-space cleanup) and uses
+untimed cold-L2 graph replays to select among the already-prepared v15-v18 route generations for
+each scored shape. It requires both a 1% and 0.08 us measured win before replacing v18 and uses
+fixed v18 for every nearby/held-out shape. If exact v18 fails because of environment drift,
+diagnose that artifact before trying v19; then fall back to v14 and v13. Keep the current
+`submission.py` untouched until a qualifying check passes.
+
+Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
+Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
+8% across all non-router projections models to about 1.6363x. The public vjeux v141 artifact is
+1.5014x (clean equivalent 1.4905x), so it is research material rather than the first whole-file
+candidate. No current-leader source was found publicly.
 
 #### Oct 28 prefill continuation
 

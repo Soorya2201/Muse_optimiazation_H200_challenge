@@ -46,6 +46,7 @@ is essential.
 | Direct global-load compressed GEMV | Prepared, untested | v14 targets qkv/pooler m1/m8 with 16 streaming warps, one prefetched 64-K group per warp, 12-bit fragment decode, and a seventeenth exact-correction warp. Await the next reserved check window. |
 | Nathen Fernandes v18 public kernel | Vendored, awaiting our check | Exact MIT-licensed judged artifact: 1.5186x, 9/9, CI 1.4958-1.5413 (`66d8b007f6c641ee`). It combines stream-ordered exact C12 GEMV, per-warp in-register escape patches, WGMMA/TMA/cluster kernels, a scalar FP32 router specialization, and pinned cuBLASLt plans. |
 | vjeux public BF16 kernel | Researched, not queued | The public `vjeux/okc-2026` source is architecturally advanced, but its authoritative leaderboard entry is 1.5014x at rank 173 (`08c28ade42034919`), below Nathen v18's 1.5186x/rank 121. Do not spend the first reset check on it. |
+| v19 route-generation autotune | Prepared, untested | Starts with the exact v18 artifact, then during `prepare()` compares its complete v15-v18 dispatch generations with cold-L2 CUDA-graph timing on all 30 scored shapes. It keeps v18 unless an older generation wins by both 1% and 0.08 us, and always uses fixed v18 for nearby/held-out shapes. |
 
 ## Version and OKC history
 
@@ -67,6 +68,7 @@ is essential.
 | v13 qkv row partition only at m=8 | not run | Prepared from v12; m=1 uses the original four-consumer topology and only qkv m=8 uses row ownership. Held for the next daily check budget. |
 | v14 direct compressed qkv/pooler m1/m8 | not run | New architecture based on public H200 evidence: matrix-wide 3-bit exponent window, exact sparse FP32 corrections, direct non-allocating global loads, software-prefetched decode/MMA, and a concurrent exception warp. CPU layout and lossless reconstruction tests pass; CUDA/H200 validation pending. |
 | upstream Nathen v18 | upstream job `66d8b007f6c641ee`; not yet run by us | Exact source SHA-256 `111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`, vendored from commit `86aff75e6aca72511bf9b41b6dc190bf1e763373`. Published result 1.518570x, CI 1.4958-1.5413, 9/9. First candidate for our next reset; preserve attribution and license. |
+| v19 Nathen route autotune | not run | `submission_v19_nathen_route_autotune.py`; it copies upstream v18 with one non-semantic trailing-space cleanup, followed by only the autotune overlay. Syntax passes locally. Run only after exact v18 establishes the current-pod baseline. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -118,6 +120,25 @@ m=16 paths at 10.25/5.48/13.98/13.74 us. Its C12 escape handling is packed per s
 and patched directly into decoded registers rather than evaluated as a separate arithmetic tail.
 It also retains specialized WGMMA/TMA/cluster and cuBLASLt routes for larger shapes. These are
 the largest remaining architectural gaps in our v3/v14 line.
+
+### Quantified gap from v18 to the current leader
+
+The current leader is 1.6367x versus v18's 1.518570x. Holding baseline times fixed, matching it
+requires reducing every v18 load total by **7.22%**. The required savings are 2.56 us (decode 1),
+3.44 us (decode 16), 3.95 us (decode 32), 2.70 us (verify 1), 4.83 us (verify 16), and 5.92 us
+(verify 32). Pooler is 29-38% of every load; qkv is 21-26%; unpooler is 28-29% except at m=1/8.
+Router is only 9-12% despite its large individual speedups. A 10% router-only improvement would
+raise the aggregate by only about 1.0%, while an 8% improvement across the four non-router
+projections models to approximately **1.6363x**. Therefore post-v18 work should prioritize dense
+projection route selection and memory traffic, not another router rewrite.
+
+The full public history of `vjeux/okc-2026` confirms v141 is the 1.5014x board artifact and that
+its cleaned, kernel-equivalent version scored 1.4905x. Its most transferable technique is not its
+whole-file implementation but cold-L2, graph-replay route selection across independently valid
+families. V19 applies that technique to the already-prepared v15-v18 generations inside the
+stronger Nathen artifact, with a conservative win threshold. A targeted GitHub search found no
+public implementation belonging to current leader `colinlikescode` as of Oct 28; do not imply
+that any public design reproduces the private leader.
 
 ## Novel next ideas
 
