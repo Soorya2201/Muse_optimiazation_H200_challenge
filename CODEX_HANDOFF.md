@@ -143,33 +143,34 @@ per-warp escape patches, WGMMA/TMA/cluster routes, pinned cuBLASLt plans, and be
 At the next BF16 budget reset, first check
 `muse_bf16_proj/upstream_nathen_v18/submission.py` byte-for-byte. If it reproduces a strict win,
 promote and submit it with attribution. Then check
-`muse_bf16_proj/submission_v28_history_cross_qkv16.py`. It contains v25 as an exact prefix and
-first combines the full meaningful v9-v18 route history with three range-validated cross-small
-C12 plans: 52 graphs over 23 changed
+`muse_bf16_proj/submission_v29_all_small_autotune.py`. It contains v28 as an exact prefix; v28
+contains v25 as an exact prefix and first combines the full meaningful v9-v18 route history with
+three range-validated cross-small C12 plans: 52 graphs over 23 changed
 shapes, fixed v18 elsewhere, and a 1%/0.08 us activation gate, then independently validates and
-gates v27's WR=2/4 qkv16 geometry against the v25-selected route. V25 is now the no-new-compilation
+gates v27's WR=2/4 qkv16 geometry against the v25-selected route. V29 then independently tests
+v26's WR=2/4 o geometry at m1/m8 against the v28-selected route. V28 is the single-new-extension
+fallback if v29 has a compile/resource/prepare-time failure; V25 is the no-new-compilation
 fallback; V23 and v24 are isolation diagnostics only; v19 is a narrower fallback. The separately prepared
 `submission_v26_o_c12_geometry.py` keeps the exact C12 decoder but tests legal WR=2/4 `o` routes
 at m1/m8 (512/1024 threads and 256/128 CTAs), with exhaustive one-hot plus random validation and
 the same conservative gate. `submission_v27_qkv16_c12_geometry.py` similarly preserves v18's
 qkv16 decoder and four-block reduction while shrinking 576 128-thread CTAs to 288 256-thread or
 144 512-thread CTAs; all three geometries execute 2,304 warps. It rejects escape overflow, local
-spill, correctness failure, or a non-strict timing result. Both are bounded follow-ups, not yet
-measured wins. Next, check
+spill, correctness failure, or a non-strict timing result. V26/v27 are now isolation candidates
+for surprising v29 logs, not default checks. Next, check
 `muse_bf16_proj/submission_v20_cluster_dense_m128.py`. It preserves v19 as an exact prefix and
 generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
 no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests
 and a conservative cold-L2 timing gate before activation. If exact v18 fails because of
-environment drift, diagnose that artifact before trying v28 or any cluster derivative. Then check
+environment drift, diagnose that artifact before trying v29 or any cluster derivative. Then check
 `muse_bf16_proj/submission_v21_cluster_dense_m128_m256.py`, which adds independently gated
 TM256 pooler/unpooler routes to the same cluster/no-reduction design. Its static generator and
 shared-memory checks pass, but it has not compiled on H200. Finally, check
 `muse_bf16_proj/submission_v22_cluster_dense_autotune.py` only after v21 establishes that the
 generated architecture compiles. V22 directly starts from v19 and compares v21 against v18's
 3D-TMA/cache-policy bits plus one adjacent stage depth for each of four shapes; all 12 candidates
-are correctness-tested and conservatively gated. Use v27 only to isolate a v28 compile or timing
-failure; fit v26 after the higher-upside v20/v21 line and before v22 unless v28's logs
-show that the cross-tested o route already dominates both small shapes.
+are correctness-tested and conservatively gated. Use v28, v27, or v26 only to isolate a v29
+compile, prepare-time, or timing anomaly.
 Then fall back to v14 and v13.
 Keep the current
 `submission.py` untouched until a qualifying check passes.
