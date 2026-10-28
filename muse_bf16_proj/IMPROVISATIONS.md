@@ -41,6 +41,8 @@ is essential.
 | Exact 12-bit BF16 compression | Tried, rejected in current decode form | Encoding is exact and only ~0.01% values escape, but scalar and PRMT unpack variants were ALU-bound and slower than raw BF16. |
 | 16-warp pooler TMA stages | Tried, rejected | m=1 improved only ~0.3 us while m=8 regressed by ~4.4 us. |
 | Refreshed old shape choices | Tried, rejected | Graph timing did not reproduce the older eager-sweep advantage. |
+| Per-warp shared partials instead of atomics | Tried, rejected | Explicit partial stores and epilogue summation regressed to 1.0986x; Hopper shared atomics were cheaper. |
+| Row-partitioned qkv consumers | Tried, promising only for m=8 | Removed intra-CTA atomics with unchanged MMA count; v12 reached 1.1179x and profiled qkv m8 at 11.7 us, but m1/aggregate did not strictly beat v3. Next specialize only m8. |
 
 ## Version and OKC history
 
@@ -58,6 +60,7 @@ is essential.
 | v9 Triton m=16/32 | `7897be35f5c548f9` check | 0.9239x | Correct, but long-K qkv/pooler tiles were much slower than cuBLAS. |
 | v10 stage diagnostic | `cddcfa69cbbf4c5a` check | 1.1080x | Cold-L2 graph sweep confirmed qkv's current four-stage ring wins m1/m8; pooler's current ring wins m8 and is within 0.03 us at m1. No dispatch change retained. |
 | v11 per-warp partial reduction | `fb91e9bfbf7e43d4` check | 1.0986x | Correct, but separate per-warp shared stores and the explicit epilogue sum cost more than the original same-address shared atomics. qkv m1/m8 paired times were 12.80/13.57 us; rejected. |
+| v12 qkv row partition | `f73b3d06dcef4761` check | 1.1179x | Correct; two consumer warps each owned one 16-row slice and traversed all four K slices, removing intra-CTA atomics without adding MMA work. qkv m1/m8 profiles were 9.9/11.7 us. Aggregate 4321.5 us, CI 1.1011-1.1346: recovered v11 but did not strictly beat the prior 1.1189-1.122 checks. Do not promote; next isolate this mapping to m=8. |
 
 ## Lossless 12-bit BF16 feasibility result
 

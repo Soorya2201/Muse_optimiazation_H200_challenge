@@ -100,6 +100,24 @@ Ranks refreshed after the attention submit: overall **#655/1417**; attention **#
 
 #### Oct 28 BF16 continuation
 
+The BF16 cycle is closed at 8/8 reserved checks and 0/2 submits. The live and local winner
+remains v3 at **1.1158x** (`167d6e5c85f74682`); `submission.py` was never changed. v10's
+cold-L2 stage/ring sweep confirmed the existing qkv and pooler pipeline choices
+(`cddcfa69cbbf4c5a`, 1.1080x). v11 replaced same-address shared atomics with per-warp
+partials and an explicit epilogue sum; it regressed to 1.0986x (`fb91e9bfbf7e43d4`).
+
+v12 instead assigned each qkv consumer warp a disjoint 16-row slice and made it traverse all
+four K slices, eliminating the intra-CTA atomic reduction without adding MMA work. It passed
+9/9 at 1.1179x (`f73b3d06dcef4761`, 4321.5 us, CI 1.1011-1.1346); qkv m1/m8 profiles were
+9.9/11.7 us. This recovered v11 and helped m8, but did not strictly beat the earlier
+1.1189-1.122 checks, so it was not promoted or submitted. Next BF16 check should combine the
+original qkv mapping at m=1 with row partition only at m=8. Do not run more BF16 checks on
+Oct 28 under the reserved-budget policy.
+
+Final Oct 28 rank refresh: overall **#656**; MoE **#529** at 1.6329x; attention **#761** at
+1.2954x; BF16 **#1087** at 1.1158x; decode **#697** at 1.2326x; prefill **#456** at 1.1184x.
+Ranks are dynamic.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
