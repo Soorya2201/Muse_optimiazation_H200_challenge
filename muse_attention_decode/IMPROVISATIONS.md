@@ -54,6 +54,9 @@ main attention kernel is over 95% of profiled time.
 | v10 | `956826766cad4fed` check | 1.2177x | Replacing C8/C4 with C2 reduced B32's profile to 38.6 us, but B16 rose to 34.2 us; paired 39.84/48.29 us confirmed merge overhead still leaves both behind FA3. |
 | v11 | `ba1b8a40f6bd454c` check | 1.1848x | Five cp.async stages globally forced C2 plans and hurt sliding/B1, but improved B16/B32 full decode paired times by 17.45/42.57 us. The next variant specializes NST5 to those two shapes. |
 | v12 | `50948bd6edc344dc` check | **1.3012x** | Hybrid NST4/NST5 retained every v6 dispatch and used five stages only for B16/B32 full decode, cutting them to 129.49/237.95 us paired. CI 1.2816-1.3277 clears v6 and qualifies for submit. |
+| v12 / current `submission.py` | `3135d826e3994f11` submit | **1.2954x** | New scored best: 2907.4 us, CI 1.2760-1.3188; 3.7% higher speedup than v6's 1.2491x. |
+| v13 | `ccaa5314524e4001` check | **1.3116x** | NST4 plus C2 improved B16/B32 full decode to 123.86/232.86 us paired. This isolates C2 geometry as the main gain; the 1.25% aggregate lift over scored v12 does not clear the submit threshold. |
+| v14 | `d461fc4f71a74060` check | 1.3061x | NST3 plus C2 regressed B16/B32 full decode to 124.78/236.62 us paired. Four stages are retained; reserved budget closed at 8 checks/1 submit. |
 
 ## Novel next ideas
 

@@ -80,6 +80,24 @@ repeats routing setup and streams overlapping weights. Every result is in `RESUL
 the track `IMPROVISATIONS.md`. Do not run more MoE checks on Oct 28 under the reserved-budget
 policy.
 
+#### Oct 28 attention continuation
+
+The attention cycle is closed at 8/8 reserved checks and 1/2 submits. v12 compiled four- and
+five-stage cp.async specializations and selected NST5 only for B16/B32 full decode. Its check
+scored 1.3012x (`50948bd6edc344dc`), and its submit established the live best at **1.2954x**
+(`3135d826e3994f11`, 2907.4 us, CI 1.2760-1.3188), up from 1.2491x.
+
+Follow-up isolation showed the main win was C2 cluster geometry rather than the fifth pipeline
+stage. v13 used NST4 with C2/NC8 and C2/NC4 for B16/B32 full decode and checked at **1.3116x**
+(`ccaa5314524e4001`, 2871.6 us, CI 1.2919-1.3312); its 123.86/232.86 us paired times beat v12,
+but the aggregate gain over the scored result was only 1.25% with overlapping intervals, so it
+was not submitted. NST3 v14 regressed to 1.3061x. Keep v13 as the best local candidate and v12
+as the live scored result. Batched sliding verify one-read experiments v7-v10 all lost to FA3.
+
+Ranks refreshed after the attention submit: overall **#655/1417**; attention **#761/936** at
+1.2954x; MoE **#529/978** at 1.6329x; BF16 **#1085/1230** at 1.1158x; decode **#697/854** at
+1.2326x; prefill **#455/563** at 1.1184x. Ranks are dynamic.
+
 #### Oct 28 BF16 continuation
 
 #### Oct 28 prefill continuation

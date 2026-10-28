@@ -72,10 +72,8 @@ namespace cg = cooperative_groups;
 
 #define HD 64
 #define TILE 64
-#define NST 4
 #define NWARPS(L) ((L) == 1 ? 4 : 8)
 #define IDXS 72
-#define NIDX (2 * NST)
 #define RMS_EPS 1e-5f
 
 struct Params {
@@ -168,7 +166,7 @@ __device__ __forceinline__ float warp_sum(float v) {
 }
 __device__ __forceinline__ int swz(int key) { return ((key ^ (key >> 2)) & 1) << 2; }
 
-template <int L, int LK>  // L query tokens per CTA, LK new tokens per request (LK = 8, L = 1: one verify token per CTA)
+template <int L, int LK, int STG>  // L query tokens per CTA, LK new tokens per request
 __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p) {
   constexpr int SPL = LK / L;
   constexpr int NW = NWARPS(L);
@@ -182,9 +180,9 @@ __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p)
   constexpr int NV = 4 * LK / NW;         // new k/v vectors per warp
   extern __shared__ __align__(128) uint8_t smem[];
   uint8_t* sK = smem;
-  uint8_t* sV = sK + NST * TILE * 128;
-  int* sIdx = (int*)(sV + NST * TILE * 128);
-  uint8_t* sQ8 = (uint8_t*)(sIdx + NIDX * IDXS);
+  uint8_t* sV = sK + STG * TILE * 128;
+  int* sIdx = (int*)(sV + STG * TILE * 128);
+  uint8_t* sQ8 = (uint8_t*)(sIdx + 2 * STG * IDXS);
   float2* sCS = (float2*)(sQ8 + RT * HD);
   uint8_t* sNew = (uint8_t*)(sCS + LK * 32);
   uint16_t* sGate = (uint16_t*)(sNew + 2 * LK * 128);
@@ -224,14 +222,14 @@ __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p)
       int first = t0 / ps;
       int last = min(min(t0 + TILE - 1, ke_lim - 1) / ps, p.max_pages - 1);
       int n = last - first + 1;
-      int* dst = sIdx + (X % NIDX) * IDXS;
+      int* dst = sIdx + (X % (2 * STG)) * IDXS;
       for (int i = tid; i < n; i += NTHR) cp4(dst + i, ptab + first + i);
     }
   };
   if (!slide) {
     int lim = min(kb + p.chunk, p.nmax);
 #pragma unroll
-    for (int X = 0; X < 2 * NST - 2; ++X) issue_idx(X, lim);
+    for (int X = 0; X < 2 * STG - 2; ++X) issue_idx(X, lim);
   }
   cp_commit();
 
@@ -250,7 +248,7 @@ __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p)
   const int ke = min(kb + p.chunk, end);
   if (slide) {
 #pragma unroll
-    for (int X = 0; X < 2 * NST - 2; ++X) issue_idx(X, ke);
+    for (int X = 0; X < 2 * STG - 2; ++X) issue_idx(X, ke);
   }
   cp_commit();
 
@@ -359,7 +357,7 @@ __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p)
   auto load_tile = [&](int it, int st) {
     const int t0 = kb + it * TILE;
     const int pf = t0 / ps;
-    const int* idx = sIdx + (it % NIDX) * IDXS;
+    const int* idx = sIdx + (it % (2 * STG)) * IDXS;
     uint8_t* bk = sK + st * TILE * 128;
     uint8_t* bv = sV + st * TILE * 128;
 #pragma unroll
@@ -390,7 +388,7 @@ __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p)
   };
 
 #pragma unroll
-  for (int i = 0; i < NST - 1; ++i) {
+  for (int i = 0; i < STG - 1; ++i) {
     if (i < ntiles) load_tile(i, i);
     cp_commit();
   }
@@ -405,15 +403,15 @@ __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p)
   }
 
   for (int it = 0; it < ntiles; ++it) {
-    cp_wait<NST - 2>();
+    cp_wait<STG - 2>();
     __syncthreads();
     {
-      int nx = it + NST - 1;
-      if (nx < ntiles) load_tile(nx, nx % NST);
-      issue_idx(it + 2 * NST - 2, ke);
+      int nx = it + STG - 1;
+      if (nx < ntiles) load_tile(nx, nx % STG);
+      issue_idx(it + 2 * STG - 2, ke);
       cp_commit();
     }
-    const int st = it % NST;
+    const int st = it % STG;
     const uint8_t* K = sK + st * TILE * 128;
     const uint8_t* V = sV + st * TILE * 128;
     const int t0 = kb + it * TILE;
@@ -709,19 +707,20 @@ __global__ void __launch_bounds__(32 * NWARPS(L), 2) attn_kernel(const Params p)
 }
 
 
+template <int STG>
 static size_t smem_bytes(int L, int LK) {
   int RT = 16 * L;
-  return (size_t)2 * NST * TILE * 128 + NIDX * IDXS * 4 + RT * HD + LK * 32 * 8 + 2 * LK * 128 + RT * HD * 2;
+  return (size_t)2 * STG * TILE * 128 + 2 * STG * IDXS * 4 + RT * HD + LK * 32 * 8 + 2 * LK * 128 + RT * HD * 2;
 }
 
-template <int L, int LK>
+template <int L, int LK, int STG>
 static int max_clusters_t(int C) {
   static int cache[17] = {0};
   static bool done[17] = {false};
   if (done[C]) return cache[C];
-  size_t sm = smem_bytes(L, LK);
-  cudaFuncSetAttribute(attn_kernel<L, LK>, cudaFuncAttributeMaxDynamicSharedMemorySize, (int)sm);
-  cudaFuncSetAttribute(attn_kernel<L, LK>, cudaFuncAttributeNonPortableClusterSizeAllowed, 1);
+  size_t sm = smem_bytes<STG>(L, LK);
+  cudaFuncSetAttribute(attn_kernel<L, LK, STG>, cudaFuncAttributeMaxDynamicSharedMemorySize, (int)sm);
+  cudaFuncSetAttribute(attn_kernel<L, LK, STG>, cudaFuncAttributeNonPortableClusterSizeAllowed, 1);
   cudaLaunchConfig_t cfg = {};
   cfg.gridDim = dim3(C * 64, 1, 1);
   cfg.blockDim = dim3(32 * NWARPS(L), 1, 1);
@@ -734,7 +733,7 @@ static int max_clusters_t(int C) {
   cfg.attrs = attr;
   cfg.numAttrs = 1;
   int n = 0;
-  if (cudaOccupancyMaxActiveClusters(&n, attn_kernel<L, LK>, &cfg) != cudaSuccess) {
+  if (cudaOccupancyMaxActiveClusters(&n, attn_kernel<L, LK, STG>, &cfg) != cudaSuccess) {
     cudaGetLastError();
     n = 0;
   }
@@ -745,19 +744,19 @@ static int max_clusters_t(int C) {
 
 int muse_func_info(int L, int which) {
   cudaFuncAttributes a;
-  cudaError_t e = (L == 1) ? cudaFuncGetAttributes(&a, attn_kernel<1, 1>) : (L == 8 ? cudaFuncGetAttributes(&a, attn_kernel<8, 8>) : cudaFuncGetAttributes(&a, attn_kernel<1, 8>));
+  cudaError_t e = (L == 5) ? cudaFuncGetAttributes(&a, attn_kernel<1, 1, 5>) : (L == 1 ? cudaFuncGetAttributes(&a, attn_kernel<1, 1, 4>) : (L == 8 ? cudaFuncGetAttributes(&a, attn_kernel<8, 8, 4>) : cudaFuncGetAttributes(&a, attn_kernel<1, 8, 4>)));
   if (e != cudaSuccess) { cudaGetLastError(); return -1; }
   return which == 0 ? a.numRegs : (int)a.localSizeBytes;
 }
 
 int muse_max_clusters(int L, int C) {
-  return L == 1 ? max_clusters_t<1, 1>(C) : (L == 8 ? max_clusters_t<8, 8>(C) : max_clusters_t<1, 8>(C));
+  return L == 5 ? max_clusters_t<1, 1, 5>(C) : (L == 1 ? max_clusters_t<1, 1, 4>(C) : (L == 8 ? max_clusters_t<8, 8, 4>(C) : max_clusters_t<1, 8, 4>(C)));
 }
 
-template <int L, int LK>
+template <int L, int LK, int STG>
 static int launch_t(const Params& p, cudaStream_t st) {
-  size_t sm = smem_bytes(L, LK);
-  max_clusters_t<L, LK>(p.C);  // sets the function attributes once
+  size_t sm = smem_bytes<STG>(L, LK);
+  max_clusters_t<L, LK, STG>(p.C);  // sets the function attributes once
   cudaLaunchConfig_t cfg = {};
   cfg.gridDim = dim3(p.C * p.NC, p.Hkv / 2, p.B * (LK / L));
   cfg.blockDim = dim3(32 * NWARPS(L), 1, 1);
@@ -770,7 +769,7 @@ static int launch_t(const Params& p, cudaStream_t st) {
   attr[0].val.clusterDim.z = 1;
   cfg.attrs = attr;
   cfg.numAttrs = 1;
-  return (int)cudaLaunchKernelEx(&cfg, attn_kernel<L, LK>, p);
+  return (int)cudaLaunchKernelEx(&cfg, attn_kernel<L, LK, STG>, p);
 }
 
 int muse_attn_launch(const void* qkv, const void* positions, const void* cache_loc, const void* seq_lens, void* kc,
@@ -797,7 +796,7 @@ int muse_attn_launch(const void* qkv, const void* positions, const void* cache_l
   p.window = window; p.use_rope = use_rope; p.C = C; p.NC = NC; p.chunk = chunk; p.nmax = nmax;
   p.scale_log2 = scale_log2;
   cudaStream_t st = (cudaStream_t)stream;
-  return L == 1 ? launch_t<1, 1>(p, st) : (L == 8 ? launch_t<8, 8>(p, st) : launch_t<1, 8>(p, st));
+  return L == 5 ? launch_t<1, 1, 5>(p, st) : (L == 1 ? launch_t<1, 1, 4>(p, st) : (L == 8 ? launch_t<8, 8, 4>(p, st) : launch_t<1, 8, 4>(p, st)));
 }
 '''
 
@@ -828,7 +827,7 @@ int64_t run(torch::Tensor qkv, torch::Tensor positions, torch::Tensor cache_loc,
 '''
 
 _EXT = load_inline(
-    name="muse_attn_decode_v6",
+    name="muse_attn_decode_v12_hybrid_five_stage",
     cpp_sources=[CPP_SRC],
     cuda_sources=[CUDA_SRC],
     functions=["run", "max_clusters", "func_info"],
@@ -949,7 +948,9 @@ def kernel_fn(data: Inputs) -> torch.Tensor:
     maxlen = max_pages * page
     # mode 1: decode; mode 18: verify on a sliding layer, one CTA group per verify token
     # (the 8 tokens of a request re-read the same window, mostly from L2); mode 8: generic verify.
-    mode = 1 if length == 1 else (18 if window else 8)
+    # Mode 5 selects the deeper gather pipeline only where v11 measured a
+    # decisive win: batched full-context decode. Other shapes retain v6/NST4.
+    mode = 5 if length == 1 and not window and batch >= 16 else (1 if length == 1 else (18 if window else 8))
     vreq = batch * (8 if mode == 18 else 1)
     qrows = 1 if mode == 18 else length
     nmax = min(window + qrows - 1, maxlen) if window else maxlen
