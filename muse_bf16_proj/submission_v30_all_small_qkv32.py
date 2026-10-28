@@ -8100,14 +8100,15 @@ __global__ void __launch_bounds__(NTH+32) v30m1_cgemv_kernel(
 void v30m1_cgemv(at::Tensor L,at::Tensor C,at::Tensor x,at::Tensor etab,
                   int64_t pmax,at::Tensor out,int64_t base4,int64_t rows,int64_t nth) {
   const int N=out.size(1),K=L.size(1); auto st=at::cuda::getCurrentCUDAStream();
+  TORCH_CHECK(x.size(0)==1&&N%rows==0&&N<=L.size(0),"v30m1 cgemv shape");
   auto a0=L.data_ptr<uint8_t>(); auto a1=C.data_ptr<uint8_t>();
   auto xp=reinterpret_cast<const __nv_bfloat16*>(x.data_ptr());
   auto tp=reinterpret_cast<const int2*>(etab.data_ptr<int>());
   auto op=reinterpret_cast<__nv_bfloat16*>(out.data_ptr());
   const uint32_t b4=(uint32_t)base4; const int pm=(int)pmax;
-  if(K==8192&&rows==2&&nth==256){v30m1_cgemv_kernel<2,256,8192><<<N/2,288,0,st>>>(a0,a1,xp,tp,pm,op,b4);return;}
-  if(K==1024&&rows==2&&nth==64){v30m1_cgemv_kernel<2,64,1024><<<N/2,96,0,st>>>(a0,a1,xp,tp,pm,op,b4);return;}
-  if(K==4096&&rows==2&&nth==128){v30m1_cgemv_kernel<2,128,4096><<<N/2,160,0,st>>>(a0,a1,xp,tp,pm,op,b4);return;}
+  if(K==8192&&rows==2&&nth==256){v30m1_cgemv_kernel<2,256,8192><<<N/2,288,0,st>>>(a0,a1,xp,tp,pm,op,b4);C10_CUDA_KERNEL_LAUNCH_CHECK();return;}
+  if(K==1024&&rows==2&&nth==64){v30m1_cgemv_kernel<2,64,1024><<<N/2,96,0,st>>>(a0,a1,xp,tp,pm,op,b4);C10_CUDA_KERNEL_LAUNCH_CHECK();return;}
+  if(K==4096&&rows==2&&nth==128){v30m1_cgemv_kernel<2,128,4096><<<N/2,160,0,st>>>(a0,a1,xp,tp,pm,op,b4);C10_CUDA_KERNEL_LAUNCH_CHECK();return;}
   TORCH_CHECK(false,"v30m1 unsupported cgemv configuration");
 }
 
@@ -8115,6 +8116,7 @@ void v30m1_rgemv(at::Tensor W,at::Tensor x,at::Tensor out) {
   TORCH_CHECK(W.size(0)==256&&W.size(1)==8192&&x.size(0)==1,"v30m1 router shape");
   v30m1_router_kernel<1><<<256,256,0,at::cuda::getCurrentCUDAStream()>>>(
     W.data_ptr<float>(),reinterpret_cast<const __nv_bfloat16*>(x.data_ptr()),out.data_ptr<float>(),256);
+  C10_CUDA_KERNEL_LAUNCH_CHECK();
 }
 """
 
@@ -8222,19 +8224,22 @@ def _v30m1_autotune(weights,state):
                 output=(_V30_BASE_KERNEL(data,state) if candidate==0 else
                         _v30m1_launch(layer,data["x"],bundle))
             graphs.append(graph); outputs.append(output)
-        samples=[[],[]]
+        samples=[[],[]]; events=[]
         for rep in range(16):
             for candidate in ((0,1) if rep%2==0 else (1,0)):
                 torch.sum(flush,dim=0,out=sink)
                 start=torch.cuda.Event(enable_timing=True); end=torch.cuda.Event(enable_timing=True)
-                start.record(); graphs[candidate].replay(); end.record(); end.synchronize()
-                samples[candidate].append(start.elapsed_time(end)*1000.0)
+                start.record(); graphs[candidate].replay(); end.record()
+                events.append((candidate,start,end))
+        torch.cuda.synchronize(device)
+        for candidate,start,end in events:
+            samples[candidate].append(start.elapsed_time(end)*1000.0)
         med=[sorted(v)[len(v)//2] for v in samples]
         required=max(0.08,med[0]*0.01)
         if med[1]+required<med[0]: choices.add(layer)
         print(f"[v30m1] {layer} m=1: base={med[0]:.2f} public={med[1]:.2f} -> " +
               ("public" if layer in choices else "base"))
-        del graphs,outputs,samples
+        del graphs,outputs,samples,events
     state["v30m1_choices"]=choices
     del flush,sink
     torch.cuda.synchronize(device)

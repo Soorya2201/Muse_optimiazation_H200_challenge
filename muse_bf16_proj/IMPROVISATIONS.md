@@ -358,6 +358,15 @@ normal mocked prepare order, and all four one-build-failure paths pass. CUDA com
 correctness, actual timings, and total prepare duration still require the reset H200 check. No OKC
 run was consumed while implementing it.
 
+A follow-up compile-risk audit matched the three C12 launch geometries and the router launch to the
+published source, verified balanced CUDA braces and one common barrier per cgemv thread, and added
+shape plus immediate CUDA-launch guards to every specialization. The M1 autotuner originally
+synchronized after each of its 128 samples; it now records the same alternating cold-L2 event stream
+and synchronizes once per route, as the established v25-v30 tuners do. Static guards prove event
+collection precedes the batch synchronization and elapsed-time reads. This changes prepare overhead,
+not the kernels or activation gate. Apple clang cannot compile CUDA and no nvcc is installed locally,
+so the remote H200 remains the authoritative compilation test. No OKC run was consumed.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
