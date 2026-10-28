@@ -46,6 +46,8 @@ is essential.
 | Direct global-load compressed GEMV | Prepared, untested | v14 targets qkv/pooler m1/m8 with 16 streaming warps, one prefetched 64-K group per warp, 12-bit fragment decode, and a seventeenth exact-correction warp. Await the next reserved check window. |
 | Nathen Fernandes v18 public kernel | Vendored, awaiting our check | Exact MIT-licensed judged artifact: 1.5186x, 9/9, CI 1.4958-1.5413 (`66d8b007f6c641ee`). It combines stream-ordered exact C12 GEMV, per-warp in-register escape patches, WGMMA/TMA/cluster kernels, a scalar FP32 router specialization, and pinned cuBLASLt plans. |
 | vjeux public BF16 kernel | Researched, not queued | The public `vjeux/okc-2026` source is architecturally advanced, but its authoritative leaderboard entry is 1.5014x at rank 173 (`08c28ade42034919`), below Nathen v18's 1.5186x/rank 121. Do not spend the first reset check on it. |
+| [lee101 public v22/diagnostics](https://github.com/lee101/openkernels) | Researched, not queued | Apache-2.0 source and detailed judge diagnostics. Current board entry is 1.4627x/rank 213 (`b55e82a9c7f04856`); published v22 evidence is 1.459x. Its later RS-WGMMA experiments isolate global split-K reduction as the m128 bottleneck. |
+| [rohanarun board entry](https://github.com/rohanarun/Auto-research-agent) | Score only; no reusable source | Current board entry is 1.5503x/rank 43 (`d1e1635ef48f4850`), stronger than Nathen v18, but the current public repository contains only the research application/prompts and no matching kernel or receipt. Do not attribute or reconstruct unavailable source. |
 | v19 route-generation autotune | Prepared, untested | Starts with the exact v18 artifact, then during `prepare()` compares its complete v15-v18 dispatch generations with cold-L2 CUDA-graph timing on all 30 scored shapes. It keeps v18 unless an older generation wins by both 1% and 0.08 us, and always uses fixed v18 for nearby/held-out shapes. |
 
 ## Version and OKC history
@@ -139,6 +141,24 @@ families. V19 applies that technique to the already-prepared v15-v18 generations
 stronger Nathen artifact, with a conservative win threshold. A targeted GitHub search found no
 public implementation belonging to current leader `colinlikescode` as of Oct 28; do not imply
 that any public design reproduces the private leader.
+
+### Public-source landscape and the next architectural target
+
+An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
+The live score/source ladder is: `colinlikescode` 1.6367x (#1, no source found), `rohanarun`
+1.5503x (#43, no matching kernel published), Nathen v18 1.5186x (#121, exact MIT source), vjeux
+v141 1.5014x (#173, Apache source), and lee101 1.4627x (#213, Apache source). Lower published
+implementations do not justify spending a whole-file check before v18/v19.
+
+The valuable new evidence is lee101's later v26-v30 diagnostic series. Its lossless C12
+RS-WGMMA kernel shares x through TMA and decodes weights directly into register-sourced WGMMA
+fragments—the same broad direction needed to close the m32/m128 gap—but m128 remained 1.6-1.7x
+behind cuBLAS. Clock profiles showed CTA start spread below 0.15 us and no dominant decode/wait
+phase. With global split-K, CTAs ended across an **8-9.5 us reduction tail**; without split-K,
+they ended within 1.5-2.2 us. Decode-ahead depth four and two-CTA-per-SM geometry did not fix it.
+Therefore a future compressed m128 kernel should not repeat global counter/workspace reduction.
+The next defensible architecture is cluster DSMEM/st.async aggregation or a no-split schedule
+that keeps enough independent N tiles resident; deeper decode pipelining alone is a rejected path.
 
 ## Novel next ideas
 

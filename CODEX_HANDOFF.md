@@ -155,7 +155,13 @@ Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lo
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
 8% across all non-router projections models to about 1.6363x. The public vjeux v141 artifact is
 1.5014x (clean equivalent 1.4905x), so it is research material rather than the first whole-file
-candidate. No current-leader source was found publicly.
+candidate. A broader authenticated GitHub search also found lee101's Apache v22/diagnostic line:
+its live entry is 1.4627x, but its later RS-WGMMA clock profiles prove that global split-K
+reduction—not CTA start spread or a single decode phase—creates an 8-9.5 us m128 tail. If v19
+does not close the dense-shape gap, design the next kernel around cluster DSMEM/st.async or a
+no-split schedule; do not retry deeper decode-ahead or another global workspace/counter tail.
+`rohanarun` is live at 1.5503x, but its current public repository publishes no matching kernel or
+receipt, so it is score evidence only. No current-leader source was found publicly.
 
 #### Oct 28 prefill continuation
 
