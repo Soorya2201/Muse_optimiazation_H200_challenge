@@ -54,6 +54,7 @@ is essential.
 | v24 cross-small C12 routes | Prepared, untested | Reuses v18's final qkv/pooler m1 plans at m8 and its final o m8 plan at m1. Their templates use dynamic m with MT=1, and v18 prepare already verifies every plan at m=1,4,8. Three cold-L2 comparisons add no compilation; only strict wins activate. |
 | v25 history + cross autotune | Prepared, untested | Primary post-v18 candidate. Combines v23 and v24 in one no-compile sweep: 52 meaningful graphs over 23 changed shapes, fixed v18 elsewhere, and the same conservative gate. V23/v24 are now isolation diagnostics rather than separate default checks. |
 | v26 compressed `o` CTA geometry | Prepared, untested | Keeps v18's exact direct-load C12 decoder and tests only legal WR=2/4 geometries at o m1/m8: 512 threads/256 CTAs and 1024 threads/128 CTAs instead of 256 threads/512 CTAs. Every candidate is exact-one-hot and random validated over m=1,4,8, then must clear the 1%/0.08 us cold-L2 gate. |
+| v27 qkv16 clustered CTA geometry | Prepared, untested | Keeps v18's exact C12 decode and four-block cluster reduction while changing WR=1→2/4. All variants execute 2,304 warps, but the grid falls from 576 to 288/144 CTAs. Candidate-specific launch bounds, no-local-spill checks, exhaustive one-hot/random validation, and the conservative timing gate protect fixed v18. |
 | v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 | v21 cluster-dense m128/m256 | Prepared, untested | Extends v20 with v18's dormant TM256 WGMMA schedule. Two generated modules independently gate pooler/unpooler at m128 and m256, retaining captured outputs during graph timing. All four routes use 128 CTAs and fit Hopper's dynamic shared-memory limit; any non-winning route falls back to v19. |
 | v22 cluster pipeline autotune | Prepared, untested | Subsumes v21 without compiling it first. For each of its four shapes, compares the base 2D-TMA schedule, v18's evidenced 3D-TMA/normal-weight-cache policy, and one adjacent legal stage depth. All 12 candidates require random and exact one-hot correctness; only a 1% and 0.08 us cold-L2 win over v19 activates. |
@@ -86,6 +87,7 @@ is essential.
 | v24 cross-small C12 routes | not run | `submission_v24_cross_small_routes.py`; v19 is an exact 637,846-byte prefix and v24 starts from exact v18 prepare. Static inspection proves the reused qkv/pooler/o templates are dynamic over m=1..8 and their existing prepare verification includes both cross-tested endpoints. CUDA/H200 timing is pending. |
 | v25 history + cross autotune | not run | `submission_v25_history_cross_autotune.py`; v23 is an exact 643,845-byte prefix, but final prepare starts directly from exact v18 and performs only the combined v25 sweep. Static checks confirm 23 shapes and 52 candidate graphs. CUDA/H200 timing is pending. |
 | v26 compressed `o` CTA geometry | not run | `submission_v26_o_c12_geometry.py`; v19 is an exact 637,846-byte prefix. Static checks prove WR=2/4 use 512/1024 threads, 256/128 CTAs, exact K coverage, and valid output tiling. The file is 643,418 bytes. CUDA compilation, escape-capacity validation on judge weights, exact GPU self-tests, and timing are pending. |
+| v27 qkv16 clustered CTA geometry | not run | `submission_v27_qkv16_c12_geometry.py`; v19 is an exact 637,846-byte prefix. Generated WR=2/4 instances use 256/512 threads, 288/144 CTAs, 2,304 total warps, and 8,192/16,384 bytes of reduction storage. Source-anchor, geometry, syntax, and size checks pass; CUDA/H200 evidence is pending. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -189,6 +191,18 @@ requires exact reconstruction of all 1,024 weight columns plus random tests at m
 them against fixed v18 at m=1/8. It activates nothing without both a 1% and 0.08 us win. Pooler's
 existing C12 route is already a 1,024-thread, 128-CTA one-wave launch, so there is no analogous
 higher-WR candidate. This is prepared static evidence only, not a measured improvement.
+
+V27 applies the same bounded geometry question to qkv m16, where the upside is larger. V18's
+`push_d9_cap6` C12 route uses WR=1/WK=4/KU=8/S=4: 128 threads, 576 CTAs, and four-block cluster
+reduction. WR=2 and WR=4 preserve its decoder, FP32 accumulation path, split-4 topology, and
+exactly 2,304 total warps while reducing the grid to 288 and 144 CTAs. Their reduction storage is
+only 8 and 16 KiB. The WR=2 specialization retains the original 768 resident-thread launch-bound
+target; WR=4 uses a one-block minimum because imposing three 512-thread blocks would distort
+register allocation. Both variants must fit their per-warp C12 escape lists, report positive
+cluster capacity and zero local spill, reproduce all 8,192 weight columns exactly, and pass random
+m=9/15/16 tests. Only qkv m16 is timed or dispatched, and fixed v18 remains the fallback. The
+hypothesis is fewer scheduling waves and a shorter clustered tail; the risks are reduced latency
+hiding and extra within-CTA synchronization. This remains unmeasured until an H200 check.
 
 The [public BF16 strategy guide](https://thethings.ai/p/okc/muse-bf16-proj-guide/03-strategy)
 also narrows future work: direct C12 streaming saves 13-20% on suitable small shapes, while L2
