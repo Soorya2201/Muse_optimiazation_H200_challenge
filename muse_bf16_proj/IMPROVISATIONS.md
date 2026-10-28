@@ -509,6 +509,41 @@ below the 1.6367x leader—and those floors are optimistic for cold-HBM executio
 can be a meaningful bridge but cannot by itself reach #1; subsequent work must also improve the
 small-m dense projections, especially qkv/pooler, rather than endlessly tuning these four routes.
 
+### Exact 11-bit compression bound (Oct 28, no OKC run)
+
+The public Madhavan source contains an unshipped 11-bit diagnostic, so this was evaluated as a
+possible post-v30 architecture. The exact representation keeps the existing eight-bit low byte
+(seven mantissa bits plus exponent bit zero) and replaces C12's four-bit high code with a packed
+three-bit code: one sign bit plus a two-bit offset for the upper seven exponent bits. Together
+with the raw low exponent bit, one window covers eight consecutive full exponents. Eight weights
+therefore occupy 11 bytes instead of C12's 12 bytes. This does **not** require packing seven-bit
+mantissas, but decoding eight codes now requires extracting eight three-bit fields from three
+bytes instead of reading nibble-aligned codes.
+
+A CPU distribution estimate using the task seed (not the exact CUDA RNG stream, so it is a
+distribution estimate rather than judge evidence) found best-window escape rates of 1.355% qkv,
+1.249% o, 1.354% pooler, and 1.247% unpooler. With a hypothetical globally compact four-byte
+escape record, the four projection streams shrink by about 4.72-5.01% relative to C12; six-byte
+records leave only 2.91-3.34%. The actual public exact-correction path uses `int2` records—eight
+bytes per table entry, plus a count/padding record and sometimes per-CTA replication—so the
+idealized stream reduction is only 1.10% qkv, 1.67% o, 1.11% pooler, and 1.68% unpooler before
+metadata or extra decode instructions. Router-low is a poor candidate: its estimated escape rate
+is 4.016%, making even the compact form larger than C12.
+
+The authoritative v18 CSV reconstructs its published 1.518570x exactly. If impossible zero-cost
+four-byte escape records made every projection time scale with bytes, C11 would reach only
+1.587559x; applying it only to m<=32 reaches 1.564078x. With a 1.5-2.0 us fixed ramp/drain term,
+those bounds fall to 1.577829-1.574614x and 1.556634-1.554172x. With the existing eight-byte
+record format, the corresponding all-shape bound is only 1.536956x with zero fixed cost and
+1.534332-1.533459x with the fixed term; small-m-only is 1.530654x or 1.528625-1.527950x. These
+models are still optimistic because they charge no three-bit unpack work or correction tail.
+
+Decision: do not put an 11-bit kernel ahead of exact v18, v30, v31, or the prepared cluster
+measurements. It cannot close the leader gap alone and is marginal with the current correction
+table. Reconsider only as a measured follow-up if a compact four-byte global exception stream can
+avoid per-CTA duplication and overlap corrections, or if the dormant `loads-11/12` diagnostic
+produces a much larger H200 timing delta than the byte model predicts.
+
 ## Novel next ideas
 
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions

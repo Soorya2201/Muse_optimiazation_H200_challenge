@@ -209,6 +209,18 @@ portfolio can therefore beat 1.6367 only with unusually broad, near-20% gains. D
 more adjacent geometry variants before measuring this set; combine measured winners, then return
 to a broader compression/scheduling design if the aggregate remains below the leader.
 
+An Oct 28 no-run audit also bounded the public dormant exact-11-bit idea. Its practical format is
+low byte + packed three-bit sign/exponent code, not seven-bit mantissa packing. Estimated eight-
+exponent-window escapes are about 1.25-1.36% on the four BF16 projections. Four-byte exception
+records would save 4.72-5.01% versus C12, but the public correction tables use eight-byte `int2`
+entries (plus padding/possible per-CTA replication), leaving only 1.10-1.68% ideal stream savings.
+The exact v18 CSV models to at most 1.53696x if all projection times scale with those eight-byte
+streams, or about 1.53346-1.53433x with a 1.5-2 us fixed term. Even the unrealistic four-byte,
+zero-decode-cost all-shape ceiling is only 1.58756x. Router-low becomes larger than C12. Do not
+implement C11 before the reset candidates; revisit only if a compact non-duplicated four-byte
+exception stream is designed or Madhavan's dormant `loads-11/12` diagnostic measures a surprising
+gain. Full arithmetic and the format/decode analysis are in `muse_bf16_proj/IMPROVISATIONS.md`.
+
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
 8% across all non-router projections models to about 1.6363x. The public vjeux v141 artifact is
