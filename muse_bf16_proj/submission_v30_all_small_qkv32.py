@@ -7901,16 +7901,356 @@ def _v30_autotune(weight, state):
     torch.cuda.synchronize(device)
 
 
+# Public M1 route follow-up. The kernel and packing layout are adapted from
+# Madhavan113/kerneloptimizer commit b7520fb (Apache-2.0, derived from vjeux).
+# Copyright (c) 2026 vjeux and Madhavan113; see upstream_madhavan_NOTICE.
+# Only the four profile-backed routes that beat v18 are retained; each remains
+# independently correctness-tested and timing-gated against the v30 base.
+_V30M1_CPP = r"""
+#include <torch/extension.h>
+void v30m1_cgemv(torch::Tensor L, torch::Tensor C, torch::Tensor x, torch::Tensor etab,
+                 int64_t pmax, torch::Tensor out, int64_t base4, int64_t rows, int64_t nth);
+void v30m1_rgemv(torch::Tensor W, torch::Tensor x, torch::Tensor out);
+"""
+
+_V30M1_CUDA = r"""
+#include <ATen/core/Tensor.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAException.h>
+#include <cuda_bf16.h>
+#include <stdint.h>
+
+__device__ __forceinline__ float v30m1_escape_delta(uint32_t bits, uint32_t base) {
+  const uint32_t hi = (bits >> 8) & 0xffu, exp = hi & 0x7fu;
+  const uint32_t decoded_hi = (hi & 0x80u) | (exp < base ? base : base + 7u);
+  return __uint_as_float(bits << 16) -
+         __uint_as_float(((decoded_hi << 8) | (bits & 0xffu)) << 16);
+}
+
+template<int ROWS>
+__global__ void __launch_bounds__(256) v30m1_router_kernel(
+    const float* __restrict__ W, const __nv_bfloat16* __restrict__ x,
+    float* __restrict__ out, int N) {
+  constexpr int K = 8192;
+  const int tid = threadIdx.x, lane = tid & 31, warp = tid >> 5;
+  const int r0 = blockIdx.x * ROWS;
+  float4 w[ROWS][8];
+#pragma unroll
+  for (int r = 0; r < ROWS; ++r)
+#pragma unroll
+    for (int j = 0; j < 4; ++j) {
+      const float4* p = reinterpret_cast<const float4*>(
+          W + (size_t)(r0 + r) * K + j * 2048 + tid * 8);
+      w[r][2*j] = __ldg(p); w[r][2*j+1] = __ldg(p + 1);
+    }
+  uint4 xv[4];
+#pragma unroll
+  for (int j = 0; j < 4; ++j)
+    xv[j] = __ldg(reinterpret_cast<const uint4*>(x + j * 2048 + tid * 8));
+  float acc[ROWS];
+#pragma unroll
+  for (int r = 0; r < ROWS; ++r) acc[r] = 0.f;
+#pragma unroll
+  for (int j = 0; j < 4; ++j) {
+    const __nv_bfloat162* h = reinterpret_cast<const __nv_bfloat162*>(&xv[j]);
+    float xf[8];
+#pragma unroll
+    for (int e = 0; e < 4; ++e) {
+      const float2 f = __bfloat1622float2(h[e]);
+      xf[2*e] = f.x; xf[2*e+1] = f.y;
+    }
+#pragma unroll
+    for (int r = 0; r < ROWS; ++r) {
+      const float4 a = w[r][2*j], b = w[r][2*j+1];
+      float v = acc[r];
+      v=fmaf(a.x,xf[0],v); v=fmaf(a.y,xf[1],v);
+      v=fmaf(a.z,xf[2],v); v=fmaf(a.w,xf[3],v);
+      v=fmaf(b.x,xf[4],v); v=fmaf(b.y,xf[5],v);
+      v=fmaf(b.z,xf[6],v); v=fmaf(b.w,xf[7],v);
+      acc[r] = v;
+    }
+  }
+  __shared__ float red[ROWS][8];
+#pragma unroll
+  for (int r = 0; r < ROWS; ++r) {
+    float v = acc[r];
+#pragma unroll
+    for (int o = 16; o > 0; o >>= 1) v += __shfl_xor_sync(0xffffffffu,v,o);
+    if (lane == 0) red[r][warp] = v;
+  }
+  __syncthreads();
+  if (tid < ROWS) {
+    float v = 0.f;
+#pragma unroll
+    for (int q = 0; q < 8; ++q) v += red[tid][q];
+    out[r0 + tid] = v;
+  }
+}
+
+__device__ __forceinline__ uint32_t v30m1_hib(uint32_t c, uint32_t base4) {
+  return ((c & 0x07070707u) + base4) | ((c << 4) & 0x80808080u);
+}
+
+template<int ROWS,int NTH,int K>
+__global__ void __launch_bounds__(NTH+32) v30m1_cgemv_kernel(
+    const uint8_t* __restrict__ L, const uint8_t* __restrict__ C,
+    const __nv_bfloat16* __restrict__ x, const int2* __restrict__ etab,
+    int pmax, __nv_bfloat16* __restrict__ out, uint32_t base4) {
+  constexpr int PER = K / (16 * NTH), NWARP = NTH / 32;
+  const int tid=threadIdx.x, lane=tid&31, warp=tid>>5;
+  const int r0=blockIdx.x*ROWS;
+  __shared__ float red[ROWS][NWARP+1];
+  if (warp == NWARP) {
+    const int2* tb=etab+(size_t)blockIdx.x*pmax;
+    int2 mine=make_int2(0,0);
+    if (lane < pmax) mine=__ldg(&tb[lane]);
+    const int cnt=__shfl_sync(0xffffffffu,mine.x,0);
+    float ec[ROWS];
+#pragma unroll
+    for(int r=0;r<ROWS;++r) ec[r]=0.f;
+    for(int i0=0;i0<=cnt;i0+=32) {
+      const int i=i0+lane;
+      int2 en=mine;
+      if(i0>0) en=(i<=cnt)?__ldg(&tb[i]):make_int2(0,0);
+      if(i>=1 && i<=cnt) {
+        const float c=__bfloat162float(x[en.x&0xffff]) *
+          v30m1_escape_delta((uint32_t)en.y,base4&0xffu);
+        const int rl=en.x>>16;
+#pragma unroll
+        for(int r=0;r<ROWS;++r) ec[r]+=(rl==r)?c:0.f;
+      }
+    }
+#pragma unroll
+    for(int r=0;r<ROWS;++r) {
+      float v=ec[r];
+#pragma unroll
+      for(int o=16;o>0;o>>=1) v+=__shfl_xor_sync(0xffffffffu,v,o);
+      if(lane==0) red[r][NWARP]=v;
+    }
+    __syncthreads();
+    return;
+  }
+  uint4 lw[ROWS][PER]; uint2 cw[ROWS][PER]; uint4 xv[PER][2];
+#pragma unroll
+  for(int r=0;r<ROWS;++r)
+#pragma unroll
+    for(int j=0;j<PER;++j) {
+      const size_t e0=(size_t)(r0+r)*K+(size_t)j*16*NTH+16*tid;
+      lw[r][j]=__ldg(reinterpret_cast<const uint4*>(L+e0));
+      cw[r][j]=__ldg(reinterpret_cast<const uint2*>(C+e0/2));
+    }
+#pragma unroll
+  for(int j=0;j<PER;++j) {
+    const __nv_bfloat16* xp=x+j*16*NTH+16*tid;
+    xv[j][0]=__ldg(reinterpret_cast<const uint4*>(xp));
+    xv[j][1]=__ldg(reinterpret_cast<const uint4*>(xp+8));
+  }
+  float acc[ROWS];
+#pragma unroll
+  for(int r=0;r<ROWS;++r) acc[r]=0.f;
+#pragma unroll
+  for(int j=0;j<PER;++j) {
+    float xf[16];
+#pragma unroll
+    for(int h=0;h<2;++h) {
+      const uint32_t* xw=reinterpret_cast<const uint32_t*>(&xv[j][h]);
+#pragma unroll
+      for(int e=0;e<4;++e) {
+        xf[8*h+2*e]=__uint_as_float(xw[e]<<16);
+        xf[8*h+2*e+1]=__uint_as_float(xw[e]&0xffff0000u);
+      }
+    }
+#pragma unroll
+    for(int r=0;r<ROWS;++r) {
+      const uint32_t lws[4]={lw[r][j].x,lw[r][j].y,lw[r][j].z,lw[r][j].w};
+      const uint32_t cws[2]={cw[r][j].x,cw[r][j].y};
+      float v=acc[r];
+#pragma unroll
+      for(int g=0;g<2;++g) {
+        const uint32_t ha=v30m1_hib(cws[g]&0x0f0f0f0fu,base4);
+        const uint32_t hb=v30m1_hib((cws[g]>>4)&0x0f0f0f0fu,base4);
+        const uint32_t la=lws[2*g],lb=lws[2*g+1];
+        const uint32_t p01=__byte_perm(la,ha,0x5140),p23=__byte_perm(la,ha,0x7362);
+        const uint32_t p45=__byte_perm(lb,hb,0x5140),p67=__byte_perm(lb,hb,0x7362);
+        const float* q=xf+8*g;
+        v=fmaf(__uint_as_float(p01<<16),q[0],v); v=fmaf(__uint_as_float(p01&0xffff0000u),q[1],v);
+        v=fmaf(__uint_as_float(p23<<16),q[2],v); v=fmaf(__uint_as_float(p23&0xffff0000u),q[3],v);
+        v=fmaf(__uint_as_float(p45<<16),q[4],v); v=fmaf(__uint_as_float(p45&0xffff0000u),q[5],v);
+        v=fmaf(__uint_as_float(p67<<16),q[6],v); v=fmaf(__uint_as_float(p67&0xffff0000u),q[7],v);
+      }
+      acc[r]=v;
+    }
+  }
+#pragma unroll
+  for(int r=0;r<ROWS;++r) {
+    float v=acc[r];
+#pragma unroll
+    for(int o=16;o>0;o>>=1) v+=__shfl_xor_sync(0xffffffffu,v,o);
+    if(lane==0) red[r][warp]=v;
+  }
+  __syncthreads();
+  if(tid<ROWS) {
+    float v=0.f;
+#pragma unroll
+    for(int q=0;q<=NWARP;++q) v+=red[tid][q];
+    out[r0+tid]=__float2bfloat16_rn(v);
+  }
+}
+
+void v30m1_cgemv(at::Tensor L,at::Tensor C,at::Tensor x,at::Tensor etab,
+                  int64_t pmax,at::Tensor out,int64_t base4,int64_t rows,int64_t nth) {
+  const int N=out.size(1),K=L.size(1); auto st=at::cuda::getCurrentCUDAStream();
+  auto a0=L.data_ptr<uint8_t>(); auto a1=C.data_ptr<uint8_t>();
+  auto xp=reinterpret_cast<const __nv_bfloat16*>(x.data_ptr());
+  auto tp=reinterpret_cast<const int2*>(etab.data_ptr<int>());
+  auto op=reinterpret_cast<__nv_bfloat16*>(out.data_ptr());
+  const uint32_t b4=(uint32_t)base4; const int pm=(int)pmax;
+  if(K==8192&&rows==2&&nth==256){v30m1_cgemv_kernel<2,256,8192><<<N/2,288,0,st>>>(a0,a1,xp,tp,pm,op,b4);return;}
+  if(K==1024&&rows==2&&nth==64){v30m1_cgemv_kernel<2,64,1024><<<N/2,96,0,st>>>(a0,a1,xp,tp,pm,op,b4);return;}
+  if(K==4096&&rows==2&&nth==128){v30m1_cgemv_kernel<2,128,4096><<<N/2,160,0,st>>>(a0,a1,xp,tp,pm,op,b4);return;}
+  TORCH_CHECK(false,"v30m1 unsupported cgemv configuration");
+}
+
+void v30m1_rgemv(at::Tensor W,at::Tensor x,at::Tensor out) {
+  TORCH_CHECK(W.size(0)==256&&W.size(1)==8192&&x.size(0)==1,"v30m1 router shape");
+  v30m1_router_kernel<1><<<256,256,0,at::cuda::getCurrentCUDAStream()>>>(
+    W.data_ptr<float>(),reinterpret_cast<const __nv_bfloat16*>(x.data_ptr()),out.data_ptr<float>(),256);
+}
+"""
+
+_V30M1_CONFIG = {"qkv_gate": (2,256,2304), "o": (2,64,8192),
+                  "unpooler": (2,128,1024)}
+
+
+def _v30m1_build_ext():
+    digest = hashlib.sha256(_V30M1_CUDA.encode()).hexdigest()[:12]
+    return load_inline("v30_madhavan_m1_" + digest, _V30M1_CPP,
+        cuda_sources=_V30M1_CUDA, functions=["v30m1_cgemv","v30m1_rgemv"],
+        extra_cuda_cflags=["-O3","-lineinfo","-gencode=arch=compute_90a,code=sm_90a"],
+        verbose=False)
+
+
+def _v30m1_pack(weight, rows_per_cta, n):
+    w = weight[:n].contiguous()
+    bits = w.view(torch.int16).to(torch.int32) & 0xffff
+    hi, low = bits >> 8, bits & 0xff
+    exp, sign = hi & 0x7f, hi >> 7
+    hist = torch.bincount(exp.flatten(), minlength=128)
+    windows = torch.stack([hist[b:b+8].sum() for b in range(121)])
+    base = int(windows.argmax())
+    offset = (exp-base).clamp(0,7)
+    code = ((sign<<3)|offset).to(torch.uint8)
+    escaped = (exp<base)|(exp>base+7)
+    if int(escaped.sum()) > n*w.shape[1]//200:
+        return None
+    groups = code.view(n,w.shape[1]//8,8)
+    C = (groups[:,:,:4] | (groups[:,:,4:]<<4)).reshape(n,w.shape[1]//2).contiguous()
+    L = low.to(torch.uint8).contiguous()
+    rr,cc = escaped.nonzero(as_tuple=True)
+    decoded = (((sign<<7)|(base+offset))<<8)|low
+    if not bool((decoded[~escaped] == bits[~escaped]).all()):
+        raise RuntimeError("v30m1 non-escape reconstruction failed")
+    dec = decoded[rr,cc].to(torch.int16).view(torch.bfloat16).float()
+    if not bool(((dec + (w[rr,cc].float()-dec)) == w[rr,cc].float()).all()):
+        raise RuntimeError("v30m1 escape reconstruction failed")
+    ncta=n//rows_per_cta; owner=rr//rows_per_cta
+    counts=torch.bincount(owner,minlength=ncta)
+    pmax=int(counts.max())+1 if rr.numel() else 1
+    start=torch.cumsum(counts,0)-counts
+    pos=torch.arange(rr.numel(),device=w.device)-start[owner]+1
+    tab=torch.zeros((ncta,pmax,2),dtype=torch.int32,device=w.device)
+    tab[:,0,0]=counts.to(torch.int32)
+    tab[owner,pos,0]=(((rr-owner*rows_per_cta)<<16)|cc).to(torch.int32)
+    tab[owner,pos,1]=bits[rr,cc]
+    return {"L":L,"C":C,"tab":tab.contiguous(),"pmax":pmax,
+            "base4":base*0x01010101,"n":n,"k":w.shape[1]}
+
+
+def _v30m1_launch(layer, x, bundle):
+    ext=bundle["ext"]
+    if layer=="router":
+        out=torch.empty((1,256),dtype=torch.float32,device=x.device)
+        ext.v30m1_rgemv(bundle["router"],x,out)
+        return out
+    plan=bundle["plans"][layer]; rows,nth,_=_V30M1_CONFIG[layer]
+    out=torch.empty((1,plan["n"]),dtype=torch.bfloat16,device=x.device)
+    ext.v30m1_cgemv(plan["L"],plan["C"],x,plan["tab"],plan["pmax"],out,
+                    plan["base4"],rows,nth)
+    return out
+
+
+def _v30m1_prepare(weights, ext):
+    bundle={"ext":ext,"plans":{},"router":weights["router"]}
+    for layer,(rows,_,n) in _V30M1_CONFIG.items():
+        plan=_v30m1_pack(weights[layer],rows,n)
+        if plan is not None: bundle["plans"][layer]=plan
+    gen=torch.Generator(device=weights["qkv_gate"].device).manual_seed(3012028)
+    for layer in (*bundle["plans"],"router"):
+        w=weights[layer][:bundle["plans"][layer]["n"]] if layer!="router" else weights[layer]
+        xs=[torch.randn((1,w.shape[1]),dtype=torch.bfloat16,device=w.device,generator=gen)]
+        for col in (0,w.shape[1]//3,w.shape[1]-1):
+            x=torch.zeros((1,w.shape[1]),dtype=torch.bfloat16,device=w.device); x[0,col]=1
+            xs.append(x)
+        for x in xs:
+            out=_v30m1_launch(layer,x,bundle)
+            ref=(x.double()@w.double().T).to(out.dtype)
+            err=float(torch.linalg.vector_norm(out.double()-ref.double()) /
+                      torch.linalg.vector_norm(ref.double()).clamp_min(1e-12))
+            tol=1e-4 if layer=="router" else 1e-2
+            if err>tol: raise RuntimeError(f"v30m1 {layer} validation error {err}")
+        print(f"[v30m1] {layer}: validated")
+    return bundle
+
+
+def _v30m1_autotune(weights,state):
+    bundle=state["v30m1"]; choices=set(); device=weights["qkv_gate"].device
+    if bundle.get("ext") is None:
+        state["v30m1_choices"]=choices; return
+    flush=torch.ones((65536,1024),dtype=torch.float32,device=device)
+    sink=torch.empty((1024,),dtype=torch.float32,device=device)
+    gen=torch.Generator(device=device).manual_seed(3013028)
+    for layer in (*bundle["plans"],"router"):
+        w=weights[layer]; n=bundle["plans"][layer]["n"] if layer!="router" else 256
+        data={"x":torch.randn((1,w.shape[1]),dtype=torch.bfloat16,device=device,generator=gen),
+              "config":{"m":1,"n":n,"k":w.shape[1],"layer":layer}}
+        graphs=[]; outputs=[]
+        for candidate in range(2):
+            output=(_V30_BASE_KERNEL(data,state) if candidate==0 else
+                    _v30m1_launch(layer,data["x"],bundle))
+            torch.cuda.synchronize(device); graph=torch.cuda.CUDAGraph()
+            with torch.cuda.graph(graph):
+                output=(_V30_BASE_KERNEL(data,state) if candidate==0 else
+                        _v30m1_launch(layer,data["x"],bundle))
+            graphs.append(graph); outputs.append(output)
+        samples=[[],[]]
+        for rep in range(16):
+            for candidate in ((0,1) if rep%2==0 else (1,0)):
+                torch.sum(flush,dim=0,out=sink)
+                start=torch.cuda.Event(enable_timing=True); end=torch.cuda.Event(enable_timing=True)
+                start.record(); graphs[candidate].replay(); end.record(); end.synchronize()
+                samples[candidate].append(start.elapsed_time(end)*1000.0)
+        med=[sorted(v)[len(v)//2] for v in samples]
+        required=max(0.08,med[0]*0.01)
+        if med[1]+required<med[0]: choices.add(layer)
+        print(f"[v30m1] {layer} m=1: base={med[0]:.2f} public={med[1]:.2f} -> " +
+              ("public" if layer in choices else "base"))
+        del graphs,outputs,samples
+    state["v30m1_choices"]=choices
+    del flush,sink
+    torch.cuda.synchronize(device)
+
+
 def prepare(weights: Weights) -> dict:
-    # V28, v29, and v30 add independent extensions. Compile only those three
-    # modules concurrently, then preserve the original validation/autotune order
-    # on the main CUDA stream. This changes prepare wall time, not route logic.
+    # V28, v29, v30, and the attributed public M1 follow-up add independent
+    # extensions. Compile only those four modules concurrently, then preserve
+    # deterministic validation/autotune order on the main CUDA stream.
     state = _V28_BASE_PREPARE(weights)
-    with _PreparePool(max_workers=3) as pool:
+    with _PreparePool(max_workers=4) as pool:
         pending = {
             "v28": pool.submit(_v28_build_ext),
             "v29": pool.submit(_v29_build_o_ext),
             "v30": pool.submit(_v30_build_qkv_ext),
+            "v30m1": pool.submit(_v30m1_build_ext),
         }
         extensions = {}
         for name, future in pending.items():
@@ -7932,11 +8272,17 @@ def prepare(weights: Weights) -> dict:
     state["v30_qkv"] = (_v30_prepare_qkv(weights["qkv_gate"], extensions["v30"])
                          if extensions["v30"] is not None else {"ext": None, "plans": []})
     _v30_autotune(weights["qkv_gate"], state)
+    state["v30m1"] = (_v30m1_prepare(weights, extensions["v30m1"])
+                       if extensions["v30m1"] is not None else {"ext": None, "plans": {}})
+    _v30m1_autotune(weights, state)
     return state
 
 
 def kernel_fn(data: Inputs, state: dict) -> torch.Tensor:
-    cfg, choice = data["config"], state.get("v30_qkv_choice")
+    cfg = data["config"]
+    if cfg["m"] == 1 and cfg["layer"] in state.get("v30m1_choices", ()):
+        return _v30m1_launch(cfg["layer"], data["x"], state["v30m1"])
+    choice = state.get("v30_qkv_choice")
     if cfg["layer"] == "qkv_gate" and cfg["m"] == 32 and choice is not None:
         return _v30_launch(data["x"], state["v30_qkv"], choice)
     return _V30_BASE_KERNEL(data, state)

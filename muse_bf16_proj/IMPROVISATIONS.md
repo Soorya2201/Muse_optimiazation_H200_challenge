@@ -339,6 +339,25 @@ times: qkv m1 8.59 us, qkv m32 11.22 us, unpooler m1 2.87 us, and router m1 3.32
 duplicating v30's qkv32 search and turns the source into a targeted attributed follow-up rather than
 another broad speculative check. No OKC run was used for this audit.
 
+The targeted follow-up is now folded into hardened v30 rather than left as a plan. One new
+independent extension contains the Apache-attributed public M1 kernels only: row-major lossless C12
+GEMV for qkv, o, and the 1,024-row unpooler slice, plus the original-FP32 router GEMV. Pooler M1 is
+deliberately omitted because its public time loses to v18. The three projection packers prove every
+non-escape bit pattern exactly, prove each escape correction reconstructs the original BF16 value,
+and build per-CTA correction tables. Prepare then tests random inputs and three one-hot columns per
+route. Each shape is independently cold-L2 graph-timed against the already selected v30 base and
+requires both 1% and 0.08 us before dispatch changes. The timed call branches only on public shape
+metadata and remains graph-capturable.
+
+Using the four public M1 times as an impossible perfect-transfer oracle raises v18 from 1.518570x
+to only **1.537273x** (+1.23%); the module is a useful portfolio bridge, not a rank-one claim. It
+compiles concurrently with the qkv16, o, and qkv32 experiments, and its build failure is isolated in
+the same way. Python syntax, the v25→v28→v29→v30 byte-prefix chain, balanced CUDA-source braces,
+all required instantiations, independent C12 code/table emulation for the three matrix shapes, the
+normal mocked prepare order, and all four one-build-failure paths pass. CUDA compilation,
+correctness, actual timings, and total prepare duration still require the reset H200 check. No OKC
+run was consumed while implementing it.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.

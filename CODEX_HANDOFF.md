@@ -152,11 +152,17 @@ gates v27's WR=2/4 qkv16 geometry against the v25-selected route. V29 then indep
 v26's WR=2/4 o geometry at m1/m8 against the v28-selected route. V30 finally validates and gates
 WR=2/4 qkv32 geometry against v29. V30 now starts from v25 once and compiles those three independent
 experimental extensions concurrently, then retains the original sequential qkv16→o→qkv32 GPU
-validation and autotune order. Prefix, syntax, and mocked state/order checks pass, but H200 prepare
-time is still unmeasured. Each experimental build is now failure-isolated: if one module does not
+validation and autotune order. A fourth independently compiled module now adds only the public
+Madhavan profile's strongest m1 routes: lossless direct C12 qkv/o/unpooler and exact-FP32 router.
+Each route is packing-checked, GPU-self-tested, cold-L2 timed against the selected base, and requires
+a 1%/0.08 us win. Their profile-time oracle raises v18 only to 1.537273x (+1.23%), so this is a
+bridge rather than a rank-one design. Prefix, syntax, C12 layout emulation, and mocked state/order
+checks pass, but H200 compile/correctness/prepare time is still unmeasured. Each experimental build
+is failure-isolated: if one module does not
 compile, v30 prints the bounded error, keeps exact v25 plus the other successful modules, and skips
 only that module's validation/autotune. Mock tests cover the success path and each of the three
-isolated failures. Descend v30→v29→v28 only on a top-level resource/prepare-time failure;
+original failures plus the fourth M1 failure. Descend v30→v29→v28 only on a top-level
+resource/prepare-time failure;
 V25 is the no-new-compilation
 fallback; V23 and v24 are isolation diagnostics only; v19 is a narrower fallback. The separately prepared
 `submission_v26_o_c12_geometry.py` keeps the exact C12 decoder but tests legal WR=2/4 `o` routes
@@ -246,8 +252,8 @@ o m1; qkv m1/m16/m32; pooler m32; unpooler m1/m32/m128; and router m1/m256. An i
 per-shape oracle union reconstructs only **1.555216x**, +2.41% over v18 and still below the 1.6367x
 leader. Do not check the weaker whole file. After v30, compare its selected timings against the
 strongest public thresholds—qkv m1 8.59 us, qkv m32 11.22 us, unpooler m1 2.87 us, and router m1
-3.32 us—and extract only unmatched routes into an attributed combined candidate. This evidence
-does not displace exact v18 or v30 at the reset.
+3.32 us. The three M1 thresholds are now represented directly in v30; qkv m32 remains covered by
+v30's independent geometry search. This evidence does not displace exact v18 or v30 at the reset.
 
 #### Oct 28 prefill continuation
 
