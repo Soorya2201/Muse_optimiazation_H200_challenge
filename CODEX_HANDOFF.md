@@ -178,8 +178,9 @@ qkv16 decoder and four-block reduction while shrinking 576 128-thread CTAs to 28
 spill, correctness failure, or a non-strict timing result. V26/v27 are now isolation candidates
 for surprising combined logs, not default checks. Next, check
 `submission_v31_pooler32_geometry.py` as an isolated follow-up if the first two checks leave
-prepare budget: it preserves 2,048 warps while testing 256→128/64 CTAs and should only be combined
-after a measured win. Next, check
+prepare budget: its retained WR2 plan preserves 2,048 warps while testing 256→128 CTAs and should
+only be combined after a measured win. Offline NVCC 13 compilation proved the former 1,024-thread
+WR4 plan spills 104 local bytes per thread, so that plan was removed before measurement. Next, check
 `muse_bf16_proj/submission_v20_cluster_dense_m128.py`. It preserves v19 as an exact prefix and
 generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
 no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests

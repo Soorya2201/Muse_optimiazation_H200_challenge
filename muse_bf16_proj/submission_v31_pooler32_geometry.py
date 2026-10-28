@@ -7302,7 +7302,7 @@ def kernel_fn(data: Inputs, state: dict) -> torch.Tensor:
 
 # v31: isolated no-reduction C12 pooler-m32 CTA geometry search.
 _V31_FIXED_PREPARE, _V31_FIXED_KERNEL = _v19_fixed_prepare, _v19_fixed_kernel
-_V31_GEOMETRIES = (("wr2", (2, 8, 16, 1)), ("wr4", (4, 8, 16, 1)))
+_V31_GEOMETRIES = (("wr2", (2, 8, 16, 1)),)
 
 
 def _v31_source():
@@ -7313,8 +7313,7 @@ def _v31_source():
     src = src.replace(bounds, "__launch_bounds__(NTMAX,(NTMAX==256?2:1))")
     old = """case 0:return r3_pool32_pooler_d9_cap2_a_m32x_launch_t<1,4,1,1,0,0,256,0,4096,8192,1,8,16,1,7,1,1>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);
 case 1:return r3_pool32_pooler_d9_cap2_a_m32x_launch_t<0,4,1,1,0,0,256,0,4096,8192,1,8,16,1,7,1,1>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);"""
-    new = """case 0:return r3_pool32_pooler_d9_cap2_a_m32x_launch_t<1,4,1,1,0,0,512,0,4096,8192,2,8,16,1,7,1,1>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);
-case 1:return r3_pool32_pooler_d9_cap2_a_m32x_launch_t<1,4,1,1,0,0,1024,0,4096,8192,4,8,16,1,7,1,1>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);"""
+    new = """case 0:return r3_pool32_pooler_d9_cap2_a_m32x_launch_t<1,4,1,1,0,0,512,0,4096,8192,2,8,16,1,7,1,1>(wp,x,out,esc,m,N,K,WR,WK,KU,S,t01,u01,stream,query);"""
     if src.count(old) != 1:
         raise RuntimeError("v31 instance anchor drift")
     return src.replace(old, new)
