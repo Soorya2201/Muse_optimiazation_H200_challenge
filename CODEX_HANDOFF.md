@@ -323,6 +323,16 @@ Read-only board refresh after this audit: overall **#664**; MoE **#536** at 1.63
 attention **#770** at 1.2954x; BF16 **#1093** at 1.1158x; decode **#705** at 1.2326x;
 prefill **#467** at 1.1184x. Prefill remains a separate board, and all ranks are dynamic.
 
+An Oct 28 08:31 PDT read-only refresh confirms BF16 **#1093** and overall **#664**. The BF16
+frontier is #1 1.6367x, #2 1.5933x, #3 1.5899x, #4 1.5893x, and #5 1.5876x. Web search and
+authenticated GitHub code search for all four new #2-#5 team names and exact job IDs found no
+public kernel source or receipt, so there is no attributable implementation to reproduce.
+`muse_bf16_proj/tools/c12_cluster_static_audit.py` now guards v32's offline invariants:
+202,912-byte worst-case
+shared-memory bound, six-slot phase reuse, exact 16,384-byte peer completion count, disjoint padded
+DSMEM mailboxes, contiguous 50,331,648-byte packed range, and one-write coverage of all 128x4,096
+outputs. It passes locally. This does not replace the pending H200 runtime check or change its order.
+
 A subsequent authenticated GitHub code-search refresh found no source from any current top-five
 BF16 team. Two newly indexed lower artifacts do not change the plan. PostTrainLLM publishes an
 exact source/hash receipt for job `1095cf9b43bf49a0` at only 1.067341x; it uses a Triton m1 GEMV and

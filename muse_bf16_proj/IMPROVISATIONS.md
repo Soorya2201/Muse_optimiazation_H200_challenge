@@ -584,6 +584,20 @@ Python syntax, postponed-annotation mock import, embedded/generated CUDA hash, f
 packing roundtrip, overflow fallback, and dispatch capture all pass offline. GPU runtime correctness
 and H200 timing remain pending. No OKC run was consumed.
 
+The follow-up static control-flow audit is executable as `tools/c12_cluster_static_audit.py`. It
+proves the 202,912-byte allocation includes the worst 1,023-byte alignment loss, all six ring-slot
+phase expressions are bounded, the remote mbarrier expects exactly the 16,384 bytes sent by two
+warps, the padded DSMEM mailbox rows do not overlap, the 50,331,648-byte packed address range is
+contiguous, and the two ranks write every 128x4,096 output coordinate exactly once. NVIDIA's PTX
+ISA documents `barrier.cluster.arrive`/`wait` as the cluster synchronization pair and requires all
+threads for the `.aligned` form used here. This static proof cannot establish numerical WGMMA
+mapping or H200 performance, which remain guarded by v32's runtime self-tests and timing gate.
+
+At 08:31 PDT on Oct 28, a read-only board refresh showed the top five at 1.6367x, 1.5933x,
+1.5899x, 1.5893x, and 1.5876x. Exact web and authenticated GitHub code searches for the #2-#5
+teams and job IDs returned no relevant public source or result receipt. No private-leader method is
+inferred from these scores, and the measurement order is unchanged.
+
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 
 Existing v5/v6: TMA a compressed ring into shared memory, decode in the consumer, and read a raw
