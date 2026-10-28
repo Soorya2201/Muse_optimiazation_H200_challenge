@@ -359,6 +359,13 @@ final v18 modules. V30 reuses that base and adds four concurrent extension build
 validation/autotuning, leaving substantial nominal room under the 300 s prepare cap. Do not move a
 lean fallback ahead of v30 based only on its source size. Local syntax still passes for exact v18
 and v30, and exact v18's SHA remains `111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`.
+
+Run `muse_bf16_proj/tools/bf16_reset_preflight.py` immediately before the first reset check. It
+parses every queued candidate, verifies every problem marker, checks the v19→v20/v21,
+v21→v22, v23→v25→v28→v29→v30, v19→v31, and v18→v32 byte-prefix contracts, proves live
+`submission.py` still equals archived v3, checks the authenticated v18 hash, and verifies v32's
+embedded CUDA byte-for-byte against generator stdout and its declared SHA. This is structural
+preflight only; it cannot replace H200 compilation, correctness, or timing.
 Descend v29/v28/v25 only after an actual top-level resource or prepare-time failure. No OKC run was
 used.
 
