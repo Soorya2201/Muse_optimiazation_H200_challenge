@@ -51,6 +51,7 @@ is essential.
 | [rohanarun board entry](https://github.com/rohanarun/Auto-research-agent) | Score only; no reusable source | Current board entry is 1.5503x/rank 43 (`d1e1635ef48f4850`), stronger than Nathen v18, but the current public repository contains only the research application/prompts and no matching kernel or receipt. Do not attribute or reconstruct unavailable source. |
 | v19 route-generation autotune | Prepared, untested | Starts with the exact v18 artifact, then during `prepare()` compares its complete v15-v18 dispatch generations with cold-L2 CUDA-graph timing on all 30 scored shapes. It keeps v18 unless an older generation wins by both 1% and 0.08 us, and always uses fixed v18 for nearby/held-out shapes. |
 | v23 full-history route autotune | Prepared, untested | Supersedes v19's search without new CUDA compilation. Reconstructs every v9-v18 route-change boundary: 23 scored shapes changed, with 49 genuinely distinct candidates total. Seven unchanged shapes and all held-out shapes stay fixed v18; the same 1% and 0.08 us cold-L2 gate applies. |
+| v24 cross-small C12 routes | Prepared, untested | Reuses v18's final qkv/pooler m1 plans at m8 and its final o m8 plan at m1. Their templates use dynamic m with MT=1, and v18 prepare already verifies every plan at m=1,4,8. Three cold-L2 comparisons add no compilation; only strict wins activate. |
 | v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 | v21 cluster-dense m128/m256 | Prepared, untested | Extends v20 with v18's dormant TM256 WGMMA schedule. Two generated modules independently gate pooler/unpooler at m128 and m256, retaining captured outputs during graph timing. All four routes use 128 CTAs and fit Hopper's dynamic shared-memory limit; any non-winning route falls back to v19. |
 | v22 cluster pipeline autotune | Prepared, untested | Subsumes v21 without compiling it first. For each of its four shapes, compares the base 2D-TMA schedule, v18's evidenced 3D-TMA/normal-weight-cache policy, and one adjacent legal stage depth. All 12 candidates require random and exact one-hot correctness; only a 1% and 0.08 us cold-L2 win over v19 activates. |
@@ -80,6 +81,7 @@ is essential.
 | v21 cluster-dense m128/m256 | not run | `submission_v21_cluster_dense_m128_m256.py`; v19 is an exact 637,846-byte prefix. Static generation produced two-case pooler/unpooler sources with no unresolved markers, m128/m256 swap-WGMMA calls, and 163,920-213,136 bytes of dynamic shared memory. CUDA/H200 compilation and timing are pending. |
 | v22 cluster pipeline autotune | not run | `submission_v22_cluster_dense_autotune.py`; v21 is its exact prefix but its final prepare bypasses v21 and starts directly from v19, so only two six-template extensions compile. Generated sources contain all six cases and use 155,712-221,344 bytes of dynamic shared memory. CUDA/H200 compilation and timing are pending. |
 | v23 full-history route autotune | not run | `submission_v23_full_history_autotune.py`; v19 is an exact 637,846-byte prefix, but v23 bypasses v19's sweep and starts from exact v18 prepare. AST reconstruction proves 23 changed shapes, 20 two-way comparisons, three three-way comparisons, and 49 candidate graphs total. CUDA/H200 timing is pending. |
+| v24 cross-small C12 routes | not run | `submission_v24_cross_small_routes.py`; v19 is an exact 637,846-byte prefix and v24 starts from exact v18 prepare. Static inspection proves the reused qkv/pooler/o templates are dynamic over m=1..8 and their existing prepare verification includes both cross-tested endpoints. CUDA/H200 timing is pending. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -159,6 +161,19 @@ self-validates all historical modules, v23 adds no extension build. It directly 
 the generation boundaries where a route changed, keeps fixed v18 on seven unchanged and every
 held-out shape, and requires both the v19 relative and absolute win margins. This fully subsumes
 v19's meaningful search with less prepare-time work and less duplicate-measurement noise.
+
+V24 exploits a separate omission in static dispatch. V18's final qkv and pooler plans are exposed
+only at m1, while its final o plan is exposed only at m8, but all three compiled instances have
+`CM=0`, `MT=1` and are therefore valid for m=1..8. More strongly, their existing prepare path
+already runs random and exact one-hot checks at m=1,4,8. V24 cross-tests qkv1→m8,
+pooler1→m8, and o8→m1 against fixed v18 with 16 alternating cold-L2 graph replays and the same
+1%/0.08 us gate. No new CUDA source, packing, or precision behavior is introduced.
+
+The [public BF16 strategy guide](https://thethings.ai/p/okc/muse-bf16-proj-guide/03-strategy)
+also narrows future work: direct C12 streaming saves 13-20% on suitable small shapes, while L2
+prefetch, x-stationary/multiple-row-block GEMV, persistent TMA rings, and compressed WGMMA were
+measured losers. Do not spend checks repeating those rejected variants; adjacent geometry around
+the direct-load C12 plans and removal of split-K tails remain the defensible small-m directions.
 
 ### Public-source landscape and the next architectural target
 

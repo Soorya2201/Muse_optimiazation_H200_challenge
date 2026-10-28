@@ -147,7 +147,9 @@ promote and submit it with attribution. Then check
 v18's unified prepare already builds all v9-v18 modules, and route-history reconstruction leaves
 only 49 distinct candidates across 23 changed shapes. It adds no CUDA compilation, requires both
 a 1% and 0.08 us measured win, and uses fixed v18 for seven unchanged and every held-out shape.
-Keep v19 only as a narrower diagnostic fallback. Third, check
+Then check `muse_bf16_proj/submission_v24_cross_small_routes.py`: it cross-applies three final
+C12 plans at the other m=1/8 endpoint, all of which v18 already self-validates at m=1,4,8.
+Keep v19 only as a narrower diagnostic fallback. Next, check
 `muse_bf16_proj/submission_v20_cluster_dense_m128.py`. It preserves v19 as an exact prefix and
 generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
 no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests
