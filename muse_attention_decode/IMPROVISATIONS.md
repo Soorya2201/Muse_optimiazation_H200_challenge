@@ -1,18 +1,20 @@
 # `muse_attention_decode` optimization record
 
-The current verified submission is `submission.py` = `submission_v6.py`.
+The current verified submission is `submission.py` = `submission_v13_four_stage_c2_full.py`.
 
 ## Current result and bottleneck
 
-Scored job `b38b60919dfb42e6` passed at **1.2491x** (SGLang 3,766.3 us, ours
-3,015.2 us; 95% CI 1.2304-1.2678). The identical check job
-`637b6a93b70c4f1a` saved the complete profile. As of 2026-10-27 this was rank
-#756; first place was 3.0316x.
+Scored job `3135d826e3994f11` passed at **1.2954x** (SGLang 3,766.3 us, ours
+2,907.4 us; 95% CI 1.2760-1.3188). The best local candidate is v13 at
+**1.3116x** (`ccaa5314524e4001`, 2,871.6 us), but its 1.25% gain over the scored
+point did not clear the strict resubmit threshold. After the submit the live rank
+was #761/936; first place was 3.0316x.
 
 The custom fused decode kernel wins on all six decode shapes: 1.39-1.85x. It is one launch
 that performs QK norm, optional RoPE, FP8 cache store, split-KV attention, cluster/global
-merge, output norm, and gate. Full-context batch-32 decode is the longest custom phase at
-about 278 us. Its TASK floor is 126 us, so it reaches about 45% of the ideal roofline; random
+merge, output norm, and gate. Full-context batch-32 decode now uses C2/NC4 geometry and
+takes about 233 us in v13, down from v6's 278 us. Its TASK floor is 126 us, so it reaches
+about 54% of the ideal roofline; random
 128-byte page-1 gathers make the 4.8 TB/s floor optimistic.
 
 Verify is the remaining bottleneck. At B=1 sliding verify, the custom fused kernel takes about
@@ -35,7 +37,8 @@ main attention kernel is over 95% of profiled time.
 | Pair both local KV heads in one CTA | Tried, retained | Uses each 128-byte cache row as a full line. |
 | Shape-specific custom/FA3 selection | Tried in v4-v6, retained | v6 improved scored speedup from 1.2023x to 1.2491x. |
 | Treat eight verify tokens as separate virtual requests | Tried in v4, rejected for B>=16 | Re-reads the same window; only retained at B=1 where fusion wins. |
-| Pack 8 tokens x 8 query heads into one WGMMA tile | Not yet implemented | Highest-priority verify optimization. |
+| Pack 8 tokens x 8 query heads into one 64-row warp-MMA tile | Tried in v7-v10, rejected | Reads K/V once, but 32-49 us custom timing still lost to FA3's 25-30 us chain. |
+| Use C2 plus global merge for batched full decode | Tried in v12-v14, retained in v13 | Reduced B16/B32 from about 146/280 to 124/233 us paired. |
 | FP8 WGMMA for QK | Not yet implemented | Estimated 10-25% on verify compute; precision must be rechecked. |
 | DSMEM split-KV merge across clusters | Not yet implemented | Clusters cannot directly span GPCs; needs hierarchical design. |
 
@@ -47,14 +50,14 @@ main attention kernel is over 95% of profiled time.
 | v4 / old `submission.py` | `41a3fc2bdbe84169` submit | 1.2023x | First scored attention result. |
 | v5 | `6f6fa502d1df4355` check | 1.2080x | FA3 for every verify shape; lost the B=1 custom win. |
 | v6 | `637b6a93b70c4f1a` check | 1.2488x | Hybrid: custom B=1 sliding verify, FA3 otherwise. |
-| v6 / current `submission.py` | `b38b60919dfb42e6` submit | **1.2491x** | Scored hybrid result. |
+| v6 / old `submission.py` | `b38b60919dfb42e6` submit | **1.2491x** | Prior scored hybrid result. |
 | v7 | `4cc63346dc924fdd` check | 1.2091x | Existing L8 kernel correctly reused each K/V tile across 64 query rows, but the all-resident planner forced C2 with 8/4 cross-cluster merges; B16/B32 sliding verify regressed to 38.95/49.26 us. |
 | v8 | `f8057bf43de7434a` check | 1.1911x | Natural C16/C8 clusters avoided global combine but synchronization and queued tails worsened B16/B32 sliding verify to 48.67/56.12 us; rejected. |
 | v9 | `6c982f5b856040ad` check | 1.2237x | One-wave C8/C4 plans reduced B16 to 35.07 us paired/32.1 us profiled, but B32 remained 49.84/46.9 us; both still lost to v6 FA3 at 29.33/34.61 us. |
 | v10 | `956826766cad4fed` check | 1.2177x | Replacing C8/C4 with C2 reduced B32's profile to 38.6 us, but B16 rose to 34.2 us; paired 39.84/48.29 us confirmed merge overhead still leaves both behind FA3. |
 | v11 | `ba1b8a40f6bd454c` check | 1.1848x | Five cp.async stages globally forced C2 plans and hurt sliding/B1, but improved B16/B32 full decode paired times by 17.45/42.57 us. The next variant specializes NST5 to those two shapes. |
 | v12 | `50948bd6edc344dc` check | **1.3012x** | Hybrid NST4/NST5 retained every v6 dispatch and used five stages only for B16/B32 full decode, cutting them to 129.49/237.95 us paired. CI 1.2816-1.3277 clears v6 and qualifies for submit. |
-| v12 / current `submission.py` | `3135d826e3994f11` submit | **1.2954x** | New scored best: 2907.4 us, CI 1.2760-1.3188; 3.7% higher speedup than v6's 1.2491x. |
+| v12 / scored submission | `3135d826e3994f11` submit | **1.2954x** | New live best: 2907.4 us, CI 1.2760-1.3188; 3.7% higher speedup than v6's 1.2491x. |
 | v13 | `ccaa5314524e4001` check | **1.3116x** | NST4 plus C2 improved B16/B32 full decode to 123.86/232.86 us paired. This isolates C2 geometry as the main gain; the 1.25% aggregate lift over scored v12 does not clear the submit threshold. |
 | v14 | `d461fc4f71a74060` check | 1.3061x | NST3 plus C2 regressed B16/B32 full decode to 124.78/236.62 us paired. Four stages are retained; reserved budget closed at 8 checks/1 submit. |
 

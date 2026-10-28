@@ -744,13 +744,13 @@ static int max_clusters_t(int C) {
 
 int muse_func_info(int L, int which) {
   cudaFuncAttributes a;
-  cudaError_t e = (L == 5) ? cudaFuncGetAttributes(&a, attn_kernel<1, 1, 5>) : (L == 1 ? cudaFuncGetAttributes(&a, attn_kernel<1, 1, 4>) : (L == 8 ? cudaFuncGetAttributes(&a, attn_kernel<8, 8, 4>) : cudaFuncGetAttributes(&a, attn_kernel<1, 8, 4>)));
+  cudaError_t e = (L == 5) ? cudaFuncGetAttributes(&a, attn_kernel<1, 1, 5>) : ((L == 1 || L == 4) ? cudaFuncGetAttributes(&a, attn_kernel<1, 1, 4>) : (L == 8 ? cudaFuncGetAttributes(&a, attn_kernel<8, 8, 4>) : cudaFuncGetAttributes(&a, attn_kernel<1, 8, 4>)));
   if (e != cudaSuccess) { cudaGetLastError(); return -1; }
   return which == 0 ? a.numRegs : (int)a.localSizeBytes;
 }
 
 int muse_max_clusters(int L, int C) {
-  return L == 5 ? max_clusters_t<1, 1, 5>(C) : (L == 1 ? max_clusters_t<1, 1, 4>(C) : (L == 8 ? max_clusters_t<8, 8, 4>(C) : max_clusters_t<1, 8, 4>(C)));
+  return L == 5 ? max_clusters_t<1, 1, 5>(C) : ((L == 1 || L == 4) ? max_clusters_t<1, 1, 4>(C) : (L == 8 ? max_clusters_t<8, 8, 4>(C) : max_clusters_t<1, 8, 4>(C)));
 }
 
 template <int L, int LK, int STG>
@@ -796,7 +796,7 @@ int muse_attn_launch(const void* qkv, const void* positions, const void* cache_l
   p.window = window; p.use_rope = use_rope; p.C = C; p.NC = NC; p.chunk = chunk; p.nmax = nmax;
   p.scale_log2 = scale_log2;
   cudaStream_t st = (cudaStream_t)stream;
-  return L == 5 ? launch_t<1, 1, 5>(p, st) : (L == 1 ? launch_t<1, 1, 4>(p, st) : (L == 8 ? launch_t<8, 8, 4>(p, st) : launch_t<1, 8, 4>(p, st)));
+  return L == 5 ? launch_t<1, 1, 5>(p, st) : ((L == 1 || L == 4) ? launch_t<1, 1, 4>(p, st) : (L == 8 ? launch_t<8, 8, 4>(p, st) : launch_t<1, 8, 4>(p, st)));
 }
 '''
 
@@ -827,7 +827,7 @@ int64_t run(torch::Tensor qkv, torch::Tensor positions, torch::Tensor cache_loc,
 '''
 
 _EXT = load_inline(
-    name="muse_attn_decode_v12_hybrid_five_stage",
+    name="muse_attn_decode_v13_four_stage_c2_full",
     cpp_sources=[CPP_SRC],
     cuda_sources=[CUDA_SRC],
     functions=["run", "max_clusters", "func_info"],
@@ -867,11 +867,17 @@ def _plan(batch, length, hkv, nmax):
     pairs = batch * (hkv // 2)
     splits = max(1, (2 * NUM_SMS) // pairs)
     splits = min(splits, max(1, nmax // 128))
-    c = 16 if splits >= 16 else 8 if splits >= 8 else 4 if splits >= 4 else 2
-    nc = max(1, splits // c)
-    while c > 2 and _EXT.max_clusters(length, c) < nc * pairs:
-        c //= 2
-        nc *= 2
+    if length == 4:
+        # Isolate v12's geometry from its pipeline depth: use NST4 but force
+        # the same C2/NC8 and C2/NC4 plans measured by the NST5 path.
+        c = 2
+        nc = max(1, splits // c)
+    else:
+        c = 16 if splits >= 16 else 8 if splits >= 8 else 4 if splits >= 4 else 2
+        nc = max(1, splits // c)
+        while c > 2 and _EXT.max_clusters(length, c) < nc * pairs:
+            c //= 2
+            nc *= 2
     chunk = -(-nmax // (c * nc))
     chunk = ((chunk + 63) // 64) * 64
     _PLANS[key] = (c, nc, chunk)
@@ -948,9 +954,8 @@ def kernel_fn(data: Inputs) -> torch.Tensor:
     maxlen = max_pages * page
     # mode 1: decode; mode 18: verify on a sliding layer, one CTA group per verify token
     # (the 8 tokens of a request re-read the same window, mostly from L2); mode 8: generic verify.
-    # Mode 5 selects the deeper gather pipeline only where v11 measured a
-    # decisive win: batched full-context decode. Other shapes retain v6/NST4.
-    mode = 5 if length == 1 and not window and batch >= 16 else (1 if length == 1 else (18 if window else 8))
+    # Mode 4 selects NST4 with v12's C2 geometry for batched full decode.
+    mode = 4 if length == 1 and not window and batch >= 16 else (1 if length == 1 else (18 if window else 8))
     vreq = batch * (8 if mode == 18 else 1)
     qrows = 1 if mode == 18 else length
     nmax = min(window + qrows - 1, maxlen) if window else maxlen
