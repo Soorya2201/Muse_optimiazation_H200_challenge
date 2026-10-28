@@ -48,6 +48,9 @@ main attention kernel is over 95% of profiled time.
 | v5 | `6f6fa502d1df4355` check | 1.2080x | FA3 for every verify shape; lost the B=1 custom win. |
 | v6 | `637b6a93b70c4f1a` check | 1.2488x | Hybrid: custom B=1 sliding verify, FA3 otherwise. |
 | v6 / current `submission.py` | `b38b60919dfb42e6` submit | **1.2491x** | Scored hybrid result. |
+| v7 | `4cc63346dc924fdd` check | 1.2091x | Existing L8 kernel correctly reused each K/V tile across 64 query rows, but the all-resident planner forced C2 with 8/4 cross-cluster merges; B16/B32 sliding verify regressed to 38.95/49.26 us. |
+| v8 | `f8057bf43de7434a` check | 1.1911x | Natural C16/C8 clusters avoided global combine but synchronization and queued tails worsened B16/B32 sliding verify to 48.67/56.12 us; rejected. |
+| v9 | `6c982f5b856040ad` check | 1.2237x | One-wave C8/C4 plans reduced B16 to 35.07 us paired/32.1 us profiled, but B32 remained 49.84/46.9 us; both still lost to v6 FA3 at 29.33/34.61 us. |
 
 ## Novel next ideas
 
