@@ -56,6 +56,8 @@ is essential.
 | v7 choice refresh | `5e56c7e77fb34524` check | 1.1120x | Statistically tied/slightly worse; not promoted. |
 | v8 pooler NW=16 | `5f6f3910b4bb4ac9` check | 1.1018x | Wider TMA stages hurt m=8. |
 | v9 Triton m=16/32 | `7897be35f5c548f9` check | 0.9239x | Correct, but long-K qkv/pooler tiles were much slower than cuBLAS. |
+| v10 stage diagnostic | `cddcfa69cbbf4c5a` check | 1.1080x | Cold-L2 graph sweep confirmed qkv's current four-stage ring wins m1/m8; pooler's current ring wins m8 and is within 0.03 us at m1. No dispatch change retained. |
+| v11 per-warp partial reduction | `fb91e9bfbf7e43d4` check | 1.0986x | Correct, but separate per-warp shared stores and the explicit epilogue sum cost more than the original same-address shared atomics. qkv m1/m8 paired times were 12.80/13.57 us; rejected. |
 
 ## Lossless 12-bit BF16 feasibility result
 
