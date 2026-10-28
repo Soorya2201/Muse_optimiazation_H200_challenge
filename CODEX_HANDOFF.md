@@ -114,9 +114,9 @@ four K slices, eliminating the intra-CTA atomic reduction without adding MMA wor
 original qkv mapping at m=1 with row partition only at m=8. Do not run more BF16 checks on
 Oct 28 under the reserved-budget policy.
 
-Latest Oct 28 rank refresh after the BF16 research checkpoint: overall **#658**; MoE **#530**
-at 1.6329x; attention **#763** at 1.2954x; BF16 **#1087** at 1.1158x; decode **#698** at
-1.2326x; prefill **#458** at 1.1184x.
+Latest Oct 28 rank refresh after the BF16 research checkpoint: overall **#661/1422**; MoE
+**#533/986** at 1.6329x; attention **#766/940** at 1.2954x; BF16 **#1088/1235** at
+1.1158x; decode **#700/859** at 1.2326x; prefill **#462/568** at 1.1184x.
 Ranks are dynamic.
 
 Post-budget preparation (no additional OKC run): v13 is the planned qkv hybrid that keeps the
@@ -152,7 +152,10 @@ fixed v18 for every nearby/held-out shape. Third, check
 generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
 no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests
 and a conservative cold-L2 timing gate before activation. If exact v18 fails because of
-environment drift, diagnose that artifact before trying v19/v20; then fall back to v14 and v13.
+environment drift, diagnose that artifact before trying v19/v20. Fourth, check
+`muse_bf16_proj/submission_v21_cluster_dense_m128_m256.py`, which adds independently gated
+TM256 pooler/unpooler routes to the same cluster/no-reduction design. Its static generator and
+shared-memory checks pass, but it has not compiled on H200. Then fall back to v14 and v13.
 Keep the current
 `submission.py` untouched until a qualifying check passes.
 
