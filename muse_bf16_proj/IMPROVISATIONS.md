@@ -530,6 +530,13 @@ idealized stream reduction is only 1.10% qkv, 1.67% o, 1.11% pooler, and 1.68% u
 metadata or extra decode instructions. Router-low is a poor candidate: its estimated escape rate
 is 4.016%, making even the compact form larger than C12.
 
+Per-block exponent windows do not rescue it. An 8,192-block Monte Carlo on the same BF16 normal
+distribution measured 1.109/1.200/1.244/1.265% escapes for 32/64/128/256-weight blocks. Charging
+only one base byte per block and ideal four-byte exceptions leaves 3.29/4.09/4.50/4.70% savings;
+with the existing eight-byte records it leaves just 0.34/0.89/1.18/1.33%. At 512-8192 weights,
+the escape rate returns to about 1.25%, so the window is effectively matrix-global. Adaptation
+therefore trades nearly all of its small coverage improvement for base metadata.
+
 The authoritative v18 CSV reconstructs its published 1.518570x exactly. If impossible zero-cost
 four-byte escape records made every projection time scale with bytes, C11 would reach only
 1.587559x; applying it only to m<=32 reaches 1.564078x. With a 1.5-2.0 us fixed ramp/drain term,

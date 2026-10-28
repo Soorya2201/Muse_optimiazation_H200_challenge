@@ -220,6 +220,8 @@ zero-decode-cost all-shape ceiling is only 1.58756x. Router-low becomes larger t
 implement C11 before the reset candidates; revisit only if a compact non-duplicated four-byte
 exception stream is designed or Madhavan's dormant `loads-11/12` diagnostic measures a surprising
 gain. Full arithmetic and the format/decode analysis are in `muse_bf16_proj/IMPROVISATIONS.md`.
+Per-block windows were also rejected offline: block sizes 32-256 reduce escapes only to
+1.11-1.26%, and their base metadata leaves merely 0.34-1.33% byte savings with eight-byte records.
 
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
@@ -284,7 +286,7 @@ for cross-run noise), or if only v30's qkv extension fails to build. The measure
 unchanged.
 
 Read-only board refresh after this audit: overall **#664**; MoE **#536** at 1.6329x;
-attention **#770** at 1.2954x; BF16 **#1092** at 1.1158x; decode **#704** at 1.2326x;
+attention **#770** at 1.2954x; BF16 **#1093** at 1.1158x; decode **#705** at 1.2326x;
 prefill **#467** at 1.1184x. Prefill remains a separate board, and all ranks are dynamic.
 
 A subsequent authenticated GitHub code-search refresh found no source from any current top-five
