@@ -301,6 +301,13 @@ than v18's measured 5.496 us at M8; v18 is also already at 5.476/5.807 us for M1
 exact faster M16/M32 times or source, this does not justify a check ahead of v30. Preserve it as a
 post-measurement comparison only. No OKC run was used for this audit.
 
+Applying the public claims optimistically to v18's exact shape CSV makes the priority decision
+quantitative. A full 9% reduction on every router shape plus 2% on every small-M pooler shape would
+raise 1.518570x only to 1.539329x. A full 13% reduction on o M8/M16/M32 would reach 1.530820x.
+Their union reaches only 1.551944x, still 5.46% below the 1.6367 leader even before accounting for
+the demonstrated non-transfer at o M8. These techniques may complement a future winner, but they
+cannot replace the broad compression/scheduling work required for rank one.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.

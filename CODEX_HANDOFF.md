@@ -230,6 +230,9 @@ deferred: PDL helped a lower-scoring global producer/reducer design, whereas sta
 found no PDL or global semaphore/atomic reducer in v18's active native sources; and a row-major
 `W @ X.T` o-M8 path models to roughly 5.99 us even at its reported 13% gain, versus v18's measured
 5.496 us. Do not spend a pre-v30 check on either technique without stronger per-shape evidence.
+Even granting perfect transfer of the upper claims across all stated shapes, PDL models to
+1.539329x, row-major o to 1.530820x, and their union to only 1.551944x. They do not change the
+rank-one architecture priority.
 
 #### Oct 28 prefill continuation
 
