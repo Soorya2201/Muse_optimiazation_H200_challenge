@@ -1,13 +1,14 @@
 # `muse_moe_w4a16` optimization record
 
 This file records measured results, including regressions. Estimates are explicitly marked.
-The current verified submission is `submission.py` = `submission_v9.py`.
+The current verified submission is `submission.py` = `submission_v12_ap3_nt1_bs32.py`.
 
 ## Current result and profile
 
-Scored job `63e72333221040c0` passed all tests at **1.6092x** (SGLang 13,448.5 us,
-ours 8,357.3 us; 95% CI 1.5850-1.6333). It ranks #503 on the problem board as of
-2026-10-27. The first-place score was 2.6196x.
+Scored job `9a02dcaaad274ffb` passed all tests at **1.6329x** (SGLang 13,448.5 us,
+ours 8,236.0 us; 95% CI 1.6084-1.6574). It ranks #527/974 on the problem board as of
+2026-10-28. The first-place score is 2.6853x. The detailed table below is the earlier v9
+profile retained as the pre-AP3 comparison point.
 
 | Shape | Ours (us) | TASK floor (us) | Floor / ours | Main profile phase |
 |---|---:|---:|---:|---|
@@ -38,6 +39,7 @@ is only 0.6-5.6%.
 | Equal-byte `(expert, output tile, token chunk)` work items | Tried in v5, retained | Keeps skewed experts from assigning unequal weight bytes to CTAs. |
 | Schedule token chunks adjacent so duplicate weight requests overlap in L2 | Tried in v5, retained | Large improvement at bs=256 versus the earlier v1-class run. |
 | Deeper register weight prefetch | Tried in v9, retained | WP 4 -> 6 improved check 1.5771x -> 1.5993x and submit 1.5543x -> 1.6092x. |
+| Deeper activation prefetch | Tried in v12, retained | AP 2 -> 3 plus bs32 NT1 produced 1.6392x check and 1.6329x submit; AP4 and mixed-depth variants lost. |
 | 32-token items / NT=4 at bs=256 | Tried in v6, rejected | Registers rose to 255 and occupancy fell to 2 blocks/SM; score 1.5436x. |
 | Two resident grid waves at bs>=128 | Tried in v7, rejected | CTA overhead outweighed tail reduction; score 1.5678x. |
 | NT=1 at bs=128 | Tried in v8, rejected | Extra weight rereads outweighed occupancy; score 1.5575x. |
@@ -57,7 +59,16 @@ is only 0.6-5.6%.
 | v7 | `aea96697ffa14137` check | 1.5678x | Two grid waves at bs>=128; rejected. |
 | v8 | `830ac92b8a134d07` check | 1.5575x | NT=1 at bs=128; rejected. |
 | v9 | `6df3524f92aa430c` check | 1.5993x | Six-stage register weight pipeline; accepted. |
-| v9 / current `submission.py` | `63e72333221040c0` submit | **1.6092x** | Scored confirmation of v9. |
+| v9 / prior scored best | `63e72333221040c0` submit | **1.6092x** | Scored confirmation of v9. |
+| v10 | `5d89ffe8c3ed4bd0` check | 1.6106x | NT=1 only at bs=32 cut that shape by ~3.5%; retained as a component, not significant alone. |
+| v11 | `ba8b07a67bdb4303` check | 1.5915x | WP=8 helped some large profiles but lost aggregate from register pressure/variance; reverted to WP=6. |
+| v12 | `bcf981ec568f4d5c` check | 1.6392x | AP=3 plus NT=1 at bs32; improved five of six paired shapes and qualified for submit. |
+| v12 / current scored best | `9a02dcaaad274ffb` submit | **1.6329x** | New scored best at 8236.0 us, CI 1.6084-1.6574; AP=3 retained. |
+| v13 | `6d78a3d0beb04dfc` check | 1.5716x | Global AP=4 regressed NT=1 shapes and aggregate to 8557.0 us; rejected, but NT=2 profiles motivated a static hybrid. |
+| v14 | `1463f66f719b4bfc` check | 1.6273x | Static AP3 for NT1/AP4 for NT2 scored 8264.5 us; did not beat v12, so the AP4 NT2 signal was rejected as profile variance. |
+| v15 | `ac4a661397f24864` check | 1.6303x | WP=7/AP=3 scored 8249.3 us, 13.2 us slower than scored v12; rejected under the strict-improvement rule and restored WP=6. |
+| v16 | `3b0494686ee24257` check | 1.5877x | A bs256-only 1.5-wave grid caused severe duplicated routing/weight work (517.1 us paired); rejected and restored one wave. |
+| v17 | `77883ab278214b0b` check | 1.6197x | AP3 for NT1/AP2 for NT2 scored 8303.1 us; failed to combine the earlier per-shape signals, so uniform AP3 v12 was restored. Budget closed at 8 checks/1 submit. |
 
 All runs, including regressions, are also recorded in the root `RESULTS.md`.
 

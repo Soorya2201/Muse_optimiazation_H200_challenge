@@ -61,9 +61,24 @@ okc withdraw <job>            # take a run off the board
 - Prefill is compute-bound. The H200 has **no FP4 tensor cores**, so NVFP4 is dequantized to BF16 for WGMMA/MMA.
 - Tune with CUDA-graph timing, not eager timing (eager misleads at these sizes). Several versions already autotune per shape inside `prepare()` using graph replays with an L2 flush. Reuse that pattern.
 
-## 5. Current state (as of Oct 27 2026)
+## 5. Current state (as of Oct 28 2026)
 
 ### Continuation update (supersedes the older table below)
+
+#### Oct 28 MoE continuation
+
+The MoE cycle is closed at 8/8 reserved checks and 1/2 submits. v12 increased activation
+prefetch depth from AP=2 to AP=3 and retained NT=1 specifically at bs32. Its check scored
+1.6392x (`bcf981ec568f4d5c`, 8204.4 us) and its submit established the new live best at
+**1.6329x** (`9a02dcaaad274ffb`, 8236.0 us, CI 1.6084-1.6574), improving the old v9
+1.6092x submit. `muse_moe_w4a16/submission.py` is restored byte-for-byte to archived
+`submission_v12_ap3_nt1_bs32.py`.
+
+The remaining checks rejected global AP=4, AP3/AP4 and AP3/AP2 static hybrids, WP=7, and
+a bs256-only 1.5-wave grid. The extra grid wave was particularly harmful because every CTA
+repeats routing setup and streams overlapping weights. Every result is in `RESULTS.md` and
+the track `IMPROVISATIONS.md`. Do not run more MoE checks on Oct 28 under the reserved-budget
+policy.
 
 #### Oct 28 BF16 continuation
 
@@ -82,10 +97,10 @@ materialization. The split K4 candidate won synthetic timing slightly but regres
 `muse_prefill_layer/IMPROVISATIONS.md` and `RESULTS.md` for every job. Do not run more
 prefill checks on Oct 28 under the reserved-budget policy.
 
-Ranks refreshed Oct 28 after the cycle: overall **#668/1409**; MoE **#540/973** at
-1.6092x (leader 2.6853x); attention **#792/929** at 1.2491x (leader 3.0316x); BF16
-**#1077/1222** at 1.1158x (leader 1.6367x); decode **#694/851** at 1.2326x (leader
-2.4029x); prefill **#451/559** at 1.1184x (leader 2.0252x). Ranks are dynamic.
+Ranks refreshed Oct 28 after the MoE cycle: overall **#660/1412**; MoE **#527/974** at
+1.6329x (leader 2.6853x); attention **#795/932** at 1.2491x (leader 3.0316x); BF16
+**#1082/1227** at 1.1158x (leader 1.6367x); decode **#694/853** at 1.2326x (leader
+2.4029x); prefill **#453/560** at 1.1184x (leader 2.0252x). Ranks are dynamic.
 
 The prescribed exact 12-bit BF16 implementation cycle is complete. Five checks were used and
 all passed 9/9 tests, but none beat the v3 scored winner, so `muse_bf16_proj/submission.py`

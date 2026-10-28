@@ -67,8 +67,8 @@ CUDA_SRC = r"""
 #define SPW 16          // k64 steps per warp (64 steps / 4 warps)
 #define STEP_U4 72      // uint4 per (item, k64 step): 32 + 32 code vectors + 8 scale vectors
 #define ITEM_U4 (64 * STEP_U4)
-#define WP 6            // deeper register-prefetch pipeline for HBM latency hiding
-#define AP 2            // activation prefetch depth
+#define WP 6            // retained weight prefetch depth
+#define AP 3            // test one additional activation-prefetch step
 
 __device__ __forceinline__ uint4 ld_stream(const uint4* p) {
   uint4 r;
@@ -594,7 +594,7 @@ def prepare(weights):
 
 
 def _nt_for(M):
-    return 1 if M <= 16 else 2
+    return 1 if M <= 16 or M == 32 else 2
 
 
 def _grid(state, mode, nt, M):
