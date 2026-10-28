@@ -1,7 +1,8 @@
 # C12 decode-to-shared cluster GEMM
 
-Status: post-reset design, not implemented or measured. Build only after exact v18, v30, and the
-v21/v22 uncompressed cluster candidates establish current-pod baselines.
+Status: pack/decode/patch/swizzle contract is CPU-proven; CUDA kernel is not implemented or
+measured. Build it only after exact v18, v30, and the v21/v22 uncompressed cluster candidates
+establish current-pod baselines.
 
 ## Why this is the next architecture
 
@@ -43,12 +44,20 @@ C12 stores each weight's raw low byte and a four-bit sign/exponent-window code. 
 reconstructs the exact BF16 value except for the roughly 0.007-0.014% public-weight exceptions.
 Prepare groups exceptions by `(row block, K64 stage)` and stores a bounded packed patch list.
 Because the low byte is already exact, a patch needs only a 12-bit tile-local index and the XOR
-for the reconstructed high byte; one 32-bit record is sufficient. The decoder applies patches to
-the decoded shared tile before the decoded-ready barrier, so there is no output correction tail.
+for the reconstructed high byte; one 32-bit record is sufficient. Reserve eight records per
+stage and reject overflow during prepare. The decoder applies patches to the decoded shared tile
+before the decoded-ready barrier, so there is no output correction tail.
 
 Prepare must reject a route on patch-list overflow, packing mismatch, one-hot mismatch, random
 relative error, launch failure, or insufficient timing margin. The original route remains the
 fallback. Exact reconstruction should also be exhaustively emulated on CPU before an H200 check.
+
+That first gate is complete in `tools/c12_cluster_emulator.py`. With seed 5151 and one exponent
+base calibrated across 64 tiles then held fixed, it passed all 65,536 BF16 bit patterns, 20,480
+patch-field boundary cases, 4,096 normal-like 64x64 tiles, adversarial values, and the 128-byte
+swizzle roundtrip. The normal-like tiles had median zero, p99 two, and maximum four patches; none
+exceeded the eight-record capacity. This proves the proposed 6,144-byte input and 8,192-byte
+decoded layout in CPU semantics, not CUDA instruction mapping or H200 performance.
 
 ## Static H200 resource bound
 
@@ -57,11 +66,11 @@ opt-in block limit:
 
 | m | stages | bytes/stage | DSMEM reduction | modeled total | headroom |
 |---:|---:|---:|---:|---:|---:|
-| 128 | 6 | 30,720 | 16,384 | 201,984 | 30,464 |
-| 256 | 4 | 47,104 | 32,768 | 222,384 | 10,064 |
+| 128 | 6 | 30,720 | 16,384 | 202,080 | 30,368 |
+| 256 | 4 | 47,104 | 32,768 | 222,448 | 10,000 |
 
 The total includes 1,024-byte alignment, three 8-byte barriers per stage, a small fixed header,
-and four 32-bit patch slots per stage. Unpooler has no DSMEM reduction and therefore more margin.
+and eight 32-bit patch slots per stage. Unpooler has no DSMEM reduction and therefore more margin.
 The m256 pooler case is tight: source generation must compute the exact dynamic allocation and
 reject anything over the device-reported opt-in limit. Do not add another full decoded stage.
 
@@ -80,6 +89,7 @@ reduction is an optimistic ceiling, not an estimate.
 Implementation order after the reset measurements:
 
 1. Pooler m128 only, based on the measured winning v21/v22 pipeline and stage policy.
+   Preserve `tools/c12_cluster_emulator.py` as the pack/decode contract for the CUDA implementation.
 2. Compare decode-to-shared against both v18 and the winning uncompressed cluster route with cold
    L2 graph replays; require the existing 1% and 0.08 us gate.
 3. Add unpooler m128 without split K.

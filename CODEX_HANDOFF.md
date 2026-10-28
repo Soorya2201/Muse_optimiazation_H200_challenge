@@ -227,11 +227,16 @@ The resulting post-reset architecture is specified in `muse_bf16_proj/DESIGN_C12
 Instead of Madhavan's slower register/shared compressed m128 path (15.24/22.66/19.46 us for
 qkv/pooler/unpooler), decode C12 with a dedicated warpgroup into a swizzled BF16 shared tile, patch
 rare exceptions there, and preserve v18's faster shared/shared WGMMA plus cluster DSMEM epilogue
-(13.99/20.49/19.37 us). Static pooler accounting is 201,984 B at m128 and 222,384 B at m256, under
-the 232,448 B opt-in limit; m256 has only 10,064 B margin. Across all eight large non-router shapes,
+(13.99/20.49/19.37 us). Static pooler accounting with eight bounded patch records per stage is
+202,080 B at m128 and 222,448 B at m256, under the 232,448 B opt-in limit; m256 has 10,000 B margin.
+Across all eight large non-router shapes,
 uniform 20% and 25% wins model to 1.62272x and 1.65364x. This is the first plausible broad rank-one
 component, but it is not implemented or measured. Do not move it ahead of v18/v30/v31/v20-v22;
 use the measured winning cluster pipeline as its base, start with pooler m128, and gate every route.
+Its CPU contract now lives at `muse_bf16_proj/tools/c12_cluster_emulator.py`: seed-5151 tests pass
+all 65,536 BF16 patterns, 20,480 patch-field cases, 4,096 normal-like tiles sharing one calibrated
+base (median 0, p99 2, max 4 patches; capacity 8), adversarial inputs, and the 128-byte swizzle.
+This proves the pack/decode semantics only; the CUDA kernel and H200 timing remain pending.
 
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while

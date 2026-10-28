@@ -560,12 +560,17 @@ register/shared WGMMA reaches 15.24/22.66/19.46 us for qkv/pooler/unpooler m128,
 uncompressed shared/shared cluster/no-reduction routes are already faster at
 13.99/20.49/19.37 us. The proposed hybrid bulk-loads C12, expands it with a decoder warpgroup into
 a swizzled BF16 shared tile, patches exact exceptions before a barrier, and retains shared/shared
-WGMMA plus cluster DSMEM reduction. Modeled shared memory is 201,984 B at m128 and 222,384 B at
-m256 for pooler, under the 232,448 B opt-in limit. Uniform 20% improvement over all eight large
+WGMMA plus cluster DSMEM reduction. Modeled shared memory with eight bounded patch records per
+stage is 202,080 B at m128 and 222,448 B at m256 for pooler, under the 232,448 B opt-in limit.
+Uniform 20% improvement over all eight large
 dense shapes reaches 1.62272x; 25% reaches 1.65364x, so it can be a rank-one component only when
 broadly successful or combined with v30/v31. Full pipeline, exactness, resource arithmetic, and
 rollout are in `DESIGN_C12_CLUSTER.md`. This is not implemented or measured and must follow the
 reset baseline checks.
+The offline contract is now executable: `tools/c12_cluster_emulator.py` passed exhaustive BF16
+bits, every patch-field boundary, 4,096 fixed-global-base normal-like tiles, adversarial values,
+and the WGMMA swizzle. The sampled patch maximum was four versus the reserved capacity eight.
+CUDA instruction mapping and performance remain unimplemented.
 
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 
