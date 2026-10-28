@@ -143,21 +143,18 @@ per-warp escape patches, WGMMA/TMA/cluster routes, pinned cuBLASLt plans, and be
 At the next BF16 budget reset, first check
 `muse_bf16_proj/upstream_nathen_v18/submission.py` byte-for-byte. If it reproduces a strict win,
 promote and submit it with attribution. Then check
-`muse_bf16_proj/submission_v23_full_history_autotune.py`. It supersedes v19's useful search:
-v18's unified prepare already builds all v9-v18 modules, and route-history reconstruction leaves
-only 49 distinct candidates across 23 changed shapes. It adds no CUDA compilation, requires both
-a 1% and 0.08 us measured win, and uses fixed v18 for seven unchanged and every held-out shape.
-Then check `muse_bf16_proj/submission_v24_cross_small_routes.py`: it cross-applies three final
-C12 plans at the other m=1/8 endpoint, all of which v18 already self-validates at m=1,4,8.
-Keep v19 only as a narrower diagnostic fallback. Next, check
+`muse_bf16_proj/submission_v25_history_cross_autotune.py`. It combines the full meaningful
+v9-v18 route history with three range-validated cross-small C12 plans: 52 graphs over 23 changed
+shapes, no new CUDA compilation, fixed v18 elsewhere, and a 1%/0.08 us activation gate. V23 and
+v24 are isolation diagnostics only; v19 is a narrower fallback. Next, check
 `muse_bf16_proj/submission_v20_cluster_dense_m128.py`. It preserves v19 as an exact prefix and
 generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
 no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests
 and a conservative cold-L2 timing gate before activation. If exact v18 fails because of
-environment drift, diagnose that artifact before trying v23/v20. Fourth, check
+environment drift, diagnose that artifact before trying v25 or any cluster derivative. Then check
 `muse_bf16_proj/submission_v21_cluster_dense_m128_m256.py`, which adds independently gated
 TM256 pooler/unpooler routes to the same cluster/no-reduction design. Its static generator and
-shared-memory checks pass, but it has not compiled on H200. Fifth, check
+shared-memory checks pass, but it has not compiled on H200. Finally, check
 `muse_bf16_proj/submission_v22_cluster_dense_autotune.py` only after v21 establishes that the
 generated architecture compiles. V22 directly starts from v19 and compares v21 against v18's
 3D-TMA/cache-policy bits plus one adjacent stage depth for each of four shapes; all 12 candidates
