@@ -50,6 +50,7 @@ is essential.
 | [`jkbpvsc` board entry](https://github.com/jkbpvsc) | Score only; no reusable source | New current #2 at 1.5933x (`6b16112fadec4058`). Web search, GitHub code search, and the owner's public repository list contained no matching challenge source as of Oct 28. |
 | [rohanarun board entry](https://github.com/rohanarun/Auto-research-agent) | Score only; no reusable source | Current board entry is 1.5503x/rank 43 (`d1e1635ef48f4850`), stronger than Nathen v18, but the current public repository contains only the research application/prompts and no matching kernel or receipt. Do not attribute or reconstruct unavailable source. |
 | v19 route-generation autotune | Prepared, untested | Starts with the exact v18 artifact, then during `prepare()` compares its complete v15-v18 dispatch generations with cold-L2 CUDA-graph timing on all 30 scored shapes. It keeps v18 unless an older generation wins by both 1% and 0.08 us, and always uses fixed v18 for nearby/held-out shapes. |
+| v23 full-history route autotune | Prepared, untested | Supersedes v19's search without new CUDA compilation. Reconstructs every v9-v18 route-change boundary: 23 scored shapes changed, with 49 genuinely distinct candidates total. Seven unchanged shapes and all held-out shapes stay fixed v18; the same 1% and 0.08 us cold-L2 gate applies. |
 | v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 | v21 cluster-dense m128/m256 | Prepared, untested | Extends v20 with v18's dormant TM256 WGMMA schedule. Two generated modules independently gate pooler/unpooler at m128 and m256, retaining captured outputs during graph timing. All four routes use 128 CTAs and fit Hopper's dynamic shared-memory limit; any non-winning route falls back to v19. |
 | v22 cluster pipeline autotune | Prepared, untested | Subsumes v21 without compiling it first. For each of its four shapes, compares the base 2D-TMA schedule, v18's evidenced 3D-TMA/normal-weight-cache policy, and one adjacent legal stage depth. All 12 candidates require random and exact one-hot correctness; only a 1% and 0.08 us cold-L2 win over v19 activates. |
@@ -78,6 +79,7 @@ is essential.
 | v20 cluster-dense m128 | not run | `submission_v20_cluster_dense_m128.py`; v19 is an exact 637,846-byte prefix. Generated pooler/unpooler CUDA has no unresolved markers or qkv-specific row constants, and the file is 646,721 bytes. CUDA/H200 compilation and timing are pending. |
 | v21 cluster-dense m128/m256 | not run | `submission_v21_cluster_dense_m128_m256.py`; v19 is an exact 637,846-byte prefix. Static generation produced two-case pooler/unpooler sources with no unresolved markers, m128/m256 swap-WGMMA calls, and 163,920-213,136 bytes of dynamic shared memory. CUDA/H200 compilation and timing are pending. |
 | v22 cluster pipeline autotune | not run | `submission_v22_cluster_dense_autotune.py`; v21 is its exact prefix but its final prepare bypasses v21 and starts directly from v19, so only two six-template extensions compile. Generated sources contain all six cases and use 155,712-221,344 bytes of dynamic shared memory. CUDA/H200 compilation and timing are pending. |
+| v23 full-history route autotune | not run | `submission_v23_full_history_autotune.py`; v19 is an exact 637,846-byte prefix, but v23 bypasses v19's sweep and starts from exact v18 prepare. AST reconstruction proves 23 changed shapes, 20 two-way comparisons, three three-way comparisons, and 49 candidate graphs total. CUDA/H200 timing is pending. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -149,6 +151,15 @@ stronger Nathen artifact, with a conservative win threshold. A targeted GitHub s
 public implementation belonging to current leader `colinlikescode` as of Oct 28; do not imply
 that any public design reproduces the private leader.
 
+V23 tightens and broadens that same route-selection idea. Static reconstruction of v18's route
+history shows only 23 of 30 scored shapes changed between v9 and v18. Twenty have two distinct
+kernels and three have three, for 49 meaningful candidate graphs—not the 300 graphs implied by
+blindly timing ten dispatchers on every shape. Because v18's unified prepare already compiles and
+self-validates all historical modules, v23 adds no extension build. It directly compares only
+the generation boundaries where a route changed, keeps fixed v18 on seven unchanged and every
+held-out shape, and requires both the v19 relative and absolute win margins. This fully subsumes
+v19's meaningful search with less prepare-time work and less duplicate-measurement noise.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
@@ -156,7 +167,7 @@ The live score/source ladder is: `colinlikescode` 1.6367x (#1, no source found),
 1.5933x (#2, no matching source found), `rohanarun` 1.5503x (#43, no matching kernel
 published), Nathen v18 1.5186x (#121, exact MIT source), vjeux v141 1.5014x (#175, Apache
 source), and lee101 1.4627x (#214, Apache source). Lower published implementations do not
-justify spending a whole-file check before v18/v19.
+justify spending a whole-file check before v18/v23.
 
 The valuable new evidence is lee101's later v26-v30 diagnostic series. Its lossless C12
 RS-WGMMA kernel shares x through TMA and decodes weights directly into register-sourced WGMMA

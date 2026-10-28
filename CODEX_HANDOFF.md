@@ -143,16 +143,16 @@ per-warp escape patches, WGMMA/TMA/cluster routes, pinned cuBLASLt plans, and be
 At the next BF16 budget reset, first check
 `muse_bf16_proj/upstream_nathen_v18/submission.py` byte-for-byte. If it reproduces a strict win,
 promote and submit it with attribution. Then check
-`muse_bf16_proj/submission_v19_nathen_route_autotune.py`, which preserves v18 behavior (apart
-from one non-semantic trailing-space cleanup) and uses
-untimed cold-L2 graph replays to select among the already-prepared v15-v18 route generations for
-each scored shape. It requires both a 1% and 0.08 us measured win before replacing v18 and uses
-fixed v18 for every nearby/held-out shape. Third, check
+`muse_bf16_proj/submission_v23_full_history_autotune.py`. It supersedes v19's useful search:
+v18's unified prepare already builds all v9-v18 modules, and route-history reconstruction leaves
+only 49 distinct candidates across 23 changed shapes. It adds no CUDA compilation, requires both
+a 1% and 0.08 us measured win, and uses fixed v18 for seven unchanged and every held-out shape.
+Keep v19 only as a narrower diagnostic fallback. Third, check
 `muse_bf16_proj/submission_v20_cluster_dense_m128.py`. It preserves v19 as an exact prefix and
 generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
 no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests
 and a conservative cold-L2 timing gate before activation. If exact v18 fails because of
-environment drift, diagnose that artifact before trying v19/v20. Fourth, check
+environment drift, diagnose that artifact before trying v23/v20. Fourth, check
 `muse_bf16_proj/submission_v21_cluster_dense_m128_m256.py`, which adds independently gated
 TM256 pooler/unpooler routes to the same cluster/no-reduction design. Its static generator and
 shared-memory checks pass, but it has not compiled on H200. Fifth, check
@@ -174,7 +174,7 @@ Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0%
 1.5014x (clean equivalent 1.4905x), so it is research material rather than the first whole-file
 candidate. A broader authenticated GitHub search also found lee101's Apache v22/diagnostic line:
 its live entry is 1.4627x, but its later RS-WGMMA clock profiles prove that global split-K
-reduction—not CTA start spread or a single decode phase—creates an 8-9.5 us m128 tail. If v19
+reduction—not CTA start spread or a single decode phase—creates an 8-9.5 us m128 tail. If v23
 does not close the dense-shape gap, design the next kernel around cluster DSMEM/st.async or a
 no-split schedule; do not retry deeper decode-ahead or another global workspace/counter tail.
 `rohanarun` is live at 1.5503x, but its current public repository publishes no matching kernel or
