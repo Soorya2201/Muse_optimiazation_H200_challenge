@@ -69,14 +69,18 @@ okc withdraw <job>            # take a run off the board
 
 #### Oct 28 prefill continuation
 
-The prefill cycle has used 6/8 reserved checks and 0/2 submits today. The local promoted
+The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
 `submission.py` is restored byte-for-byte to v8; the live scored best remains v5 at
 1.1184x (`b6fbcde2c4aa4418`). Runs v9-v11 tested W2 decode ordering, a two-wave persistent
 grid, and M-group tile ordering; all regressed and were removed. Runs v12-v14 integrated
 SGLang's masked BF16 DeepGEMM after losslessly decoding the touched NVFP4 experts. Two
 integration checks safely fell back; the completed v14 path was correct but took 2954 us
 vs G32's 2192 us at T=3012 and 11603 us vs G64W8's 7327 us at T=16384, so it was rejected
-and removed. See `muse_prefill_layer/IMPROVISATIONS.md` and `RESULTS.md` for every job.
+and removed. v15/v16 then tested branch-in-kernel and statically split hot/cold expert
+materialization. The split K4 candidate won synthetic timing slightly but regressed to
+1.1281x end to end (`bed381d5de1d42d1`), so it was archived and v8 restored. See
+`muse_prefill_layer/IMPROVISATIONS.md` and `RESULTS.md` for every job. Do not run more
+prefill checks on Oct 28 under the reserved-budget policy.
 
 Ranks refreshed Oct 28 after the cycle: overall **#668/1409**; MoE **#540/973** at
 1.6092x (leader 2.6853x); attention **#792/929** at 1.2491x (leader 3.0316x); BF16

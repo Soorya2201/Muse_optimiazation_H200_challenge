@@ -35,6 +35,8 @@
 | v12 | b9956e0dc9e34639 | check | 1.119x | DeepGEMM warmed up, but the custom epilogue referenced a non-constexpr Python global; safe v8 fallback passed 5/5 |
 | v13 | 310b5b1b67374ed5 | check | 1.110x | DeepGEMM reached the final unpermute, whose scalar scale load incorrectly used a vector mask; safe fallback passed 5/5 |
 | v14 | 8eb0710179014513 | check | 1.116x | valid masked BF16 DeepGEMM was 35% slower mid and 58% slower big than the current custom path; rejected and removed |
+| v15 | 3e1e425a05654c05 | check | 1.132x | route-count hybrid was correct but mixing direct/BF16 paths in one kernel more than doubled expert time; rejected |
+| v16 | bed381d5de1d42d1 | check | 1.128x | split hot/cold kernels won synthetic timing by 46/55 us but lost end to end on real routing and four launches; archived, not promoted |
 
 ## Profile and roofline analysis
 
@@ -96,6 +98,26 @@ Autotuning rejected it, job `8eb0710179014513` passed 5/5 through the v8 choices
 1.1156x, and the unused experimental code was removed. This rules out the off-the-shelf
 masked BF16 route; a competitive architectural step must decode directly into a
 warp-specialized WGMMA pipeline rather than materialize then regroup the same weights.
+
+v15 tested the route-count-aware hybrid proposed below. Experts with at least two or
+four BM128 route blocks were decoded once to BF16; colder experts stayed on the direct
+NVFP4 path. The numerical result was correct, but the runtime branch placed both weight
+load/decode paths in each Triton kernel and sharply increased register/code pressure.
+At T=3012 J2/J4 took 4651/4222 us versus G32's 2189 us; at T=16384 they took
+19408/19201 us versus G64W8's 7372 us. Job `3e1e425a05654c05` therefore selected the
+existing paths and passed 5/5 at 1.1320x. The final variant separates hot and cold work
+into statically specialized launches to determine whether branch-induced pressure, rather
+than the materialization policy itself, caused the loss.
+
+v16 statically specialized hot and cold work into separate launches. This removed the
+mixed-path register penalty: threshold four won the synthetic tuner at both sizes,
+2148 us versus G32's 2194 us at T=3012 and 7233 us versus G64W8's 7288 us at T=16384.
+The full workload did not preserve that 2.1%/0.8% microbenchmark gain. Its four expert
+GEMM launches and the scored routing distributions produced 343.402 ms and 1.1281x
+(CI 1.1112--1.1451) in job `bed381d5de1d42d1`, below v8's 338.05 ms / 1.1460x check.
+It was archived but not promoted or submitted. A future hybrid must compact hot/cold
+tiles into disjoint work queues so each phase keeps one launch and avoids scanning/skipping
+the other class; merely splitting the same persistent tile space is insufficient.
 
 ## Novel next ideas
 
