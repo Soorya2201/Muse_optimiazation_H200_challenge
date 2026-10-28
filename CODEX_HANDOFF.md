@@ -146,7 +146,10 @@ promote and submit it with attribution. Then check
 `muse_bf16_proj/submission_v25_history_cross_autotune.py`. It combines the full meaningful
 v9-v18 route history with three range-validated cross-small C12 plans: 52 graphs over 23 changed
 shapes, no new CUDA compilation, fixed v18 elsewhere, and a 1%/0.08 us activation gate. V23 and
-v24 are isolation diagnostics only; v19 is a narrower fallback. Next, check
+v24 are isolation diagnostics only; v19 is a narrower fallback. The separately prepared
+`submission_v26_o_c12_geometry.py` keeps the exact C12 decoder but tests legal WR=2/4 `o` routes
+at m1/m8 (512/1024 threads and 256/128 CTAs), with exhaustive one-hot plus random validation and
+the same conservative gate. It is a bounded small-m follow-up, not yet a measured win. Next, check
 `muse_bf16_proj/submission_v20_cluster_dense_m128.py`. It preserves v19 as an exact prefix and
 generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
 no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests
@@ -158,7 +161,9 @@ shared-memory checks pass, but it has not compiled on H200. Finally, check
 `muse_bf16_proj/submission_v22_cluster_dense_autotune.py` only after v21 establishes that the
 generated architecture compiles. V22 directly starts from v19 and compares v21 against v18's
 3D-TMA/cache-policy bits plus one adjacent stage depth for each of four shapes; all 12 candidates
-are correctness-tested and conservatively gated. Then fall back to v14 and v13.
+are correctness-tested and conservatively gated. Fit v26 after the higher-upside v20/v21 line and
+before v22 unless v25's logs show that the cross-tested o route already dominates both small shapes.
+Then fall back to v14 and v13.
 Keep the current
 `submission.py` untouched until a qualifying check passes.
 

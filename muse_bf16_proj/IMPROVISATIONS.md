@@ -53,6 +53,7 @@ is essential.
 | v23 full-history route autotune | Prepared, untested | Supersedes v19's search without new CUDA compilation. Reconstructs every v9-v18 route-change boundary: 23 scored shapes changed, with 49 genuinely distinct candidates total. Seven unchanged shapes and all held-out shapes stay fixed v18; the same 1% and 0.08 us cold-L2 gate applies. |
 | v24 cross-small C12 routes | Prepared, untested | Reuses v18's final qkv/pooler m1 plans at m8 and its final o m8 plan at m1. Their templates use dynamic m with MT=1, and v18 prepare already verifies every plan at m=1,4,8. Three cold-L2 comparisons add no compilation; only strict wins activate. |
 | v25 history + cross autotune | Prepared, untested | Primary post-v18 candidate. Combines v23 and v24 in one no-compile sweep: 52 meaningful graphs over 23 changed shapes, fixed v18 elsewhere, and the same conservative gate. V23/v24 are now isolation diagnostics rather than separate default checks. |
+| v26 compressed `o` CTA geometry | Prepared, untested | Keeps v18's exact direct-load C12 decoder and tests only legal WR=2/4 geometries at o m1/m8: 512 threads/256 CTAs and 1024 threads/128 CTAs instead of 256 threads/512 CTAs. Every candidate is exact-one-hot and random validated over m=1,4,8, then must clear the 1%/0.08 us cold-L2 gate. |
 | v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 | v21 cluster-dense m128/m256 | Prepared, untested | Extends v20 with v18's dormant TM256 WGMMA schedule. Two generated modules independently gate pooler/unpooler at m128 and m256, retaining captured outputs during graph timing. All four routes use 128 CTAs and fit Hopper's dynamic shared-memory limit; any non-winning route falls back to v19. |
 | v22 cluster pipeline autotune | Prepared, untested | Subsumes v21 without compiling it first. For each of its four shapes, compares the base 2D-TMA schedule, v18's evidenced 3D-TMA/normal-weight-cache policy, and one adjacent legal stage depth. All 12 candidates require random and exact one-hot correctness; only a 1% and 0.08 us cold-L2 win over v19 activates. |
@@ -84,6 +85,7 @@ is essential.
 | v23 full-history route autotune | not run | `submission_v23_full_history_autotune.py`; v19 is an exact 637,846-byte prefix, but v23 bypasses v19's sweep and starts from exact v18 prepare. AST reconstruction proves 23 changed shapes, 20 two-way comparisons, three three-way comparisons, and 49 candidate graphs total. CUDA/H200 timing is pending. |
 | v24 cross-small C12 routes | not run | `submission_v24_cross_small_routes.py`; v19 is an exact 637,846-byte prefix and v24 starts from exact v18 prepare. Static inspection proves the reused qkv/pooler/o templates are dynamic over m=1..8 and their existing prepare verification includes both cross-tested endpoints. CUDA/H200 timing is pending. |
 | v25 history + cross autotune | not run | `submission_v25_history_cross_autotune.py`; v23 is an exact 643,845-byte prefix, but final prepare starts directly from exact v18 and performs only the combined v25 sweep. Static checks confirm 23 shapes and 52 candidate graphs. CUDA/H200 timing is pending. |
+| v26 compressed `o` CTA geometry | not run | `submission_v26_o_c12_geometry.py`; v19 is an exact 637,846-byte prefix. Static checks prove WR=2/4 use 512/1024 threads, 256/128 CTAs, exact K coverage, and valid output tiling. The file is 643,418 bytes. CUDA compilation, escape-capacity validation on judge weights, exact GPU self-tests, and timing are pending. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -176,6 +178,17 @@ three cross-small candidates to the exact route-history map, yielding 52 graphs 
 shapes. The final prepare bypasses both earlier autotuners and calls exact v18 prepare once; seven
 unchanged scored shapes and every held-out shape remain fixed v18. V23 and v24 should be run only
 to isolate a surprising combined result, not by default.
+
+V26 explores the smallest adjacent geometry space around the judged direct-load C12 `o` route
+rather than changing its proven decoder. V18 uses WR=1/WK=8/KU=2: 256 threads and 512 CTAs for
+the 8,192-by-1,024 projection. WR=2 and WR=4 preserve the same 1,024-wide K traversal and total
+work while producing 512-thread/256-CTA and 1,024-thread/128-CTA launches. The hypothesis is that
+fewer, larger CTAs reduce block scheduling and tail cost on this short-K matrix; the risk is lower
+occupancy or worse per-CTA issue efficiency. The extension contains only those two specializations,
+requires exact reconstruction of all 1,024 weight columns plus random tests at m=1,4,8, and times
+them against fixed v18 at m=1/8. It activates nothing without both a 1% and 0.08 us win. Pooler's
+existing C12 route is already a 1,024-thread, 128-CTA one-wave launch, so there is no analogous
+higher-WR candidate. This is prepared static evidence only, not a measured improvement.
 
 The [public BF16 strategy guide](https://thethings.ai/p/okc/muse-bf16-proj-guide/03-strategy)
 also narrows future work: direct C12 streaming saves 13-20% on suitable small shapes, while L2
