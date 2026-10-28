@@ -57,6 +57,7 @@ is essential.
 | v27 qkv16 clustered CTA geometry | Prepared, untested | Keeps v18's exact C12 decode and four-block cluster reduction while changing WR=1→2/4. All variants execute 2,304 warps, but the grid falls from 576 to 288/144 CTAs. Candidate-specific launch bounds, no-local-spill checks, exhaustive one-hot/random validation, and the conservative timing gate protect fixed v18. |
 | v28 history/cross + qkv16 | Prepared, untested | Primary post-v18 candidate. Runs v25 first, then compares validated WR=2/4 qkv16 routes against v25's selected qkv16 winner. Thus one check can retain history/cross and geometry gains independently; every other route remains v25/fixed-v18. |
 | v29 all small-route autotune | Prepared, untested | Adds v26's independently gated o m1/m8 geometry after v28. One check can retain history/cross, qkv16, and o gains shape by shape. V28 remains the single-new-extension fallback if the second compilation threatens prepare time. |
+| v30 all-small plus qkv32 | Prepared, untested | Adds WR=2/4 qkv32 geometry after v29, targeting a 12.16 us route with an 8.0 us stated floor. This is the maximal check-efficient candidate; v29→v28→v25 form the staged compile/prepare fallback ladder. |
 | v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 | v21 cluster-dense m128/m256 | Prepared, untested | Extends v20 with v18's dormant TM256 WGMMA schedule. Two generated modules independently gate pooler/unpooler at m128 and m256, retaining captured outputs during graph timing. All four routes use 128 CTAs and fit Hopper's dynamic shared-memory limit; any non-winning route falls back to v19. |
 | v22 cluster pipeline autotune | Prepared, untested | Subsumes v21 without compiling it first. For each of its four shapes, compares the base 2D-TMA schedule, v18's evidenced 3D-TMA/normal-weight-cache policy, and one adjacent legal stage depth. All 12 candidates require random and exact one-hot correctness; only a 1% and 0.08 us cold-L2 win over v19 activates. |
@@ -92,6 +93,7 @@ is essential.
 | v27 qkv16 clustered CTA geometry | not run | `submission_v27_qkv16_c12_geometry.py`; v19 is an exact 637,846-byte prefix. Generated WR=2/4 instances use 256/512 threads, 288/144 CTAs, 2,304 total warps, and 8,192/16,384 bytes of reduction storage. Source-anchor, geometry, syntax, and size checks pass; CUDA/H200 evidence is pending. |
 | v28 history/cross + qkv16 | not run | `submission_v28_history_cross_qkv16.py`; v25 is an exact 649,127-byte prefix and the complete file is 655,209 bytes. The overlay validates and gates qkv16 against v25 after its 52-graph search. Exact v18's published 53.8 s cold prepare leaves headroom under the 300 s prepare limit, but combined H200 preparation and timing remain unverified. |
 | v29 all small-route autotune | not run | `submission_v29_all_small_autotune.py`; v28 is an exact 655,209-byte prefix and the complete file is 659,544 bytes. The appended o routes use 512/1024 threads, 256/128 CTAs, and 4,096 total warps each. Syntax, prefix, geometry, and size checks pass; its two added extension compilations versus exact v18 have not been timed on H200. |
+| v30 all-small plus qkv32 | not run | `submission_v30_all_small_qkv32.py`; v29 is an exact 659,544-byte prefix and the complete file is 665,372 bytes. Qkv32 WR=2/4 use 256/512 threads, 288/144 CTAs, and the same 2,304 total warps as v18. Source anchors, syntax, geometry, and size pass; three combined extension builds remain unmeasured on H200. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -222,6 +224,13 @@ from v18's 512 CTAs to 256/128. They reuse the exact C12 format, exhaustively ve
 cannot override v28 without the same 1%/0.08 us win. This is the most check-efficient candidate,
 but it compiles a second new extension; v28 is deliberately retained as the fallback if v29 hits
 the 300-second prepare ceiling or exposes a resource/compilation issue.
+
+V30 applies the qkv16 geometry hypothesis to qkv32, whose v18 time is 12.16 us against the 8.0 us
+stated floor. The original and WR=2/4 variants all execute 2,304 warps, but use 576/288/144 CTAs.
+The new plans retain exact C12 decode and split-4 cluster reduction, reject local spill, reproduce
+all 8,192 columns exactly, and validate random m=9,16,17,24,32 inputs. They are compared against
+v29's already-selected qkv32 route. V30 is the maximal combined candidate; if its third extension
+causes compilation or prepare-time trouble, descend through v29, v28, then no-compile v25.
 
 The [public BF16 strategy guide](https://thethings.ai/p/okc/muse-bf16-proj-guide/03-strategy)
 also narrows future work: direct C12 streaming saves 13-20% on suitable small shapes, while L2
