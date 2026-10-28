@@ -316,6 +316,29 @@ qkv16→o→qkv32 validation/autotune order. Python compilation, the exact v25�
 prefix chain, the normal mocked prepare path, and all three one-failure mocked paths pass. This is
 a check-efficiency safeguard, not measured H200 performance; no OKC run was consumed.
 
+An authenticated GitHub code refresh found the newly indexed
+[`Madhavan113/kerneloptimizer`](https://github.com/Madhavan113/kerneloptimizer/tree/b7520fb174f788818c4936babb3743f756b1649b/muse_bf16_proj)
+source. Its header attributes vjeux and applies Apache-2.0 to the modifications. The live board entry
+is 1.4933x; the repository separately publishes a 9/9 profile at 1.488179x, 3246.11 us, job
+`b1508a1e59694b0f`. The current source SHA-256 is
+`09817f808584f3da1775d2ea002fce0e38a79b38afc01db24e6cf3e121fcded8`, but the profile does not
+record a source hash, so the two artifacts must not be described as an authenticated exact pair.
+
+The public implementation uses direct lossless C12 decode into register-sourced MMA fragments,
+shared-memory activation staging, split-K shared/global reductions, and special router kernels. Its
+published profile is slower than v18 overall but appears faster on ten shapes when each is compared
+to v18's exact CSV: o m1 (5.51%); qkv m1/m16/m32 (8.04/1.90/7.75%); pooler m32 (3.81%);
+unpooler m1/m32/m128 (22.89/3.88/2.55%); and router m1/m256 (15.78/17.19%). Cross-run node and
+baseline variation means these are candidate signals, not causal measurements. Replacing every
+v18 shape by the faster published time is an oracle upper bound of **1.555216x**, versus
+1.518570x for v18 (+2.41%), still far below 1.6367x.
+
+Therefore do not spend a check on the weaker whole file. Exact v18 and v30 remain first. Read the
+v30 profile afterward and extract only routes that fail to match the strongest public reference
+times: qkv m1 8.59 us, qkv m32 11.22 us, unpooler m1 2.87 us, and router m1 3.32 us. This avoids
+duplicating v30's qkv32 search and turns the source into a targeted attributed follow-up rather than
+another broad speculative check. No OKC run was used for this audit.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.

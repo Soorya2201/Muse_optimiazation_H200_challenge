@@ -237,6 +237,18 @@ Even granting perfect transfer of the upper claims across all stated shapes, PDL
 1.539329x, row-major o to 1.530820x, and their union to only 1.551944x. They do not change the
 rank-one architecture priority.
 
+A later authenticated GitHub refresh found a newly indexed Apache-attributed public source from
+`Madhavan113/kerneloptimizer`. Its live entry is 1.4933x, and the repository retains a separate
+9/9 check profile at 1.488179x (`b1508a1e59694b0f`). The current published source is not
+cryptographically tied to that profile, so use it as architecture evidence rather than claiming an
+exact receipt. Comparing all 30 published profile times with v18 reveals ten apparent route wins:
+o m1; qkv m1/m16/m32; pooler m32; unpooler m1/m32/m128; and router m1/m256. An impossible
+per-shape oracle union reconstructs only **1.555216x**, +2.41% over v18 and still below the 1.6367x
+leader. Do not check the weaker whole file. After v30, compare its selected timings against the
+strongest public thresholds—qkv m1 8.59 us, qkv m32 11.22 us, unpooler m1 2.87 us, and router m1
+3.32 us—and extract only unmatched routes into an attributed combined candidate. This evidence
+does not displace exact v18 or v30 at the reset.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
