@@ -284,6 +284,15 @@ lossless compression, cluster reduction, or a route threshold that beats v18/v30
 commit provenance are in `muse_bf16_proj/IMPROVISATIONS.md`. No OKC run was used, and the reset
 measurement order remains unchanged.
 
+The reset candidates' real prepare graph was also audited. Exact v18's authenticated receipt
+records only **53.798846702 s** in `prepare()` despite its 21-family four-worker build pool and two
+final v18 modules. V30 reuses that base and adds four concurrent extension builds plus bounded
+validation/autotuning, leaving substantial nominal room under the 300 s prepare cap. Do not move a
+lean fallback ahead of v30 based only on its source size. Local syntax still passes for exact v18
+and v30, and exact v18's SHA remains `111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`.
+Descend v29/v28/v25 only after an actual top-level resource or prepare-time failure. No OKC run was
+used.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted

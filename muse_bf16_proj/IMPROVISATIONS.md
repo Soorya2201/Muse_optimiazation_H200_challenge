@@ -414,6 +414,18 @@ Apple clang syntax-compiled and linked the wrapper against real `libtorch`, `lib
 generation, symbol naming, linking, and module loading on Torch 2.8. The judge uses Torch 2.14 with
 CUDA, so its full extension build and execution remain the authoritative gate.
 
+A prepare-time audit traced the final v30 call graph rather than counting every textual
+`load_inline` occurrence. Exact v18 already schedules 21 preparation families through a four-worker
+pool and then builds its two v18 additions. Its authenticated `results/v18.json` receipt records
+**53.798846702 seconds** in `prepare()` for job `66d8b007f6c641ee`, leaving about 246 seconds under
+the 300-second prepare cap. V30 starts from the same exact-v18/v25 base, then compiles its four
+independent qkv16/o/qkv32/M1 modules concurrently with four workers before sequential validation
+and bounded graph timing. That does not prove v30 will finish, but it provides substantially more
+headroom than the earlier source-size-only risk estimate. Keep full v30 second in the reset order;
+use v29/v28/v25 only if the judge reports an actual top-level prepare/resource failure. Both exact
+v18 and v30 pass local Python compilation, and the vendored v18 SHA-256 remains
+`111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`. No OKC run was consumed.
+
 An Oct 28 authenticated GitHub code-search refresh found no public repository belonging to any of
 the current top-five BF16 teams. It did surface two previously unrecorded lower-scoring artifacts.
 `PostTrainLLM/posttrainllm` commit `07897a4d0d5d99b9eb63ea3b49fc71df43159749` publishes an exact
