@@ -204,6 +204,14 @@ no-split schedule; do not retry deeper decode-ahead or another global workspace/
 `rohanarun` is live at 1.5503x, but its current public repository publishes no matching kernel or
 receipt, so it is score evidence only. No current-leader source was found publicly.
 
+An Oct 28 repeat public search found no newly published source from the current top teams. The
+guide's visible “1.67x” refers only to its router m128/256 shape, not an overall result; its shipped
+artifact remains 1.343x check / 1.331x scored. The linked report nevertheless supplies the next
+architecture if v22 fails: 128-wide K stages to halve ~190 ns handshakes, a decode warpgroup that
+writes BF16 tiles into shared memory, shared/shared WGMMA instead of the measured ~50%-peak
+register-A path, and cluster/DSMEM reduction instead of the observed 4-6 us global split-K tail.
+Treat this as public design evidence, not a reconstruction of private leader code.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted

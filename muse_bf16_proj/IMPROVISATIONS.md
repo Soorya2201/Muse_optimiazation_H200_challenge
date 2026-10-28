@@ -255,6 +255,18 @@ prefetch, x-stationary/multiple-row-block GEMV, persistent TMA rings, and compre
 measured losers. Do not spend checks repeating those rejected variants; adjacent geometry around
 the direct-load C12 plans and removal of split-K tails remain the defensible small-m directions.
 
+A fresh public-source audit on Oct 28 found no newly published kernel from `colinlikescode`,
+`jkbpvsc`, or another current top entry. The apparent “1.67x” on the guide strategy page is the
+per-shape router m128/256 result, not a new overall score; the guide still identifies its shipped
+artifact as 1.343x check / 1.331x scored. Its linked
+[project report](https://thethings.ai/p/okc/muse-bf16-proj-report) does sharpen the post-v22 design:
+the failed compressed WGMMA kernel spent about 190 ns per 64-wide stage handshake, ran register-A
+WGMMA near 50% of peak, and paid a 4-6 us split-K wait/reduction. The report's proposed remedies
+are 128-wide K stages, a decode warpgroup that writes BF16 tiles to shared memory, shared/shared
+WGMMA at CUTLASS-like efficiency, and cluster/DSMEM reduction. This is public evidence supporting
+our no-global-tail direction, not evidence about the private leader. Implement that broader design
+only after v21/v22 measurements; do not mistake the report for a ready 1.67x submission.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
