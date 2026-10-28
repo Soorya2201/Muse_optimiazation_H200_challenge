@@ -49,6 +49,7 @@ is essential.
 | [lee101 public v22/diagnostics](https://github.com/lee101/openkernels) | Researched, not queued | Apache-2.0 source and detailed judge diagnostics. Current board entry is 1.4627x/rank 213 (`b55e82a9c7f04856`); published v22 evidence is 1.459x. Its later RS-WGMMA experiments isolate global split-K reduction as the m128 bottleneck. |
 | [rohanarun board entry](https://github.com/rohanarun/Auto-research-agent) | Score only; no reusable source | Current board entry is 1.5503x/rank 43 (`d1e1635ef48f4850`), stronger than Nathen v18, but the current public repository contains only the research application/prompts and no matching kernel or receipt. Do not attribute or reconstruct unavailable source. |
 | v19 route-generation autotune | Prepared, untested | Starts with the exact v18 artifact, then during `prepare()` compares its complete v15-v18 dispatch generations with cold-L2 CUDA-graph timing on all 30 scored shapes. It keeps v18 unless an older generation wins by both 1% and 0.08 us, and always uses fixed v18 for nearby/held-out shapes. |
+| v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 
 ## Version and OKC history
 
@@ -71,6 +72,7 @@ is essential.
 | v14 direct compressed qkv/pooler m1/m8 | not run | New architecture based on public H200 evidence: matrix-wide 3-bit exponent window, exact sparse FP32 corrections, direct non-allocating global loads, software-prefetched decode/MMA, and a concurrent exception warp. CPU layout and lossless reconstruction tests pass; CUDA/H200 validation pending. |
 | upstream Nathen v18 | upstream job `66d8b007f6c641ee`; not yet run by us | Exact source SHA-256 `111630ff363e5988ca57f28434a2e1a7e9c1d524079c64727b52c6aa287dcb44`, vendored from commit `86aff75e6aca72511bf9b41b6dc190bf1e763373`. Published result 1.518570x, CI 1.4958-1.5413, 9/9. First candidate for our next reset; preserve attribution and license. |
 | v19 Nathen route autotune | not run | `submission_v19_nathen_route_autotune.py`; it copies upstream v18 with one non-semantic trailing-space cleanup, followed by only the autotune overlay. Syntax passes locally. Run only after exact v18 establishes the current-pod baseline. |
+| v20 cluster-dense m128 | not run | `submission_v20_cluster_dense_m128.py`; v19 is an exact 637,846-byte prefix. Generated pooler/unpooler CUDA has no unresolved markers or qkv-specific row constants, and the file is 646,721 bytes. CUDA/H200 compilation and timing are pending. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -159,6 +161,15 @@ they ended within 1.5-2.2 us. Decode-ahead depth four and two-CTA-per-SM geometr
 Therefore a future compressed m128 kernel should not repeat global counter/workspace reduction.
 The next defensible architecture is cluster DSMEM/st.async aggregation or a no-split schedule
 that keeps enough independent N tiles resident; deeper decode pipelining alone is a rejected path.
+
+V20 implements that scheduling conclusion by specializing the already judged qkv m128 source in
+Nathen v18 rather than inventing a new reduction primitive. The original qkv route uses 36
+three-CTA clusters. Pooler instead uses 64 two-CTA clusters, splitting K in half and aggregating
+through cluster DSMEM; unpooler uses 128 independent CTAs and needs no reduction. Its generator
+specializes matrix dimensions, output strides, K chunk counts, and tensor maps, then rejects any
+unresolved template marker or qkv-specific row constant. During `prepare()`, random and one-hot
+correctness tests precede a conservative cold-L2 timing gate against v19. This is prepared static
+evidence only: CUDA compilation, correctness, and performance still require an H200 check.
 
 ## Novel next ideas
 

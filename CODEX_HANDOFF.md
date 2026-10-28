@@ -147,8 +147,13 @@ promote and submit it with attribution. Then check
 from one non-semantic trailing-space cleanup) and uses
 untimed cold-L2 graph replays to select among the already-prepared v15-v18 route generations for
 each scored shape. It requires both a 1% and 0.08 us measured win before replacing v18 and uses
-fixed v18 for every nearby/held-out shape. If exact v18 fails because of environment drift,
-diagnose that artifact before trying v19; then fall back to v14 and v13. Keep the current
+fixed v18 for every nearby/held-out shape. Third, check
+`muse_bf16_proj/submission_v20_cluster_dense_m128.py`. It preserves v19 as an exact prefix and
+generalizes v18's judged qkv cluster-DSMEM primitive to pooler m128, while using an independent,
+no-reduction schedule for unpooler m128. Both new routes must pass random and one-hot GPU tests
+and a conservative cold-L2 timing gate before activation. If exact v18 fails because of
+environment drift, diagnose that artifact before trying v19/v20; then fall back to v14 and v13.
+Keep the current
 `submission.py` untouched until a qualifying check passes.
 
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
