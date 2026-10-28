@@ -284,13 +284,32 @@ left unchanged. V20-v22 now compute and reject oversized configurations during s
 so a future tile edit cannot silently spend an H200 check on an impossible launch. No OKC run was
 used and the promoted submission remains untouched.
 
+A later Oct 28 search covered the newly risen #3-#5 teams (`harshagundala`, `sudodaksh`, and
+`schrepa`) and still found no attributable public kernel. A fresh independent
+[Guild reproduction](https://guild.1nterface.ai/t/5?credible=all) of the exact MIT v18 source did
+provide useful variance evidence: 1.53155x check and 1.52107x submit (`0babd4cb0aca4510`), which
+supports keeping exact v18 first after reset. The same discussion reported two narrower ideas.
+Programmatic dependent launch improved its lower-scoring global producer/reducer kernel by 4-9%
+on router and about 2% on small pooler, but decompression and inspection of every v18 native source
+found no PDL instruction or equivalent global semaphore/atomic reducer in the active design; v18
+already routes through cluster/no-split kernels or library GEMMs. Adding PDL would therefore mean
+reintroducing a different global-tail architecture, not toggling a free launch attribute.
+
+The discussion's original-row-major `W @ X.T` path improved its own o M8-32 cases by 7-13%, but
+its published M8 predecessor was 6.88 us. Even the full 13% gain models to about 5.99 us, slower
+than v18's measured 5.496 us at M8; v18 is also already at 5.476/5.807 us for M16/M32. With no
+exact faster M16/M32 times or source, this does not justify a check ahead of v30. Preserve it as a
+post-measurement comparison only. No OKC run was used for this audit.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
 The live score/source ladder is: `colinlikescode` 1.6367x (#1, no source found), `jkbpvsc`
-1.5933x (#2, no matching source found), `rohanarun` 1.5503x (#43, no matching kernel
-published), Nathen v18 1.5186x (#121, exact MIT source), vjeux v141 1.5014x (#175, Apache
-source), and lee101 1.4627x (#214, Apache source). Lower published implementations do not
+1.5933x (#2, no matching source found), `harshagundala` 1.5899x (#3), `sudodaksh` 1.5893x
+(#4), and `schrepa` 1.5876x (#5), all without attributable matching source; `rohanarun` is
+1.5503x (#43, no matching kernel published), Nathen v18 is 1.5186x (#121, exact MIT source),
+vjeux v141 is 1.5014x (#175, Apache source), and lee101 is 1.4627x (#214, Apache source).
+Lower published implementations do not
 justify spending a whole-file check before v18/v23.
 
 The valuable new evidence is lee101's later v26-v30 diagnostic series. Its lossless C12

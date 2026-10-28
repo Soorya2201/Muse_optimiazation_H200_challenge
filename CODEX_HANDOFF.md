@@ -223,6 +223,14 @@ group-count field with `NR`, so no stage depth was changed. V20-v22 now carry a 
 source-generation guard against oversized future configurations. This consumed no OKC run and
 does not change the reset measurement order.
 
+A subsequent Oct 28 public search found no source for the newly risen #3-#5 BF16 teams. It did
+find an independent attributed exact-v18 reproduction at 1.53155x check / 1.52107x submit (job
+`0babd4cb0aca4510`), strengthening the first-reset choice. Two reported follow-ups are deliberately
+deferred: PDL helped a lower-scoring global producer/reducer design, whereas static decompression
+found no PDL or global semaphore/atomic reducer in v18's active native sources; and a row-major
+`W @ X.T` o-M8 path models to roughly 5.99 us even at its reported 13% gain, versus v18's measured
+5.496 us. Do not spend a pre-v30 check on either technique without stronger per-shape evidence.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
