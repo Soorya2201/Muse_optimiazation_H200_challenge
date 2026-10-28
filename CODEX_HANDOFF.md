@@ -128,6 +128,14 @@ warp. The guide reports 13-20% qkv/pooler/o gains. No source from current #1 `co
 publicly discoverable, so do not describe this as their private method. Primary pages are linked
 in `muse_bf16_proj/IMPROVISATIONS.md`.
 
+The durable technique/source catalog is now `muse_bf16_proj/RESEARCH_LIBRARY.md`. It separates
+22 BF16 optimization families by workload regime, records primary NVIDIA/CUTLASS/Triton/paper
+sources, identifies measured failures that must not be repeated, and preserves the exact reset
+queue. The Oct 28 public refresh found no source above Nathen v18: the newly audited Apache-2.0
+`lee101/openkernels` and MIT `ozgureyilmaz/okc-muse-kernels` BF16 results peak at 1.149x and
+1.180353x checks respectively, so they are research evidence rather than pre-v18 candidates.
+No OKC run was consumed for this research update.
+
 `submission_v14_direct_compressed.py` implements an original simplified version for qkv/pooler
 m=1/8 only. CPU tests prove its 12-bit packed-fragment layout and sparse corrections reconstruct
 the BF16 weights exactly; Python syntax and diff checks pass. It has not compiled or run on CUDA.

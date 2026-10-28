@@ -1,5 +1,8 @@
 # `muse_bf16_proj` optimization record
 
+The broader, source-indexed catalog of published and challenge-specific techniques is maintained
+in `RESEARCH_LIBRARY.md`. This file remains the chronological implementation and measurement log.
+
 The current scored and verified submission is `submission.py` =
 `submission_v3_cluster.py`.
 
