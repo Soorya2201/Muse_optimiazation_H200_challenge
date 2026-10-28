@@ -185,6 +185,13 @@ on all four models to 1.5832x, and even substituting the optimistic TASK floors 
 1.6076x. Treat v21/v22 as bridge candidates; after measuring them, return to the small-m
 qkv/pooler compression path needed for the remaining gap.
 
+The converse portfolio bound is now explicit. V30+v31 targets alone reach only 1.58896x even at
+their optimistic TASK floors. Combining those five targets with v21/v22's four large targets
+reaches 1.68212x at all floors, but a uniform 20% win reconstructs only 1.64014x. The prepared
+portfolio can therefore beat 1.6367 only with unusually broad, near-20% gains. Do not prepare
+more adjacent geometry variants before measuring this set; combine measured winners, then return
+to a broader compression/scheduling design if the aggregate remains below the leader.
+
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
 8% across all non-router projections models to about 1.6363x. The public vjeux v141 artifact is

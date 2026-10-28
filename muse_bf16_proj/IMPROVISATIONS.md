@@ -239,6 +239,16 @@ route uses 256 CTAs × 256 threads; WR=2 gives a near one-wave 128-CTA grid and 
 tests the 64-CTA underfill boundary, with 2,048 total warps unchanged. Both preserve exact decode
 and validate m=9,16,17,24,32. Combine only after a measured win.
 
+The latest portfolio model sets a hard priority boundary. Improving v30 plus v31 targets by
+2/5/10/15/20% raises v18 from 1.51857x to only 1.52378/1.53168/1.54515/1.55899/1.57322x.
+Even replacing all five with their optimistic TASK floors reaches 1.58896x. Adding the four
+v21/v22 pooler/unpooler m128/m256 targets changes the picture: their combined floor model reaches
+1.68212x, but uniform 5/10/15/20% wins across all nine targets yield
+1.54698/1.57665/1.60767/1.64014x. Thus roughly 20% broad improvement is required just to edge the
+current 1.6367 leader. Stop preparing adjacent small-shape geometries now; measure v30, v31, and
+the cluster line, then combine only demonstrated wins. If they fall short, the missing lever must
+be a broader compression/scheduling architecture, not another one-shape tile adjustment.
+
 The [public BF16 strategy guide](https://thethings.ai/p/okc/muse-bf16-proj-guide/03-strategy)
 also narrows future work: direct C12 streaming saves 13-20% on suitable small shapes, while L2
 prefetch, x-stationary/multiple-row-block GEMV, persistent TMA rings, and compressed WGMMA were
