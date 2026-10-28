@@ -52,6 +52,7 @@ is essential.
 | v19 route-generation autotune | Prepared, untested | Starts with the exact v18 artifact, then during `prepare()` compares its complete v15-v18 dispatch generations with cold-L2 CUDA-graph timing on all 30 scored shapes. It keeps v18 unless an older generation wins by both 1% and 0.08 us, and always uses fixed v18 for nearby/held-out shapes. |
 | v20 cluster-dense m128 | Prepared, untested | Generalizes v18's judged qkv m128 cluster-DSMEM kernel to pooler m128 (64 two-CTA clusters, K split in half) and unpooler m128 (128 independent CTAs, no reduction). Random and one-hot GPU self-tests plus cold-L2 timing gate each route during `prepare()`; otherwise v19 remains active. |
 | v21 cluster-dense m128/m256 | Prepared, untested | Extends v20 with v18's dormant TM256 WGMMA schedule. Two generated modules independently gate pooler/unpooler at m128 and m256, retaining captured outputs during graph timing. All four routes use 128 CTAs and fit Hopper's dynamic shared-memory limit; any non-winning route falls back to v19. |
+| v22 cluster pipeline autotune | Prepared, untested | Subsumes v21 without compiling it first. For each of its four shapes, compares the base 2D-TMA schedule, v18's evidenced 3D-TMA/normal-weight-cache policy, and one adjacent legal stage depth. All 12 candidates require random and exact one-hot correctness; only a 1% and 0.08 us cold-L2 win over v19 activates. |
 
 ## Version and OKC history
 
@@ -76,6 +77,7 @@ is essential.
 | v19 Nathen route autotune | not run | `submission_v19_nathen_route_autotune.py`; it copies upstream v18 with one non-semantic trailing-space cleanup, followed by only the autotune overlay. Syntax passes locally. Run only after exact v18 establishes the current-pod baseline. |
 | v20 cluster-dense m128 | not run | `submission_v20_cluster_dense_m128.py`; v19 is an exact 637,846-byte prefix. Generated pooler/unpooler CUDA has no unresolved markers or qkv-specific row constants, and the file is 646,721 bytes. CUDA/H200 compilation and timing are pending. |
 | v21 cluster-dense m128/m256 | not run | `submission_v21_cluster_dense_m128_m256.py`; v19 is an exact 637,846-byte prefix. Static generation produced two-case pooler/unpooler sources with no unresolved markers, m128/m256 swap-WGMMA calls, and 163,920-213,136 bytes of dynamic shared memory. CUDA/H200 compilation and timing are pending. |
+| v22 cluster pipeline autotune | not run | `submission_v22_cluster_dense_autotune.py`; v21 is its exact prefix but its final prepare bypasses v21 and starts directly from v19, so only two six-template extensions compile. Generated sources contain all six cases and use 155,712-221,344 bytes of dynamic shared memory. CUDA/H200 compilation and timing are pending. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -184,6 +186,22 @@ unpooler, and gates each of the four routes separately. Static shared-memory cal
 213,136/196,688 bytes for pooler m128/m256 and 196,752/163,920 bytes for unpooler m128/m256,
 all below Hopper's 227 KiB opt-in limit. This remains a hypothesis until the remote compile,
 self-tests, and cold-L2 comparisons pass.
+
+V22 bounds the next tuning step instead of multiplying whole-file checks. Each v21 route is
+compared in one extension against two alternatives: the 3D-TMA plus normal weight-cache policy
+encoded by v18's `PIPE=6683` qkv experiment (translated to `6363` for TM256), and one adjacent
+stage depth that remains launchable. Pooler tries S8/S8-3D/S7 at m128 and S4/S4-3D/S3 at m256;
+unpooler tries S8/S8-3D/S9 and S4/S4-3D/S5. The geometry, FP32 accumulation, cluster reduction,
+and output conversion are unchanged. Static generation confirms six cases per layer, and shared
+memory spans 155,712-221,344 bytes. V22 starts directly from v19 rather than running v21's
+prepare, then validates all 12 candidates and times four-way cold-L2 graph replays per shape.
+
+The exact v18 shape CSV also bounds this line of work. Making all four targeted routes 5%, 10%,
+15%, or 20% faster raises the reconstructed 1.518570x score to 1.533735x, 1.549524x, 1.565984x,
+or 1.583167x respectively. Replacing them with the TASK.md floors reaches only 1.607610x, still
+below the 1.6367x leader—and those floors are optimistic for cold-HBM execution. Therefore v22
+can be a meaningful bridge but cannot by itself reach #1; subsequent work must also improve the
+small-m dense projections, especially qkv/pooler, rather than endlessly tuning these four routes.
 
 ## Novel next ideas
 

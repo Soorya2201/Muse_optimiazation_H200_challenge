@@ -155,9 +155,18 @@ and a conservative cold-L2 timing gate before activation. If exact v18 fails bec
 environment drift, diagnose that artifact before trying v19/v20. Fourth, check
 `muse_bf16_proj/submission_v21_cluster_dense_m128_m256.py`, which adds independently gated
 TM256 pooler/unpooler routes to the same cluster/no-reduction design. Its static generator and
-shared-memory checks pass, but it has not compiled on H200. Then fall back to v14 and v13.
+shared-memory checks pass, but it has not compiled on H200. Fifth, check
+`muse_bf16_proj/submission_v22_cluster_dense_autotune.py` only after v21 establishes that the
+generated architecture compiles. V22 directly starts from v19 and compares v21 against v18's
+3D-TMA/cache-policy bits plus one adjacent stage depth for each of four shapes; all 12 candidates
+are correctness-tested and conservatively gated. Then fall back to v14 and v13.
 Keep the current
 `submission.py` untouched until a qualifying check passes.
+
+V18's exact shape CSV shows the m128/m256 pooler/unpooler line cannot reach #1 alone: 20% faster
+on all four models to 1.5832x, and even substituting the optimistic TASK floors models to only
+1.6076x. Treat v21/v22 as bridge candidates; after measuring them, return to the small-m
+qkv/pooler compression path needed for the remaining gap.
 
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
