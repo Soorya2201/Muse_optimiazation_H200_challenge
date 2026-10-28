@@ -275,6 +275,15 @@ Read-only board refresh after this audit: overall **#664**; MoE **#536** at 1.63
 attention **#770** at 1.2954x; BF16 **#1092** at 1.1158x; decode **#704** at 1.2326x;
 prefill **#467** at 1.1184x. Prefill remains a separate board, and all ranks are dynamic.
 
+A subsequent authenticated GitHub code-search refresh found no source from any current top-five
+BF16 team. Two newly indexed lower artifacts do not change the plan. PostTrainLLM publishes an
+exact source/hash receipt for job `1095cf9b43bf49a0` at only 1.067341x; it uses a Triton m1 GEMV and
+a 16-way small-router partial reduction. Ranoobaba is live at 1.2331x (#589, job
+`c4be07e843a74e33`) with a conventional Triton/cuBLAS autotuner and hi+lo router path. Neither has
+lossless compression, cluster reduction, or a route threshold that beats v18/v30. Full hashes and
+commit provenance are in `muse_bf16_proj/IMPROVISATIONS.md`. No OKC run was used, and the reset
+measurement order remains unchanged.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted

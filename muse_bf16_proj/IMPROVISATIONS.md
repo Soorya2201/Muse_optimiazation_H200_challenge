@@ -414,6 +414,20 @@ Apple clang syntax-compiled and linked the wrapper against real `libtorch`, `lib
 generation, symbol naming, linking, and module loading on Torch 2.8. The judge uses Torch 2.14 with
 CUDA, so its full extension build and execution remain the authoritative gate.
 
+An Oct 28 authenticated GitHub code-search refresh found no public repository belonging to any of
+the current top-five BF16 teams. It did surface two previously unrecorded lower-scoring artifacts.
+`PostTrainLLM/posttrainllm` commit `07897a4d0d5d99b9eb63ea3b49fc71df43159749` publishes an exact
+source hash `774a28dae97b364a64704edc54d3ad811aaa71fea3918fc5ff8ab4f207845269` and check job
+`1095cf9b43bf49a0`, which passed at only **1.067341x** (CI 1.05133-1.08335). It uses a conventional
+Triton m1 GEMV, a 16-way small-router partial buffer plus reduction, and the SGLang dispatch for
+other dense shapes. All of those paths are dominated by the existing v18/v30 portfolio.
+
+`Ranoobaba/okc-campaign` publishes a Triton/cuBLAS autotuner with BF16 hi+lo router weights; its live
+entry is **1.2331x**, rank 589 at the refresh, job `c4be07e843a74e33`. Its current source hash is
+`fa245a5288d38d91cff9242184c550d8c86523c4bcbeabc36df70e75a615929a`. It has no lossless weight
+compression, cluster reduction, or per-shape timing receipt that beats the public v18 thresholds.
+Neither artifact warrants an OKC check or changes the reset order. No OKC run was consumed.
+
 ### Public-source landscape and the next architectural target
 
 An authenticated GitHub code search on Oct 28 found eight repositories containing this problem.
