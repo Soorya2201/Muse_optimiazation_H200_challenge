@@ -88,15 +88,48 @@ def audit_output_coverage() -> None:
     assert max(written) == (127, 4095)
 
 
+def audit_deferred_seven_stage_layout() -> None:
+    # NVCC 13.0 emits `.extern .shared .align 1024 .b8 raw[]` for the source
+    # declaration, so a future variant may use raw directly without reserving
+    # a second 1,023-byte alignment margin. Transpose the peer mailbox from
+    # [warp, lane, accumulator] to [warp, float4-group, lane, float4].
+    stages = 7
+    stage_ring = stages * (PACKED_BYTES + DECODED_BYTES + X_BYTES)
+    barrier_arrays = stages * 3 * 8
+    qbar_bytes = 8
+    peer_offset = (stage_ring + barrier_arrays + qbar_bytes + 15) & ~15
+    compact_mailbox = 2 * 16 * 32 * 4 * 4
+    total = peer_offset + compact_mailbox
+    assert stage_ring == 215040
+    assert peer_offset == 215216
+    assert compact_mailbox == 16384
+    assert total == 231600
+    assert DYNAMIC_SHARED + 29536 == 232448  # documented H200 opt-in limit
+    assert 232448 - total == 848
+
+    addresses = set()
+    for warp in range(2):
+        for group in range(16):
+            for lane in range(32):
+                address = peer_offset + (((warp * 16 + group) * 32 + lane) * 16)
+                assert address % 16 == 0
+                block = set(range(address, address + 16))
+                assert addresses.isdisjoint(block)
+                addresses.update(block)
+    assert len(addresses) == compact_mailbox
+
+
 def main() -> None:
     audit_resources()
     audit_barrier_phases()
     audit_reduction()
     audit_packed_ranges()
     audit_output_coverage()
+    audit_deferred_seven_stage_layout()
     print(
         "c12 cluster static audit passed: "
-        "shared=202912 reduction_tx=16384 packed=50331648 output=128x4096"
+        "shared=202912 reduction_tx=16384 packed=50331648 output=128x4096 "
+        "deferred_7stage=231600"
     )
 
 

@@ -333,6 +333,16 @@ shared-memory bound, six-slot phase reuse, exact 16,384-byte peer completion cou
 DSMEM mailboxes, contiguous 50,331,648-byte packed range, and one-write coverage of all 128x4,096
 outputs. It passes locally. This does not replace the pending H200 runtime check or change its order.
 
+NVCC 13.0 PTX generation was then rerun specifically for the dynamic-shared declaration and emits
+`.extern .shared .align 1024 .b8 raw[]`, consistent with NVIDIA's PTX alignment contract. This makes
+a deferred seven-stage variant statically possible without the redundant 1,023-byte realignment
+reserve: transpose the peer mailbox as `[warp][float4 group][lane][float4]`, keeping every vector
+16-byte aligned while shrinking it from 17,408 to 16,384 bytes. Seven 30,720-byte stages, 21
+barriers, aligned qbar/peer storage, and that mailbox total 231,600 bytes, leaving 848 bytes under
+the 232,448-byte opt-in limit. The static audit proves address uniqueness and this arithmetic.
+Do not implement or check this adjacent stage variant before v32 establishes whether the C12
+pipeline is correct and whether stage depth is limiting performance.
+
 A subsequent authenticated GitHub code-search refresh found no source from any current top-five
 BF16 team. Two newly indexed lower artifacts do not change the plan. PostTrainLLM publishes an
 exact source/hash receipt for job `1095cf9b43bf49a0` at only 1.067341x; it uses a Triton m1 GEMV and

@@ -598,6 +598,17 @@ At 08:31 PDT on Oct 28, a read-only board refresh showed the top five at 1.6367x
 teams and job IDs returned no relevant public source or result receipt. No private-leader method is
 inferred from these scores, and the measurement order is unchanged.
 
+One additional resource result is now proved but deliberately deferred. NVCC 13.0 emits the
+dynamic array as `.extern .shared .align 1024 .b8 raw[]`; NVIDIA's PTX ISA specifies that `.align`
+aligns the array's starting address. V32's extra worst-case 1,023-byte realignment reserve is thus
+not needed by a new build. A compact mailbox indexed as
+`[sending warp][float4 group][lane][float4]` keeps every DSMEM transaction 16-byte aligned and
+uses 16,384 rather than 17,408 bytes. With seven stages, the ring is 215,040 bytes, the barrier and
+alignment prefix ends at byte 215,216, and the compact mailbox ends at 231,600—848 bytes below the
+232,448-byte limit. The static audit proves all 1,024 float4 destinations are aligned and disjoint.
+This is a concrete v32 follow-up only if H200 profiling shows the six-stage pipeline works and is
+latency-limited; preparing it earlier would violate the evidence-first measurement order.
+
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 
 Existing v5/v6: TMA a compressed ring into shared memory, decode in the consumer, and read a raw
