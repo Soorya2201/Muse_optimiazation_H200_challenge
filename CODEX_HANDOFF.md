@@ -118,6 +118,23 @@ Final Oct 28 rank refresh: overall **#656**; MoE **#529** at 1.6329x; attention 
 1.2954x; BF16 **#1087** at 1.1158x; decode **#697** at 1.2326x; prefill **#456** at 1.1184x.
 Ranks are dynamic.
 
+Post-budget preparation (no additional OKC run): v13 is the planned qkv hybrid that keeps the
+original mapping at m=1 and enables row ownership only at m=8. More importantly, public research
+found a former-leading Muse BF16 design at 1.343x check / 1.331x submit. Its successful exact
+12-bit kernel bypasses the TMA ring: direct non-allocating global vector loads, a pack-time
+`prmt`/`lop3` layout, software-prefetched compressed groups, and a dedicated concurrent exception
+warp. The guide reports 13-20% qkv/pooler/o gains. No source from current #1 `colinlikescode` was
+publicly discoverable, so do not describe this as their private method. Primary pages are linked
+in `muse_bf16_proj/IMPROVISATIONS.md`.
+
+`submission_v14_direct_compressed.py` implements an original simplified version for qkv/pooler
+m=1/8 only. CPU tests prove its 12-bit packed-fragment layout and sparse corrections reconstruct
+the BF16 weights exactly; Python syntax and diff checks pass. It has not compiled or run on CUDA.
+At the next BF16 budget reset, check v14 before v13 because its expected upside is much larger.
+If it fails compilation/correctness, fix v14 in-place as the same experiment and log the run. If
+it passes and strictly improves, extend the same direct engine to o and m=16 using the public
+configuration table. Keep `submission.py` untouched until a qualifying check passes.
+
 #### Oct 28 prefill continuation
 
 The prefill cycle has used 8/8 reserved checks and 0/2 submits today. The local promoted
@@ -150,9 +167,9 @@ and detailed in that track's `IMPROVISATIONS.md`:
 - v8 16-warp pooler: 1.1018x (`5f6f3910b4bb4ac9`); m8 regressed.
 - v9 generic Triton m16/32 GEMM: 0.9239x (`7897be35f5c548f9`); qkv/pooler were about 45/38 us.
 
-Do not retry consumer-side BF16-12 decode or the generic Triton tile. The remaining BF16 route is
-a true warp-specialized TMA/WGMMA kernel that hides any reconstruction in a producer pipeline.
-Otherwise continue to the decode-layer cycle; do not port the rejected compressor there.
+Do not retry the v5/v6 TMA-ring BF16-12 decoder, block-level raw fallback, or generic Triton tile.
+The direct-load compressed v14 is a materially different route supported by public H200 data and
+is now the first BF16 priority. Do not port compression elsewhere until this direct path passes.
 
 Live ranks at the end of the cycle: overall kernel #661; MoE #535, attention #783, BF16 #1074,
 decode #776, prefill #448. Prefill remains a separate board. BF16 has 15/20 checks and 10/10
