@@ -23,6 +23,7 @@ CUDA = r'''
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <cuda_bf16.h>
+#include <cudaTypedefs.h>
 #include <stdint.h>
 
 __device__ __forceinline__ uint32_t saddr(const void* pointer) {
@@ -104,7 +105,7 @@ __device__ __forceinline__ uint32_t swizzled_index(uint32_t logical) {
 
 @@WGMMA@@
 
-extern "C" __global__ __launch_bounds__(288, 1) __cluster_dims__(2, 1, 1)
+extern "C" __global__ __launch_bounds__(288, 1)
 void c12_pooler128(
     const __grid_constant__ CUtensorMap map_x,
     const uint8_t* __restrict__ packed,
@@ -292,6 +293,74 @@ void c12_pooler128(
     const uint4 value = *reinterpret_cast<const uint4*>(staging + token * 32 + row_chunk * 8);
     *reinterpret_cast<uint4*>(output + static_cast<size_t>(token) * N + row_block * 64 + rank * 32 + row_chunk * 8) = value;
   }
+}
+
+static PFN_cuTensorMapEncodeTiled_v12000 v32_get_encode() {
+  static PFN_cuTensorMapEncodeTiled_v12000 function = nullptr;
+  if (!function) {
+    cudaDriverEntryPointQueryResult status;
+    void* pointer = nullptr;
+    cudaGetDriverEntryPoint("cuTensorMapEncodeTiled", &pointer, cudaEnableDefault, &status);
+    if (!pointer) return nullptr;
+    function = reinterpret_cast<PFN_cuTensorMapEncodeTiled_v12000>(pointer);
+  }
+  return function;
+}
+
+static int v32_make_x_map(CUtensorMap* map, void* x) {
+  auto encode = v32_get_encode();
+  if (!encode) return static_cast<int>(cudaErrorNotSupported);
+  cuuint64_t dimensions[2] = {8192, 128};
+  cuuint64_t strides[1] = {8192 * 2};
+  cuuint32_t box[2] = {64, 128};
+  cuuint32_t element_strides[2] = {1, 1};
+  const CUresult result = encode(
+      map, CU_TENSOR_MAP_DATA_TYPE_BFLOAT16, 2, x, dimensions, strides, box, element_strides,
+      CU_TENSOR_MAP_INTERLEAVE_NONE, CU_TENSOR_MAP_SWIZZLE_128B,
+      CU_TENSOR_MAP_L2_PROMOTION_L2_256B, CU_TENSOR_MAP_FLOAT_OOB_FILL_NONE);
+  return result == CUDA_SUCCESS ? 0 : static_cast<int>(result);
+}
+
+int v32_launch(
+    uint64_t packed, uint64_t patches, uint64_t patch_counts, uint64_t x, uint64_t output,
+    int base4, uint64_t stream, int query) {
+  constexpr int dynamic_shared = 202912;
+  static bool attributes_set = false;
+  if (!attributes_set) {
+    cudaError_t error = cudaFuncSetAttribute(
+        c12_pooler128, cudaFuncAttributeMaxDynamicSharedMemorySize, dynamic_shared);
+    if (error != cudaSuccess) return static_cast<int>(error);
+    error = cudaFuncSetAttribute(
+        c12_pooler128, cudaFuncAttributeNonPortableClusterSizeAllowed, 1);
+    if (error != cudaSuccess) return static_cast<int>(error);
+    attributes_set = true;
+  }
+  if (query) {
+    int blocks = 0;
+    cudaError_t error = cudaOccupancyMaxActiveBlocksPerMultiprocessor(
+        &blocks, c12_pooler128, 288, dynamic_shared);
+    return error == cudaSuccess ? blocks : -static_cast<int>(error);
+  }
+
+  CUtensorMap map_x;
+  int result = v32_make_x_map(&map_x, reinterpret_cast<void*>(x));
+  if (result) return result;
+  cudaLaunchConfig_t config = {};
+  config.gridDim = dim3(128);
+  config.blockDim = dim3(288);
+  config.dynamicSmemBytes = dynamic_shared;
+  config.stream = reinterpret_cast<cudaStream_t>(stream);
+  cudaLaunchAttribute attribute = {};
+  attribute.id = cudaLaunchAttributeClusterDimension;
+  attribute.val.clusterDim = {2, 1, 1};
+  config.attrs = &attribute;
+  config.numAttrs = 1;
+  return static_cast<int>(cudaLaunchKernelEx(
+      &config, c12_pooler128, map_x,
+      reinterpret_cast<const uint8_t*>(packed),
+      reinterpret_cast<const uint32_t*>(patches),
+      reinterpret_cast<const uint8_t*>(patch_counts),
+      reinterpret_cast<__nv_bfloat16*>(output), static_cast<uint32_t>(base4)));
 }
 '''
 

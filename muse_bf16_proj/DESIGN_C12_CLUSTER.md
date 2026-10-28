@@ -1,8 +1,8 @@
 # C12 decode-to-shared cluster GEMM
 
-Status: pack/decode/patch/swizzle contract is CPU-proven; CUDA kernel is not implemented or
-measured. Build it only after exact v18, v30, and the v21/v22 uncompressed cluster candidates
-establish current-pod baselines.
+Status: the isolated pooler-m128 candidate is implemented in
+`submission_v32_c12_cluster_pooler128.py`, but has not run on CUDA or H200. Check it only after
+exact v18, v30, and the v21/v22 uncompressed cluster candidates establish current-pod baselines.
 
 ## Why this is the next architecture
 
@@ -74,10 +74,19 @@ six packed/decoded/x stages, bulk packed-weight copies, TMA x loads, the 128-thr
 shared/shared WGMMA, and the two-CTA cluster-DSMEM epilogue for pooler m128. NVCC 13.0 requires
 the explicit `-gencode=arch=compute_90a,code=sm_90a` pair for its WGMMA PTX target; with that flag,
 PTXAS reports 122 registers, three barrier resources, zero stack, and zero spills. This proves all
-device pieces instantiate together, but the source still lacks its Torch wrapper, pack-time tensor
-construction, GPU correctness tests, and timing gate.
+device pieces instantiate together. V32 now embeds the raw-pointer Torch extension wrapper,
+pack-time tensor construction, random and multi-column one-hot GPU tests, and cold-L2 activation
+gate; none has executed on H200 yet.
 The audited generated-source SHA-256 is
-`7ca033c0bc8860edc84a90c46bda38af921049fa4f6df6cbbbce21954a7d34ce`.
+`ac7381931b8e5c18209f1d8fae06934a3fceca886aebb5162d034a70d069cc85`.
+
+The actual PyTorch packer was also exercised on a full 4,096x8,192 CPU tensor generated as FP32
+then rounded to BF16, matching the public weight distribution. It produced exactly 50,331,648
+packed bytes, an `[8192, 8]` int32 patch table, an `[8192]` uint8 count table, and maximum four
+patches per tile; its byte-stream roundtrip passed. Direct BF16 CPU RNG has a nonrepresentative
+0.593% tiny-value tail and reached 51 patches, correctly exercising v32's overflow rejection.
+Thus capacity eight is evidenced for the known distribution while remaining fallback-safe for
+held-out weights.
 
 ## Static H200 resource bound
 

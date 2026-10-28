@@ -96,6 +96,7 @@ is essential.
 | v29 all small-route autotune | not run | `submission_v29_all_small_autotune.py`; v28 is an exact 655,295-byte prefix and the complete file is 659,779 bytes. The appended o routes use 512/1024 threads, 256/128 CTAs, and 4,096 total warps each. Syntax, prefix, geometry, and size checks pass; its two added extension compilations versus exact v18 have not been timed on H200. |
 | v30 all-small plus qkv32 | not run | `submission_v30_all_small_qkv32.py`; v29 is an exact 659,779-byte prefix and the complete file is 666,501 bytes. Qkv32 WR=2/4 use 256/512 threads, 288/144 CTAs, and the same 2,304 total warps as v18. Its three independent NVCC builds run through the existing prepare thread-pool pattern, followed by the unchanged sequential qkv16/o/qkv32 validation and cold-L2 gates. Source anchors, syntax, mocked state/order, prefixes, geometry, and size pass; H200 preparation remains unverified. |
 | v31 pooler32 geometry | not run | `submission_v31_pooler32_geometry.py`; v19 is an exact prefix and the file is 643,310 bytes. WR=2/4 use 512/1024 threads and 128/64 CTAs, preserve 2,048 warps, and require exact/random validation, positive capacity, no local spill, and a strict timing win. |
+| v32 C12 decode-to-shared pooler128 | not run | `submission_v32_c12_cluster_pooler128.py`; its first 633,375 bytes hash exactly to public v18 (`111630ff...`). It embeds generated CUDA hash `ac738193...`, builds one six-stage bulk/TMA → decode-warpgroup → SS-WGMMA → two-CTA DSMEM pipeline, rejects patch overflow, validates random plus eight one-hot columns, and activates only after a 1%/0.08 us cold-L2 win. NVCC 13.0 compiles the complete raw-pointer host/device source at 122 registers, three barriers, and zero spills. The full representative CPU pack/roundtrip passes with max four of eight patches; H200 compilation, correctness, and timing are pending. Run only after v21/v22 establishes the uncompressed cluster baseline. |
 
 ## Lossless 12-bit BF16 feasibility result
 
@@ -565,19 +566,23 @@ WGMMA plus cluster DSMEM reduction. Exact prototype accounting is 202,912 B at m
 Uniform 20% improvement over all eight large
 dense shapes reaches 1.62272x; 25% reaches 1.65364x, so it can be a rank-one component only when
 broadly successful or combined with v30/v31. Full pipeline, exactness, resource arithmetic, and
-rollout are in `DESIGN_C12_CLUSTER.md`. This is not implemented or measured and must follow the
-reset baseline checks.
+rollout are in `DESIGN_C12_CLUSTER.md`. V32 implements the isolated pooler-m128 route, but it is
+unmeasured and the broader eight-shape rollout remains unimplemented. It must follow the reset
+baseline checks.
 The offline contract is now executable: `tools/c12_cluster_emulator.py` passed exhaustive BF16
 bits, every patch-field boundary, 4,096 fixed-global-base normal-like tiles, adversarial values,
 and the WGMMA swizzle. The sampled patch maximum was four versus the reserved capacity eight.
 The matching shared-memory microkernel also compiles for `sm_90a` under NVCC 13.0 at 22 registers,
 one barrier resource, and zero stack/spills; PTX retains the intended shared loads/stores,
-`lop3`, `prmt`, and three synchronization points. Full pipeline integration, GPU correctness, and
-performance remain unimplemented.
+`lop3`, `prmt`, and three synchronization points.
 The complete compile-only pooler-m128 pipeline generator now instantiates packed bulk copies, TMA
 x, decoder, SS-WGMMA, and a two-CTA DSMEM epilogue together. NVCC 13.0/PTXAS accepts the explicit
 `compute_90a,sm_90a` target at 122 registers, three barrier resources, zero stack, and zero spills.
-Torch integration, GPU correctness, and timing remain pending.
+V32 supplies the raw-pointer Torch wrapper, packer, validation, dispatch, and activation gate in a
+fallback-safe single-file candidate. Its exact-v18 prefix,
+Python syntax, postponed-annotation mock import, embedded/generated CUDA hash, full-size PyTorch
+packing roundtrip, overflow fallback, and dispatch capture all pass offline. GPU runtime correctness
+and H200 timing remain pending. No OKC run was consumed.
 
 ### 1. Direct-load 12-bit GEMV with concurrent exact exceptions
 

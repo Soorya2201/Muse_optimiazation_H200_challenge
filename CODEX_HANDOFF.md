@@ -231,22 +231,31 @@ rare exceptions there, and preserve v18's faster shared/shared WGMMA plus cluste
 m256, under the 232,448 B opt-in limit; m256 has 9,104 B margin.
 Across all eight large non-router shapes,
 uniform 20% and 25% wins model to 1.62272x and 1.65364x. This is the first plausible broad rank-one
-component, but it is not implemented or measured. Do not move it ahead of v18/v30/v31/v20-v22;
-use the measured winning cluster pipeline as its base, start with pooler m128, and gate every route.
+component. Its isolated pooler-m128 implementation is prepared but unmeasured; the broader
+eight-shape rollout is not implemented. Do not move it ahead of v18/v30/v31/v20-v22; use the
+measured winning cluster pipeline as its base and gate every additional route.
 Its CPU contract now lives at `muse_bf16_proj/tools/c12_cluster_emulator.py`: seed-5151 tests pass
 all 65,536 BF16 patterns, 20,480 patch-field cases, 4,096 normal-like tiles sharing one calibrated
 base (median 0, p99 2, max 4 patches; capacity 8), adversarial inputs, and the 128-byte swizzle.
-This proves the pack/decode semantics only; the CUDA kernel and H200 timing remain pending.
+This proves the pack/decode semantics; CUDA evidence and the integrated candidate are described
+below, while H200 correctness and timing remain pending.
 The matching standalone shared-memory device contract is
 `muse_bf16_proj/tools/c12_cluster_decoder.cu`. Compiler Explorer NVCC 13.0 compiled it for
 `sm_90a` at 22 registers, one barrier resource, zero stack, and zero spills; PTX shows shared
-loads/stores, three `bar.sync` points, and the intended `lop3`/`prmt` decode. Full cluster-pipeline
-integration, runtime correctness, and H200 timing are still pending.
+loads/stores, three `bar.sync` points, and the intended `lop3`/`prmt` decode. The pooler-m128
+cluster pipeline is integrated in v32; runtime correctness and H200 timing are still pending.
 The full compile-only pooler-m128 pipeline generator is
 `muse_bf16_proj/tools/c12_cluster_pooler128_source.py`. It combines six-stage bulk/TMA input,
 decode-to-shared, SS-WGMMA, and the two-CTA DSMEM epilogue. NVCC 13.0 with explicit
 `compute_90a,sm_90a` gencode reports 122 registers, three barrier resources, zero stack, and zero
-spills. It still needs a Torch wrapper, prepared tensors, GPU correctness, and cold-L2 gating.
+spills. `muse_bf16_proj/submission_v32_c12_cluster_pooler128.py` now embeds that generated source
+(SHA `ac738193...`) on an exact 633,375-byte v18 prefix and adds the raw-pointer Torch wrapper,
+full lossless packer, overflow fallback, random/eight-column one-hot checks, and 1%/0.08 us cold-L2
+gate. A representative full CPU pack produced 50,331,648 bytes with maximum four of eight patches
+and passed the byte-stream roundtrip; direct-BF16 RNG deliberately triggered overflow and fallback.
+Python syntax, mock import/state capture, prefix/source hashes, and NVCC compilation pass. H200
+correctness and timing remain pending. Check v32 only after v21/v22 establishes which uncompressed
+cluster pipeline wins; then use it before falling back to v14/v13.
 
 Quantitative target: beating the 1.6367x leader from v18 requires about 7.22% lower time per load.
 Pooler, qkv, and unpooler dominate; 10% faster router alone adds only about 1.0% aggregate, while
