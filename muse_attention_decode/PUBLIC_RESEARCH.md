@@ -2,6 +2,19 @@
 
 ## Oct 29 second cycle: isolated future-row prefetch
 
+Current follow-up: diagnostic check `13bc760e093343f3` runs
+`submission_v17_phase_probe.py`, SHA
+`703205792c1797613d674bc02d250415218644fcc72384cc0b808849a058f1d1`.
+The timed native source and Python entry path preserve the parent exactly, apart from
+the extension namespace. A separately compiled traced module runs only on independently
+generated import-time fixtures. Ten shapes expose entry/segment setup, page-index
+readiness, copy issue, query setup, first K/V readiness, loop end, partial issue and merge.
+It verifies debug outputs against the parent, reports instrumentation timing overhead,
+drops all synthetic graphs/inputs/outputs and zeroes coordination scratch before real calls.
+Markers perturb scheduling, so their intervals are diagnostic rather than exact parent
+cycle counts. No performance gain is claimed. Builder/source isolation/syntax checks pass;
+this is the third of eight checks and must never be promoted as a scored submission.
+
 After MoE's second cycle, attention resumes at one check and one submit used today.
 The full current source/profile/checks/reference files and track instructions were reviewed.
 The promoted source already has FP8 WGMMA, FP8 PV for verify, producer register redistribution,

@@ -65,6 +65,35 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct29 20:56UTC attention phase probe
+
+The interrupted preceding turn made progress:five checked experiments,negative controls,
+new public-source section reviews,and logged/pushed evidence. On resume,attention v16's
+completed2.482162x regression was reconciled in RESULTS/research and pushed as6a6ef59.
+Active job13bc760e093343f3 checks submission_v17_phase_probe.py,
+SHA703205792c1797613d674bc02d250415218644fcc72384cc0b808849a058f1d1.
+Third attention check today (3/8),one submit used. This is diagnostic only:timed path is
+exactparent native/Python except extension namespace. At import it builds parent and a
+separate traced module concurrently,then uses independent synthetic fixtures on10shapes
+to mark globaltimer phases. It compares debug outputs to parent and reports raw timing
+perturbation;markers describe instrumented scheduling,not exact uninstrumented durations.
+Synthetic graphs/inputs/outputs are local and dropped;scratch zeroed before judge calls.
+Source-prefix audit,all native insertion anchors,balanced delimiters and py_compile pass.
+Builder tools/build_attention_phase_probe.py reproduces it. Read result/allprofiles/logs,
+then choose a measured bottleneck for the next performance change. Do not submit this
+development diagnostic. Parent remains scored2.603505x;no other GPU job is live.
+
+Prepared (not checked) submission_v18_softmax_phase_offset.py,
+SHAc2d533e3b4b363a4766aed38ca8da328cc0d03585a14acd976357adb62598075.
+Only flatL8 adds one named-barrier6 handoff:128head1consumer threads wait on first tile;
+128head0threads arrive after first PV issued. Existing per-head transpose fences/barriers
+remain (unlike blindly importing the old coupled TURN path). No extra handoff later.
+Builder audits exactnative/Python remainder and syntax. First local build rejected an
+ambiguous PROF_TILE anchor;corrected to uniqueL8ring-advance block before file generation,
+no GPUcredit consumed. Read muse_attention_decode/RESEARCH_LIBRARY.md for primary-paper
+mapping and counterevidence:continuous TURN1 was reported slower;one-time offset unproven.
+Wait for13bc760e093343f3 evidence before choosing the next GPU change.
+
 #### Oct29 20:15UTC active MoE second cycle
 
 Latest active track is now attention. Secondcheck5213b424b3eb47f5 passed
