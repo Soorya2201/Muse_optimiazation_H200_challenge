@@ -517,3 +517,25 @@ The required isolation is implemented in the current
 fixed v18 for prepare and fallback, compile only the previously judged M1 module, and gate exactly
 qkv/unpooler/router at m1. This removes the causal ambiguity from v25-v30's unrelated route races.
 It is syntax/static-audit complete but awaits a fresh-budget H200 aggregate check.
+
+## Above-ranked public-source audit (Oct 29)
+
+The GitHub API audit of all 149 accounts above rank #150 found one verified public BF16 source:
+[chenwainuo/okc](https://github.com/chenwainuo/okc), board rank #78 at capture. The exact audited
+commit is `3d418e1625f6de2075b5684a27ddbc3d1442422d`, Apache-2.0. Its README reports 3133.1 us /
+1.542x. The complete account ledger and false-positive dispositions are in
+`ABOVE_RANKED_GITHUB_AUDIT.md`; notably, rank #1's public `Open-Inference` repository does not
+contain the challenge submission.
+
+The source advances beyond our public v18 foundation in three high-leverage areas: direct
+predicated-XOR C12 GEMV for small m, register-A RS128/RS32 WGMMA for selected m16/m32/m128
+routes, and a one-node router kernel. Its per-thread staged escape cursor avoids scanning empty
+escape blocks, while exact-shape paired graph selection preserves cuBLASLt where custom paths
+lose. Its own closed-track records warn against RS128 m256, fewer-CTA decompositions, per-warp
+reduction, and cluster multicast.
+
+The exact source is pinned locally as `submission_rank78_chen_3d418e1.py`, SHA-256
+`bb50079be2ed74d65bb7109f1432fbc7a49bbe70913d247c254717cd0f27f712`. Python compilation
+passes. First fresh-budget action: check it unchanged. Then integrate only the routes that improve
+over each exact parent's judged profile; do not wholesale replace our cells that are already
+faster.

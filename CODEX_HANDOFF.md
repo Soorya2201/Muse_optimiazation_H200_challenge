@@ -628,6 +628,25 @@ The top ~100 entries cluster tightly (bf16_proj: 1.53–1.64×). The crowd is cl
 
 Record which idea was tried, the measured result, and whether it should go into the serving patch.
 
+## 10.1 Oct 29 above-ranked GitHub audit
+
+All 149 GitHub accounts above our BF16 rank #150 were exhaustively screened through the GitHub
+API. The complete per-account ledger is in `muse_bf16_proj/ABOVE_RANKED_GITHUB_AUDIT.md`. Only
+rank #78 (`chenwainuo/okc`) exposed a verified public `muse_bf16_proj` submission. Rank #1's
+`Open-Inference` repository is unrelated to the challenge kernel; no public rank-one source was
+found. The rank-78 source reports 3133.1 us / 1.542x and uses C12 compression, direct small-m
+GEMV, RS128/RS32 register-A WGMMA split-K, a fused router kernel, staged sparse-escape cursors,
+and exact-shape graph selection.
+
+The exact Apache-2.0 source at upstream commit `3d418e1625f6de2075b5684a27ddbc3d1442422d`
+is pinned as `muse_bf16_proj/submission_rank78_chen_3d418e1.py`, SHA-256
+`bb50079be2ed74d65bb7109f1432fbc7a49bbe70913d247c254717cd0f27f712`. It is byte-identical
+to upstream and passes Python compilation. It has not been sent to OKC because all eight reserved
+BF16 checks for Oct 29 were already used. After reset, check this exact source before the isolated
+M1 candidate: the public judged result already exceeds our incumbent and provides the strongest
+available control. If reproduced, promote it, then build a route-level hybrid retaining our faster
+O/router/tiny-unpooler cells while adopting its QKV and m32/m128 RS routes.
+
 ## 11. Known hazards
 
 - **The external drive (`/Volumes/Soorya_1_TB`) has unmounted mid-session several times.** Check `ls /Volumes/Soorya_1_TB` before writing. If it's gone, stop and tell the owner; don't rebuild work elsewhere.

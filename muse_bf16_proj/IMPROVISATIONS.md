@@ -725,3 +725,19 @@ and AST inspection proves the final prepare/kernel bindings and exact three-rout
 set. The unchanged M1 CUDA code already compiled and passed runtime validation in jobs
 `cf48c6d2aeb84753` and `8880201062034c1a`. No additional OKC run was consumed because the reserved
 8-check BF16 budget is exhausted. This is the first candidate after reset, not a scored submission.
+
+### Above-ranked public implementation imported
+
+An exhaustive GitHub audit of every team above our rank found a single verified public BF16
+submission: rank-78 `chenwainuo/okc`, reporting 3133.1 us / 1.542x. Its main gains come from
+lossless C12 weight traffic, predicated-XOR direct GEMV at small m, RS128/RS32 register-A WGMMA
+at m16/m32/m128, a one-node router, and paired exact-shape graph selection. This directly addresses
+our remaining QKV m16/m32/m128 and pooler/unpooler m32/m128 deficits.
+
+The exact Apache-2.0 source is now `submission_rank78_chen_3d418e1.py`, pinned to upstream commit
+`3d418e1625f6de2075b5684a27ddbc3d1442422d` and SHA-256
+`bb50079be2ed74d65bb7109f1432fbc7a49bbe70913d247c254717cd0f27f712`. It is byte-identical and
+syntax-valid. No OKC invocation was made because the reserved daily budget is exhausted. After
+reset, this exact control has priority over the isolated M1 candidate because its already-published
+judge result is a larger, independently documented improvement. A hybrid should retain our faster
+O/router/tiny-unpooler cells and adopt only its measured winning routes.
