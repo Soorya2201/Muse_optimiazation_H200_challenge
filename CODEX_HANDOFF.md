@@ -109,7 +109,7 @@ No bucket clears2%;tiny shapes regress. Logs/allprofiles read,not promoted.
 CE/NVCC13minimalprobe now confirms old9-op uses5LOP3+2SHF+2IMAD.SHL,new8-op savesonly
 oneIMAD (both14regs/no spills). Do not overclaim extra ALU savings or full-kernel SASS.
 
-Sixthcheck40673e1600084298 is running submission_v23_w2_prefetch.py,
+Sixthcheck40673e1600084298 passed submission_v23_w2_prefetch.py,
 SHAfe3eda4762831116ea4028a26ec00184c0066444f15226ac7c02a2fb69488657.
 It compares parent with whole-W2 earlyL2 prefetch(default and keep-W2/evict-first-W13)
 on3independent M1 routings,2paired cold-L2 groups each,20replays/group. Must exceed3%
@@ -117,7 +117,12 @@ on all6groups and validate relerr<=0.002 before adoption. OnlyM1/touched<=4 pref
 capacity<=36MiB;all other shapes/packing/precision unchanged. Parent-prefix AST/hook audit,
 syntax,and NVCC13sm90a minimal prefetched-cache-hint compilation pass. No perf claim yet.
 Builder tools/build_moe_w2_prefetch_candidate.py reproduces the self-contained candidate.
-Read result/gates/allprofiles;budget6/8checks,1/2submits;parent remains promoted.
+Passed5tests/6timings,2.328927x,5774.546us,CI[2.293994,2.363861],prepare205.66s.
+Synthetic routes touched3/3/2experts. Default-prefetch factors0.87491-0.90746,
+keep-W2/evict-first-W13 factors0.91842-0.97213;both materially regress and retain parent.
+All logs/profiles read. MoE second cycle complete6/8checks,1/2submits. Parent remains
+promoted atscored2.324062x. Next active track attention;inspect actual public differences
+and current full-context producer/consumer/merge cost before bounded new experiments.
 
 #### Oct29 20:09UTC cycle wrap and next work
 

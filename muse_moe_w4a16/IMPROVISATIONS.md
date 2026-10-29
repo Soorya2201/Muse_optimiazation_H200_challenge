@@ -48,7 +48,7 @@ are preserved in root `PUBLIC_SOURCE_INDEX.md`. Metadata matches require individ
 |v20 lee1018-op dequant|2.363739x|Standalone point only1.03% above exact parentcheck;CIs overlap|Component only|
 |v21 WGSREG112 redistribution|2.324033x|Native parent/variant both1CTA/SM,zero local bytes;extra register budget does not raise residency|Reject as aggregate improvement|
 |v22 paired8-op gate|2.336220x|Three routes/two groups each:tiny batches regress;large batches only0.44-1.56% faster;no bucket clears2%|All parent paths retained|
-|v23 early whole-W2 L2 prefetch|Pending40673e1600084298|Default and keep-W2/evict-first-W13 variants;3% gate across six groups|Unverified;parent remains promoted|
+|v23 early whole-W2 L2 prefetch|2.328927x|Default-policy M1 is10.2-14.3% slower;keep-W2/evict-first-W13 is2.9-8.9% slower on identical routes|Reject both;all timed paths retain parent|
 
 No new scored gain is claimed in this second cycle. The lossless conversion port is valid,
 but counting source instructions exaggerated its likely impact:NVCC13minimaldeviceSASS
@@ -58,6 +58,8 @@ credits already publish per(job,B-K-stage) readiness;there is no full-grid A-to-
 to remove. Full-grid synchronization occurs before final norm/sum/reset.
 
 Source/commit/license details and additional above/below source screens are in PUBLIC_RESEARCH.md.
+All6profiles/logs were read for each new passing run. This cycle ends at6of8checks,
+1of2submits. Move to attention;do not consume reserve to repeat these losing mechanisms.
 
 ## Historical v12 result and profile
 

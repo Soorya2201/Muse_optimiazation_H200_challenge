@@ -9,6 +9,25 @@ folder. Everything else is a datasheet number or arithmetic.
 
 ## 1. The computation in one paragraph
 
+Current-implementation clarification (Oct 29): the promoted v18 runs routing, W13,
+SwiGLU, W2, normalization and routed summation in one persistent launch. The sections
+below also describe earlier multi-launch versions. In the WGS path, phase-A epilogues
+release-add credits to `doneAs[job, B-K-stage]`; the phase-B activation producer waits
+for the eight contributing warpgroup credits with acquire loads. There is no full-grid
+A-to-B barrier. The grid barrier protects the final full-row norm/sum and scratch reset.
+
+The main WGS build uses 231,168 bytes of shared memory, 576 threads, and one CTA per SM.
+Both the original and the tested register-redistribution build report zero local-memory
+allocation. The latter releases producer registers and requests 112 consumer registers,
+but it remains at one CTA per SM and did not improve the aggregate score. Adding another
+shared-memory ring is not a free tuning parameter at this capacity.
+
+Minimal NVCC 13.0 device SASS shows that the old nine-op dequantizer's two literal shifts
+already use IMAD.SHL. The eight-op port removes one IMAD while retaining the same five
+LOP3 and two SHF operations. Identical-input measurements show at most small benefits on
+larger batches and slight regressions on tiny batches. Source instruction counts alone
+do not predict a whole-kernel speedup. See PUBLIC_RESEARCH.md for the measured controls.
+
 Every token picks 8 of 256 experts. This GPU owns experts 0-31 (8-way expert parallelism, EP8)
 and computes only the (token, expert) pairs that land on them. For each pair:
 

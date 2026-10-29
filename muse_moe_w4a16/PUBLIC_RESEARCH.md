@@ -109,7 +109,7 @@ Maximum output relerr1.428e-5;all log/profile files inspected. The aggregate poi
 parent-run variation,not evidence of an adopted8-op improvement. This corrects the tempting
 cross-job interpretation of v20's1.71% edge against the older scored run.
 
-### v23: early W2 L2 prefetch (running)
+### v23: early W2 L2 prefetch (rejected)
 
 The lee101 MoE gap study suggests prefetching the small-batch W2 working set during W13:
 https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/docs/moe_gap_analysis.md
@@ -130,7 +130,16 @@ Other shapes retain parent. All synthetic scratch is reset;graphs/activations ar
 returned. Compile/validation/time failures retain parent. Source-prefix audit and syntax
 pass;builder `tools/build_moe_w2_prefetch_candidate.py` reproduces the self-contained file.
 SHAfe3eda4762831116ea4028a26ec00184c0066444f15226ac7c02a2fb69488657,
-check40673e1600084298,sixth of eight checks. No speedup claim yet.
+check40673e1600084298,sixth of eight checks.
+
+It passed all5tests/6timings at2.328927x,5774.546us,CI[2.293994,2.363861],
+prepare205.66s. The three synthetic routes touched3/3/2experts. Default-policy factors
+were0.87491-0.90746 (10.2-14.3% slower),and keep-W2/evict-first-W13 factors
+0.91842-0.97213 (2.9-8.9% slower). Relative output errors1.364e-4/4.033e-8 pass validation.
+Both variants fail the3% gate;the timed submission retains parent everywhere. This is
+consistent with competing HBM/TMA traffic or eviction,not proof of a specific hardware
+counter cause. Logs and all6profiles read. No promotion;stop this prefetch idea and move
+to attention. MoE second cycle ends at6/8checks,1/2submits,scored2.324062x unchanged.
 
 Official PTX documentation supports `.L2::cache_hint` on sm90:
 https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#data-movement-and-conversion-instructions-cp-async-bulk-prefetch
