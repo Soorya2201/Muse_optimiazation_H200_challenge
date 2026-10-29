@@ -41,6 +41,24 @@ The owner explicitly expanded source discovery to teams both above and below us.
 GitHub public-repository screen of all 1112 ranked MoE accounts is complete; code-search candidates
 are preserved in root `PUBLIC_SOURCE_INDEX.md`. Metadata matches require individual source review.
 
+## Oct29 second-cycle controls
+
+|Candidate|Checked speedup|Same-input evidence|Disposition|
+|---|---:|---|---|
+|v20 lee1018-op dequant|2.363739x|Standalone point only1.03% above exact parentcheck;CIs overlap|Component only|
+|v21 WGSREG112 redistribution|2.324033x|Native parent/variant both1CTA/SM,zero local bytes;extra register budget does not raise residency|Reject as aggregate improvement|
+|v22 paired8-op gate|2.336220x|Three routes/two groups each:tiny batches regress;large batches only0.44-1.56% faster;no bucket clears2%|All parent paths retained|
+|v23 early whole-W2 L2 prefetch|Pending40673e1600084298|Default and keep-W2/evict-first-W13 variants;3% gate across six groups|Unverified;parent remains promoted|
+
+No new scored gain is claimed in this second cycle. The lossless conversion port is valid,
+but counting source instructions exaggerated its likely impact:NVCC13minimaldeviceSASS
+shows only oneIMAD saved,with the same seven integer-pipe operations. The already-pipelined
+parent needs a larger operand-delivery/scheduling improvement. Its release-add `doneAs`
+credits already publish per(job,B-K-stage) readiness;there is no full-grid A-to-B barrier
+to remove. Full-grid synchronization occurs before final norm/sum/reset.
+
+Source/commit/license details and additional above/below source screens are in PUBLIC_RESEARCH.md.
+
 ## Historical v12 result and profile
 
 Scored job `9a02dcaaad274ffb` passed all tests at **1.6329x** (SGLang 13,448.5 us,

@@ -9,7 +9,7 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 | Track | Research artifacts | Implementation/testing status |
 |---|---|---|
 | BF16 projections | `muse_bf16_proj/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json`, `ABOVE_RANKED_GITHUB_AUDIT.md`, `CHENWAINUO_REPO_DEEP_DIVE.md` | Expanded metadata screen complete for1394 ranked accounts:170 above,1223 below,ourselves;973 recent snapshots reused,eight404s. v18 verified/scored1.521867x;exact Chen and v33 hybrid queued behind8/8routine-check limit until00:00UTC. Historical149-account deeper audit retained. |
-| MoE | `muse_moe_w4a16/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Completed public metadata screen of all 1112 ranked accounts: 625 above, 486 below, and ourselves; five 404 accounts. vjeux check2.339526x, Madhavan check2.330435x. Scored vjeux confirmation9835951891204c56 is **2.324062x**, rank#146/1112, overall#447/1599. |
+| MoE | `muse_moe_w4a16/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Completed public metadata screen of1112ranked accounts. Scored vjeux **2.324062x**. Second cycle:8-op dequant and REG112 pass but lack a reliable gain;identical-input gates reject all8-op buckets. Early whole-W2 L2 prefetch is running40673e1600084298,6/8checks used. Deeper zhebrak/operatorstack/tommyyliu/lilaclilac09 source screens documented. |
 | Attention | `muse_attention_decode/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Full metadata screen of1064 ranked accounts:877 above,186 below,ourselves;941 recent repo snapshots reused with timestamps. Exact source check2.597212x, scored confirmation30c669b9702d434f **2.603505x**,rank#90/1066,overall#354/1602. |
 | Whole decoder | `muse_decode_layer/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Metadata screen complete for980 ranked accounts:807 above,172 below,ourselves. Vjeux check2.089048x,Madhavan check2.119204x. Exact Madhavan scored d857144e59784ad0 **2.127754x**,rank#95/984,overall#95/1607. |
 | Prefill | `muse_prefill_layer/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Full metadata screen of644 ranked accounts:538 above,105 below,ourselves;four404s. Exact vjeux scoredf62a284779b4447d **1.784958x**,rank#102/644. New lee1018-op port passes34848offline cases and5tests/8timings at1.801190x;not promoted. Identical-route paired gates show only0.06–1.58% expert gains,below2%;v19 retains parent everywhere. Cycle complete at3checks/1submit. |
@@ -26,11 +26,11 @@ Global code search supplements the profile screen, including accounts absent fro
 - https://github.com/lee101/openkernels — Apache-2.0, many intermediate versions and diagnostic evidence. Its weaker whole scores do not rule out useful individual mechanisms.
 - https://github.com/chenwainuo/okc — Apache-2.0, detailed BF16 source/history and broader experimental work.
 - https://github.com/NathenFernandes/muse-bf16-proj — MIT, exact BF16 v18 already reproduced by us.
-- https://github.com/operatorstack/open-kernel-challenge-solutions — additional public kernels; source review and receipt verification needed.
-- https://github.com/lilaclilac09/open-kernel-challenge — indexed source; review pending for active MoE scope.
+- https://github.com/operatorstack/open-kernel-challenge-solutions — MoE6d9b776 source sections and1.832036x receipt reviewed;tile-major/register-overlap concepts already covered by our stronger parent;directM1splitK remains an alternative,not a verified win.
+- https://github.com/lilaclilac09/open-kernel-challenge — MoEd9bdcc9 actual source is plain-PyTorch starter;sketch notes are a placeholder. No optimized MoE source found in this inspection.
 - https://github.com/PostTrainLLM/posttrainllm — experiments/openkernel sources and provenance; published MoE score below ours, useful mechanism inventory.
 - https://github.com/Ranoobaba/okc-campaign — indexed challenge material; source relevance still needs verification.
-- https://github.com/tommyyliu/okc — indexed source; review pending.
+- https://github.com/tommyyliu/okc — MoEf134725 GEMM/packing/dispatch reviewed;four-launch Gluon,lossless scales,register prefetch. Snapshot1.8997x is below our promoted2.324062x. No code copied.
 - https://github.com/xharshvardhan/open-kernel-challenge — indexed source; review pending.
 - https://github.com/theluckystrike/muse-spark-open-kernels — code search hit, current tree only exposed README; no verified submission yet.
 - https://github.com/ruwwww/open-kernel-challenge — current README reports attention 2.6032x, MoE 2.3370x, decoder 2.0751x, and prefill 1.7950x with job IDs. Strong reproduction candidates for the remaining tracks after source/precision review; README mechanism descriptions alone are not proof.

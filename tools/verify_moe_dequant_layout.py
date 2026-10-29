@@ -94,4 +94,22 @@ rng = random.Random(0x1084)
 for _ in range(20000):
     verify([rng.randrange(16) for _ in range(8)])
     count += 1
+paired_path = ROOT / "muse_moe_w4a16/submission_v22_paired_dequant_gate.py"
+if paired_path.exists():
+    paired = ast.parse(paired_path.read_text())
+    for old_node, paired_node in zip(parent.body, paired.body):
+        if isinstance(old_node, ast.FunctionDef) and old_node.name == "_ext":
+            continue  # only its extension namespace differs in the parent prefix
+        assert ast.dump(old_node) == ast.dump(paired_node)
+    constants = {n.targets[0].id: n.value for n in paired.body if isinstance(n, ast.Assign)
+                 and isinstance(n.targets[0], ast.Name)}
+    converter = ast.literal_eval(constants["_PAIRED_DQ8_FN"])
+    lower = ast.literal_eval(constants["_PAIRED_POS8_LOWER"])
+    pos = {(r, u, b): (lower[r][b] + 16 * u) % 32 for r, u, b in itertools.product(range(4), range(2), range(4))}
+    assert pos == new_pos
+    normalize = lambda t: " ".join(re.sub(r"/\*[\s\S]*?\*/|//[^\n]*", "", t).split())
+    assert normalize(converter) == normalize(new_fn[0])
+    generated = re.sub(dq4, converter, native[0], flags=re.S)
+    assert normalize(generated) == normalize(native[1])
+    print("PASS: paired candidate preserves exact parent prefix and matches verified 8-op converter/packing")
 print(f"PASS: {count} old/new packed words produce identical BF16 fragment bits; other device code and packers unchanged")

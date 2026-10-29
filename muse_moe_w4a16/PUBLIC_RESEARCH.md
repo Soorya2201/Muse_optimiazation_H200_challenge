@@ -63,11 +63,92 @@ precision,scratch,and per-stage readiness remain unchanged.
 Prepare queries real kernel register/local-memory sizes and occupancy for both variants;
 it selects the extra module only if at least one CTA can reside per SM. Build/resource
 exceptions retain the parent. No timed host tensor reads or data-value dispatch is added.
-Check83c410ffc02141f1 is running,SHA
+Check83c410ffc02141f1 passed5tests/6timings at2.324033x,5786.707us,
+CI[2.289173,2.358894],prepare220.34s;SHA
 0e21741cd1520251bc0a5a5d754e3da09dc35980393c2002d13d0deec3e04d41.
-This targets dependency stalls/register pressure identified in lee101's closing MoE analysis;
-its benefit is unknown until the actual generated resources and whole-load timing return.
-Four of eight checks and one of two submits used. Keep exactv18 in submission.py.
+Native resources (blocksFalse/True,registersFalse/True,localBytesFalse/True,sharedBytes,threads)
+were parent[1,1,96,96,0,0,231168,576] and REG112[1,1,96,96,0,0,231168,640].
+REG112 was selected forM>=64,but the aggregate tied the scored parent. Both builds already
+had zero local-memory allocation and one resident CTA/SM. Redistribution neither reduced
+spill traffic nor increased residency;moving range computation onto the consumers also
+changes overlap. No causal benefit was established;not promoted. All profiles/logs read.
+
+An NVCC13.0/sm90a Compiler Explorer micro-probe compiled the two conversion expressions.
+Both used14registers with zero stack/spill. The device SASS section (not the host asm view)
+contains legacy5LOP3+2SHF+2IMAD.SHL versus8-op5LOP3+2SHF+1IMAD. Thus the literal-multiplier
+hypothesis does not create extra ALU savings in this probe:the old constants already become
+IMAD.SHL. This is minimal-kernel evidence,not a full-kernel SASS/performance claim.
+The first API response's top-level asm was host x86 and was not interpreted as GPU code;
+the follow-up inspected `devices[SASS (compute_90a, sm_90a)]` explicitly.
+
+Check683c1eb4664a4396 now runs `submission_v22_paired_dequant_gate.py`,SHA
+c40cbe4a68fbfb5a13eb4cb37d4b8945a9c5d1fa2f8da3b3868f40b5fa6fa142.
+It preserves the exact parent,compiles the verified8-op helper as an alternate module,
+and repacks matching alternate weights without changing precision. Three synthetic routed
+inputs per token bucket are shared by both layouts. Outputs must agree within0.2% and
+two independent alternating-order,cold-L2 groups on each input must all show>2% gain.
+Otherwise shape-only dispatch retains the parent. Compile/packing/measurement time caps
+retain the parent;all synthetic scratch is zeroed before returning state. No input-derived
+graph/output survives in state. Offline source equivalence and34848-word checks pass.
+Five of eight checks and one of two submits used. Keep exactv18 in submission.py.
+
+Check683c1eb4664a4396 passed5tests/6timings,2.336220x,5756.521us,
+CI[2.301177,2.371263],prepare214.50s. Every token bucket retained the parent.
+Observed ranges across the six paired groups:
+
+|Tokens|Old/new time factor|Decision|
+|---:|---:|---|
+|1|0.97863-1.00250|Reject; usually slower|
+|8|0.98924-0.99764|Reject; consistently slower|
+|16|0.99782-1.01605|Reject; mixed/subthreshold|
+|32|1.00156-1.01814|Reject; subthreshold|
+|128|1.00688-1.01119|Retain as small component,not promoted|
+|256|1.00439-1.01563|Retain as small component,not promoted|
+
+Maximum output relerr1.428e-5;all log/profile files inspected. The aggregate point is
+parent-run variation,not evidence of an adopted8-op improvement. This corrects the tempting
+cross-job interpretation of v20's1.71% edge against the older scored run.
+
+### v23: early W2 L2 prefetch (running)
+
+The lee101 MoE gap study suggests prefetching the small-batch W2 working set during W13:
+https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/docs/moe_gap_analysis.md
+The parent already prefetches its first B ring units near the end of A,but does not issue
+the entire touched W2 working set at routing completion. This is the missing mechanism
+being tested,not a claim that all cross-phase prefetch was absent.
+
+`submission_v23_w2_prefetch.py` keeps the original packing/math and compares two extra
+tiny modules:default-policy bulkL2 prefetch,and keep-W2 plus evict-first streaming W13.
+OnlyM1 dispatch may select them,and the device hook only issues prefetch for<=4local
+jobs (<=36MiB W2). Each CTA thread0 prefetches round-robin36KiB weight units after route;
+the existing early W13 fetches are already in flight. No new waits,barriers,or arithmetic.
+Potential failure:extra HBM traffic competes with W13,or W2 is evicted before use.
+
+Three independent synthetic inputs,two alternating cold-L2 groups of20replays each,
+all six ratios>1.03 plus output relerr<=0.002 are required before selecting a module.
+Other shapes retain parent. All synthetic scratch is reset;graphs/activations are not
+returned. Compile/validation/time failures retain parent. Source-prefix audit and syntax
+pass;builder `tools/build_moe_w2_prefetch_candidate.py` reproduces the self-contained file.
+SHAfe3eda4762831116ea4028a26ec00184c0066444f15226ac7c02a2fb69488657,
+check40673e1600084298,sixth of eight checks. No speedup claim yet.
+
+Official PTX documentation supports `.L2::cache_hint` on sm90:
+https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#data-movement-and-conversion-instructions-cp-async-bulk-prefetch
+Use this older form;the newly documented `.L2::evict_last` spelling requires newer hardware.
+A public minimal NVCC13.0/sm90a compile probe passes with4registers/no spills. That is
+syntax/target evidence,not full-kernel GPU validation or performance evidence.
+
+### Three additional source screens,Oct29
+
+|Source pinned revision|Reviewed MoE content|What it adds versus our parent|
+|---|---|---|
+|[operatorstack/open-kernel-challenge-solutions](https://github.com/operatorstack/open-kernel-challenge-solutions/tree/6d9b77656b6c295e421be9e1424b0f8f99299b0a/muse_moe_w4a16)|Published source SHA281d56e94d22f7ebb440274d25c240697b4728af2586da252fb1befb1f35cc35;MIT with SGLang Apache portions preserved in NOTICE. Public receiptc33ef77ff5f14a25=1.832036x,7340.741us,CI1.804555-1.859516. Reviewed actual decode ASM,packing,direct-M1,dispatch,and GEMM sections.|Tile-major/interleaved copies,register double buffering,direct-route M1 splitK2/4,and separate W13/W2 item sizes. Our parent already has contiguous code/scale units,register decode,TMA overlap,fused routing and phase scheduling. A multi-launch splitK path is an alternative architecture,not a proven additive win. Do not whole-copy it for its lower aggregate score.|
+|[tommyyliu/okc](https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_moe_w4a16/submission.py)|SHAcb41995890b9ca069f3615a134d37fccb617bf35838b3fad652786627ce7830d. Public-board snapshot1.8997x,#409 when our old entry was#626;now below our2.324062x. Reviewed all principal GEMM/packing/dispatch paths;no license discovered at repo root.|Four-launch Gluon path with adjacent code/scale loads,one-block register prefetch,lossless positive-E4M3 recoding. Our native parent already overlaps loads/decode and handles scale validation. Its heavier decode and extra launch boundaries supply no measured missing mechanism. Study only;no code copied.|
+|[lilaclilac09/open-kernel-challenge](https://github.com/lilaclilac09/open-kernel-challenge/tree/d9bdcc9f01dff1018f2f256a0a1a63911a16557e/muse_moe_w4a16)|Actual submission is plain-PyTorch starter;notes/moe_nvfp4_sketch.py contains only a placeholder.|No optimized implementation to transfer. No GPU check spent.|
+
+These deeper screens are bounded source inspections,not claims to have read every file
+in each repository. GitHub HEAD checks confirm vjeux stillf35a41e and Madhavan stillc1809247;
+neither has an unseen newer public revision at this capture.
 
 ## vjeux persistent fused MoE
 

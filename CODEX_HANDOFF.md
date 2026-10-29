@@ -90,7 +90,34 @@ releases8192registers to consumers;initial640*96=61440fits65536. Idle producerwa
 joinstartbarrier;range computation moves to consumerthread0. Packers/scratchunchanged,
 Python syntax/dispatch audits pass. Untimed native resource/occupancy API guards residency
 and printsregs/localbytes/threads;unsupported module/build falls back to parent. MoE budget
-4/8checks,1/2submits. Inspect allprofiles/logs;keep exactv18 until a qualifying result.
+REG112 passedall5tests/6timings at2.324033x,5786.707us,CI[2.289173,2.358894],prepare220.34s.
+It was selected forM>=64;native parent/reg resource logs show oneCTA/SM,96initialregs,
+zero local bytes,231168smem,576vs640threads. No aggregate gain;not promoted. Profiles/logs read.
+
+Fifthcheck683c1eb4664a4396 runs submission_v22_paired_dequant_gate.py,
+SHA c40cbe4a68fbfb5a13eb4cb37d4b8945a9c5d1fa2f8da3b3868f40b5fa6fa142.
+Exactparent control + separately compiled/packed8-op alternate:three identical synthetic
+routings per token bucket,two paired cold-L2 groups per input;all six ratios>1.02 and
+output relerr<=0.002 required. Time/build/validation failures retain parent. Syntax and
+34848-word/source-equivalence checks pass. No synthetic outputs/graphs returned;scratch
+zeroed after tuning. Native8-op compiles4variants concurrently after parent preparation
+to staywithin300s. Passed5tests/6timings at2.336220x,5756.521us,
+CI[2.301177,2.371263],prepare214.50s. All6buckets retain parent.
+Paired8-op ranges:M1 0.9786-1.0025,M8 0.9892-0.9976,M16 0.9978-1.0160,
+M32 1.0016-1.0181,M128 1.0069-1.0112,M256 1.0044-1.0156.
+No bucket clears2%;tiny shapes regress. Logs/allprofiles read,not promoted.
+CE/NVCC13minimalprobe now confirms old9-op uses5LOP3+2SHF+2IMAD.SHL,new8-op savesonly
+oneIMAD (both14regs/no spills). Do not overclaim extra ALU savings or full-kernel SASS.
+
+Sixthcheck40673e1600084298 is running submission_v23_w2_prefetch.py,
+SHAfe3eda4762831116ea4028a26ec00184c0066444f15226ac7c02a2fb69488657.
+It compares parent with whole-W2 earlyL2 prefetch(default and keep-W2/evict-first-W13)
+on3independent M1 routings,2paired cold-L2 groups each,20replays/group. Must exceed3%
+on all6groups and validate relerr<=0.002 before adoption. OnlyM1/touched<=4 prefetches,
+capacity<=36MiB;all other shapes/packing/precision unchanged. Parent-prefix AST/hook audit,
+syntax,and NVCC13sm90a minimal prefetched-cache-hint compilation pass. No perf claim yet.
+Builder tools/build_moe_w2_prefetch_candidate.py reproduces the self-contained candidate.
+Read result/gates/allprofiles;budget6/8checks,1/2submits;parent remains promoted.
 
 #### Oct29 20:09UTC cycle wrap and next work
 
