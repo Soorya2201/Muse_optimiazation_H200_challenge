@@ -7794,6 +7794,11 @@ def kernel_fn(data: Inputs, state: dict) -> torch.Tensor:
 
 # v30: retain v29, then test fewer/larger CTAs for the exact C12 qkv m=32 route.
 _V30_BASE_PREPARE, _V30_BASE_KERNEL = prepare, kernel_fn
+# The post-campaign isolation revision deliberately bypasses the broad v25-v30
+# route portfolio.  These aliases are the exact fixed-v18 dispatcher captured
+# before v19's prepare-time history sweep.
+_V30_ISOLATED_PREPARE = _v19_fixed_prepare
+_V30_ISOLATED_KERNEL = _v19_fixed_kernel
 _V30_GEOMETRIES = (("wr4", (4, 4, 8, 4)),)
 
 
@@ -8119,7 +8124,7 @@ void v30m1_rgemv(at::Tensor W,at::Tensor x,at::Tensor out) {
 }
 """
 
-_V30M1_CONFIG = {"qkv_gate": (2,256,2304), "o": (2,64,8192),
+_V30M1_CONFIG = {"qkv_gate": (2,256,2304),
                   "unpooler": (2,128,1024)}
 
 
@@ -8216,11 +8221,11 @@ def _v30m1_autotune(weights,state):
               "config":{"m":1,"n":n,"k":w.shape[1],"layer":layer}}
         graphs=[]; outputs=[]
         for candidate in range(2):
-            output=(_V30_BASE_KERNEL(data,state) if candidate==0 else
+            output=(_V30_ISOLATED_KERNEL(data,state) if candidate==0 else
                     _v30m1_launch(layer,data["x"],bundle))
             torch.cuda.synchronize(device); graph=torch.cuda.CUDAGraph()
             with torch.cuda.graph(graph):
-                output=(_V30_BASE_KERNEL(data,state) if candidate==0 else
+                output=(_V30_ISOLATED_KERNEL(data,state) if candidate==0 else
                         _v30m1_launch(layer,data["x"],bundle))
             graphs.append(graph); outputs.append(output)
         samples=[[],[]]; events=[]
@@ -8245,39 +8250,17 @@ def _v30m1_autotune(weights,state):
 
 
 def prepare(weights: Weights) -> dict:
-    # V28, v29, v30, and the attributed public M1 follow-up add independent
-    # extensions. Compile only those four modules concurrently, then preserve
-    # deterministic validation/autotune order on the main CUDA stream.
-    state = _V28_BASE_PREPARE(weights)
-    with _PreparePool(max_workers=4) as pool:
-        pending = {
-            "v28": pool.submit(_v28_build_ext),
-            "v29": pool.submit(_v29_build_o_ext),
-            "v30": pool.submit(_v30_build_qkv_ext),
-            "v30m1": pool.submit(_v30m1_build_ext),
-        }
-        extensions = {}
-        for name, future in pending.items():
-            try:
-                extensions[name] = future.result()
-            except Exception as error:
-                # The three modules are independent experiments. Keep the exact
-                # v25 fallback and every module that did build instead of losing
-                # the whole check to one speculative compile failure.
-                detail = str(error).replace("\n", " ")[-512:]
-                print(f"[v30] {name} extension unavailable: {type(error).__name__}: {detail}")
-                extensions[name] = None
-    state["v28_qkv"] = (_v28_prepare_qkv(weights["qkv_gate"], extensions["v28"])
-                         if extensions["v28"] is not None else {"ext": None, "plans": []})
-    _v28_autotune(weights["qkv_gate"], state)
-    state["v29_o"] = (_v29_prepare_o(weights["o"], extensions["v29"])
-                       if extensions["v29"] is not None else {"ext": None, "plans": []})
-    _v29_autotune_o(weights["o"], state)
-    state["v30_qkv"] = (_v30_prepare_qkv(weights["qkv_gate"], extensions["v30"])
-                         if extensions["v30"] is not None else {"ext": None, "plans": []})
-    _v30_autotune(weights["qkv_gate"], state)
-    state["v30m1"] = (_v30m1_prepare(weights, extensions["v30m1"])
-                       if extensions["v30m1"] is not None else {"ext": None, "plans": {}})
+    # Start from fixed v18 and compile exactly one experimental module.  This
+    # makes any aggregate change attributable to the measured M1 routes.
+    state = _V30_ISOLATED_PREPARE(weights)
+    try:
+        extension = _v30m1_build_ext()
+    except Exception as error:
+        detail = str(error).replace("\n", " ")[-512:]
+        print(f"[v30-isolated] M1 extension unavailable: {type(error).__name__}: {detail}")
+        extension = None
+    state["v30m1"] = (_v30m1_prepare(weights, extension)
+                       if extension is not None else {"ext": None, "plans": {}})
     _v30m1_autotune(weights, state)
     return state
 
@@ -8286,8 +8269,5 @@ def kernel_fn(data: Inputs, state: dict) -> torch.Tensor:
     cfg = data["config"]
     if cfg["m"] == 1 and cfg["layer"] in state.get("v30m1_choices", ()):
         return _v30m1_launch(cfg["layer"], data["x"], state["v30m1"])
-    choice = state.get("v30_qkv_choice")
-    if cfg["layer"] == "qkv_gate" and cfg["m"] == 32 and choice is not None:
-        return _v30_launch(data["x"], state["v30_qkv"], choice)
-    return _V30_BASE_KERNEL(data, state)
-# Final confirmation payload for the selected v30 small-shape/qkv32 package.
+    return _V30_ISOLATED_KERNEL(data, state)
+# Post-campaign isolation payload: exact v18 plus only gated public M1 routes.

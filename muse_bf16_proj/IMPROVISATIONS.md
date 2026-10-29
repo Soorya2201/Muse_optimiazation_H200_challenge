@@ -711,3 +711,17 @@ The large-M failures identify the core problem: cluster synchronization, DSMEM e
 occupancy cost more than the reuse they create for these skinny shapes. Another stage-depth or
 cluster-shape sweep is not justified. A future large-M attempt needs a materially different
 single-CTA Hopper WGMMA schedule or a better pinned cuBLASLt plan.
+
+### Post-campaign isolated M1 candidate
+
+`submission_v30_all_small_qkv32.py` now contains the next-check isolation revision, hash
+`2d133f8601b005c90d2b380b6334f23307d9a9848b97a8f15e0c1b92664f5d51`. Its final bindings bypass
+v25-v30's broad route search and call fixed exact-v18 prepare/dispatch directly. It compiles one
+extension and cold-L2 gates only qkv m1, unpooler m1, and router m1. The non-reproducible o route
+was removed. All other shapes are fixed v18, so the next aggregate result will be attributable.
+
+Offline checks: Python compilation passes; file size is 680,751 bytes; whitespace check passes;
+and AST inspection proves the final prepare/kernel bindings and exact three-route experimental
+set. The unchanged M1 CUDA code already compiled and passed runtime validation in jobs
+`cf48c6d2aeb84753` and `8880201062034c1a`. No additional OKC run was consumed because the reserved
+8-check BF16 budget is exhausted. This is the first candidate after reset, not a scored submission.

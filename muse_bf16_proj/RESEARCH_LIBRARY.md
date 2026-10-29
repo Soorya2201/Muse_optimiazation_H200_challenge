@@ -511,3 +511,9 @@ Measured failure additions:
 | Dense m128/m256 cluster portfolio | v20-v22, every route lost | DSMEM/TMA synchronization and occupancy dominate; stop parameter sweeps. |
 | C12 cluster pooler128 | v32: 49.22 vs 23.68 us, occupancy 1 | Lossless compression cannot rescue an occupancy-1 cluster pipeline. |
 | Broad prepare-time route portfolio | v30: 1.5260x then 1.5044x | Microsecond route races need isolation and repeatability before promotion. |
+
+The required isolation is implemented in the current
+`submission_v30_all_small_qkv32.py` working candidate (SHA-256 `2d133f…`). Its final bindings use
+fixed v18 for prepare and fallback, compile only the previously judged M1 module, and gate exactly
+qkv/unpooler/router at m1. This removes the causal ambiguity from v25-v30's unrelated route races.
+It is syntax/static-audit complete but awaits a fresh-budget H200 aggregate check.

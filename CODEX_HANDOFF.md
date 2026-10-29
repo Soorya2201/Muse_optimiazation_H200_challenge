@@ -86,6 +86,15 @@ including the cached duplicate, are in `RESULTS.md`. The next BF16 design
 should start from exact v18 and add only the isolated M1 module, with fixed v18 everywhere else;
 large-M cluster tuning is exhausted by v20-v22/v32 evidence.
 
+That next design is now prepared offline in `submission_v30_all_small_qkv32.py` as its
+post-campaign isolation revision (SHA-256 `2d133f8601b005c90d2b380b6334f23307d9a9848b97a8f15e0c1b92664f5d51`).
+Despite the historical filename, its final dispatcher now starts from fixed exact v18, compiles
+only the already-judged M1 module, tests only qkv/unpooler/router, and falls back to fixed v18 for
+every other route. Python syntax, size, whitespace, and an AST final-binding audit pass. The M1
+device code already compiled, validated, and passed 9/9 in both v30 checks; only the isolated
+aggregate needs a fresh H200 check after the reserved daily check budget resets. Do not submit it
+untested.
+
 #### Oct 28 MoE continuation
 
 The MoE cycle is closed at 8/8 reserved checks and 1/2 submits. v12 increased activation
