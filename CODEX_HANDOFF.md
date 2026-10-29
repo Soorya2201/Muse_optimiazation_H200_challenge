@@ -67,13 +67,20 @@ okc withdraw <job>            # take a run off the board
 
 #### Oct29 20:15UTC active MoE second cycle
 
-Latest active track is now attention. Secondcheck5213b424b3eb47f5 runs
+Latest active track is now attention. Secondcheck5213b424b3eb47f5 passed
 submission_v16_l2_lookahead.py,SHA1e1ad7ff7266e6f9b99172d0e5703e7b6574668f1b5570a0f49de561aef9e23b.
 It adds only c1809247PFL2=1 producer prefetch to exactv15's flatL1 path. Actual full cache
 copies,precision,barriers,plans,and all other native logic remain unchanged. Builder
 tools/build_attention_l2_lookahead_candidate.py audits AST/native isolation;py_compile passes.
-Read all result/log/profiles;attention budget2/8checks,1/2submits. Keep scored2.603505x parent
-until a qualifying check wins. MoE second cycle concluded6/8checks;details below.
+Result2.482162x,1517.347us,CI[2.444929,2.519394],all16tests/12timings. FlatL1
+B16/B32 paired92.99/217.65us versus parent86.29/164.98us;native94.9/218.2us versus
+86.5/165.0us. Reject the hook;other paths remain close. All profiles/logs read,local log
+empty/remote profiler markers only. Budget2/8checks,1/2submits. Keep scored2.603505x parent.
+No GPU job remains live. Last turn made progress:five new checked candidates across MoE
+and attention,same-input dequant controls,and deeper public source screens. No rank-one
+claim. Current RANK_STATUS.md is around20:45UTC,overall100/1612. MoE second cycle
+concluded6/8checks;details below. Next useful attention action is parent phase profiling
+or a bounded small-batch merge improvement,not another blind PFL2 distance sweep.
 
 Previous goal turn was progress (decoder/prefill scored gains,full source metadata audit).
 MoE is active now. Zhebrakff4d55a public2.018186x receipt loses to our2.324062x on all

@@ -20,6 +20,24 @@ and the judge verifies both outputs and new FP8 cache entries, including1M-conte
 The complete above/below account screen covers1064 ranked users; source hashes, licenses,
 and specific stronger/weaker repository lessons are in PUBLIC_RESEARCH.md and its JSON ledger.
 
+## Oct29 second-cycle isolated producer prefetch
+
+`submission_v16_l2_lookahead.py` ports only the c1809247 `OKC_PFL2=1` hook into the
+current parent's flat L1 producer. Check `5213b424b3eb47f5` passes all16tests/12timings
+at **2.482162x**,1517.347us,CI[2.444929,2.519394],below scored2.603505x.
+B16/B32 full decode paired times regress86.29/164.98->92.99/217.65us;native profiles
+86.5/165.0->94.9/218.2us. Other paths remain close. Reject;parent stays promoted.
+
+All logs/profiles were read. Source isolation/syntax pass;the inherited upstream trailing
+whitespace is preserved in the archived candidate. Current budget2/8checks,1/2submits.
+Further operatorstack/tommyyliu source sections and receipts were reviewed:head packing,
+warp specialization and hierarchical merge overlap our stronger parent. No unmeasured
+whole-file transfer is justified. See PUBLIC_RESEARCH.md for exact commits and hashes.
+
+Do not blindly sweep more PFL2 distances after this regression. The next meaningful
+experiment should expose actual parent producer/consumer/merge phase costs or reduce a
+measured small-request merge dependency while preserving complete attention and precision.
+
 ## Historical v12/v13 result and bottleneck
 
 Scored job `3135d826e3994f11` passed at **1.2954x** (SGLang 3,766.3 us, ours

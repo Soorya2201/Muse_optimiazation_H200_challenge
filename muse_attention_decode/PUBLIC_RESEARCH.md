@@ -28,8 +28,32 @@ source description nor a lower-ranked team's technique proves a gain here.
 Builder `tools/build_attention_l2_lookahead_candidate.py` verifies that only the small
 native hook and extension namespace differ from the exact checked parent. Python syntax
 passes. SHA-256 `1e1ad7ff7266e6f9b99172d0e5703e7b6574668f1b5570a0f49de561aef9e23b`.
-Check `5213b424b3eb47f5` is running, second of eight checks. Keep the scored parent until
-actual correctness and confidence evidence justify promotion.
+Check `5213b424b3eb47f5` passed all 16 tests and 12 timings at **2.482162x**,
+1517.347 us, CI [2.444929, 2.519394]. It materially regresses the affected paths:
+
+|Case|Scored parent paired us|Lookahead paired us|Parent/lookahead native profile us|
+|---|---:|---:|---:|
+|B16 full decode|86.29|92.99|86.5 / 94.9|
+|B32 full decode|164.98|217.65|165.0 / 218.2|
+
+All other paths stay near their parent timings. These are cross-job observations, but
+the affected-path regressions are large, baseline times are similar, and the aggregate
+confidence interval is below the parent's. The hook is rejected. Extra producer waits,
+register pressure and traffic are possible causes; no hardware-counter proof isolates one.
+All 12 profiles and the empty local log were inspected; remote log contains only profiler
+markers. Two of eight checks and one of two submits used. Keep exact v15 promoted.
+
+Additional lower-ranked source inspections in this cycle:
+
+|Pinned source|Actual sections reviewed|Transfer decision|
+|---|---|---|
+|[operatorstack 6d9b776](https://github.com/operatorstack/open-kernel-challenge-solutions/tree/6d9b77656b6c295e421be9e1424b0f8f99299b0a/muse_attention_decode)|Published SHA `c5a94b6031bd1df0392773dcee7501a5dcc0d6de8e28eda4cec6d2109e29ad64`; actual producer/consumer loop, plan table, entry point, packing/merge declarations. MIT plus SGLang Apache portions in NOTICE. Public receipt `82034c2594ca4e55` reports 1.822823x, CI 1.795481–1.856356.|Fused split attention, two-head 128-byte reads, prefetched gate, and warp-specialized WGMMA are already present in our parent. Its verify consumer converts V into FP16 shared staging; ours already has FP8 PV and producer-side transpose. No demonstrated missing mechanism warrants replacing the faster parent.|
+|[tommyyliu f134725](https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_attention_decode/submission.py)|SHA `54b1499c1c50c7d50990d3e880b2f5b0f025c920bcc87c4888eac5e7d44e3a6b`; actual split assignment, two-level arrival merge, gate/epilogue, plan and entry point. README reports historical 1.559/1.717x, while the later account snapshot is 2.0669x; no source/receipt identity is asserted.|Its separate new-token split and hierarchical LSE merge are alternative synchronization choices. Our parent fuses new rows into each segment and already has cooperative or last-arriver merge, gate overlap and full-row gathers. A wholesale port has no measured advantage. No source copied.|
+
+These are bounded inspections of named sections, not complete audits of those repositories.
+The parent's 81 lines with trailing whitespace are retained byte-for-byte in the archived
+v16 candidate; `git diff --check` reports those inherited lines. The builder's AST/native
+isolation check and Python syntax check pass; no whitespace cleanup is applied to checked bytes.
 
 ## Account coverage
 
