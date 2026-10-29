@@ -65,6 +65,23 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct29 20:15UTC active MoE second cycle
+
+Previous goal turn was progress (decoder/prefill scored gains,full source metadata audit).
+MoE is active now. Zhebrakff4d55a public2.018186x receipt loses to our2.324062x on all
+six paired shapes;see muse_moe_w4a16/PUBLIC_RESEARCH.md. Deeper review finds our parent
+already uses per(job,B-K-stage) readiness credits (doneAs,release-add/acquire);there is
+no full-grid A-to-B barrier. Zhebrak's readiness would duplicate this mechanism. No
+full-copy check was spent.
+
+Check949c14d4f0b14a9c runs submission_v20_lee8_dequant.py,
+SHA d50015ce9261a43dfc107314cb8abae1434bb02c97807545dcf1d2e65060b4e8.
+This is exact v18 plus lee1018-op dq4 and matching lossless packing;all other device code,
+launch geometry,and precision unchanged.34848 CPU bit-encoding cases and source-isolation
+audit pass via tools/verify_moe_dequant_layout.py;Python syntax passes. It tests whether
+literal shift multipliers here differ materially from prefill's explicit IMAD operands.
+MoE budget3/8checks,1/2submits. Inspect allprofiles/logs,retain parent unless a clear gain.
+
 #### Oct29 20:09UTC cycle wrap and next work
 
 All five tracks now have full above/below public-account metadata screens,with actual

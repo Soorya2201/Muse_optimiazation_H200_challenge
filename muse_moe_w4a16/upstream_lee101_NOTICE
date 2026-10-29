@@ -1,0 +1,8 @@
+Exact 8-op E2M1-to-BF16 placement adapted from lee101/openkernels:
+https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/docs/fp4_dequant_survey.md
+License: Apache-2.0. License text is retained in upstream_vjeux_APACHE_2.0.txt.
+
+This project's changes match the layout to the vjeux f35a41e MoE packers and
+dq4 helper. Code bits, FP8 block scales, FP32 expert global scales and BF16
+activation/fragment precision are preserved. This is an attributed transfer,
+not a claim of original invention or a performance guarantee.

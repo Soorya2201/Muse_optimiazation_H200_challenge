@@ -1,5 +1,53 @@
 # Public MoE research and reproduction record
 
+## Oct29 second cycle: per-shape source audit and exact dequant port
+
+The previous goal turn made verified progress by scoring the new whole decoder and prefill
+architectures and completing all five above/below account screens. This cycle resumes MoE.
+Its Oct29 budget before the new experiment was2checks/1submit;reserved maxima remain8/2.
+
+Zhebrak source is pinned atff4d55ab669977f15874943044d20312d98a44d1:
+https://github.com/zhebrak/muse-spark-kernels/tree/ff4d55ab669977f15874943044d20312d98a44d1/winners/muse_moe_w4a16
+The Apache-2.0 source SHA is1043a88e5e2cca48f14792f17162044feeccb6b4e0a3baa732734d31e802fc35.
+Public scored receipt3d6cadbe6117411d reports2.018186x,6663.659us,CI[1.987913,2.048458].
+It uses per-expert readiness and persistent stream-K above64 tokens. Deeper review finds
+our parent already has finer readiness:each phase-A epilogue publishes a release-add
+credit to `doneAs[job,phase-B-K-stage]`,and the phase-B x producer waits for eight credits
+with acquire loads. There is no whole-grid A-to-B barrier;the grid barrier precedes the
+final norm/sum and scratch reset. The parent's introductory comment overstates its phase
+barriers. Adding generic per-expert readiness would duplicate existing synchronization.
+
+|Tokens|Our scored paired us|Zhebrak receipt paired us|
+|---:|---:|---:|
+|1|24.88|31.15|
+|16|99.41|102.51|
+|32|127.40|141.61|
+|8|68.30|75.79|
+|128|180.10|211.58|
+|256|217.50|258.53|
+
+These are cross-job comparisons,not a same-input causal ablation. Nonetheless there is no
+per-load receipt win to justify spending a check on the complete slower implementation.
+GPU-busy profile snippets can look faster at bs8,but the paired score is75.79us;overlap
+duration is not a substitute for the reported paired time. Per-expert readiness remains
+an architectural reference,not an adopted improvement.
+
+The next controlled candidate is `submission_v20_lee8_dequant.py`,derived from exactv18
+with only lee101's8-op E2M1 conversion and matching lossless bit placement. It preserves
+all scale/global-scale/norm precision,activation precision,launch choices,and scheduling.
+All packed/natural-K/fat/unit representations share the changed layout and the same dq4.
+`tools/verify_moe_dequant_layout.py` compares34848 old/new words,all16 codes,all slot pairs,
+multiply-carry combinations,and deterministic random words. Fragment bits are identical;
+all other native computation and packing functions are unchanged. Python syntax passes.
+Apache-2.0 attribution is retained in upstream_lee101_NOTICE.
+
+Check949c14d4f0b14a9c is running,SHA
+d50015ce9261a43dfc107314cb8abae1434bb02c97807545dcf1d2e65060b4e8.
+The prefill port gave only0.06–1.58% expert-phase gains. This parent's shift multipliers
+are literals,whereas prefill deliberately obscures them to force IMAD. That compiler
+difference motivates one direct test;source counts do not establish generated SASS or speed.
+Do not promote a sub-CI change. Keep exact v18 in submission.py until a qualifying result.
+
 ## vjeux persistent fused MoE
 
 Audited source: https://github.com/vjeux/okc-2026/blob/f35a41ee1c13e316dabbf772830d47b23b453393/muse_moe_w4a16.py
