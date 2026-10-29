@@ -87,9 +87,12 @@ in-chain selections. Check9f256608c2df4cc8 passed all13tests and12timings at2.11
 and in-MoE routing unavailable; agent MoE selected everywhere,gluev2=False. Its1.44% gain
 over vjeux is inside uncertainty, but both beat the scored incumbent1.232602x decisively.
 Exact v16 is promoted to submission.py; old local source archived as
-submission_pre_public_1770fb9.py. Scored reproduction d857144e59784ad0 pending. Decoder
-budget2/8checks,1/2submits. Read profiles/logs after the submit,refresh ranks,update docs,
-push all source/research/results,and proceed to prefill in project order.
+submission_pre_public_1770fb9.py. Scored reproduction d857144e59784ad0 passed all13tests
+and12timings at **2.127754x**,10631.070us,CI[2.095837,2.159670],prepare190.60s.
+Decoder rank **#95/984**,overall **#95/1607** at19:47UTC. All profiles/logs read;
+no tuner exception. Decoder budget2/8checks,1/2submits. Cycle complete; next active track
+prefill. Decoder research queues exact8-op dequant+matching repack; current DQ7 is enabled
+(7ALU+2IMAD),so the comparison is9vs8,not11vs8. Unchanged score is still short of#1.
 
 #### Oct 29 active attention reproduction
 

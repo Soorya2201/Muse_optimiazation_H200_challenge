@@ -68,7 +68,10 @@ and no post-boundary megakernel. Do not credit inactive options with this result
 the CUDA route/boundary kernels replacing Triton glue. The1.44% aggregate advantage over the
 vjeux control is inside overlapping intervals; it is the stronger measured full candidate,
 not proof that an individual added feature wins. Both clearly beat the prior incumbent.
-Exact v16 is promoted to `submission.py`; scored reproduction `d857144e59784ad0` is pending.
+Exact v16 is promoted to `submission.py`; scored reproduction `d857144e59784ad0` passed
+all13tests/12timings at **2.127754x**,10631.070us,CI[2.095837,2.159670],prepare190.60s.
+Rank **#95/984**,overall **#95/1607**,at19:47UTC. Normalized time18.352ms->10.631ms,
+a42.07% reduction; speedup score improves72.62%. All profiles/logs were read; no tuner error.
 Two of eight checks and one of two submits used today.
 
 ## Why this is the high-value next architecture
@@ -102,7 +105,9 @@ mean. PDL waits overlap, so these are upper-bound planning estimates, not measur
 Expert optimization has the largest modeled effect. Lower-ranked lee101's
 [FP4 dequant survey](https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/docs/fp4_dequant_survey.md)
 describes an exact8-integer-op bit placement with a corresponding lossless repack, compared
-with an11-op consumer. Our embedded MoE still contains the11-op dequant family. A transfer
+with an11-op consumer. Our embedded MoE contains that family but actually enables `moe_DQ7=True`,
+a7-ALU+2-IMAD variant. Thus the active comparison is approximately9 versus8 integer ops,
+not the survey's11 versus8; the potential incremental gain is smaller. A transfer
 must change the matching weight pack and every consuming fragment together; changing only
 the arithmetic would corrupt weights. This is a concrete next controlled candidate, not a
 gain inferred from its author's instruction counts. Preserve BF16 activations and NVFP4

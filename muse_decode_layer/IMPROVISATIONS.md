@@ -21,7 +21,8 @@ so adding native-kernel durations does not estimate wall-time savings.
 
 The higher-ranked Madhavan derivative passed check9f256608c2df4cc8 at **2.119204x**,
 10673.962us,CI[2.087416,2.150992],prepare189.92s,all13tests/12timings. Exact source is
-promoted; scored reproduction d857144e59784ad0 is pending. It selects CUDA boundary and
+promoted; scored reproduction d857144e59784ad0 passed all13tests/12timings at2.127754x,
+10631.070us,CI[2.095837,2.159670],prepare190.60s. Rank#95/984,overall#95/1607. It selects CUDA boundary and
 routing kernels,agent MoE everywhere,gluev2=False. Experimental tails/in-MoE routing are
 unavailable. Its1.44% edge over the control is within uncertainty; both decisively beat the
 prior scored incumbent. The derivative's standalone MoE had not improved the aggregate.
