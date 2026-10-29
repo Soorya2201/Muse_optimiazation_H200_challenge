@@ -80,7 +80,17 @@ This is exact v18 plus lee1018-op dq4 and matching lossless packing;all other de
 launch geometry,and precision unchanged.34848 CPU bit-encoding cases and source-isolation
 audit pass via tools/verify_moe_dequant_layout.py;Python syntax passes. It tests whether
 literal shift multipliers here differ materially from prefill's explicit IMAD operands.
-MoE budget3/8checks,1/2submits. Inspect allprofiles/logs,retain parent unless a clear gain.
+Check passed5tests/6timings at2.363739x,5689.503us,CI[2.328283,2.399195],prepare136.92s.
+Only1.03% above exactparentcheck2.339526x;intervals overlap,no promotion. Profiles/logs read.
+
+Fourthcheck83c410ffc02141f1 runs submission_v21_register_redistribution.py,
+SHA0e21741cd1520251bc0a5a5d754e3da09dc35980393c2002d13d0deec3e04d41.
+It returns to exactv18(no8-op) and ports c1809247WGSREG112onlyM>=64. Producerwarpgroup
+releases8192registers to consumers;initial640*96=61440fits65536. Idle producerwarps
+joinstartbarrier;range computation moves to consumerthread0. Packers/scratchunchanged,
+Python syntax/dispatch audits pass. Untimed native resource/occupancy API guards residency
+and printsregs/localbytes/threads;unsupported module/build falls back to parent. MoE budget
+4/8checks,1/2submits. Inspect allprofiles/logs;keep exactv18 until a qualifying result.
 
 #### Oct29 20:09UTC cycle wrap and next work
 

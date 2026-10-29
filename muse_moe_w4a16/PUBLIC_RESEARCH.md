@@ -41,12 +41,33 @@ multiply-carry combinations,and deterministic random words. Fragment bits are id
 all other native computation and packing functions are unchanged. Python syntax passes.
 Apache-2.0 attribution is retained in upstream_lee101_NOTICE.
 
-Check949c14d4f0b14a9c is running,SHA
+Check949c14d4f0b14a9c passed all5tests/6timings at **2.363739x**,5689.503us,
+CI[2.328283,2.399195],prepare136.92s;SHA
 d50015ce9261a43dfc107314cb8abae1434bb02c97807545dcf1d2e65060b4e8.
 The prefill port gave only0.06–1.58% expert-phase gains. This parent's shift multipliers
 are literals,whereas prefill deliberately obscures them to force IMAD. That compiler
 difference motivates one direct test;source counts do not establish generated SASS or speed.
-Do not promote a sub-CI change. Keep exact v18 in submission.py until a qualifying result.
+The gain is1.71% over the scored parent but only1.03% over the exact parent check,with
+overlapping confidence intervals. Preserve as a promising component;do not claim a proven
+isolated gain or promote yet. All profiles/logs were read,no failures.
+
+The next isolated test `submission_v21_register_redistribution.py` returns to exactv18,
+without the8-op port,and adapts the `OKC_WGSREG` path from the reviewed c1809247 source.
+OnlyM>=64 uses640threads:512consumers request112registers after128producer threads
+release to32registers. Demand512*(112−96)=8192 equals128*(96−32)=8192 released registers;
+the initial640*96=61440 allocation fits65536. The two idle producer warps join the
+one CTA-wide start barrier before returning. Consumer thread0 computes stage ranges after
+gather,keeping the producer's reduced register region free of that call. Weight layouts,
+precision,scratch,and per-stage readiness remain unchanged.
+
+Prepare queries real kernel register/local-memory sizes and occupancy for both variants;
+it selects the extra module only if at least one CTA can reside per SM. Build/resource
+exceptions retain the parent. No timed host tensor reads or data-value dispatch is added.
+Check83c410ffc02141f1 is running,SHA
+0e21741cd1520251bc0a5a5d754e3da09dc35980393c2002d13d0deec3e04d41.
+This targets dependency stalls/register pressure identified in lee101's closing MoE analysis;
+its benefit is unknown until the actual generated resources and whole-load timing return.
+Four of eight checks and one of two submits used. Keep exactv18 in submission.py.
 
 ## vjeux persistent fused MoE
 
