@@ -76,10 +76,17 @@ Four404 accounts remain unresolved. Results: `muse_attention_decode/RANKED_GITHU
 byte-identical to ruwwww's public source at3b15eb8; SHA-256
 `5811d22bb985092ba5a29a8f4c8e266de189399ee708d7b14efcb9c9bf5a510e`.
 Its fused WGMMA attention is the strongest published control found so far (vjeux live2.6104x,
-ruwwww2.6032x, versus ours1.2954x). Check `385a2d2e58cd476d` is running; first routine
-attention check today. Read source audit in `muse_attention_decode/PUBLIC_RESEARCH.md`.
-Wait for that specific job, inspect all16 correctness tests and12timings, then promote/submit
-only if the improvement gate passes. Do not replace submission.py before its result.
+ruwwww2.6032x, versus ours1.2954x). Check `385a2d2e58cd476d` passed all16 tests and12timings
+at **2.597212x**,1450.132us,CI[2.558253,2.647694]. Scored job `30c669b9702d434f` confirms
+**2.603505x**,1446.627us,CI[2.564452,2.659499],all16 tests and12timings passed. Profiles/logs
+were read; all cases use one fused launch. Exact v15 is promoted to submission.py with Apache
+license. Attention **#90/1066**, MoE **#147/1114**, overall **#354/1602** at19:30UTC.
+One of eight attention checks and one of two submits used today. This reproduction cycle is
+complete; rank-one optimization remains open. Next active track: whole decoder, then prefill,
+using public vjeux/ruwwww components as controls after reading each folder's AGENTS/TASK and
+checking precision, licenses, shapes, and reserved budgets. BF16 remains closed for routine
+checks until00:00UTC; exact Chen and v33 remain queued. Do not treat unanswered reserve
+permission as approval. All five tracks still remain within the full active goal toward#1.
 
 #### Oct 29 MoE public-source continuation
 
@@ -669,9 +676,13 @@ Each problem folder must end with:
 
 Write for a human studying later: clear, articulate, honest. Mark estimates as estimates.
 
-## 10. The novel-idea agenda (where we try to beat the crowd)
+## 10. Historical idea agenda and public provenance
 
-The top ~100 entries cluster tightly (bf16_proj: 1.53–1.64×). The crowd is clearly doing the standard things: split-K GEMV, autotuned tiles, fused routers. Ideas we have that others probably don't:
+The following ideas were early research hypotheses. Subsequent public-source audits found C12
+compression, persistent scheduling, fused routers, and cluster reductions in others' work.
+Preserve attribution and do not present adopted public mechanisms as our original inventions.
+Any claim of a new contribution needs its specific source delta and independent measurement.
+The original experiments and estimated gains are retained below as historical context:
 
 1. **Lossless 12-bit BF16 weight compression.** The rules allow lossless compression. Store each weight's 8-bit exponent as a 4-bit code relative to a per-block base exponent, with a rare escape list for outliers. That's sign + 7 mantissa + 4 exponent-code = 12 bits, so **~25% fewer weight bytes** on bandwidth-bound decode GEMVs. Rebuild exact BF16 in registers with idle integer ALUs.
    - Estimated +6–10% on decode loads, applying to bf16_proj, decode_layer and the serving track.

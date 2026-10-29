@@ -26,7 +26,16 @@ License is taken from the original vjeux Apache-2.0 repository and preserved in
 `upstream_vjeux_APACHE_2.0.txt`; ruwwww's repository has no root license file, so originality
 and permission were verified by comparing the complete source to the licensed original.
 
-Check `385a2d2e58cd476d` is pending. Python syntax and byte identity pass.
+Check `385a2d2e58cd476d` passes all16 tests and12 timed shapes at **2.597212x**,
+1450.132 us, CI[2.558253,2.647694]. All shapes profile as one fused launch. The source is
+promoted byte-for-byte in submission.py. Scored confirmation `30c669b9702d434f` passes all16
+tests and12timings at **2.603505x**,1446.627us,CI[2.564452,2.659499]. New rank#90/1066,
+overall#354/1602. Both check and submit profiles/logs were read. B32 full decode164.98us and
+full verify186.01us reproduce the large win.
+
+Batch32 full decode is166.16us versus prior scored240.84us; full verify182.84us versus
+390.08us. Sliding verify B16/B32 is11.45/14.97us versus prior29.70/34.31us. These cross-job
+comparisons support the architectural change but are not formal per-feature ablations.
 
 ## Mechanisms missing from our incumbent
 
@@ -64,3 +73,36 @@ or attention-weight-based key pruning in the active call.
 First reproduce the exact public source. After its profile, prioritize any remaining long-context
 gather/merge cost and verify softmax/MMA scheduling. Do not repeat v7–v10 cluster/one-read sweeps
 that already lost in our old warp-MMA architecture, or reduce required precision/context coverage.
+
+## Remaining gap after the reproduced 2.597212x check
+
+The current3.0542x leader requires about14.963% less normalized time. Modeling changes against
+the actual check's weighted six-load sums gives:
+
+| Hypothetical change | Modeled speedup |
+|---|---:|
+| All sliding cases10% faster | 2.684974x |
+| All sliding cases20% faster | 2.780000x |
+| All full-context cases10% faster | 2.785706x |
+| All full-context cases20% faster | 3.005106x |
+
+These are arithmetic scenarios, not measured gains. Even a20% full-context improvement alone
+would fall short of first. Future work must combine full-context gather/consumer throughput
+with the small-shape dependent-load and merge latency.
+
+The lower-scoring lee101 source provides unusually useful counterevidence:
+[gap analysis](https://github.com/lee101/openkernels/blob/main/docs/attention_gap_analysis.md)
+and [fresh design/results](https://github.com/lee101/openkernels/blob/main/docs/attention_fresh_design.md).
+Its measured random128B gather ceiling was3.87TB/s on its fixture; it identified seq/page/KV
+dependent loads, consumer matmul-softmax chains, and2.5–5us split merge costs. Those figures
+belong to its source/fixture, not ours. Its register-direct independent-warp/DSMEM design
+predicted30–38% but achieved only2–4% and later variants lost. Our reproduced sliding
+times are already below those earlier designs, so do not transplant them blindly.
+
+Highest-value next bounded experiments after scoring: (1) instrument the actual current
+full-verify producer/consumer/merge boundaries, (2) overlap QK of the next tile with softmax/PV
+only if register/resource analysis permits it, (3) reduce a measured small-request merge or
+dependent-load episode without adding a second launch, and (4) vary the split count only with
+matching occupancy and complete-context correctness. The source already contains FP8 PV,
+fusion, head/token reuse, and flat partitioning; count them as retained mechanisms rather
+than new inventions.

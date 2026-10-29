@@ -10,7 +10,7 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 |---|---|---|
 | BF16 projections | `muse_bf16_proj/ABOVE_RANKED_GITHUB_AUDIT.md`, `CHENWAINUO_REPO_DEEP_DIVE.md`, `RESEARCH_LIBRARY.md` | v18 is verified/scored; exact Chen and v33 hybrid queued behind the exhausted daily routine budget. Prior account screen covered 149 above-ranked profiles at that snapshot. Below-ranked public sources are in the research library. |
 | MoE | `muse_moe_w4a16/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Completed public metadata screen of all 1112 ranked accounts: 625 above, 486 below, and ourselves; five 404 accounts. vjeux check2.339526x, Madhavan check2.330435x. Scored vjeux confirmation9835951891204c56 is **2.324062x**, rank#146/1112, overall#447/1599. |
-| Attention | `muse_attention_decode/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Full metadata screen of1064 ranked accounts:877 above,186 below,ourselves;941 recent repo snapshots reused with timestamps. Exact licensed vjeux/ruwwww source is running as check385a2d2e58cd476d. |
+| Attention | `muse_attention_decode/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Full metadata screen of1064 ranked accounts:877 above,186 below,ourselves;941 recent repo snapshots reused with timestamps. Exact source check2.597212x, scored confirmation30c669b9702d434f **2.603505x**,rank#90/1066,overall#354/1602. |
 | Whole decoder | Existing track `IMPROVISATIONS.md` and profile history | Full above/below public-source audit remains outstanding; depends on standalone component evidence. |
 | Prefill | Existing track `IMPROVISATIONS.md` and profile history | Full above/below public-source audit remains outstanding; enter in project order. |
 

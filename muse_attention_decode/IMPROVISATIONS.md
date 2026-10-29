@@ -1,8 +1,26 @@
 # `muse_attention_decode` optimization record
 
-The current verified submission is `submission.py` = `submission_v13_four_stage_c2_full.py`.
+The current verified local submission is `submission.py` = `submission_v15_vjeux_f35a41e.py`.
 
-## Current result and bottleneck
+## Oct29 public-source reproduction
+
+Exact Apache-2.0 vjeux attention source, identical to ruwwww's public file, passed
+`385a2d2e58cd476d` at **2.597212x**,1450.132us,CI[2.558253,2.647694],all16 tests and12
+scored shapes passing. The source is promoted byte-for-byte. Scored confirmation
+`30c669b9702d434f` passes all16 tests and12timings at **2.603505x**,1446.627us,
+CI[2.564452,2.659499],rank#90/1066,overall#354/1602. Both profiles/logs were read.
+One of eight checks and one of two submits used today.
+
+The largest architecture changes are complete fused verify execution with Hopper WGMMA,
+flat work partitioning across ragged full-context requests, and efficient cooperative or
+last-CTA finalization. Every timed shape profiles one launch. B32 full verify182.84us
+versus old390.08us; B32 full decode166.16us versus old240.84us. All visible keys are processed,
+and the judge verifies both outputs and new FP8 cache entries, including1M-context tests.
+
+The complete above/below account screen covers1064 ranked users; source hashes, licenses,
+and specific stronger/weaker repository lessons are in PUBLIC_RESEARCH.md and its JSON ledger.
+
+## Historical v12/v13 result and bottleneck
 
 Scored job `3135d826e3994f11` passed at **1.2954x** (SGLang 3,766.3 us, ours
 2,907.4 us; 95% CI 1.2760-1.3188). The best local candidate is v13 at

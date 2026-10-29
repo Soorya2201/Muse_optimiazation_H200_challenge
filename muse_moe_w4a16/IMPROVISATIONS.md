@@ -41,7 +41,7 @@ The owner explicitly expanded source discovery to teams both above and below us.
 GitHub public-repository screen of all 1112 ranked MoE accounts is complete; code-search candidates
 are preserved in root `PUBLIC_SOURCE_INDEX.md`. Metadata matches require individual source review.
 
-## Current result and profile
+## Historical v12 result and profile
 
 Scored job `9a02dcaaad274ffb` passed all tests at **1.6329x** (SGLang 13,448.5 us,
 ours 8,236.0 us; 95% CI 1.6084-1.6574). It ranks #527/974 on the problem board as of
