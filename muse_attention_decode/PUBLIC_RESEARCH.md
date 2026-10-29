@@ -13,7 +13,49 @@ It verifies debug outputs against the parent, reports instrumentation timing ove
 drops all synthetic graphs/inputs/outputs and zeroes coordination scratch before real calls.
 Markers perturb scheduling, so their intervals are diagnostic rather than exact parent
 cycle counts. No performance gain is claimed. Builder/source isolation/syntax checks pass;
-this is the third of eight checks and must never be promoted as a scored submission.
+The check passed16tests/12timings at2.605394x,1445.578us,CI[2.566313,2.644475].
+All10debug/control outputs agree within1.58e-5;instrumentation adds0.93–2.70us.
+All12profiles/full logs were inspected. Raw records and careful stage interpretation are
+preserved in `phase_probe_13bc760e093343f3.json` and `PHASE_PROFILE_2026-10-29.md`.
+The timed path is parent,no gain claimed. Do not promote the diagnostic file.
+
+Fourthcheck4bbfb48549864c60 tested `submission_v18_softmax_phase_offset.py`,
+SHAc2d533e3b4b363a4766aed38ca8da328cc0d03585a14acd976357adb62598075.
+Only flatL8 adds a one-time consumer-group offset;existing transpose fences/per-head
+barriers remain. It passed16tests/12timings at2.593449x,1452.236us,
+CI[2.554548,2.632351]. B16/B32fullverify100.76/184.30us versus parent's101.60/186.01us
+are sub1% cross-job observations,not a proven gain;aggregatebelowparent. Not promoted.
+All12profiles/emptylocal log and remoteprofiler markers read. No further TURN sweep is
+justified by this result alone. The primary-paper/source mapping is in RESEARCH_LIBRARY.md.
+
+### Trace-driven parallel completion flags (v19, running)
+
+Fifthcheck5161a53a9b274da4 tests `submission_v19_parallel_completion_flags.py`,
+SHA88472e7c187759c493f37f5a68265d87a0c7dc4dd7ec87a9260b654de8b21d7b.
+The target is B1 sliding L1's measured coordination tail:after the last partial-issue
+marker at2.944us,merge-ready is4.224us in the instrumented fixture. This1.280us interval
+includes pending reductions,arrival coordination and instructions;it is not pure atomic
+latency. The earlier median-marker gap1.50us also includes CTA imbalance.
+
+The local change is restricted to one request,twoKVheads,nc1,no cluster,and<=32splits.
+After the parent's existing CTA barrier,each split's thread0 release-stores a flag.
+CTA0's first warp acquire-polls all active flags in parallel,then a CTA barrier propagates
+the acquires to the unchanged `fin_nc1` finalizer. Existing FP32 atomic sums,normalization,
+gating,precision,full attention and launch plans remain unchanged. Other CTAs return after
+publication. One coalesced warp clears all32flags before kernel completion,including
+inactive slots;serial graph/stream calls start with zero flags. No epoch counter is needed,
+so there is no generation-wrap assumption or extra epoch-load latency.
+
+The aligned flags31104..31135 fit inside the parent's minimum32768counter allocation and
+do not overlap existing regions. H200 can hold this<=32CTA cohort. Empty splits are a
+contiguous tail,excluded by `ceil(n_keys/chunk)`. CPU checks cover131328participant-range
+cases,including context lengths up to1M,and source isolation/syntax pass. This arithmetic
+check is not a proof of all GPU memory-order behavior;judge correctness/graph replay and
+timing remain necessary. No synthetic fixture is retained by this performance candidate.
+
+This is new local integration/protocol work,not a claim to invent completion flags.
+Do not extend it to L8 without a separate design:oneCTA finalizing128rows may lose to
+the parent's distributed cooperative finalizer. Budget5/8checks,1/2submits.
 
 After MoE's second cycle, attention resumes at one check and one submit used today.
 The full current source/profile/checks/reference files and track instructions were reviewed.

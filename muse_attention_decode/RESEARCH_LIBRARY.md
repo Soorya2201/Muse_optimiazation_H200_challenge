@@ -11,23 +11,32 @@ scored **2.603505x**. Source reviews and experiments are in PUBLIC_RESEARCH.md a
 |[LeanAttention](https://arxiv.org/html/2405.10480v2), section IV|Associative softmax reduction supports unequal context partitions and balanced Stream-K scheduling.|The current full-context path already flattens ragged requests over a fixed CTA grid. It inserts virtual key costs at request boundaries to compensate extra segment setup. The actionable question is whether measured segment setup/tails justify a different boundary cost or fewer cross-request segments, not whether to add generic Stream-K.|
 |[vLLM Flint decode source](https://docs.vllm.ai/en/latest/api/vllm/models/flint/ops/decode_attention/)|Persistent split scratch, self-resetting arrival counters, cluster reduction and pipelined page loads.|The inspected implementation requires BF16, head dimension128 and contiguous16-token pages, while this challenge requires separate FP8 caches, dimension64 and scattered page1. Its bulk page loads and launch table are not transferable unchanged. Parent scratch/counters and clusters already cover the shared concepts. No source copied.|
 |[NVIDIA PTX: bulk prefetch](https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#data-movement-and-conversion-instructions-cp-async-bulk-prefetch)|Asynchronous cache hints can issue memory requests ahead of demand; supported syntax depends on the target architecture.|Earlier MoE bulk-prefetch tests lost2.9–14.3%; attention PFL2=1 also regressed. Earlier requests are not automatically better: they can add waits, issue pressure or competing traffic. Keep these failures binding when selecting the next experiment.|
+|[NVIDIA PTX: WGMMA ordering](https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#asynchronous-warpgroup-level-matrix-instructions)|The WGMMA `.sync` description synchronizes participating threads within a warp; `.aligned` requires matching execution across the warpgroup. Shared-memory writes also require async-proxy ordering.|Do not treat a WGMMA instruction as a replacement for the parent's cross-warp V-transpose barrier. Our one-time offset retains both the existing proxy fence and per-head warpgroup barrier on every tile. It changes scheduling without removing the producer/consumer visibility protocol.|
 
 ## Active bounded experiments
 
-1. **Phase probe, v17 / check13bc760e093343f3.** Exact parent timed path; separate instrumented
-   module on independent fixtures. Read its output agreement, raw timing perturbation and phase
-   timestamps before inferring bottlenecks. Instrumented intervals are not exact parent timings.
-2. **One-time softmax phase offset, v18, prepared but not run.** Source SHA-256
+1. **Phase probe, v17 / check13bc760e093343f3, passed.** Exact parent timed path,2.605394x;
+   no speedup claim. Debug/control relerr<=1.58e-5,overhead0.93–2.70us. Raw10-shape records
+   and interpretation are in PHASE_PROFILE_2026-10-29.md and its linked JSON.
+2. **One-time softmax phase offset, v18, checked but not promoted.** Source SHA-256
    `c2d533e3b4b363a4766aed38ca8da328cc0d03585a14acd976357adb62598075`.
    On flat L8 only, head1's128consumer threads wait once; head0's128threads release them
    after issuing the first PV. Named barrier6 expects256consumer threads, excluding producers.
    Later tiles add no new turn-taking barriers. Existing proxy fences, head barriers,
    stage releases, math, precision, context coverage and launch plans remain unchanged.
+   Check4bbfb48549864c60 passed at2.593449x,CI[2.554548,2.632351],belowparent;sub1% verify
+   observations do not prove a gain. All16tests/12timings passed and profiles/logs were read.
+3. **Parallel completion flags, v19 / check5161a53a9b274da4, running.** OnlyB1slidingL1,
+   <=32splits. Replace contended arrivalRMW with per-split release flags and one warp's
+   parallel acquire poll. Keep original FP32 sums/finalizer and CTA publication barrier.
+   Reset all32flags before kernel completion;no epoch or cached inputs/outputs. The
+   workspace/participant-range/source/syntax checks pass;actual GPU performance is unverified.
 
 The phase-offset hypothesis is that a small initial scheduling difference may reduce repeated
 softmax contention. It may instead add startup delay or quickly lose the offset. No benefit
-is assumed, and the per-tile version's reported regression is counterevidence. A full judge
-check and confidence gate are required before any promotion.
+was assumed, and the per-tile version's reported regression was counterevidence. Our check
+did not demonstrate an aggregate gain. Preserve it as an inconclusive component rather
+than continue a blind scheduling sweep.
 
 The builder initially rejected an ambiguous `PROF_TILE` insertion anchor because the source
 has three such markers. It was narrowed to the L8 ring-advance block; the successful builder

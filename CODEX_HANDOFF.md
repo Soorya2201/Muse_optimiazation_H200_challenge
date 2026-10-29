@@ -70,7 +70,7 @@ okc withdraw <job>            # take a run off the board
 The interrupted preceding turn made progress:five checked experiments,negative controls,
 new public-source section reviews,and logged/pushed evidence. On resume,attention v16's
 completed2.482162x regression was reconciled in RESULTS/research and pushed as6a6ef59.
-Active job13bc760e093343f3 checks submission_v17_phase_probe.py,
+Job13bc760e093343f3 passed submission_v17_phase_probe.py,
 SHA703205792c1797613d674bc02d250415218644fcc72384cc0b808849a058f1d1.
 Third attention check today (3/8),one submit used. This is diagnostic only:timed path is
 exactparent native/Python except extension namespace. At import it builds parent and a
@@ -81,9 +81,13 @@ Synthetic graphs/inputs/outputs are local and dropped;scratch zeroed before judg
 Source-prefix audit,all native insertion anchors,balanced delimiters and py_compile pass.
 Builder tools/build_attention_phase_probe.py reproduces it. Read result/allprofiles/logs,
 then choose a measured bottleneck for the next performance change. Do not submit this
-development diagnostic. Parent remains scored2.603505x;no other GPU job is live.
+development diagnostic. Result2.605394x,1445.578us,CI[2.566313,2.644475],16tests/12timings.
+Timed source remainsparent;no gainclaim. Traces10shapes matchwithin1.58e-5;instrumentation
+adds0.93-2.70us. B1slide partialissue→merge gap1.50usL1/2.37usL8;fullL8mainloopdominates,
+criticalpostloop3.7/4.4us forB16/32. All12profiles/full logs read. Build47.4s,total47.6s.
+Parent remains scored2.603505x. Active next job is4bbfb48549864c60 below.
 
-Prepared (not checked) submission_v18_softmax_phase_offset.py,
+Fourth check4bbfb48549864c60 is running submission_v18_softmax_phase_offset.py,
 SHAc2d533e3b4b363a4766aed38ca8da328cc0d03585a14acd976357adb62598075.
 Only flatL8 adds one named-barrier6 handoff:128head1consumer threads wait on first tile;
 128head0threads arrive after first PV issued. Existing per-head transpose fences/barriers
@@ -92,7 +96,21 @@ Builder audits exactnative/Python remainder and syntax. First local build reject
 ambiguous PROF_TILE anchor;corrected to uniqueL8ring-advance block before file generation,
 no GPUcredit consumed. Read muse_attention_decode/RESEARCH_LIBRARY.md for primary-paper
 mapping and counterevidence:continuous TURN1 was reported slower;one-time offset unproven.
-Wait for13bc760e093343f3 evidence before choosing the next GPU change.
+Attention budget4/8checks,1/2submits;no other live GPU jobs. Read this result/logs/profiles.
+This check passed16tests/12timings at2.593449x,1452.236us,CI[2.554548,2.632351].
+B16/B32fullverify100.76/184.30us vparent101.60/186.01:sub1% unproven,aggregatebelowparent.
+All12profiles/localemptylog+remoteprofiler markers read;notpromoted. Do not claimgain.
+
+Active fifthcheck5161a53a9b274da4 runs submission_v19_parallel_completion_flags.py,
+SHA88472e7c187759c493f37f5a68265d87a0c7dc4dd7ec87a9260b654de8b21d7b.
+B1slidingL1,nc1,2KVheads,no cluster,<=32splits only. After original CTAbarrier,thread0
+release-stores1to aligned per-split flags31104..31135. CTA0warp acquire-pollsallactive
+flags in parallel,CTAbarrierpropagatesacquires,unchangedfin_nc1 computesoutputs/resets
+FP32sums,onewarp clearsall32flags beforekernelcompletion. Noepochneeded (avoidsABAwrap
+and epoch-loadlatency);nextsame-stream/graphcallstartszero. <=32CTAs fitsH200residency.
+Source-isolation/syntaxand131328participant-rangecasespass. This is newlocalprotocol
+work,not aclaimedoriginalsynchronizationinvention. Do notextendunchangedtoL8 whereone
+CTAfinalizing128rowsmaylose. Attention budget5/8checks,1/2submits. Read allresult/log/profile.
 
 #### Oct29 20:15UTC active MoE second cycle
 

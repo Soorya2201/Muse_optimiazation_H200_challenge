@@ -38,6 +38,26 @@ Do not blindly sweep more PFL2 distances after this regression. The next meaning
 experiment should expose actual parent producer/consumer/merge phase costs or reduce a
 measured small-request merge dependency while preserving complete attention and precision.
 
+That diagnostic is now completed: v17/check13bc760e093343f3 passed16tests/12timings at
+2.605394x,1445.578us,CI[2.566313,2.644475],with parent timed code unchanged. Debug/control
+outputs agree within1.58e-5,with0.93–2.70us instrument overhead. Raw ten-shape traces and
+their interpretation are preserved in PHASE_PROFILE_2026-10-29.md and its JSON artifact.
+Small B1 sliding has a1.280us (L1) /1.632us (L8) interval between the last partial-issue
+and last merge-ready markers;median-marker differences include imbalance and are not pure
+atomic latency. Long-context verify remains dominated by its loop and scheduling tails.
+
+v18/check4bbfb48549864c60 tested one-time consumer-group phase offset,keeping original
+transpose fences/barriers. All16tests/12timings passed at2.593449x,1452.236us,
+CI[2.554548,2.632351]. Sub1% B16/B32fullverify observations do not prove a gain;not promoted.
+All profiles/logs were read. Keep exactv15 scored2.603505x.
+
+The fifth check5161a53a9b274da4 now tests v19's trace-driven B1slidingL1 completion flags.
+Each<=32split release-publishes its own flag after the original CTA barrier. CTA0 polls
+active flags with one warp,barrier-propagates the acquires,then runs unchangedfin_nc1 and
+clears all32flags before kernel completion. No epoch or input caching. Guards,workspace
+alignment/source isolation,syntax and131328participant-range cases pass. Actual GPU
+correctness/timing are pending. Budget5/8checks,1/2submits.
+
 ## Historical v12/v13 result and bottleneck
 
 Scored job `3135d826e3994f11` passed at **1.2954x** (SGLang 3,766.3 us, ours
