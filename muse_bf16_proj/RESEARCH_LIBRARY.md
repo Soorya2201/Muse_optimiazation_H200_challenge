@@ -544,3 +544,23 @@ Offline source comparison confirms it is not the same lineage as our v18: only 1
 and a 0.024761 line-sequence ratio. Do not build a dual-stack candidate before the exact control;
 compiling and autotuning both complete systems risks the 300-second prepare limit. If the control
 reproduces, use it as the new parent and transplant only a demonstrated incumbent winner.
+
+### Full upstream research audit
+
+`CHENWAINUO_REPO_DEEP_DIVE.md` now catalogs the rest of the repository: 188 projection candidate
+directories, four clean-room implementations, and a frozen history of 74 official jobs. The
+strong lineage progressed through C12/GV, self-zeroing paths, shorter QKV chains, RS128, RS32,
+RTK, predicated-XOR repair, per-thread escape cursors, and judge-faithful paired preparation.
+
+The 3133.1-us export is an 87%-similar descendant of the archived 3157.04-us
+`gv_predxor_pw45_v2` source. Its 1,354 inserted lines add validated cold-L2 paired baking,
+conservative proven selections, forced cursor paths at selected m16/m32/m128 shapes, an O32 HALF
+twin, and later router refinements. This is a source-level inference, not a formal score ablation;
+the public repository does not state the final job ID.
+
+Preserved non-shipping leads include unpooler16 X prefetch (+0.576 us local but an official whole
+check loss), GV53 early issue (+0.192 us local but a scored whole loss), tiny descriptor-offset and
+early-half observations, and a new constant-depth packet design. Closed evidence rules out C11/
+variable codecs, small-m TMA rings, cluster reductions, RS128 m256, stock CUTLASS/DeepGEMM BF16,
+reverse-operand ladders, and the four clean-room full submissions. Use the deep-dive table before
+opening any BF16 branch.

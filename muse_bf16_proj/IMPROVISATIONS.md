@@ -741,3 +741,18 @@ syntax-valid. No OKC invocation was made because the reserved daily budget is ex
 reset, this exact control has priority over the isolated M1 candidate because its already-published
 judge result is a larger, independently documented improvement. A hybrid should retain our faster
 O/router/tiny-unpooler cells and adopt only its measured winning routes.
+
+### Rank-78 repository-wide follow-up
+
+The follow-up audit covers all upstream BF16 research rather than only the exported source; see
+`CHENWAINUO_REPO_DEEP_DIVE.md`. It catalogs 188 candidate directories and the 74-job official
+history. The 3133.1-us export evolved through C12/direct GV, self-zeroing graph simplification,
+shorter QKV chains, RS128, RS32, RTK, predicated-XOR repair, staged per-thread escape cursors, and
+judge-faithful paired prepare-time selection.
+
+Important negative knowledge is now explicit: variable/C11 codecs, dedicated decode-to-shared
+warps, small-m TMA rings, cluster reductions, RS128 m256, stock CUTLASS/DeepGEMM BF16, reverse
+operand ladders, and all four clean-room full submissions failed against the actual incumbent.
+The few unshipped local positives did not transfer to whole official scores, so they are research
+leads rather than candidates. The next OKC action remains the exact final export, not a speculative
+combination of its discarded branches.

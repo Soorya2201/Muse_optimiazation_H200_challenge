@@ -18,6 +18,8 @@ This is an exhaustive audit of **currently public repositories discoverable from
 
 No other account above us exposed a repository that could be verified as its Muse BF16 submission at capture time. The SGLang forks are useful upstream context but do not contain evidence tying them to the owners' ranked jobs.
 
+The rank-78 repository's broader research—not just its exported submission—has now been audited in `CHENWAINUO_REPO_DEEP_DIVE.md`. That audit covers 188 candidate directories, 74 archived official jobs, four clean-room rewrites, shipped mechanisms, unresolved local positives, and closed tracks.
+
 ## What the verified rank-78 implementation solved
 
 Source: [README](https://github.com/chenwainuo/okc/blob/3d418e1625f6de2075b5684a27ddbc3d1442422d/README.md), [submission](https://github.com/chenwainuo/okc/blob/3d418e1625f6de2075b5684a27ddbc3d1442422d/muse_bf16_proj/submission.py), and the repository's handover/audit records.

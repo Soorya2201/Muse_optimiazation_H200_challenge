@@ -647,6 +647,14 @@ M1 candidate: the public judged result already exceeds our incumbent and provide
 available control. If reproduced, promote it, then build a route-level hybrid retaining our faster
 O/router/tiny-unpooler cells while adopting its QKV and m32/m128 RS routes.
 
+The upstream repository's other BF16 work is now fully triaged in
+`muse_bf16_proj/CHENWAINUO_REPO_DEEP_DIVE.md`: 188 candidate directories, four clean-room
+schools, 74 archived official jobs, the entire judged progression, unresolved local positives,
+and closed approaches. Do not copy every source branch: many are proven regressions. The final
+3133.1-us export is an 87%-similar descendant of the archived 3157.04-us GV-predxor winner and
+adds judge-faithful cold-L2 paired baking, conservative proven picks, forced per-thread cursor
+routes, an O32 HALF twin, and later router refinements. Exact-control validation remains first.
+
 ## 11. Known hazards
 
 - **The external drive (`/Volumes/Soorya_1_TB`) has unmounted mid-session several times.** Check `ls /Volumes/Soorya_1_TB` before writing. If it's gone, stop and tell the owner; don't rebuild work elsewhere.
