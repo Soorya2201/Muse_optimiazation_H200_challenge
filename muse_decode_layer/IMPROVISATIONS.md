@@ -1,5 +1,40 @@
 # muse_decode_layer: optimizations, measurements, and new ideas
 
+## Oct 29 public-source reproduction (supersedes historical baseline claims below)
+
+Exact Apache-2.0 vjeux source at f35a41e is archived in
+`submission_v15_vjeux_f35a41e.py`. Check `aabb75632b31456b` passed all13 tests and12
+timed cases at **2.089048x**,10828.043us,CI[2.057712,2.120384],prepare101.64s.
+This is a substantial gain over the scored incumbent1.232602x/18351.662us.
+All980 ranked accounts were screened for public repository metadata, including807 above
+and172 below us; `PUBLIC_RESEARCH.md` records actual source review and limitations.
+
+The measured architecture combines losslessly compressed BF16 projections, fused paged
+attention, persistent NVFP4 MoE, and residual/norm/routing fusion. These are reproduced
+public mechanisms, not a claim of original invention. The normal tuner path restores its
+synthetic calibration bias; no tune failure was reported in this passing control.
+
+Representative profile shares: T1 sliding MoE22.6us/28.4%,pooler18.5us/23.2%,
+QKV10.2us/12.8%; T128 sliding MoE155.4us/about60%; T256 sliding MoE205.1us/59.9%;
+T256 full MoE224us/42.1%,attention187.2us/35.2%. PDL consumer waits can overlap,
+so adding native-kernel durations does not estimate wall-time savings.
+
+The higher-ranked Madhavan derivative passed check9f256608c2df4cc8 at **2.119204x**,
+10673.962us,CI[2.087416,2.150992],prepare189.92s,all13tests/12timings. Exact source is
+promoted; scored reproduction d857144e59784ad0 is pending. It selects CUDA boundary and
+routing kernels,agent MoE everywhere,gluev2=False. Experimental tails/in-MoE routing are
+unavailable. Its1.44% edge over the control is within uncertainty; both decisively beat the
+prior scored incumbent. The derivative's standalone MoE had not improved the aggregate.
+
+The2.119204x candidate needs approximately12.35% less normalized time to match the
+then-leader2.4178x. An optimistic phase model projects MoE-20%->2.3381x,MoE-30%->2.4659x,
+attention-30%->2.2189x,glue-30%->2.1685x. These are planning estimates that overcount PDL
+wait savings, not measured improvements. Exact8-op dequant with a matching lossless repack
+from lower-ranked lee101 is queued for a future controlled candidate; source and numerical
+requirements are in PUBLIC_RESEARCH.md. First confirm this cycle,then proceed to prefill.
+
+The sections below describe older source and results and are retained as experiment history.
+
 All speedups are okc results: the geometric mean over the 6 loads of SGLang time / mine,
 measured on the judge's H200 with CUDA-graph replays and a cold L2. "(est.)" marks my own
 estimates. Prepare-time micro-benchmarks ("lab") are CUDA-graph replays with a cold L2,

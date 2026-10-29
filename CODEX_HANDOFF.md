@@ -65,6 +65,32 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct29 active whole-decoder reproduction
+
+Active track is whole decoder. Metadata screen covers all980 ranked accounts (807 above,
+172 below,ourselves;928 recent repository snapshots reused with timestamps,four404s).
+Read `muse_decode_layer/PUBLIC_RESEARCH.md` and its JSON account ledger.
+
+First routine check `aabb75632b31456b` passed on exact Apache-2.0 vjeux source
+`submission_v15_vjeux_f35a41e.py`,SHA-256
+`cf4a75ee6e4a5cd9e33b82b5347c47abcdc7b81d80dc6a8b5262dea7388f849c`.
+All13 tests and12timings passed at2.089048x,10828.043us,prepare101.64s. It composes
+compressed projections,fused attention,persistent MoE,and residual/routing glue.
+Inspect tune logs: synthetic bias calibration must restore original bias; reject a tuner
+exception leaving modified bias. Do not promote before13tests and12timings pass.
+
+Exact Madhavan derivative is pinned as `submission_v16_madhavan_c180924.py`,SHA-256
+`9ff17cb7b57136f8fbff63d6c7c14cdc193936c2f8986174cd7e60d847e56353`,with original license
+and derivative notice. It adds CUDA glue fusion,K-major dense alternatives,and measured
+in-chain selections. Check9f256608c2df4cc8 passed all13tests and12timings at2.119204x,
+10673.962us,CI[2.087416,2.150992],prepare189.92s; no tune exception. Experimental tails
+and in-MoE routing unavailable; agent MoE selected everywhere,gluev2=False. Its1.44% gain
+over vjeux is inside uncertainty, but both beat the scored incumbent1.232602x decisively.
+Exact v16 is promoted to submission.py; old local source archived as
+submission_pre_public_1770fb9.py. Scored reproduction d857144e59784ad0 pending. Decoder
+budget2/8checks,1/2submits. Read profiles/logs after the submit,refresh ranks,update docs,
+push all source/research/results,and proceed to prefill in project order.
+
 #### Oct 29 active attention reproduction
 
 MoE's current cycle completed at 2.324062x (see below). Active track is now attention.
