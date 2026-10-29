@@ -1,5 +1,9 @@
 # BF16 Above-Ranked GitHub Audit
 
+**Expanded coverage update,Oct29 20:09UTC:**the new PUBLIC_RESEARCH.md and
+RANKED_GITHUB_REPO_SCREEN.json cover all1394 ranked accounts,including170 above and1223
+below our then-rank#171. The149-profile source audit and ranks below are historical.
+
 Snapshot: 2026-10-29 PT. Our leaderboard position at capture was **#150/1301**, **1.5219x**, with 149 teams ahead. Leader: **colinlikescode**, **1.6367x**.
 
 ## Scope and method

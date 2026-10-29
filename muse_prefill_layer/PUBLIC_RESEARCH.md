@@ -80,7 +80,17 @@ control converter and packing equal the checked parent. Both expert outputs must
 within1e-5 relative L2 on live routes. Two independent alternating-order,cold-L2 graph
 timing groups must each show>2% gain before choosing8-op per token bucket. Compile/time
 budget/validation exceptions retain the parent. Timed dispatch uses token geometry only;
-synthetic inputs/graphs/outputs do not persist in returned state. Runtime evidence pending.
+synthetic inputs/graphs/outputs do not persist in returned state.
+
+Check75053ef427e34b93 passed5tests/8timings at1.794011x,215942.926us,
+CI[1.767100,1.820921],prepare87.45s. Live routed expert outputs match exactly(relerr0).
+The two paired speedup factors were T7531.01057/1.01582,T30121.00480/1.00571,
+T163841.00065/1.00220. None clears the2% gate;all buckets retain the original converter.
+Thus its timed path is the parent everywhere,and the0.51% aggregate edge over the scored
+parent is not an8-op gain. The new layout has small positive microbenchmark evidence,
+about0.06–1.58% of the expert phase,insufficient for a strict whole-layer improvement.
+It remains a candidate component to combine with a larger independent gain. Three of
+eight checks and one of two submits used;this reproduction cycle is complete.
 
 ## Sources below or close to our former rank
 

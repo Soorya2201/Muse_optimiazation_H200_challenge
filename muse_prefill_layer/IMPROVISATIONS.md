@@ -28,6 +28,13 @@ changes pipeline balance. Native expert timings are mixed and runs use different
 neither raw phase changes nor instruction counts establish a speedup. The next experiment
 must compare both layouts using identical synthetic routing and weights in one prepare.
 
+That comparison is now measured in v19/check75053ef427e34b93:all5tests/8timings pass,
+1.794011x,215942.926us,CI[1.767100,1.820921],prepare87.45s. Expert outputs match exactly.
+Two paired factors: T7531.01057/1.01582,T30121.00480/1.00571,T163841.00065/1.00220.
+None clears2%,so all timed buckets retain the parent. The0.51% aggregate edge is noise,
+not an adopted8-op gain. Preserve small positive microbenchmark evidence for a future
+combination;keep exactv17 scored1.784958x. Cycle uses3/8checks and1/2submits.
+
 The control needs12.13% less normalized time to match the captured2.0325x leader.
 Optimistic phase projections: expert-20%->1.9258x,expert-30%->2.0044x,
 attention-30%->1.8758x,boundary-30%->1.8241x. Dense-30% would model2.0115x but is not

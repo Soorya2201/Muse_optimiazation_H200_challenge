@@ -65,6 +65,28 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct29 20:09UTC cycle wrap and next work
+
+All five tracks now have full above/below public-account metadata screens,with actual
+source review scoped honestly in PUBLIC_SOURCE_INDEX.md. BF16 new ledger covers1394
+accounts,170above/1223below/self,973recent snapshots reused,eight404s;read its new
+PUBLIC_RESEARCH.md. No further BF16 GPU check was used. Exact Chen now live#92/1.5419x;
+our scored1.521867x is already ahead of several other public-source teams on aggregate.
+Latest complete rank snapshot is RANK_STATUS.md,overall#95/1610;rank-one goal remains open.
+
+Prefill cycle is complete at3checks/1submit:exact v17 scored1.784958x,#102 then#103;
+v18's8-op edge was inside uncertainty;v19's identical-route paired gains0.06–1.58% failed
+the2% adoption gates,so timed dispatch retained the parent everywhere. All logs/profiles
+were read;no incremental improvement was claimed. Keep submission.py byte-identicalv17.
+GitHub remains PRIVATE;source/licenses/audits/results are pushed as work proceeds.
+
+Next useful optimization cycle resumes MoE,then attention,then whole decoder,in runbook
+order,one track at a time. First inspect lower-scoring zhebrak's per-shape receipts and
+persistent stream-K/expert-readiness mechanisms against our current parent;do not assume
+its2.018x aggregate beats our2.324x. Only port a demonstrated missing mechanism. Preserve
+small dequant gains as components,not stand-alone leaderboard wins. BF16 exact Chen/v33
+remain the first actions after00:00UTC;8/8routine checks remain closed until then.
+
 #### Oct29 active prefill reproduction
 
 Decoder cycle completed at2.127754x,#95/984,overall#95/1607. Active track is prefill.
@@ -86,14 +108,17 @@ not promoted. Keep exact v17 in submission.py. Scored parent confirmation f62a28
 passed5tests/8timings at1.784958x,217038.147us,CI[1.758183,1.811732],prepare52.97s,
 rank#102/644. All profiles/logs read;37.34% less normalized time vs old1.118432x.
 
-Third check75053ef427e34b93 runs submission_v19_paired_dequant_gate.py,
+Third check75053ef427e34b93 passed submission_v19_paired_dequant_gate.py,
 SHA00d1db05da6509664292d817ad393c41a13f3383120bc307c5a4c33e5544e891.
 It compares both layouts on identical synthetic routes/weights in one prepare,validates
 live outputs1e-5,requires two independent cold-L2 graph gates>2%,and retains original9-op
 on failure/budget skip. Offline tool verifies restored control converter+pack equal the
-checked parent. Three of eight checks,one of two submits used. Inspect gates/allprofiles;
-do not promote a sub-CI aggregate change. Then refresh five-track/overall ranks,update docs,
-push,and complete full BF16 above/below metadata audit offline. BF16 routine checks stay
+checked parent. Result1.794011x,215942.926us,CI[1.767100,1.820921],prepare87.45s,
+all5tests/8timings. Both expert outputs match exactly;paired factors T7531.01057/1.01582,
+T30121.00480/1.00571,T163841.00065/1.00220. None clears2%;all timed paths retain parent.
+The0.51% aggregate edge is noise;not promoted. Three of eight checks,one of two submits
+used. All logs/profiles read;prefill cycle complete. RANK_STATUS.md captures all five ranks,
+overall#95/1610. Next:full BF16 above/below metadata audit offline. BF16 routine checks stay
 closed until00:00UTC (8/8 used). No parallel agents or track runtime tests.
 The parent already uses7ALU+2IMAD,so compare9vs8 operations,not11vs8. Preserve attribution.
 
