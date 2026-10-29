@@ -68,8 +68,19 @@ in-prepare paired comparison must use identical synthetic routes and weights for
 layouts. The parent already moves two shifts to IMAD; the8-op alternative changes pipeline
 pressure as well as instruction count. Fewer instructions alone need not reduce runtime.
 
-Scored parent confirmation f62a284779b4447d is pending. Two of eight checks and one of
-two submits used today. The old local source is exactly archived as submission_v8.py.
+Scored parent confirmation f62a284779b4447d passed5tests/8timings at **1.784958x**,
+217038.147us,CI[1.758183,1.811732],prepare52.97s. New rank **#102/644** from#539.
+Normalized time346.381ms->217.038ms(-37.34%);speedup score+59.59%. All profiles/logs
+were read. The old local source is exactly archived as submission_v8.py.
+
+`submission_v19_paired_dequant_gate.py` now compares both layouts on identical synthetic
+routes/weights inside prepare. It first prepares the original9-op parent,then packs the
+8-op candidate separately. A34848-word encoding/source audit also proves its reconstructed
+control converter and packing equal the checked parent. Both expert outputs must agree
+within1e-5 relative L2 on live routes. Two independent alternating-order,cold-L2 graph
+timing groups must each show>2% gain before choosing8-op per token bucket. Compile/time
+budget/validation exceptions retain the parent. Timed dispatch uses token geometry only;
+synthetic inputs/graphs/outputs do not persist in returned state. Runtime evidence pending.
 
 ## Sources below or close to our former rank
 

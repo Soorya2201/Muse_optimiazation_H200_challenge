@@ -95,4 +95,22 @@ rng = random.Random(0x1084)
 for _ in range(20000):
     verify([rng.randrange(16) for _ in range(8)])
     checked += 1
+gate_path = ROOT / "muse_prefill_layer/submission_v19_paired_dequant_gate.py"
+if gate_path.exists():
+    gate_tree = ast.parse(gate_path.read_text())
+    for n in gate_tree.body:
+        if not isinstance(n, ast.Assign):
+            continue
+        names = [t.id for t in n.targets if isinstance(t, ast.Name)]
+        if names == ["_DEQUANT9_POS"]:
+            original_positions = next(ast.literal_eval(p.value) for p in parent_tree.body
+                                      if isinstance(p, ast.Assign)
+                                      and any(isinstance(t, ast.Name) and t.id == "_CODE_POS" for t in p.targets))
+            assert ast.literal_eval(n.value) == original_positions
+        if names == ["_DEQUANT9_SOURCE"]:
+            # Evaluate our own pure string-replacement expression without importing torch.
+            restored = eval(compile(ast.Expression(n.value), str(gate_path), "eval"),
+                            {"__builtins__": {}, "_DEQUANT8_SOURCE": cuda})
+            assert without_comments(restored) == without_comments(parent_cuda)
+    print("PASS: v19 control's reconstructed converter and packing equal the checked parent")
 print(f"PASS: {checked} packed words, all16 codes, pair interactions and multiply carries; source isolation verified. GPU evidence is tracked separately.")

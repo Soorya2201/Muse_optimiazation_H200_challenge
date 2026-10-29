@@ -5,7 +5,9 @@
 The exact Apache-2.0 vjeux f35a41e control `submission_v17_vjeux_f35a41e.py` passed
 checkce90e6fc5b4f49ed at **1.785870x**,216927.216us,CI[1.759082,1.812658],prepare54.16s,
 all5tests and8timings. It is promoted to submission.py; old source equals archivedv8.
-Scored confirmation f62a284779b4447d is pending. Source hashes,licenses,and per-account
+Scored confirmation f62a284779b4447d passed5tests/8timings at1.784958x,217038.147us,
+CI[1.758183,1.811732],prepare52.97s. Rank#102/644;37.34%less normalized time than the
+prior scored1.118432x. Source hashes,licenses,and per-account
 above/below metadata evidence are in PUBLIC_RESEARCH.md and its644-account JSON ledger.
 
 The parent replaces Marlin/materialized BF16 experts with fused persistent RS-WGMMA
