@@ -12,7 +12,7 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 | MoE | `muse_moe_w4a16/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Completed public metadata screen of all 1112 ranked accounts: 625 above, 486 below, and ourselves; five 404 accounts. vjeux check2.339526x, Madhavan check2.330435x. Scored vjeux confirmation9835951891204c56 is **2.324062x**, rank#146/1112, overall#447/1599. |
 | Attention | `muse_attention_decode/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Full metadata screen of1064 ranked accounts:877 above,186 below,ourselves;941 recent repo snapshots reused with timestamps. Exact source check2.597212x, scored confirmation30c669b9702d434f **2.603505x**,rank#90/1066,overall#354/1602. |
 | Whole decoder | `muse_decode_layer/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Metadata screen complete for980 ranked accounts:807 above,172 below,ourselves. Vjeux check2.089048x,Madhavan check2.119204x. Exact Madhavan scored d857144e59784ad0 **2.127754x**,rank#95/984,overall#95/1607. |
-| Prefill | Existing track `IMPROVISATIONS.md` and profile history | Full above/below public-source audit remains outstanding; enter in project order. |
+| Prefill | `muse_prefill_layer/PUBLIC_RESEARCH.md`, `RANKED_GITHUB_REPO_SCREEN.json` | Full metadata screen of644 ranked accounts:538 above,105 below,ourselves;four404s. Exact vjeux checkce90e6fc5b4f49ed running. Isolated lee1018-op dequant+matching repack candidate passes34848 offline encoding cases; H200 timing pending. |
 
 This is a coverage record, not a claim that every repository or private submission was examined.
 The account screen paginates publicly owned repositories and matches name/description/topic
@@ -37,6 +37,8 @@ Global code search supplements the profile screen, including accounts absent fro
 - https://github.com/Aravind-11/muse-moe-w4a16 — historical 1.629x early kernels; README explicitly says current entry is not published.
 - https://github.com/infraax/okc-kernel-challenge — lower-ranked archived campaign with measured failures; producer-ring and PDL counterevidence is useful, but no stronger full MoE source than the reproduced parent.
 - https://github.com/titoatwork/qgemm-mx — account below us; FP4/Hopper measurement and packing study. README explicitly says performant Hopper WGMMA/TMA kernel is not implemented; use encoding/roofline evidence without claiming speedups.
+- https://github.com/zhebrak/muse-spark-kernels — below us on prefill with no published prefill winner, but Apache-2.0 sources/receipts for four other tracks. Describes persistent stream-K expert readiness counters and cluster residual boundaries; possible future component controls, not verified improvements over our promoted sources.
+- https://github.com/MadanChaollaPark/open-kernel-experiments — near our old prefill rank; stopped campaign with exact scored sources and627 candidate snapshots. Preserves correct-but-slower PRMT dequant and unfinished Hopper mixed-input proof without a speed claim; useful negative evidence.
 
 ## Adoption procedure
 

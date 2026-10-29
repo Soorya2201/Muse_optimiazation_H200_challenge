@@ -65,6 +65,24 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct29 active prefill reproduction
+
+Decoder cycle completed at2.127754x,#95/984,overall#95/1607. Active track is prefill.
+Read its PUBLIC_RESEARCH.md. Full metadata screen covers644ranked accounts:538above,
+105below,ourselves;607recent snapshots reused,four404s. Exact Apache-2.0 vjeux control
+submission_v17_vjeux_f35a41e.py,SHA9a12398e9db70abb59ee3a914e185a5e8010e2557056ece22528f6b0b8c24217,
+passed checkce90e6fc5b4f49ed:1.785870x,216927.216us,CI[1.759082,1.812658],prepare54.16s,
+all5tests/8timings. Exact v17 is promoted in submission.py; old source equals archivedv8
+(SHA4cde389d...). Persistent RS-WGMMA experts replace expanded BF16 scratch; staged custom
+attention and residual reconstruction are reviewed. All profiles/logs read;no failures.
+
+Next isolated candidate submission_v18_lee8_dequant.py combines this exact parent with
+lee101's exact8-op layout and matching _CODE_POS; no other tuning options change.
+SHA7e7e0793c672bb0e044fb5777c4bcc59916a9b17447056f31821acf4c6fbaee4.
+`python3 tools/verify_prefill_dequant_layout.py` passes34848encodingcases; Python syntax
+passes. GPU check48631378372b4f15 is running;two of eight checks,no submits used.
+The parent already uses7ALU+2IMAD,so compare9vs8 operations,not11vs8. Preserve attribution.
+
 #### Oct29 active whole-decoder reproduction
 
 Active track is whole decoder. Metadata screen covers all980 ranked accounts (807 above,

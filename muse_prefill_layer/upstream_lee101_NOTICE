@@ -1,0 +1,8 @@
+Exact 8-op E2M1-to-BF16 bit placement adapted from lee101/openkernels:
+https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/docs/fp4_dequant_survey.md
+Repository license: Apache-2.0. The license text is preserved alongside this
+notice in upstream_vjeux_APACHE_2.0.txt (same Apache-2.0 license).
+
+Changes by this project: matched the prefill parent's nibble-to-fragment order
+in _CODE_POS and convert8. Original BF16 fragment values, block scales,
+activation precision and NVFP4 weight precision remain unchanged.
