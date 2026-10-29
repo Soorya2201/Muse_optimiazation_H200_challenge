@@ -65,6 +65,27 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct 29 BF16 reset campaign
+
+The BF16 cycle is closed at the reserved **8/8 checks and 1/2 submits**. Exact Nathen v18
+reproduced at 1.5030x in check `a0f04505f9f84bb4`, then scored **1.521867x** in submit
+`d1bd752954ff4d21` (3,174.3 us, CI 1.4990-1.5447). This improves the prior 1.1158x result by
+36.4% and moved BF16 to #150/1298 and overall to #571/1496 at submission time. The exact v18
+bytes are promoted in `muse_bf16_proj/submission.py`; preserve its MIT attribution.
+
+The follow-up campaign rejected v31 pooler32 WR2, v20-v22 cluster dense pooler/unpooler,
+and v32 C12-cluster pooler128. Every proposed kernel lost its own prepare-time timing race and
+fell back. In particular, v32 took 49.22 us versus v18's 23.68 us at pooler m128; the occupancy-1
+cluster pipeline is not viable. V30's public-M1 routes repeatedly selected faster qkv, unpooler,
+and router kernels, but its aggregate checks were 1.5260x and 1.5044x, so the gain did not
+reproduce and it was not submitted. Do not spend the remaining submit on v30 without first
+isolating the three stable M1 routes from the noisy v25 history/cross autotune.
+
+The final live refresh showed BF16 **#150/1301** and overall **#572/1499**. All OKC attempts,
+including the cached duplicate, are in `RESULTS.md`. The next BF16 design
+should start from exact v18 and add only the isolated M1 module, with fixed v18 everywhere else;
+large-M cluster tuning is exhausted by v20-v22/v32 evidence.
+
 #### Oct 28 MoE continuation
 
 The MoE cycle is closed at 8/8 reserved checks and 1/2 submits. v12 increased activation

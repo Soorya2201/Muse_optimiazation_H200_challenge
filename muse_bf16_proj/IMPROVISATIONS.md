@@ -3,14 +3,13 @@
 The broader, source-indexed catalog of published and challenge-specific techniques is maintained
 in `RESEARCH_LIBRARY.md`. This file remains the chronological implementation and measurement log.
 
-The current scored and verified submission is `submission.py` =
-`submission_v3_cluster.py`.
+The current scored and verified submission is `submission.py` = exact public Nathen v18.
 
 ## Current result and profile
 
-Scored job `167d6e5c85f74682` passed at **1.1158x** (SGLang 4,830.8 us, ours
-4,329.6 us; 95% CI 1.0990-1.1325). As of 2026-10-28 this was rank #1071;
-first place was 1.6367x.
+Scored job `d1bd752954ff4d21` passed at **1.521867x** (SGLang 4,830.8 us, ours
+3,174.3 us; 95% CI 1.4990-1.5447). At submission time on 2026-10-29 this was rank
+#150/1298; first place was 1.6367x. The previous v3 score was 1.1158x.
 
 The custom kernel wins primarily on m=1 projections and on the router. It uses a TMA-streamed
 shared-memory ring, swap-AB BF16 `mma.sync`, cluster split-K, and a DSMEM reduction. The router
@@ -682,3 +681,33 @@ and serving tracks: use PDL so the next projection's producer CTA can issue its 
 while the previous epilogue/all-reduce tail finishes. Estimated gain: **2-6% of projection time**.
 Risk: medium; concurrent streams may reduce rather than increase HBM efficiency, so measure power,
 bandwidth, and overlap on the H200.
+
+## Oct 29 measured campaign
+
+Exact upstream v18 was the decisive improvement. Check `a0f04505f9f84bb4` passed 9/9 at
+1.5030x; submit `d1bd752954ff4d21` passed 9/9 at **1.521867x** and is promoted. The profile
+shows the remaining headroom is concentrated in large qkv/o/pooler/unpooler shapes and qkv/o at
+m32, while router and tiny unpooler are already strong.
+
+The candidate results were:
+
+| Candidate | Job | Result | Decision |
+|---|---|---:|---|
+| v30 all-small/qkv32 | `cf48c6d2aeb84753` | 1.5260x | Apparent +0.27%; confirmation required. |
+| v31 pooler32 WR2 | `d2de858665834b48` | 1.5205x | WR2 20.74 vs v18 20.45 us; rejected. |
+| v20 cluster m128 | `e21f03acd59f4601` | 1.4958x | Both new routes lost; rejected. |
+| v21 cluster m128/m256 | `dd62b77cd2454467` | 1.5321x | All four new routes lost and fell back; aggregate was noise. |
+| v22 cluster autotune | `547f6cc5650649c6` | 1.5063x | No 2D/3D/stage candidate won; family exhausted. |
+| v32 C12 cluster pooler128 | `136291d0b7bb43e3` | 1.5233x | 49.22 vs 23.68 us, occupancy 1; rejected. |
+| v30 confirmation | `8880201062034c1a` | 1.5044x | M1 routes won locally, aggregate gain did not reproduce; no submit. |
+
+V30 provides the only constructive follow-up. On confirmation, public M1 qkv selected at
+12.61 vs 13.22 us in prepare, unpooler at 7.14 vs 7.78 us, and router at 7.23 vs 7.49 us.
+However, v25's broad history/cross autotune also changed unrelated routes and caused unstable
+aggregate behavior. The next implementation should append only v30's M1 module to exact v18,
+leaving all other dispatch fixed. Estimated aggregate gain is under 1%; risk is measurement noise.
+
+The large-M failures identify the core problem: cluster synchronization, DSMEM exchange, and low
+occupancy cost more than the reuse they create for these skinny shapes. Another stage-depth or
+cluster-shape sweep is not justified. A future large-M attempt needs a materially different
+single-CTA Hopper WGMMA schedule or a better pinned cuBLASLt plan.

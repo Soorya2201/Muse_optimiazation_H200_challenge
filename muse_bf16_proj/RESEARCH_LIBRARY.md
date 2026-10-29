@@ -1,6 +1,6 @@
 # BF16 projection optimization research library
 
-Last updated: 2026-10-28 12:05 PDT. This is a living, evidence-ranked library for the
+Last updated: 2026-10-29. This is a living, evidence-ranked library for the
 `muse_bf16_proj` track. It covers legitimate, CUDA-graph-capturable methods that preserve BF16
 weights exactly (or use the task's allowed FP32-router hi+lo representation). It is not a claim
 that every published GPU technique applies to this workload. Methods are ranked against the
@@ -8,7 +8,7 @@ actual H200, cold-L2, six-load judge contract.
 
 ## Goal and constraints
 
-- Current scored result: **1.1158x**, job `167d6e5c85f74682`.
+- Current scored result: **1.521867x**, job `d1bd752954ff4d21`; exact Nathen v18 is promoted.
 - Current leader at the latest refresh: **1.6367x**.
 - Score: geometric mean of six equally important load ratios. Each load contains qkv, o,
   pooler, unpooler, and router calls weighted 62 times.
@@ -487,3 +487,27 @@ For every new source or idea:
 8. Read the saved profile after every passing check and update this library with measured evidence.
 9. Push documentation and source together, while leaving `submission.py` on the best verified
    scored version until a qualifying check passes.
+
+## Oct 29 evidence update
+
+The reset queue has now been executed through its integration gate. Exact public v18 reproduced
+and scored **1.521867x** (`d1bd752954ff4d21`), so it replaces v3 as the foundation. V31, v20,
+v21, v22, and v32 contributed no selected kernel: their proposed routes all lost their internal
+cold-L2 timing comparisons. This is strong judged evidence against further cluster-DSMEM tuning
+for pooler/unpooler m128/m256 and against the six-stage C12 cluster pooler pipeline.
+
+V30 is mixed evidence. Its first check was 1.525964x (`cf48c6d2aeb84753`), but an independent
+source-comment-only confirmation was 1.504394x (`8880201062034c1a`). Both passed 9/9. The M1
+module itself reproduced useful local selections for qkv, unpooler, and router, but the enclosing
+v25/v28/v29 portfolio selected other routes differently between runs. Therefore v30 is not a
+qualified aggregate winner. Research priority changes from “combine the queue” to “isolate only
+the three M1 winners on exact v18.”
+
+Measured failure additions:
+
+| Failure | Evidence | Lesson |
+|---|---|---|
+| Pooler32 doubled-CTA geometry | v31: 20.74 vs 20.45 us | Same total warps with fewer CTAs does not offset scheduling/resource cost. |
+| Dense m128/m256 cluster portfolio | v20-v22, every route lost | DSMEM/TMA synchronization and occupancy dominate; stop parameter sweeps. |
+| C12 cluster pooler128 | v32: 49.22 vs 23.68 us, occupancy 1 | Lossless compression cannot rescue an occupancy-1 cluster pipeline. |
+| Broad prepare-time route portfolio | v30: 1.5260x then 1.5044x | Microsecond route races need isolation and repeatability before promotion. |

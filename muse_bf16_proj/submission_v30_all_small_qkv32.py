@@ -8290,3 +8290,4 @@ def kernel_fn(data: Inputs, state: dict) -> torch.Tensor:
     if cfg["layer"] == "qkv_gate" and cfg["m"] == 32 and choice is not None:
         return _v30_launch(data["x"], state["v30_qkv"], choice)
     return _V30_BASE_KERNEL(data, state)
+# Final confirmation payload for the selected v30 small-shape/qkv32 package.
