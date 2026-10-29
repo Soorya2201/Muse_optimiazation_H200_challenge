@@ -744,6 +744,13 @@ O/router/tiny-unpooler cells and adopt only its measured winning routes.
 
 ### Rank-78 repository-wide follow-up
 
+Implemented v33, `submission_v33_chen_m1_hybrid.py`, using Chen as the sole parent and adding
+only the three previously judged M1 routes. Device source and geometry are unchanged; setup adds
+finite validation, two independent 3% paired read-flush gates, prepare-time limits, and strict
+dispatch guards. Syntax and offline provenance/dispatch/gating checks pass. CUDA integration and
+aggregate gain are unmeasured. No OKC run was consumed because the reserved eight-check limit is
+used; reserve use awaits the owner's reply. `submission.py` remains the verified scored v18.
+
 The follow-up audit covers all upstream BF16 research rather than only the exported source; see
 `CHENWAINUO_REPO_DEEP_DIVE.md`. It catalogs 188 candidate directories and the 74-job official
 history. The 3133.1-us export evolved through C12/direct GV, self-zeroing graph simplification,

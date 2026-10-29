@@ -547,6 +547,13 @@ reproduces, use it as the new parent and transplant only a demonstrated incumben
 
 ### Full upstream research audit
 
+The implemented next combined candidate is `submission_v33_chen_m1_hybrid.py`: exact Chen parent
+plus the unchanged, already-judged M1 CUDA module for QKV/unpooler/router. It replaces the old
+sum-flush gate with the parent's read-flush paired estimator and requires two separate 3% wins.
+Offline integration checks pass; H200 verification is pending. See `STRONGEST_SUBMISSION_PLAN.md`
+for the new ordered experiments, cross-source references, and a model proving that an impossible
+per-cell union of both parents reaches only 1.57522x. Broad non-router gains are still necessary.
+
 `CHENWAINUO_REPO_DEEP_DIVE.md` now catalogs the rest of the repository: 188 projection candidate
 directories, four clean-room implementations, and a frozen history of 74 official jobs. The
 strong lineage progressed through C12/GV, self-zeroing paths, shorter QKV chains, RS128, RS32,

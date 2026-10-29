@@ -67,6 +67,17 @@ okc withdraw <job>            # take a run off the board
 
 #### Oct 29 BF16 reset campaign
 
+Latest Oct 29 18:07 UTC follow-up: BF16 rank #169/1374, score unchanged at 1.521867x,
+leader 1.6367x. `submission_v33_chen_m1_hybrid.py` now combines the exact Chen parent
+with only the previously judged QKV/unpooler/router M1 module. Each route needs two independent
+paired graph gates exceeding 3%; the parent is retained on failure or insufficient prepare time.
+Deterministic source/provenance, unchanged device strings, shape dispatch, timing margins,
+nonfinite ratios, budget skips, and Python syntax pass offline. No H200 run has occurred.
+Read `muse_bf16_proj/STRONGEST_SUBMISSION_PLAN.md` for the quantified gap and ranked experiments.
+Exact Chen parent remains the first check, v33 the second; the isolated-v18 M1 candidate is lower
+priority. The eight-check routine budget remains exhausted; the owner has been asked whether to
+use two reserve checks. Until a reply, keep all work offline. No reserve use is authorized by silence.
+
 The BF16 cycle is closed at the reserved **8/8 checks and 1/2 submits**. Exact Nathen v18
 reproduced at 1.5030x in check `a0f04505f9f84bb4`, then scored **1.521867x** in submit
 `d1bd752954ff4d21` (3,174.3 us, CI 1.4990-1.5447). This improves the prior 1.1158x result by
