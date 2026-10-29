@@ -539,3 +539,8 @@ The exact source is pinned locally as `submission_rank78_chen_3d418e1.py`, SHA-2
 passes. First fresh-budget action: check it unchanged. Then integrate only the routes that improve
 over each exact parent's judged profile; do not wholesale replace our cells that are already
 faster.
+
+Offline source comparison confirms it is not the same lineage as our v18: only 171 matching lines
+and a 0.024761 line-sequence ratio. Do not build a dual-stack candidate before the exact control;
+compiling and autotuning both complete systems risks the 300-second prepare limit. If the control
+reproduces, use it as the new parent and transplant only a demonstrated incumbent winner.

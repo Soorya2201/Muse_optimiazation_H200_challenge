@@ -31,6 +31,8 @@ Source: [README](https://github.com/chenwainuo/okc/blob/3d418e1625f6de2075b5684a
 
 The strongest measured advantage over our current v18 profile is concentrated in QKV at `m=16/32/128` and pooler/unpooler at `m=32/128`. Our incumbent is already competitive or faster on several O-projection, large-router, and tiny-unpooler cells. Therefore the best next experiment is **route-level integration**, not wholesale replacement.
 
+An offline structural comparison shows these are independent implementations, not adjacent revisions: only 171 source lines match out of 7,193 incumbent and 6,619 rank-78 lines (SequenceMatcher ratio 0.024761). A dual-stack hybrid would compile and prepare both complete systems and risks the 300-second prepare limit. The safe order is therefore exact rank-78 control first, promotion if reproduced, then transplant one incumbent route family into that parent only after a judged per-shape profile proves the need.
+
 ## Implementation decision and queued experiments
 
 Current local implementation work already isolates our reproducible M1 winners in `submission_v30_all_small_qkv32.py`; broad speculative routes were removed after judge evidence did not reproduce them.
