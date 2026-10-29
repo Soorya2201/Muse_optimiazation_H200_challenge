@@ -1,5 +1,20 @@
 # Prefill-layer architecture
 
+## Current verified public-source integration (Oct29)
+
+`submission.py` is exact Apache-2.0 vjeux f35a41e,archived as
+`submission_v17_vjeux_f35a41e.py`;checkce90e6fc5b4f49ed passed5tests/8timings at1.785870x.
+It supersedes the historical v5 expert strategy below. Expert weights stay NVFP4 in
+persistent state;the persistent RS-WGMMA kernel decodes fragments in registers and
+computes both expert projections inside the timed call. Gather+plan fusion prepares
+expert-contiguous BF16 activations and heterogeneous remainder tiles. Custom staged
+paged attention covers every visible key,uses FP8 queries/cache,and fuses norm/gate.
+Residual reconstruction at large T avoids storing/reloading the first FP32 stream by
+rebuilding it from the current input/branch and saved RMS factor during the timed call.
+cuBLASLt serves dense GEMMs;router high+low halves produce FP32 logits. The additional
+lee1018-op repack/converter candidate passes correctness but has no established performance
+gain over this parent. Attribution,exact hashes,tests,and caveats: PUBLIC_RESEARCH.md.
+
 ## Hardware facts that shape the implementation
 
 The target is one NVIDIA H200 (Hopper): 132 SMs, roughly 50 MB L2, nominal 4.8 TB/s

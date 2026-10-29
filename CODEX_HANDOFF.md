@@ -80,7 +80,13 @@ Next isolated candidate submission_v18_lee8_dequant.py combines this exact paren
 lee101's exact8-op layout and matching _CODE_POS; no other tuning options change.
 SHA7e7e0793c672bb0e044fb5777c4bcc59916a9b17447056f31821acf4c6fbaee4.
 `python3 tools/verify_prefill_dequant_layout.py` passes34848encodingcases; Python syntax
-passes. GPU check48631378372b4f15 is running;two of eight checks,no submits used.
+passes. GPU check48631378372b4f15 passed all5tests/8timings at1.801190x,215082.167us,
+CI[1.774172,1.828208],prepare44.58s. Its0.858% gain over the parent is within uncertainty;
+not promoted. Keep exact v17 in submission.py. Scored parent confirmation f62a284779b4447d
+is pending;two of eight checks,one of two submits used. Read all profiles/logs after result,
+refresh five-track/overall ranks,update docs,push. Then complete the full BF16 above/below
+metadata audit offline before the next optimization cycle;BF16 routine checks stay closed
+until00:00UTC (8/8 used). Future8-op proof must compare identical routes in one prepare.
 The parent already uses7ALU+2IMAD,so compare9vs8 operations,not11vs8. Preserve attribution.
 
 #### Oct29 active whole-decoder reproduction

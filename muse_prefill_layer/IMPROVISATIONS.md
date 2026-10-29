@@ -1,5 +1,41 @@
 # Prefill-layer optimization record
 
+## Oct29 public-source cycle (supersedes historical implementation status below)
+
+The exact Apache-2.0 vjeux f35a41e control `submission_v17_vjeux_f35a41e.py` passed
+checkce90e6fc5b4f49ed at **1.785870x**,216927.216us,CI[1.759082,1.812658],prepare54.16s,
+all5tests and8timings. It is promoted to submission.py; old source equals archivedv8.
+Scored confirmation f62a284779b4447d is pending. Source hashes,licenses,and per-account
+above/below metadata evidence are in PUBLIC_RESEARCH.md and its644-account JSON ledger.
+
+The parent replaces Marlin/materialized BF16 experts with fused persistent RS-WGMMA
+NVFP4 experts,gather+plan fusion,skew-aware work ordering,and in-register dequantization.
+It adds staged custom paged FP8 attention,cuBLASLt choices,and timed residual reconstruction.
+These are reproduced public techniques,not our invention. Expert profile times are244.1us
+at T753/sliding,731.7us at T3012/sliding,and3634.1us at T16384/sliding. Full64k attention
+is6764.5us. All logs/profiles were read;the control passes attention validation at0.0151
+worst relative error. Combined kernels may overlap through PDL;do not sum waits as savings.
+
+We implemented a new cross-repository combination in `submission_v18_lee8_dequant.py`:
+lee101's exact8-op code placement and matching lossless prefill repack on this parent.
+All34848 offline encoding cases and the source-isolation audit pass. GPU check48631378372b4f15
+passed all5tests/8timings at1.801190x,215082.167us,CI[1.774172,1.828208],prepare44.58s.
+Its0.858% edge is inside uncertainty,so it is preserved as research and not promoted.
+The parent already has7ALU+2IMAD conversion;the proposed change is9vs8 operations and
+changes pipeline balance. Native expert timings are mixed and runs use different routing;
+neither raw phase changes nor instruction counts establish a speedup. The next experiment
+must compare both layouts using identical synthetic routing and weights in one prepare.
+
+The control needs12.13% less normalized time to match the captured2.0325x leader.
+Optimistic phase projections: expert-20%->1.9258x,expert-30%->2.0044x,
+attention-30%->1.8758x,boundary-30%->1.8241x. Dense-30% would model2.0115x but is not
+a credible easy target over tuned cuBLAS. These are planning estimates,not measured gains.
+Prioritize expert remainder reuse/scheduling and full-attention pipeline efficiency.
+Retain negative evidence from below-ranked repos: qgemm-mx's Hopper kernel is unfinished,
+Madan's PRMT lookup was correct but slower,and tommyyliu's public prefill is starter code.
+
+The following sections retain the older implementation and experiment history.
+
 ## Optimization inventory
 
 | Optimization | Status | Measured/estimated effect |

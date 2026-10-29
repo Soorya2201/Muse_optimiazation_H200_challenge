@@ -56,8 +56,20 @@ all pairs of code slots against zero/all-ones backgrounds,the multiply path's256
 combinations,and20000 deterministic random words. It verifies the candidate source mapping
 and device expression strings,then compares reconstructed register bits to the independent
 logical fragment order. This is an encoding proof/check,not a GPU runtime test.
-The derivative notice records lee101's Apache-2.0 provenance. Check48631378372b4f15 is
-running; source SHA7e7e0793c672bb0e044fb5777c4bcc59916a9b17447056f31821acf4c6fbaee4.
+The derivative notice records lee101's Apache-2.0 provenance. Check48631378372b4f15
+passed all5tests/8timings at **1.801190x**,215082.167us,CI[1.774172,1.828208],prepare44.58s;
+source SHA7e7e0793c672bb0e044fb5777c4bcc59916a9b17447056f31821acf4c6fbaee4.
+Its0.858% aggregate edge over the unchanged parent is inside overlapping intervals.
+The expert profiles are mixed: T753/sliding281.7vs244.1us,T3012/sliding764.3vs731.7,
+T16384/sliding3631.7vs3634.1. The baseline also differs across jobs and routing changes,
+so raw phase comparisons do not isolate the conversion's effect. No strict improvement
+is established;preserve v18 as research and retain exact v17 in submission.py. A future
+in-prepare paired comparison must use identical synthetic routes and weights for both
+layouts. The parent already moves two shifts to IMAD; the8-op alternative changes pipeline
+pressure as well as instruction count. Fewer instructions alone need not reduce runtime.
+
+Scored parent confirmation f62a284779b4447d is pending. Two of eight checks and one of
+two submits used today. The old local source is exactly archived as submission_v8.py.
 
 ## Sources below or close to our former rank
 
@@ -67,6 +79,9 @@ running; source SHA7e7e0793c672bb0e044fb5777c4bcc59916a9b17447056f31821acf4c6fba
 | https://github.com/zhebrak/muse-spark-kernels | Then#608/1.0039x;public tree lists four winner tracks but no prefill winner | No prefill source to reproduce from that tree |
 | https://github.com/MadanChaollaPark/open-kernel-experiments at40154c27d4b694c7d641c7959b00d7ff24a7c2e4 | Then#535/1.1206x,near our former rank;README ties exact grouped-TMA source to official762a6d1810654813;627 archived candidates include failures | Grouped TMA/persistent work is already superseded by this control; PRMT FP4 lookup was correct but slower; unfinished mixed-input Hopper proof has no measured speedup |
 | https://github.com/lee101/openkernels atc565e373d34575c5f7df862b05f8be7619078b0f | Prefill gap analysis and FP4 conversion survey | Dequant layout is a concrete transferable mechanism; old phase/roofline estimates must be replaced with our passing profile |
+| https://github.com/tommyyliu/okc | Above our former rank;public prefill submission is the10692-byte plain-PyTorch challenge starter,despite a higher team score | Public HEAD is not their stronger scored implementation;no optimized prefill mechanism to transfer from it |
+| https://github.com/AniMahou/Muse | Above our former rank;README is a Bangla voice/field-intelligence application | Keyword collision;unrelated source |
+| https://github.com/zzz0906/sglang | Leader's discovered repository;default HEAD9a7ac3ecefc64bf4b47c70e3446e233ac02773ea dated2026-07-23,inherited SGLang branch names | No verified challenge submission found in reviewed metadata/default branch;do not claim the leader's private implementation was recovered |
 
 Madhavan's source atc1809247 has SHA76fb7501371fd3331858795e462ce5d0877e4b6a789a10a7c189fb7a8e5aaaa4.
 It includes a broader experimental history,while the vjeux parent prunes dead device branches.

@@ -95,4 +95,4 @@ rng = random.Random(0x1084)
 for _ in range(20000):
     verify([rng.randrange(16) for _ in range(8)])
     checked += 1
-print(f"PASS: {checked} packed words, all16 codes, pair interactions and multiply carries; GPU check still required")
+print(f"PASS: {checked} packed words, all16 codes, pair interactions and multiply carries; source isolation verified. GPU evidence is tracked separately.")
