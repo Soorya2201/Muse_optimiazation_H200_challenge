@@ -65,6 +65,22 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct 29 active attention reproduction
+
+MoE's current cycle completed at 2.324062x (see below). Active track is now attention.
+All1064 ranked attention accounts were screened (877 above,186 below,ourselves);941
+repository metadata snapshots were reused from the recent MoE screen with timestamps.
+Four404 accounts remain unresolved. Results: `muse_attention_decode/RANKED_GITHUB_REPO_SCREEN.json`.
+
+`submission_v15_vjeux_f35a41e.py` is exact Apache-2.0 original source at f35a41e and
+byte-identical to ruwwww's public source at3b15eb8; SHA-256
+`5811d22bb985092ba5a29a8f4c8e266de189399ee708d7b14efcb9c9bf5a510e`.
+Its fused WGMMA attention is the strongest published control found so far (vjeux live2.6104x,
+ruwwww2.6032x, versus ours1.2954x). Check `385a2d2e58cd476d` is running; first routine
+attention check today. Read source audit in `muse_attention_decode/PUBLIC_RESEARCH.md`.
+Wait for that specific job, inspect all16 correctness tests and12timings, then promote/submit
+only if the improvement gate passes. Do not replace submission.py before its result.
+
 #### Oct 29 MoE public-source continuation
 
 BF16 remains at its eight-check routine limit, so the active goal advanced to MoE in project

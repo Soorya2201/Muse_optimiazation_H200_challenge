@@ -7,11 +7,13 @@ not proof that an unlabelled/private submission does not exist.
 import concurrent.futures
 import datetime
 import json
+from pathlib import Path
 import re
 import subprocess
 import sys
 
 SIGNALS = re.compile(r'muse|open.?kernel|\bokc\b|h200|kernel.?challenge|sglang|w4a16|nvfp4', re.I)
+REPO_CACHE = {}
 
 def command(args):
     p = subprocess.run(args, capture_output=True, text=True)
@@ -21,6 +23,10 @@ def command(args):
 
 def inspect(row):
     result = {k: row.get(k) for k in ('rank', 'team', 'speedup', 'job')}
+    cached = REPO_CACHE.get(row['team'])
+    if cached is not None:
+        result.update(cached)
+        return result
     try:
         pages = command(['gh', 'api', '--paginate', '--slurp',
                          f'users/{row["team"]}/repos?per_page=100&type=owner'])
@@ -40,6 +46,17 @@ if __name__ == '__main__':
     track = sys.argv[1]
     if not re.fullmatch(r'muse_[a-z0-9_]+', track):
         raise SystemExit('Invalid track')
+    if len(sys.argv) > 2:
+        previous = json.loads(Path(sys.argv[2]).read_text())
+        captured = datetime.datetime.fromisoformat(previous['captured_utc'])
+        if (datetime.datetime.now(datetime.timezone.utc) - captured).total_seconds() > 3600:
+            raise SystemExit('Repository cache is older than one hour; refresh it')
+        for account in previous['accounts']:
+            if account['status'] == 'screened':
+                REPO_CACHE[account['team']] = {
+                    'status': 'screened', 'public_repo_count': account['public_repo_count'],
+                    'matches': account['matches'],
+                    'repo_metadata_captured_utc': account.get('repo_metadata_captured_utc', previous['captured_utc'])}
     board = command(['okc', 'leaderboard', track, '--json'])
     rows = [row for row in board['rows'] if isinstance(row.get('rank'), int)]
     collected = []
@@ -52,7 +69,7 @@ if __name__ == '__main__':
     result = {'captured_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
               'track': track, 'you': board['you'], 'ranked': board['ranked'],
               'accounts_checked': len(collected),
-              'method': 'Paginated public owner repositories; name/description/topic keyword screen.',
+              'method': 'Paginated public owner repositories; name/description/topic keyword screen. Optional repository snapshots reused for up to one hour with capture timestamp; ranks always fresh.',
               'limits': 'Private, renamed, unlabelled or unindexed submissions may be missed. Matches need source review.',
               'accounts': sorted(collected, key=lambda x: x['rank'])}
     target = f'{track}/RANKED_GITHUB_REPO_SCREEN.json'
