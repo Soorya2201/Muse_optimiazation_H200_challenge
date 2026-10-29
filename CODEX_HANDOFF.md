@@ -65,6 +65,33 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct 29 MoE public-source continuation
+
+BF16 remains at its eight-check routine limit, so the active goal advanced to MoE in project
+order. The owner expanded public research to accounts above and below us across all five
+tracks; root `PUBLIC_SOURCE_INDEX.md` records coverage. The MoE public-repository metadata
+screen is complete for all 1112 ranked accounts at capture (625 above, 486 below, and ourselves).
+Raw per-account evidence: `muse_moe_w4a16/RANKED_GITHUB_REPO_SCREEN.json`; five 404 accounts are
+explicitly unresolved. Keyword hits still require source inspection.
+
+Exact Apache-2.0 vjeux source at f35a41e passed check `f2d5efeeb8884bbf` at **2.339526x**,
+5748.386 us, CI [2.304433,2.374619], 5/5 tests and all six timed cases passing. Prepare was
+137.2 s. `muse_moe_w4a16/submission.py` is now byte-identical to
+`submission_v18_vjeux_f35a41e.py`, SHA-256
+`10e0690d7fc21244bf29f6df2916b89f0ddcbe8f94d7afe15983478d315883a3`.
+It replaces three launches with a persistent fused grid and RS-WGMMA for larger token groups.
+
+Exact Madhavan derivative `submission_v19_madhavan_c180924.py` passed check
+`b601303f873c4a08` at 2.330435x, 5770.812 us, prepare57.75s. It adds bs16 helper-warp-zero
+and bs32 FT_T32, but did not improve the aggregate and is not promoted. Both variants retain
+their notices/licenses; mechanism/source details are in `muse_moe_w4a16/PUBLIC_RESEARCH.md`.
+Two of eight MoE routine checks and one of two submits are used. Scored submission
+`9835951891204c56` passed 5/5 and all timed cases at **2.324062x**, 5786.636 us, CI
+[2.289201,2.358923], prepare165.25s. New rank **#146/1112**, overall **#447/1599**. Profiles
+and logs were read. Preserve exact v18 in submission.py. Proceed to attention because the MoE
+runbook's >=2.0x stop criterion is reached. Public ruwwww source reports
+attention2.6032x and is a strong next reproduction candidate after precision/source audit.
+
 #### Oct 29 BF16 reset campaign
 
 Latest Oct 29 18:07 UTC follow-up: BF16 rank #169/1374, score unchanged at 1.521867x,

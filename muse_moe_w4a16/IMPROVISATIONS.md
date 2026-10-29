@@ -1,7 +1,45 @@
 # `muse_moe_w4a16` optimization record
 
 This file records measured results, including regressions. Estimates are explicitly marked.
-The current verified submission is `submission.py` = `submission_v12_ap3_nt1_bs32.py`.
+The current verified local submission is `submission.py` = `submission_v18_vjeux_f35a41e.py`.
+Scored submission `9835951891204c56` confirms **2.324062x**, 5786.636 us, CI
+[2.289201,2.358923], 5/5 tests and six timed cases passed. Live rank #146/1112; overall
+#447/1599. This replaces v12's 1.632884x (+42.33% speedup, 29.74% less normalized time).
+
+## Oct 29 public-source architecture change
+
+Check `f2d5efeeb8884bbf` reproduces the exact Apache-2.0 vjeux persistent kernel at
+**2.339526x**, 5748.386 us, CI [2.304433, 2.374619], 5/5 tests and six timed cases passing.
+Prepare took 137.2 seconds. This is a 43.28% speedup over v12's 1.632884x scored result,
+with disjoint confidence intervals. The exact source is promoted locally and qualifies for
+scoring. It combines both GEMMs, SwiGLU, norm, and routed summation into one persistent launch,
+uses helper-warp TMA for tiny jobs, and RS-WGMMA for larger token groups. It replaces the
+architectural costs that AP/WP parameter sweeps could not remove.
+
+| Tokens | Old v12 paired us | Public v18 check paired us | Time reduction |
+|---:|---:|---:|---:|
+| 1 | 36.53 | 25.79 | 29.4% |
+| 16 | 112.88 | 95.42 | 15.5% |
+| 32 | 155.58 | 131.52 | 15.5% |
+| 8 | 85.85 | 64.21 | 25.2% |
+| 128 | 296.76 | 183.09 | 38.3% |
+| 256 | 439.94 | 218.80 | 50.3% |
+
+These are cross-job comparisons, not causal per-cell paired experiments. The public kernel
+profiles as one launch per case; numerical test errors were about 0.25%, comfortably below
+the 1.5% whole-output bound. Most remaining headroom is the bs16/32 mid-band and large-job
+operand delivery/fixups. Achieving the current 2.6888x leader still needs roughly 13% less
+normalized time from this check.
+
+The second reserved check, `b601303f873c4a08`, tests the exact Madhavan derivative with a
+bs32 FT_T32 WGMMA build and helper-warp-zero at bs16. It passed 5/5 at 2.330435x,
+5770.812 us, CI [2.295478, 2.365391], and did not improve the aggregate. Exact v18 is now
+submitted as `9835951891204c56` and confirmed 2.324062x. All public source
+commits, hashes, notices, and lower-ranked mechanism studies are in `PUBLIC_RESEARCH.md`.
+
+The owner explicitly expanded source discovery to teams both above and below us. A paginated
+GitHub public-repository screen of all 1112 ranked MoE accounts is complete; code-search candidates
+are preserved in root `PUBLIC_SOURCE_INDEX.md`. Metadata matches require individual source review.
 
 ## Current result and profile
 
