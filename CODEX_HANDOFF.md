@@ -67,6 +67,14 @@ okc withdraw <job>            # take a run off the board
 
 #### Oct29 20:15UTC active MoE second cycle
 
+Latest active track is now attention. Secondcheck5213b424b3eb47f5 runs
+submission_v16_l2_lookahead.py,SHA1e1ad7ff7266e6f9b99172d0e5703e7b6574668f1b5570a0f49de561aef9e23b.
+It adds only c1809247PFL2=1 producer prefetch to exactv15's flatL1 path. Actual full cache
+copies,precision,barriers,plans,and all other native logic remain unchanged. Builder
+tools/build_attention_l2_lookahead_candidate.py audits AST/native isolation;py_compile passes.
+Read all result/log/profiles;attention budget2/8checks,1/2submits. Keep scored2.603505x parent
+until a qualifying check wins. MoE second cycle concluded6/8checks;details below.
+
 Previous goal turn was progress (decoder/prefill scored gains,full source metadata audit).
 MoE is active now. Zhebrakff4d55a public2.018186x receipt loses to our2.324062x on all
 six paired shapes;see muse_moe_w4a16/PUBLIC_RESEARCH.md. Deeper review finds our parent

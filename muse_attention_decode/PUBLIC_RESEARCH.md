@@ -1,5 +1,36 @@
 # Public attention source research and reproduction
 
+## Oct 29 second cycle: isolated future-row prefetch
+
+After MoE's second cycle, attention resumes at one check and one submit used today.
+The full current source/profile/checks/reference files and track instructions were reviewed.
+The promoted source already has FP8 WGMMA, FP8 PV for verify, producer register redistribution,
+TMA page-index strips, and shape-specific fused merge. These are retained mechanisms.
+
+Further inspection of the Apache-2.0 [Madhavan derivative](https://github.com/Madhavan113/kerneloptimizer/blob/c180924742f5ec30ee7434b1d99cf2c16d2aa777/muse_attention_decode/submission.py)
+finds identical tuned launch overrides, plus many disabled experimental branches. Its public
+2.5883x snapshot is below our 2.603505x, so the whole file is not assumed faster. Its
+`OKC_PFL2` producer hook is absent from our pruned source: once future page-table strips
+land, one lane per 128-byte K/V row prefetches the next tile into L2 before normal copies.
+The experiment inventory lists distances one and two but supplies no win in that code.
+
+`submission_v16_l2_lookahead.py` ports only distance one into the existing `TMAPG_ON`
+branch (flat full-context L=1). It retains the same required cache reads, precision,
+barriers, new-entry writes and launch plans. No synthetic tuning code, actual inputs,
+or outputs are cached. Preconditions keep it within cached rows, page size one and
+32-bit cache offsets; other native paths are unchanged.
+
+Expected upside is modest because current B16/B32 full decode is already around the
+published older fixture's gather ceiling. Possible losses are early producer blocking,
+extra issue instructions/register pressure, and extra traffic. Neither a positive
+source description nor a lower-ranked team's technique proves a gain here.
+
+Builder `tools/build_attention_l2_lookahead_candidate.py` verifies that only the small
+native hook and extension namespace differ from the exact checked parent. Python syntax
+passes. SHA-256 `1e1ad7ff7266e6f9b99172d0e5703e7b6574668f1b5570a0f49de561aef9e23b`.
+Check `5213b424b3eb47f5` is running, second of eight checks. Keep the scored parent until
+actual correctness and confidence evidence justify promotion.
+
 ## Account coverage
 
 `RANKED_GITHUB_REPO_SCREEN.json` captures all 1064 ranked accounts on 2026-10-29: 877
