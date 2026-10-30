@@ -53,10 +53,14 @@ if __name__ == '__main__':
             raise SystemExit('Repository cache is older than one hour; refresh it')
         for account in previous['accounts']:
             if account['status'] == 'screened':
+                repo_captured = account.get('repo_metadata_captured_utc', previous['captured_utc'])
+                repo_age = datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(repo_captured)
+                if repo_age.total_seconds() > 3600:
+                    continue  # A fresh outer snapshot must not renew an older repository cache.
                 REPO_CACHE[account['team']] = {
                     'status': 'screened', 'public_repo_count': account['public_repo_count'],
                     'matches': account['matches'],
-                    'repo_metadata_captured_utc': account.get('repo_metadata_captured_utc', previous['captured_utc'])}
+                    'repo_metadata_captured_utc': repo_captured}
     board = command(['okc', 'leaderboard', track, '--json'])
     rows = [row for row in board['rows'] if isinstance(row.get('rank'), int)]
     collected = []

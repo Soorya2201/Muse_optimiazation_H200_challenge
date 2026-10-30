@@ -32,5 +32,9 @@ current context (`initial_context=False`), bound the correct device, and ran
 the753-token router Lt plan with3.1739455e-6 relative error against torch.mm.
 It establishes the new binder/probe behavior, not that the old whole kernel
 would necessarily fail (it allocates through PyTorch before some native calls).
-Promoted locally for robustness; scored confirmation25a1e0e5df0d4949 is running.
-No GPU algorithm changed; do not credit its1.16% cross-job point shift as a speed gain.
+Promoted locally for robustness. Scored confirmation25a1e0e5df0d4949 passed
+all5tests/8timings at1.779374x,217719.166us,CI1.752684-1.806065,
+prepare53.73s,sfo3. Fresh-thread raw Lt output error3.3597826e-6; allprofiles/logs
+read and archived. Old eligible1.784958x stays the board best (#118/662).
+Check/submit spread1.48% and overlapping intervals establish no GPU speedup
+or regression. The canonical source keeps the verified context hardening.

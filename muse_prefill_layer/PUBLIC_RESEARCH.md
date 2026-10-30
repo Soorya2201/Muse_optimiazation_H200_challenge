@@ -13,7 +13,10 @@ Check `a77a2557e1a24fa7` passed1.805642x on sfo3,all5tests/8timings,
 prepare53.23s. A fresh thread initially had no driver context, then bound the
 device and executed Lt753router with3.17e-6 relative error. All profiles/logs
 were read and archived. Promoted for robustness; scored confirmation
-`25a1e0e5df0d4949` is running. No GPU algorithm speedup is claimed.
+`25a1e0e5df0d4949` passed1.779374x,all5tests/8timings,prepare53.73s,sfo3.
+Allprofiles/logs archived/read. Native GPU code is unchanged; no speed gain or
+regression is established. Canonical source keeps the context binder; old
+eligible1.784958x remains the board best (#118/662).
 
 ## Coverage
 

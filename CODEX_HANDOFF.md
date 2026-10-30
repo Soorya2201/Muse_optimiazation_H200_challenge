@@ -121,8 +121,12 @@ wraps prepare/kernel. Prepare probes one existing Lt plan on independent data
 from a fresh thread,joins it and checks the output. No speedup expected/claimed.
 Actual fresh-thread probe initial_context=False,Lt753router,relerr3.17e-6.
 Allprofiles/logs archived/read;promoted for robustness (native GPU path unchanged).
-Submit `25a1e0e5df0d4949` running sfo3,Oct30 prefill1/8checks,1/2submits.
-Prefill metadata refresh active using timestampedBF16cache;then remaining tracks.
+Submit `25a1e0e5df0d4949` passed1.779374x on sfo3,all5tests/8timings,
+217719.166us,CI1.752684-1.806065,prepare53.73s. Probeerr3.36e-6,initialctxFalse.
+All profiles/logs archived/read. Canonicalv20 retains robustness;oldeligiblebest
+1.784958x stays board row#118/662. No GPU speed/regression claim;no withdrawalneeded.
+Oct30 prefill1/8checks,1/2submits;cycle complete. Prefill metadata662-account
+refresh complete using timestampedBF16cache;then remaining tracks.
 Do not repeat unchanged submissions for lucky scores.
 See NEXT_MEASUREMENTS_2026-10-30.md.
 BF16 metadata refresh complete for1433

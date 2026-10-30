@@ -1,5 +1,18 @@
 # Prefill-layer optimization record
 
+## Oct30 context robustness and public-source refresh
+
+Canonical `submission.py` is v20,whose entire vjeux GPU prefix/native code is
+unchanged. An attributed per-thread driver binder wraps prepare/kernel entry.
+Both checka77a2557e1a24fa7 (1.805642x) and submit25a1e0e5df0d4949
+(1.779374x) pass5tests/8timings and a fresh-thread raw cuBLASLt probe.
+The thread initially had no current context; bound router753 errors were
+3.17e-6/3.36e-6 vs torch.mm. Allprofiles/logs are archived and inspected.
+This is a verified robustness improvement,not a GPU performance gain. Old
+eligible best1.784958x remains the board row at#118/662. Do not withdraw it
+without proof of invalidity; the whole old kernel may bind through PyTorch allocations.
+Fresh public metadata covers662 entrants;see PUBLIC_REPO_FOLLOWUP_2026-10-30.md.
+
 ## Oct29 public-source cycle (supersedes historical implementation status below)
 
 The exact Apache-2.0 vjeux f35a41e control `submission_v17_vjeux_f35a41e.py` passed
