@@ -1,5 +1,20 @@
 # Prefill public-source audit and optimization campaign
 
+## Oct30 continuation
+
+Fresh metadata covers662 entrants (117 above/544 below/self at capture),
+with timestamped repository reuse within1h and four unresolved accounts.
+See `PUBLIC_REPO_FOLLOWUP_2026-10-30.md` and the dated JSON. New/updated
+matches were checked; no newly published stronger prefill submission was found
+in inspected source. Alygg77 prefill AST/native constants equal originalvjeux.
+
+Context-hardeningv20 preserves the entire parent prefix/native GPU path.
+Check `a77a2557e1a24fa7` passed1.805642x on sfo3,all5tests/8timings,
+prepare53.23s. A fresh thread initially had no driver context, then bound the
+device and executed Lt753router with3.17e-6 relative error. All profiles/logs
+were read and archived. Promoted for robustness; scored confirmation
+`25a1e0e5df0d4949` is running. No GPU algorithm speedup is claimed.
+
 ## Coverage
 
 The2026-10-29T19:47:58UTC repository screen covers all644 ranked accounts:538 above
