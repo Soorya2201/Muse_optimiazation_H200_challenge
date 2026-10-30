@@ -1,5 +1,14 @@
 # Prefill-layer optimization record
 
+Oct30: controlled hybrid-exp/PIPE-RRS study is archived in
+HYBRID_PIPELINE_2026-10-30.md. Checks2d21c2cf18c84e2e(sfo3) and
+2f9fe01a6f8f4702(sfo3c) pass5tests/8timings each,timing parent dispatch.
+Independent two-seed comparisons reject all tested three-WG and two-WG
+25%/50%FMA alternatives;unchanged43remains best. Resource attributes show
+zero local bytes for all six variants,so no compiler-spill explanation is
+established. All profiles/logs/raw probes archived;no canonical change or
+scored submit. Prefill3/8reserved checks,1/2submits today.
+
 ## Oct30 context robustness and public-source refresh
 
 Canonical `submission.py` is v20,whose entire vjeux GPU prefix/native code is

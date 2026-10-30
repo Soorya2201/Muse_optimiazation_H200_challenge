@@ -1,5 +1,19 @@
 # Prefill public-source audit and optimization campaign
 
+## Oct30 controlled pipeline/exponential follow-up
+
+See [HYBRID_PIPELINE_2026-10-30.md](HYBRID_PIPELINE_2026-10-30.md).
+Combined existing FP32 cubic25%/50%FMA with selected full-attention PIPE/RRS.
+Two independent seed groups with duplicate controls show16-27% longer
+attention time. Follow-up resource queries show zero compiler local bytes;
+two-WG controls and hybrids remain slower than the three-WG incumbent on
+every timed geometry. FMA25% helps the weaker two-WG control,which does not
+make it an improvement over our stronger parent. t1f two-WG arms fail the
+chosen1% diagnostic parent-agreement gate and were not timed there.
+Both official checks pass all5tests/8timings while timing parent dispatch.
+Only unchanged class choices qualify;no promotion/score claim. The report
+links primary FA3/FA4 research and retains all numeric failures/regressions.
+
 ## Oct30 continuation
 
 Fresh metadata covers662 entrants (117 above/544 below/self at capture),

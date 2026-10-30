@@ -86,14 +86,27 @@ duplicate A/A controls. Both hybrids lose everywhere:25%FMA16.33-20.58%longer;
 Loose full-forward-zero board bound15.623%;idealized half-exp-work resource
 model+4.748%,not measured exposure or expected gain. Do not borrow decode
 kernel's40.5% SFU fraction. Canonical unchanged;no eligible fixed combination.
-Adaptive v22 resource/two-WG probe2f9fe01a6f8f4702 now active on sfo3c,
+Adaptive v22 resource/two-WG probe2f9fe01a6f8f4702 completed on sfo3c,
 SHA9e7aee12321ad86c2b5a6615d4cab56c0569708e599d8c392553b7f901071ec4.
 Queries compiler registers/local bytes and compares2WGPIPE/RRS48native,
 49FMA25,50FMA50 withfeature-off48andduplicate43controls. Same5fullgeometries,
-2seeds,9reps;timed full-layer path staysparent43. Extract with--variants48 49 50.
+2seeds,9reps;timed full-layer path staysparent43. All5tests/8timings pass
+1.784364x,217110.385us,CI1.757598-1.811129,prepare59.73s.
+Compiled localSizeBytes0 forall6variants;numRegs128(3WG)/168(2WG).
+No compiler-local allocation increase supports a spill explanation.
+Four timed full geometries/all2WGarms lose vsstrong3WGparent. FMA25helps
+weaker2WGcontrolby15-17%time,but remains slower thanincumbent. t1f2WGarms
+exceedchosen1%diagnosticagreementgate(errors1.479-1.487%,splits11vs2),so
+not timed there;this does not prove challengefailure. All64 fixed choices
+rejectalternatives underthegates. Resources/rawprobes/receipts/allprofiles
+andlogs archived/read. Extract with --variants 48 49 50.
 Updated extractor models from each job's own timed-parent profiles;never
-mix sfo3/sfo3c durations. Read/archive terminal result next.
-Prefill3/8checks,1/2submits;other budgets unchanged. See
+mix sfo3/sfo3c durations. No GPUjobrunning. Canonicalv20SHA8b52...21a5
+unchanged;no scoredsubmit/no ranking improvement. Tested periodic25/50FMA
+and2WGPIPE/RRS combinations closed;do not repeat without new evidence.
+Prefill3/8checks,1/2submits;other budgets unchanged. Latest18:32:40UTC ranks:
+overall87/1711,decoder87/1059,MoE118/1199,attention146/1143,
+BF16186/1489,prefill144/705. GitHubprivate reverified. See
 muse_prefill_layer/HYBRID_PIPELINE_2026-10-30.md for sources/method/gates.
 
 #### Oct30 17:50UTC internal-disk continuation

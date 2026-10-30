@@ -28,6 +28,12 @@ Rank1 has not been achieved. Work one track at a time and keep the8-check/
   including24 shard-offset cases,remote-only zero output,deepcopy,and a
   fresh-thread graph with two changed-input replays. Model integration and
   full-node validation remain pending. See serving/MOE_PORT_STATUS.md.
+- Prefill performance: two controlled pipeline/exponential probes completed.
+  Existing25%/50%FMA with three-WG PIPE/RRS loses16-27% attention time;
+  two-WG controls also lose. Compiler-reported local memory is zero for
+  all six variants. Only unchanged class dispatch qualifies in27/64-choice
+  models. No promoted algorithm or scored submit. Full evidence is in
+  muse_prefill_layer/HYBRID_PIPELINE_2026-10-30.md and both diagnosticJSONs.
 
 ## What is worth doing next
 

@@ -133,10 +133,61 @@ schedule uses the existing shape-only split heuristic. It retains parent43
 for every timed full-layer call. This tests a concrete register/schedule
 explanation for the observed loss,rather than sweeping polynomial fractions.
 
-- Check `2f9fe01a6f8f4702`,pending at creation;third of eight reserved prefill
+- Check `2f9fe01a6f8f4702`,passed on sfo3c;third of eight reserved prefill
   checks today,one submit already used.
 - Source SHA256 `9e7aee12321ad86c2b5a6615d4cab56c0569708e599d8c392553b7f901071ec4`.
 - Builder `tools/build_prefill_hybrid_resource_probe.py`;extractor accepts
   `--variants 48 49 50` to evaluate all64 fixed class combinations.
 - Only a recurring modeled board gain beyond3% would justify a subsequent
   whole-layer candidate check;resource observations alone cannot raise rank.
+
+### Follow-up outcome and what it means
+
+All5tests/8timings pass at1.784363749x,217110.385us,
+CI1.757598–1.811129,prepare59.73s. The timed implementation is parent43;
+this point score is not a two-WG/hybrid result. All eight profiles and full
+prepare/resource/probe/remote logs were read and archived.
+
+|Variants|Compiler numRegs|Compiler localSizeBytes|
+|---|---:|---:|
+|43/44/45: three WGs,native/25%/50%FMA|128|0|
+|48/49/50: two WGs,native/25%/50%FMA|168|0|
+
+These are compiled function attributes,not per-consumer dynamic setmaxnreg
+limits. There is no recorded local allocation increase and no evidence here
+for compiler spills causing the three-WG loss. Arithmetic/issue contention
+and schedule interaction remain plausible explanations;NCU/SASS counters
+were not collected,so a unique execution-level cause is not established.
+
+On all four timed full geometries(t4f and the three first-turn contexts),
+both seeds show these speed ratios relative to the strong three-WG parent:
+
+|Two-WG arm|Ratio range|Outcome|
+|---|---:|---|
+|48,native exponential|0.637260–0.661355|Slower|
+|49,25%FMA|0.767187–0.787397|Slower|
+|50,50%FMA|0.679282–0.701075|Slower|
+
+The25%FMA arm does reduce the **weaker two-WG control's** median time by
+about15–17%. This is useful evidence of pipeline interaction,not an
+improvement over the incumbent. Duplicate strong-parent offsets are at most
+0.2024%,well below the regressions.
+
+At t1f,the split heuristic selects11splits for two WGs versus2for parent43.
+All three two-WG outputs differ from the parent by1.479–1.487%,above the
+chosen1% diagnostic gate,so they were **not timed** there. This gate failure
+does not prove a challenge correctness failure. All variants pass the small
+FA3 validation with worst relative error0.0151. The four remaining
+geometries meet the diagnostic numerical gate but lose on performance.
+
+The extractor evaluated64 fixed class choices under these gates;only the
+unchanged43/43/43 configuration qualifies. It now uses each diagnostic's
+own official timed-parent profile for modeling,so sfo3c data is never paired
+with sfo3 durations. Raw records/resources are retained in
+`HYBRID_PIPE_REPORT_2f9fe01a6f8f4702.json`.
+
+**Decision:** close the tested periodic25%/50%FMA combinations and two-WG
+PIPE/RRS schedule. Keep canonical v20 and scored best unchanged. No
+full-layer candidate or scored submit is justified. This does not prove
+that every possible polynomial,schedule or separate decode-attention
+implementation loses;those require their own measured case and bound.

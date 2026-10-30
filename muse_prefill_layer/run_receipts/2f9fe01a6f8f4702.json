@@ -1,0 +1,357 @@
+{
+  "job": "2f9fe01a6f8f4702",
+  "board": "muse_prefill_layer",
+  "mode": "check",
+  "cluster": "sfo3c",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.178.04",
+      "name": "NVIDIA H200",
+      "power.draw": 129.48,
+      "power.limit": 700,
+      "temperature.gpu": 39
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.178.04",
+      "name": "NVIDIA H200",
+      "power.draw": 130.62,
+      "power.limit": 700,
+      "temperature.gpu": 35
+    },
+    "node": "n-scsqx5dijepif7d54nrfvvircu"
+  },
+  "created_at": 1793384706.6479893,
+  "source": "muse_prefill_layer/submission_v22_hybrid_resource_probe.py",
+  "source_sha256": "9e7aee12321ad86c2b5a6615d4cab56c0569708e599d8c392553b7f901071ec4",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 217110.38470510536,
+    "speedup": 1.784363749003528,
+    "speedup_ci": [
+      1.757598292768475,
+      1.8111292052385808
+    ],
+    "status": "ok",
+    "tests": 5,
+    "tests_passed": 5
+  },
+  "setup": [
+    {
+      "baseline_copies": 2,
+      "baseline_prepare_pad": 10680832,
+      "copies": 3,
+      "error": null,
+      "event": "setup",
+      "first": "submission",
+      "prepare_pad": 8530944,
+      "prepare_s": 59.725941261,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900005322205467934,
+        "weight": 46
+      },
+      "median_ns": 555963.4506562804,
+      "baseline_ns": 1040096.0543192923,
+      "paired_ratio": 1.870799335984269,
+      "speedup": 1.8707993359842692,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900114743481519644,
+        "weight": 16
+      },
+      "median_ns": 903946.5756186978,
+      "baseline_ns": 1441679.979674518,
+      "paired_ratio": 1.594872992010367,
+      "speedup": 1.594872992010367,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900224164757571355,
+        "weight": 46
+      },
+      "median_ns": 1758227.7971079221,
+      "baseline_ns": 3301952.081732452,
+      "paired_ratio": 1.8780001585481554,
+      "speedup": 1.8780001585481554,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900333586033623067,
+        "weight": 16
+      },
+      "median_ns": 3056734.835340213,
+      "baseline_ns": 4804016.030859202,
+      "paired_ratio": 1.571616868862136,
+      "speedup": 1.571616868862136,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900552428585726494,
+        "weight": 16
+      },
+      "median_ns": 9772621.463574737,
+      "baseline_ns": 18343776.837922633,
+      "paired_ratio": 1.8770579528016063,
+      "speedup": 1.8770579528016063,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900661849861778209,
+        "weight": 138
+      },
+      "median_ns": 8846991.129252082,
+      "baseline_ns": 16630768.372211605,
+      "paired_ratio": 1.879821978935064,
+      "speedup": 1.879821978935064,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900771271137829925,
+        "weight": 16
+      },
+      "median_ns": 12476298.982457675,
+      "baseline_ns": 21059440.105222166,
+      "paired_ratio": 1.687955709848957,
+      "speedup": 1.687955709848957,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900990113689933360,
+        "weight": 16
+      },
+      "median_ns": 15214669.204276629,
+      "baseline_ns": 24210896.636825055,
+      "paired_ratio": 1.5912864296793068,
+      "speedup": 1.5912864296793068,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900005322205467934,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<0>(okc_moe::FusedArgs)        248.0 \u00b5s  43.8%      1\nnvjet_sm90_tst_128x192_64x5_2x1_v_bz_coopB_TNN                   153.6 \u00b5s  27.1%      3\nnvjet_sm90_tst_112x128_64x7_1x2_h_bz_TNN                          39.4 \u00b5s   7.0%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, false, false,...      20.4 \u00b5s   3.6%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      20.1 \u00b5s   3.6%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      18.5 \u00b5s   3.3%      1\nvoid okc_attn::attn_combine2_kernel<2>(float const*, int,...      17.6 \u00b5s   3.1%      1\nnvjet_sm90_tss_128x96_64x7_1x2_h_bz_splitK_TNT                    13.0 \u00b5s   2.3%      1\n_combine_kernel                                                   11.0 \u00b5s   1.9%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...       9.9 \u00b5s   1.8%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...       5.3 \u00b5s   0.9%      1\nvoid cublasLt::splitKreduce_kernel<32, 16, int, float, fl...       3.4 \u00b5s   0.6%      1\n... 2 more\ntotal                                                            566.2 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       552.4 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900114743481519644,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...     349.4 \u00b5s  26.7%      1\nvoid okc_attn::attn_combine2_kernel<2>(float const*, int,...     348.1 \u00b5s  26.6%      1\nvoid okc_moe::moe_fused_persistent<0>(okc_moe::FusedArgs)        246.5 \u00b5s  18.9%      1\nnvjet_sm90_tst_128x192_64x5_2x1_v_bz_coopB_TNN                   164.5 \u00b5s  12.6%      3\nvoid cublasLt::splitKreduce_kernel<32, 16, int, float, fl...      66.4 \u00b5s   5.1%      1\nnvjet_sm90_tst_112x128_64x7_1x2_h_bz_TNN                          39.4 \u00b5s   3.0%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      20.1 \u00b5s   1.5%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      18.5 \u00b5s   1.4%      1\nnvjet_sm90_tss_128x96_64x7_1x2_h_bz_splitK_TNT                    13.3 \u00b5s   1.0%      1\nokc_attn::attn_prep2_kernel(unsigned char const*, unsigne...      12.0 \u00b5s   0.9%      1\n_combine_kernel                                                    9.8 \u00b5s   0.7%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...       9.4 \u00b5s   0.7%      1\n... 2 more\ntotal                                                           1306.4 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       878.8 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900224164757571355,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)        734.5 \u00b5s  41.2%      1\nnvjet_sm90_tst_256x152_64x4_1x2_h_bz_coopA_TNT                   319.4 \u00b5s  17.9%      2\nnvjet_sm90_tst_128x256_64x4_2x1_v_bz_coopA_TNN                   254.7 \u00b5s  14.3%      1\nnvjet_sm90_tst_192x144_64x5_1x2_h_bz_coopB_TNT                   149.2 \u00b5s   8.4%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      76.2 \u00b5s   4.3%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      74.9 \u00b5s   4.2%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, false, false,...      59.9 \u00b5s   3.4%      1\nnvjet_sm90_tss_128x104_64x7_4x2_h_bz_TNT                          38.0 \u00b5s   2.1%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...      26.6 \u00b5s   1.5%      1\n_combine_kernel                                                   25.9 \u00b5s   1.5%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...       8.2 \u00b5s   0.5%      1\nvoid okc_moe::qk_prep_kernel<true, false, long long, long...       6.5 \u00b5s   0.4%      1\n... 2 more\ntotal                                                           1782.1 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 900333586033623067,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...    1345.4 \u00b5s  41.8%      1\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)        756.2 \u00b5s  23.5%      1\nnvjet_sm90_tst_256x152_64x4_1x2_h_bz_coopA_TNT                   320.2 \u00b5s  10.0%      2\nnvjet_sm90_tst_128x256_64x4_2x1_v_bz_coopA_TNN                   286.8 \u00b5s   8.9%      1\nnvjet_sm90_tst_192x144_64x5_1x2_h_bz_coopB_TNT                   147.9 \u00b5s   4.6%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      77.7 \u00b5s   2.4%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      75.6 \u00b5s   2.4%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      55.4 \u00b5s   1.7%      1\nokc_attn::attn_prep2_kernel(unsigned char const*, unsigne...      45.9 \u00b5s   1.4%      1\nnvjet_sm90_tss_128x104_64x7_4x2_h_bz_TNT                          42.3 \u00b5s   1.3%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...      26.8 \u00b5s   0.8%      1\n_combine_kernel                                                   25.1 \u00b5s   0.8%      1\n... 2 more\ntotal                                                           3215.5 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                      3105.8 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900552428585726494,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3964.0 \u00b5s  40.2%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1651.5 \u00b5s  16.7%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1340.4 \u00b5s  13.6%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...     831.1 \u00b5s   8.4%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   763.6 \u00b5s   7.7%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     463.3 \u00b5s   4.7%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     283.3 \u00b5s   2.9%      1\nnvjet_sm90_tss_256x128_64x4_1x2_h_bz_coopA_TNT                   233.8 \u00b5s   2.4%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     143.5 \u00b5s   1.5%      1\n_combine_kernel                                                  137.9 \u00b5s   1.4%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      26.3 \u00b5s   0.3%      1\nvoid okc_moe::qk_prep_kernel<false, false, long long, lon...      22.5 \u00b5s   0.2%      1\n... 2 more\ntotal                                                           9870.6 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900661849861778209,
+        "weight": 138
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3524.4 \u00b5s  39.4%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1643.1 \u00b5s  18.4%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1448.5 \u00b5s  16.2%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   761.6 \u00b5s   8.5%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     462.2 \u00b5s   5.2%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, false, false,...     298.7 \u00b5s   3.3%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     280.7 \u00b5s   3.1%      1\nnvjet_sm90_tss_256x128_64x4_1x2_h_bz_coopA_TNT                   174.9 \u00b5s   2.0%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     133.1 \u00b5s   1.5%      1\n_combine_kernel                                                  128.6 \u00b5s   1.4%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      60.2 \u00b5s   0.7%      1\nvoid okc_moe::qk_prep_kernel<true, false, long long, long...      24.3 \u00b5s   0.3%      1\n... 2 more\ntotal                                                           8951.0 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                      8802.7 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900771271137829925,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...    3845.9 \u00b5s  30.9%      1\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3461.0 \u00b5s  27.8%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1654.1 \u00b5s  13.3%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1453.4 \u00b5s  11.7%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   764.7 \u00b5s   6.1%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     463.2 \u00b5s   3.7%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     282.3 \u00b5s   2.3%      1\nnvjet_sm90_tss_256x128_64x4_1x2_h_bz_coopA_TNT                   176.4 \u00b5s   1.4%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     128.9 \u00b5s   1.0%      1\n_combine_kernel                                                  127.2 \u00b5s   1.0%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      62.4 \u00b5s   0.5%      1\nvoid okc_moe::qk_prep_kernel<false, false, long long, lon...      22.4 \u00b5s   0.2%      1\n... 2 more\ntotal                                                          12459.0 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                     12300.1 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 900990113689933360,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...    6717.1 \u00b5s  42.4%      1\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3951.3 \u00b5s  24.9%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1652.9 \u00b5s  10.4%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1452.1 \u00b5s   9.2%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   763.9 \u00b5s   4.8%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     465.0 \u00b5s   2.9%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     280.4 \u00b5s   1.8%      1\nnvjet_sm90_tss_256x128_64x4_1x2_h_bz_coopA_TNT                   175.8 \u00b5s   1.1%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     140.5 \u00b5s   0.9%      1\n_combine_kernel                                                  136.8 \u00b5s   0.9%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      61.0 \u00b5s   0.4%      1\nvoid okc_moe::qk_prep_kernel<false, false, long long, lon...      22.4 \u00b5s   0.1%      1\n... 2 more\ntotal                                                          15837.5 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                     15677.8 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    }
+  ],
+  "log_tail": "LT tune T=753 qkv: torch.mm 42.7us, best 42.7us algo None of 8\nLT tune T=753 o: torch.mm 24.4us, best 24.4us algo None of 8\nLT T=753 router: pinned (33, 4, 2, 3) -> algo 6\nLT tune T=753 pooler: torch.mm 69.4us, best 69.4us algo None of 8\nLT tune T=753 unpooler: torch.mm 70.5us, best 70.5us algo None of 8\nLT tune T=3012 qkv: torch.mm 147.5us, best 147.5us algo None of 8\nLT tune T=3012 o: torch.mm 75.4us, best 75.4us algo None of 8\nLT tune T=3012 router: torch.mm 41.1us, best 41.1us algo None of 8\nLT tune T=3012 pooler: torch.mm 257.0us, best 257.0us algo None of 8\nLT tune T=3012 unpooler: torch.mm 255.9us, best 255.9us algo None of 8\nLT tune T=16384 qkv: torch.mm 772.7us, best 772.7us algo None of 8\nLT T=16384 o: pinned (201, 1, 0, 2) -> algo 6\nLT tune T=16384 router: torch.mm 203.7us, best 203.7us algo None of 8\nLT T=16384 pooler: pinned (29, 1, 0, 1) -> algo 5\nLT T=16384 unpooler: pinned (201, 1, 0, 2) -> algo 6\nATTN own kernel validation (worst rel err): {0: 0.0151, 1: 0.0151, 8: 0.0151, 9: 0.0151, 16: 0.0151, 24: 0.0151, 43: 0.0151, 44: 0.0151, 45: 0.0151, 48: 0.0151, 49: 0.0151, 50: 0.0151} -> [0, 1, 8, 9, 16, 24, 43, 44, 45, 48, 49, 50]\n[pfctx] fresh-thread bind passed: initial_context=False, Lt=(753, 'router'), relerr=2.9659493065992137e-06\nPREFILL_PIPE_RESOURCES [{\"cuda_error\": 0, \"localSizeBytes\": 0, \"maxDynamicSharedSizeBytes\": 83968, \"maxThreadsPerBlock\": 512, \"numRegs\": 128, \"sharedSizeBytes\": 0, \"variant\": 43}, {\"cuda_error\": 0, \"localSizeBytes\": 0, \"maxDynamicSharedSizeBytes\": 83968, \"maxThreadsPerBlock\": 512, \"numRegs\": 128, \"sharedSizeBytes\": 0, \"variant\": 44}, {\"cuda_error\": 0, \"localSizeBytes\": 0, \"maxDynamicSharedSizeBytes\": 83968, \"maxThreadsPerBlock\": 512, \"numRegs\": 128, \"sharedSizeBytes\": 0, \"variant\": 45}, {\"cuda_error\": 0, \"localSizeBytes\": 0, \"maxDynamicSharedSizeBytes\": 83968, \"maxThreadsPerBlock\": 384, \"numRegs\": 168, \"sharedSizeBytes\": 0, \"variant\": 48}, {\"cuda_error\": 0, \"localSizeBytes\": 0, \"maxDynamicSharedSizeBytes\": 83968, \"maxThreadsPerBlock\": 384, \"numRegs\": 168, \"sharedSizeBytes\": 0, \"variant\": 49}, {\"cuda_error\": 0, \"localSizeBytes\": 0, \"maxDynamicSharedSizeBytes\": 83968, \"maxThreadsPerBlock\": 384, \"numRegs\": 168, \"sharedSizeBytes\": 0, \"variant\": 50}]\nATTN own kernel validation (worst rel err): {43: 0.0151, 48: 0.0151, 49: 0.0151, 50: 0.0151} -> [43, 48, 49, 50]\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 1.0012334219693844, \"batch\": 1, \"case\": \"t1f\", \"ctx\": 80000, \"group\": 0, \"medians_us\": {\"a0\": 364.1279935836792, \"a1\": 363.5520040988922}, \"nsplit\": {\"43\": 2, \"48\": 11, \"49\": 11, \"50\": 11}, \"paired_speedup\": {}, \"q_len\": 753, \"repetitions\": 9, \"seed\": 3101, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.014856003224849701}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.014859752729535103}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.014870173297822475}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 0.9994933433761037, \"batch\": 4, \"case\": \"t4f\", \"ctx\": 80000, \"group\": 0, \"medians_us\": {\"48\": 2178.208112716675, \"49\": 1809.9839687347412, \"50\": 2042.720079421997, \"a0\": 1388.8959884643555, \"a1\": 1388.543963432312}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.6390975117349359, \"median\": 0.637793580726643, \"min\": 0.636562873859307}, \"49\": {\"max\": 0.768731646144718, \"median\": 0.7672453097716737, \"min\": 0.7662718185458264}, \"50\": {\"max\": 0.6811466582218706, \"median\": 0.6798586720939387, \"min\": 0.6791623343142624}}, \"q_len\": 753, \"repetitions\": 9, \"seed\": 3101, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.0012299460358917713}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.001723008113913238}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 1.0004993623274019, \"batch\": 1, \"case\": \"first0\", \"ctx\": 0, \"group\": 0, \"medians_us\": {\"48\": 1258.1119537353516, \"49\": 1064.4479990005493, \"50\": 1186.3360404968262, \"a0\": 832.0320248603821, \"a1\": 831.7760229110718}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.6629293464092189, \"median\": 0.6613547248736753, \"min\": 0.6586541750955495}, \"49\": {\"max\": 0.7836014836006248, \"median\": 0.7810573770351127, \"min\": 0.7791536285428975}, \"50\": {\"max\": 0.7030917065313403, \"median\": 0.7009752399901639, \"min\": 0.6990756818768159}}, \"q_len\": 16384, \"repetitions\": 9, \"seed\": 3101, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.0010192859917879105}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.001429131138138473}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 1.0000501062439102, \"batch\": 1, \"case\": \"first32768\", \"ctx\": 32768, \"group\": 0, \"medians_us\": {\"48\": 5857.632160186768, \"49\": 4863.840103149414, \"50\": 5480.319976806641, \"a0\": 3829.4079303741455, \"a1\": 3829.9200534820557}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.654280128724569, \"median\": 0.6538232152428219, \"min\": 0.6533314471237059}, \"49\": {\"max\": 0.7882059352140108, \"median\": 0.7873902259045544, \"min\": 0.7870483321032191}, \"50\": {\"max\": 0.6994086676746026, \"median\": 0.6987329262153795, \"min\": 0.6985606634353404}}, \"q_len\": 16384, \"repetitions\": 9, \"seed\": 3101, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.0011175030376762152}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.0015929238870739937}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 1.0, \"batch\": 1, \"case\": \"first65536\", \"ctx\": 65536, \"group\": 0, \"medians_us\": {\"48\": 10418.59245300293, \"49\": 8633.248329162598, \"50\": 9746.335983276367, \"a0\": 6761.280059814453, \"a1\": 6761.2481117248535}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.6497701247382333, \"median\": 0.6490090417201972, \"min\": 0.6486874409977202}, \"49\": {\"max\": 0.7842870578584674, \"median\": 0.783496374177756, \"min\": 0.7825944653589697}, \"50\": {\"max\": 0.6943165865488251, \"median\": 0.693968843413635, \"min\": 0.6933047493617377}}, \"q_len\": 16384, \"repetitions\": 9, \"seed\": 3101, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.0012057657586410642}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.001707490417174995}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 1.0020233960493798, \"batch\": 1, \"case\": \"t1f\", \"ctx\": 80000, \"group\": 1, \"medians_us\": {\"a0\": 364.80000615119934, \"a1\": 363.96801471710205}, \"nsplit\": {\"43\": 2, \"48\": 11, \"49\": 11, \"50\": 11}, \"paired_speedup\": {}, \"q_len\": 753, \"repetitions\": 9, \"seed\": 7907, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.014791067689657211}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.014795493334531784}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.014801404438912868}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 1.0000229898161952, \"batch\": 4, \"case\": \"t4f\", \"ctx\": 80000, \"group\": 1, \"medians_us\": {\"48\": 2189.824104309082, \"49\": 1819.3919658660889, \"50\": 2054.2399883270264, \"a0\": 1394.9439525604248, \"a1\": 1395.135998725891}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.6382824281211922, \"median\": 0.637260063791957, \"min\": 0.6361665747421504}, \"49\": {\"max\": 0.7683017096235174, \"median\": 0.7671866491639949, \"min\": 0.7660989607759078}, \"50\": {\"max\": 0.6797976809341492, \"median\": 0.6792819539159266, \"min\": 0.6787065183780345}}, \"q_len\": 753, \"repetitions\": 9, \"seed\": 7907, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.0012006069300696254}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.0016821951139718294}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 0.9998087860019105, \"batch\": 1, \"case\": \"first0\", \"ctx\": 0, \"group\": 1, \"medians_us\": {\"48\": 1265.9519910812378, \"49\": 1069.5680379867554, \"50\": 1193.4399604797363, \"a0\": 836.7999792098999, \"a1\": 836.7040157318115}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.6618922090466229, \"median\": 0.6609412637653495, \"min\": 0.6604378982202813}, \"49\": {\"max\": 0.783459041226281, \"median\": 0.7821800454593629, \"min\": 0.7812808042301058}, \"50\": {\"max\": 0.7016798514188503, \"median\": 0.7010753277024093, \"min\": 0.7004664324574905}}, \"q_len\": 16384, \"repetitions\": 9, \"seed\": 7907, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.001009065192192793}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.0013940907083451748}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 0.9998400597611998, \"batch\": 1, \"case\": \"first32768\", \"ctx\": 32768, \"group\": 1, \"medians_us\": {\"48\": 5815.104007720947, \"49\": 4827.712059020996, \"50\": 5440.767765045166, \"a0\": 3801.3439178466797, \"a1\": 3801.215887069702}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.657272727971647, \"median\": 0.6538213537526738, \"min\": 0.6534009805681931}, \"49\": {\"max\": 0.7913359594347369, \"median\": 0.787396787058775, \"min\": 0.7873046031964944}, \"50\": {\"max\": 0.7023085674318501, \"median\": 0.6985984433382659, \"min\": 0.6976852136711552}}, \"q_len\": 16384, \"repetitions\": 9, \"seed\": 7907, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.0011488246964290738}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.0016382382018491626}}}\nPREFILL_PIPE_EXP_PROBE {\"aa_ratio_median\": 0.9997522532422055, \"batch\": 1, \"case\": \"first65536\", \"ctx\": 65536, \"group\": 1, \"medians_us\": {\"48\": 10345.536231994629, \"49\": 8569.855690002441, \"50\": 9673.63166809082, \"a0\": 6715.007781982422, \"a1\": 6715.263843536377}, \"nsplit\": {\"43\": 1, \"48\": 1, \"49\": 1, \"50\": 1}, \"paired_speedup\": {\"48\": {\"max\": 0.6508844338516987, \"median\": 0.6492026467688994, \"min\": 0.6484566122874376}, \"49\": {\"max\": 0.7846282208396836, \"median\": 0.7835555534746741, \"min\": 0.7820112516171969}, \"50\": {\"max\": 0.6950350072101164, \"median\": 0.6941490616879032, \"min\": 0.6931073564440473}}, \"q_len\": 16384, \"repetitions\": 9, \"seed\": 7907, \"valid_small\": [43, 48, 49, 50], \"validation\": {\"48\": {\"finite\": true, \"relerr_vs_parent\": 0.0}, \"49\": {\"finite\": true, \"relerr_vs_parent\": 0.0012257229536771774}, \"50\": {\"finite\": true, \"relerr_vs_parent\": 0.0017314774449914694}}}\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:56 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 18:28:57 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:57 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 18:28:57 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 18:28:57 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

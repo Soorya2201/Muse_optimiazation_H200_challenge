@@ -20,12 +20,19 @@ track = ROOT / "muse_prefill_layer"
 receipt = json.loads((track / "run_receipts" / (args.job + ".json")).read_text())
 assert receipt["summary"]["passed"]
 records = {}
+resources = None
 texts = [receipt["log_tail"]]
 local_log = track / "profiles" / (Path(receipt["source"]).stem + "." + args.job + ".log")
 if local_log.exists():
     texts.append(local_log.read_text())
 for text in texts:
     for line in text.splitlines():
+        if line.startswith("PREFILL_PIPE_RESOURCES "):
+            observed = json.loads(line.split(" ", 1)[1])
+            if resources is not None:
+                assert observed == resources
+            resources = observed
+            continue
         if not line.startswith("PREFILL_PIPE_EXP_PROBE "):
             continue
         row = json.loads(line.split(" ", 1)[1])
@@ -115,6 +122,7 @@ payload = {
               "min_phase_gain_each_group_case": 0.02, "min_modeled_board_gain_each_group": 0.03},
     "model_limits": "Uses this same job's timed-parent native forward durations and independent microbenchmark ratios. Overlap, allocator layout and end-to-end effects are not isolated; actual full-layer checks required before promotion.",
     "records": [records[k] for k in sorted(records)],
+    "compiled_resources": resources,
     "eligibility": eligibility_detail, "fixed_class_combinations": combinations, "best_eligible_model": best,
 }
 target = track / ("HYBRID_PIPE_REPORT_" + args.job + ".json")
