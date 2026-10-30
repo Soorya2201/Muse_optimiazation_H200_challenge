@@ -1,0 +1,73 @@
+{
+  "repository": "https://github.com/alygg77/okc-muse-spark-kernels",
+  "commit": "6cae49a639ee6d14b929a5fd4a63c627f96d7dc0",
+  "method": "Local Git blob SHA-1 equals pinned public tree entry; no upstream code executed.",
+  "files": [
+    {
+      "local": "H200_MEASURED_FACTS.md",
+      "upstream": "docs/H200_MEASURED_FACTS.md",
+      "sha256": "b93f838aad5790a69db6b6f7b1e84690e275d9caf9b516b72dccd1fa98193c41",
+      "git_blob": "3659ac29fa57158da7440e3a74cf5e939c1582f3"
+    },
+    {
+      "local": "LICENSE",
+      "upstream": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "local": "NEGATIVE_RESULTS.md",
+      "upstream": "docs/NEGATIVE_RESULTS.md",
+      "sha256": "2f3c826efe27f11d4f92ab4f4984cf615f90ba7249619c53575d032dc24f8720",
+      "git_blob": "41275c011ce424ce5145e6112f51a390451e2785"
+    },
+    {
+      "local": "NOTICE",
+      "upstream": "NOTICE",
+      "sha256": "3ff2a7331b3ee752377c9147edb3fd986e78d78a448ad487850e15a38bf833d5",
+      "git_blob": "8d1069372b982b1f4fc7bcf263635ba56594a73c"
+    },
+    {
+      "local": "RESULTS.md",
+      "upstream": "RESULTS.md",
+      "sha256": "515ecd6a52c5cf1b86c800fef1a67406e53af24e09d6427290e7e817c098d5b3",
+      "git_blob": "5f4b447663c135532a33859086c16b7f04d08921"
+    },
+    {
+      "local": "licenses/LICENSE_NathenFernandes_muse-bf16-proj.txt",
+      "upstream": "licenses/LICENSE_NathenFernandes_muse-bf16-proj.txt",
+      "sha256": "772e14af85b6f68e7d2d114de9c913886bde91974a8eecd7ce98f785411f0c08",
+      "git_blob": "7d77c3299a31acaac789ee1d8ad0327d7cda8e9c"
+    },
+    {
+      "local": "timing_kit/README.md",
+      "upstream": "timing_kit/README.md",
+      "sha256": "10bb32a07ecd38ff3fc0b7a7cc71562023524c17bba0b712f5deeecf80ed9511",
+      "git_blob": "673afaabb6638261b8dbe883807d66d3b564613c"
+    },
+    {
+      "local": "timing_kit/__init__.py",
+      "upstream": "timing_kit/__init__.py",
+      "sha256": "cc29977122d06a73a0d150b0e406ad69c7171a8dd028b1d68347412fd5bea22c",
+      "git_blob": "604395b8671a8bee596ec9f836704e2da26a14de"
+    },
+    {
+      "local": "timing_kit/paired.py",
+      "upstream": "timing_kit/paired.py",
+      "sha256": "fa599ecedf761678a2e7a50a0e64f8f0cbb8d0b45ce920139342ea7f31a48da5",
+      "git_blob": "2720d7e3331e07dff3de649461f7ccae892db41a"
+    },
+    {
+      "local": "timing_kit/pool_runs.py",
+      "upstream": "timing_kit/pool_runs.py",
+      "sha256": "48873ba978c29dbce99bfa1f93106c6c5acf38e62b423f6707c7caef5d0a4cb4",
+      "git_blob": "19db4ffa8809fa0f08fc457da71fc4c73e713ca2"
+    },
+    {
+      "local": "timing_kit/stalls.py",
+      "upstream": "timing_kit/stalls.py",
+      "sha256": "5833f040116f07b0d51a5d6d30284e0fd4922c1d1096318bbbde11d3b18c0f0a",
+      "git_blob": "7f12c1804460ef5d38311e933a60b76a468c6ea8"
+    }
+  ]
+}
