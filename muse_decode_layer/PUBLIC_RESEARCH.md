@@ -1,5 +1,27 @@
 # Whole-decoder public source audit
 
+## Oct30 correction: required small-T router precision
+
+The original review below missed the FP32 router-activation requirement at
+T <= 8. Both pinned vjeux and Madhavan decoder sources feed BF16 activations
+there; Madhavan scored job `d857144e59784ad0` was withdrawn. Passing judge tests
+did not establish compliance. See `ROUTER_PRECISION_AUDIT_2026-10-30.md`.
+New Apache-2.0 source https://github.com/alygg77/okc-muse-spark-kernels/tree/6cae49a
+fixes this and adds KPERM3 experts. Exact check `521b039c454045da` passed on
+sfo3 at 2.189801x, all13tests/12timings,prepare128.70s. Independent repeat is
+running. This result is reproduced public work, not our original invention.
+
+The current decoder leader remains `mpeng19` at2.4178x. Oct30 public GitHub
+follow-up checked all11 repository names/descriptions, the complete default-branch
+tree of https://github.com/mpeng19/auto-inference and its README, the website
+tree, and the branches of https://github.com/mpeng19/sglang and
+https://github.com/mpeng19/ThunderKittens (both expose only `main`). The
+auto-inference project is a serving-research harness; its listed tree contains
+no standalone OKC decoder submission. Its useful process ideas are replicated
+no-change controls, an explicit noise floor, and recorded negative results.
+No winning decoder source was identified in this follow-up. This is not proof
+that the winning submission is unavailable elsewhere or that private code is absent.
+
 ## Coverage and current scores
 
 `RANKED_GITHUB_REPO_SCREEN.json` covers all980 ranked accounts at capture:807 above
@@ -29,8 +51,10 @@ path computes QKV, attention with current cache writes, O and first residual bou
 pooler/router/top8/pre-expert norm, local experts, unpooler, and the second boundary; it returns
 BF16 hidden,FP32 stream,and int32 expert IDs. Dynamic local_start is consumed on device.
 
-Static review found required precision preserved: BF16 weights use lossless C12 or original
-storage; router uses BF16 high+low with FP32 accumulation; NVFP4 weights retain codes/scales;
+The original static review's precision conclusion was incomplete: although BF16 weights
+use lossless C12 or original storage, the router's BF16 activation is allowed only above
+eight tokens. The small-T violation was discovered and corrected on Oct30. Other reviewed
+properties: NVFP4 weights retain codes/scales;
 norm factors1+w are formed in FP32 at use; hidden activations remain BF16; query/cache use
 the allowed FP8 formats. Context coverage, causal masks, reset safety,and final residual/routing
 accuracy passed all13 judge tests and12 timed cases in the control reproduction.

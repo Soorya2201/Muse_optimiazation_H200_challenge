@@ -1,0 +1,480 @@
+{
+  "job": "5c929cfd9c0b4215",
+  "board": "muse_decode_layer",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 122.46,
+      "power.limit": 700,
+      "temperature.gpu": 33
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 345,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 79.4,
+      "power.limit": 700,
+      "temperature.gpu": 28
+    },
+    "node": "n-fwq5zu7sgu2oyb5nsz3gf5n23p"
+  },
+  "created_at": 1793332804.5861328,
+  "source": "muse_decode_layer/submission_v18_alygg77_repeat_20261030.py",
+  "source_sha256": "2a06f6d0e48844921a0cb4e1cc54a916197dc80443972bc18fea8e8e41a657e5",
+  "duplicate_of": null,
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 10182.77455407322,
+    "speedup": 2.221427949708622,
+    "speedup_ci": [
+      2.1881065304629925,
+      2.254749368954251
+    ],
+    "status": "ok",
+    "tests": 13,
+    "tests_passed": 13
+  },
+  "setup": [
+    {
+      "baseline_copies": 2,
+      "baseline_prepare_pad": 9242112,
+      "copies": 1,
+      "error": null,
+      "event": "setup",
+      "first": "baseline",
+      "prepare_pad": 25422848,
+      "prepare_s": 125.323847182,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 6380002656154973786,
+        "weight": 46
+      },
+      "median_ns": 67916.48387009503,
+      "baseline_ns": 171008.0001503229,
+      "paired_ratio": 2.517915981596054,
+      "speedup": 2.517915981596054,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 6380153371217993847,
+        "weight": 16
+      },
+      "median_ns": 75547.99868011188,
+      "baseline_ns": 179952.0030617714,
+      "paired_ratio": 2.381955924785391,
+      "speedup": 2.381955924785391,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 6380304086281013909,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 126955.65872157573,
+      "baseline_ns": 260623.9914894104,
+      "paired_ratio": 2.0528741618440214,
+      "speedup": 2.0528741618440214,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 6380454801344033972,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 206183.4913234005,
+      "baseline_ns": 433872.00124561787,
+      "paired_ratio": 2.1043003902047914,
+      "speedup": 2.1043003902047914,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 6380605516407054036,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 145893.44307656348,
+      "baseline_ns": 261119.9989914894,
+      "paired_ratio": 1.7897994144565916,
+      "speedup": 1.7897994144565919,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 6380756231470074101,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 292297.2908947207,
+      "baseline_ns": 623167.9935008287,
+      "paired_ratio": 2.1319663675065694,
+      "speedup": 2.1319663675065694,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6380906946533094167,
+        "weight": 46
+      },
+      "median_ns": 105066.23689389972,
+      "baseline_ns": 261872.005648911,
+      "paired_ratio": 2.492446797284272,
+      "speedup": 2.492446797284272,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381057661596114234,
+        "weight": 16
+      },
+      "median_ns": 117611.87872372186,
+      "baseline_ns": 283343.9903333783,
+      "paired_ratio": 2.4091443263054426,
+      "speedup": 2.4091443263054426,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381208376659134302,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 240285.81204177171,
+      "baseline_ns": 517040.01473262906,
+      "paired_ratio": 2.1517708862591767,
+      "speedup": 2.1517708862591767,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381359091722154371,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 330179.950242832,
+      "baseline_ns": 702383.9852772653,
+      "paired_ratio": 2.1272763072400203,
+      "speedup": 2.1272763072400203,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381509806785174441,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 313977.8474433733,
+      "baseline_ns": 723520.0116410851,
+      "paired_ratio": 2.304366430729078,
+      "speedup": 2.304366430729078,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381660521848194512,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 475428.98857488355,
+      "baseline_ns": 1074847.9603789747,
+      "paired_ratio": 2.2607960099380398,
+      "speedup": 2.2607960099380398,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 6380002656154973786,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           30.0 \u00b5s  37.3%      1\nvoid sk2_kernel_gle35a06ad35022<1, 8, 4, 1, 8, 1, 6, true...      20.0 \u00b5s  24.9%      1\nvoid sk2_kernel<1, 8, 3, 1, 4, 2, 6, true, false, 1, 1, _...      10.5 \u00b5s  13.1%      1\nvoid sk2_kernel_gle35a06ad35022<1, 8, 4, 1, 4, 1, 4, true...       6.1 \u00b5s   7.6%      1\nvoid (anonymous namespace)::attn_kernel<1, false, 13>((an...       4.8 \u00b5s   6.0%      1\nvoid sk2_kernel<1, 8, 1, 1, 8, 2, 4, true, false, 2, 1, _...       4.8 \u00b5s   5.9%      1\n_gle_route                                                         2.4 \u00b5s   3.0%      1\n_sl_cluster_finish                                                 1.8 \u00b5s   2.2%      1\ntotal                                                             80.5 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 6380153371217993847,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           28.4 \u00b5s  34.2%      1\nvoid sk2_kernel_gle35a06ad35022<1, 8, 4, 1, 8, 1, 6, true...      18.7 \u00b5s  22.5%      1\nvoid (anonymous namespace)::attn_kernel<1, false, 11>((an...      10.7 \u00b5s  12.8%      1\nvoid sk2_kernel<1, 8, 3, 1, 4, 2, 6, true, false, 1, 1, _...      10.4 \u00b5s  12.5%      1\nvoid sk2_kernel_gle35a06ad35022<1, 8, 4, 1, 4, 1, 4, true...       6.2 \u00b5s   7.5%      1\nvoid sk2_kernel<1, 8, 1, 1, 8, 2, 4, true, false, 2, 1, _...       4.4 \u00b5s   5.3%      1\n_gle_route                                                         2.5 \u00b5s   3.0%      1\n_sl_cluster_finish                                                 1.9 \u00b5s   2.3%      1\ntotal                                                             83.3 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 6380304086281013909,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           81.2 \u00b5s  54.9%      1\nvoid sk2_kernel<1, 16, 4, 1, 8, 1, 5, true, false, 2, 1, ...      18.5 \u00b5s  12.5%      1\nvoid sk2_kernel<1, 16, 4, 1, 4, 1, 5, true, false, 2, 1, ...      15.0 \u00b5s  10.1%      1\nvoid sk2_kernel<1, 16, 3, 1, 4, 2, 5, true, false, 1, 1, ...      11.1 \u00b5s   7.5%      1\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       7.5 \u00b5s   5.1%      1\nvoid sk2_kernel<1, 16, 4, 1, 4, 1, 4, true, false, 2, 1, ...       6.1 \u00b5s   4.2%      1\nvoid glue_cluster_boundary<4, 32, true, false, false, tru...       3.5 \u00b5s   2.3%      1\nvoid glue_cluster_boundary<4, 32, false, false, false, tr...       3.1 \u00b5s   2.1%      1\n_sl_tile_route                                                     2.0 \u00b5s   1.3%      1\ntotal                                                            148.0 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       145.4 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 6380454801344033972,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...      91.3 \u00b5s  41.9%      1\nvoid okc::moe_fused<false>(okc::Params)                           64.7 \u00b5s  29.7%      1\nvoid sk2_kernel<1, 16, 4, 1, 8, 1, 5, true, false, 2, 1, ...      19.1 \u00b5s   8.8%      1\nvoid sk2_kernel<1, 16, 4, 1, 4, 1, 5, true, false, 2, 1, ...      15.0 \u00b5s   6.9%      1\nvoid sk2_kernel<1, 16, 3, 1, 4, 2, 5, true, false, 1, 1, ...      10.6 \u00b5s   4.9%      1\nvoid sk2_kernel<1, 16, 4, 1, 4, 1, 4, true, false, 2, 1, ...       7.8 \u00b5s   3.6%      1\nvoid glue_cluster_boundary<4, 32, true, false, false, tru...       3.7 \u00b5s   1.7%      1\nvoid glue_cluster_boundary<4, 32, false, false, false, tr...       3.5 \u00b5s   1.6%      1\n_sl_tile_route                                                     2.0 \u00b5s   0.9%      1\ntotal                                                            217.7 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       211.5 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 6380605516407054036,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           69.2 \u00b5s  47.5%      1\nvoid sk2_kernel<2, 32, 4, 2, 2, 2, 3, true, false, 1, 1, ...      18.1 \u00b5s  12.5%      1\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 5, true, false, 1, 1, ...      16.1 \u00b5s  11.1%      1\nvoid sk2_kernel<2, 32, 3, 1, 4, 2, 4, true, false, 1, 1, ...      12.0 \u00b5s   8.3%      1\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       9.1 \u00b5s   6.2%      1\n_graft_row_boundary_pre                                            6.9 \u00b5s   4.7%      2\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 3, true, false, 1, 1, ...       6.8 \u00b5s   4.7%      1\nvoid sk2_kernel<2, 32, 1, 1, 8, 1, 4, false, true, 4, 3, ...       5.2 \u00b5s   3.6%      1\n_sl_tile_route                                                     2.0 \u00b5s   1.4%      1\ntotal                                                            145.6 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       143.8 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 6380756231470074101,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...     173.3 \u00b5s  53.1%      1\nvoid okc::moe_fused<false>(okc::Params)                           85.8 \u00b5s  26.3%      1\nvoid sk2_kernel<2, 32, 4, 2, 2, 2, 3, true, false, 1, 1, ...      17.9 \u00b5s   5.5%      1\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 5, true, false, 1, 1, ...      15.1 \u00b5s   4.6%      1\nvoid sk2_kernel<2, 32, 3, 1, 4, 2, 4, true, false, 1, 1, ...      12.1 \u00b5s   3.7%      1\n_graft_row_boundary_pre                                            7.6 \u00b5s   2.3%      2\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 3, true, false, 1, 1, ...       7.4 \u00b5s   2.3%      1\nvoid sk2_kernel<2, 32, 1, 1, 8, 1, 4, false, true, 4, 3, ...       5.3 \u00b5s   1.6%      1\n_sl_tile_route                                                     2.2 \u00b5s   0.7%      1\ntotal                                                            326.7 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       319.7 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6380906946533094167,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           66.0 \u00b5s  55.0%      1\nvoid sk2_kernel_gle35a06ad35022<1, 8, 4, 1, 8, 1, 6, true...      19.6 \u00b5s  16.3%      1\nvoid sk2_kernel_narrow_12cf58219a16<1, 8, 3, 1, 4, 2, 5, ...       9.3 \u00b5s   7.7%      1\nvoid (anonymous namespace)::attn_kernel<8, false, 15>((an...       6.9 \u00b5s   5.8%      1\nvoid sk2_kernel<1, 8, 4, 1, 4, 1, 4, true, false, 2, 1, _...       6.0 \u00b5s   5.0%      1\nvoid sk2_kernel<1, 8, 1, 1, 8, 2, 4, true, false, 2, 1, _...       5.3 \u00b5s   4.4%      1\nvoid glue_cluster_boundary<4, 32, false, false, true, tru...       3.2 \u00b5s   2.6%      1\n_sl_tile_route                                                     1.8 \u00b5s   1.5%      1\n_sl_cluster_finish                                                 1.8 \u00b5s   1.5%      1\ntotal                                                            120.0 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       118.4 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381057661596114234,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           64.9 \u00b5s  50.8%      1\nvoid sk2_kernel_gle35a06ad35022<1, 8, 4, 1, 8, 1, 6, true...      20.3 \u00b5s  15.9%      1\nvoid (anonymous namespace)::attn_kernel<8, false, 11>((an...      14.7 \u00b5s  11.5%      1\nvoid sk2_kernel_narrow_12cf58219a16<1, 8, 3, 1, 4, 2, 5, ...       9.5 \u00b5s   7.4%      1\nvoid sk2_kernel<1, 8, 4, 1, 4, 1, 4, true, false, 2, 1, _...       6.1 \u00b5s   4.8%      1\nvoid sk2_kernel<1, 8, 1, 1, 8, 2, 4, true, false, 2, 1, _...       5.0 \u00b5s   3.9%      1\nvoid glue_cluster_boundary<4, 32, false, false, true, tru...       3.4 \u00b5s   2.7%      1\n_sl_tile_route                                                     2.1 \u00b5s   1.7%      1\n_sl_cluster_finish                                                 1.9 \u00b5s   1.5%      1\ntotal                                                            127.9 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       126.4 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381208376659134302,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 8,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           165.0 \u00b5s  63.7%      1\nnvjet_sm90_tst_128x64_64x8_1x2_h_bz_NNT                           29.2 \u00b5s  11.2%      2\nnvjet_sm90_tss_80x64_64x11_4x2_h_bz_coopB_TNN                     24.8 \u00b5s   9.6%      1\nnvjet_sm90_tst_48x64_64x15_1x2_h_bz_TNN                           16.6 \u00b5s   6.4%      1\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      11.9 \u00b5s   4.6%      1\n_graft_row_boundary                                                9.1 \u00b5s   3.5%      2\n_graft_route                                                       2.7 \u00b5s   1.0%      1\ntotal                                                            259.2 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381359091722154371,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 9,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           146.8 \u00b5s  43.7%      1\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...     105.3 \u00b5s  31.4%      1\nnvjet_sm90_tst_128x64_64x8_1x2_h_bz_NNT                           29.8 \u00b5s   8.9%      2\nnvjet_sm90_tss_80x64_64x11_4x2_h_bz_coopB_TNN                     25.8 \u00b5s   7.7%      1\nnvjet_sm90_tst_48x64_64x15_1x2_h_bz_TNN                           16.7 \u00b5s   5.0%      1\n_graft_row_boundary                                                8.9 \u00b5s   2.6%      2\n_graft_route                                                       2.6 \u00b5s   0.8%      1\ntotal                                                            335.8 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381509806785174441,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 10,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           198.6 \u00b5s  62.4%      1\nnvjet_sm90_tss_144x64_64x8_1x1_v_bz_TNN                           31.5 \u00b5s   9.9%      1\nnvjet_sm90_tst_128x128_64x6_1x2_h_bz_coopA_NNT                    25.7 \u00b5s   8.1%      1\nnvjet_sm90_tst_72x64_64x12_1x1_v_bz_TNN                           20.8 \u00b5s   6.5%      1\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      15.2 \u00b5s   4.8%      1\n_graft_row_boundary                                               13.7 \u00b5s   4.3%      2\nnvjet_sm90_tst_128x128_64x6_1x2_h_bz_coopA_NNN                     9.0 \u00b5s   2.8%      1\n_graft_route                                                       3.6 \u00b5s   1.1%      1\ntotal                                                            318.1 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 6381660521848194512,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 11,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           193.9 \u00b5s  39.9%      1\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...     185.2 \u00b5s  38.1%      1\nnvjet_sm90_tss_144x64_64x8_1x1_v_bz_TNN                           32.6 \u00b5s   6.7%      1\nnvjet_sm90_tst_128x128_64x6_1x2_h_bz_coopA_NNT                    25.8 \u00b5s   5.3%      1\nnvjet_sm90_tst_72x64_64x12_1x1_v_bz_TNN                           21.7 \u00b5s   4.5%      1\n_graft_row_boundary                                               13.8 \u00b5s   2.8%      2\nnvjet_sm90_tst_128x128_64x6_1x2_h_bz_coopA_NNN                     9.3 \u00b5s   1.9%      1\n_graft_route                                                       3.5 \u00b5s   0.7%      1\ntotal                                                            485.6 \u00b5s"
+    }
+  ],
+  "log_tail": "USDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:03:53 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

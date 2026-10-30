@@ -7,8 +7,10 @@ Madhavan c180924 feeds BF16 activations to the small-T router, whose input the
 baseline keeps in FP32. Its vjeux parent has the same issue. Do not promote or
 resubmit either unchanged. See `ROUTER_PRECISION_AUDIT_2026-10-30.md`.
 Exact alygg77 source `submission_v17_alygg77_6cae49a.py` fixes the router and is
-under test in `521b039c454045da` (sfo3). Local `submission.py` is temporarily
-restored to compliant scored v8 until the replacement is verified.
+passed checks `521b039c454045da` and `5c929cfd9c0b4215` on sfo3 at
+2.189801x/2.221428x, all13tests/12timings each. Local `submission.py` is now
+the exact verified v17. Same-day historical-source control is running;
+the noncompliant small-T parent is never eligible for resubmission.
 
 ## Oct 29 public-source reproduction (supersedes historical baseline claims below)
 

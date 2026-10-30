@@ -77,9 +77,12 @@ Attention B1 merge/protocol family closed per CODEX_NEXT_STEPS.md.
 Decoder audit confirms BF16 small-T router activation in scored Madhavan source.
 Withdrew `d857144e59784ad0` on Oct30; old2.127754x is no longer an eligible best.
 See `muse_decode_layer/ROUTER_PRECISION_AUDIT_2026-10-30.md`.
-Exact alygg77 decoder check `521b039c454045da` running on sfo3, Oct30 check1/8.
-Next: inspect result/all profiles; independent equivalent repeat and same-cluster
-control, then promote a verified compliant source, followed by MoE and BF16 P1.
+Exact alygg77 decoder checks `521b039c454045da` / `5c929cfd9c0b4215` passed
+on sfo3 at2.189801x/2.221428x,all13tests/12timings,prepare128.70/125.32s.
+Both profiles/logs read and receipts archived; local submission.py is exactv17.
+Same-day historical-source control `be9500fc5b9b4a48` running sfo3,check3/8.
+Parent's small-T precision is invalid: this is an off-board comparison only.
+Next: inspect control/all profiles,submit compliant replacement,then MoE/BF16 P1.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe
