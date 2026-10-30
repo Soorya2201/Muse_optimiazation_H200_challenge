@@ -2,7 +2,7 @@
 
 This is an **isolated offline prototype**, not a working serving optimization.
 No serving check or submit was run. The kernel boards retain their checked sources.
-An off-board MoE kernel check now validates the isolated binding; see below.
+Two passing off-board MoE kernel checks validate the isolated binding; see below.
 
 `okc_init/patch.diff` contains three new files under `python/sglang/`: two CUDA
 headers and a Python `load_jit` wrapper. None changes a model call site.
@@ -35,9 +35,18 @@ earlier function-AST checks did not cover effective module settings. This
 omission is fixed and the verifier now covers it. Kernel-track validation
 job88b96eec59f34b57 failed compilation on sfo3 because the global host entry
 used unqualified bf16_t/fp32_t aliases. No tests or timings ran. Those names
-are now qualified with sglang::; retry81468b81190440ed is pending. These are
-compatibility checks,not algorithmic speedup experiments. Model integration
-remains absent.
+are now qualified with sglang::; retry81468b81190440ed passed5tests/6timings
+at2.369600x,prepare50.70s. Follow-up11cd023842394fde passed5/6 at2.384810x,
+prepare50.30s. Both on sfo3; no algorithmic performance improvement is
+established. Allprofiles/logs/receipts are archived in the MoE track.
+
+The follow-up also passed24 shard-offset cases across all eight ep8 offsets
+atM1/16/33(maxrelativeerror1.416891e-5),zero output for remote-only routes,
+real state deepcopy,and two fresh-input graph replays from a new thread
+with an initially unbound CUDA context(grapherror0.0). These diagnostics
+use independent synthetic fixtures in prepare and retain none in state.
+Model integration remains absent; kernel correctness does not prove stock
+model norm/scale semantics or eight-GPU serving agreement.
 
 Reproduce after `okc serve init` at SGLang `a55ab7d5`:
 
@@ -49,7 +58,8 @@ python3 tools/verify_serving_moe_prototype.py
 
 The generator prints its manifest and refuses to overwrite changed generated
 files. The committed manifest identifies this checkpoint. No CUDA compiler or
-H200 is available locally, so none of these checks proves GPU correctness.
+H200 is available locally; GPU evidence comes from the separate immutable
+kernel-check receipts,not from the local source verifier.
 
 ## Why a direct model hook would be wrong
 

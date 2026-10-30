@@ -1,0 +1,1665 @@
+{
+  "captured_utc": "2026-10-30T18:03:01.601672+00:00",
+  "track": "muse_moe_w4a16",
+  "you": {
+    "rank": 116,
+    "team": "Soorya2201",
+    "speedup": 2.3723,
+    "first": false,
+    "ahead": 115,
+    "to_first": 1.1625
+  },
+  "ranked": 1199,
+  "method": "Fresh public-owner repository metadata for every currently above-ranked account plus all accounts absent from prior dated snapshot. Name/description/topic keyword screen; no private code access.",
+  "prior_snapshot": "RANKED_GITHUB_REPO_SCREEN_2026-10-30.json",
+  "limits": "Incremental screen, not every account on the new board or every source file. Unlabelled and private sources may be missed.",
+  "accounts": [
+    {
+      "rank": 1,
+      "team": "dolanzhao",
+      "speedup": 2.7578,
+      "job": "850d69d2713343c4",
+      "public_repo_count": 16,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 2,
+      "team": "pjmullin3",
+      "speedup": 2.6853,
+      "job": "8af0560874fd41f9",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 3,
+      "team": "Abarbir12",
+      "speedup": 2.6344,
+      "job": "219ef7a835164567",
+      "status": "unresolved",
+      "error": "gh: Not Found (HTTP 404)"
+    },
+    {
+      "rank": 4,
+      "team": "mpeng19",
+      "speedup": 2.616,
+      "job": "3c74627e4e8a4520",
+      "public_repo_count": 11,
+      "matches": [
+        {
+          "full_name": "mpeng19/sglang",
+          "html_url": "https://github.com/mpeng19/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-08-29T07:14:53Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 5,
+      "team": "zzz0906",
+      "speedup": 2.5899,
+      "job": "c3f36d48b0bc4b42",
+      "public_repo_count": 30,
+      "matches": [
+        {
+          "full_name": "zzz0906/sglang",
+          "html_url": "https://github.com/zzz0906/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-07-30T23:42:40Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 6,
+      "team": "DTennant",
+      "speedup": 2.5761,
+      "job": "6264840234eb4cfe",
+      "public_repo_count": 105,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 7,
+      "team": "colinlikescode",
+      "speedup": 2.576,
+      "job": "1eec9054b4c44490",
+      "public_repo_count": 8,
+      "matches": [
+        {
+          "full_name": "colinlikescode/Open-Inference",
+          "html_url": "https://github.com/colinlikescode/Open-Inference",
+          "description": "Autonomous inference optimization for your existing GPU cluster. Pi.dev experiments with vLLM, SGLang, distributed layouts, serving configs, & kernels to improve TTFT, latency, and throughput",
+          "fork": false,
+          "pushed_at": "2026-09-21T07:47:19Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 8,
+      "team": "roee50",
+      "speedup": 2.5586,
+      "job": "dea109b29b9b45ff",
+      "public_repo_count": 3,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 9,
+      "team": "gauravjain14",
+      "speedup": 2.5551,
+      "job": "a142c92bf1e54c3d",
+      "public_repo_count": 38,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 10,
+      "team": "reyanshsolis",
+      "speedup": 2.5527,
+      "job": "5a751b603e2f4ef6",
+      "public_repo_count": 37,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 11,
+      "team": "k9thebeast",
+      "speedup": 2.5467,
+      "job": "29bc928c1f144453",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 12,
+      "team": "amitsuliman",
+      "speedup": 2.5455,
+      "job": "0adf101a81ee402f",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 13,
+      "team": "mgpai22",
+      "speedup": 2.5445,
+      "job": "a7a8ebee63a54c88",
+      "public_repo_count": 151,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 14,
+      "team": "olety",
+      "speedup": 2.5422,
+      "job": "9cffd7b0df7444f4",
+      "public_repo_count": 83,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 15,
+      "team": "Lurrobert",
+      "speedup": 2.5343,
+      "job": "e066d50e067040a1",
+      "public_repo_count": 31,
+      "matches": [
+        {
+          "full_name": "Lurrobert/guild",
+          "html_url": "https://github.com/Lurrobert/guild",
+          "description": "Open board for Open Kernel Challenge agents: end-to-end-encrypted cartels, read-only forum for humans",
+          "fork": false,
+          "pushed_at": "2026-10-24T02:18:09Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 16,
+      "team": "nhat-nguyen",
+      "speedup": 2.5336,
+      "job": "937ff36cc4274710",
+      "public_repo_count": 39,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 17,
+      "team": "ntovas",
+      "speedup": 2.5324,
+      "job": "3be3389f7f0744d3",
+      "public_repo_count": 39,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 18,
+      "team": "kwanUm",
+      "speedup": 2.5274,
+      "job": "2d4c2b7546a34f68",
+      "public_repo_count": 23,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 19,
+      "team": "SamMausberg",
+      "speedup": 2.5265,
+      "job": "a70dc5e8246047e8",
+      "public_repo_count": 36,
+      "matches": [
+        {
+          "full_name": "SamMausberg/sglang",
+          "html_url": "https://github.com/SamMausberg/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-10-02T21:20:01Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 20,
+      "team": "caoshiyi",
+      "speedup": 2.5213,
+      "job": "dcb7a78f6f5c4d1e",
+      "public_repo_count": 27,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 21,
+      "team": "tie-pilot-qxw",
+      "speedup": 2.5173,
+      "job": "8e1caa62e7df41e1",
+      "public_repo_count": 41,
+      "matches": [
+        {
+          "full_name": "tie-pilot-qxw/dspark-markov-walk",
+          "html_url": "https://github.com/tie-pilot-qxw/dspark-markov-walk",
+          "description": "Fused int8 DSpark markov-walk kernels for sglang on H100: the whole gamma-step draft walk in one cooperative launch, sglang hook and end-to-end A/B harness",
+          "fork": false,
+          "pushed_at": "2026-10-04T23:25:50Z"
+        },
+        {
+          "full_name": "tie-pilot-qxw/sglang",
+          "html_url": "https://github.com/tie-pilot-qxw/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-10-08T04:04:12Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 22,
+      "team": "abhishekgahlot2",
+      "speedup": 2.516,
+      "job": "c227a2b6d1ad486c",
+      "public_repo_count": 146,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 23,
+      "team": "yigithanyigit",
+      "speedup": 2.5077,
+      "job": "35ffed1f794e4ae7",
+      "public_repo_count": 45,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 24,
+      "team": "jkbpvsc",
+      "speedup": 2.5028,
+      "job": "bb046a3c2ad64d7c",
+      "public_repo_count": 64,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 25,
+      "team": "raskin1",
+      "speedup": 2.4793,
+      "job": "c0aca331563c4e48",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 26,
+      "team": "CFC87",
+      "speedup": 2.4746,
+      "job": "8be6358e5c8b4da5",
+      "public_repo_count": 9,
+      "matches": [
+        {
+          "full_name": "CFC87/qad-exp",
+          "html_url": "https://github.com/CFC87/qad-exp",
+          "description": "NVFP4 QAD experiments on B200 with a pinned environment",
+          "fork": false,
+          "pushed_at": "2026-10-29T02:32:08Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 27,
+      "team": "Maher4Ever",
+      "speedup": 2.473,
+      "job": "522d893715cc49c2",
+      "public_repo_count": 32,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 28,
+      "team": "EmreKaplaner",
+      "speedup": 2.4729,
+      "job": "987d2e017f4a4d3c",
+      "public_repo_count": 32,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 29,
+      "team": "taroigarashi2001",
+      "speedup": 2.4712,
+      "job": "7b86a5fe21b74e5a",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 30,
+      "team": "concept-guest",
+      "speedup": 2.4669,
+      "job": "a55391fe019a4f4e",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 31,
+      "team": "ymiled",
+      "speedup": 2.4652,
+      "job": "bbed7201727c42f9",
+      "public_repo_count": 9,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 32,
+      "team": "heartkilla",
+      "speedup": 2.4629,
+      "job": "06e212d78f374f95",
+      "public_repo_count": 10,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 33,
+      "team": "harshagundala",
+      "speedup": 2.4603,
+      "job": "b1fcdf16a7fb492b",
+      "public_repo_count": 4,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 34,
+      "team": "GeorgeWu1204",
+      "speedup": 2.4585,
+      "job": "e42f30fe9480474a",
+      "public_repo_count": 14,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 35,
+      "team": "tjiang-fair",
+      "speedup": 2.4531,
+      "job": "2e6d4927c215494a",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 36,
+      "team": "picsoulabs",
+      "speedup": 2.453,
+      "job": "2d5fdaea23ee48d5",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 37,
+      "team": "seezatnap",
+      "speedup": 2.4501,
+      "job": "75a7afb9b5a3431f",
+      "public_repo_count": 21,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 38,
+      "team": "Raphael-Hao",
+      "speedup": 2.4476,
+      "job": "f1c51d6d75db4789",
+      "public_repo_count": 21,
+      "matches": [
+        {
+          "full_name": "Raphael-Hao/sglang",
+          "html_url": "https://github.com/Raphael-Hao/sglang",
+          "description": "SGLang is a fast serving framework for large language models and vision language models.",
+          "fork": true,
+          "pushed_at": "2025-11-22T06:36:49Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 39,
+      "team": "0daycloud",
+      "speedup": 2.4432,
+      "job": "f27a3b81ac454bf9",
+      "public_repo_count": 3,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 40,
+      "team": "vishaal-drkm",
+      "speedup": 2.4415,
+      "job": "5dc96fba0f0742c8",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 41,
+      "team": "Meganpark980320",
+      "speedup": 2.4334,
+      "job": "59a6386e21c34224",
+      "public_repo_count": 17,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 42,
+      "team": "pierrelouisdelx",
+      "speedup": 2.4331,
+      "job": "4df511f9e74e4020",
+      "public_repo_count": 21,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 43,
+      "team": "2018kguo",
+      "speedup": 2.4322,
+      "job": "704a8e95654649ff",
+      "public_repo_count": 47,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 44,
+      "team": "booth-algo",
+      "speedup": 2.4311,
+      "job": "1b93f9f94b5d4a74",
+      "public_repo_count": 16,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 45,
+      "team": "miketung",
+      "speedup": 2.4287,
+      "job": "a4946cbd04564da0",
+      "public_repo_count": 13,
+      "matches": [
+        {
+          "full_name": "miketung/sglang",
+          "html_url": "https://github.com/miketung/sglang",
+          "description": "SGLang is a fast serving framework for large language models and vision language models.",
+          "fork": true,
+          "pushed_at": "2025-12-10T20:32:26Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 46,
+      "team": "tonybolivar",
+      "speedup": 2.4268,
+      "job": "9ec20294b9ee4f5e",
+      "public_repo_count": 17,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 47,
+      "team": "ZhimaoL",
+      "speedup": 2.4259,
+      "job": "e321f0c03ccf4cb4",
+      "public_repo_count": 21,
+      "matches": [
+        {
+          "full_name": "ZhimaoL/sglang",
+          "html_url": "https://github.com/ZhimaoL/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-10-30T17:35:05Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 48,
+      "team": "o-k-d",
+      "speedup": 2.4243,
+      "job": "1e3502fa25be406a",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 49,
+      "team": "AkshitPareek",
+      "speedup": 2.4231,
+      "job": "bea62b324eaa4396",
+      "public_repo_count": 17,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 50,
+      "team": "nl-alonso",
+      "speedup": 2.4226,
+      "job": "b81a49f4a4c24fc2",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 51,
+      "team": "Aspect5",
+      "speedup": 2.4203,
+      "job": "b2279bc897ad41f5",
+      "public_repo_count": 16,
+      "matches": [
+        {
+          "full_name": "Aspect5/mcp-musescore",
+          "html_url": "https://github.com/Aspect5/mcp-musescore",
+          "description": "A Model Context Protocol (MCP) server that provides programmatic control over MuseScore!",
+          "fork": true,
+          "pushed_at": "2026-09-13T05:42:52Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 52,
+      "team": "keell0renz",
+      "speedup": 2.4203,
+      "job": "1deec788183a415a",
+      "public_repo_count": 28,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 53,
+      "team": "deepak-foundryai",
+      "speedup": 2.4196,
+      "job": "8997cf3666d7462a",
+      "public_repo_count": 3,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 54,
+      "team": "zro-inference",
+      "speedup": 2.4183,
+      "job": "70d448ddec3c48e7",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 55,
+      "team": "PierreNowak",
+      "speedup": 2.4158,
+      "job": "68a7036251c84391",
+      "public_repo_count": 6,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 56,
+      "team": "Sheape",
+      "speedup": 2.4158,
+      "job": "dc5929c22b84456b",
+      "public_repo_count": 53,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 57,
+      "team": "josemiguel",
+      "speedup": 2.409,
+      "job": "b3cb38e23d6e48af",
+      "public_repo_count": 17,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 58,
+      "team": "cheese-cakee",
+      "speedup": 2.4089,
+      "job": "99d035dce81942d7",
+      "public_repo_count": 29,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 59,
+      "team": "ronaldstoner",
+      "speedup": 2.4083,
+      "job": "896e2587fb844668",
+      "public_repo_count": 66,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 60,
+      "team": "nftboy07",
+      "speedup": 2.4077,
+      "job": "d607cfad882a4862",
+      "public_repo_count": 26,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 61,
+      "team": "bomboclatdaru",
+      "speedup": 2.4058,
+      "job": "3296703fb04d4e7b",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 62,
+      "team": "Pradipta-Sundar-Sahoo",
+      "speedup": 2.403,
+      "job": "594ded7ba7984d24",
+      "public_repo_count": 28,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 63,
+      "team": "SatyamKluisz",
+      "speedup": 2.403,
+      "job": "cfaa0a2f5dc843fe",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 64,
+      "team": "UnderAndOver",
+      "speedup": 2.4025,
+      "job": "01270f38ad9c4dd5",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 65,
+      "team": "adityakm24",
+      "speedup": 2.402,
+      "job": "8f75d09ac8f24a73",
+      "public_repo_count": 101,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 66,
+      "team": "alygg77",
+      "speedup": 2.4015,
+      "job": "e1bcad5a55cd4a29",
+      "public_repo_count": 18,
+      "matches": [
+        {
+          "full_name": "alygg77/okc-muse-spark-kernels",
+          "html_url": "https://github.com/alygg77/okc-muse-spark-kernels",
+          "description": "Open-source H200 CUDA kernels for the Muse Spark Open Kernel Challenge (OKC): decode layer 2.21x, NVFP4 MoE 2.40x, BF16 proj 1.55x, prefill 1.82x, attention 2.65x vs SGLang; judge results, measured H200 facts, negative results",
+          "fork": false,
+          "pushed_at": "2026-10-29T21:11:40Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 67,
+      "team": "morganmcg1",
+      "speedup": 2.4008,
+      "job": "ba891e058f454e72",
+      "public_repo_count": 99,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 68,
+      "team": "olanotolu",
+      "speedup": 2.4002,
+      "job": "ffa5f7f73e9f4995",
+      "public_repo_count": 68,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 69,
+      "team": "e-shizz",
+      "speedup": 2.3985,
+      "job": "227d206e27db4dfc",
+      "public_repo_count": 2,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 70,
+      "team": "apullin",
+      "speedup": 2.3977,
+      "job": "c4918e3db596499e",
+      "public_repo_count": 140,
+      "matches": [
+        {
+          "full_name": "apullin/muse-gadget-sdk",
+          "html_url": "https://github.com/apullin/muse-gadget-sdk",
+          "description": "Open source SDK to build Muse gadgets",
+          "fork": true,
+          "pushed_at": "2026-10-21T05:09:22Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 71,
+      "team": "vinod-memfold",
+      "speedup": 2.3968,
+      "job": "12afbcaf1b8243f5",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 72,
+      "team": "bemlerlabs",
+      "speedup": 2.3958,
+      "job": "d5033ce93e7046f7",
+      "public_repo_count": 5,
+      "matches": [
+        {
+          "full_name": "bemlerlabs/qwen3.8-flash-next-dgx-spark-sglang",
+          "html_url": "https://github.com/bemlerlabs/qwen3.8-flash-next-dgx-spark-sglang",
+          "description": "Production recipe for serving Qwen3.8-Flash-Next (180B Hybrid MoE) on a single 128GB NVIDIA DGX Spark with SGLang, NVMe PLE offloading & MTP speculative decoding.",
+          "fork": false,
+          "pushed_at": "2026-09-01T18:02:51Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 73,
+      "team": "Christian103103",
+      "speedup": 2.3954,
+      "job": "0c7dc9da18364f2a",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 74,
+      "team": "JasonLovesDoggo",
+      "speedup": 2.3951,
+      "job": "54e8938f4e984c9c",
+      "public_repo_count": 116,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 75,
+      "team": "Max17190",
+      "speedup": 2.3914,
+      "job": "6413ef3c4e1642f6",
+      "public_repo_count": 6,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 76,
+      "team": "steelep",
+      "speedup": 2.3895,
+      "job": "ca01ea21c9e743db",
+      "public_repo_count": 10,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 77,
+      "team": "emirsoyturk",
+      "speedup": 2.3895,
+      "job": "5e383b1fcb794095",
+      "public_repo_count": 34,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 78,
+      "team": "TheOnlyFusionCube",
+      "speedup": 2.3873,
+      "job": "8f2a4ea8ac864d6b",
+      "public_repo_count": 35,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 79,
+      "team": "maxaitel",
+      "speedup": 2.3871,
+      "job": "83ad3d71636b4c1e",
+      "public_repo_count": 23,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 80,
+      "team": "vladnosiv",
+      "speedup": 2.387,
+      "job": "9417310362a243f2",
+      "public_repo_count": 33,
+      "matches": [
+        {
+          "full_name": "vladnosiv/sglang",
+          "html_url": "https://github.com/vladnosiv/sglang",
+          "description": "SGLang is a fast serving framework for large language models and vision language models.",
+          "fork": true,
+          "pushed_at": "2026-10-10T01:04:37Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 81,
+      "team": "arrry-hydraDB",
+      "speedup": 2.3869,
+      "job": "8f48cd0f6eee4229",
+      "public_repo_count": 4,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 82,
+      "team": "alpinevm",
+      "speedup": 2.3867,
+      "job": "e18f9a628a7b4ba0",
+      "public_repo_count": 37,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 83,
+      "team": "nikebp",
+      "speedup": 2.3866,
+      "job": "ecc896d477b149dd",
+      "public_repo_count": 5,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 84,
+      "team": "subham-71",
+      "speedup": 2.3863,
+      "job": "18cf22037f614f34",
+      "public_repo_count": 44,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 85,
+      "team": "BasilMan517",
+      "speedup": 2.3854,
+      "job": "c78dc6fe112d484f",
+      "public_repo_count": 4,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 86,
+      "team": "aditya3799",
+      "speedup": 2.3847,
+      "job": "db4b3ef0899740a7",
+      "public_repo_count": 52,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 87,
+      "team": "yousefarifalarif",
+      "speedup": 2.3844,
+      "job": "3aab69b830264e6e",
+      "public_repo_count": 14,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 88,
+      "team": "tanctl",
+      "speedup": 2.3839,
+      "job": "919cba762fd4484a",
+      "public_repo_count": 15,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 89,
+      "team": "adamleex",
+      "speedup": 2.3833,
+      "job": "73296e5df1e84c74",
+      "public_repo_count": 12,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 90,
+      "team": "y-pakorn",
+      "speedup": 2.3827,
+      "job": "958128c7639c4442",
+      "public_repo_count": 73,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 91,
+      "team": "StarAtNyte",
+      "speedup": 2.382,
+      "job": "190d8914bacb4aa2",
+      "public_repo_count": 95,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 92,
+      "team": "Nivas2129",
+      "speedup": 2.382,
+      "job": "c7e398d05f20414b",
+      "public_repo_count": 5,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 93,
+      "team": "LDD19",
+      "speedup": 2.3811,
+      "job": "b8de1b7f9c004c9d",
+      "public_repo_count": 13,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 94,
+      "team": "GodlyDonuts",
+      "speedup": 2.3806,
+      "job": "e51723d5597b4906",
+      "public_repo_count": 56,
+      "matches": [
+        {
+          "full_name": "GodlyDonuts/sglang",
+          "html_url": "https://github.com/GodlyDonuts/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-06-30T01:10:12Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 95,
+      "team": "mnemonix-ai",
+      "speedup": 2.3805,
+      "job": "b3343b5e5eed4d9d",
+      "public_repo_count": 6,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 96,
+      "team": "ricardobeat",
+      "speedup": 2.3797,
+      "job": "1691612e1e124558",
+      "public_repo_count": 222,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 97,
+      "team": "achitaan",
+      "speedup": 2.3797,
+      "job": "ac80911ea3d34dac",
+      "public_repo_count": 14,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 98,
+      "team": "thehimalayanleo",
+      "speedup": 2.3796,
+      "job": "d1d5d7cd59154e88",
+      "public_repo_count": 69,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 99,
+      "team": "princejain756",
+      "speedup": 2.3791,
+      "job": "2fae1c382d224b41",
+      "public_repo_count": 124,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 100,
+      "team": "AnshulScodes",
+      "speedup": 2.3787,
+      "job": "2f71b047b0b44b5e",
+      "public_repo_count": 16,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 101,
+      "team": "hellno",
+      "speedup": 2.3786,
+      "job": "91a661930aa5454e",
+      "public_repo_count": 79,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 102,
+      "team": "skand-sarvam",
+      "speedup": 2.378,
+      "job": "b5044867bd114830",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 103,
+      "team": "rohanarun",
+      "speedup": 2.3775,
+      "job": "a0eecc951d8f44e8",
+      "public_repo_count": 2639,
+      "matches": [
+        {
+          "full_name": "rohanarun/cheatlayer-generatealandingpageforarealestatefirmUseunsplashf129430",
+          "html_url": "https://github.com/rohanarun/cheatlayer-generatealandingpageforarealestatefirmUseunsplashf129430",
+          "description": null,
+          "fork": false,
+          "pushed_at": "2023-11-08T17:18:18Z"
+        },
+        {
+          "full_name": "rohanarun/cheatlayer-generatealandingpageforarealestatefirmUseunsplashf163291",
+          "html_url": "https://github.com/rohanarun/cheatlayer-generatealandingpageforarealestatefirmUseunsplashf163291",
+          "description": null,
+          "fork": false,
+          "pushed_at": "2023-10-20T00:53:17Z"
+        },
+        {
+          "full_name": "rohanarun/cheatlayer-generatealandingpageforarealestatefirmUseunsplashf186772",
+          "html_url": "https://github.com/rohanarun/cheatlayer-generatealandingpageforarealestatefirmUseunsplashf186772",
+          "description": null,
+          "fork": false,
+          "pushed_at": "2023-11-08T17:27:45Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 104,
+      "team": "yairbarak22",
+      "speedup": 2.3771,
+      "job": "924e8117e27a450e",
+      "public_repo_count": 11,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 105,
+      "team": "cr0sh",
+      "speedup": 2.3766,
+      "job": "e7f306d32d984333",
+      "public_repo_count": 92,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 106,
+      "team": "franciskim",
+      "speedup": 2.3756,
+      "job": "8722196350ee4b40",
+      "public_repo_count": 44,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 107,
+      "team": "CapCap",
+      "speedup": 2.3746,
+      "job": "740b33deb6df46fc",
+      "public_repo_count": 18,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 108,
+      "team": "surya-koritala",
+      "speedup": 2.3745,
+      "job": "c3bf989aeff84cec",
+      "public_repo_count": 10,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 109,
+      "team": "TarunYadgirkar",
+      "speedup": 2.3745,
+      "job": "15dbc575795643d5",
+      "public_repo_count": 35,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 110,
+      "team": "s66lem",
+      "speedup": 2.3738,
+      "job": "ae35fbb08f764a8f",
+      "public_repo_count": 7,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 111,
+      "team": "prajitrr",
+      "speedup": 2.3736,
+      "job": "f46043346b114eae",
+      "public_repo_count": 48,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 112,
+      "team": "RanaPriyansh",
+      "speedup": 2.3734,
+      "job": "9aeaaeeda39f4dcf",
+      "public_repo_count": 83,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 113,
+      "team": "adityuhkapoor",
+      "speedup": 2.3731,
+      "job": "d0fc133cd38b4f9a",
+      "public_repo_count": 43,
+      "matches": [
+        {
+          "full_name": "adityuhkapoor/sglang",
+          "html_url": "https://github.com/adityuhkapoor/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-10-29T21:15:32Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 114,
+      "team": "wholien",
+      "speedup": 2.3731,
+      "job": "6ae29886bdad42df",
+      "public_repo_count": 107,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 115,
+      "team": "siddvrth",
+      "speedup": 2.3725,
+      "job": "5fba457545f24fe4",
+      "public_repo_count": 7,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 118,
+      "team": "wuuthraad-x",
+      "speedup": 2.371,
+      "job": "78c3c4fdecab4ba8",
+      "public_repo_count": 26,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 121,
+      "team": "AdityaStark7",
+      "speedup": 2.3688,
+      "job": "79649f71bbb74474",
+      "public_repo_count": 62,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 150,
+      "team": "1jmdev",
+      "speedup": 2.3567,
+      "job": "aafd2a8c24f34424",
+      "public_repo_count": 64,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 157,
+      "team": "1sgtpepper",
+      "speedup": 2.3553,
+      "job": "b05cfcf1ec3a4521",
+      "public_repo_count": 95,
+      "matches": [
+        {
+          "full_name": "1sgtpepper/sglang",
+          "html_url": "https://github.com/1sgtpepper/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-10-05T03:42:59Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 160,
+      "team": "vnicula",
+      "speedup": 2.3541,
+      "job": "a55ece1b36614bac",
+      "public_repo_count": 12,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 164,
+      "team": "j0ons",
+      "speedup": 2.3525,
+      "job": "e99034c583d84230",
+      "public_repo_count": 4,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 190,
+      "team": "rushikesh0022",
+      "speedup": 2.3368,
+      "job": "8e0458d3fd7c4cc7",
+      "public_repo_count": 32,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 192,
+      "team": "seyfal",
+      "speedup": 2.3355,
+      "job": "d7a5d252d4de4753",
+      "public_repo_count": 26,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 235,
+      "team": "nat-nischw",
+      "speedup": 2.3159,
+      "job": "a9d4b1be69794b68",
+      "public_repo_count": 5,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 318,
+      "team": "vpd",
+      "speedup": 2.1492,
+      "job": "5d40fa1a0cf14923",
+      "public_repo_count": 2,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 362,
+      "team": "rakshit087",
+      "speedup": 2.0871,
+      "job": "835d81a100694be8",
+      "public_repo_count": 38,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 366,
+      "team": "YounesElhjouji",
+      "speedup": 2.0832,
+      "job": "a1631ec6d7c64a73",
+      "public_repo_count": 23,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 448,
+      "team": "lekkogazo",
+      "speedup": 1.9698,
+      "job": "f711667c0c6c4e53",
+      "public_repo_count": 3,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 464,
+      "team": "VipulRamtekkar",
+      "speedup": 1.9446,
+      "job": "6d0937976e1841a2",
+      "public_repo_count": 64,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 494,
+      "team": "marcinbogdanski",
+      "speedup": 1.9036,
+      "job": "db4c61ca37724908",
+      "public_repo_count": 40,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 534,
+      "team": "Mayank-8127",
+      "speedup": 1.851,
+      "job": "fa3062bb2c2241a2",
+      "public_repo_count": 14,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 553,
+      "team": "gaidar0yegor",
+      "speedup": 1.8369,
+      "job": "0274e2c9c0494db2",
+      "public_repo_count": 8,
+      "matches": [
+        {
+          "full_name": "gaidar0yegor/w4a16-dequant-gemm",
+          "html_url": "https://github.com/gaidar0yegor/w4a16-dequant-gemm",
+          "description": "Where a fused int4 (W4A16) dequant+GEMM kernel has to land: measured roofline target (22 us) and every baseline it must beat, including bitsandbytes NF4 and torch.compile.",
+          "fork": false,
+          "pushed_at": "2026-10-16T20:44:23Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 568,
+      "team": "JeeHoy",
+      "speedup": 1.8276,
+      "job": "6b254cde41a0497a",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 604,
+      "team": "kelly-gibson",
+      "speedup": 1.7919,
+      "job": "537af6d72e08412d",
+      "public_repo_count": 11,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 671,
+      "team": "luke-hays",
+      "speedup": 1.7075,
+      "job": "7a890dad28424b08",
+      "public_repo_count": 5,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 681,
+      "team": "Nickforall",
+      "speedup": 1.7,
+      "job": "06d3f6b045544973",
+      "public_repo_count": 56,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 695,
+      "team": "praise2112",
+      "speedup": 1.6713,
+      "job": "2fa249cb0b004462",
+      "public_repo_count": 54,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 738,
+      "team": "pepinu",
+      "speedup": 1.6074,
+      "job": "d99844d3222a48c7",
+      "public_repo_count": 50,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 773,
+      "team": "atulpokh-ai",
+      "speedup": 1.5579,
+      "job": "8078bb5d36614c3f",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 778,
+      "team": "linkar03",
+      "speedup": 1.5471,
+      "job": "4fcdaa1db894488a",
+      "public_repo_count": 1,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 817,
+      "team": "AnjaneyaTripathi",
+      "speedup": 1.4653,
+      "job": "e63d47d6ea474e90",
+      "public_repo_count": 22,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 818,
+      "team": "goldbar123467",
+      "speedup": 1.4612,
+      "job": "f1a7129bb66d4b48",
+      "public_repo_count": 94,
+      "matches": [
+        {
+          "full_name": "goldbar123467/NVFP4-Group-Gemm",
+          "html_url": "https://github.com/goldbar123467/NVFP4-Group-Gemm",
+          "description": null,
+          "fork": false,
+          "pushed_at": "2026-02-06T03:20:33Z"
+        },
+        {
+          "full_name": "goldbar123467/nvfp4_group_gemm",
+          "html_url": "https://github.com/goldbar123467/nvfp4_group_gemm",
+          "description": null,
+          "fork": false,
+          "pushed_at": "2026-01-20T02:27:48Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 861,
+      "team": "xhiibrids",
+      "speedup": 1.3828,
+      "job": "753dae53f17c4f1b",
+      "public_repo_count": 22,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 900,
+      "team": "mil-orb",
+      "speedup": 1.3531,
+      "job": "4f1d88bef1364454",
+      "public_repo_count": 6,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 962,
+      "team": "a-hamdi",
+      "speedup": 1.316,
+      "job": "c903f678f0dd4e74",
+      "public_repo_count": 26,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 995,
+      "team": "tomzhengy",
+      "speedup": 1.2938,
+      "job": "e55fc7006f1b4417",
+      "public_repo_count": 7,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 998,
+      "team": "oswalpalash",
+      "speedup": 1.2916,
+      "job": "3b490f1113714b95",
+      "public_repo_count": 100,
+      "matches": [
+        {
+          "full_name": "oswalpalash/lysithea",
+          "html_url": "https://github.com/oswalpalash/lysithea",
+          "description": "small cute utils for kernel challenges",
+          "fork": true,
+          "pushed_at": "2024-04-23T00:08:19Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 1000,
+      "team": "KushnerykPavel",
+      "speedup": 1.2905,
+      "job": "0ed9dfdff42e43db",
+      "public_repo_count": 39,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 1040,
+      "team": "sipah00",
+      "speedup": 1.2718,
+      "job": "1f02e3c7b0fb4dc3",
+      "public_repo_count": 27,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 1048,
+      "team": "ScrashOff",
+      "speedup": 1.2702,
+      "job": "5b4871f069ac4a55",
+      "public_repo_count": 7,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 1085,
+      "team": "jiroamato",
+      "speedup": 1.2469,
+      "job": "32a64041eeaf4f3d",
+      "public_repo_count": 46,
+      "matches": [
+        {
+          "full_name": "jiroamato/CLIProxyAPI",
+          "html_url": "https://github.com/jiroamato/CLIProxyAPI",
+          "description": "Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Series, Claude model through API",
+          "fork": true,
+          "pushed_at": "2026-10-27T23:01:11Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 1135,
+      "team": "theexray",
+      "speedup": 1.1605,
+      "job": "3524036c1e0045f6",
+      "public_repo_count": 0,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 1174,
+      "team": "Chrisbryan17",
+      "speedup": 1.1076,
+      "job": "2a5e1de0f3ae446f",
+      "public_repo_count": 16,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 1179,
+      "team": "anencore94",
+      "speedup": 1.0999,
+      "job": "9dde4904f9854be5",
+      "public_repo_count": 55,
+      "matches": [
+        {
+          "full_name": "anencore94/sglang",
+          "html_url": "https://github.com/anencore94/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-10-26T13:26:09Z"
+        }
+      ],
+      "status": "screened"
+    },
+    {
+      "rank": 1185,
+      "team": "tanayarun",
+      "speedup": 1.0698,
+      "job": "f8e45699c4204867",
+      "public_repo_count": 24,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 1193,
+      "team": "sigmalos",
+      "speedup": 1.0122,
+      "job": "7b10f2b69db44787",
+      "public_repo_count": 8,
+      "matches": [],
+      "status": "screened"
+    },
+    {
+      "rank": 1197,
+      "team": "bikrammajhi",
+      "speedup": 1.0005,
+      "job": "2a001e0a089f4f4c",
+      "public_repo_count": 60,
+      "matches": [
+        {
+          "full_name": "bikrammajhi/mini-sglang",
+          "html_url": "https://github.com/bikrammajhi/mini-sglang",
+          "description": "A compact implementation of SGLang, designed to demystify the complexities of modern LLM serving systems.",
+          "fork": true,
+          "pushed_at": "2026-05-17T12:37:42Z"
+        },
+        {
+          "full_name": "bikrammajhi/zero-to-sglang",
+          "html_url": "https://github.com/bikrammajhi/zero-to-sglang",
+          "description": "Official SGLang x Datawhale course on LLM inference: understand inference, build a mini-sglang from scratch, then read the real SGLang source and land your first PR. Available in English and Chinese.",
+          "fork": true,
+          "pushed_at": "2026-09-19T06:15:16Z"
+        }
+      ],
+      "status": "screened"
+    }
+  ]
+}

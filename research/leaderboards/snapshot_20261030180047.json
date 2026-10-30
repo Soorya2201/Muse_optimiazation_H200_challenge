@@ -1,0 +1,126 @@
+{
+  "captured_utc": "2026-10-30T18:00:47.339182+00:00",
+  "method": "live OKC leaderboard JSON; compact own/leader snapshot",
+  "boards": {
+    "muse_bf16_proj": {
+      "you": {
+        "rank": 186,
+        "team": "Soorya2201",
+        "speedup": 1.5358,
+        "first": false,
+        "ahead": 185,
+        "to_first": 1.0742
+      },
+      "ranked": 1488,
+      "leader": {
+        "attempts": 12,
+        "job": "9f7fe9fede8c410d",
+        "rank": 1,
+        "screened_speedup": 1.6292121691203512,
+        "screening": "pending",
+        "speedup": 1.6498,
+        "submitted_at": 1793307977.5601625,
+        "team": "naklecha",
+        "value": 2928.0681513765885
+      }
+    },
+    "muse_moe_w4a16": {
+      "you": {
+        "rank": 116,
+        "team": "Soorya2201",
+        "speedup": 2.3723,
+        "first": false,
+        "ahead": 115,
+        "to_first": 1.1625
+      },
+      "ranked": 1199,
+      "leader": {
+        "attempts": 28,
+        "job": "850d69d2713343c4",
+        "rank": 1,
+        "screened_speedup": 2.691480225421144,
+        "speedup": 2.7578,
+        "submitted_at": 1793342085.0064502,
+        "team": "dolanzhao",
+        "value": 4876.546274740954
+      }
+    },
+    "muse_attention_decode": {
+      "you": {
+        "rank": 146,
+        "team": "Soorya2201",
+        "speedup": 2.6035,
+        "first": false,
+        "ahead": 145,
+        "to_first": 1.2376
+      },
+      "ranked": 1142,
+      "leader": {
+        "attempts": 9,
+        "job": "7d1f783733cf49c6",
+        "rank": 1,
+        "screened_speedup": 3.053051644887263,
+        "speedup": 3.2221,
+        "submitted_at": 1793320748.8132067,
+        "team": "tjiang-fair",
+        "value": 1168.9055342770528
+      }
+    },
+    "muse_decode_layer": {
+      "you": {
+        "rank": 86,
+        "team": "Soorya2201",
+        "speedup": 2.2115,
+        "first": false,
+        "ahead": 85,
+        "to_first": 1.0933
+      },
+      "ranked": 1057,
+      "leader": {
+        "attempts": 31,
+        "job": "f91b449a02764f8f",
+        "rank": 1,
+        "screening": "screened",
+        "speedup": 2.4178,
+        "submitted_at": 1793280810.6919541,
+        "team": "mpeng19",
+        "value": 9355.71475316891
+      }
+    },
+    "muse_prefill_layer": {
+      "you": {
+        "rank": 144,
+        "team": "Soorya2201",
+        "speedup": 1.785,
+        "first": false,
+        "ahead": 143,
+        "to_first": 1.1387
+      },
+      "ranked": 705,
+      "leader": {
+        "attempts": 25,
+        "job": "b08e5d36bce14fb2",
+        "rank": 1,
+        "screening": "screened",
+        "speedup": 2.0325,
+        "submitted_at": 1793232060.7299857,
+        "team": "zzz0906",
+        "value": 190604.3542384025
+      }
+    },
+    "overall": {
+      "you": {
+        "rank": 86,
+        "team": "Soorya2201",
+        "first": false,
+        "ahead": 85
+      },
+      "ranked": 1709,
+      "leader": {
+        "rank": 1,
+        "solved": 4,
+        "team": "mpeng19"
+      }
+    }
+  }
+}

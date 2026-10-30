@@ -42,7 +42,7 @@ Global code search supplements the profile screen, including accounts absent fro
 - https://github.com/PostTrainLLM/posttrainllm — experiments/openkernel sources and provenance; published MoE score below ours, useful mechanism inventory.
 - https://github.com/Ranoobaba/okc-campaign — indexed challenge material; source relevance still needs verification.
 - https://github.com/tommyyliu/okc — MoEf134725 GEMM/packing/dispatch and attention split/merge/epilogue/plan sections reviewed. Lossless packing,register prefetch,head packing and hierarchical merges overlap our stronger parents. Later board snapshots are not asserted identical to the inspected source. No code copied.
-- https://github.com/xharshvardhan/open-kernel-challenge — indexed source; review pending.
+- https://github.com/xharshvardhan/open-kernel-challenge — MoE source4958d314 reviewed Oct30: published1.3749x, fused local alignment and hot/cold Marlin tile buckets,retaining both library GEMMs. Existing persistent parent already fuses routing/phases/finalization;no additional winning component established. Other tracks remain separate reviews.
 - https://github.com/theluckystrike/muse-spark-open-kernels — code search hit, current tree only exposed README; no verified submission yet.
 - https://github.com/ruwwww/open-kernel-challenge — current README reports attention 2.6032x, MoE 2.3370x, decoder 2.0751x, and prefill 1.7950x with job IDs. Strong reproduction candidates for the remaining tracks after source/precision review; README mechanism descriptions alone are not proof.
 - https://github.com/Aravind-11/muse-moe-w4a16 — historical 1.629x early kernels; README explicitly says current entry is not published.

@@ -1,5 +1,5 @@
 {
-  "status": "offline isolated prototype; not compiled on CUDA, not integrated into model",
+  "status": "isolated prototype; model integration unvalidated; GPU evidence is recorded separately in LOADJIT_VALIDATION_2026-10-30.md",
   "sglang_commit": "a55ab7d5ae1bba59ac351e55026fe7f7644ecc5f",
   "donor": "muse_moe_w4a16/submission_v24_alygg77_6cae49a.py",
   "donor_sha256": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",

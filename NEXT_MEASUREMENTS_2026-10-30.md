@@ -24,8 +24,10 @@ Rank1 has not been achieved. Work one track at a time and keep the8-check/
   metadata and reviewed new candidates. Scope/limitations are recorded in
   each `PUBLIC_REPO_FOLLOWUP_2026-10-30.md`; no unpublished winner was found.
 - Serving: isolated default-off MoE load_jit prototype prepared. Source and
-  patch checks pass; CUDA compilation, model integration and full-node
-  validation are still pending. See serving/MOE_PORT_STATUS.md.
+  patch checks pass. Later native binding validation passed twice on H200,
+  including24 shard-offset cases,remote-only zero output,deepcopy,and a
+  fresh-thread graph with two changed-input replays. Model integration and
+  full-node validation remain pending. See serving/MOE_PORT_STATUS.md.
 
 ## What is worth doing next
 
@@ -37,7 +39,7 @@ Rank1 has not been achieved. Work one track at a time and keep the8-check/
 |4|BF16 selective RQ128 integration research|Chen qkv/pooler/unpooler at128 tokens save about6.5us combined against alygg77 in observed standalone timings. Projected board gain~1.7%; loose zero-phase bound~31%. Neither is a measured hybrid gain.|Independent memory-pad A/B/A first. Port only the isolated lossless RQ128 subset if it wins; keep prepare under300s and validate all30 cells.|
 |5|Attention hybrid FMA/MUFU exponentials|Public trace reports40.5% exp in full verify. Eliminating that cost entirely is a loose~13% attention-board bound; practical hybrid estimate only1.5-2%.|Independent-GPU prototype first; fixed work split, all keys retained, correct FP8-query rules and full numerical tests.|
 |6|MoE readiness/release redesign|Unit-end stalls remain, but published NOFENCE changes gained only0.23%. No established3% board opportunity yet.|Do not spend a blind judge check; demonstrate a new measured bound and correct per-stage publication first.|
-|7|Serving MoE port — isolated prototype prepared|load_jit binding and exact packing/dispatch prepared; four layouts cost3.375GiB/layer,or202.5GiB across sixty layers before scratch/fallback/KV.|Compile and compare on H200; resolve effective norm/scales/sharding, then a single-layer model pilot and lower-memory design. No serving speed claim without8-H200 validation.|
+|7|Serving MoE port — kernel binding validated|Fixed late MID/helper0 mapping and dtype-namespace omission. H200 checks2.369600x/2.384810x pass;24 shard-offset,remote-zero,deepcopy and fresh-thread graph probes pass. Four layouts still cost3.375GiB/layer.|Resolve effective norm/scales and complete a single-layer model pilot,then a lower-memory design. Nearby token/stream cases and8-H200 agreement remain;no serving speed claim.|
 
 The H200 timing kit, measured facts, negative results, exact licenses and source
 manifest are preserved in research/public/alygg77_6cae49a/. Their claims are

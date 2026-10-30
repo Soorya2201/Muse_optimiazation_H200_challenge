@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-30 05:38:39 UTC** from the live OKC boards. Overall **#56/1656**.
+Captured **2026-10-30 18:00:47 UTC** from the live OKC boards. Overall **#86/1709**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|135/1438|1.535843x|1.6498x|6.91%|
-|Routed experts|81/1151|2.372309x|2.6995x|12.12%|
-|Attention decode|109/1104|2.603505x|3.2221x|19.20%|
-|Whole decoder|56/1011|2.211495x|2.4178x|8.53%|
-|Prefill|118/662|1.784958x|2.0325x|12.18%|
+|BF16 projections|186/1488|1.535843x|1.6498x|6.91%|
+|Routed experts|116/1199|2.372309x|2.7578x|13.98%|
+|Attention decode|146/1142|2.603505x|3.2221x|19.20%|
+|Whole decoder|86/1057|2.211495x|2.4178x|8.53%|
+|Prefill|144/705|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -32,8 +32,10 @@ Prefill context-hardening check a77a2557e1a24fa7 and submit25a1e0e5df0d4949
 both passed. Its native GPU path is unchanged; no speedup claim. The old
 eligible1.784958x remains the board best. All five boards' public-owner
 metadata screens are refreshed; each dated follow-up records its limits.
-An isolated serving MoE load_jit prototype is prepared, with source/patch
-checks passing; it is not integrated or GPU-compiled. See
+The isolated serving MoE load_jit binding passed two H200 kernel checks
+at2.369600x/2.384810x,including independent shard-offset/deepcopy/fresh-thread
+graph probes. These do not establish a speedup;canonical/scored kernels are
+unchanged. The port is not model-integrated. See
 serving/MOE_PORT_STATUS.md. The repository was reverified PRIVATE at capture.
 Current test budgets and source-discovery scope are in CODEX_HANDOFF.md and
 PUBLIC_SOURCE_INDEX.md. Rank1 work remains open.

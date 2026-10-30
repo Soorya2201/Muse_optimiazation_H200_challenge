@@ -245,7 +245,7 @@ for rel, content in outputs.items():
     patch += "\n".join("+" + line for line in content.splitlines()) + "\n*** End Patch\n"
     subprocess.run(["apply_patch", patch], check=True, capture_output=True)
 manifest = {
-    "status": "offline isolated prototype; not compiled on CUDA, not integrated into model",
+    "status": "isolated prototype; model integration unvalidated; GPU evidence is recorded separately in LOADJIT_VALIDATION_2026-10-30.md",
     "sglang_commit": "a55ab7d5ae1bba59ac351e55026fe7f7644ecc5f",
     "donor": str(DONOR.relative_to(ROOT)), "donor_sha256": EXPECTED,
     "donor_device_section_sha256": hashlib.sha256(device_original.encode()).hexdigest(),

@@ -80,12 +80,30 @@ MoE load_jit validation check88b96eec59f34b57 failed compilation(sfo3):
 global host entry omitted sglang:: namespace on bf16_t/fp32_t. Full log read,
 failed receipt archived. No correctness/timing ran. Fixed in immutablev28,
 SHA41458546626ef0243a9378d40f86670bee9e35f73bb5548831c09edbb160253f;
-retry81468b81190440ed is active on sfo3,canonical unchanged.
+retry81468b81190440ed PASSED on sfo3 at2.369600x,all5tests/6timings,
+prepare50.70s,copies1. Follow-upv29/11cd023842394fde PASSED2.384810x,
+all5/6,prepare50.30s,copies1. Its exactv28 timed prefix is retained;
+independent prepare-only probes passed24 shard-offset cases(all8ep8offsets
+atM1/16/33,maxrelerr1.416891e-5),remote-only exactzero,real state deepcopy,
+and2 fresh-input graph replays from initially unbound thread(relerr0.0).
+Allprofiles/logs read and allthree terminal receipts archived. No job running.
 This is GPU binding/compatibility validation,not a speedup experiment.
-MoE5/8routinechecks,1/2submits;other budgets unchanged from05:38checkpoint.
-Current three-file patch310171bytes;check result/allprofiles/logs next. See
+MoE6/8routinechecks,1/2submits;other budgets unchanged from05:38checkpoint.
+Canonical/scored source unchanged;no compatibility-only submit. Two passing
+scores spread0.642%,inside uncertainty;allocator/copy-count differences limit
+comparisons. Current three-file patch310171bytes;model integration,norm/scale
+adaptation,nearby token/stream cases and full-node memory/agreement remain.
+Next substantive serving step is effective-norm/scales plus one-layer pilot,
+not another unchanged-algorithm score check. See
 muse_moe_w4a16/LOADJIT_VALIDATION_2026-10-30.md. Core public source families
 unchanged on GitHub;additional source follow-ups documented there.
+Fresh incremental MoE public metadata screen covers157accounts(all115above
+plus48new entrants,six overlap),one404. No new stronger usable H200 source
+established;new Blackwell/native-FP4 repos are not direct H200 BF16 ports.
+Recent ZhimaoL main fork0ahead/1666behind;other branches not fully audited.
+See PUBLIC_DELTA_FOLLOWUP_2026-10-30T1800Z.md and its JSON in MoE folder.
+18:00:47UTC live ranks:overall86/1709,decoder86/1057,MoE116/1199,
+attention146/1142,BF16186/1488,prefill144/705. Rank1/top50 not achieved.
 
 #### Oct30 05:38UTC checkpoint: public-source cycle completed
 

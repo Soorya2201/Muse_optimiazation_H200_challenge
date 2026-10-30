@@ -25,6 +25,18 @@ original_functions = {
     n.name: n for n in original.body if isinstance(n, ast.FunctionDef)
     and 3104 <= n.lineno <= 3359
 }
+# Match the current headers to the exact embedded sources exercised by OKC.
+# This is source linkage only; numerical results still come from the receipts.
+for version in (28, 29):
+    candidates = list((ROOT / "muse_moe_w4a16").glob(f"submission_v{version}_loadjit*.py"))
+    for candidate in candidates:
+        candidate_tree = ast.parse(candidate.read_text())
+        embedded = next(ast.literal_eval(n.value) for n in candidate_tree.body
+                        if isinstance(n, ast.Assign) and any(isinstance(a, ast.Name)
+                        and a.id == "_NATIVE_SOURCES" for a in n.targets))
+        for name, content in embedded.items():
+            expected = checkout / "python/sglang/kernels/jit/csrc/muse_spark_v12" / name
+            assert content == expected.read_text(), (candidate, name)
 new_functions = {n.name: n for n in new.body if isinstance(n, ast.FunctionDef)}
 for name, node in original_functions.items():
     other = new_functions["_prepare_local_weights" if name == "prepare" else name]
@@ -101,4 +113,4 @@ assert sorted(paths) == sorted(manifest["outputs"]), paths
 assert all(p.startswith("python/sglang/") and "/model_loader/" not in p for p in paths)
 subprocess.run(["git", "-C", str(checkout), "apply", "--reverse", "--check", str(patch)], check=True)
 print(f"PASS: {len(original_functions)} packing/setup helpers, dispatch AST, final variant settings, both device sources, default-off guards, {len(paths)}-file {patch.stat().st_size}-byte patch")
-print("CUDA compilation, graph replay, GPU numerical comparisons, model integration and serving throughput remain unvalidated.")
+print("Source checks do not validate GPU behavior; consult immutable run receipts. Model integration and serving throughput remain unvalidated.")

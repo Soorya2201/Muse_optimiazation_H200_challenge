@@ -44,12 +44,37 @@ it can support serving work. The canonical scored kernel remains unchanged.
   a failed-run receipt archived; the archiver now supports failed jobs
   without profiler JSON when an immutable --source is supplied.
 - Source SHA256: `639a5f5a4e86872274ba7f545772538723ad3ae7950d330eedf3c3ad0f54b002`.
-- Retry: v28,job `81468b81190440ed`,pending at creation. Both aliases are
+- Retry: v28,job `81468b81190440ed`,passed5tests/6timings on sfo3. Both aliases are
   qualified; generated trailing whitespace also removed. Device algorithms,
   packing and final variant mapping unchanged.
 - Retry SHA256: `41458546626ef0243a9378d40f86670bee9e35f73bb5548831c09edbb160253f`.
-- Routine MoE budget after retry enqueue:5/8checks,1/2submits on Oct30UTC.
-- Read every profile/log and archive terminal evidence before deciding next.
+- v28:2.369599741x,5675.431us,CI2.334056–2.405144,prepare50.70s,copies1.
+  Full six-profile report,empty local log and remote profiler log read;
+  terminal receipt archived. Point score differs−0.114%from canonical,
+  inside uncertainty. No performance-gain claim.
+- v29:job `11cd023842394fde`,passed5tests/6timings on sfo3 at2.384809928x,
+  5639.233us,CI2.349038–2.420582,prepare50.30s,copies1. Exactv28 timed prefix.
+  Prepare-only independent probes passed24 shard-offset cases atM1/16/33
+  (all eight ep8 offsets,maxrelerr1.416891e-5),remote-only exactzero output,
+  real state deepcopy and a fresh thread with initially unbound CUDA
+  context. Two graph replays after fresh activation changes had relerr0.0.
+  Fixtures/graph discarded before return. All six profiles and both logs
+  read;terminal receipt archived.
+- Two passing check scores differ0.642%,with overlapping intervals and
+  different prepare fixtures/allocator layout. No causal speedup claim.
+  Canonical/scored source unchanged;no compatibility-only scored submit.
+- Routine MoE budget after this cycle:6/8checks,1/2submits on Oct30UTC.
+
+## Additional source-analysis negative
+
+A generic proposal to overlap unit boundaries was checked against the actual
+WGS loop before allocating another run. The current source already alternates
+`af[ci & 1]`,uses`wg_wait<1>()`,and flushes deferred prior-segment work in the
+first stage of the next segment at`OKC_WGSFCI`. Merely adding a second operand
+buffer or moving that release later repeats existing machinery. No new
+experiment was justified. A genuinely different accumulator-bank design
+would need an exposed-time bound,register-budget evidence and an independent
+GPU prototype;this source inspection proves no new speedup.
 
 The serving norm/scale, return-contract, sharding and full-model resident
 memory gates in `../serving/MOE_PORT_STATUS.md` still apply. A kernel-track
