@@ -14,7 +14,8 @@ Rank1 has not been achieved. Work one track at a time and keep the8-check/
   Every profile/log and the observed small-path variation are preserved.
 - BF16: exact Chen checked on sfo3c/sfo3; same-source scores1.519434/1.549794x
   illustrate cluster/bake/layout variation. Alygg77 checked twice on sfo3 at
-  1.544358/1.547060x vs same-day parent1.510571x. Scored replacement pending.
+  1.544358/1.547060x vs same-day parent1.510571x. Replacement scored1.535843x,
+  rank133. Overall is54/1654 at capture; the earlier50 position was provisional.
 - Attention: 0/50 workspace/finalizer plans qualified. Close B1 merge/protocol
   work; diagnostic scores are unchanged-parent measurements, not improvements.
 

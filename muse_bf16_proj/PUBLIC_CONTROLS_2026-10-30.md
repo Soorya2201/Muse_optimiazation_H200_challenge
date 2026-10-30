@@ -66,7 +66,11 @@ paths vary little. Native kernel rows confirm which implementations actually
 ran; printed base choice tables do not describe every later wrapper override.
 The parent used2 captured state copies versus4 for the candidates, so this
 comparison includes state/layout effects and does not isolate one kernel change.
-Scored job a3d4758c1e174aba is pending.
+Scored job a3d4758c1e174aba passed at **1.535843x**,CI1.512805-1.558881,
+3145.373us,prepare166.55s,sfo3. All9tests/30timings pass; allprofiles/logs
+were inspected and archived. Scored best rises0.918% from1.521867x; this small
+point difference is not a precisely established algorithm gain. Live BF16#133/1435,
+overall#54/1654 at capture. Leader1.6498x remains about6.91% lower normalized time away.
 
 ## Remaining opportunity and why not to mix every winner blindly
 

@@ -108,8 +108,13 @@ all9tests/30timings each. Allprofiles/logs read and receipts archived.
 Same-day parentv36 `c200267a5274433e` passed1.510571x on sfo3,
 all9tests/30timings,3197.996us,prepare65.83s. Candidate gains2.237%/2.416%
 with recurring decode1/32 gains and mixed verify paths;see PUBLIC_CONTROLS report.
-Promoted exactalygg77v34;submit `a3d4758c1e174aba` running on sfo3,
+Promoted exactalygg77v34;submit `a3d4758c1e174aba` passed1.535843x on sfo3,
+3145.373us,CI1.512805-1.558881,prepare166.55s,all9tests/30timings.
+BF16#133/1435,overall#54/1654 at capture (others moved past earlier#50).
 Oct30 BF16 check5/8,submit1/2. All profiles/logs archived/read.
+P0/P1 public-source cycle complete;rank1 goal still open. Next P2 prefill
+context hardening and remaining public-metadata refresh;do not repeat unchanged
+submissions for lucky scores. See NEXT_MEASUREMENTS_2026-10-30.md.
 BF16 metadata refresh complete for1433
 accounts;datedsnapshot/follow-up report pushed. Newsglangmain forks show no
 standalone winner in inspected areas;alygg77 already queued. Ten unresolved.

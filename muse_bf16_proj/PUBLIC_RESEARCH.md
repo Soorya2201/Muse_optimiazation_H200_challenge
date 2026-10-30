@@ -21,7 +21,9 @@ The source matches pinned public SHA290a86ab...7b90;licenses/notices preserved.
 Same-day parent `c200267a5274433e` passed1.510571x on sfo3,fifth of eight checks.
 All30profiles/logs read. Stable alygg77 bundle improves2.237%/2.416% over it,
 with gains concentrated in decode1/32 and mixed verify paths. Promoted exactv34;
-submit `a3d4758c1e174aba` is running on sfo3. Current submission is now exactv34.
+submit `a3d4758c1e174aba` passed1.535843x on sfo3,3145.373us,
+CI1.512805-1.558881,prepare166.55s,all9tests/30timings. Allprofiles/logs archived/read.
+Current submission is exactv34;BF16#133/1435,overall#54/1654 at capture.
 See `PUBLIC_CONTROLS_2026-10-30.md` for every cell,copy-count caveat and next-test plan.
 
 Captured2026-10-29T20:09:08UTC. Our live position was#171/1394 at1.5219x;
