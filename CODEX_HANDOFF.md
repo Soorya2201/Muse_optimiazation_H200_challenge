@@ -67,37 +67,44 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### Oct30 attention packed-P hybrid probe active
+#### Oct30 attention packed-P hybrid probe active: corrected retry
 
-MoE broader-source cycle completed without a new GPU run; see below.
-Now attention only. Public code search archived 207 unique files across
-12 repositories. Seven Rohan archive sources match their manifests; the
-Gemini arithmetic/constant2.6537 timing rows are not usable evidence.
-Its older native source has a real confound: EXPPOLY>0 disables PK2 joint
-probability packing/max-check/MMA scheduling. The polynomial matches already
-pinned Apache-2.0 Madhavan/vjeux code. Excerpt/guard/provenance pinned.
-New v21 probes 25/50% FP32 polynomial exponentials with PK2 retained and
-only16 packed-P call sites changed (compile-time FLAT restriction). All
-barriers/waits/key reads/FP8 representation remain. Parent native bodies
-retained for timed dispatch; host-only register/local/shared resource getter.
-Source SHA842ebfc29731e51aeefa3bd89eba7e462018c989d41c3bddb56f10ce81b4db4a.
-Check2d537621593a41d7 running on sfo3 (first attention check Oct30,0submits).
-Six nearby validations: page1/64,scale1/64,TP/DP,B2/3/5/20/33; own fallback
-and parent agreement/cache bits. Timings:B16/32,two distributions/seeds,
-four retained input layouts,nine cold-L2 graph reps,duplicate A/A control,
-changed-qkv replay; compressed final report<8KB. No fixtures retained and
-no paid GPU assumed. This is distinct from closed prefill FMA/PIPE/RRS.
-Phasezero bound67.4415%; free-ALU/exposed40.5%-SFU half-work scenario5.9400%,
-not measured or expected gain. See muse_attention_decode/PK2_HYBRID_2026-10-30.md.
-Source/AST isolation and syntax pass. After terminal status, archive and use
-tools/extract_attention_pk2_probe.py JOB, then read all profiles/logs. Require
-consistent component gains and >=3% worst board model before timed candidate.
-Read-only status restored old30c669/5161a5/acf6f11 receipts from remote records;
-CLI cannot save profiles on absent external volume. Archive helper now handles
-that fallback with explicit immutable --source. All36 old reports inspected;
-remote50-plan SHARDS matches archived JSON exactly. No old jobs restarted.
-Old v19/v20 stale "running" research labels corrected to rejected/closed.
-Other budgets unchanged:MoE6/1,BF166/1,decoder3/1,prefill3/1;attention1/0.
+Attention only. Broader public code search207unique files/12repos; seven Rohan
+source hashes match manifests. Gemini's arithmetic/constant2.6537 bank rows
+excluded as timing evidence. Legacy EXPPOLY disables PK2 packing,confounding
+its source-comment negative. A new paired probe preserves PK2 joint packing,
+max-check/repack/MMA issue and all synchronization while25/50%FP32exps use
+polynomial. Timed dispatch staysparent;host-onlycompilerresourcegetter added.
+V21/2d537621593a41d7(sfo3) passed16challenge tests/12timings,2.602334x,
+CI2.563299-2.659911,1447.278us. This is parent score,not hybrid. Diagnostic
+compiled3modules(resources80regs/0local/0staticshared/max384threads),then
+failed first nearby case on unlabeled assertion after142.335s. No nearby
+records/performance timings. All12profiles andcompleteavailablelogs read;
+receipt anddecodedfailedreport archived. Do not label this a performance loss.
+CPU analysis reproduces copied helper's masked-logit underflow: clamp-127,
+p(0)<1 and exponent-bit add produceNaN for-negative-infinity. Consistent with
+finite assert;original log lacks exact failure stage. V22 changes clamp to-126
+and adds explicitfinite/cache/stage/trace labels;coefficients/gates/PK2 unchanged.
+CPU edge checks reproduceoldNaN andnewfinite/E4M3zero;65537normalgridinputs
+[-120,120] maxrelativeerror.0001456673,not the source comment's rough9e-5.
+See PK2_MATH_BOUNDARIES_2026-10-30.json;not a GPU correctness/speed proof.
+Retryec545aab86274b3b running,source submission_v22_pk2_underflow_fix.py,
+SHAe2ca7625a773febb740b7512d524f805192982afcd5b4df0cd221370742f6522.
+Six nearby cases(page1/64,scale1/64,TP/DP,B2/3/5/20/33),ownfallback/parent
+agreement andcachebits. Timings B16/32,two seeds/distributions,four retained
+allocations,nine cold-L2 reps,duplicate A/A,fresh-qkv graph replay. Compressed
+report<8KB. No fixtures retained,no paidGPU assumed. Different from closed
+prefill FMA/PIPE/RRS. Phasezero bound67.4415%;freeALU/exposed40.5%SFUhalf-work
+scenario5.9400%,not expectedgain. See attention/PK2_HYBRID_2026-10-30.md.
+After terminal result archive with tools/archive_kernel_run.py then extract
+with tools/extract_attention_pk2_probe.py. Inspect complete report andall12
+profiles/logs before dependent action. Require consistentgains and>=3%worst
+board model before real timed candidate. CanonicalSHA5811...510e unchanged.
+Read-only status recovered old30c669/5161a5/acf6f11 receipts fromremote records;
+CLI cannot save on absent externalvolume. Archiver explicit--source fallback
+preserves reports. All36oldreports read;50-plan SHARDS matchesarchivedJSON.
+Old v19/v20 running labels corrected. No old job restarted. Budgetsattention
+2/8checks,0/2submits;othersMoE6/1,BF166/1,decoder3/1,prefill3/1 unchanged.
 
 #### Oct30 MoE broader code/source cycle completed
 

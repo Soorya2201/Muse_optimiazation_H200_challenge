@@ -1,0 +1,60 @@
+{
+  "scope": "CPU FP32 emulation using host C fmaf plus exact bit reconstruction; not GPU correctness or performance proof.",
+  "sources": {
+    "muse_attention_decode/submission_v21_pk2_hybrid_probe.py": "842ebfc29731e51aeefa3bd89eba7e462018c989d41c3bddb56f10ce81b4db4a",
+    "muse_attention_decode/submission_v22_pk2_underflow_fix.py": "e2ca7625a773febb740b7512d524f805192982afcd5b4df0cd221370742f6522"
+  },
+  "old_negative_infinity_produces_nan": true,
+  "corrected_negative_infinity_finite": true,
+  "edge_cases": [
+    {
+      "input": "-inf",
+      "corrected_value": 1.1754691274499297e-38,
+      "rounds_to_e4m3_zero": true
+    },
+    {
+      "input": "-1000.0",
+      "corrected_value": 1.1754691274499297e-38,
+      "rounds_to_e4m3_zero": true
+    },
+    {
+      "input": "-200.0",
+      "corrected_value": 1.1754691274499297e-38,
+      "rounds_to_e4m3_zero": true
+    },
+    {
+      "input": "-127.0",
+      "corrected_value": 1.1754691274499297e-38,
+      "rounds_to_e4m3_zero": true
+    },
+    {
+      "input": "-126.999",
+      "corrected_value": 1.1754691274499297e-38,
+      "rounds_to_e4m3_zero": true
+    },
+    {
+      "input": "-126.5",
+      "corrected_value": 1.1754691274499297e-38,
+      "rounds_to_e4m3_zero": true
+    },
+    {
+      "input": "-126.0",
+      "corrected_value": 1.1754691274499297e-38,
+      "rounds_to_e4m3_zero": true
+    },
+    {
+      "input": "-125.999",
+      "corrected_value": 1.1762998171795814e-38,
+      "rounds_to_e4m3_zero": true
+    }
+  ],
+  "normal_grid_samples": 65537,
+  "normal_grid_range": [
+    -120,
+    120
+  ],
+  "max_relative_error": 0.00014566726444908973,
+  "worst_input": -114.873046875,
+  "underflow_reason": "p(0)<1 has biased exponent126; subtracting127 exponent units wraps the exponent into NaN. Lower clamp -126 avoids that wrap. Both true and corrected values quantize to FP8 E4M3 zero at these tiny inputs.",
+  "positive_tail": "Candidate uses original ex2 above120, preserving its overflow/max-update behavior; not part of this polynomial grid."
+}

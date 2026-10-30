@@ -1,0 +1,494 @@
+{
+  "job": "2d537621593a41d7",
+  "board": "muse_attention_decode",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 121.36,
+      "power.limit": 700,
+      "temperature.gpu": 31
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 131.59,
+      "power.limit": 700,
+      "temperature.gpu": 31
+    },
+    "node": "n-tyjmfajcegskfoydlmojkcfmco"
+  },
+  "created_at": 1793388025.6023033,
+  "source": "muse_attention_decode/submission_v21_pk2_hybrid_probe.py",
+  "source_sha256": "842ebfc29731e51aeefa3bd89eba7e462018c989d41c3bddb56f10ce81b4db4a",
+  "profile_capture": "local CLI profile JSON",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 1447.2777345552718,
+    "speedup": 2.6023339612540446,
+    "speedup_ci": [
+      2.563298951835234,
+      2.659910903967912
+    ],
+    "status": "ok",
+    "tests": 16,
+    "tests_passed": 16
+  },
+  "setup": [],
+  "benchmarks": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 7887939146413693400,
+        "weight": 46
+      },
+      "median_ns": 4913.250514882053,
+      "baseline_ns": 20464.000292122364,
+      "paired_ratio": 4.165063480915062,
+      "speedup": 4.165063480915062,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 7888156606622451386,
+        "weight": 16
+      },
+      "median_ns": 10750.06093043614,
+      "baseline_ns": 31311.999075114727,
+      "paired_ratio": 2.912727590823466,
+      "speedup": 2.912727590823466,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7888374066831209373,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 8344.039726854153,
+      "baseline_ns": 26912.000961601734,
+      "paired_ratio": 3.2252963603455926,
+      "speedup": 3.225296360345593,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7888591527039967361,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 86848.08003534874,
+      "baseline_ns": 201232.00118541718,
+      "paired_ratio": 2.3170575688433424,
+      "speedup": 2.3170575688433424,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7888808987248725350,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 10077.62577720671,
+      "baseline_ns": 31455.999240279198,
+      "paired_ratio": 3.1213700464473977,
+      "speedup": 3.1213700464473977,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7889026447457483340,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 165366.39557982533,
+      "baseline_ns": 383439.9916231632,
+      "paired_ratio": 2.318729813749069,
+      "speedup": 2.318729813749069,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889243907666241331,
+        "weight": 46
+      },
+      "median_ns": 6995.57571779976,
+      "baseline_ns": 22943.999618291855,
+      "paired_ratio": 3.279787188910332,
+      "speedup": 3.279787188910332,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889461367874999323,
+        "weight": 16
+      },
+      "median_ns": 14165.426137976941,
+      "baseline_ns": 36128.00035625696,
+      "paired_ratio": 2.5504351231198923,
+      "speedup": 2.5504351231198923,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889678828083757316,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 11161.394875376764,
+      "baseline_ns": 29120.001010596752,
+      "paired_ratio": 2.608992991981549,
+      "speedup": 2.608992991981549,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889896288292515310,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 100480.62608189431,
+      "baseline_ns": 205008.00339505076,
+      "paired_ratio": 2.0402739452276495,
+      "speedup": 2.0402739452276495,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7890113748501273305,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 14731.270155134891,
+      "baseline_ns": 34335.998352617025,
+      "paired_ratio": 2.3308240220310195,
+      "speedup": 2.3308240220310195,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7890331208710031301,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 184756.05845515028,
+      "baseline_ns": 390848.0047248304,
+      "paired_ratio": 2.1154813974325455,
+      "speedup": 2.1154813974325455,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 7887939146413693400,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 13>((an...       4.4 \u00b5s 100.0%      1\ntotal                                                              4.4 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 7888156606622451386,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 11>((an...       9.9 \u00b5s 100.0%      1\ntotal                                                              9.9 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7888374066831209373,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       7.1 \u00b5s 100.0%      1\ntotal                                                              7.1 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7888591527039967361,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...      87.6 \u00b5s 100.0%      1\ntotal                                                             87.6 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7888808987248725350,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       8.9 \u00b5s 100.0%      1\ntotal                                                              8.9 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7889026447457483340,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...     165.3 \u00b5s 100.0%      1\ntotal                                                            165.3 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889243907666241331,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 15>((an...       6.1 \u00b5s 100.0%      1\ntotal                                                              6.1 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889461367874999323,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 11>((an...      13.6 \u00b5s 100.0%      1\ntotal                                                             13.6 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889678828083757316,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 8,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      10.6 \u00b5s 100.0%      1\ntotal                                                             10.6 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7889896288292515310,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 9,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...     101.1 \u00b5s 100.0%      1\ntotal                                                            101.1 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7890113748501273305,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 10,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      14.2 \u00b5s 100.0%      1\ntotal                                                             14.2 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7890331208710031301,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 11,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...     181.6 \u00b5s 100.0%      1\ntotal                                                            181.6 \u00b5s"
+    }
+  ],
+  "log_tail": "ATTN_PK2_HYBRID_Z eNptjr0KwzAQg1+l3GxK/BNIvXXoU4QSrva1GIJd7pyhhLx77T1oEZ+E0A5SsW4CHmLCTy5SU1jemFaKoIBJysaBWr7DAH6eBtVlJ6fcTY/mqUCfY3OGDwWZkF+/FrZOQOnT3RJz4fbiLkJcU8mPDvylnaAVv0JxaU3tzNXa8fgDJIA06A==\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 19:27:44 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

@@ -1,0 +1,38 @@
+{
+  "job": "2d537621593a41d7",
+  "cluster": "sfo3",
+  "source_sha256": "842ebfc29731e51aeefa3bd89eba7e462018c989d41c3bddb56f10ce81b4db4a",
+  "scope": "Independent import-time fixtures; timed path remains parent. Modeled gains are not measured board gains.",
+  "diagnostic": {
+    "status": "diagnostic_failed",
+    "resources": {
+      "0": [
+        80,
+        0,
+        0,
+        384,
+        49152
+      ],
+      "1": [
+        80,
+        0,
+        0,
+        384,
+        49152
+      ],
+      "2": [
+        80,
+        0,
+        0,
+        384,
+        49152
+      ]
+    },
+    "nearby": [],
+    "cases": [],
+    "error": "AssertionError: ",
+    "elapsed_s": 142.335
+  },
+  "summaries": [],
+  "compositions": []
+}
