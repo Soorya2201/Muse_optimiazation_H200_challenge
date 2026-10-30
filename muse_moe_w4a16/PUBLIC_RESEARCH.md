@@ -1,5 +1,35 @@
 # Public MoE research and reproduction record
 
+## Oct30 exact KPERM3 control (P1)
+
+Public source https://github.com/alygg77/okc-muse-spark-kernels,
+Apache-2.0 full commit `6cae49a639ee6d14b929a5fd4a63c627f96d7dc0`.
+Pinned exact `submission_v24_alygg77_6cae49a.py`, SHA-256
+`b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281`.
+Byte equality against the public raw source and AST syntax were verified.
+Upstream attribution includes vjeux and Matsvei; notices are preserved.
+
+KPERM3 permutes codes within each256-wide K stage, repacks the same scale
+bytes, and gathers matching activation columns. Gate/up row ordering makes
+the intermediate align with phase B's K permutation. The main WGS consumer
+loads eight scale bytes once per stage and reuses them across four load
+groups, reducing live registers and repeated scale loads. Tiny/mid builds
+stay selected for M<=16. `prepare` uses weights only; `kernel_fn` reads fresh
+activations/routes and allocates a fresh output. No input/output cache exists.
+The new context binder handles fresh host threads. Standalone PDL is disabled.
+
+Exact check `802e58c6f9964fc5` is running on sfo3, first of eight checks.
+P1 explicitly requires this published control even though upstream's claimed
+board gain is only about1.25%, below the gate for new speculative microchanges.
+Check twice and compare affected M32/128/256 against unchanged M1/8/16 on a
+same-day/same-cluster parent before deciding. No local speedup claim yet.
+Prepare must stay within300s; the public measured range273-312s is a risk.
+AST-identical repeat v25 and parent control v26 are archived for fresh runs.
+
+The public timing kit is a future independent-GPU tool, not submission code.
+It uses memory-layout variation and an A/A arm; its stated identical-source
+spread is another reason not to promote a small single-check score increase.
+
 ## Oct29 second cycle: per-shape source audit and exact dequant port
 
 The previous goal turn made verified progress by scoring the new whole decoder and prefill
