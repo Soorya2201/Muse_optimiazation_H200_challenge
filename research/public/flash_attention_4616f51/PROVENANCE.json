@@ -1,0 +1,11 @@
+{
+  "repo": "Dao-AILab/flash-attention",
+  "commit": "4616f5116d33e3ba3cbb71d582caffcfcb49649c",
+  "path": "flash_attn/cute/utils.py",
+  "source_sha256": "7344b808aa4eb6ebc5c48ab821485e32feea1397a14a540433191e08895d9c33",
+  "extract_sha256": "e85e3f878a00877c7eb14d44572910d3916137aa6a18fee5a1cc3ddfaf2f2efa",
+  "license": "BSD-3-Clause",
+  "source_url": "https://github.com/Dao-AILab/flash-attention/blob/4616f5116d33e3ba3cbb71d582caffcfcb49649c/flash_attn/cute/utils.py",
+  "scope": "Four scalar math helpers only, no module import/execution. Packed f32x2 path not ported; target H200 uses scalar add.rm.f32. Our polynomial coefficients remain unchanged.",
+  "authors_sha256": "f3bf4144826a62841b7f9aebc5057f75da2d32a652a573edc67250ec94a377a7"
+}

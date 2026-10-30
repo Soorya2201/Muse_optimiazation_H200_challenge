@@ -60,8 +60,13 @@ Oct30 attention broader code search:207unique public matches/12repos. Seven
 Rohan archive candidates inspected/hashchecked; external arithmetic/constant
 Gemini2.6537 timings excluded. Legacy EXPPOLY disables PK2 joint probability
 packing, so its source-comment negative is a confounded comparison. New
-v21off-board probe2d537621593a41d7(sfo3) preserves PK2 for25/50%FP32FMA;
-timed parent unchanged, result pending. No reopening B1 merge work. Sources,
+v21off-board probe2d537621593a41d7(sfo3) preserved PK2 for25/50%FP32FMA but
+its copied polynomial underflowed toNaN. Repairedv22/ec545aab86274b3b passed
+all independent cases but both hybrids lose17-61%;all8changedcompositions
+reject. Newv23/0b17352502ca4fca(sfo3c) isolates bias-basedrange reduction
+against byte-identicalfloor50control. CPU66780bitidenticalcases andstandalone
+sm90aSASSverifyconversionremoval;no fullkernelgainproven. Timedparent
+unchanged. No reopening B1 merge work. Sources,
 phase-zero/resource-model assumptions and independent validation plan in
 `muse_attention_decode/PK2_HYBRID_2026-10-30.md`. Old terminal receipts also
 recovered via read-only status when the external volume could not save profiles.

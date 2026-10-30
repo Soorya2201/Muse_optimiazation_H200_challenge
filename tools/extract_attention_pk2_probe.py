@@ -32,6 +32,7 @@ if report['status'] == 'complete':
         ratios = [r['r'][arm - 1] for r in rows]
         aa = max(abs(r['aa'] - 1) for r in rows)
         out['summaries'].append(dict(batch=batch, arm=arm, min_ratio=min(ratios),
+                                    variant=report.get('variant_names', {}).get(str(arm), str(arm)),
                                     median_ratio=statistics.median(ratios), max_ratio=max(ratios),
                                     max_duplicate_offset=aa, qualifies=min(ratios) > 1.02 and aa < .01))
     profiles = receipt['benchmarks']

@@ -67,7 +67,41 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### Oct30 attention packed-P hybrid probe active: corrected retry
+#### Oct30 attention: bias-range probe active, floor-based hybrids rejected
+
+Current live job is0b17352502ca4fca on sfo3c,started20:26UTC.
+Source submission_v23_bias_range_probe.py,
+SHA41498ff220366e6850448c9280b5ab8d5a70650615a1675c4aa2d4614cf71aa9.
+Three modules:0parent,1floor50,2bias50. Floor50 CUDA payload exactly matches
+v22arm2; bias50 changes only range reduction to directed-rounding add-bias,
+retaining coefficients/clamp-126/overflowguard/50%fraction/PK2/gates.
+New direct bias/floor output errors and timing ratios recorded. Same6nearby
+cases/16timing cases(two batches/two seeds/four pads/nine reps)/freshreplays.
+Timed parent unchanged;no scored submission. BSD3copyright/LICENSE/AUTHORS
+and scalar FA4helpers pinned in research/public/flash_attention_4616f51/.
+No SM100 packedFP32 instructions ported. Standalone CompilerExplorer NVCC13
+sm90a deviceSASS replaces FRND.FLOOR+F2I.FLOOR+FADD with3FADD(oneRM),same
+10registers/zero stack/spill. CPU exact-rational FP32 round-down comparison
+passes66780bit-identical inputs. These do not prove fullkernelgain/sharedpipe
+causality. Artifacts EXP_RANGE_COMPILER_PROBE/EXP_RANGE_EQUIVALENCE datedJSON,
+exp_range_compiler_probe.cu and tools/check_attention_exp_range_equivalence.py.
+Prefill polynomial already uses centeredadd-bias;its closednegativefamily is
+not explained by this finding and is not reopened.
+
+V22retry ec545aab86274b3b finished on sfo3c:16tests/12timings pass2.672956x,
+CI2.632862-2.713051,1409.039us. This is unchanged parent variation,not a
+hybridscore or reason to resubmit. Independent diagnostic completes138.964s,
+all6nearby/16timingcases,cachebits/freshreplays pass. All12profiles,full logs,
+rawcases read/archived. Every floorbasedhybrid loses: B1625%ratios.799573-
+.857261,50%.638170-.728586;B3225%.783841-.827660,50%.621916-.680636.
+AAmaxoffset1.0266%;resourceattrs80regs/0local/0staticshared unchanged.
+All8changedcompositions reject. Parenterror timingglobalmax.00036074,
+row.00422575,nearbymax.00016057. Floorfamilyclosed. No canonicalchange.
+After v23terminal archive+extract via tools/archive_kernel_run.py and
+tools/extract_attention_pk2_probe.py;read full compressed report,all12profiles
+andlogs before dependent decision. Current attentionbudget3/8checks,0/2submits;
+othersMoE6/1,BF166/1,decoder3/1,prefill3/1. No agents or paidGPU assumed.
+The remainder below is historical context,not a live retry.
 
 Attention only. Broader public code search207unique files/12repos; seven Rohan
 source hashes match manifests. Gemini's arithmetic/constant2.6537 bank rows

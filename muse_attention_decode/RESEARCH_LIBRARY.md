@@ -36,9 +36,13 @@ scored **2.603505x**. Source reviews and experiments are in PUBLIC_RESEARCH.md a
 
 Oct30 broader code search found a concrete confound in the legacy hybrid-exp
 implementation: EXPPOLY disables the packed-P PK2 path. A new off-board v21
-probe2d537621593a41d7 retains PK2 while comparing25/50%FMA,with four input
-allocation layouts/two distributions/six nearby validations and compressed
-logging. Timed parent unchanged;result pending. See PK2_HYBRID_2026-10-30.md.
+probe2d537621593a41d7 retained PK2 but failed an independent finite check.
+The copied polynomial's clamp-127 yieldsNaN for masked logits. Repairedv22
+ec545aab86274b3b passes six nearby/16timing cases but loses17-61% with25/50%FMA;
+all eight changed compositions reject. V23/0b17352502ca4fca now isolates
+bias-basedrange reduction against the identicalfloor50control. CPU66780cases
+are bit-identical;standaloneNVCC13sm90aSASS removes FRND/F2I. Fullkerneltiming
+pending;timedparentunchanged. See PK2_HYBRID_2026-10-30.md.
 The old~1.5–2% practical estimate is not an expected gain;the new5.94% idealized
 scenario assumes exposed40.5%SFUwork/freeALUand is unverified. No paidGPU assumed.
 

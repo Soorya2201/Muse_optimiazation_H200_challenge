@@ -1,0 +1,14 @@
+{
+  "scope": "CPU FP32/rational rounding equivalence plus standalone Compiler Explorer SASS; not full-kernel performance evidence.",
+  "source_sha256": "9b32558719dfd10d927646cff974c70ce4237ef3317a886ccf24e5ecea0737aa",
+  "compared_inputs": 66780,
+  "all_bit_identical": true,
+  "range": "[-126,120] plus clamped negative tails, integer neighbors, signed zero and subnormals",
+  "rounding_reference": "Exact rational sums bracketed by adjacent FP32 numbers, toward minus infinity",
+  "compiler": "NVCC13.0, sm90a, -O3; device SASS inspected, not host assembly",
+  "standalone_old": "FRND.FLOOR + F2I.FLOOR + FADD",
+  "standalone_new": "FADD.RM + FADD + FADD; no FRND/F2I",
+  "standalone_resources": "10 registers and zero stack/spill bytes for both kernels",
+  "limitation": "Same arithmetic-site count. Different instruction classes may change bottlenecks; no H200 latency gain or shared-unit causal claim established. Larger native attention resource/scheduling behavior must be measured.",
+  "prefill_counterevidence": "Existing prefill exp2_poly already uses a centered add-bias trick; its rejected hybrids are not explained by floor-conversion overhead. Do not reopen prefill solely on this finding."
+}
