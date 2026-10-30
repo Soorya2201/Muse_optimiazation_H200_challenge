@@ -22,7 +22,12 @@ Exact check `802e58c6f9964fc5` passed on sfo3 at2.404125x,
 CI2.368063-2.440187,all5tests/6timings,prepare167.36s. Every profile/log was
 read and archived. Independent repeat `6ad96077d56c42d9` passed on sfo3 at
 2.376541x,all5tests/6timings,prepare164.85s. Same-day parent control
-`8ceabe44c7624c93` is running on sfo3; no promotion decision yet.
+`8ceabe44c7624c93` passed on sfo3 at2.332013x,prepare169.94s.
+Changed M32/128/256 improve2.24-5.10% in normalized speedup in both checks;
+unchanged paths show smaller/mixed shifts. Aggregate gains3.09%/1.91% with
+overlapping intervals; exact magnitude remains uncertain. All profiles/logs
+were read. Promoted exactv24; scored job `ce241acf7ab84c04` is running.
+See `KPERM3_COMPARISON_2026-10-30.md` for every shape and limitations.
 
 AST comparison confirms every common literal configuration assignment matches
 the parent, including tiny/mid/main defines. Native `CUDA_SRC` differs in only

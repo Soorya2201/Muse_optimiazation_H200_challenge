@@ -1,0 +1,220 @@
+{
+  "job": "8ceabe44c7624c93",
+  "board": "muse_moe_w4a16",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 125.23,
+      "power.limit": 700,
+      "temperature.gpu": 36
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 142.89,
+      "power.limit": 700,
+      "temperature.gpu": 29
+    },
+    "node": "n-oiwen3u25vubdhxwxoeoxrqza5"
+  },
+  "created_at": 1793334387.85812,
+  "source": "muse_moe_w4a16/submission_v26_vjeux_control_20261030.py",
+  "source_sha256": "4879d79d35de1d09add9502ed045da45e90fa16b9323e9c25ea78007d1a688f6",
+  "duplicate_of": null,
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 5766.905124715875,
+    "speedup": 2.332013395254631,
+    "speedup_ci": [
+      2.2970331943258118,
+      2.3669935961834505
+    ],
+    "status": "ok",
+    "tests": 5,
+    "tests_passed": 5
+  },
+  "setup": [
+    {
+      "baseline_copies": 4,
+      "baseline_prepare_pad": 19019776,
+      "copies": 1,
+      "error": null,
+      "event": "setup",
+      "first": "baseline",
+      "prepare_pad": 26056704,
+      "prepare_s": 169.937263801,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "bs": 1,
+        "load": "decode 1",
+        "seed": 6227723907822680531,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 26211.11509734168,
+      "baseline_ns": 80368.00241097808,
+      "paired_ratio": 3.0661802106667704,
+      "speedup": 3.0661802106667704,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 16,
+        "load": "decode 16",
+        "seed": 6227784013410191760,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 93301.60970099749,
+      "baseline_ns": 185903.99716049433,
+      "paired_ratio": 1.9925057858729187,
+      "speedup": 1.9925057858729185,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 32,
+        "load": "decode 32",
+        "seed": 6227844118997702990,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 126210.93117850684,
+      "baseline_ns": 204944.00151073933,
+      "paired_ratio": 1.623821325118631,
+      "speedup": 1.623821325118631,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 8,
+        "load": "verify 1",
+        "seed": 6227904224585214221,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 63727.580198940326,
+      "baseline_ns": 142703.99790257215,
+      "paired_ratio": 2.239281602362568,
+      "speedup": 2.239281602362568,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 128,
+        "load": "verify 16",
+        "seed": 6227964330172725453,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 184715.46590273455,
+      "baseline_ns": 473663.99643942714,
+      "paired_ratio": 2.5642898612985876,
+      "speedup": 2.5642898612985876,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 256,
+        "load": "verify 32",
+        "seed": 6228024435760236686,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 220918.18675244757,
+      "baseline_ns": 623743.9969554543,
+      "paired_ratio": 2.8234162434729644,
+      "speedup": 2.8234162434729644,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "bs": 1,
+        "load": "decode 1",
+        "seed": 6227723907822680531,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           22.8 \u00b5s 100.0%      1\ntotal                                                             22.8 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 16,
+        "load": "decode 16",
+        "seed": 6227784013410191760,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           86.0 \u00b5s 100.0%      1\ntotal                                                             86.0 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 32,
+        "load": "decode 32",
+        "seed": 6227844118997702990,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           85.6 \u00b5s 100.0%      1\ntotal                                                             85.6 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 8,
+        "load": "verify 1",
+        "seed": 6227904224585214221,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           55.4 \u00b5s 100.0%      1\ntotal                                                             55.4 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 128,
+        "load": "verify 16",
+        "seed": 6227964330172725453,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           184.7 \u00b5s 100.0%      1\ntotal                                                            184.7 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 256,
+        "load": "verify 32",
+        "seed": 6228024435760236686,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           257.3 \u00b5s 100.0%      1\ntotal                                                            257.3 \u00b5s"
+    }
+  ],
+  "log_tail": "USDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:30:09 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

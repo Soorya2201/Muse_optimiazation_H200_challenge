@@ -90,9 +90,11 @@ MoE exact-v24 first check `802e58c6f9964fc5` passed2.404125x on sfo3,
 5593.927us,CI2.368063-2.440187,prepare167.36s,all5tests/6timings.
 Allprofiles/logs read and receipt archived. Repeat `6ad96077d56c42d9`
 passed2.376541x on sfo3,prepare164.85s,all5tests/6timings.
-Same-day parentv26 check `8ceabe44c7624c93` running on sfo3,
-Oct30 MoE check3/8,zero submits. Compare affected32/128/256 and unchanged1/8/16
-before promotion; do not infer improvement from the previous-day scored parent alone.
+Same-day parentv26 check `8ceabe44c7624c93` passed2.332013x on sfo3,
+prepare169.94s,all5tests/6timings. Repeated changed-load normalized gains
+2.24-5.10%; unchanged shapes smaller/mixed. Exactv24 promoted locally;
+submit `ce241acf7ab84c04` running on sfo3,Oct30 MoE3/8checks,1/2submits.
+All profiles/logs archived/read; comparison report records noise/raw-time limits.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe
