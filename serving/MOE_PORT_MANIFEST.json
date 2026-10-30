@@ -1,0 +1,13 @@
+{
+  "status": "offline isolated prototype; not compiled on CUDA, not integrated into model",
+  "sglang_commit": "a55ab7d5ae1bba59ac351e55026fe7f7644ecc5f",
+  "donor": "muse_moe_w4a16/submission_v24_alygg77_6cae49a.py",
+  "donor_sha256": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",
+  "donor_device_section_sha256": "a11cca570a8c29c76dfb581c747df268fc8dacc2a162823bfcac30086b1fa7ca",
+  "ported_device_section_sha256": "132902dbbcc0718614fc37478d8f5701479766b18ecc3092be2e7a301b93f673",
+  "device_section_changes": "whitespace only; nine inline-assembly operand lists wrapped for 400-character patch limit",
+  "outputs": {
+    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh": "49a408305fcd7d5a87eb0888221d6611951c21b60571b7535cbc9be2ef1ab484",
+    "python/sglang/kernels/ops/muse_spark_v12/okc_moe_prototype.py": "5e69b5812831a17756ba1859c45f79f3dfbb9701849a3f5a5fbfb636d701eadf"
+  }
+}

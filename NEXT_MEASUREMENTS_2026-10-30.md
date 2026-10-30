@@ -18,18 +18,26 @@ Rank1 has not been achieved. Work one track at a time and keep the8-check/
   rank133. Overall is54/1654 at capture; the earlier50 position was provisional.
 - Attention: 0/50 workspace/finalizer plans qualified. Close B1 merge/protocol
   work; diagnostic scores are unchanged-parent measurements, not improvements.
+- Prefill: fresh-thread context hardening passed check and submit, with an
+  actual initially unbound thread and verified Lt output. No speedup claim.
+- Public discovery: refreshed all five boards' above/below public-owner
+  metadata and reviewed new candidates. Scope/limitations are recorded in
+  each `PUBLIC_REPO_FOLLOWUP_2026-10-30.md`; no unpublished winner was found.
+- Serving: isolated default-off MoE load_jit prototype prepared. Source and
+  patch checks pass; CUDA compilation, model integration and full-node
+  validation are still pending. See serving/MOE_PORT_STATUS.md.
 
 ## What is worth doing next
 
 |Priority|Work|Evidence and ceiling|Gate before a speed claim|
 |---|---|---|---|
-|1|Prefill fresh-thread CUDA-context binding|Two raw cuBLASLt sites lack the explicit binder. Robustness change; no GPU speedup expected.|Port the attributed helper, preserve native source exactly, run the challenge correctness checks.|
-|2|Refresh remaining tracks' public-repository metadata|BF16's fresh1433-account screen found alygg77 plus upstream-only forks. It does not cover every entrant on other boards.|Reuse timestamped snapshots within1h; examine newly found source/receipts/licenses, not rank alone.|
+|1|Prefill fresh-thread CUDA-context binding — complete|Check a77a2557e1a24fa7 and submit25a1e0e5df0d4949 pass; native GPU path unchanged.|Keep hardened canonical source; no unchanged-source score fishing.|
+|2|Refresh remaining tracks' public-repository metadata — complete|Dated snapshots cover all five current boards, with unresolved accounts and timestamped cache limits documented.|Refresh again when genuinely new sources appear; metadata screens do not prove absence of private/unlabelled code.|
 |3|Independent H200 A/B/A setup, if authorized|Public timing kit varies memory pads and rejects gains below identical-source spread. This is needed for sub2% component hypotheses.|Own the concrete driver/inputs; prove fresh outputs and numerical correctness; report A/A spread and capture-level confidence intervals.|
 |4|BF16 selective RQ128 integration research|Chen qkv/pooler/unpooler at128 tokens save about6.5us combined against alygg77 in observed standalone timings. Projected board gain~1.7%; loose zero-phase bound~31%. Neither is a measured hybrid gain.|Independent memory-pad A/B/A first. Port only the isolated lossless RQ128 subset if it wins; keep prepare under300s and validate all30 cells.|
 |5|Attention hybrid FMA/MUFU exponentials|Public trace reports40.5% exp in full verify. Eliminating that cost entirely is a loose~13% attention-board bound; practical hybrid estimate only1.5-2%.|Independent-GPU prototype first; fixed work split, all keys retained, correct FP8-query rules and full numerical tests.|
 |6|MoE readiness/release redesign|Unit-end stalls remain, but published NOFENCE changes gained only0.23%. No established3% board opportunity yet.|Do not spend a blind judge check; demonstrate a new measured bound and correct per-stage publication first.|
-|7|Offline serving port|KPERM3 is a useful kernel starting point. Full-layer state includes multiple weight layouts and cannot simply be cloned for every model layer.|Follow serving/SERVING_PLAN.md; account for total packed-weight/KV memory, retain fallback, no serving speed claim without8-H200 validation.|
+|7|Serving MoE port — isolated prototype prepared|load_jit binding and exact packing/dispatch prepared; four layouts cost3.375GiB/layer,or202.5GiB across sixty layers before scratch/fallback/KV.|Compile and compare on H200; resolve effective norm/scales/sharding, then a single-layer model pilot and lower-memory design. No serving speed claim without8-H200 validation.|
 
 The H200 timing kit, measured facts, negative results, exact licenses and source
 manifest are preserved in research/public/alygg77_6cae49a/. Their claims are

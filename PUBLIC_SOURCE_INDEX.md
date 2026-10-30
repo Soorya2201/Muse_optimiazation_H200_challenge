@@ -4,7 +4,18 @@ The owner's scope includes useful public implementations from teams ranked both 
 our entry. Review happens one track at a time. Rankings are discovery context; actual per-shape
 latencies, numerical correctness, compliance, and source provenance determine adoption.
 
-## Coverage status (2026-10-29)
+## Coverage status (2026-10-30)
+
+All five public-owner metadata screens were refreshed this UTC day. Dated
+`RANKED_GITHUB_REPO_SCREEN_2026-10-30.json` and
+`PUBLIC_REPO_FOLLOWUP_2026-10-30.md` in each track supersede the older metadata
+counts below: BF161433accounts(ten unresolved),MoE1151(five),attention1104(five),
+decoder1011(five),prefill662(four). Metadata coverage is not full-source review.
+Selected updated forks and leader portfolios were examined; alygg77's useful
+files have been checked/adopted, and its attention/prefill source matches our
+original vjeux base. No additional published rank-one implementation was found
+in these inspections. Historical ranks in source notes are capture-time facts;
+use RANK_STATUS.md for the latest verified positions.
 
 | Track | Research artifacts | Implementation/testing status |
 |---|---|---|

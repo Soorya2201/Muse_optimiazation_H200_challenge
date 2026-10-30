@@ -1,14 +1,14 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-30 05:13:00 UTC** from the live OKC boards. Overall **#54/1656**.
+Captured **2026-10-30 05:38:39 UTC** from the live OKC boards. Overall **#56/1656**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|134/1437|1.535843x|1.6498x|6.91%|
-|Routed experts|80/1151|2.372309x|2.6995x|12.12%|
-|Attention decode|109/1102|2.603505x|3.2221x|19.20%|
-|Whole decoder|54/1011|2.211495x|2.4178x|8.53%|
+|BF16 projections|135/1438|1.535843x|1.6498x|6.91%|
+|Routed experts|81/1151|2.372309x|2.6995x|12.12%|
+|Attention decode|109/1104|2.603505x|3.2221x|19.20%|
+|Whole decoder|56/1011|2.211495x|2.4178x|8.53%|
 |Prefill|118/662|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
@@ -28,7 +28,12 @@ precision issue; its old rank/score is ineligible. The compliant replacement
 scores2.211495x. Current local decoder/MoE/BF16 files match their pinned
 Apache-2.0 public sources, with Nathen's MIT notices retained where used.
 
-Prefill context-hardening check a77a2557e1a24fa7 is running. Its native GPU path
-is unchanged; it is a robustness check, with no speedup claim. The repository
-was verified PRIVATE. Current test budgets and source-discovery scope are in
-CODEX_HANDOFF.md and PUBLIC_SOURCE_INDEX.md. Rank1 work remains open.
+Prefill context-hardening check a77a2557e1a24fa7 and submit25a1e0e5df0d4949
+both passed. Its native GPU path is unchanged; no speedup claim. The old
+eligible1.784958x remains the board best. All five boards' public-owner
+metadata screens are refreshed; each dated follow-up records its limits.
+An isolated serving MoE load_jit prototype is prepared, with source/patch
+checks passing; it is not integrated or GPU-compiled. See
+serving/MOE_PORT_STATUS.md. The repository was reverified PRIVATE at capture.
+Current test budgets and source-discovery scope are in CODEX_HANDOFF.md and
+PUBLIC_SOURCE_INDEX.md. Rank1 work remains open.

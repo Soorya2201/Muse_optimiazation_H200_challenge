@@ -67,6 +67,38 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct30 05:38UTC checkpoint: public-source cycle completed
+
+P0/P1/P2 completed: compliant decoder2.211495x,MoE2.372309x,
+BF161.535843x; fresh-thread prefill hardening passed check+submit.
+All16 Oct30 GPU check/submit jobs are terminal, profiles/logs read and
+receipts archived. Budgets used checks/submits: decoder3/1,MoE3/1,
+BF165/1,prefill1/1,attention0/0. No GPU job is running.
+Refreshed public-owner metadata on all five boards, including above/below
+entrants and selected leader portfolios. No unpublished winning code found;
+see each dated PUBLIC_REPO_FOLLOWUP report for scope/unresolved accounts.
+Current live ranks: overall56/1656,decoder56/1011,MoE81/1151,
+attention109/1104,BF16135/1438,prefill118/662. Earlier#50 was a historical
+snapshot; others have moved. GitHub reverified private. Rank1 not achieved.
+
+P4 started: isolated MoE load_jit prototype under ignored SGLang checkout,
+captured in serving/okc_init/patch.diff (two source files,165452bytes).
+Builder tools/build_serving_moe_prototype.py pins donor and base;
+verifier tools/verify_serving_moe_prototype.py passes17 helper ASTs,
+dispatch/device source,default-off guards and patch limits/reverse-apply.
+Python syntax passes. **Not CUDA-compiled,not model-integrated,not GPU-tested.**
+No serving check/submit run. Setting SGLANG_OKC_MOE alone does not replace Marlin.
+Read serving/MOE_PORT_STATUS.md before continuing: _marlin_expert_outputs
+return contract differs; cached effective norm differs from original offset;
+raw scales/layout require a post-load hook before Marlin packing; four layouts
+cost3.375GiB/layer and202.5GiB over sixty layers before scratch/fallback/KV.
+Next meaningful serving work is GPU-compiling/comparing the isolated port,
+then explicit effective-norm semantics and a single-layer model pilot with
+stock fallback/TP-EP collectives retained. Do not enable across all layers.
+No local GPU/rented hardware assumed; official serving opens Nov5.
+Do not spend checks on closed sub2% hypotheses without independent measurements.
+Unrelated user research/public/madhavan_721c627/ notes remain preserved/uncommitted.
+
 #### Oct30 drive recovered; decoder compliance repair in progress
 
 Drive remounted; recovered attention v20 profiles/log for `acf6f11e935049db`
