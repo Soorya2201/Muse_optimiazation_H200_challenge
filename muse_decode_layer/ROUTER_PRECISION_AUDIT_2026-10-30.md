@@ -40,12 +40,18 @@ SHA-256: `8f17613bafb2369152f2739638bf8f6dfb193f6a79dbad3e6d25795cf1ebaf4a`.
   recomputes the FP32 router input from FP32 stream. Input-dependent work
   remains in `kernel_fn`. `prepare` benchmarks independent synthetic inputs.
 - PDL data loads were inspected: new fused stages use shared/TMA inputs
-  after dependency waits; glue's explicit cache-global loads avoid the
+  after dependency waits; glue uses explicit volatile global-load PTX with
+  memory clobbers after its wait, avoiding the
   noncoherent-load hoisting pattern. This source audit does not replace GPU
   correctness checks on fresh graph inputs.
 - The source also contains KPERM3 experts for T >= 17 and context-bound,
   deepcopy-safe cuBLASLt holders. Preserve upstream notices and licenses.
 
-First check: `521b039c454045da`, cluster `sfo3`; result pending.
+First check: `521b039c454045da`, cluster `sfo3`; passed 13 tests and 12 timed
+shapes at 2.189801x, CI [2.156954, 2.222648], prepare 128.70 s.
+Every profile and the local/remote logs were read; full receipt is archived in
+`run_receipts/521b039c454045da.json`. The FP32 fused router appears in both
+small-T scored paths. Repeat `5c929cfd9c0b4215` is running; its entire AST,
+including all native-source constants, is identical (one comment added).
 Run a second independent, code-equivalent check and inspect all 12 profiles
 before promotion. Correct precision is required even if performance is at parity.

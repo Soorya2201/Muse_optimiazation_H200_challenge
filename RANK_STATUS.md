@@ -1,5 +1,11 @@
 # Verified leaderboard snapshot
 
+**Oct30 compliance correction:** decoder job `d857144e59784ad0` was withdrawn
+after confirming BF16 rounding of its required FP32 small-T router input.
+Its historical rank/score below are no longer eligible. Live decoder row after
+withdrawal is #836 at 1.2326x; corrected-source check `521b039c454045da` is running.
+Other rows below remain an Oct29 snapshot, not current ranks.
+
 Captured2026-10-29 around20:44–20:46UTC from live OKC boards. Positions change as others
 submit. Overall **#100/1612**. Prefill has a separate board and does not count toward overall.
 No track has reached#1.

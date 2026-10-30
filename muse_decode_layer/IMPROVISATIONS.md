@@ -1,5 +1,15 @@
 # muse_decode_layer: optimizations, measurements, and new ideas
 
+## Oct30 precision correction
+
+The Oct29 public decoder result below is historical and was withdrawn.
+Madhavan c180924 feeds BF16 activations to the small-T router, whose input the
+baseline keeps in FP32. Its vjeux parent has the same issue. Do not promote or
+resubmit either unchanged. See `ROUTER_PRECISION_AUDIT_2026-10-30.md`.
+Exact alygg77 source `submission_v17_alygg77_6cae49a.py` fixes the router and is
+under test in `521b039c454045da` (sfo3). Local `submission.py` is temporarily
+restored to compliant scored v8 until the replacement is verified.
+
 ## Oct 29 public-source reproduction (supersedes historical baseline claims below)
 
 Exact Apache-2.0 vjeux source at f35a41e is archived in
