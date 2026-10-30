@@ -7,14 +7,24 @@ import subprocess
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("job")
+parser.add_argument("--source", help="Immutable submitted file, required when a failed run has no profile JSON")
 args = parser.parse_args()
 raw = subprocess.run(["okc", "status", args.job, "--json"], check=True, capture_output=True, text=True)
 job = json.loads(raw.stdout)
 assert job["status"] == "done", job["status"]
 result = job["result"]
 records = result.get("records", [])
-source = Path(job["profile"]["json"])
-profile = json.loads(source.read_text())
+profile_info = job.get("profile") or {}
+if profile_info.get("json"):
+    profile = json.loads(Path(profile_info["json"]).read_text())
+else:
+    assert args.source, "Failed jobs without profile JSON require --source"
+    profile = {
+        "submission": str(Path(args.source).resolve()),
+        "summary": {key: result.get(key) for key in
+                    ("passed", "status", "error", "speedup", "speedup_ci", "score_us", "returncode")},
+        "benchmarks": [], "profiles": [],
+    }
 submission = Path(profile["submission"])
 payload = {
     "job": args.job,
@@ -26,6 +36,7 @@ payload = {
     "source": str(submission.relative_to(Path.cwd())),
     "source_sha256": hashlib.sha256(submission.read_bytes()).hexdigest(),
     "duplicate_of": job.get("duplicate_of"),
+    "checks": result.get("checks"),
     "summary": profile["summary"],
     "setup": [row for row in records if row.get("event") == "setup"],
     "benchmarks": [

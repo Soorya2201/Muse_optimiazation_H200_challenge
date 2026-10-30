@@ -1,6 +1,6 @@
 diff --git a/python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_helper0.cuh b/python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_helper0.cuh
 new file mode 100644
-index 0000000..6c49d45
+index 0000000..6aaa859
 --- /dev/null
 +++ b/python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_helper0.cuh
 @@ -0,0 +1,2737 @@
@@ -2677,13 +2677,13 @@ index 0000000..6c49d45
 +      RuntimeCheck(x.size(0) >= 1 && x.size(0) <= 384, "invalid chunk size");
 +      auto device = SymbolicDevice{};
 +      device.set_options<kDLCUDA>();
-+      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(x);
++      TensorMatcher({x.size(0), okc::HD}).with_dtype<sglang::bf16_t>().with_device(device).verify(x);
 +      TensorMatcher({x.size(0), 8}).with_dtype<int32_t>().with_device(device).verify(ids);
-+      TensorMatcher({x.size(0), 8}).with_dtype<fp32_t>().with_device(device).verify(tw);
-+      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(out);
++      TensorMatcher({x.size(0), 8}).with_dtype<sglang::fp32_t>().with_device(device).verify(tw);
++      TensorMatcher({x.size(0), okc::HD}).with_dtype<sglang::bf16_t>().with_device(device).verify(out);
 +      RuntimeCheck(x.IsContiguous() && ids.IsContiguous() && tw.IsContiguous() && out.IsContiguous(),
 +                   "contiguous call buffers required");
-+    
++
 +  okc::Params p;
 +  p.wA = (const uint4*)w[0].data_ptr(); p.sA = (const uint4*)w[1].data_ptr(); p.gsA = (const float*)w[2].data_ptr();
 +  p.wB = (const uint4*)w[3].data_ptr(); p.sB = (const uint4*)w[4].data_ptr(); p.gsB = (const float*)w[5].data_ptr();
@@ -2743,7 +2743,7 @@ index 0000000..6c49d45
 +}
 diff --git a/python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh b/python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh
 new file mode 100644
-index 0000000..7b88086
+index 0000000..ad6af08
 --- /dev/null
 +++ b/python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh
 @@ -0,0 +1,2736 @@
@@ -5419,13 +5419,13 @@ index 0000000..7b88086
 +      RuntimeCheck(x.size(0) >= 1 && x.size(0) <= 384, "invalid chunk size");
 +      auto device = SymbolicDevice{};
 +      device.set_options<kDLCUDA>();
-+      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(x);
++      TensorMatcher({x.size(0), okc::HD}).with_dtype<sglang::bf16_t>().with_device(device).verify(x);
 +      TensorMatcher({x.size(0), 8}).with_dtype<int32_t>().with_device(device).verify(ids);
-+      TensorMatcher({x.size(0), 8}).with_dtype<fp32_t>().with_device(device).verify(tw);
-+      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(out);
++      TensorMatcher({x.size(0), 8}).with_dtype<sglang::fp32_t>().with_device(device).verify(tw);
++      TensorMatcher({x.size(0), okc::HD}).with_dtype<sglang::bf16_t>().with_device(device).verify(out);
 +      RuntimeCheck(x.IsContiguous() && ids.IsContiguous() && tw.IsContiguous() && out.IsContiguous(),
 +                   "contiguous call buffers required");
-+    
++
 +  okc::Params p;
 +  p.wA = (const uint4*)w[0].data_ptr(); p.sA = (const uint4*)w[1].data_ptr(); p.gsA = (const float*)w[2].data_ptr();
 +  p.wB = (const uint4*)w[3].data_ptr(); p.sB = (const uint4*)w[4].data_ptr(); p.gsB = (const float*)w[5].data_ptr();

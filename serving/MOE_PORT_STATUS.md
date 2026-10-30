@@ -27,14 +27,17 @@ it does **not** switch the server away from Marlin.
   returns the local weighted sum; cross-rank communication is the caller's job.
 - Python syntax, exact source hashes, helper/dispatch ASTs, device-source
   whitespace equivalence, flag rejection, patch paths/size/line limits and
-  reverse-apply checks pass. The patch is **310,131 bytes**, below720KiB.
+  reverse-apply checks pass. The patch is **310,171 bytes**, below720KiB.
 
 Correction on Oct30 continuation: the initial165452-byte prototype omitted
 the late MID_DEFINES augmentation and alternative helper0 CUDA source. Its
 earlier function-AST checks did not cover effective module settings. This
 omission is fixed and the verifier now covers it. Kernel-track validation
-job88b96eec59f34b57 is running on sfo3; this is a compatibility check,not an
-algorithmic speedup experiment. Model integration remains absent.
+job88b96eec59f34b57 failed compilation on sfo3 because the global host entry
+used unqualified bf16_t/fp32_t aliases. No tests or timings ran. Those names
+are now qualified with sglang::; retry81468b81190440ed is pending. These are
+compatibility checks,not algorithmic speedup experiments. Model integration
+remains absent.
 
 Reproduce after `okc serve init` at SGLang `a55ab7d5`:
 

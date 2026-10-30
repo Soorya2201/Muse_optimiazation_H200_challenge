@@ -23,7 +23,7 @@ The revised generator ports both native sources and retains this late
 augmentation. The verifier now compares final settings as well as all17
 packing/setup helper ASTs, dispatch and both device-source sections. Device
 changes remain whitespace-only operand-list wraps; PDL stays disabled.
-The source-only serving patch is now three files and310131bytes, below
+The source-only serving patch is now three files and310171bytes, below
 720KiB,with no added line over400characters. No model call site is changed.
 
 `submission_v27_loadjit_validation.py` embeds these exact two headers and
@@ -38,9 +38,17 @@ This is compatibility/numerical validation, **not an algorithmic speedup
 claim**. A GPU binding port must compile and pass the full MoE checks before
 it can support serving work. The canonical scored kernel remains unchanged.
 
-- Job: `88b96eec59f34b57`, pending at creation.
+- First job: `88b96eec59f34b57`, compile failure on sfo3. The global host
+  binding used unqualified bf16_t/fp32_t; pinned SGLang declares these in
+  namespace sglang. No tests/timings ran. Full compiler output was read and
+  a failed-run receipt archived; the archiver now supports failed jobs
+  without profiler JSON when an immutable --source is supplied.
 - Source SHA256: `639a5f5a4e86872274ba7f545772538723ad3ae7950d330eedf3c3ad0f54b002`.
-- Routine MoE budget after enqueue:4/8checks,1/2submits on Oct30UTC.
+- Retry: v28,job `81468b81190440ed`,pending at creation. Both aliases are
+  qualified; generated trailing whitespace also removed. Device algorithms,
+  packing and final variant mapping unchanged.
+- Retry SHA256: `41458546626ef0243a9378d40f86670bee9e35f73bb5548831c09edbb160253f`.
+- Routine MoE budget after retry enqueue:5/8checks,1/2submits on Oct30UTC.
 - Read every profile/log and archive terminal evidence before deciding next.
 
 The serving norm/scale, return-contract, sharding and full-model resident

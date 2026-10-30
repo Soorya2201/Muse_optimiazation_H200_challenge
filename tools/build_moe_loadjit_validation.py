@@ -7,6 +7,11 @@ import ast
 import hashlib
 from pathlib import Path
 import subprocess
+import argparse
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--version", type=int, default=27)
+args = parser.parse_args()
 
 ROOT = Path(__file__).resolve().parents[1]
 checkout = ROOT / "serving/okc_init/sglang"
@@ -53,7 +58,7 @@ context = donor[donor.index("# Per-thread primary-context bind"):]
 context = context.replace("_context_parent_kernel = kernel_fn", "_context_parent_kernel = _kernel")
 text = first + body + "\n\nprepare = _prepare_local_weights\n\n" + context
 ast.parse(text)
-target = ROOT / "muse_moe_w4a16/submission_v27_loadjit_validation.py"
+target = ROOT / f"muse_moe_w4a16/submission_v{args.version}_loadjit_validation.py"
 assert not target.exists(), "do not overwrite an archived GPU candidate"
 patch = "*** Begin Patch\n*** Add File: " + str(target) + "\n"
 patch += "\n".join("+" + line for line in text.splitlines()) + "\n*** End Patch\n"

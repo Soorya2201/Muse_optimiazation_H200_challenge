@@ -1,0 +1,63 @@
+{
+  "job": "88b96eec59f34b57",
+  "board": "muse_moe_w4a16",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 121.55,
+      "power.limit": 700,
+      "temperature.gpu": 36
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 121.32,
+      "power.limit": 700,
+      "temperature.gpu": 37
+    },
+    "node": "n-djsogg5ih26gwdcnhyhbnqzfkb"
+  },
+  "created_at": 1793382712.9091866,
+  "source": "muse_moe_w4a16/submission_v27_loadjit_validation.py",
+  "source_sha256": "639a5f5a4e86872274ba7f545772538723ad3ae7950d330eedf3c3ad0f54b002",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "passed": false,
+    "status": "ok",
+    "error": null,
+    "speedup": null,
+    "speedup_ci": null,
+    "score_us": null,
+    "returncode": 112
+  },
+  "setup": [
+    {
+      "baseline_copies": 4,
+      "baseline_prepare_pad": 11194880,
+      "copies": null,
+      "error": "RuntimeError: Failed to build JIT module sgl_kernel_jit_muse_spark_okc_moe_prototype_okc_nw_16_okc_fast1_0_okc_epi4_0_okc_wgs_1_okc_prmtsc_1 in /tmp/muse_moe_w4a16-b47q9xeu/sandbox/.cache/sglang/jit/sm90a/sgl_kernel_jit_muse_spark_okc_moe_prototype_okc_nw_16_okc_fast1_0_okc_epi4_0_okc_wgs_1_okc_prmtsc_1/build-ccc4ef69691d85d0/.staging-b3234bc45aec49e1b264c4d8c7f554a2\nstdout:\n[1/2] /usr/local/cuda/bin/nvcc -MD -MF \"cuda_0.o.d\" -Xcompiler -fPIC -gencode=arch=compute_90a,code=sm_90a -DSGL_CUDA_ARCH=900 -std=c++20 -O3 --expt-relaxed-constexpr -O3 -DOKC_NS=3 -DOKC_NSF=3 -DOKC_DQ7=1 -DOKC_NW=16 -DOKC_FAST1=0 -DOKC_EPI4=0 -DOKC_WGS=1 -DOKC_PRMTSC=1 -I/opt/sglang/lib/python3.12/site-packages/tvm_ffi/include -I/sgl-workspace/sglang-muse-spark/python/sglang/kernels/jit/include -c \"cuda.cu\" -o \"cuda_0.o\"\nFAILED: [code=2] cuda_0.o \n/usr/local/cuda/bin/nvcc -MD -MF \"cuda_0.o.d\" -Xcompiler -fPIC -gencode=arch=compute_90a,code=sm_90a -DSGL_CUDA_ARCH=900 -std=c++20 -O3 --expt-relaxed-constexpr -O3 -DOKC_NS=3 -DOKC_NSF=3 -DOKC_DQ7=1 -DOKC_NW=16 -DOKC_FAST1=0 -DOKC_EPI4=0 -DOKC_WGS=1 -DOKC_PRMTSC=1 -I/opt/sglang/lib/python3.12/site-packages/tvm_ffi/include -I/sgl-workspace/sglang-muse-spark/python/sglang/kernels/jit/include -c \"cuda.cu\" -o \"cuda_0.o\"\n/tmp/muse_moe_w4a16-b47q9xeu/sandbox/tmp/okc_moe_loadjit__h3ckivs/okc_moe_prototype.cuh(2673): error: identifier \"bf16_t\" is undefined\n        TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(x);\n                                                       ^\n\n/tmp/muse_moe_w4a16-b47q9xeu/sandbox/tmp/okc_moe_loadjit__h3ckivs/okc_moe_prototype.cuh(2675): error: identifier \"fp32_t\" is undefined\n        TensorMatcher({x.size(0), 8}).with_dtype<fp32_t>().with_device(device).verify(tw);\n                                                 ^\n\n2 errors detected in the compilation of \"cuda.cu\".\nninja: build stopped: subcommand failed.\n\nstderr:\n",
+      "event": "setup",
+      "first": "baseline",
+      "prepare_pad": null,
+      "prepare_s": null,
+      "status": "fail"
+    }
+  ],
+  "benchmarks": [],
+  "profiles": [],
+  "log_tail": "Traceback (most recent call last):\n  File \"/tmp/muse_moe_w4a16-b47q9xeu/run/worker.py\", line 423, in child_main\n    send(_setup_op(msg, module, state, sync, perf))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/muse_moe_w4a16-b47q9xeu/run/worker.py\", line 322, in _setup_op\n    state[\"prep\"] = prepare(weights)\n                    ^^^^^^^^^^^^^^^^\n  File \"/tmp/muse_moe_w4a16-b47q9xeu/run/submission.py\", line 339, in _prepare_local_weights\n    _ext(d)\n  File \"/tmp/muse_moe_w4a16-b47q9xeu/run/submission.py\", line 116, in _ext\n    return _ModuleAdapter(load_jit(\n                          ^^^^^^^^^\n  File \"/opt/sglang/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py\", line 1548, in _fn\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/sgl-workspace/sglang-muse-spark/python/sglang/kernels/jit/utils/compile/loader.py\", line 178, in load_jit\n    library = ninja.build(spec=spec, build_dir=staging, build_file=build_file)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/sgl-workspace/sglang-muse-spark/python/sglang/kernels/jit/utils/compile/ninja.py\", line 169, in build\n    raise RuntimeError(\nRuntimeError: Failed to build JIT module sgl_kernel_jit_muse_spark_okc_moe_prototype_okc_nw_16_okc_fast1_0_okc_epi4_0_okc_wgs_1_okc_prmtsc_1 in /tmp/muse_moe_w4a16-b47q9xeu/sandbox/.cache/sglang/jit/sm90a/sgl_kernel_jit_muse_spark_okc_moe_prototype_okc_nw_16_okc_fast1_0_okc_epi4_0_okc_wgs_1_okc_prmtsc_1/build-ccc4ef69691d85d0/.staging-b3234bc45aec49e1b264c4d8c7f554a2\nstdout:\n[1/2] /usr/local/cuda/bin/nvcc -MD -MF \"cuda_0.o.d\" -Xcompiler -fPIC -gencode=arch=compute_90a,code=sm_90a -DSGL_CUDA_ARCH=900 -std=c++20 -O3 --expt-relaxed-constexpr -O3 -DOKC_NS=3 -DOKC_NSF=3 -DOKC_DQ7=1 -DOKC_NW=16 -DOKC_FAST1=0 -DOKC_EPI4=0 -DOKC_WGS=1 -DOKC_PRMTSC=1 -I/opt/sglang/lib/python3.12/site-packages/tvm_ffi/include -I/sgl-workspace/sglang-muse-spark/python/sglang/kernels/jit/include -c \"cuda.cu\" -o \"cuda_0.o\"\nFAILED: [code=2] cuda_0.o \n/usr/local/cuda/bin/nvcc -MD -MF \"cuda_0.o.d\" -Xcompiler -fPIC -gencode=arch=compute_90a,code=sm_90a -DSGL_CUDA_ARCH=900 -std=c++20 -O3 --expt-relaxed-constexpr -O3 -DOKC_NS=3 -DOKC_NSF=3 -DOKC_DQ7=1 -DOKC_NW=16 -DOKC_FAST1=0 -DOKC_EPI4=0 -DOKC_WGS=1 -DOKC_PRMTSC=1 -I/opt/sglang/lib/python3.12/site-packages/tvm_ffi/include -I/sgl-workspace/sglang-muse-spark/python/sglang/kernels/jit/include -c \"cuda.cu\" -o \"cuda_0.o\"\n/tmp/muse_moe_w4a16-b47q9xeu/sandbox/tmp/okc_moe_loadjit__h3ckivs/okc_moe_prototype.cuh(2673): error: identifier \"bf16_t\" is undefined\n        TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(x);\n                                                       ^\n\n/tmp/muse_moe_w4a16-b47q9xeu/sandbox/tmp/okc_moe_loadjit__h3ckivs/okc_moe_prototype.cuh(2675): error: identifier \"fp32_t\" is undefined\n        TensorMatcher({x.size(0), 8}).with_dtype<fp32_t>().with_device(device).verify(tw);\n                                                 ^\n\n2 errors detected in the compilation of \"cuda.cu\".\nninja: build stopped: subcommand failed.\n\nstderr:\n\n"
+}

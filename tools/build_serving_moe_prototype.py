@@ -79,10 +79,10 @@ def port_cuda(cuda):
       RuntimeCheck(x.size(0) >= 1 && x.size(0) <= 384, "invalid chunk size");
       auto device = SymbolicDevice{};
       device.set_options<kDLCUDA>();
-      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(x);
+      TensorMatcher({x.size(0), okc::HD}).with_dtype<sglang::bf16_t>().with_device(device).verify(x);
       TensorMatcher({x.size(0), 8}).with_dtype<int32_t>().with_device(device).verify(ids);
-      TensorMatcher({x.size(0), 8}).with_dtype<fp32_t>().with_device(device).verify(tw);
-      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(out);
+      TensorMatcher({x.size(0), 8}).with_dtype<sglang::fp32_t>().with_device(device).verify(tw);
+      TensorMatcher({x.size(0), okc::HD}).with_dtype<sglang::bf16_t>().with_device(device).verify(out);
       RuntimeCheck(x.IsContiguous() && ids.IsContiguous() && tw.IsContiguous() && out.IsContiguous(),
                    "contiguous call buffers required");
     '''
@@ -104,7 +104,7 @@ def port_cuda(cuda):
         "// Prototype only: kernel-track norm offsets, no SGLang model integration.\n"
     )
     header = notice + "#pragma once\n#include <array>\n#include <sgl_kernel/tensor.h>\n#include <sgl_kernel/utils.h>\n#include <tvm/ffi/container/tensor.h>\n#include <tvm/ffi/extra/c_env_api.h>\n" + device + host
-    header = header.rstrip() + "\n"
+    header = "\n".join(line.rstrip() for line in header.splitlines()).rstrip() + "\n"
     return header, device_original, device
 
 

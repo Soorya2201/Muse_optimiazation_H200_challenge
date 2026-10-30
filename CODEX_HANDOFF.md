@@ -76,11 +76,14 @@ not replaced. Native binding audit found and fixed initial serving prototype's
 missing late MID_DEFINES augmentation and ALT_SRCS helper0. Generator now ports
 both device sources; verifier also checks final variant tuples. Three-file
 310131-byte patch passes local checks; no model hook added.
-MoE load_jit validation check88b96eec59f34b57 is active,canonical unchanged,
-SHA639a5f5a4e86872274ba7f545772538723ad3ae7950d330eedf3c3ad0f54b002.
+MoE load_jit validation check88b96eec59f34b57 failed compilation(sfo3):
+global host entry omitted sglang:: namespace on bf16_t/fp32_t. Full log read,
+failed receipt archived. No correctness/timing ran. Fixed in immutablev28,
+SHA41458546626ef0243a9378d40f86670bee9e35f73bb5548831c09edbb160253f;
+retry81468b81190440ed is active on sfo3,canonical unchanged.
 This is GPU binding/compatibility validation,not a speedup experiment.
-MoE4/8routinechecks,1/2submits;other budgets unchanged from05:38checkpoint.
-Read/archive result,allprofiles/logs,next. See
+MoE5/8routinechecks,1/2submits;other budgets unchanged from05:38checkpoint.
+Current three-file patch310171bytes;check result/allprofiles/logs next. See
 muse_moe_w4a16/LOADJIT_VALIDATION_2026-10-30.md. Core public source families
 unchanged on GitHub;additional source follow-ups documented there.
 

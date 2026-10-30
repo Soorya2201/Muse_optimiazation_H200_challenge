@@ -9,8 +9,8 @@
   "helper0_donor_device_sha256": "f82e2f386fd59a487bfc69cd6bb08497b5eeb405ba091574de899bbc7fa4c003",
   "helper0_ported_device_sha256": "00a3e67cd79ac706c81d723b821fe3c9d3d0273ed8f63ca3adf11b0b4e43e1c2",
   "outputs": {
-    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh": "505985c69b76526b335cf021e5da346465080da3f6ff4469ad5d79581803445c",
-    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_helper0.cuh": "c1b0d6db842136ba4edab36caaa2b3951284489ebf4b38d66bf66ede32ea110b",
+    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh": "4aa21457b4ddc40de7c96c57b6a8b19913ed3d0e2f327de8fe980003c5bd171c",
+    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_helper0.cuh": "5ba834d835398f11cedbcf2deeacf0797819024a16f0bd302998235f5c2e7332",
     "python/sglang/kernels/ops/muse_spark_v12/okc_moe_prototype.py": "082db9dbbd020b9005eaf51bb9bc9928af7fe70b0b3990800e327fdf63689216"
   }
 }
