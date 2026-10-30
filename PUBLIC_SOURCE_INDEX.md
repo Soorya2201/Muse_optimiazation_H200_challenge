@@ -56,6 +56,20 @@ Global code search supplements the profile screen, including accounts absent fro
 
 ## Adoption procedure
 
+Oct30 broader BF16 code-search follow-up: 234 public file matches archived in
+`muse_bf16_proj/GLOBAL_CODE_SEARCH_2026-10-30.json`. Newly reviewed
+`rohanarun/Auto-research-agent` at018b7a1 (MIT) contains a standalone BF16 TMA
+GEMM; isolated source/license pinned under `research/public/rohanarun_018b7a1/`.
+Its external constant-ratio Gemini timing rows are not accepted as performance
+evidence. Prepare-only v38 paired probe a8d2c8d0433a4829 on sfo3c passed9/30;
+timed dispatch remains parent. All15changed compositions rejected: pooler256
+44-54%longer; other cells near parity. Service log tail lost one of32rows;
+31archived,all seven complete groups modeled. No score promotion.
+Ozgur's Apache-2.0 v027 is slower than current
+controls; muse-sputter is an explicitly slow exercise. Audit/harness material
+is excluded as an optimization source. Scope/provenance/model and pending
+result: `muse_bf16_proj/TMA_PUBLIC_FOLLOWUP_2026-10-30.md`.
+
 Pin the commit, source hash, and license; inspect the timed path and precision; establish an
 unchanged-parent OKC result; compare all relevant shapes; port only justified mechanisms;
 check the resulting source on current inputs; submit only after the project's improvement gate.

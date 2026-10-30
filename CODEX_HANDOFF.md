@@ -67,6 +67,37 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct30 BF16 public TMA follow-up completed
+
+Broader GitHub code search found234public BF16 files, including
+rohanarun/Auto-research-agent018b7a1(MIT). Standalone rq_deep_tma_pooler
+pinned with license/provenance;full upstream not executed. Embedded Nathen
+matches existing111630ff...dcb44. External Gemini timing rows are arithmetic
+baselines/constant1.5601ratios,not accepted as evidence;provenance unresolved.
+Ozgurv027 slower;harness/audit material excluded. See BF16 dated TMA follow-up.
+Phase-zero four-cell bound34.1924%;optimistic physical planning3.6905%,not
+measured. v38prepare-only probe a8d2c8d0433a4829 PASSED9tests/30timings,
+sfo3c,1.556540x,CI1.533192-1.579888,prepare165.15s,copies4/baseline16.
+SHAbd53243854bab73f2489e5ffb3051088024ca9ba6e6eefd22112bda6471803bd.
+Timed dispatch remains exact parent;not a TMA score. Independent two seeds,
+four deepcopied states/pads,nine cold-L2 A/B/A reps,FP64/onehot/outlier and
+changed-value graph assertions complete. Service16000-byte tail truncates
+first diagnostic:31/32raw rows archived,missing pad0/P128/seed3119 explicit.
+All30profiles and complete available logs read,receipt/report archived.
+Extractor --allow-partial models seven complete groups;all15nonempty fixed
+compositions reject. P25644-54%longer;others nearparity. Best nonempty model
+worst.999844/median1.001388/best1.002297,AAvariation up to2.252%.
+No promotion/no scored submit;canonicalSHA290a...7b90 unchanged. Do not
+repeat these4TMAconfigs or spend a check solely to recover the missing log.
+Future long probes should print a compressed final report<8KB. Exact
+hardware cause needs counters;don't infer it from event timing alone.
+BF16 now6/8routinechecks,1/2submits;other budgets unchanged. No job live.
+Private GitHub verified. Latest18:56:40UTC ranks:overall88/1712,
+BF16187/1491,MoE122/1199,attention147/1143,decoder88/1060,prefill145/706.
+External volume absent,work in /Users/soorya/muse_work/continuation_20261030.
+New code-search scope found sources missed by repository-name filters;
+next sequential research cycle can apply that method to MoE before any run.
+
 #### Oct30 next performance cycle: prefill
 
 Previous goal turn classified progress(native MoE port validated,not a score

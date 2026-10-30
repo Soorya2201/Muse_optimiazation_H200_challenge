@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-30 18:32:40 UTC** from the live OKC boards. Overall **#87/1711**.
+Captured **2026-10-30 18:56:40 UTC** from the live OKC boards. Overall **#88/1712**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|186/1489|1.535843x|1.6498x|6.91%|
-|Routed experts|118/1199|2.372309x|2.7578x|13.98%|
-|Attention decode|146/1143|2.603505x|3.2221x|19.20%|
-|Whole decoder|87/1059|2.211495x|2.4178x|8.53%|
-|Prefill|144/705|1.784958x|2.0325x|12.18%|
+|BF16 projections|187/1491|1.535843x|1.6498x|6.91%|
+|Routed experts|122/1199|2.372309x|2.7578x|13.98%|
+|Attention decode|147/1143|2.603505x|3.2221x|19.20%|
+|Whole decoder|88/1060|2.211495x|2.4178x|8.53%|
+|Prefill|145/706|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -45,3 +45,9 @@ eligible faster pipeline/exponential combination. Their official timings
 use the parent dispatch;they are not new algorithm scores. Independent
 diagnostics/resources and losing cases are archived in
 muse_prefill_layer/HYBRID_PIPELINE_2026-10-30.md. No scored kernel changed.
+
+BF16 TMA probe a8d2c8d0433a4829 passed9/30 with parent timed dispatch.
+Its independent comparisons rejected all15changed fixed compositions;
+no new scored submission or rank improvement. One of32diagnostic rows
+was truncated by the service log tail;remaining31 and limitation archived
+in muse_bf16_proj/TMA_PUBLIC_FOLLOWUP_2026-10-30.md.
