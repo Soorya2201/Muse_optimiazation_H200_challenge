@@ -24,5 +24,5 @@ the code that earned a leaderboard score.
 
 Exact Chen first control `f5ea143175564684` passed all9tests/30timings at
 1.519434x on sfo3c,prepare196.84s. It did not beat our scored1.521867x.
-Repeat `640d50a9220444e3` is running on sfo3. Keep the clusters separate when
-comparing performance; independently checked correctness remains useful.
+Repeat `640d50a9220444e3` passed1.549794x on sfo3. Keep the clusters separate
+when comparing performance; independently checked correctness remains useful.

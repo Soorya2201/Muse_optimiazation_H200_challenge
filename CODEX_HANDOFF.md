@@ -102,8 +102,11 @@ on sfo3c,all9tests/30timings,3179.341us,CI1.496643-1.542226,prepare196.84s.
 Allprofiles/logs read/archived. Repeatv35 `640d50a9220444e3` passed1.549794x
 on sfo3,prepare199.69s,all9tests/30timings. Different clusters/bake choices:
 do not infer gains from their score difference. Exactalygg77v34 check
-`9c6378b77fb94bb8` running,Oct30 BF16 check3/8,zero submits. Next repeatv37
-and same-day parentv36;obtain matching-cluster controls as budget permits.
+`9c6378b77fb94bb8` passed1.544358x on sfo3,prepare140.18s.
+Repeatv37 `9bc0fbb427aa45ac` passed1.547060x on sfo3,prepare167.17s;
+all9tests/30timings each. Allprofiles/logs read and receipts archived.
+Same-day parentv36 `c200267a5274433e` running on sfo3,
+Oct30 BF16 check5/8,zero submits. Compare30cells/six weighted loads before promotion.
 Current submission staysNathenv18. BF16 metadata refresh complete for1433
 accounts;datedsnapshot/follow-up report pushed. Newsglangmain forks show no
 standalone winner in inspected areas;alygg77 already queued. Ten unresolved.

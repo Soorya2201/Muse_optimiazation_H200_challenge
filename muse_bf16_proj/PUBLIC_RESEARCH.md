@@ -14,8 +14,11 @@ The source/AST/native constants are identical; cluster, layout and some library
 bake choices differ. This spread is not an algorithm gain. All60profiles and
 logs were inspected and receipts archived. Current local submission staysNathenv18
 until matching-cluster comparisons establish what should change.
-Exact alygg77 check `9c6378b77fb94bb8` is running,third of eight checks.
+Exact alygg77 check `9c6378b77fb94bb8` passed1.544358x on sfo3;
+identical-source repeat `9bc0fbb427aa45ac` passed1.547060x on sfo3.
+All9tests/30timings each,prepare140.18/167.17s; allprofiles/logs read and archived.
 The source matches pinned public SHA290a86ab...7b90;licenses/notices preserved.
+Same-day parent `c200267a5274433e` is running on sfo3,fifth of eight checks.
 
 Captured2026-10-29T20:09:08UTC. Our live position was#171/1394 at1.5219x;
 leader colinlikescode1.6367x. `RANKED_GITHUB_REPO_SCREEN.json` covers all1394 ranked
