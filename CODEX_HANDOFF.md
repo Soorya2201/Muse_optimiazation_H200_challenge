@@ -113,13 +113,17 @@ Promoted exactalygg77v34;submit `a3d4758c1e174aba` passed1.535843x on sfo3,
 BF16#133/1435,overall#54/1654 at capture (others moved past earlier#50).
 Oct30 BF16 check5/8,submit1/2. All profiles/logs archived/read.
 P0/P1 public-source cycle complete;rank1 goal still open. P2 prefill context
-hardening check `a77a2557e1a24fa7` running on sfo3,Oct30 check1/8,zero submits.
+hardening check `a77a2557e1a24fa7` passed1.805642x on sfo3,all5tests/8timings,
+214551.911us,CI1.778557-1.832726,prepare53.23s.
 Candidatev20 SHA8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5.
 Exactparent prefix/native sources retained; attributed fresh-thread driver binder
 wraps prepare/kernel. Prepare probes one existing Lt plan on independent data
 from a fresh thread,joins it and checks the output. No speedup expected/claimed.
-Read actual probe/result/all8profiles before promotion;then remaining public
-metadata refresh. Do not repeat unchanged submissions for lucky scores.
+Actual fresh-thread probe initial_context=False,Lt753router,relerr3.17e-6.
+Allprofiles/logs archived/read;promoted for robustness (native GPU path unchanged).
+Submit `25a1e0e5df0d4949` running sfo3,Oct30 prefill1/8checks,1/2submits.
+Prefill metadata refresh active using timestampedBF16cache;then remaining tracks.
+Do not repeat unchanged submissions for lucky scores.
 See NEXT_MEASUREMENTS_2026-10-30.md.
 BF16 metadata refresh complete for1433
 accounts;datedsnapshot/follow-up report pushed. Newsglangmain forks show no

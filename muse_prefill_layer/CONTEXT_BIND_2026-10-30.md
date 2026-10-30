@@ -25,6 +25,12 @@ no challenge data or reference module is used. If no Lt plan is selected,
 the probe validates driver binding only and reports that narrower coverage.
 This does not test every possible concurrent-thread/context scenario.
 
-GPU check `a77a2557e1a24fa7` is running on sfo3. Syntax, prefix/native isolation
-and pinned-source checks pass locally. Promote only after the actual probe
-and all challenge tests pass; do not interpret tiny timing shifts as a GPU gain.
+GPU check `a77a2557e1a24fa7` passed on sfo3 at1.805642x,
+214551.911us,CI1.778557-1.832726,prepare53.23s,all5tests/8timings.
+All profiles/logs were inspected and archived. Actual probe began without a
+current context (`initial_context=False`), bound the correct device, and ran
+the753-token router Lt plan with3.1739455e-6 relative error against torch.mm.
+It establishes the new binder/probe behavior, not that the old whole kernel
+would necessarily fail (it allocates through PyTorch before some native calls).
+Promoted locally for robustness; scored confirmation25a1e0e5df0d4949 is running.
+No GPU algorithm changed; do not credit its1.16% cross-job point shift as a speed gain.

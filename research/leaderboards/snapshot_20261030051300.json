@@ -1,0 +1,117 @@
+{
+  "captured_utc": "2026-10-30 05:13:00 UTC",
+  "source": "okc leaderboard --json",
+  "rows": [
+    {
+      "board": "muse_bf16_proj",
+      "ranked": 1437,
+      "leader": {
+        "rank": 1,
+        "team": "naklecha",
+        "speedup": 1.6498,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 134,
+        "team": "Soorya2201",
+        "speedup": 1.5358,
+        "first": false,
+        "ahead": 133,
+        "to_first": 1.0742
+      }
+    },
+    {
+      "board": "muse_moe_w4a16",
+      "ranked": 1151,
+      "leader": {
+        "rank": 1,
+        "team": "dolanzhao",
+        "speedup": 2.6995,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 80,
+        "team": "Soorya2201",
+        "speedup": 2.3723,
+        "first": false,
+        "ahead": 79,
+        "to_first": 1.1379
+      }
+    },
+    {
+      "board": "muse_attention_decode",
+      "ranked": 1102,
+      "leader": {
+        "rank": 1,
+        "team": "tjiang-fair",
+        "speedup": 3.2221,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 109,
+        "team": "Soorya2201",
+        "speedup": 2.6035,
+        "first": false,
+        "ahead": 108,
+        "to_first": 1.2376
+      }
+    },
+    {
+      "board": "muse_decode_layer",
+      "ranked": 1011,
+      "leader": {
+        "rank": 1,
+        "team": "mpeng19",
+        "speedup": 2.4178,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 54,
+        "team": "Soorya2201",
+        "speedup": 2.2115,
+        "first": false,
+        "ahead": 53,
+        "to_first": 1.0933
+      }
+    },
+    {
+      "board": "muse_prefill_layer",
+      "ranked": 662,
+      "leader": {
+        "rank": 1,
+        "team": "zzz0906",
+        "speedup": 2.0325,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 118,
+        "team": "Soorya2201",
+        "speedup": 1.785,
+        "first": false,
+        "ahead": 117,
+        "to_first": 1.1387
+      }
+    },
+    {
+      "board": "overall",
+      "ranked": 1656,
+      "leader": {
+        "rank": 1,
+        "team": "mpeng19",
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 54,
+        "team": "Soorya2201",
+        "first": false,
+        "ahead": 53
+      }
+    }
+  ]
+}
