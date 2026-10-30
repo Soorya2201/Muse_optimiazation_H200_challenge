@@ -67,6 +67,25 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct30 next performance cycle: prefill
+
+Previous goal turn classified progress(native MoE port validated,not a score
+gain). No live old job;external drive still absent. Continuing in internal
+checkout. MoE binding cycle done;performance work now prefill only.
+Prefill check2d21c2cf18c84e2e is active forv21_hybrid_pipeline_probe,
+SHA1cda34bc6d5f67eeda2959288e2cca48365bced652bf4d9ac95c8802e2382952.
+Combines existing FP32 cubic EXPMODE16/32 with selected PIPE/RRS full-attention
+schedule43(new44/45),not the separate closed decode-attention B1 family.
+Native template bodies and exact hardenedv20 prefix retained;timed dispatch
+staysparent sliding8/full43. Prepare diagnostics:FA3 validation,all5full
+geometries,two independent seeds,9cold-L2 graph pairs,duplicate A/A controls.
+Loose full-forward-zero board bound15.623%;idealized half-exp-work resource
+model+4.748%,not measured exposure or expected gain. Do not borrow decode
+kernel's40.5% SFU fraction. Canonical unchanged. Read allprofiles/logs,
+archive receipt/extract diagnostic JSON,then decide from weighted evidence.
+Prefill2/8checks,1/2submits;other budgets unchanged. See
+muse_prefill_layer/HYBRID_PIPELINE_2026-10-30.md for sources/method/gates.
+
 #### Oct30 17:50UTC internal-disk continuation
 
 External volume absent; separate private-GitHub checkout restored at
