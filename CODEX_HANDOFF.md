@@ -112,9 +112,15 @@ Promoted exactalygg77v34;submit `a3d4758c1e174aba` passed1.535843x on sfo3,
 3145.373us,CI1.512805-1.558881,prepare166.55s,all9tests/30timings.
 BF16#133/1435,overall#54/1654 at capture (others moved past earlier#50).
 Oct30 BF16 check5/8,submit1/2. All profiles/logs archived/read.
-P0/P1 public-source cycle complete;rank1 goal still open. Next P2 prefill
-context hardening and remaining public-metadata refresh;do not repeat unchanged
-submissions for lucky scores. See NEXT_MEASUREMENTS_2026-10-30.md.
+P0/P1 public-source cycle complete;rank1 goal still open. P2 prefill context
+hardening check `a77a2557e1a24fa7` running on sfo3,Oct30 check1/8,zero submits.
+Candidatev20 SHA8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5.
+Exactparent prefix/native sources retained; attributed fresh-thread driver binder
+wraps prepare/kernel. Prepare probes one existing Lt plan on independent data
+from a fresh thread,joins it and checks the output. No speedup expected/claimed.
+Read actual probe/result/all8profiles before promotion;then remaining public
+metadata refresh. Do not repeat unchanged submissions for lucky scores.
+See NEXT_MEASUREMENTS_2026-10-30.md.
 BF16 metadata refresh complete for1433
 accounts;datedsnapshot/follow-up report pushed. Newsglangmain forks show no
 standalone winner in inspected areas;alygg77 already queued. Ten unresolved.
