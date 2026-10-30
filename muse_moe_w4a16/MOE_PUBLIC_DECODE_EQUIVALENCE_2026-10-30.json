@@ -1,0 +1,22 @@
+{
+  "scope": "CPU fragment-bit/layout equivalence, not a GPU speed result or full-kernel SASS equivalence.",
+  "sources": {
+    "muse_moe_w4a16/submission_v18_vjeux_f35a41e.py": "10e0690d7fc21244bf29f6df2916b89f0ddcbe8f94d7afe15983478d315883a3",
+    "muse_moe_w4a16/submission_v20_lee8_dequant.py": "d50015ce9261a43dfc107314cb8abae1434bb02c97807545dcf1d2e65060b4e8",
+    "research/public/rohanarun_018b7a1/moe_mul_decode.py": "64d3a1c7c6dec5ef769237243624d46538e054ea25c154e422035fea18d1fa2e"
+  },
+  "paired_and_random_words": 34848,
+  "additional_basis_words": 32,
+  "additional_complete_multiply_domain": 256,
+  "all_pass": true,
+  "public_vs_lee8": {
+    "same_multiply": "4228 == 0x1084",
+    "same_output_mask": "0x81C081C0",
+    "same_multiply_input_mask": "0x001B001B",
+    "difference": "Two funnel-shift constants/directions and their matching lossless packed bit positions",
+    "source_operation_classes_per_8_weights": "5 masks/bitwise operations, 2 funnel shifts, 1 integer multiply",
+    "limitation": "Equivalent operation classes do not prove identical scheduling, registers, or performance. Prior paired 8-op measurements are counterevidence to assuming a large gain; no new GPU check justified solely by this source."
+  },
+  "prior_paired_job": "683c1eb4664a4396",
+  "canonical_changed": false
+}

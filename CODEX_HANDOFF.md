@@ -67,6 +67,32 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct30 MoE broader code/source cycle completed
+
+Previous goal turn made progress(BF16 TMA measured negative). MoE global
+code search now203unique public files/12repos; pages201/202/203dynamicindex,
+not all branches. New rohanarun018b7a1 seven sources/hashmatchedreportedbanks
+screened: six weakerMarlin/Triton; Gemini public2.3768 banks againarithmetic
+baselines/constantidenticalratios,not usabletimingevidence. IsolatedMULDEC
+positions+decode excerpt pinned withMIT/Apacheprovenance. 35136CPUwordcases
+matchparent/lee8/publicexactBF16bits. Two shifts/5bitops/oneIMAD withsame
+0x1084multiply/masks as alreadyclosed8-op family; onlypositions/shiftconstants
+differ. Not fullSASS/performanceequivalence. Prior683c1ebpaired8-opretains
+parentallloads,so no blindduplicateGPUcheck. Nowholeupstreamimport/execution.
+Ranoobaba3831ab3 publicreceipt1.1483/1.2627/1.1338allcellsslower;no rootlicense
+established,noimplementationcopied. OzgurkeywordsarenewBF16notMoE;
+ruwwwwsourcefamilystill2.3370belowour2.372309,noadditionalwinestablished.
+vLLMFLINTNVFP4GEMVsourceexplicitlySM100; nativeE2M1conversionnotSM90.
+Humming452e0bb(Oct19newlibrary) 7componentfiles/hashchecked separately:
+nativeFP4guardexcludesSM90,genericmaskeddecodealreadyknownbroadtechnique,
+fusedMXFP4helperonlyFP8/INT8targets. FullalternativeSM90 WNA16schedulesnot
+benchmarked;do not claimwholelibraryslower. No activationquantization.
+See muse_moe_w4a16/GLOBAL_SOURCE_FOLLOWUP_2026-10-30.md andits4JSONscreens,
+CPUverifierreport andtools/verify_public_moe_decode_families.py.
+No newGPUrun/no scorechange;MoE6/8checks,1/2submits remain. Otherbudgets
+BF166/1,decoder3/1,prefill3/1,attention0/0. No livejob. Nextsequentialsource
+cycle: broaderattentioncode search; don't retryclosedB1merge or prefillFMA.
+
 #### Oct30 BF16 public TMA follow-up completed
 
 Broader GitHub code search found234public BF16 files, including

@@ -56,6 +56,18 @@ Global code search supplements the profile screen, including accounts absent fro
 
 ## Adoption procedure
 
+Oct30 MoE broader code search:203unique public matches/12repositories,
+including seven newly reviewed rohanarun candidate files. Its multiply-based
+decoder is bit-exact in35136CPUcases but has the same operation classes as
+the already measured8-op family; no new large-gain evidence. External Gemini
+constant-ratio timings are excluded. Ranoobaba's previously unresolved
+receipts are weaker;vLLM's new native NVFP4 GEMV is SM100. Humming's BF16
+conversion components checked separately; no supported faster replacement
+established,complete alternate schedules not benchmarked. Exact manifests,
+licenses,hashes,limits and sources in
+`muse_moe_w4a16/GLOBAL_SOURCE_FOLLOWUP_2026-10-30.md`. No GPU run/new score;
+canonicalKPERM3 unchanged and routine MoE6/8checks,1/2submits preserved.
+
 Oct30 broader BF16 code-search follow-up: 234 public file matches archived in
 `muse_bf16_proj/GLOBAL_CODE_SEARCH_2026-10-30.json`. Newly reviewed
 `rohanarun/Auto-research-agent` at018b7a1 (MIT) contains a standalone BF16 TMA

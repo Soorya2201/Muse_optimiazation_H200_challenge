@@ -5,5 +5,12 @@
   "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_bf16_proj/submission.py",
   "source_sha256": "eced0e32d609100a8946bd3727fb76cdfcbbd15f5c7e5536c6132c145bcbf2fd",
   "extract_sha256": "40e8e6d762be779c9c41006cd8684bf547ddb31c03b3fe0f0e69649f1cb69cb1",
-  "scope": "Only standalone rq_deep_tma_pooler function extracted. Full module not executed or vendored. Public timing rows not independent evidence."
+  "scope": "Only standalone rq_deep_tma_pooler function extracted. Full module not executed or vendored. Public timing rows not independent evidence.",
+  "moe_excerpt": {
+    "source_path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+    "source_sha256": "b59196ac2365cba30cc666cc74f38051ff8f5e19c8fbd9e771adfd4696c40765",
+    "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+    "extract_sha256": "64d3a1c7c6dec5ef769237243624d46538e054ea25c154e422035fea18d1fa2e",
+    "scope": "Only _stored_pos_mul and four-output MULDEC branch. Whole module not executed; no use of lo=0-only prepare wrapper."
+  }
 }

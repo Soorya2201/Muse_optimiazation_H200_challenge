@@ -1,0 +1,1057 @@
+{
+  "repo": "rohanarun/Auto-research-agent",
+  "commit": "018b7a102348ea3b73701e8be52d24f82d8c91ee",
+  "scope": "Unverified external benchmark claims, not official OKC results; statuses/timings reported by source. Do not treat constant-ratio Gemini rows as measurements.",
+  "candidates": {
+    "claude-haiku-5-5": {
+      "source_sha256": "19be0389a7ee3ea6b669937163193d9f0347c0a1c574e1ceb4cac3ee95bd3546",
+      "banks": [
+        {
+          "reported_status": "failed",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 424.4192123413086,
+              "baseline_us": 84.73920226097107,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 920.6815719604492,
+              "baseline_us": 182.1887969970703,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 1212.4383926391602,
+              "baseline_us": 204.8640012741089,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 688.2239818572998,
+              "baseline_us": 147.67999649047852,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 1924.6112823486328,
+              "baseline_us": 467.89441108703613,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 0.20341400245224056
+        }
+      ]
+    },
+    "claude-opus-5-5": {
+      "source_sha256": "c2e1ed98a5b5fa4dd807940d79beb550825195f4552f6bdd0f415c8862e61212",
+      "banks": [
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 82.07039833068848,
+              "baseline_us": 84.25599932670593,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 232.9279899597168,
+              "baseline_us": 231.99360370635986,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 194.71999406814575,
+              "baseline_us": 193.70239973068237,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 138.52800130844116,
+              "baseline_us": 138.93120288848877,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 321.79839611053467,
+              "baseline_us": 484.611177444458,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 407.9904079437256,
+              "baseline_us": 494.323205947876,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.1091007116397782
+        },
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 89.46239948272705,
+              "baseline_us": 89.23199772834778,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 202.55041122436523,
+              "baseline_us": 201.2864112854004,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 238.37120532989502,
+              "baseline_us": 238.34879398345947,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 157.95520544052124,
+              "baseline_us": 158.02240371704102,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 304.16319370269775,
+              "baseline_us": 473.74720573425293,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 466.36481285095215,
+              "baseline_us": 645.5264091491699,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.1349818630182593
+        }
+      ]
+    },
+    "claude-sonnet-5-5": {
+      "source_sha256": "1f57446a18932f04df3a2a4881ce8be894a6ca150cc56631db811f5b1094d071",
+      "banks": [
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 83.04640054702759,
+              "baseline_us": 83.83679986000061,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 152.4448037147522,
+              "baseline_us": 153.53280305862427,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 189.22879695892334,
+              "baseline_us": 175.1744031906128,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 139.28320407867432,
+              "baseline_us": 138.95679712295532,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 411.42401695251465,
+              "baseline_us": 505.27682304382324,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 502.6080131530762,
+              "baseline_us": 558.4415912628174,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.0421794300014806
+        },
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 82.6304018497467,
+              "baseline_us": 84.24959778785706,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 193.90720129013062,
+              "baseline_us": 193.4559941291809,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 188.25600147247314,
+              "baseline_us": 173.9967942237854,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 138.73599767684937,
+              "baseline_us": 138.31039667129517,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 314.61119651794434,
+              "baseline_us": 365.5456066131592,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 519.0783977508545,
+              "baseline_us": 572.7583885192871,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.031090298274762
+        }
+      ]
+    },
+    "gemini-3.8-flash-opencode": {
+      "source_sha256": "b59196ac2365cba30cc666cc74f38051ff8f5e19c8fbd9e771adfd4696c40765",
+      "banks": [
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 42.07337596768765,
+              "baseline_us": 100.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 48.384382362840796,
+              "baseline_us": 115.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 54.695388757993946,
+              "baseline_us": 130.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 61.006395153147096,
+              "baseline_us": 145.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 67.31740154830024,
+              "baseline_us": 160.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 73.62840794345338,
+              "baseline_us": 175.0,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 2.3768
+        },
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 42.07337596768765,
+              "baseline_us": 100.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 48.384382362840796,
+              "baseline_us": 115.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 54.695388757993946,
+              "baseline_us": 130.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 61.006395153147096,
+              "baseline_us": 145.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 67.31740154830024,
+              "baseline_us": 160.0,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 73.62840794345338,
+              "baseline_us": 175.0,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 2.3768
+        }
+      ]
+    },
+    "gpt-5.6-sol": {
+      "source_sha256": "9f538a6591f9d41561b39710e32647fb74b84766777a8c5946f25acb4c128aa4",
+      "banks": [
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 83.3407998085022,
+              "baseline_us": 84.11200046539307,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 205.52000999450684,
+              "baseline_us": 204.70399856567383,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 219.1648006439209,
+              "baseline_us": 206.64639472961426,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 148.49599599838257,
+              "baseline_us": 148.63040447235107,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 488.58561515808105,
+              "baseline_us": 463.5263919830322,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 526.4095783233643,
+              "baseline_us": 595.7536220550537,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.0030745056460284
+        },
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 83.61920118331909,
+              "baseline_us": 83.94880294799805,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 183.40799808502197,
+              "baseline_us": 182.7679991722107,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 220.25279998779297,
+              "baseline_us": 207.66398906707764,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 160.13439893722534,
+              "baseline_us": 159.49759483337402,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 410.95361709594727,
+              "baseline_us": 476.42879486083984,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 404.02560234069824,
+              "baseline_us": 642.0000076293945,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.0957340646064
+        }
+      ]
+    },
+    "gpt-6-astra": {
+      "source_sha256": "f52ddbad4515bfc6a029af4c70c89497c5331d34db043544d8efcab2999f3694",
+      "banks": [
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 86.67839765548706,
+              "baseline_us": 89.31199908256531,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 166.20800495147705,
+              "baseline_us": 172.9375958442688,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 188.20480108261108,
+              "baseline_us": 195.72160243988037,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 153.7951946258545,
+              "baseline_us": 159.08479690551758,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 264.04480934143066,
+              "baseline_us": 412.7808094024658,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 466.2496089935303,
+              "baseline_us": 669.8624134063721,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.1718982284064512
+        },
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 81.30239844322205,
+              "baseline_us": 83.84960293769836,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 206.57598972320557,
+              "baseline_us": 214.5695924758911,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 208.80000591278076,
+              "baseline_us": 217.00799465179443,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 143.19360256195068,
+              "baseline_us": 148.66880178451538,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 330.36160469055176,
+              "baseline_us": 519.76637840271,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 440.65918922424316,
+              "baseline_us": 581.2511920928955,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.1570030761048207
+        }
+      ]
+    },
+    "gpt-6.1-sol": {
+      "source_sha256": "a27a9bfe59b81f128c1d3f2539b7d8a997e693ea674c0464b7eb4a003b64a023",
+      "banks": [
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 54.11840081214905,
+              "baseline_us": 89.30240273475647,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 126.62719488143921,
+              "baseline_us": 172.5119948387146,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 195.9231972694397,
+              "baseline_us": 217.7151918411255,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 125.91999769210815,
+              "baseline_us": 168.34559440612793,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 316.5440082550049,
+              "baseline_us": 478.45120429992676,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 412.4415874481201,
+              "baseline_us": 624.8064041137695,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.40362523260085
+        },
+        {
+          "reported_status": "pass",
+          "reported_gpu": "NVIDIA H200",
+          "cells": [
+            {
+              "config": {
+                "bs": 1,
+                "load": "decode 1",
+                "seed": 401,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 48.87680113315582,
+              "baseline_us": 83.91680121421814,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 16,
+                "load": "decode 16",
+                "seed": 402,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 146.90879583358765,
+              "baseline_us": 193.05919408798218,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 32,
+                "load": "decode 32",
+                "seed": 403,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 226.63040161132812,
+              "baseline_us": 249.2192029953003,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 8,
+                "load": "verify 1",
+                "seed": 404,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 117.56800413131714,
+              "baseline_us": 159.08160209655762,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 128,
+                "load": "verify 16",
+                "seed": 405,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 273.27680587768555,
+              "baseline_us": 424.9887943267822,
+              "correct": true
+            },
+            {
+              "config": {
+                "bs": 256,
+                "load": "verify 32",
+                "seed": 406,
+                "sharding": "ep8",
+                "weight": 60
+              },
+              "candidate_us": 437.9712104797363,
+              "baseline_us": 674.8127937316895,
+              "correct": true
+            }
+          ],
+          "computed_claimed_gmean": 1.415519658805067
+        }
+      ]
+    }
+  }
+}
