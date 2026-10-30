@@ -40,6 +40,9 @@ Global code search supplements the profile screen, including accounts absent fro
 - https://github.com/zhebrak/muse-spark-kernels — below us on prefill with no published prefill winner, but Apache-2.0 sources/receipts for four other tracks. Describes persistent stream-K expert readiness counters and cluster residual boundaries; possible future component controls, not verified improvements over our promoted sources.
 - https://github.com/MadanChaollaPark/open-kernel-experiments — near our old prefill rank; stopped campaign with exact scored sources and627 candidate snapshots. Preserves correct-but-slower PRMT dequant and unfinished Hopper mixed-input proof without a speed claim; useful negative evidence.
 
+- https://github.com/alygg77/okc-muse-spark-kernels — Apache-2.0, commit 6cae49a (published Oct 29, #40 overall). Built on vjeux f35a41e. Exact files pinned as `muse_decode_layer/submission_v17_alygg77_6cae49a.py` (2.2058x, FP32 router at T<=8), `muse_moe_w4a16/submission_v24_alygg77_6cae49a.py` (2.4015x, KPERM3 scale-sharing re-layout), `muse_bf16_proj/submission_v34_alygg77_6cae49a.py` (1.5502x). Measured-facts, negative-results and timing kit in `research/public/alygg77_6cae49a/`. Unchecked by us; see CODEX_NEXT_STEPS.md P1.
+- https://github.com/Madhavan113/kerneloptimizer — newer commits through 721c627 (Oct 29 20:47 UTC): attention TMA bulk-reduction merge (-0.3..-0.5 us), MoE MID OKC_WSH0 and WGS32 builds. Design notes in `research/public/madhavan_721c627/`.
+
 ## Adoption procedure
 
 Pin the commit, source hash, and license; inspect the timed path and precision; establish an

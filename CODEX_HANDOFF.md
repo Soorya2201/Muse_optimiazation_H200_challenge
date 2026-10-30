@@ -63,7 +63,24 @@ okc withdraw <job>            # take a run off the board
 
 ## 5. Current state (as of Oct 28 2026)
 
+**Oct 29 23:30 UTC: read `CODEX_NEXT_STEPS.md` first.** It records a decoder router-precision compliance risk (P0), three newly pinned alygg77 candidates (P1), judge-noise practices, withdrawn/closed ideas and the serving plan.
+
 ### Continuation update (supersedes the older table below)
+
+#### Oct30 drive recovered; decoder compliance repair in progress
+
+Drive remounted; recovered attention v20 profiles/log for `acf6f11e935049db`
+(sfo3,2.616172x,timed parent). All50 workspace plans archived in
+`muse_attention_decode/workspace_probe_acf6f11e935049db.json`; zero qualify.
+Corrected an inaccurate blanket regression claim; B16L8 has mixed sub1.5% ratios.
+Attention B1 merge/protocol family closed per CODEX_NEXT_STEPS.md.
+Decoder audit confirms BF16 small-T router activation in scored Madhavan source.
+Withdrew `d857144e59784ad0` on Oct30; old2.127754x is no longer an eligible best.
+See `muse_decode_layer/ROUTER_PRECISION_AUDIT_2026-10-30.md`.
+Exact alygg77 decoder check `521b039c454045da` running on sfo3, Oct30 check1/8.
+Next: inspect result/all profiles; independent equivalent repeat and same-cluster
+control, then promote a verified compliant source, followed by MoE and BF16 P1.
+Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe
 
