@@ -93,8 +93,12 @@ passed2.376541x on sfo3,prepare164.85s,all5tests/6timings.
 Same-day parentv26 check `8ceabe44c7624c93` passed2.332013x on sfo3,
 prepare169.94s,all5tests/6timings. Repeated changed-load normalized gains
 2.24-5.10%; unchanged shapes smaller/mixed. Exactv24 promoted locally;
-submit `ce241acf7ab84c04` running on sfo3,Oct30 MoE3/8checks,1/2submits.
+submit `ce241acf7ab84c04` passed2.372309x on sfo3,5668.949us,
+CI2.336725-2.407894,prepare164.59s,all5tests/6timings.
+MoE#79/1150,overall#50/1651 at capture;Oct30 MoE3/8checks,1/2submits.
 All profiles/logs archived/read; comparison report records noise/raw-time limits.
+MoE cycle complete. Next BF16 exactChen,then alygg77 P1;do not chase noisy
+unchanged resubmissions. BF16 routine budget is fresh on Oct30 (0/8 so far).
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe

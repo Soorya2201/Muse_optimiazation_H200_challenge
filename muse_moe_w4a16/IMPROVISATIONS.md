@@ -1,7 +1,13 @@
 # `muse_moe_w4a16` optimization record
 
 This file records measured results, including regressions. Estimates are explicitly marked.
-The current verified local submission is `submission.py` = `submission_v18_vjeux_f35a41e.py`.
+The current verified local submission is `submission.py` = `submission_v24_alygg77_6cae49a.py`.
+Oct30 scored job `ce241acf7ab84c04` passes all5tests/6timings at **2.372309x**,
+5668.949us,CI[2.336725,2.407894],prepare164.59s,sfo3. Live MoE#79/1150,
+overall#50/1651 at capture. Two candidate checks and same-day parent support
+recurring gains on changed32/128/256-token paths. Exact aggregate gain remains
+uncertain; see `KPERM3_COMPARISON_2026-10-30.md`. Do not chase noisy scores
+with unchanged resubmissions. The older Oct29 record follows.
 Scored submission `9835951891204c56` confirms **2.324062x**, 5786.636 us, CI
 [2.289201,2.358923], 5/5 tests and six timed cases passed. Live rank #146/1112; overall
 #447/1599. This replaces v12's 1.632884x (+42.33% speedup, 29.74% less normalized time).

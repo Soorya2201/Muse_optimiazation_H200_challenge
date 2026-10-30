@@ -26,7 +26,9 @@ read and archived. Independent repeat `6ad96077d56c42d9` passed on sfo3 at
 Changed M32/128/256 improve2.24-5.10% in normalized speedup in both checks;
 unchanged paths show smaller/mixed shifts. Aggregate gains3.09%/1.91% with
 overlapping intervals; exact magnitude remains uncertain. All profiles/logs
-were read. Promoted exactv24; scored job `ce241acf7ab84c04` is running.
+were read. Promoted exactv24; scored job `ce241acf7ab84c04` passed at
+2.372309x,CI2.336725-2.407894,5668.949us,prepare164.59s,sfo3.
+Live MoE#79/1150,overall#50/1651 at capture. All scored profiles/logs archived/read.
 See `KPERM3_COMPARISON_2026-10-30.md` for every shape and limitations.
 
 AST comparison confirms every common literal configuration assignment matches

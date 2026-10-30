@@ -30,6 +30,11 @@ spread is1.16%. The exact gain remains uncertain.
 
 Decision: promote the lossless public layout based on recurring changed-load
 evidence and matching upstream measurements, then score it once. Original
-vjeux source remains archived. Scored job ce241acf7ab84c04 is pending.
+vjeux source remains archived. Scored job ce241acf7ab84c04 passed at
+**2.372309x**,CI2.336725-2.407894,5668.949us,prepare164.59s,cluster sfo3.
+All five tests/six timed shapes pass; all profiles/logs read and archived.
+Scored best rises2.076% from2.324062x; exact gain remains provisional.
+Live MoE#79/1150,overall#50/1651 at capture. Leader2.6995x still requires
+about12.12% lower normalized time to match.
 No rank1 claim. Do not retry closed bs16, deeper-ring, fourth-slot or early
 W2-prefetch directions. Next is BF16 exact Chen followed by alygg77.
