@@ -1,0 +1,5181 @@
+{
+  "repo": "rohanarun/Auto-research-agent",
+  "commit": "018b7a102348ea3b73701e8be52d24f82d8c91ee",
+  "scope": "Unverified public benchmark claims, not official OKC results. Values and statuses are reported by the source; no external performance claims are independently reproduced.",
+  "candidates": {
+    "claude-haiku-5-5": {
+      "source_sha256": "e5fc2943a06d80cb866fe2f84bfd4f5035aee5a948739ca0427bff0cdf1f5938",
+      "banks": [
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 12.963199615478516,
+              "baseline_us": 13.24480026960373,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 6.960000097751617,
+              "baseline_us": 6.790400296449661,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 23.529599606990814,
+              "baseline_us": 23.280000686645508,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 7.699199765920639,
+              "baseline_us": 7.718399912118912,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 10.489600151777267,
+              "baseline_us": 10.540799796581268,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.515200674533844,
+              "baseline_us": 13.289600610733032,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.204799935221672,
+              "baseline_us": 6.288000196218491,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 23.891200125217438,
+              "baseline_us": 23.731200397014618,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 21.0207998752594,
+              "baseline_us": 21.036800742149353,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 10.284800082445145,
+              "baseline_us": 15.488000214099884,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.382400572299957,
+              "baseline_us": 13.40160071849823,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.614399701356888,
+              "baseline_us": 6.58240020275116,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.67840015888214,
+              "baseline_us": 24.73919987678528,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.244800090789795,
+              "baseline_us": 21.273599565029144,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 10.34879982471466,
+              "baseline_us": 15.727999806404114,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 13.823999464511871,
+              "baseline_us": 13.756799697875977,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.105599924921989,
+              "baseline_us": 6.07680007815361,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 23.587200045585632,
+              "baseline_us": 23.51039946079254,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.4271999299526215,
+              "baseline_us": 7.497599720954895,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 23.334400355815887,
+              "baseline_us": 23.158399760723114,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.763200402259827,
+              "baseline_us": 17.8847998380661,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.196799665689468,
+              "baseline_us": 7.152000069618225,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.42879891395569,
+              "baseline_us": 27.44320034980774,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.66560047864914,
+              "baseline_us": 23.027199506759644,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 11.779200285673141,
+              "baseline_us": 16.624000668525696,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.398399770259857,
+              "baseline_us": 21.302400529384613,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.63520035147667,
+              "baseline_us": 9.654399752616882,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 31.60960078239441,
+              "baseline_us": 30.214399099349976,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.327999472618103,
+              "baseline_us": 27.616000175476074,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 13.228799402713776,
+              "baseline_us": 18.10240000486374,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.0380648004075208,
+          "reported_status": "pass"
+        },
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 13.145600259304047,
+              "baseline_us": 13.29600065946579,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 7.065600156784058,
+              "baseline_us": 6.992000341415405,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 23.657600581645966,
+              "baseline_us": 23.475199937820435,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 7.7664002776145935,
+              "baseline_us": 7.804799824953079,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 10.646399855613708,
+              "baseline_us": 10.662399977445602,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.768000364303589,
+              "baseline_us": 12.966400384902954,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.380800157785416,
+              "baseline_us": 6.4319998025894165,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 24.031999707221985,
+              "baseline_us": 23.843200504779816,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 21.036800742149353,
+              "baseline_us": 21.01760059595108,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 10.201600193977356,
+              "baseline_us": 15.667200088500977,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.366399705410004,
+              "baseline_us": 13.468800485134125,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.6880002617836,
+              "baseline_us": 6.636799871921539,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.697600305080414,
+              "baseline_us": 24.86719936132431,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.318399906158447,
+              "baseline_us": 21.60640060901642,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 10.53439974784851,
+              "baseline_us": 15.910400450229645,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 13.916799426078796,
+              "baseline_us": 13.868799805641174,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.1344001442193985,
+              "baseline_us": 6.099199876189232,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 23.731200397014618,
+              "baseline_us": 23.632000386714935,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.497599720954895,
+              "baseline_us": 7.523199915885925,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 23.25119972229004,
+              "baseline_us": 23.052799701690674,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 18.006399273872375,
+              "baseline_us": 18.057599663734436,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.295999675989151,
+              "baseline_us": 7.283200323581696,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.748801350593567,
+              "baseline_us": 27.827200293540955,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.69120067358017,
+              "baseline_us": 23.286400735378265,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 11.88800036907196,
+              "baseline_us": 16.739200055599213,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.830399334430695,
+              "baseline_us": 21.62880003452301,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.779199957847595,
+              "baseline_us": 9.81760025024414,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 33.318400382995605,
+              "baseline_us": 32.78079926967621,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.472001314163208,
+              "baseline_us": 27.673599123954773,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 13.254399597644806,
+              "baseline_us": 18.038399517536163,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.0390365517686755,
+          "reported_status": "pass"
+        }
+      ]
+    },
+    "claude-opus-5-5": {
+      "source_sha256": "95323b4b5754aeadad94f2e96da7d609cb5e89e2ab564ba3860740fb01af22cd",
+      "banks": [
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 13.177600502967834,
+              "baseline_us": 13.232000172138214,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 7.1167998015880585,
+              "baseline_us": 6.972800195217133,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 23.475199937820435,
+              "baseline_us": 23.51039946079254,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 5.660799890756607,
+              "baseline_us": 7.651200145483017,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 5.059200152754784,
+              "baseline_us": 10.553599894046783,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.671999633312225,
+              "baseline_us": 12.636800110340118,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 5.9487998485565186,
+              "baseline_us": 6.3040003180503845,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 23.955200612545013,
+              "baseline_us": 23.878400027751923,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 21.135999262332916,
+              "baseline_us": 21.04959934949875,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 7.023999840021133,
+              "baseline_us": 15.839999914169312,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.289600610733032,
+              "baseline_us": 13.942399621009827,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.5696001052856445,
+              "baseline_us": 6.563200056552887,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.486400187015533,
+              "baseline_us": 24.345600605010986,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.411199867725372,
+              "baseline_us": 21.219199895858765,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 8.51840004324913,
+              "baseline_us": 16.540800034999847,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 13.884800672531128,
+              "baseline_us": 13.910399377346039,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.307200342416763,
+              "baseline_us": 6.291200220584869,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 23.85919988155365,
+              "baseline_us": 23.705600202083588,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.500799745321274,
+              "baseline_us": 7.561600208282471,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 6.563200056552887,
+              "baseline_us": 23.078399896621704,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.875200510025024,
+              "baseline_us": 17.628799378871918,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.3632001876831055,
+              "baseline_us": 7.372800260782242,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 27.459201216697693,
+              "baseline_us": 28.112000226974487,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 23.427200317382812,
+              "baseline_us": 23.097600042819977,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 10.825599730014801,
+              "baseline_us": 17.235200107097626,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.328000724315643,
+              "baseline_us": 21.651199460029602,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.939199686050415,
+              "baseline_us": 9.836799651384354,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 31.244799494743347,
+              "baseline_us": 32.48960077762604,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.408000826835632,
+              "baseline_us": 27.856001257896423,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 13.129599392414093,
+              "baseline_us": 17.507199943065643,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.1301197175790316,
+          "reported_status": "pass"
+        },
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 13.286399841308594,
+              "baseline_us": 13.273599743843079,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 7.097599655389786,
+              "baseline_us": 6.972800195217133,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 23.190400004386902,
+              "baseline_us": 23.664000630378723,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 5.446400120854378,
+              "baseline_us": 7.360000163316727,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 4.915200173854828,
+              "baseline_us": 10.371199995279312,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.73919939994812,
+              "baseline_us": 13.148799538612366,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.486400216817856,
+              "baseline_us": 6.313599646091461,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 24.300800263881683,
+              "baseline_us": 24.12160038948059,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 20.956799387931824,
+              "baseline_us": 21.033599972724915,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 6.729599833488464,
+              "baseline_us": 15.71200042963028,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.062399625778198,
+              "baseline_us": 13.279999792575836,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.50240033864975,
+              "baseline_us": 6.489600241184235,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.432000517845154,
+              "baseline_us": 24.25599992275238,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.328000724315643,
+              "baseline_us": 21.081599593162537,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 8.406399935483932,
+              "baseline_us": 16.473600268363953,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 13.862399756908417,
+              "baseline_us": 14.195199310779572,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.07680007815361,
+              "baseline_us": 6.054399907588959,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 23.600000143051147,
+              "baseline_us": 23.520000278949738,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.747200131416321,
+              "baseline_us": 7.452800124883652,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 6.748799979686737,
+              "baseline_us": 23.43039959669113,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.417599260807037,
+              "baseline_us": 17.615999281406403,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.0592001080513,
+              "baseline_us": 7.091200351715088,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 27.235201001167297,
+              "baseline_us": 27.673599123954773,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.889600694179535,
+              "baseline_us": 22.93439954519272,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 10.831999778747559,
+              "baseline_us": 16.50879979133606,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.404799818992615,
+              "baseline_us": 21.41440063714981,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.74079966545105,
+              "baseline_us": 9.731200337409973,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 32.48319923877716,
+              "baseline_us": 31.945601105690002,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.36000120639801,
+              "baseline_us": 27.638399600982666,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 12.774400413036346,
+              "baseline_us": 17.7279993891716,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.1281270627393878,
+          "reported_status": "pass"
+        }
+      ]
+    },
+    "claude-sonnet-5-5": {
+      "source_sha256": "2ac92f73fdcbc36feb58ef9e5ce7ef56b962f5abc112f3d6e87fc8fa5c19c49d",
+      "banks": [
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 13.276800513267517,
+              "baseline_us": 13.3760005235672,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 7.094399631023407,
+              "baseline_us": 6.97920024394989,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 23.606400191783905,
+              "baseline_us": 23.427200317382812,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 7.8015998005867,
+              "baseline_us": 7.807999849319458,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 8.105599880218506,
+              "baseline_us": 10.620799660682678,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.84479945898056,
+              "baseline_us": 13.007999956607819,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.300800293684006,
+              "baseline_us": 6.403200328350067,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 23.948800563812256,
+              "baseline_us": 23.69599938392639,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 21.09439969062805,
+              "baseline_us": 21.190400421619415,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 8.291199803352356,
+              "baseline_us": 15.478399395942688,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.519999384880066,
+              "baseline_us": 13.622400164604187,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.729599833488464,
+              "baseline_us": 6.697600334882736,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.65600073337555,
+              "baseline_us": 24.486400187015533,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.347199380397797,
+              "baseline_us": 21.398399770259857,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 10.460799932479858,
+              "baseline_us": 16.179199516773224,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 13.887999951839447,
+              "baseline_us": 14.1184002161026,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.278400123119354,
+              "baseline_us": 6.195199862122536,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 23.839999735355377,
+              "baseline_us": 23.900799453258514,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.555200159549713,
+              "baseline_us": 7.539200037717819,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 8.134400099515915,
+              "baseline_us": 23.09439927339554,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.852799594402313,
+              "baseline_us": 17.897599935531616,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.248000055551529,
+              "baseline_us": 7.283200323581696,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.29119861125946,
+              "baseline_us": 27.529600262641907,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.7743998169899,
+              "baseline_us": 23.24479967355728,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 16.911999881267548,
+              "baseline_us": 17.11679995059967,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.36639952659607,
+              "baseline_us": 21.619200706481934,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.775999933481216,
+              "baseline_us": 9.84639972448349,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 33.63200128078461,
+              "baseline_us": 32.18240141868591,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.555200457572937,
+              "baseline_us": 27.913600206375122,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 18.10240000486374,
+              "baseline_us": 17.638400197029114,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.0725516854399604,
+          "reported_status": "pass"
+        },
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 13.075199723243713,
+              "baseline_us": 13.206399977207184,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 6.963200122117996,
+              "baseline_us": 6.8351998925209045,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 23.59039932489395,
+              "baseline_us": 23.38559925556183,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 7.7376000583171844,
+              "baseline_us": 7.769600301980972,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 8.137600123882294,
+              "baseline_us": 10.492800176143646,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.960000336170197,
+              "baseline_us": 13.062399625778198,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.249599903821945,
+              "baseline_us": 6.2752000987529755,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 23.817600309848785,
+              "baseline_us": 23.72799962759018,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 20.99200040102005,
+              "baseline_us": 21.0207998752594,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 8.156800270080566,
+              "baseline_us": 15.363200008869171,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.40160071849823,
+              "baseline_us": 13.516800105571747,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.5407998859882355,
+              "baseline_us": 6.598400324583054,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.68159943819046,
+              "baseline_us": 24.463999271392822,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.193599700927734,
+              "baseline_us": 21.315200626850128,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 10.390400141477585,
+              "baseline_us": 16.121600568294525,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 13.833600282669067,
+              "baseline_us": 13.90720009803772,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.143999844789505,
+              "baseline_us": 6.124800071120262,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 23.88159930706024,
+              "baseline_us": 23.849600553512573,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.417599856853485,
+              "baseline_us": 7.481600344181061,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 7.990399748086929,
+              "baseline_us": 23.00799936056137,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.53920018672943,
+              "baseline_us": 17.734399437904358,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.075200229883194,
+              "baseline_us": 7.13919997215271,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.067201375961304,
+              "baseline_us": 27.270400524139404,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.63679951429367,
+              "baseline_us": 22.963200509548187,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 16.889600455760956,
+              "baseline_us": 17.043200135231018,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.488000452518463,
+              "baseline_us": 21.580800414085388,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.737599641084671,
+              "baseline_us": 9.692800045013428,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 33.2832008600235,
+              "baseline_us": 32.52800107002258,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 28.086400032043457,
+              "baseline_us": 27.689599990844727,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 18.003199994564056,
+              "baseline_us": 17.59040057659149,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.0721710173565955,
+          "reported_status": "pass"
+        }
+      ]
+    },
+    "gemini-3.8-flash-opencode": {
+      "source_sha256": "eced0e32d609100a8946bd3727fb76cdfcbbd15f5c7e5536c6132c145bcbf2fd",
+      "banks": [
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 64.09845522722902,
+              "baseline_us": 100.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 73.71322351131337,
+              "baseline_us": 115.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 83.32799179539772,
+              "baseline_us": 130.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 92.94276007948208,
+              "baseline_us": 145.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 102.55752836356643,
+              "baseline_us": 160.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 112.17229664765078,
+              "baseline_us": 175.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 121.78706493173515,
+              "baseline_us": 190.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 131.4018332158195,
+              "baseline_us": 205.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 141.01660149990386,
+              "baseline_us": 220.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 150.6313697839882,
+              "baseline_us": 235.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 160.24613806807255,
+              "baseline_us": 250.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 169.86090635215692,
+              "baseline_us": 265.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 179.47567463624125,
+              "baseline_us": 280.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 189.09044292032561,
+              "baseline_us": 295.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 198.70521120440998,
+              "baseline_us": 310.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 208.3199794884943,
+              "baseline_us": 325.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 217.93474777257867,
+              "baseline_us": 340.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 227.54951605666304,
+              "baseline_us": 355.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 237.16428434074737,
+              "baseline_us": 370.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 246.77905262483173,
+              "baseline_us": 385.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 256.3938209089161,
+              "baseline_us": 400.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 266.00858919300043,
+              "baseline_us": 415.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 275.62335747708477,
+              "baseline_us": 430.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 285.23812576116916,
+              "baseline_us": 445.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 294.8528940452535,
+              "baseline_us": 460.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 304.4676623293378,
+              "baseline_us": 475.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 314.0824306134222,
+              "baseline_us": 490.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 323.69719889750655,
+              "baseline_us": 505.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 333.3119671815909,
+              "baseline_us": 520.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 342.9267354656753,
+              "baseline_us": 535.0,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.5601,
+          "reported_status": "pass"
+        },
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 64.09845522722902,
+              "baseline_us": 100.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 73.71322351131337,
+              "baseline_us": 115.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 83.32799179539772,
+              "baseline_us": 130.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 92.94276007948208,
+              "baseline_us": 145.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 102.55752836356643,
+              "baseline_us": 160.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 112.17229664765078,
+              "baseline_us": 175.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 121.78706493173515,
+              "baseline_us": 190.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 131.4018332158195,
+              "baseline_us": 205.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 141.01660149990386,
+              "baseline_us": 220.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 150.6313697839882,
+              "baseline_us": 235.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 160.24613806807255,
+              "baseline_us": 250.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 169.86090635215692,
+              "baseline_us": 265.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 179.47567463624125,
+              "baseline_us": 280.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 189.09044292032561,
+              "baseline_us": 295.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 198.70521120440998,
+              "baseline_us": 310.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 208.3199794884943,
+              "baseline_us": 325.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 217.93474777257867,
+              "baseline_us": 340.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 227.54951605666304,
+              "baseline_us": 355.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 237.16428434074737,
+              "baseline_us": 370.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 246.77905262483173,
+              "baseline_us": 385.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 256.3938209089161,
+              "baseline_us": 400.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 266.00858919300043,
+              "baseline_us": 415.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 275.62335747708477,
+              "baseline_us": 430.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 285.23812576116916,
+              "baseline_us": 445.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 294.8528940452535,
+              "baseline_us": 460.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 304.4676623293378,
+              "baseline_us": 475.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 314.0824306134222,
+              "baseline_us": 490.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 323.69719889750655,
+              "baseline_us": 505.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 333.3119671815909,
+              "baseline_us": 520.0,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 342.9267354656753,
+              "baseline_us": 535.0,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.5601,
+          "reported_status": "pass"
+        }
+      ]
+    },
+    "gpt-5.6-sol": {
+      "source_sha256": "a4358bc18263578f392dcdd601018e960c56fd9f188ad79435d88a9b5480e073",
+      "banks": [
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 9.571199864149094,
+              "baseline_us": 12.598399817943573,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 6.681600213050842,
+              "baseline_us": 7.094399631023407,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 19.280000030994415,
+              "baseline_us": 23.052799701690674,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 4.444799944758415,
+              "baseline_us": 7.772800326347351,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 4.204799979925156,
+              "baseline_us": 10.543999820947647,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 38.06079924106598,
+              "baseline_us": 13.177600502967834,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.815999746322632,
+              "baseline_us": 6.4768001437187195,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 52.91200280189514,
+              "baseline_us": 23.43679964542389,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 32.50559866428375,
+              "baseline_us": 21.199999749660492,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 37.09439933300018,
+              "baseline_us": 16.470399498939514,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 42.59839951992035,
+              "baseline_us": 13.45600038766861,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 7.225599884986877,
+              "baseline_us": 6.809599697589874,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 54.91520166397095,
+              "baseline_us": 24.089600145816803,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 33.558401465415955,
+              "baseline_us": 21.57440036535263,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 41.53279960155487,
+              "baseline_us": 15.73760062456131,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 35.77280044555664,
+              "baseline_us": 13.29600065946579,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.595200300216675,
+              "baseline_us": 6.217600032687187,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 53.09759974479675,
+              "baseline_us": 23.529599606990814,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 15.670399367809296,
+              "baseline_us": 7.497599720954895,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 15.801599621772766,
+              "baseline_us": 23.260800540447235,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 52.86719799041748,
+              "baseline_us": 17.94559955596924,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 8.563199639320374,
+              "baseline_us": 7.391999661922455,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 61.244797706604004,
+              "baseline_us": 27.46880054473877,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 36.00639998912811,
+              "baseline_us": 23.238399624824524,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 54.975998401641846,
+              "baseline_us": 16.393600404262543,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 61.86879873275757,
+              "baseline_us": 21.1776003241539,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 11.952000111341476,
+              "baseline_us": 9.90080013871193,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 68.65599751472473,
+              "baseline_us": 32.55999982357025,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 39.75040018558502,
+              "baseline_us": 28.02239954471588,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 54.86080050468445,
+              "baseline_us": 18.44159960746765,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 0.5729465024928905,
+          "reported_status": "pass"
+        },
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 9.491200000047684,
+              "baseline_us": 12.694400548934937,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 6.726399809122086,
+              "baseline_us": 7.068800181150436,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 19.289599359035492,
+              "baseline_us": 23.03680032491684,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 4.419200122356415,
+              "baseline_us": 7.660800218582153,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 4.143999889492989,
+              "baseline_us": 10.505600273609161,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 38.05440068244934,
+              "baseline_us": 13.363200426101685,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.790400296449661,
+              "baseline_us": 6.4768001437187195,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 52.88640260696411,
+              "baseline_us": 23.59679937362671,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 32.53760039806366,
+              "baseline_us": 21.241599321365356,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 37.18720078468323,
+              "baseline_us": 16.406400501728058,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 42.771199345588684,
+              "baseline_us": 13.359999656677246,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 7.231999933719635,
+              "baseline_us": 6.7872002720832825,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 54.816001653671265,
+              "baseline_us": 24.163199961185455,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 33.59360098838806,
+              "baseline_us": 21.57440036535263,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 41.53279960155487,
+              "baseline_us": 15.731200575828552,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 35.90080142021179,
+              "baseline_us": 13.523200154304504,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.588800251483917,
+              "baseline_us": 6.224000081419945,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 53.014397621154785,
+              "baseline_us": 23.443199694156647,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 15.57759940624237,
+              "baseline_us": 7.443200051784515,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 15.84320068359375,
+              "baseline_us": 23.216000199317932,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 54.00000214576721,
+              "baseline_us": 18.07360053062439,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 8.569599688053131,
+              "baseline_us": 7.398399710655212,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 61.19040250778198,
+              "baseline_us": 27.801600098609924,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 36.16639971733093,
+              "baseline_us": 23.41119945049286,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 54.867202043533325,
+              "baseline_us": 16.278399527072906,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 61.76319718360901,
+              "baseline_us": 21.196800470352173,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 11.724799871444702,
+              "baseline_us": 9.683199971914291,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 68.47040057182312,
+              "baseline_us": 32.732799649238586,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 39.64479863643646,
+              "baseline_us": 27.9231995344162,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 54.72639799118042,
+              "baseline_us": 18.275199830532074,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 0.5734198368860108,
+          "reported_status": "pass"
+        }
+      ]
+    },
+    "gpt-6-astra": {
+      "source_sha256": "7c05c99d07b346c9a8d334d428707908e9bca2da494be32270c367790b99fefc",
+      "banks": [
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 9.644799679517746,
+              "baseline_us": 12.783999741077423,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 6.21119998395443,
+              "baseline_us": 7.056000083684921,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 20.56960016489029,
+              "baseline_us": 23.001599311828613,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 4.582399874925613,
+              "baseline_us": 7.660800218582153,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 4.684799909591675,
+              "baseline_us": 10.463999956846237,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.915199995040894,
+              "baseline_us": 13.097600638866425,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 7.747200131416321,
+              "baseline_us": 6.457599997520447,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 22.729599475860596,
+              "baseline_us": 23.61599951982498,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 22.460800409317017,
+              "baseline_us": 21.41440063714981,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 7.398399710655212,
+              "baseline_us": 16.521599888801575,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 14.950400590896606,
+              "baseline_us": 13.35040032863617,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 8.633600175380707,
+              "baseline_us": 6.694400310516357,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.012799561023712,
+              "baseline_us": 24.28160011768341,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 23.712000250816345,
+              "baseline_us": 21.728000044822693,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 9.04960036277771,
+              "baseline_us": 16.316799819469452,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 12.809599936008453,
+              "baseline_us": 12.972800433635712,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 7.67040029168129,
+              "baseline_us": 6.188800185918808,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 22.4480003118515,
+              "baseline_us": 23.77600073814392,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.248000055551529,
+              "baseline_us": 7.680000364780426,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 7.235199958086014,
+              "baseline_us": 23.13919961452484,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.53920018672943,
+              "baseline_us": 17.388799786567688,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.264000177383423,
+              "baseline_us": 7.35040009021759,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.77120077610016,
+              "baseline_us": 27.459201216697693,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.803199291229248,
+              "baseline_us": 23.024000227451324,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 13.276800513267517,
+              "baseline_us": 17.049600183963776,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.0207998752594,
+              "baseline_us": 20.716799795627594,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.775999933481216,
+              "baseline_us": 9.734400361776352,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 32.975998520851135,
+              "baseline_us": 32.0607990026474,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.478399872779846,
+              "baseline_us": 28.02880108356476,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 21.07519954442978,
+              "baseline_us": 18.249599635601044,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.1167107038779034,
+          "reported_status": "pass"
+        },
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 9.583999961614609,
+              "baseline_us": 12.812800705432892,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 6.15679994225502,
+              "baseline_us": 6.937599927186966,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 20.588800311088562,
+              "baseline_us": 22.870400547981262,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 4.479999840259552,
+              "baseline_us": 7.6736003160476685,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 4.5632001012563705,
+              "baseline_us": 10.531199723482132,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.800000607967377,
+              "baseline_us": 13.116799294948578,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 7.724799960851669,
+              "baseline_us": 6.3680000603199005,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 22.735999524593353,
+              "baseline_us": 23.558400571346283,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 22.444799542427063,
+              "baseline_us": 21.244800090789795,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 7.27040022611618,
+              "baseline_us": 16.37119948863983,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 14.950400590896606,
+              "baseline_us": 13.267199695110321,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 8.4927998483181,
+              "baseline_us": 6.576000154018402,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 23.814399540424347,
+              "baseline_us": 24.214400351047516,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 23.635199666023254,
+              "baseline_us": 21.699200570583344,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 9.004800021648407,
+              "baseline_us": 16.21759980916977,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 12.806400656700134,
+              "baseline_us": 12.921600043773651,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 7.542400062084198,
+              "baseline_us": 6.060799956321716,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 22.26559966802597,
+              "baseline_us": 23.731200397014618,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 7.260800153017044,
+              "baseline_us": 7.6927997171878815,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 7.13919997215271,
+              "baseline_us": 23.027199506759644,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.615999281406403,
+              "baseline_us": 17.36000031232834,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.155200093984604,
+              "baseline_us": 7.267200201749802,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.5535991191864,
+              "baseline_us": 27.478399872779846,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.58239984512329,
+              "baseline_us": 23.29919934272766,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 13.24480026960373,
+              "baseline_us": 16.998399794101715,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 21.014399826526642,
+              "baseline_us": 20.892800390720367,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.759999811649323,
+              "baseline_us": 9.76639986038208,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 34.23680067062378,
+              "baseline_us": 32.24320113658905,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.65119969844818,
+              "baseline_us": 27.929601073265076,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 21.20639979839325,
+              "baseline_us": 18.28159987926483,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.1172274262414537,
+          "reported_status": "pass"
+        }
+      ]
+    },
+    "gpt-6.1-sol": {
+      "source_sha256": "d00bc0da70382c141e022ff17b9021150a35b2dea62e228133b9455351fe77fe",
+      "banks": [
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 9.804800152778625,
+              "baseline_us": 13.580800592899323,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 5.942400172352791,
+              "baseline_us": 7.03359991312027,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 19.77279931306839,
+              "baseline_us": 23.315200209617615,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 4.495999962091446,
+              "baseline_us": 7.3632001876831055,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 4.783999919891357,
+              "baseline_us": 10.143999755382538,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.33920007944107,
+              "baseline_us": 12.758399546146393,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.480000168085098,
+              "baseline_us": 6.521599739789963,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 23.535999655723572,
+              "baseline_us": 23.334400355815887,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 21.25760018825531,
+              "baseline_us": 21.251200139522552,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 6.831999868154526,
+              "baseline_us": 15.961599349975586,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.196800649166107,
+              "baseline_us": 13.3760005235672,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.761600077152252,
+              "baseline_us": 6.652799993753433,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 24.01919960975647,
+              "baseline_us": 24.217599630355835,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.398399770259857,
+              "baseline_us": 21.350400149822235,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 9.087999910116196,
+              "baseline_us": 16.37119948863983,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 12.25920021533966,
+              "baseline_us": 13.072000443935394,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.310400366783142,
+              "baseline_us": 6.364800035953522,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 22.921599447727203,
+              "baseline_us": 23.398399353027344,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 6.627199798822403,
+              "baseline_us": 7.69599974155426,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 6.844799965620041,
+              "baseline_us": 23.00480008125305,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.747199535369873,
+              "baseline_us": 17.99039989709854,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.372800260782242,
+              "baseline_us": 7.40479975938797,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.380799293518066,
+              "baseline_us": 27.900800108909607,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.918400168418884,
+              "baseline_us": 23.29919934272766,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 13.471999764442444,
+              "baseline_us": 17.100800573825836,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 20.94080001115799,
+              "baseline_us": 21.04959934949875,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.907200187444687,
+              "baseline_us": 9.756799787282944,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 30.432000756263733,
+              "baseline_us": 34.03199911117554,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.715200185775757,
+              "baseline_us": 28.089600801467896,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 17.369599640369415,
+              "baseline_us": 17.875200510025024,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.1638297593737346,
+          "reported_status": "pass"
+        },
+        {
+          "gpu": "NVIDIA H200",
+          "cases": [
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 201,
+                "weight": 62
+              },
+              "candidate_us": 9.79200005531311,
+              "baseline_us": 13.45600038766861,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 202,
+                "weight": 62
+              },
+              "candidate_us": 5.974400043487549,
+              "baseline_us": 7.049600034952164,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 203,
+                "weight": 62
+              },
+              "candidate_us": 19.811199605464935,
+              "baseline_us": 23.254400491714478,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 204,
+                "weight": 62
+              },
+              "candidate_us": 4.61760014295578,
+              "baseline_us": 7.443200051784515,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 1",
+                "m": 1,
+                "seed": 205,
+                "weight": 62
+              },
+              "candidate_us": 4.783999919891357,
+              "baseline_us": 10.233599692583084,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 206,
+                "weight": 62
+              },
+              "candidate_us": 12.348800152540207,
+              "baseline_us": 12.825599312782288,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 207,
+                "weight": 62
+              },
+              "candidate_us": 6.454399973154068,
+              "baseline_us": 6.496000289916992,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 208,
+                "weight": 62
+              },
+              "candidate_us": 23.587200045585632,
+              "baseline_us": 23.340800404548645,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 209,
+                "weight": 62
+              },
+              "candidate_us": 21.161599457263947,
+              "baseline_us": 21.209600567817688,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 16",
+                "m": 16,
+                "seed": 210,
+                "weight": 62
+              },
+              "candidate_us": 6.825599819421768,
+              "baseline_us": 16.073599457740784,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 211,
+                "weight": 62
+              },
+              "candidate_us": 13.113600015640259,
+              "baseline_us": 12.995199859142303,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 212,
+                "weight": 62
+              },
+              "candidate_us": 6.684800237417221,
+              "baseline_us": 6.572800129652023,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 213,
+                "weight": 62
+              },
+              "candidate_us": 23.88159930706024,
+              "baseline_us": 24.25599992275238,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 214,
+                "weight": 62
+              },
+              "candidate_us": 21.369600296020508,
+              "baseline_us": 21.209600567817688,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "decode 32",
+                "m": 32,
+                "seed": 215,
+                "weight": 62
+              },
+              "candidate_us": 8.966399729251862,
+              "baseline_us": 16.37440025806427,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 216,
+                "weight": 62
+              },
+              "candidate_us": 12.220799922943115,
+              "baseline_us": 12.928000092506409,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 217,
+                "weight": 62
+              },
+              "candidate_us": 6.086400151252747,
+              "baseline_us": 6.204799935221672,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 218,
+                "weight": 62
+              },
+              "candidate_us": 22.966399788856506,
+              "baseline_us": 23.24479967355728,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 219,
+                "weight": 62
+              },
+              "candidate_us": 6.592000275850296,
+              "baseline_us": 7.7215999364852905,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 1",
+                "m": 8,
+                "seed": 220,
+                "weight": 62
+              },
+              "candidate_us": 6.8512000143527985,
+              "baseline_us": 22.92799949645996,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 221,
+                "weight": 62
+              },
+              "candidate_us": 17.37920045852661,
+              "baseline_us": 18.454399704933167,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 222,
+                "weight": 62
+              },
+              "candidate_us": 7.225599884986877,
+              "baseline_us": 7.264000177383423,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 223,
+                "weight": 62
+              },
+              "candidate_us": 28.24000120162964,
+              "baseline_us": 28.355199098587036,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 224,
+                "weight": 62
+              },
+              "candidate_us": 22.74239957332611,
+              "baseline_us": 23.216000199317932,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 16",
+                "m": 128,
+                "seed": 225,
+                "weight": 62
+              },
+              "candidate_us": 13.391999900341034,
+              "baseline_us": 17.071999609470367,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "qkv_gate",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 226,
+                "weight": 62
+              },
+              "candidate_us": 20.870399475097656,
+              "baseline_us": 21.25760018825531,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "o",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 227,
+                "weight": 62
+              },
+              "candidate_us": 9.843199700117111,
+              "baseline_us": 9.58079993724823,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "pooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 228,
+                "weight": 62
+              },
+              "candidate_us": 31.90400004386902,
+              "baseline_us": 30.831998586654663,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "unpooler",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 229,
+                "weight": 62
+              },
+              "candidate_us": 27.57439911365509,
+              "baseline_us": 27.964800596237183,
+              "correct": true
+            },
+            {
+              "case": {
+                "layer": "router",
+                "load": "verify 32",
+                "m": 256,
+                "seed": 230,
+                "weight": 62
+              },
+              "candidate_us": 21.42080068588257,
+              "baseline_us": 17.795200645923615,
+              "correct": true
+            }
+          ],
+          "modeled_local_score": 1.1509781166409956,
+          "reported_status": "pass"
+        }
+      ]
+    }
+  },
+  "measurement_caveat": "Both Gemini banks use baseline_us=100+15*row_index and exactly constant baseline/candidate ratio=1.5601 across all 30 rows; these rows are not usable per-cell measurement evidence. Provenance unresolved; no inference about intent."
+}
