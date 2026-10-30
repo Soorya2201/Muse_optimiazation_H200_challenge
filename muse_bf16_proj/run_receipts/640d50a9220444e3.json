@@ -1,0 +1,844 @@
+{
+  "job": "640d50a9220444e3",
+  "board": "muse_bf16_proj",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 124.4,
+      "power.limit": 700,
+      "temperature.gpu": 37
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 122.61,
+      "power.limit": 700,
+      "temperature.gpu": 35
+    },
+    "node": "n-3kdi624vo6hk5b4lbbknktvdw7"
+  },
+  "created_at": 1793335365.2991788,
+  "source": "muse_bf16_proj/submission_v35_chen_repeat_20261030.py",
+  "source_sha256": "aa43b2a4d00dcb72791b44f63ef740e9cf0d181f9d5c1096f8aa1f51abc9c1d7",
+  "duplicate_of": null,
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 3117.060117016837,
+    "speedup": 1.5497936576928415,
+    "speedup_ci": [
+      1.5265467528274488,
+      1.573040562558234
+    ],
+    "status": "ok",
+    "tests": 9,
+    "tests_passed": 9
+  },
+  "setup": [
+    {
+      "baseline_copies": 16,
+      "baseline_prepare_pad": 2491392,
+      "copies": 4,
+      "error": null,
+      "event": "setup",
+      "first": "submission",
+      "prepare_pad": 30236672,
+      "prepare_s": 199.689249107,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1631523175422203202,
+        "weight": 62
+      },
+      "median_ns": 8833.00550617212,
+      "baseline_ns": 14144.000131636858,
+      "paired_ratio": 1.6012669891073483,
+      "speedup": 1.601266989107348,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1631796356549028161,
+        "weight": 62
+      },
+      "median_ns": 4891.922556910153,
+      "baseline_ns": 6528.000347316265,
+      "paired_ratio": 1.3344447446526004,
+      "speedup": 1.3344447446526004,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1632069537675853121,
+        "weight": 62
+      },
+      "median_ns": 13545.487301764146,
+      "baseline_ns": 21168.00006479025,
+      "paired_ratio": 1.5627344807324397,
+      "speedup": 1.5627344807324397,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1632342718802678082,
+        "weight": 62
+      },
+      "median_ns": 4246.045296512357,
+      "baseline_ns": 7264.000363647938,
+      "paired_ratio": 1.7107684577963613,
+      "speedup": 1.710768457796361,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1632615899929503044,
+        "weight": 62
+      },
+      "median_ns": 3447.4324593902766,
+      "baseline_ns": 10335.99954098463,
+      "paired_ratio": 2.9981731804000846,
+      "speedup": 2.9981731804000846,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1632889081056328007,
+        "weight": 62
+      },
+      "median_ns": 9764.741878114502,
+      "baseline_ns": 14415.998943150043,
+      "paired_ratio": 1.4763317989449674,
+      "speedup": 1.4763317989449674,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633162262183152971,
+        "weight": 62
+      },
+      "median_ns": 5316.62006659407,
+      "baseline_ns": 6799.999624490738,
+      "paired_ratio": 1.2790080049573582,
+      "speedup": 1.2790080049573582,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633435443309977936,
+        "weight": 62
+      },
+      "median_ns": 13854.256408863592,
+      "baseline_ns": 21503.998897969723,
+      "paired_ratio": 1.5521582871969963,
+      "speedup": 1.5521582871969963,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633708624436802902,
+        "weight": 62
+      },
+      "median_ns": 13735.400263270314,
+      "baseline_ns": 17855.999991297722,
+      "paired_ratio": 1.2999985183574343,
+      "speedup": 1.2999985183574343,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633981805563627869,
+        "weight": 62
+      },
+      "median_ns": 4796.972073514864,
+      "baseline_ns": 14752.000570297241,
+      "paired_ratio": 3.0752733900091425,
+      "speedup": 3.0752733900091425,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1634254986690452837,
+        "weight": 62
+      },
+      "median_ns": 10251.656522477302,
+      "baseline_ns": 14463.999308645725,
+      "paired_ratio": 1.4108938664627164,
+      "speedup": 1.4108938664627162,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1634528167817277806,
+        "weight": 62
+      },
+      "median_ns": 6330.241352451416,
+      "baseline_ns": 6815.9992806613445,
+      "paired_ratio": 1.0767360833756863,
+      "speedup": 1.0767360833756863,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1634801348944102776,
+        "weight": 62
+      },
+      "median_ns": 15133.550936582054,
+      "baseline_ns": 21984.00115594268,
+      "paired_ratio": 1.4526664130624596,
+      "speedup": 1.4526664130624596,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1635074530070927747,
+        "weight": 62
+      },
+      "median_ns": 15013.822595873407,
+      "baseline_ns": 18527.99905464053,
+      "paired_ratio": 1.2340627402732869,
+      "speedup": 1.2340627402732869,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1635347711197752719,
+        "weight": 62
+      },
+      "median_ns": 5385.001196490537,
+      "baseline_ns": 15552.000142633915,
+      "paired_ratio": 2.8880216689216933,
+      "speedup": 2.888021668921693,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1635620892324577692,
+        "weight": 62
+      },
+      "median_ns": 9317.609233596764,
+      "baseline_ns": 14351.99985280633,
+      "paired_ratio": 1.5403092674306325,
+      "speedup": 1.5403092674306327,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1635894073451402666,
+        "weight": 62
+      },
+      "median_ns": 5358.246380742958,
+      "baseline_ns": 6719.999946653843,
+      "paired_ratio": 1.2541416480595036,
+      "speedup": 1.2541416480595036,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1636167254578227641,
+        "weight": 62
+      },
+      "median_ns": 13539.816095868006,
+      "baseline_ns": 21151.999942958355,
+      "paired_ratio": 1.562207329345735,
+      "speedup": 1.562207329345735,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1636440435705052617,
+        "weight": 62
+      },
+      "median_ns": 4094.804127580686,
+      "baseline_ns": 6992.00015515089,
+      "paired_ratio": 1.707529820060512,
+      "speedup": 1.707529820060512,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1636713616831877594,
+        "weight": 62
+      },
+      "median_ns": 4542.843470746698,
+      "baseline_ns": 26367.999147623777,
+      "paired_ratio": 5.804294010440497,
+      "speedup": 5.804294010440497,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1636986797958702572,
+        "weight": 62
+      },
+      "median_ns": 12089.97151153293,
+      "baseline_ns": 17135.999631136656,
+      "paired_ratio": 1.4173730363872397,
+      "speedup": 1.4173730363872397,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1637259979085527551,
+        "weight": 62
+      },
+      "median_ns": 7391.640858629806,
+      "baseline_ns": 7487.999740988016,
+      "paired_ratio": 1.0130361964550416,
+      "speedup": 1.0130361964550416,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1637533160212352531,
+        "weight": 62
+      },
+      "median_ns": 17362.98720049865,
+      "baseline_ns": 25455.998722463846,
+      "paired_ratio": 1.4661070948513268,
+      "speedup": 1.4661070948513266,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1637806341339177512,
+        "weight": 62
+      },
+      "median_ns": 17433.898477110935,
+      "baseline_ns": 19696.00049778819,
+      "paired_ratio": 1.1297530798201665,
+      "speedup": 1.1297530798201665,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1638079522466002494,
+        "weight": 62
+      },
+      "median_ns": 7254.603502068606,
+      "baseline_ns": 16384.00088995695,
+      "paired_ratio": 2.2584281670645616,
+      "speedup": 2.2584281670645616,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1638352703592827477,
+        "weight": 62
+      },
+      "median_ns": 17318.73798088371,
+      "baseline_ns": 19776.00110694766,
+      "paired_ratio": 1.1418846528411168,
+      "speedup": 1.1418846528411168,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1638625884719652461,
+        "weight": 62
+      },
+      "median_ns": 9343.786935137072,
+      "baseline_ns": 9376.00014731288,
+      "paired_ratio": 1.0034475542303594,
+      "speedup": 1.0034475542303594,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1638899065846477446,
+        "weight": 62
+      },
+      "median_ns": 24733.15103221409,
+      "baseline_ns": 31199.99961927533,
+      "paired_ratio": 1.2614648080480482,
+      "speedup": 1.2614648080480482,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1639172246973302432,
+        "weight": 62
+      },
+      "median_ns": 24483.901761868317,
+      "baseline_ns": 24671.999271959066,
+      "paired_ratio": 1.007682497337238,
+      "speedup": 1.007682497337238,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1639445428100127419,
+        "weight": 62
+      },
+      "median_ns": 9068.904493302334,
+      "baseline_ns": 17344.00074928999,
+      "paired_ratio": 1.912469225152726,
+      "speedup": 1.912469225152726,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1631523175422203202,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<1, 1, 1, 2, 16, 8, 1, 1, 2, 1>(G)                          9.9 \u00b5s 100.0%      1\ntotal                                                              9.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1631796356549028161,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<1, 1, 2, 1, 8, 2, 1, 1, 0, 1>(G)                           4.4 \u00b5s 100.0%      1\ntotal                                                              4.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1632069537675853121,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv_predxor<1, 1, 1, 2, 16, 8, 1, 1, 0, 3>(G)                 14.9 \u00b5s 100.0%      1\ntotal                                                             14.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1632342718802678082,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<1, 1, 2, 1, 8, 2, 4, 1, 0, 536870913>(G)                   3.4 \u00b5s 100.0%      1\ntotal                                                              3.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 1632615899929503044,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rr<1, 1, 1024>(float4 const*, __nv_bfloat16 const*, ...       2.6 \u00b5s 100.0%      1\ntotal                                                              2.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1632889081056328007,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<16, 5, 1, 0, 0, 0, 9437187, 1>(RqP, RqTmap, RqTmap)       10.1 \u00b5s 100.0%      1\ntotal                                                             10.1 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633162262183152971,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<1, 2, 2, 1, 8, 2, 1, 1, 0, 1>(G)                           4.9 \u00b5s 100.0%      1\ntotal                                                              4.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633435443309977936,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv_predxor<1, 2, 2, 2, 8, 16, 1, 1, 0, 1>(G)                 14.7 \u00b5s 100.0%      1\ntotal                                                             14.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633708624436802902,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 8,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv_predxor<1, 2, 2, 1, 4, 16, 1, 1, 2, 1>(G)                 14.8 \u00b5s 100.0%      1\ntotal                                                             14.8 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 1633981805563627869,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 9,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<2, 2, 1, 1, 8, 1, 16, 1, 0, 134217728>(G)                  4.1 \u00b5s 100.0%      1\ntotal                                                              4.1 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1634254986690452837,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 10,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<32, 6, 1, 0, 0, 0, 9437187, 1>(RqP, RqTmap, RqTmap)       10.1 \u00b5s 100.0%      1\ntotal                                                             10.1 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1634528167817277806,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 11,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<32, 5, 1, 0, 0, 0, 1075, 1>(RqP, RqTmap, RqTmap)           5.5 \u00b5s 100.0%      1\ntotal                                                              5.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1634801348944102776,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 12,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<32, 6, 1, 0, 0, 0, 9437187, 1>(RqP, RqTmap, RqTmap)       15.8 \u00b5s 100.0%      1\ntotal                                                             15.8 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1635074530070927747,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 13,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<32, 6, 1, 0, 0, 0, 9437187, 1>(RqP, RqTmap, RqTmap)       16.9 \u00b5s 100.0%      1\ntotal                                                             16.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 1635347711197752719,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 14,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<2, 4, 2, 1, 8, 2, 8, 1, 0, 134217728>(G)                   4.3 \u00b5s 100.0%      1\ntotal                                                              4.3 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1635620892324577692,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 15,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<1, 1, 1, 2, 16, 8, 1, 1, 2, 1>(G)                          9.0 \u00b5s 100.0%      1\ntotal                                                              9.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1635894073451402666,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 16,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<1, 1, 2, 1, 8, 2, 1, 1, 0, 1>(G)                           3.9 \u00b5s 100.0%      1\ntotal                                                              3.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1636167254578227641,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 17,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv_predxor<1, 1, 1, 2, 16, 8, 1, 1, 0, 3>(G)                 13.9 \u00b5s 100.0%      1\ntotal                                                             13.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1636440435705052617,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 18,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<1, 1, 2, 1, 8, 2, 4, 1, 0, 536870913>(G)                   3.2 \u00b5s 100.0%      1\ntotal                                                              3.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 1636713616831877594,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 19,
+      "report": "kernel                                                           GPU time  share  calls\nvoid gv<2, 1, 1, 1, 8, 1, 16, 1, 0, 536870912>(G)                  3.5 \u00b5s 100.0%      1\ntotal                                                              3.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1636986797958702572,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 20,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<128, 5, 1, 0, 0, 0, 42999939, 1>(RqP, RqTmap, RqT...      11.7 \u00b5s 100.0%      1\ntotal                                                             11.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1637259979085527551,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 21,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x64_64x8_1x2_h_bz_TNT                            5.3 \u00b5s 100.0%      1\ntotal                                                              5.3 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1637533160212352531,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 22,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<128, 5, 1, 0, 0, 0, 42999939, 1>(RqP, RqTmap, RqT...      16.8 \u00b5s 100.0%      1\ntotal                                                             16.8 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1637806341339177512,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 23,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rq<128, 5, 1, 0, 0, 0, 42999939, 1>(RqP, RqTmap, RqT...      17.7 \u00b5s 100.0%      1\ntotal                                                             17.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 1638079522466002494,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 24,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rtk<256, 4, 128, 128, 1, 4>(RtMap, RtMap, RtMap, flo...       6.0 \u00b5s 100.0%      1\ntotal                                                              6.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1638352703592827477,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 25,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_72x64_64x12_1x1_v_bz_TNN                           17.2 \u00b5s 100.0%      1\ntotal                                                             17.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1638625884719652461,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 26,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x128_64x6_2x1_v_bz_TNT                           8.2 \u00b5s 100.0%      1\ntotal                                                              8.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1638899065846477446,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 27,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_64x128_64x8_1x1_v_bz_NNT                           26.4 \u00b5s 100.0%      1\ntotal                                                             26.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1639172246973302432,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 28,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x128_64x6_2x1_v_bz_TNT                          24.5 \u00b5s 100.0%      1\ntotal                                                             24.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 1639445428100127419,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 29,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rtk<256, 3, 128, 128, 2, 4>(RtMap, RtMap, RtMap, flo...       7.9 \u00b5s 100.0%      1\ntotal                                                              7.9 \u00b5s"
+    }
+  ],
+  "log_tail": ".00 best v12 5632.00 (ref v12 5632.00)\n  v12:5632.00 1.4.2.1.4.4.1.1.2.0:6121.24 1.4.2.1.4.4.1.1.2.1:6178.21 1.4.2.2.4.4.1.1.2.0:6376.52 1.4.2.2.4.4.1.1.2.1:6591.89 1.4.2.1.8.2.1.1.0.1:5877.98 1.4.1.1.4.4.1.1.2.0:5880.14 1.4.1.1.4.4.1.1.2.1:5469.97 1.4.2.1.8.2.1.1.2.1:7271.04 1.4.1.1.8.2.1.1.2.1:7251.44\ngv pooler m1 v12 19776.00 best 1.1.1.2.16.8.1.1.0.3 11092.15 (ref 1.1.1.2.16.8.1.1.0.3 11092.15)\n  v12:19776.00 1.1.1.2.16.8.1.1.0.3:11092.15 1.1.2.2.8.16.1.1.0.1:12920.62 1.1.2.2.8.16.1.1.0.0:13036.79 1.1.2.1.8.16.1.1.0.1:12973.48\ngv pooler m8 v12 19008.00 best 1.1.1.2.16.8.1.1.0.3 11446.84 (ref 1.1.1.2.16.8.1.1.0.3 11446.84)\n  v12:19008.00 1.1.1.2.16.8.1.1.0.3:11446.84 1.1.2.2.8.16.1.1.0.1:12918.87 1.1.2.2.8.16.1.1.0.0:13347.24 1.1.2.1.8.16.1.1.0.1:13228.10\ngv pooler m16 v12 19712.00 best 1.2.2.2.8.16.1.1.0.1 11465.16 (ref 1.2.2.2.8.16.1.1.0.1 11465.16)\n  v12:19712.00 1.2.2.2.8.16.1.1.0.1:11465.16 1.2.2.2.8.16.1.1.0.0:13801.05 1.2.2.1.8.16.1.1.2.1:13921.34 1.2.2.1.8.16.1.1.0.1:17880.65\ngv pooler m32 v12 19968.00 best 1.4.2.1.8.16.1.1.2.0 14834.30 (ref 1.4.2.1.8.16.1.1.2.0 14834.30)\n  v12:19968.00 1.4.2.1.8.16.1.1.2.0:14834.30 1.4.2.1.8.16.1.1.2.1:15716.95 1.4.2.1.4.16.2.1.2.1:17241.74 1.4.2.2.4.16.2.1.2.1:17771.82\ngv unpooler m1 v12 4768.00 best 1.1.2.1.16.4.1.1.0.0 2119.95 (ref 1.1.2.1.16.4.1.1.0.0 2119.95)\n  v12:4768.00 1.1.2.1.16.4.1.1.0.0:2119.95 1.1.2.1.16.4.1.1.0.1:3051.44 1.1.2.1.8.2.4.1.0.1:3982.92 1.1.2.1.8.4.2.1.0.1:5090.23 1.1.2.1.16.4.1.1.2.1:3096.45\ngv unpooler m8 v12 6112.00 best 1.1.2.1.16.4.1.1.0.1 1617.78 (ref 1.1.2.1.16.4.1.1.0.1 1617.78)\n  v12:6112.00 1.1.2.1.16.4.1.1.0.1:1617.78 1.1.2.1.16.4.1.1.0.0:3556.18 1.1.2.1.8.2.4.1.0.1:4157.26 1.1.2.1.8.4.2.1.0.1:4888.46 1.1.2.1.16.4.1.1.2.1:3043.08\ngv unpooler m16 v12 17152.00 best 1.2.2.1.4.16.1.1.2.1 12422.06 (ref 1.2.2.1.4.16.1.1.2.1 12422.06)\n  v12:17152.00 1.2.2.1.4.16.1.1.2.1:12422.06 1.2.2.1.4.16.1.1.2.0:14124.14 1.2.2.1.4.16.1.1.0.1:17351.28 1.2.2.1.8.8.1.1.0.1:17752.97\ngv unpooler m32 v12 17664.00 best 1.4.2.1.4.16.1.1.2.1 14995.53 (ref 1.4.2.1.4.16.1.1.2.1 14995.53)\n  v12:17664.00 1.4.2.1.4.16.1.1.2.1:14995.53 1.4.2.1.4.16.1.1.2.0:15526.15 1.4.2.2.4.16.1.1.2.1:16277.73 1.4.2.1.8.8.1.1.2.1:17985.81\ngv router m1 v12 4448.00 best rr6 1347.57 (ref rr6 1347.57)\n  v12:4448.00 rr6:1347.57 2.1.2.1.8.2.8.1.0.0:5065.94 2.1.2.1.8.1.16.1.0.0:8263.34 2.1.2.1.4.2.16.1.0.0:6127.98 rr7:2377.17\ngv router m8 v12 4544.00 best 2.1.2.1.8.2.8.1.0.0 3651.41 (ref 2.1.2.1.8.2.8.1.0.0 3651.41)\n  v12:4544.00 2.1.2.1.8.2.8.1.0.0:3651.41 2.1.2.1.8.1.16.1.0.0:7593.46 2.1.2.1.4.2.16.1.0.0:4330.04\ngv router m16 v12 4800.00 best 2.2.2.1.8.2.8.1.0.0 3722.59 (ref 2.2.2.1.8.2.8.1.0.0 3722.59)\n  v12:4800.00 2.2.2.1.8.2.8.1.0.0:3722.59 2.2.2.1.8.1.16.1.0.0:5020.02 2.2.2.1.4.2.16.1.0.0:4493.92 2.2.2.1.8.2.8.1.0.0:3982.89 2.2.2.1.8.2.8.1.0.0:4112.33 2.2.2.1.8.4.4.1.0.0:5065.97 2.2.2.2.8.2.8.1.0.0:3924.08\ngv router m32 v12 5504.00 best 2.4.2.1.4.2.16.1.0.0 4502.01 (ref 2.4.2.1.4.2.16.1.0.0 4502.01)\n  v12:5504.00 2.4.2.1.4.2.16.1.0.0:4502.01 2.4.2.1.8.2.8.1.0.0:9537.03 2.4.2.1.8.1.16.1.0.0:8482.52 2.4.2.1.4.2.16.1.0.0:4788.17 2.4.2.1.4.4.8.1.0.0:4986.86\nPREP r6 done in 158s\nPREP rq thread ready at 42s (bake starts at 158s)\nBAKE rq pooler esc2 slots max=3 ok\nBAKE pooler m=128 r6 23.39 at 158s\nBAKE pooler m=128 rq:d2s5hze 20.85 (ratio 1.1464 vs r6 23.39) at 158s\nBAKE pooler m=128 rq:d2s5hzwP 21.51 (ratio 1.0101 vs rq:d2s5hze 20.85) at 158s\nBAKE pooler m=128 rq:s4s5hzw 20.48 (ratio 1.0654 vs rq:d2s5hze 20.85) at 158s\nBAKE pooler m=128 rq:s4s5hzeEH 21.81 (ratio 1.0093 vs rq:d2s5hze 20.85) at 158s\nBAKE pooler m=128 rq:d2s6hze 22.14 (ratio 0.9816 vs rq:d2s5hze 20.85) at 158s\nPICK pooler m=128 rq:s4s5hzw 19.57 (ref rq:d2s5hze 20.85)\nPICK pooler m=128 rq:d2s5hzwP (forced: cursor + short apply, resident -0.26/-0.13/-0.32 us, bake ratio 1.0101)\nBAKE pooler m=256 r6 27.68 at 158s\nBAKE pooler m=256 rq:n256s5m1hzmEH 29.67 (ratio 0.9565 vs r6 27.68) at 158s\nBAKE pooler m=256 rq:n256s5m1hzm 29.88 (ratio 0.9532 vs r6 27.68) at 158s\nPICK pooler m=256 r6 27.68 (ref r6 27.68)\nBAKE rq qkv_gate esc2 slots max=3 ok\nBAKE qkv_gate m=128 r6 18.98 at 158s\nBAKE qkv_gate m=128 rq:d2s5hze 15.86 (ratio 1.2390 vs r6 18.98) at 158s\nBAKE qkv_gate m=128 rq:d2s5hzwP 16.13 (ratio 1.0274 vs rq:d2s5hze 15.86) at 158s\nBAKE qkv_gate m=128 rq:s4s5hzw 16.51 (ratio 1.0174 vs rq:d2s5hze 15.86) at 158s\nBAKE qkv_gate m=128 rq:s4s5hzeEH 17.38 (ratio 0.9464 vs rq:d2s5hze 15.86) at 158s\nBAKE qkv_gate m=128 rq:d2s6hze 17.56 (ratio 0.9383 vs rq:d2s5hze 15.86) at 158s\nPICK qkv_gate m=128 rq:d2s5hzwP 15.44 (ref rq:d2s5hze 15.86)\nPICK qkv_gate m=128 rq:d2s5hzwP (forced: cursor + short apply, resident -0.26/-0.13/-0.32 us, bake ratio 1.0274)\nBAKE qkv_gate m=256 r6 21.22 at 158s\nBAKE qkv_gate m=256 rq:n256s5m1hzmEH 22.44 (ratio 0.9839 vs r6 21.22) at 158s\nBAKE qkv_gate m=256 rq:n256s5m1hzm 21.49 (ratio 1.0036 vs r6 21.22) at 158s\nPICK qkv_gate m=256 r6 21.22 (ref r6 21.22)\nBAKE rq unpooler esc2 slots max=3 ok\nBAKE unpooler m=128 r6 22.40 at 158s\nBAKE unpooler m=128 rq:d2s5hze 20.87 (ratio 1.0854 vs r6 22.40) at 158s\nBAKE unpooler m=128 rq:d2s5hzwP 20.58 (ratio 1.0512 vs rq:d2s5hze 20.87) at 158s\nBAKE unpooler m=128 rq:s4s5hzw 21.20 (ratio 1.0144 vs rq:d2s5hze 20.87) at 158s\nBAKE unpooler m=128 rq:s4s5hzeEH 21.51 (ratio 1.0117 vs rq:d2s5hze 20.87) at 158s\nBAKE unpooler m=128 rq:s4s5hze 21.33 (ratio 1.0231 vs rq:d2s5hze 20.87) at 158s\nBAKE unpooler m=128 rq:d2s6hze 21.91 (ratio 0.9902 vs rq:d2s5hze 20.87) at 158s\nPICK unpooler m=128 rq:d2s5hzwP 19.86 (ref rq:d2s5hze 20.87)\nPICK unpooler m=128 rq:d2s5hzwP (forced: cursor + short apply, resident -0.26/-0.13/-0.32 us, bake ratio 1.0512)\nBAKE unpooler m=256 r6 27.81 at 158s\nPICK unpooler m=256 r6 27.81 (ref r6 27.81)\nBAKE rq o esc2 slots max=2 ok\nBAKE o m=128 r6 10.82 at 158s\nPICK o m=128 r6 10.82 (ref r6 10.82)\nBAKE o m=256 r6 12.67 at 158s\nPICK o m=256 r6 12.67 (ref r6 12.67)\nPREP phase rq done at 158s\nGX router c12 escapes hi 292 lo 1097\nBAKE qkv_gate m=1 r6 12.83 (ref)\nBAKE qkv_gate m=1 q144k16 14.50 (ref r6 12.83)\nPICK qkv_gate m=1 r6 12.83 (ref r6 12.83)\nBAKE qkv_gate m=8 r6 12.96 (ref)\nBAKE qkv_gate m=8 q144k16 14.91 (ref r6 12.96)\nPICK qkv_gate m=8 r6 12.96 (ref r6 12.96)\nBAKE unpooler m=1 r6 8.10 (ref)\nBAKE unpooler m=1 uk-s4z 8.29 (ref r6 8.10)\nBAKE unpooler m=1 uk-s4x 8.00 (ref r6 8.10)\nBAKE unpooler m=1 uk-s4w4x 8.10 (ref r6 8.10)\nPICK unpooler m=1 uk-s4x 8.00 (ref uk-s4x 8.00)\nPROBE p1alt unpooler m=1 uk-s4x 7.97 r6=8.19 delta=-0.22\nBAKE unpooler m=8 r6 8.16 (ref)\nBAKE unpooler m=8 uk-s4z 8.35 (ref r6 8.16)\nBAKE unpooler m=8 uk-s4x 8.00 (ref r6 8.16)\nBAKE unpooler m=8 uk-s4w4x 8.16 (ref r6 8.16)\nPICK unpooler m=8 uk-s4x 8.00 (ref uk-s4x 8.00)\nPROBE p1alt unpooler m=8 uk-s4x 7.94 r6=8.10 delta=-0.16\nBAKE router m=8 r6 8.90 (ref)\nBAKE router m=8 rk-s8z 8.61 (ref r6 8.90)\nBAKE router m=8 rk-s16w8z 8.38 (ref r6 8.90)\nBAKE router m=8 rk-s16w8x 8.22 (ref r6 8.90)\nBAKE router m=8 rk-s32x 8.32 (ref r6 8.90)\nBAKE router m=8 rk-s16w16z 8.45 (ref r6 8.90)\nPICK router m=8 rk-s16w8x 8.22 (ref rk-s16w8x 8.22)\nPROBE p1alt router m=8 rk-s16w8x 8.22 r6=8.80 delta=-0.58\nBAKE router m=16 r6 8.99 (ref)\nBAKE router m=16 rk-s8z 8.96 (ref r6 8.99)\nBAKE router m=16 rk-s16w8z 8.58 (ref r6 8.99)\nBAKE router m=16 rk-s16w8x 8.48 (ref r6 8.99)\nBAKE router m=16 rk-s32x 8.80 (ref r6 8.99)\nPICK router m=16 rk-s16w8z 8.58 (ref rk-s16w8z 8.58)\nPROBE p1alt router m=16 rk-s16w8z 8.58 r6=8.99 delta=-0.42\nBAKE router m=32 r6 9.82 (ref)\nBAKE router m=32 rk-s8z 8.99 (ref r6 9.82)\nBAKE router m=32 rk-s16w8z 9.06 (ref r6 9.82)\nPICK router m=32 rk-s8z 8.99 (ref rk-s8z 8.99)\nPROBE p1alt router m=32 rk-s8z 8.77 r6=9.79 delta=-1.02\nPREP phase gx done at 161s\nPREP rq32 thread ready at 43s\nPREP rq32 bake starts at 161s\nBAKE pooler m=32 r6 20.74 at 161s\nBAKE rq32 pooler esc2 ks=4 slots max=3 ok\nPICK pooler m=32 rq:t32s6hzw-k4 (forced: NT=32 cursor, resident -0.70..-1.38 us, bake 19.24 vs r6 20.74)\nBAKE pooler m=16 r6 17.82 at 161s\nBAKE pooler m=16 rq:t16s5hze-k4 19.12 (ratio 0.9475 vs r6 17.82) at 161s\nBAKE pooler m=16 rq:t16s4hze-k4 19.92 (ratio 0.8853 vs r6 17.82) at 161s\nBAKE pooler m=16 rq:t16s6hze-k4 18.45 (ratio 0.9680 vs r6 17.82) at 161s\nBAKE pooler m=16 rq:t16s7hze-k4 19.27 (ratio 0.9348 vs r6 17.82) at 161s\nBAKE pooler m=16 rq:h16s5hze2-k3 21.02 (ratio 0.8451 vs r6 17.82) at 161s\nBAKE pooler m=16 rq:h16s5hze2-k5 29.93 (ratio 0.6020 vs r6 17.82) at 161s\nPICK pooler m=16 r6 17.82 (ref r6 17.82)\nBAKE qkv_gate m=32 r6 18.18 at 161s\nBAKE rq32 qkv_gate esc2 ks=7 slots max=3 ok\nPICK qkv_gate m=32 rq:t32s6hzw-k7 (forced: NT=32 cursor, resident -0.70..-1.38 us, bake 12.72 vs r6 18.18)\nBAKE qkv_gate m=16 r6 14.34 at 161s\nPICK qkv_gate m=16 rq:t16s5hzw-k7 (forced: NT=16 cursor, resident -0.66 us, bake 13.32 vs r6 14.34)\nBAKE unpooler m=32 r6 20.61 at 162s\nBAKE rq32 unpooler esc2 ks=2 slots max=3 ok\nPICK unpooler m=32 rq:t32s6hzw-k2 (forced: NT=32 cursor, resident -0.70..-1.38 us, bake 19.05 vs r6 20.61)\nBAKE unpooler m=16 r6 18.40 at 162s\nBAKE unpooler m=16 rq:t16s5hze-k2 19.68 (ratio 0.9252 vs r6 18.40) at 162s\nBAKE unpooler m=16 rq:t16s4hze-k2 19.30 (ratio 0.9517 vs r6 18.40) at 162s\nBAKE unpooler m=16 rq:t16s6hze-k2 18.79 (ratio 0.9692 vs r6 18.40) at 162s\nBAKE unpooler m=16 rq:t16s7hze-k2 18.95 (ratio 0.9743 vs r6 18.40) at 162s\nBAKE unpooler m=16 rq:h16s5hze2-k1 21.60 (ratio 0.8474 vs r6 18.40) at 162s\nBAKE unpooler m=16 rq:h16s5hze2-k3 29.42 (ratio 0.6253 vs r6 18.40) at 162s\nPICK unpooler m=16 r6 18.40 (ref r6 18.40)\nBAKE o m=32 r6 10.40 at 162s\nPICK o m=32 rq:h32s5hze2-k2 (forced: resident -0.64 us, judge-proven pw58, bake 9.63 vs r6 10.40)\nBAKE o m=16 r6 9.44 at 162s\nBAKE o m=16 rq:t16s5hze-k2 10.82 (ratio 0.8603 vs r6 9.44) at 162s\nBAKE o m=16 rq:t16s6hze-k2 11.20 (ratio 0.8432 vs r6 9.44) at 162s\nBAKE o m=16 rq:t16s5ze-k2 11.09 (ratio 0.8624 vs r6 9.44) at 162s\nBAKE o m=16 rq:h16s5hze2-k2 10.38 (ratio 0.8970 vs r6 9.44) at 162s\nPICK o m=16 r6 9.44 (ref r6 9.44)\nPREP phase rq32 done at 162s\nPREP rw compiled in 38s (at 200s)\nBAKE router m=128 r6 13.44 (pre 14.24) at 200s\nBAKE router m=128 rt64k32b3x2z 10.57 (ratio 1.3959 vs r6 13.44) at 200s\nBAKE router m=128 rw64k32s8z 13.86 (ratio 0.8451 vs rt64k32b3x2z 10.57) at 200s\nBAKE router m=128 rt64k32b4z 11.28 (ratio 1.0208 vs rt64k32b3x2z 10.57) at 200s\nBAKE router m=128 rt64k32b3x2bz 11.37 (ratio 1.0021 vs rt64k32b3x2z 10.57) at 200s\nBAKE router m=128 rt64k32b4x2ze 11.19 (ratio 1.0149 vs rt64k32b3x2z 10.57) at 200s\nBAKE router m=128 rt64k32b3x2zk2pr 11.49 (ratio 1.0000 vs rt64k32b3x2z 10.57) at 200s\nPROBE rszero router m=128 4.99\nPICK router m=128 rt64k32b4z 10.35 (ref rt64k32b3x2z 10.57)\nBAKE router m=256 r6 14.91 (pre 15.10) at 200s\nBAKE router m=256 rt64k32b3x2z 12.18 (ratio 1.2791 vs r6 14.91) at 200s\nBAKE router m=256 rw64k32r3x2z 16.43 (ratio 0.7946 vs rt64k32b3x2z 12.18) at 200s\nBAKE router m=256 rt64k16b6z 13.85 (ratio 0.9262 vs rt64k32b3x2z 12.18) at 200s\nBAKE router m=256 rt64k32b3x2zk2pr 14.38 (ratio 0.8948 vs rt64k32b3x2z 12.18) at 200s\nPICK router m=256 rt64k32b3x2z 12.18 (ref rt64k32b3x2z 12.18)\nPREP phase router done at 200s\nPREP done in 200s\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-30 04:46:45 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

@@ -1,5 +1,22 @@
 # Expanded BF16 public-repository screen
 
+## Oct30 continuation
+
+Fresh screen covers all1433 entrants (191 above/1241 below/self at rank192),
+ten unresolved accounts. See `PUBLIC_REPO_FOLLOWUP_2026-10-30.md` and the
+dated JSON; the original snapshot below is retained. New matching repositories
+were inspected as documented; newly found standalone family alygg77 is pinned.
+
+Exact Chen passed all9tests/30timings in two independent checks:
+`f5ea143175564684` on sfo3c at1.519434x,prepare196.84s;
+`640d50a9220444e3` on sfo3 at1.549794x,prepare199.69s.
+The source/AST/native constants are identical; cluster, layout and some library
+bake choices differ. This spread is not an algorithm gain. All60profiles and
+logs were inspected and receipts archived. Current local submission staysNathenv18
+until matching-cluster comparisons establish what should change.
+Exact alygg77 check `9c6378b77fb94bb8` is running,third of eight checks.
+The source matches pinned public SHA290a86ab...7b90;licenses/notices preserved.
+
 Captured2026-10-29T20:09:08UTC. Our live position was#171/1394 at1.5219x;
 leader colinlikescode1.6367x. `RANKED_GITHUB_REPO_SCREEN.json` covers all1394 ranked
 accounts:170 above,1223 below,and ourselves.973 recent public-repository metadata
