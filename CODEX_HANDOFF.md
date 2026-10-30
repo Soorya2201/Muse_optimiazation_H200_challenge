@@ -97,10 +97,13 @@ submit `ce241acf7ab84c04` passed2.372309x on sfo3,5668.949us,
 CI2.336725-2.407894,prepare164.59s,all5tests/6timings.
 MoE#79/1150,overall#50/1651 at capture;Oct30 MoE3/8checks,1/2submits.
 All profiles/logs archived/read; comparison report records noise/raw-time limits.
-MoE cycle complete. BF16 exactChen check `f5ea143175564684` running on sfo3c,
-Oct30 BF16 check1/8,zero submits. Then independentrepeatv35,exactalygg77v34
-twice and same-day currentparentv36. Track cluster assignments; compare within
-cluster only. No unchanged resubmissions to fish for a higher score.
+MoE cycle complete. BF16 exactChen check `f5ea143175564684` passed1.519434x
+on sfo3c,all9tests/30timings,3179.341us,CI1.496643-1.542226,prepare196.84s.
+Allprofiles/logs read/archived. Repeatv35 `640d50a9220444e3` running on sfo3,
+Oct30 BF16 check2/8,zero submits. Different clusters:do not infer gains from
+their score difference. Next exactalygg77v34 twice and same-day parentv36;
+obtain matching-cluster controls as budget permits. Current submission staysNathenv18.
+BF16 public-repo metadata refresh running (1433 accounts),not parallel GPU tracks.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe
