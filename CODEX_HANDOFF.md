@@ -80,9 +80,12 @@ See `muse_decode_layer/ROUTER_PRECISION_AUDIT_2026-10-30.md`.
 Exact alygg77 decoder checks `521b039c454045da` / `5c929cfd9c0b4215` passed
 on sfo3 at2.189801x/2.221428x,all13tests/12timings,prepare128.70/125.32s.
 Both profiles/logs read and receipts archived; local submission.py is exactv17.
-Same-day historical-source control `be9500fc5b9b4a48` running sfo3,check3/8.
-Parent's small-T precision is invalid: this is an off-board comparison only.
-Next: inspect control/all profiles,submit compliant replacement,then MoE/BF16 P1.
+Same-day historical-source control `be9500fc5b9b4a48` passed2.137329x on sfo3.
+Parent's small-T precision is invalid: this was an off-board comparison only.
+Compliant exact-v17 submit `eff0b59dc26c4c74` passed2.211495x on sfo3,
+10228.512us,CI2.178322-2.244667,prepare128.57s. All profiles/logs archived/read.
+Decoder#50/1007,overall#50/1649 at capture. Oct30 decoder3/8checks,1/2submits.
+Decoder cycle complete; next MoE P1,then BF16 exactChen followed by alygg77.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe

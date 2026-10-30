@@ -53,5 +53,7 @@ Every profile and the local/remote logs were read; full receipt is archived in
 `run_receipts/521b039c454045da.json`. The FP32 fused router appears in both
 small-T scored paths. Repeat `5c929cfd9c0b4215` is running; its entire AST,
 including all native-source constants, is identical (one comment added).
-Run a second independent, code-equivalent check and inspect all 12 profiles
-before promotion. Correct precision is required even if performance is at parity.
+Second independent check passed at2.221428x; historical source control passed
+at2.137329x but is ineligible for scoring. All12 profiles per run were inspected.
+Compliant replacement `eff0b59dc26c4c74` scored2.211495x,decoder#50/1007,
+overall#50/1649. Local `submission.py` is byte-identical to pinned v17.
