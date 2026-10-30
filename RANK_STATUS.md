@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-30 18:56:40 UTC** from the live OKC boards. Overall **#88/1712**.
+Captured **2026-10-30 20:34:51 UTC** from the live OKC boards. Overall **#91/1714**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|187/1491|1.535843x|1.6498x|6.91%|
-|Routed experts|122/1199|2.372309x|2.7578x|13.98%|
-|Attention decode|147/1143|2.603505x|3.2221x|19.20%|
-|Whole decoder|88/1060|2.211495x|2.4178x|8.53%|
-|Prefill|145/706|1.784958x|2.0325x|12.18%|
+|BF16 projections|192/1493|1.535843x|1.6498x|6.91%|
+|Routed experts|126/1200|2.372309x|2.7578x|13.98%|
+|Attention decode|148/1143|2.603505x|3.2221x|19.20%|
+|Whole decoder|91/1062|2.211495x|2.4178x|8.53%|
+|Prefill|147/707|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -51,3 +51,10 @@ Its independent comparisons rejected all15changed fixed compositions;
 no new scored submission or rank improvement. One of32diagnostic rows
 was truncated by the service log tail;remaining31 and limitation archived
 in muse_bf16_proj/TMA_PUBLIC_FOLLOWUP_2026-10-30.md.
+
+Three new attention checks are terminal. First independent probe failed a
+masked-logit polynomial edge; corrected floor and bias-range probes each
+completed six nearby validations and sixteen timing cases. Both reject all
+changed combinations. Bias range helps the slower polynomial control by
+3.28-6.08% speedup but remains27-47%longerthanincumbent. No scoredchange.
+See muse_attention_decode/PK2_HYBRID_2026-10-30.md andarchivedreceipts.

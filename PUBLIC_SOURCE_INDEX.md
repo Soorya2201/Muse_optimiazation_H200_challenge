@@ -65,8 +65,9 @@ its copied polynomial underflowed toNaN. Repairedv22/ec545aab86274b3b passed
 all independent cases but both hybrids lose17-61%;all8changedcompositions
 reject. Newv23/0b17352502ca4fca(sfo3c) isolates bias-basedrange reduction
 against byte-identicalfloor50control. CPU66780bitidenticalcases andstandalone
-sm90aSASSverifyconversionremoval;no fullkernelgainproven. Timedparent
-unchanged. No reopening B1 merge work. Sources,
+sm90aSASSverifyconversionremoval. Completed6nearby/16timing cases: bias50
+beatsfloor50by3.28-6.08%speedup,but still27-47%longerthanincumbent. All
+changedcompositionsreject;testedfamilyclosed. Timed/scoredparentunchanged. No reopening B1 merge work. Sources,
 phase-zero/resource-model assumptions and independent validation plan in
 `muse_attention_decode/PK2_HYBRID_2026-10-30.md`. Old terminal receipts also
 recovered via read-only status when the external volume could not save profiles.

@@ -67,78 +67,51 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### Oct30 attention: bias-range probe active, floor-based hybrids rejected
+#### Oct30 attention hybrid cycle completed; no eligible gain
 
-Current live job is0b17352502ca4fca on sfo3c,started20:26UTC.
-Source submission_v23_bias_range_probe.py,
-SHA41498ff220366e6850448c9280b5ab8d5a70650615a1675c4aa2d4614cf71aa9.
-Three modules:0parent,1floor50,2bias50. Floor50 CUDA payload exactly matches
-v22arm2; bias50 changes only range reduction to directed-rounding add-bias,
-retaining coefficients/clamp-126/overflowguard/50%fraction/PK2/gates.
-New direct bias/floor output errors and timing ratios recorded. Same6nearby
-cases/16timing cases(two batches/two seeds/four pads/nine reps)/freshreplays.
-Timed parent unchanged;no scored submission. BSD3copyright/LICENSE/AUTHORS
-and scalar FA4helpers pinned in research/public/flash_attention_4616f51/.
-No SM100 packedFP32 instructions ported. Standalone CompilerExplorer NVCC13
-sm90a deviceSASS replaces FRND.FLOOR+F2I.FLOOR+FADD with3FADD(oneRM),same
-10registers/zero stack/spill. CPU exact-rational FP32 round-down comparison
-passes66780bit-identical inputs. These do not prove fullkernelgain/sharedpipe
-causality. Artifacts EXP_RANGE_COMPILER_PROBE/EXP_RANGE_EQUIVALENCE datedJSON,
-exp_range_compiler_probe.cu and tools/check_attention_exp_range_equivalence.py.
-Prefill polynomial already uses centeredadd-bias;its closednegativefamily is
-not explained by this finding and is not reopened.
-
-V22retry ec545aab86274b3b finished on sfo3c:16tests/12timings pass2.672956x,
-CI2.632862-2.713051,1409.039us. This is unchanged parent variation,not a
-hybridscore or reason to resubmit. Independent diagnostic completes138.964s,
-all6nearby/16timingcases,cachebits/freshreplays pass. All12profiles,full logs,
-rawcases read/archived. Every floorbasedhybrid loses: B1625%ratios.799573-
-.857261,50%.638170-.728586;B3225%.783841-.827660,50%.621916-.680636.
-AAmaxoffset1.0266%;resourceattrs80regs/0local/0staticshared unchanged.
-All8changedcompositions reject. Parenterror timingglobalmax.00036074,
-row.00422575,nearbymax.00016057. Floorfamilyclosed. No canonicalchange.
-After v23terminal archive+extract via tools/archive_kernel_run.py and
-tools/extract_attention_pk2_probe.py;read full compressed report,all12profiles
-andlogs before dependent decision. Current attentionbudget3/8checks,0/2submits;
-othersMoE6/1,BF166/1,decoder3/1,prefill3/1. No agents or paidGPU assumed.
-The remainder below is historical context,not a live retry.
-
-Attention only. Broader public code search207unique files/12repos; seven Rohan
-source hashes match manifests. Gemini's arithmetic/constant2.6537 bank rows
-excluded as timing evidence. Legacy EXPPOLY disables PK2 packing,confounding
-its source-comment negative. A new paired probe preserves PK2 joint packing,
-max-check/repack/MMA issue and all synchronization while25/50%FP32exps use
-polynomial. Timed dispatch staysparent;host-onlycompilerresourcegetter added.
-V21/2d537621593a41d7(sfo3) passed16challenge tests/12timings,2.602334x,
-CI2.563299-2.659911,1447.278us. This is parent score,not hybrid. Diagnostic
-compiled3modules(resources80regs/0local/0staticshared/max384threads),then
-failed first nearby case on unlabeled assertion after142.335s. No nearby
-records/performance timings. All12profiles andcompleteavailablelogs read;
-receipt anddecodedfailedreport archived. Do not label this a performance loss.
-CPU analysis reproduces copied helper's masked-logit underflow: clamp-127,
-p(0)<1 and exponent-bit add produceNaN for-negative-infinity. Consistent with
-finite assert;original log lacks exact failure stage. V22 changes clamp to-126
-and adds explicitfinite/cache/stage/trace labels;coefficients/gates/PK2 unchanged.
-CPU edge checks reproduceoldNaN andnewfinite/E4M3zero;65537normalgridinputs
-[-120,120] maxrelativeerror.0001456673,not the source comment's rough9e-5.
-See PK2_MATH_BOUNDARIES_2026-10-30.json;not a GPU correctness/speed proof.
-Retryec545aab86274b3b running,source submission_v22_pk2_underflow_fix.py,
-SHAe2ca7625a773febb740b7512d524f805192982afcd5b4df0cd221370742f6522.
-Six nearby cases(page1/64,scale1/64,TP/DP,B2/3/5/20/33),ownfallback/parent
-agreement andcachebits. Timings B16/32,two seeds/distributions,four retained
-allocations,nine cold-L2 reps,duplicate A/A,fresh-qkv graph replay. Compressed
-report<8KB. No fixtures retained,no paidGPU assumed. Different from closed
-prefill FMA/PIPE/RRS. Phasezero bound67.4415%;freeALU/exposed40.5%SFUhalf-work
-scenario5.9400%,not expectedgain. See attention/PK2_HYBRID_2026-10-30.md.
-After terminal result archive with tools/archive_kernel_run.py then extract
-with tools/extract_attention_pk2_probe.py. Inspect complete report andall12
-profiles/logs before dependent action. Require consistentgains and>=3%worst
-board model before real timed candidate. CanonicalSHA5811...510e unchanged.
-Read-only status recovered old30c669/5161a5/acf6f11 receipts fromremote records;
-CLI cannot save on absent externalvolume. Archiver explicit--source fallback
-preserves reports. All36oldreports read;50-plan SHARDS matchesarchivedJSON.
-Old v19/v20 running labels corrected. No old job restarted. Budgetsattention
-2/8checks,0/2submits;othersMoE6/1,BF166/1,decoder3/1,prefill3/1 unchanged.
+Previous goal turn made progress (BF16 negative controls). This turn extended
+public code search to203MoE/207attention unique files;new families reviewed,
+not a claim of reading every file/branch. MoE copied multiply decoder maps
+exactly in35136CPUcases but has same instruction classes as already measured
+8-op family. No new MoE GPU check; current canonical KPERM3 unchanged.
+Attention legacy EXPPOLY disables PK2,so constructed a matched packed-P probe.
+V21/2d537621593a41d7(sfo3) passes16challenge tests/12timings2.602334x but
+independent diagnostic fails first nearby case,142.335s,no performance rows.
+CPU reproduces masked-logit NaN in copied clamp-127/p(0)<1 exponent wrapping.
+V22clamp-126 correction ec545aab86274b3b(sfo3c) passes16/12,2.672956x,
+CI2.632862-2.713051,1409.039us;all6nearby/16timing cases complete138.964s.
+Both25/50%FMA arms lose17-61%latency. All8changedcompositions reject. This
+whole-run score is unchanged parent variation,not a hybrid gain/resubmit lead.
+V23scalarFA4biasrange probe0b17352502ca4fca(sfo3c) passes16/12,2.629152x,
+CI2.589715-2.668589,1432.515us;complete139.527s/all6nearby/16timing cases.
+Floor50 CUDA payload exactly matches v22arm2; bias50 only changes range
+reduction,keepingcoefficients/50%fraction/PK2/clamps/overflowguard andgates.
+Directbias/floorspeedup1.032817-1.060819(3.18-5.73%latencycut),but bias50
+still26.71-47.07%longerthanincumbent. All8changedcompositions reject.
+Compiledresources80regs/0local/0staticshared for all modules;no evidence of
+extra compiler-local allocation. Maxdirectrangeerror.00002895,row.0002417;
+maxparenterror.00036074,row.00422575;AAoffsetmax1.0334%. Cachebytes/fresh
+qkv graph replays pass. All36newprofiles,full available logs andrawrecords
+read/archived;compressedreport<8KB avoided truncation. No job running.
+No canonical/scoredchanges;attentionSHA5811...510e remains. Close testedfloor
+andbias50families;don'tblindfraction/stage sweep or retryclosedB1merges.
+Source/library/method/counterevidence: attention/PK2_HYBRID_2026-10-30.md,
+3receipts/3decodedreports;CPUboundary65537cases andrangeequivalence66780cases;
+standaloneCompilerExplorerNVCC13sm90aSASS removes FRND/F2I for3FADD,10regs,
+zero stack/spill both. Not fullkernelSASS/countercausalproof. BSD3LICENSE,
+AUTHORS/sourceheader/scalarmathhelpers pinned atresearch/public/flash_attention_4616f51.
+No SM100packedFP32 instructions ported. Prefill already uses centeredbias,
+so its negativehybrids aren't explained by these floor conversions;closed.
+Read-only status recovered old30c669/5161a5/acf6f11 receipts fromremote
+structured records when external volume profile-save failed. All36oldreports
+read and50-plan SHARDS exactlymatches archivedJSON. No old jobs restarted.
+Attention now3/8routinechecks,0/2submits;othersMoE6/1,BF166/1,decoder3/1,
+prefill3/1. Canonicalhashesall5 verified unchanged;privateGitHub verified.
+Latest20:34:51UTC ranks overall91/1714,decoder91/1062,MoE126/1200,
+attention148/1143,BF16192/1493,prefill147/707. No rank1/top50 achieved.
+Next sequential research: broader whole-decoder code search/source review,
+keep compliant FP32 small-token router;avoid older invalid BF16-router copies.
+External volume absent;continueinternal /Users/soorya/muse_work/continuation_20261030.
 
 #### Oct30 MoE broader code/source cycle completed
 

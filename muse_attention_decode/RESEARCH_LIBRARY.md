@@ -41,8 +41,10 @@ The copied polynomial's clamp-127 yieldsNaN for masked logits. Repairedv22
 ec545aab86274b3b passes six nearby/16timing cases but loses17-61% with25/50%FMA;
 all eight changed compositions reject. V23/0b17352502ca4fca now isolates
 bias-basedrange reduction against the identicalfloor50control. CPU66780cases
-are bit-identical;standaloneNVCC13sm90aSASS removes FRND/F2I. Fullkerneltiming
-pending;timedparentunchanged. See PK2_HYBRID_2026-10-30.md.
+are bit-identical;standaloneNVCC13sm90aSASS removes FRND/F2I. Fullkernelprobe
+completes6nearby/16timing cases: bias50 beats floor50by3.28–6.08%speedup,
+but remains26.71–47.07%longer thanparent. All changedcombinations reject.
+Both testedfamilies closed;timed/scoredparentunchanged. See PK2_HYBRID_2026-10-30.md.
 The old~1.5–2% practical estimate is not an expected gain;the new5.94% idealized
 scenario assumes exposed40.5%SFUwork/freeALUand is unverified. No paidGPU assumed.
 
