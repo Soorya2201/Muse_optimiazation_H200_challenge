@@ -28,10 +28,14 @@ are sub1% cross-job observations,not a proven gain;aggregatebelowparent. Not pro
 All12profiles/emptylocal log and remoteprofiler markers read. No further TURN sweep is
 justified by this result alone. The primary-paper/source mapping is in RESEARCH_LIBRARY.md.
 
-### Trace-driven parallel completion flags (v19, running)
+### Trace-driven parallel completion flags (v19, completed without a gain)
 
 Fifthcheck5161a53a9b274da4 tests `submission_v19_parallel_completion_flags.py`,
 SHA88472e7c187759c493f37f5a68265d87a0c7dc4dd7ec87a9260b654de8b21d7b.
+Terminal result:all16tests/12timings passed2.581768x,1458.806us,
+CI2.543042-2.620495. TargetB1slidingL1 paired5.13us vsparent4.89us;
+not promoted. V20 subsequently rejected all50workspace/finalizer plans.
+The descriptions below preserve the original hypothesis,not pending work.
 The target is B1 sliding L1's measured coordination tail:after the last partial-issue
 marker at2.944us,merge-ready is4.224us in the instrumented fixture. This1.280us interval
 includes pending reductions,arrival coordination and instructions;it is not pure atomic

@@ -26,11 +26,21 @@ scored **2.603505x**. Source reviews and experiments are in PUBLIC_RESEARCH.md a
    stage releases, math, precision, context coverage and launch plans remain unchanged.
    Check4bbfb48549864c60 passed at2.593449x,CI[2.554548,2.632351],belowparent;sub1% verify
    observations do not prove a gain. All16tests/12timings passed and profiles/logs were read.
-3. **Parallel completion flags, v19 / check5161a53a9b274da4, running.** OnlyB1slidingL1,
+3. **Parallel completion flags, v19 / check5161a53a9b274da4, rejected.** OnlyB1slidingL1,
    <=32splits. Replace contended arrivalRMW with per-split release flags and one warp's
    parallel acquire poll. Keep original FP32 sums/finalizer and CTA publication barrier.
    Reset all32flags before kernel completion;no epoch or cached inputs/outputs. The
-   workspace/participant-range/source/syntax checks pass;actual GPU performance is unverified.
+   workspace/participant-range/source/syntax checks pass. All16tests/12timings
+   passed2.581768x;targeted paired5.13us vsparent4.89us,no improvement. Follow-up
+   v20/acf6f11e found0/50eligible workspace/finalizer plans. This family is closed.
+
+Oct30 broader code search found a concrete confound in the legacy hybrid-exp
+implementation: EXPPOLY disables the packed-P PK2 path. A new off-board v21
+probe2d537621593a41d7 retains PK2 while comparing25/50%FMA,with four input
+allocation layouts/two distributions/six nearby validations and compressed
+logging. Timed parent unchanged;result pending. See PK2_HYBRID_2026-10-30.md.
+The old~1.5–2% practical estimate is not an expected gain;the new5.94% idealized
+scenario assumes exposed40.5%SFUwork/freeALUand is unverified. No paidGPU assumed.
 
 The phase-offset hypothesis is that a small initial scheduling difference may reduce repeated
 softmax contention. It may instead add startup delay or quickly lose the offset. No benefit

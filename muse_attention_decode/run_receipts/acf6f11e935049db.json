@@ -1,0 +1,495 @@
+{
+  "job": "acf6f11e935049db",
+  "board": "muse_attention_decode",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 125.22,
+      "power.limit": 700,
+      "temperature.gpu": 36
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 144.17,
+      "power.limit": 700,
+      "temperature.gpu": 35
+    },
+    "node": "n-jilerexm7jzqtha3u5ugsjopko"
+  },
+  "created_at": 1793308859.5488303,
+  "source": "muse_attention_decode/submission_v20_workspace_shard_probe.py",
+  "source_sha256": "b2d660f4a494ce226b0c5180ab487659608154255297aa96fe237214df09b866",
+  "profile_capture": "remote structured records; local CLI profile unavailable",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "passed": true,
+    "status": "ok",
+    "error": null,
+    "speedup": 2.6161720155925425,
+    "speedup_ci": [
+      2.5769294353586543,
+      2.6554145958264304
+    ],
+    "score_us": 1439.622462725167,
+    "returncode": 0,
+    "tests": 16,
+    "tests_passed": 16
+  },
+  "setup": [],
+  "benchmarks": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 1892384306310267408,
+        "weight": 46
+      },
+      "median_ns": 4531.110387641441,
+      "baseline_ns": 20255.999639630318,
+      "paired_ratio": 4.4704273139931345,
+      "speedup": 4.4704273139931345,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 1892413398865997272,
+        "weight": 16
+      },
+      "median_ns": 10839.063567069617,
+      "baseline_ns": 31423.999927937984,
+      "paired_ratio": 2.8991434300106778,
+      "speedup": 2.8991434300106778,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 1892442491421727137,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 8497.341736957935,
+      "baseline_ns": 26831.999886780977,
+      "paired_ratio": 3.1576933960510436,
+      "speedup": 3.157693396051044,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 1892471583977457003,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 87092.51884621858,
+      "baseline_ns": 201151.9968509674,
+      "paired_ratio": 2.309635770279494,
+      "speedup": 2.309635770279494,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 1892500676533186870,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 9824.05050828665,
+      "baseline_ns": 31359.998509287834,
+      "paired_ratio": 3.1921658467488,
+      "speedup": 3.1921658467488,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 1892529769088916738,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 166169.9654433674,
+      "baseline_ns": 384527.996648103,
+      "paired_ratio": 2.3140643715133615,
+      "speedup": 2.3140643715133615,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892558861644646607,
+        "weight": 46
+      },
+      "median_ns": 6856.66958373296,
+      "baseline_ns": 22960.000671446323,
+      "paired_ratio": 3.3485645459593907,
+      "speedup": 3.3485645459593907,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892587954200376477,
+        "weight": 16
+      },
+      "median_ns": 14258.337605504326,
+      "baseline_ns": 36352.00159624219,
+      "paired_ratio": 2.5495259406825075,
+      "speedup": 2.5495259406825075,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892617046756106348,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 11375.719869828337,
+      "baseline_ns": 29248.000122606754,
+      "paired_ratio": 2.571090045930264,
+      "speedup": 2.571090045930264,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892646139311836220,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 101276.22197509007,
+      "baseline_ns": 205471.9952866435,
+      "paired_ratio": 2.028827609082628,
+      "speedup": 2.028827609082628,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892675231867566093,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 14624.755545743325,
+      "baseline_ns": 34543.999936431646,
+      "paired_ratio": 2.3620223824175994,
+      "speedup": 2.3620223824175994,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892704324423295967,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 185356.71820674048,
+      "baseline_ns": 389823.9964619279,
+      "paired_ratio": 2.103101523555956,
+      "speedup": 2.103101523555956,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 1892384306310267408,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 13>((an...       4.2 \u00b5s 100.0%      1\ntotal                                                              4.2 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 1892413398865997272,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 11>((an...       9.9 \u00b5s 100.0%      1\ntotal                                                              9.9 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 1892442491421727137,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       7.0 \u00b5s 100.0%      1\ntotal                                                              7.0 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 1892471583977457003,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...      87.0 \u00b5s 100.0%      1\ntotal                                                             87.0 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 1892500676533186870,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       8.6 \u00b5s 100.0%      1\ntotal                                                              8.6 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 1892529769088916738,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...     165.1 \u00b5s 100.0%      1\ntotal                                                            165.1 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892558861644646607,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 15>((an...       6.2 \u00b5s 100.0%      1\ntotal                                                              6.2 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892587954200376477,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 11>((an...      13.4 \u00b5s 100.0%      1\ntotal                                                             13.4 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892617046756106348,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 8,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      10.7 \u00b5s 100.0%      1\ntotal                                                             10.7 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892646139311836220,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 9,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...     102.5 \u00b5s 100.0%      1\ntotal                                                            102.5 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892675231867566093,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 10,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      14.2 \u00b5s 100.0%      1\ntotal                                                             14.2 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 1892704324423295967,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 11,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...     187.3 \u00b5s 100.0%      1\ntotal                                                            187.3 \u00b5s"
+    }
+  ],
+  "log_tail": "SHARDS {\"B\": 1, \"L\": 1, \"splits\": 32, \"parent_nc\": 1, \"parent_coop\": 0, \"trials\": [{\"nc\": 2, \"coop\": 0, \"ratios\": [0.953982, 0.947183, 0.962567, 0.960854, 0.957447, 0.938489], \"delta_us\": [-0.416, -0.48, -0.336, -0.352, -0.384, -0.56], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 1, \"coop\": 1, \"ratios\": [0.932642, 0.958115, 0.954545, 0.94087, 0.967742, 0.947276], \"delta_us\": [-0.624, -0.384, -0.416, -0.544, -0.288, -0.48], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 8, \"coop\": 1, \"ratios\": [0.93482, 0.945614, 0.966667, 0.930796, 0.963287, 0.938144], \"delta_us\": [-0.608, -0.496, -0.304, -0.64, -0.336, -0.576], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 4, \"coop\": 0, \"ratios\": [0.947183, 0.929825, 0.934256, 0.937931, 0.951049, 0.944056], \"delta_us\": [-0.48, -0.64, -0.608, -0.576, -0.448, -0.512], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 2, \"coop\": 1, \"ratios\": [0.946459, 0.935986, 0.932203, 0.930391, 0.948454, 0.924657], \"delta_us\": [-0.496, -0.592, -0.64, -0.656, -0.48, -0.704], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 4, \"coop\": 1, \"ratios\": [0.934256, 0.921368, 0.923208, 0.920742, 0.919732, 0.909091], \"delta_us\": [-0.608, -0.736, -0.72, -0.752, -0.768, -0.864], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 8, \"coop\": 0, \"ratios\": [0.925801, 0.901338, 0.906667, 0.898164, 0.891089, 0.89404], \"delta_us\": [-0.704, -0.944, -0.896, -0.976, -1.056, -1.024], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 16, \"coop\": 1, \"ratios\": [0.833085, 0.797059, 0.803835, 0.807069, 0.816024, 0.81791], \"delta_us\": [-1.792, -2.208, -2.128, -2.096, -1.984, -1.952], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 16, \"coop\": 0, \"ratios\": [0.815476, 0.79646, 0.811209, 0.79646, 0.802651, 0.794118], \"delta_us\": [-1.984, -2.208, -2.048, -2.208, -2.144, -2.24], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 32, \"coop\": 1, \"ratios\": [0.691327, 0.687817, 0.687811, 0.690657, 0.69125, 0.688295], \"delta_us\": [-3.872, -3.936, -4.016, -3.92, -3.952, -3.92], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 32, \"coop\": 0, \"ratios\": [0.671216, 0.67698, 0.670384, 0.666667, 0.665012, 0.663366], \"delta_us\": [-4.24, -4.176, -4.256, -4.336, -4.32, -4.352], \"error\": 0.0, \"qualifies\": false}]}\nSHARDS {\"B\": 1, \"L\": 8, \"splits\": 33, \"parent_nc\": 1, \"parent_coop\": 1, \"trials\": [{\"nc\": 8, \"coop\": 1, \"ratios\": [0.990923, 1.0, 0.995455, 0.976119, 1.003035, 1.003035], \"delta_us\": [-0.096, 0.0, -0.048, -0.256, 0.032, 0.032], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 2, \"coop\": 1, \"ratios\": [0.971642, 0.986364, 0.976296, 0.983582, 0.982116, 0.998483], \"delta_us\": [-0.304, -0.144, -0.256, -0.176, -0.192, -0.016], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 4, \"coop\": 1, \"ratios\": [0.992537, 0.97594, 0.976119, 0.95729, 0.976261, 0.974852], \"delta_us\": [-0.08, -0.256, -0.256, -0.464, -0.256, -0.272], \"error\": 0.000146724, \"qualifies\": false}, {\"nc\": 1, \"coop\": 0, \"ratios\": [0.889189, 0.896739, 0.896458, 0.89071, 0.89071, 0.887228], \"delta_us\": [-1.312, -1.216, -1.216, -1.28, -1.28, -1.328], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 16, \"coop\": 1, \"ratios\": [0.856955, 0.874172, 0.862069, 0.861111, 0.885753, 0.859788], \"delta_us\": [-1.744, -1.52, -1.664, -1.68, -1.36, -1.696], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 2, \"coop\": 0, \"ratios\": [0.762911, 0.768779, 0.777381, 0.77896, 0.783848, 0.771429], \"delta_us\": [-3.232, -3.152, -2.992, -2.992, -2.912, -3.072], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 32, \"coop\": 1, \"ratios\": [0.761021, 0.75842, 0.766706, 0.764501, 0.751142, 0.754345], \"delta_us\": [-3.296, -3.328, -3.184, -3.248, -3.488, -3.392], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 4, \"coop\": 0, \"ratios\": [0.709642, 0.710441, 0.712743, 0.708645, 0.712743, 0.71536], \"delta_us\": [-4.288, -4.304, -4.256, -4.368, -4.256, -4.24], \"error\": 0.000146724, \"qualifies\": false}, {\"nc\": 8, \"coop\": 0, \"ratios\": [0.499242, 0.499242, 0.492787, 0.489489, 0.495441, 0.506435], \"delta_us\": [-10.576, -10.576, -10.688, -10.88, -10.624, -10.432], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 16, \"coop\": 0, \"ratios\": [0.35664, 0.357918, 0.356061, 0.356988, 0.355049, 0.355795], \"delta_us\": [-18.992, -18.944, -19.04, -18.992, -19.008, -19.12], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 32, \"coop\": 0, \"ratios\": [0.219366, 0.218833, 0.217608, 0.21876, 0.217665, 0.217536], \"delta_us\": [-37.408, -37.696, -37.68, -37.712, -37.84, -37.696], \"error\": 0.0, \"qualifies\": false}]}\nSHARDS {\"B\": 16, \"L\": 1, \"splits\": 16, \"parent_nc\": 1, \"parent_coop\": 0, \"trials\": [{\"nc\": 8, \"coop\": 1, \"ratios\": [0.974545, 0.974545, 0.97552, 0.979243, 0.987775, 0.976914], \"delta_us\": [-0.336, -0.336, -0.32, -0.272, -0.16, -0.304], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 2, \"coop\": 0, \"ratios\": [0.987715, 0.982801, 0.992583, 0.985222, 0.990184, 0.97439], \"delta_us\": [-0.16, -0.224, -0.096, -0.192, -0.128, -0.336], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 4, \"coop\": 1, \"ratios\": [0.965018, 0.961353, 0.973494, 0.971049, 0.972189, 0.979319], \"delta_us\": [-0.464, -0.512, -0.352, -0.384, -0.368, -0.272], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 4, \"coop\": 0, \"ratios\": [0.95778, 0.961631, 0.967587, 0.962515, 0.973398, 0.970909], \"delta_us\": [-0.56, -0.512, -0.432, -0.496, -0.352, -0.384], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 2, \"coop\": 1, \"ratios\": [0.972455, 0.946996, 0.964029, 0.951364, 0.973621, 0.953571], \"delta_us\": [-0.368, -0.72, -0.48, -0.656, -0.352, -0.624], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 1, \"coop\": 1, \"ratios\": [0.911633, 0.899001, 0.914318, 0.896745, 0.919463, 0.888398], \"delta_us\": [-1.264, -1.456, -1.216, -1.472, -1.152, -1.616], \"error\": 0.0, \"qualifies\": false}, {\"nc\": 8, \"coop\": 0, \"ratios\": [0.870614, 0.858065, 0.848034, 0.859914, 0.876232, 0.865736], \"delta_us\": [-1.888, -2.112, -2.288, -2.08, -1.808, -2.0], \"error\": 0.0, \"qualifies\": false}]}\nSHARDS {\"B\": 32, \"L\": 1, \"splits\": 8, \"parent_nc\": 1, \"parent_coop\": 0, \"trials\": [{\"nc\": 2, \"coop\": 0, \"ratios\": [0.980827, 0.978788, 0.97992, 0.961078, 0.965932, 0.976578], \"delta_us\": [-0.304, -0.336, -0.32, -0.624, -0.544, -0.368], \"error\": 1.8361e-05, \"qualifies\": false}, {\"nc\": 4, \"coop\": 0, \"ratios\": [0.956306, 0.949355, 0.956522, 0.955313, 0.96, 0.957874], \"delta_us\": [-0.704, -0.816, -0.704, -0.72, -0.64, -0.672], \"error\": 1.8361e-05, \"qualifies\": false}, {\"nc\": 2, \"coop\": 1, \"ratios\": [0.958498, 0.959685, 0.963184, 0.947835, 0.955045, 0.97281], \"delta_us\": [-0.672, -0.656, -0.592, -0.848, -0.72, -0.432], \"error\": 1.8361e-05, \"qualifies\": false}, {\"nc\": 8, \"coop\": 1, \"ratios\": [0.966303, 0.949754, 0.967359, 0.945973, 0.969124, 0.956306], \"delta_us\": [-0.544, -0.816, -0.528, -0.88, -0.496, -0.704], \"error\": 1.8361e-05, \"qualifies\": false}, {\"nc\": 1, \"coop\": 1, \"ratios\": [0.968254, 0.961233, 0.940613, 0.956565, 0.964179, 0.950495], \"delta_us\": [-0.512, -0.624, -0.992, -0.704, -0.576, -0.8], \"error\": 1.8361e-05, \"qualifies\": false}, {\"nc\": 4, \"coop\": 1, \"ratios\": [0.959526, 0.921305, 0.945152, 0.961538, 0.953141, 0.949102], \"delta_us\": [-0.656, -1.312, -0.896, -0.624, -0.752, -0.816], \"error\": 1.8361e-05, \"qualifies\": false}, {\"nc\": 8, \"coop\": 0, \"ratios\": [0.881448, 0.877161, 0.877367, 0.865402, 0.871055, 0.868778], \"delta_us\": [-2.096, -2.16, -2.176, -2.384, -2.288, -2.32], \"error\": 1.8361e-05, \"qualifies\": false}]}\nSHARDS {\"B\": 16, \"L\": 8, \"splits\": 8, \"parent_nc\": 1, \"parent_coop\": 1, \"trials\": [{\"nc\": 2, \"coop\": 1, \"ratios\": [1.014768, 1.003128, 1.010471, 1.007315, 1.012552, 0.998952], \"delta_us\": [0.224, 0.048, 0.16, 0.112, 0.192, -0.016], \"error\": 2.2415e-05, \"qualifies\": false}, {\"nc\": 4, \"coop\": 1, \"ratios\": [0.972892, 0.978873, 0.975782, 0.961924, 0.976791, 0.97868], \"delta_us\": [-0.432, -0.336, -0.384, -0.608, -0.368, -0.336], \"error\": 2.0969e-05, \"qualifies\": false}, {\"nc\": 1, \"coop\": 0, \"ratios\": [0.946654, 0.927203, 0.938716, 0.936954, 0.940371, 0.942383], \"delta_us\": [-0.88, -1.216, -1.008, -1.04, -0.976, -0.944], \"error\": 2.6228e-05, \"qualifies\": false}, {\"nc\": 8, \"coop\": 1, \"ratios\": [0.905784, 0.8971, 0.915493, 0.898321, 0.89684, 0.908749], \"delta_us\": [-1.616, -1.76, -1.44, -1.744, -1.776, -1.552], \"error\": 2.0461e-05, \"qualifies\": false}, {\"nc\": 2, \"coop\": 0, \"ratios\": [0.84375, 0.838401, 0.844269, 0.850785, 0.855022, 0.836664], \"delta_us\": [-2.88, -2.976, -2.848, -2.736, -2.656, -3.008], \"error\": 2.0462e-05, \"qualifies\": false}, {\"nc\": 4, \"coop\": 0, \"ratios\": [0.785714, 0.78282, 0.780193, 0.778404, 0.780468, 0.779305], \"delta_us\": [-4.224, -4.288, -4.368, -4.4, -4.352, -4.368], \"error\": 2.0969e-05, \"qualifies\": false}, {\"nc\": 8, \"coop\": 0, \"ratios\": [0.611565, 0.611602, 0.611602, 0.615238, 0.610937, 0.611921], \"delta_us\": [-9.888, -9.856, -9.856, -9.696, -9.904, -9.792], \"error\": 2.0461e-05, \"qualifies\": false}]}\nSHARDS {\"B\": 32, \"L\": 8, \"splits\": 4, \"parent_nc\": 1, \"parent_coop\": 1, \"trials\": [{\"nc\": 2, \"coop\": 1, \"ratios\": [0.997508, 0.990909, 0.992599, 0.983607, 0.993443, 0.982899], \"delta_us\": [-0.048, -0.176, -0.144, -0.32, -0.128, -0.336], \"error\": 5.2258e-05, \"qualifies\": false}, {\"nc\": 1, \"coop\": 0, \"ratios\": [0.960692, 0.963608, 0.981162, 0.945541, 0.945227, 0.940252], \"delta_us\": [-0.8, -0.736, -0.384, -1.104, -1.12, -1.216], \"error\": 5.1757e-05, \"qualifies\": false}, {\"nc\": 4, \"coop\": 1, \"ratios\": [0.913374, 0.928626, 0.922427, 0.937452, 0.919269, 0.914764], \"delta_us\": [-1.824, -1.488, -1.616, -1.296, -1.696, -1.792], \"error\": 5.1833e-05, \"qualifies\": false}, {\"nc\": 2, \"coop\": 0, \"ratios\": [0.864553, 0.863833, 0.883586, 0.873646, 0.858065, 0.869314], \"delta_us\": [-3.008, -3.024, -2.576, -2.8, -3.168, -2.896], \"error\": 5.2258e-05, \"qualifies\": false}, {\"nc\": 8, \"coop\": 1, \"ratios\": [0.842657, 0.838328, 0.84375, 0.830791, 0.842214, 0.838889], \"delta_us\": [-3.6, -3.712, -3.6, -3.904, -3.648, -3.712], \"error\": 5.1833e-05, \"qualifies\": false}, {\"nc\": 4, \"coop\": 0, \"ratios\": [0.802543, 0.799733, 0.808638, 0.803595, 0.809492, 0.80496], \"delta_us\": [-4.72, -4.8, -4.608, -4.72, -4.56, -4.656], \"error\": 5.1833e-05, \"qualifies\": false}, {\"nc\": 8, \"coop\": 0, \"ratios\": [0.665389, 0.66122, 0.659377, 0.657236, 0.656847, 0.65027], \"delta_us\": [-9.776, -9.952, -9.968, -10.08, -10.064, -10.352], \"error\": 5.1833e-05, \"qualifies\": false}]}\nSHARDS done 48.5s; timed entry remains parent\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-29 21:26:40 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

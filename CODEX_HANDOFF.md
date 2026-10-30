@@ -67,6 +67,38 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct30 attention packed-P hybrid probe active
+
+MoE broader-source cycle completed without a new GPU run; see below.
+Now attention only. Public code search archived 207 unique files across
+12 repositories. Seven Rohan archive sources match their manifests; the
+Gemini arithmetic/constant2.6537 timing rows are not usable evidence.
+Its older native source has a real confound: EXPPOLY>0 disables PK2 joint
+probability packing/max-check/MMA scheduling. The polynomial matches already
+pinned Apache-2.0 Madhavan/vjeux code. Excerpt/guard/provenance pinned.
+New v21 probes 25/50% FP32 polynomial exponentials with PK2 retained and
+only16 packed-P call sites changed (compile-time FLAT restriction). All
+barriers/waits/key reads/FP8 representation remain. Parent native bodies
+retained for timed dispatch; host-only register/local/shared resource getter.
+Source SHA842ebfc29731e51aeefa3bd89eba7e462018c989d41c3bddb56f10ce81b4db4a.
+Check2d537621593a41d7 running on sfo3 (first attention check Oct30,0submits).
+Six nearby validations: page1/64,scale1/64,TP/DP,B2/3/5/20/33; own fallback
+and parent agreement/cache bits. Timings:B16/32,two distributions/seeds,
+four retained input layouts,nine cold-L2 graph reps,duplicate A/A control,
+changed-qkv replay; compressed final report<8KB. No fixtures retained and
+no paid GPU assumed. This is distinct from closed prefill FMA/PIPE/RRS.
+Phasezero bound67.4415%; free-ALU/exposed40.5%-SFU half-work scenario5.9400%,
+not measured or expected gain. See muse_attention_decode/PK2_HYBRID_2026-10-30.md.
+Source/AST isolation and syntax pass. After terminal status, archive and use
+tools/extract_attention_pk2_probe.py JOB, then read all profiles/logs. Require
+consistent component gains and >=3% worst board model before timed candidate.
+Read-only status restored old30c669/5161a5/acf6f11 receipts from remote records;
+CLI cannot save profiles on absent external volume. Archive helper now handles
+that fallback with explicit immutable --source. All36 old reports inspected;
+remote50-plan SHARDS matches archived JSON exactly. No old jobs restarted.
+Old v19/v20 stale "running" research labels corrected to rejected/closed.
+Other budgets unchanged:MoE6/1,BF166/1,decoder3/1,prefill3/1;attention1/0.
+
 #### Oct30 MoE broader code/source cycle completed
 
 Previous goal turn made progress(BF16 TMA measured negative). MoE global

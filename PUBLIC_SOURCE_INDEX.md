@@ -56,6 +56,16 @@ Global code search supplements the profile screen, including accounts absent fro
 
 ## Adoption procedure
 
+Oct30 attention broader code search:207unique public matches/12repos. Seven
+Rohan archive candidates inspected/hashchecked; external arithmetic/constant
+Gemini2.6537 timings excluded. Legacy EXPPOLY disables PK2 joint probability
+packing, so its source-comment negative is a confounded comparison. New
+v21off-board probe2d537621593a41d7(sfo3) preserves PK2 for25/50%FP32FMA;
+timed parent unchanged, result pending. No reopening B1 merge work. Sources,
+phase-zero/resource-model assumptions and independent validation plan in
+`muse_attention_decode/PK2_HYBRID_2026-10-30.md`. Old terminal receipts also
+recovered via read-only status when the external volume could not save profiles.
+
 Oct30 MoE broader code search:203unique public matches/12repositories,
 including seven newly reviewed rohanarun candidate files. Its multiply-based
 decoder is bit-exact in35136CPUcases but has the same operation classes as

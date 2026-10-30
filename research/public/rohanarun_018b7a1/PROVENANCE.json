@@ -12,5 +12,12 @@
     "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
     "extract_sha256": "64d3a1c7c6dec5ef769237243624d46538e054ea25c154e422035fea18d1fa2e",
     "scope": "Only _stored_pos_mul and four-output MULDEC branch. Whole module not executed; no use of lo=0-only prepare wrapper."
+  },
+  "attention_excerpt": {
+    "source_path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_attention_decode/submission.py",
+    "source_sha256": "394f2517ca8eaf69b7d422832edfd59451a9f73103981d13b1059070abb17b4b",
+    "extract_sha256": "450b4b651c90f991b3b64dc1f53578ff3c0f9c7e752decc89e886e4b1df2df4c",
+    "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_attention_decode/submission.py",
+    "scope": "Polynomial and PK2 guard only. Polynomial matches already pinned Apache-2.0 source. Full module not executed; legacy EXPPOLY disables PK2."
   }
 }
