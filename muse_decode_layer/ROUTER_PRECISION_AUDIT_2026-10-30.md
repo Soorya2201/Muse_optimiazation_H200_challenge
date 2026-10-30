@@ -51,7 +51,7 @@ First check: `521b039c454045da`, cluster `sfo3`; passed 13 tests and 12 timed
 shapes at 2.189801x, CI [2.156954, 2.222648], prepare 128.70 s.
 Every profile and the local/remote logs were read; full receipt is archived in
 `run_receipts/521b039c454045da.json`. The FP32 fused router appears in both
-small-T scored paths. Repeat `5c929cfd9c0b4215` is running; its entire AST,
+small-T scored paths. Repeat `5c929cfd9c0b4215` passed; its entire AST,
 including all native-source constants, is identical (one comment added).
 Second independent check passed at2.221428x; historical source control passed
 at2.137329x but is ineligible for scoring. All12 profiles per run were inspected.

@@ -20,7 +20,15 @@ The new context binder handles fresh host threads. Standalone PDL is disabled.
 
 Exact check `802e58c6f9964fc5` passed on sfo3 at2.404125x,
 CI2.368063-2.440187,all5tests/6timings,prepare167.36s. Every profile/log was
-read and archived. Independent repeat `6ad96077d56c42d9` is running on sfo3.
+read and archived. Independent repeat `6ad96077d56c42d9` passed on sfo3 at
+2.376541x,all5tests/6timings,prepare164.85s. Same-day parent control
+`8ceabe44c7624c93` is running on sfo3; no promotion decision yet.
+
+AST comparison confirms every common literal configuration assignment matches
+the parent, including tiny/mid/main defines. Native `CUDA_SRC` differs in only
+two WGS sections (32 unified-diff lines): input gather permutation and per-stage
+scale reuse. This is source isolation, not a claim of identical compiled SASS
+on small shapes. Use M1/8/16 as controls for memory-layout or timing shifts.
 P1 explicitly requires this published control even though upstream's claimed
 board gain is only about1.25%, below the gate for new speculative microchanges.
 Check twice and compare affected M32/128/256 against unchanged M1/8/16 on a

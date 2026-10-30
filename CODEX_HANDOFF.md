@@ -89,7 +89,9 @@ Decoder cycle complete; next MoE P1,then BF16 exactChen followed by alygg77.
 MoE exact-v24 first check `802e58c6f9964fc5` passed2.404125x on sfo3,
 5593.927us,CI2.368063-2.440187,prepare167.36s,all5tests/6timings.
 Allprofiles/logs read and receipt archived. Repeat `6ad96077d56c42d9`
-running on sfo3,Oct30 MoE check2/8,zero submits. Then run same-day parentv26
+passed2.376541x on sfo3,prepare164.85s,all5tests/6timings.
+Same-day parentv26 check `8ceabe44c7624c93` running on sfo3,
+Oct30 MoE check3/8,zero submits. Compare affected32/128/256 and unchanged1/8/16
 before promotion; do not infer improvement from the previous-day scored parent alone.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
