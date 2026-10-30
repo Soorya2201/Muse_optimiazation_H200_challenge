@@ -105,9 +105,12 @@ do not infer gains from their score difference. Exactalygg77v34 check
 `9c6378b77fb94bb8` passed1.544358x on sfo3,prepare140.18s.
 Repeatv37 `9bc0fbb427aa45ac` passed1.547060x on sfo3,prepare167.17s;
 all9tests/30timings each. Allprofiles/logs read and receipts archived.
-Same-day parentv36 `c200267a5274433e` running on sfo3,
-Oct30 BF16 check5/8,zero submits. Compare30cells/six weighted loads before promotion.
-Current submission staysNathenv18. BF16 metadata refresh complete for1433
+Same-day parentv36 `c200267a5274433e` passed1.510571x on sfo3,
+all9tests/30timings,3197.996us,prepare65.83s. Candidate gains2.237%/2.416%
+with recurring decode1/32 gains and mixed verify paths;see PUBLIC_CONTROLS report.
+Promoted exactalygg77v34;submit `a3d4758c1e174aba` running on sfo3,
+Oct30 BF16 check5/8,submit1/2. All profiles/logs archived/read.
+BF16 metadata refresh complete for1433
 accounts;datedsnapshot/follow-up report pushed. Newsglangmain forks show no
 standalone winner in inspected areas;alygg77 already queued. Ten unresolved.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.

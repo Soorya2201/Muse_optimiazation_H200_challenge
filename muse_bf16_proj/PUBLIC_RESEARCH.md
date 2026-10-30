@@ -18,7 +18,11 @@ Exact alygg77 check `9c6378b77fb94bb8` passed1.544358x on sfo3;
 identical-source repeat `9bc0fbb427aa45ac` passed1.547060x on sfo3.
 All9tests/30timings each,prepare140.18/167.17s; allprofiles/logs read and archived.
 The source matches pinned public SHA290a86ab...7b90;licenses/notices preserved.
-Same-day parent `c200267a5274433e` is running on sfo3,fifth of eight checks.
+Same-day parent `c200267a5274433e` passed1.510571x on sfo3,fifth of eight checks.
+All30profiles/logs read. Stable alygg77 bundle improves2.237%/2.416% over it,
+with gains concentrated in decode1/32 and mixed verify paths. Promoted exactv34;
+submit `a3d4758c1e174aba` is running on sfo3. Current submission is now exactv34.
+See `PUBLIC_CONTROLS_2026-10-30.md` for every cell,copy-count caveat and next-test plan.
 
 Captured2026-10-29T20:09:08UTC. Our live position was#171/1394 at1.5219x;
 leader colinlikescode1.6367x. `RANKED_GITHUB_REPO_SCREEN.json` covers all1394 ranked
