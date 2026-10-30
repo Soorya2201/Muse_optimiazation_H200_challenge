@@ -17,8 +17,10 @@ for name, digest in manifest["outputs"].items():
     content = (checkout / name).read_bytes()
     assert hashlib.sha256(content).hexdigest() == digest, name
     assert max(map(len, content.decode().splitlines())) <= 400, name
-    if name.endswith(".cuh"):
+    if name.endswith("okc_moe_prototype.cuh"):
         header = content.decode()
+    elif name.endswith("okc_moe_helper0.cuh"):
+        helper_header = content.decode()
 original_functions = {
     n.name: n for n in original.body if isinstance(n, ast.FunctionDef)
     and 3104 <= n.lineno <= 3359
@@ -40,6 +42,36 @@ device = cuda.split("#include <torch/extension.h>")[0]
 ported_device = header[header.index("\n// ---------------------------------------------------------------- roadmap"):]
 ported_device = ported_device[:ported_device.index("\n\n\nstatic size_t okc_smem_bytes()")]
 assert "".join(device.split()) == "".join(ported_device.split())
+helper_cuda = next(
+    ast.literal_eval(n.value) for n in original.body if isinstance(n, ast.Assign)
+    and any(isinstance(a, ast.Subscript) and isinstance(a.value, ast.Name)
+            and a.value.id == "ALT_SRCS" and ast.literal_eval(a.slice) == "helper0"
+            for a in n.targets)
+)
+helper_device = helper_cuda.split("#include <torch/extension.h>")[0]
+ported_helper = helper_header[helper_header.index("\n// ---------------------------------------------------------------- roadmap"):]
+ported_helper = ported_helper[:ported_helper.index("\n\n\nstatic size_t okc_smem_bytes()")]
+assert "".join(helper_device.split()) == "".join(ported_helper.split())
+# Compare final settings, including late augmented assignments, without running
+# imports, native compilation, diagnostics or arbitrary donor module code.
+def variant_settings(nodes):
+    namespace = {}
+    selected = []
+    for node in nodes:
+        if isinstance(node, ast.Assign) and 100 <= node.lineno <= 191:
+            selected.append(node)
+        elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name) and node.target.id == "MID_DEFINES":
+            selected.append(node)
+    exec(compile(ast.Module(body=selected, type_ignores=[]), "<variant settings>", "exec"), namespace)
+    return {k: v for k, v in namespace.items() if k.endswith("_DEFINES")}
+expected_settings = variant_settings(original.body)
+new_settings = {}
+for node in new.body:
+    if isinstance(node, ast.Assign) and any(isinstance(a, ast.Name) and a.id in expected_settings for a in node.targets):
+        exec(compile(ast.Module(body=[node], type_ignores=[]), "<port settings>", "exec"), new_settings)
+    elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name) and node.target.id == "MID_DEFINES":
+        exec(compile(ast.Module(body=[node], type_ignores=[]), "<port settings>", "exec"), new_settings)
+assert expected_settings == {k: new_settings[k] for k in expected_settings}
 assert "torch::" not in header and "at::cuda" not in header
 assert "TVMFFIEnvGetStream(kDLCUDA, x.device().device_id)" in header
 # The flag must reject both public developer entry points before touching a tensor.
@@ -68,5 +100,5 @@ paths = [l.split(" b/", 1)[1] for l in patch.read_text().splitlines() if l.start
 assert sorted(paths) == sorted(manifest["outputs"]), paths
 assert all(p.startswith("python/sglang/") and "/model_loader/" not in p for p in paths)
 subprocess.run(["git", "-C", str(checkout), "apply", "--reverse", "--check", str(patch)], check=True)
-print(f"PASS: {len(original_functions)} packing/setup helpers, dispatch AST, device whitespace, default-off guards, two-file {patch.stat().st_size}-byte patch")
+print(f"PASS: {len(original_functions)} packing/setup helpers, dispatch AST, final variant settings, both device sources, default-off guards, {len(paths)}-file {patch.stat().st_size}-byte patch")
 print("CUDA compilation, graph replay, GPU numerical comparisons, model integration and serving throughput remain unvalidated.")

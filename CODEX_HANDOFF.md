@@ -67,6 +67,23 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct30 17:50UTC internal-disk continuation
+
+External volume absent; separate private-GitHub checkout restored at
+/Users/soorya/muse_work/continuation_20261030 from4ff92f7. No old job live.
+Prior turn classified progress. User's uncommitted external files unavailable,
+not replaced. Native binding audit found and fixed initial serving prototype's
+missing late MID_DEFINES augmentation and ALT_SRCS helper0. Generator now ports
+both device sources; verifier also checks final variant tuples. Three-file
+310131-byte patch passes local checks; no model hook added.
+MoE load_jit validation check88b96eec59f34b57 is active,canonical unchanged,
+SHA639a5f5a4e86872274ba7f545772538723ad3ae7950d330eedf3c3ad0f54b002.
+This is GPU binding/compatibility validation,not a speedup experiment.
+MoE4/8routinechecks,1/2submits;other budgets unchanged from05:38checkpoint.
+Read/archive result,allprofiles/logs,next. See
+muse_moe_w4a16/LOADJIT_VALIDATION_2026-10-30.md. Core public source families
+unchanged on GitHub;additional source follow-ups documented there.
+
 #### Oct30 05:38UTC checkpoint: public-source cycle completed
 
 P0/P1/P2 completed: compliant decoder2.211495x,MoE2.372309x,

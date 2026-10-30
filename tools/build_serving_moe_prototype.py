@@ -25,85 +25,97 @@ assignments = {
 }
 functions = {n.name: n for n in tree.body if isinstance(n, ast.FunctionDef)}
 cuda = ast.literal_eval(assignments["CUDA_SRC"].value)
-device, host = cuda.split("#include <torch/extension.h>", 1)
-device_original = device
-wrapped = []
-for line in device.splitlines(keepends=True):
-    if len(line.rstrip("\n")) > 400:
-        # Only inline-assembly operand lists need wrapping. No strings change.
-        assert line.lstrip().startswith(": ") and "//" not in line
-        parts = line.rstrip("\n").split(", ")
-        current = parts.pop(0)
-        for part in parts:
-            if len(current) + len(part) + 2 > 350:
-                wrapped.append(current + ",\n")
-                current = "                 " + part
-            else:
-                current += ", " + part
-        wrapped.append(current + "\n")
-    else:
-        wrapped.append(line)
-device = "".join(wrapped)
-assert "".join(device.split()) == "".join(device_original.split())
-host = host.replace("#include <ATen/cuda/CUDAContext.h>", "")
-host = host.replace(
-    "static int g_okc_pdl = 0;  // launch with programmatic stream serialization (PDL); off unless okc_set_pdl(1)\n\n"
-    "void okc_set_pdl(int64_t on) { g_okc_pdl = on ? 1 : 0; }", ""
+def port_cuda(cuda):
+    device, host = cuda.split("#include <torch/extension.h>", 1)
+    device_original = device
+    wrapped = []
+    for line in device.splitlines(keepends=True):
+        if len(line.rstrip("\n")) > 400:
+            # Only inline-assembly operand lists need wrapping. No strings change.
+            assert line.lstrip().startswith(": ") and "//" not in line
+            parts = line.rstrip("\n").split(", ")
+            current = parts.pop(0)
+            for part in parts:
+                if len(current) + len(part) + 2 > 350:
+                    wrapped.append(current + ",\n")
+                    current = "                 " + part
+                else:
+                    current += ", " + part
+            wrapped.append(current + "\n")
+        else:
+            wrapped.append(line)
+    device = "".join(wrapped)
+    assert "".join(device.split()) == "".join(device_original.split())
+    host = host.replace("#include <ATen/cuda/CUDAContext.h>", "")
+    host = host.replace(
+        "static int g_okc_pdl = 0;  // launch with programmatic stream serialization (PDL); off unless okc_set_pdl(1)\n\n"
+        "void okc_set_pdl(int64_t on) { g_okc_pdl = on ? 1 : 0; }", ""
+    )
+    signature = (
+        "void okc_run(std::vector<torch::Tensor> w, std::vector<torch::Tensor> scratch, torch::Tensor x, torch::Tensor ids,\n"
+        "             torch::Tensor tw, torch::Tensor out, int64_t lo, int64_t nloc, int64_t grid) {"
+    )
+    assert signature in host
+    args = [f"tvm::ffi::TensorView w{i}" for i in range(14)]
+    args += [f"tvm::ffi::TensorView s{i}" for i in range(3)]
+    args += [f"tvm::ffi::TensorView {v}" for v in ("x", "ids", "tw", "out")]
+    args += ["int64_t lo", "int64_t nloc", "int64_t grid"]
+    replacement = "void okc_moe_prototype_run(\n    " + ",\n    ".join(args) + ") {\n"
+    replacement += "  using namespace sglang::host;\n"
+    replacement += "  std::array<tvm::ffi::TensorView, 14> w = {" + ", ".join(f"w{i}" for i in range(14)) + "};\n"
+    replacement += "  std::array<tvm::ffi::TensorView, 3> scratch = {s0, s1, s2};\n"
+    replacement += '''  RuntimeCheck(nloc == 32 && lo >= 0 && lo + nloc <= 256, "invalid local expert shard");
+      RuntimeCheck(grid > 0 && grid < 160, "grid exceeds stream-K scratch slots");
+      for (auto tensor : w) {
+        RuntimeCheck(tensor.device().device_type == kDLCUDA && tensor.IsContiguous(), "invalid weight view");
+        RuntimeCheck(tensor.device().device_id == x.device().device_id, "weight device mismatch");
+      }
+      for (auto tensor : scratch) {
+        RuntimeCheck(tensor.device().device_type == kDLCUDA && tensor.IsContiguous(), "invalid scratch view");
+        RuntimeCheck(tensor.device().device_id == x.device().device_id, "scratch device mismatch");
+      }
+      RuntimeCheck(x.device().device_type == kDLCUDA, "CUDA activation required");
+      RuntimeCheck(x.ndim() == 2 && x.size(1) == okc::HD, "invalid activation shape");
+      RuntimeCheck(x.size(0) >= 1 && x.size(0) <= 384, "invalid chunk size");
+      auto device = SymbolicDevice{};
+      device.set_options<kDLCUDA>();
+      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(x);
+      TensorMatcher({x.size(0), 8}).with_dtype<int32_t>().with_device(device).verify(ids);
+      TensorMatcher({x.size(0), 8}).with_dtype<fp32_t>().with_device(device).verify(tw);
+      TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(out);
+      RuntimeCheck(x.IsContiguous() && ids.IsContiguous() && tw.IsContiguous() && out.IsContiguous(),
+                   "contiguous call buffers required");
+    '''
+    host = host.replace(signature, replacement)
+    host = host.replace("TORCH_CHECK(", "sglang::host::RuntimeCheck(")
+    host = host.replace("ids.is_contiguous()", "ids.IsContiguous()")
+    host = host.replace("cudaStream_t st = at::cuda::getCurrentCUDAStream();", "cudaStream_t st = static_cast<cudaStream_t>(TVMFFIEnvGetStream(kDLCUDA, x.device().device_id));")
+    start = host.index("  if (g_okc_pdl) {")
+    end = host.index("  if (p.M >= OKC_BIGM) okc::moe_fused<true><<<", start)
+    host = host[:start] + host[end:]  # Donor PDL=False; keep that launch behavior.
+    host = host.replace(
+        "    (void)e0; (void)e1;", "    RuntimeCheck(e0 == cudaSuccess && e1 == cudaSuccess, \"dynamic shared memory setup failed\");"
+    )
+    host = host.replace("  p.dbg = scratch.size() > 3 ? (unsigned long long*)scratch[3].data_ptr() : nullptr;", "  p.dbg = nullptr;")
+    host += '\n'
+    notice = (
+        "// Apache-2.0. Portions Copyright vjeux (f35a41e); alygg77 (6cae49a).\n"
+        "// Isolated host port; device section changes only nine operand-list line wraps.\n"
+        "// Prototype only: kernel-track norm offsets, no SGLang model integration.\n"
+    )
+    header = notice + "#pragma once\n#include <array>\n#include <sgl_kernel/tensor.h>\n#include <sgl_kernel/utils.h>\n#include <tvm/ffi/container/tensor.h>\n#include <tvm/ffi/extra/c_env_api.h>\n" + device + host
+    header = header.rstrip() + "\n"
+    return header, device_original, device
+
+
+helper_cuda = next(
+    ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign)
+    and any(isinstance(a, ast.Subscript) and isinstance(a.value, ast.Name)
+            and a.value.id == "ALT_SRCS" and ast.literal_eval(a.slice) == "helper0"
+            for a in n.targets)
 )
-signature = (
-    "void okc_run(std::vector<torch::Tensor> w, std::vector<torch::Tensor> scratch, torch::Tensor x, torch::Tensor ids,\n"
-    "             torch::Tensor tw, torch::Tensor out, int64_t lo, int64_t nloc, int64_t grid) {"
-)
-assert signature in host
-args = [f"tvm::ffi::TensorView w{i}" for i in range(14)]
-args += [f"tvm::ffi::TensorView s{i}" for i in range(3)]
-args += [f"tvm::ffi::TensorView {v}" for v in ("x", "ids", "tw", "out")]
-args += ["int64_t lo", "int64_t nloc", "int64_t grid"]
-replacement = "void okc_moe_prototype_run(\n    " + ",\n    ".join(args) + ") {\n"
-replacement += "  using namespace sglang::host;\n"
-replacement += "  std::array<tvm::ffi::TensorView, 14> w = {" + ", ".join(f"w{i}" for i in range(14)) + "};\n"
-replacement += "  std::array<tvm::ffi::TensorView, 3> scratch = {s0, s1, s2};\n"
-replacement += '''  RuntimeCheck(nloc == 32 && lo >= 0 && lo + nloc <= 256, "invalid local expert shard");
-  RuntimeCheck(grid > 0 && grid < 160, "grid exceeds stream-K scratch slots");
-  for (auto tensor : w) {
-    RuntimeCheck(tensor.device().device_type == kDLCUDA && tensor.IsContiguous(), "invalid weight view");
-    RuntimeCheck(tensor.device().device_id == x.device().device_id, "weight device mismatch");
-  }
-  for (auto tensor : scratch) {
-    RuntimeCheck(tensor.device().device_type == kDLCUDA && tensor.IsContiguous(), "invalid scratch view");
-    RuntimeCheck(tensor.device().device_id == x.device().device_id, "scratch device mismatch");
-  }
-  RuntimeCheck(x.device().device_type == kDLCUDA, "CUDA activation required");
-  RuntimeCheck(x.ndim() == 2 && x.size(1) == okc::HD, "invalid activation shape");
-  RuntimeCheck(x.size(0) >= 1 && x.size(0) <= 384, "invalid chunk size");
-  auto device = SymbolicDevice{};
-  device.set_options<kDLCUDA>();
-  TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(x);
-  TensorMatcher({x.size(0), 8}).with_dtype<int32_t>().with_device(device).verify(ids);
-  TensorMatcher({x.size(0), 8}).with_dtype<fp32_t>().with_device(device).verify(tw);
-  TensorMatcher({x.size(0), okc::HD}).with_dtype<bf16_t>().with_device(device).verify(out);
-  RuntimeCheck(x.IsContiguous() && ids.IsContiguous() && tw.IsContiguous() && out.IsContiguous(),
-               "contiguous call buffers required");
-'''
-host = host.replace(signature, replacement)
-host = host.replace("TORCH_CHECK(", "sglang::host::RuntimeCheck(")
-host = host.replace("ids.is_contiguous()", "ids.IsContiguous()")
-host = host.replace("cudaStream_t st = at::cuda::getCurrentCUDAStream();", "cudaStream_t st = static_cast<cudaStream_t>(TVMFFIEnvGetStream(kDLCUDA, x.device().device_id));")
-start = host.index("  if (g_okc_pdl) {")
-end = host.index("  if (p.M >= OKC_BIGM) okc::moe_fused<true><<<", start)
-host = host[:start] + host[end:]  # Donor PDL=False; keep that launch behavior.
-host = host.replace(
-    "    (void)e0; (void)e1;", "    RuntimeCheck(e0 == cudaSuccess && e1 == cudaSuccess, \"dynamic shared memory setup failed\");"
-)
-host = host.replace("  p.dbg = scratch.size() > 3 ? (unsigned long long*)scratch[3].data_ptr() : nullptr;", "  p.dbg = nullptr;")
-host += '\n'
-notice = (
-    "// Apache-2.0. Portions Copyright vjeux (f35a41e); alygg77 (6cae49a).\n"
-    "// Isolated host port; device section changes only nine operand-list line wraps.\n"
-    "// Prototype only: kernel-track norm offsets, no SGLang model integration.\n"
-)
-header = notice + "#pragma once\n#include <array>\n#include <sgl_kernel/tensor.h>\n#include <sgl_kernel/utils.h>\n#include <tvm/ffi/container/tensor.h>\n#include <tvm/ffi/extra/c_env_api.h>\n" + device + host
-header = header.rstrip() + "\n"
+header, device_original, device = port_cuda(cuda)
+helper_header, helper_original, helper_device = port_cuda(helper_cuda)
 constants = "\n\n".join(
     ast.get_source_segment(source, n) for n in tree.body
     if isinstance(n, ast.Assign) and 100 <= n.lineno <= 191
@@ -128,6 +140,9 @@ from sglang.kernels.jit.utils import load_jit
 '''
 python += constants + '''
 
+# The donor appends this after declaring ALT_SRCS; retain the effective tuple.
+MID_DEFINES += ("-DOKC_WSH0=1", "@helper0")
+
 class _ModuleAdapter:
     def __init__(self, module):
         self.module = module
@@ -139,13 +154,16 @@ class _ModuleAdapter:
 @lru_cache(None)
 def _ext(defines=None):
     defines = tuple(MAIN_DEFINES if defines is None else defines)
-    if any(d.startswith("@") for d in defines):
-        raise ValueError("alternate source variants are not ported")
-    flags = ["-O3", "-DOKC_NS=3", "-DOKC_NSF=3", "-DOKC_DQ7=1", *defines]
-    tag = "_".join(d.replace("-D", "").replace("=", "_").lower() for d in defines)
+    alternate = [d[1:] for d in defines if d.startswith("@")]
+    if alternate not in ([], ["helper0"]):
+        raise ValueError("unknown alternate source")
+    flags = ["-O3", "-DOKC_NS=3", "-DOKC_NSF=3", "-DOKC_DQ7=1"]
+    flags += [d for d in defines if not d.startswith("@")]
+    tag = "_".join(d.replace("-D", "").replace("=", "_").replace("@", "src_").lower() for d in defines)
+    filename = "okc_moe_helper0.cuh" if alternate else "okc_moe_prototype.cuh"
     return _ModuleAdapter(load_jit(
         "muse_spark_okc_moe_prototype", tag,
-        cuda_files=["muse_spark_v12/okc_moe_prototype.cuh"],
+        cuda_files=["muse_spark_v12/" + filename],
         cuda_wrappers=[("run", "okc_moe_prototype_run")],
         extra_cuda_cflags=flags,
     ))
@@ -214,6 +232,7 @@ assert "load_inline" not in python
 ast.parse(python)
 outputs = {
     "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh": header,
+    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_helper0.cuh": helper_header,
     "python/sglang/kernels/ops/muse_spark_v12/okc_moe_prototype.py": python,
 }
 for rel, content in outputs.items():
@@ -232,6 +251,8 @@ manifest = {
     "donor_device_section_sha256": hashlib.sha256(device_original.encode()).hexdigest(),
     "ported_device_section_sha256": hashlib.sha256(device.encode()).hexdigest(),
     "device_section_changes": "whitespace only; nine inline-assembly operand lists wrapped for 400-character patch limit",
+    "helper0_donor_device_sha256": hashlib.sha256(helper_original.encode()).hexdigest(),
+    "helper0_ported_device_sha256": hashlib.sha256(helper_device.encode()).hexdigest(),
     "outputs": {rel: hashlib.sha256(content.encode()).hexdigest() for rel, content in outputs.items()},
 }
 print(json.dumps(manifest, indent=2))

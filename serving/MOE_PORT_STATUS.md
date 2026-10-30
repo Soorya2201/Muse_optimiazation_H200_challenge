@@ -2,9 +2,10 @@
 
 This is an **isolated offline prototype**, not a working serving optimization.
 No serving check or submit was run. The kernel boards retain their checked sources.
+An off-board MoE kernel check now validates the isolated binding; see below.
 
-`okc_init/patch.diff` contains two new files under `python/sglang/`: a CUDA
-header and a Python `load_jit` wrapper. Neither changes a model call site.
+`okc_init/patch.diff` contains three new files under `python/sglang/`: two CUDA
+headers and a Python `load_jit` wrapper. None changes a model call site.
 Setting `SGLANG_OKC_MOE=1` only permits the explicit developer entry points;
 it does **not** switch the server away from Marlin.
 
@@ -16,15 +17,24 @@ it does **not** switch the server away from Marlin.
 - Replaced the PyTorch C++ binding with 21 explicit TVM-FFI TensorView
   arguments plus three integers. The stream comes from `TVMFFIEnvGetStream`
   for the activation's CUDA device. PDL stays disabled, as in the donor.
-- Preserved all 17 packing/setup helper bodies and the variant/chunk dispatch
-  by AST comparison. Device code differs only in nine inline-assembly
-  operand-list line wraps to satisfy the 400-character serving rule.
+- Preserved all17 packing/setup helper bodies and the variant/chunk dispatch
+  by AST comparison. The revised verifier also checks final variant settings,
+  including the donor's late MID/helper0 augmentation. Both native sources
+  are ported; device changes are operand-list whitespace wraps to satisfy
+  the400-character serving rule.
 - Developer API accepts **32 local raw experts**, a separate global expert
   offset, BF16 activations, eight global IDs and FP32 routing scores. It
   returns the local weighted sum; cross-rank communication is the caller's job.
 - Python syntax, exact source hashes, helper/dispatch ASTs, device-source
   whitespace equivalence, flag rejection, patch paths/size/line limits and
-  reverse-apply checks pass. The patch is **165,452 bytes**, below 720 KiB.
+  reverse-apply checks pass. The patch is **310,131 bytes**, below720KiB.
+
+Correction on Oct30 continuation: the initial165452-byte prototype omitted
+the late MID_DEFINES augmentation and alternative helper0 CUDA source. Its
+earlier function-AST checks did not cover effective module settings. This
+omission is fixed and the verifier now covers it. Kernel-track validation
+job88b96eec59f34b57 is running on sfo3; this is a compatibility check,not an
+algorithmic speedup experiment. Model integration remains absent.
 
 Reproduce after `okc serve init` at SGLang `a55ab7d5`:
 

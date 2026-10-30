@@ -6,8 +6,11 @@
   "donor_device_section_sha256": "a11cca570a8c29c76dfb581c747df268fc8dacc2a162823bfcac30086b1fa7ca",
   "ported_device_section_sha256": "132902dbbcc0718614fc37478d8f5701479766b18ecc3092be2e7a301b93f673",
   "device_section_changes": "whitespace only; nine inline-assembly operand lists wrapped for 400-character patch limit",
+  "helper0_donor_device_sha256": "f82e2f386fd59a487bfc69cd6bb08497b5eeb405ba091574de899bbc7fa4c003",
+  "helper0_ported_device_sha256": "00a3e67cd79ac706c81d723b821fe3c9d3d0273ed8f63ca3adf11b0b4e43e1c2",
   "outputs": {
-    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh": "49a408305fcd7d5a87eb0888221d6611951c21b60571b7535cbc9be2ef1ab484",
-    "python/sglang/kernels/ops/muse_spark_v12/okc_moe_prototype.py": "5e69b5812831a17756ba1859c45f79f3dfbb9701849a3f5a5fbfb636d701eadf"
+    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_prototype.cuh": "505985c69b76526b335cf021e5da346465080da3f6ff4469ad5d79581803445c",
+    "python/sglang/kernels/jit/csrc/muse_spark_v12/okc_moe_helper0.cuh": "c1b0d6db842136ba4edab36caaa2b3951284489ebf4b38d66bf66ede32ea110b",
+    "python/sglang/kernels/ops/muse_spark_v12/okc_moe_prototype.py": "082db9dbbd020b9005eaf51bb9bc9928af7fe70b0b3990800e327fdf63689216"
   }
 }
