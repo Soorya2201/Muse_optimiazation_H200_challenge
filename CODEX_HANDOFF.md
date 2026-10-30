@@ -97,8 +97,10 @@ submit `ce241acf7ab84c04` passed2.372309x on sfo3,5668.949us,
 CI2.336725-2.407894,prepare164.59s,all5tests/6timings.
 MoE#79/1150,overall#50/1651 at capture;Oct30 MoE3/8checks,1/2submits.
 All profiles/logs archived/read; comparison report records noise/raw-time limits.
-MoE cycle complete. Next BF16 exactChen,then alygg77 P1;do not chase noisy
-unchanged resubmissions. BF16 routine budget is fresh on Oct30 (0/8 so far).
+MoE cycle complete. BF16 exactChen check `f5ea143175564684` running on sfo3c,
+Oct30 BF16 check1/8,zero submits. Then independentrepeatv35,exactalygg77v34
+twice and same-day currentparentv36. Track cluster assignments; compare within
+cluster only. No unchanged resubmissions to fish for a higher score.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe
