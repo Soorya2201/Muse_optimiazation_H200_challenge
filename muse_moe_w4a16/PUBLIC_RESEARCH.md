@@ -18,7 +18,9 @@ stay selected for M<=16. `prepare` uses weights only; `kernel_fn` reads fresh
 activations/routes and allocates a fresh output. No input/output cache exists.
 The new context binder handles fresh host threads. Standalone PDL is disabled.
 
-Exact check `802e58c6f9964fc5` is running on sfo3, first of eight checks.
+Exact check `802e58c6f9964fc5` passed on sfo3 at2.404125x,
+CI2.368063-2.440187,all5tests/6timings,prepare167.36s. Every profile/log was
+read and archived. Independent repeat `6ad96077d56c42d9` is running on sfo3.
 P1 explicitly requires this published control even though upstream's claimed
 board gain is only about1.25%, below the gate for new speculative microchanges.
 Check twice and compare affected M32/128/256 against unchanged M1/8/16 on a

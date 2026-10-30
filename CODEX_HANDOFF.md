@@ -86,6 +86,11 @@ Compliant exact-v17 submit `eff0b59dc26c4c74` passed2.211495x on sfo3,
 10228.512us,CI2.178322-2.244667,prepare128.57s. All profiles/logs archived/read.
 Decoder#50/1007,overall#50/1649 at capture. Oct30 decoder3/8checks,1/2submits.
 Decoder cycle complete; next MoE P1,then BF16 exactChen followed by alygg77.
+MoE exact-v24 first check `802e58c6f9964fc5` passed2.404125x on sfo3,
+5593.927us,CI2.368063-2.440187,prepare167.36s,all5tests/6timings.
+Allprofiles/logs read and receipt archived. Repeat `6ad96077d56c42d9`
+running on sfo3,Oct30 MoE check2/8,zero submits. Then run same-day parentv26
+before promotion; do not infer improvement from the previous-day scored parent alone.
 Private GitHub verified Oct30. Preserve the user's new serving/research files.
 
 #### Oct29 20:56UTC attention phase probe
