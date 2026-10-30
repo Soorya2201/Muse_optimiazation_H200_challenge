@@ -95,10 +95,48 @@ unchanged-source resubmission to seek a favorable score.
 
 ## Run ledger
 
-- Check `2d21c2cf18c84e2e`, pending at creation; second of eight reserved
+- Check `2d21c2cf18c84e2e`, completed on sfo3; second of eight reserved
   prefill checks today, one scored submit already used.
 - Source SHA256 `1cda34bc6d5f67eeda2959288e2cca48365bced652bf4d9ac95c8802e2382952`.
 - Builder: `tools/build_prefill_hybrid_pipeline_probe.py`.
 - Local syntax, prefix and new launch/attribute expansion checks pass.
-- Canonical/scored kernel is unchanged. Read all profiles/logs and archive
-  terminal evidence before the next decision.
+- All5tests/8timings pass; diagnostic parent-dispatch score1.788601593x,
+  216595.972us,CI1.761773–1.815431,prepare57.13s. This is **not a hybrid score**.
+- All eight profiles and the complete probe/prepare/remote logs were read;
+  immutable receipt and `HYBRID_PIPE_REPORT_2d21c2cf18c84e2e.json` archived.
+- Both hybrids validate against FA3(worst relative error0.0151). Across
+  full geometries,hybrid-vs-parent relative errors are0.001009–0.001731,
+  all finite and below the1% diagnostic gate.
+- Both hybrids **lose in all ten geometry/group observations**. Speed ratios
+  for25%FMA range0.829333–0.859606,meaning16.33–20.58% longer attention time.
+  For50%FMA they range0.786251–0.821942,meaning21.66–27.19% longer time.
+  Duplicate-parent median offsets are at most0.2302%,far below the loss.
+- Of27 fixed class combinations,the unchanged43/43/43 choice is the only
+  one meeting the measured phase gates. No full-layer hybrid candidate or
+  scored submit is justified. Canonical/scored source remains unchanged.
+
+## Adaptive follow-up: register-budget versus arithmetic cost
+
+The loss is established;the cause is not. Polynomial range reduction and
+extra FP32/integer instructions may contend with the pipelined kernel.
+Register pressure is another hypothesis,not a measured explanation yet.
+
+v22 adds a native `cudaFuncGetAttributes` bridge for43/44/45 and a two-consumer
+warpgroup PIPE/RRS schedule:48 uses native exp,49 uses25%FMA,and50 uses50%FMA.
+The existing CUDA source assigns232 registers to two-WG consumers versus160
+for three-WG consumers through setmaxnreg. Attribute queries describe the
+compiled function;they do not directly measure dynamic spills or occupancy.
+
+The follow-up includes a feature-off48 control and the same five geometries,
+two independent seeds,duplicate parent controls and numerical gates. Each
+schedule uses the existing shape-only split heuristic. It retains parent43
+for every timed full-layer call. This tests a concrete register/schedule
+explanation for the observed loss,rather than sweeping polynomial fractions.
+
+- Check `2f9fe01a6f8f4702`,pending at creation;third of eight reserved prefill
+  checks today,one submit already used.
+- Source SHA256 `9e7aee12321ad86c2b5a6615d4cab56c0569708e599d8c392553b7f901071ec4`.
+- Builder `tools/build_prefill_hybrid_resource_probe.py`;extractor accepts
+  `--variants 48 49 50` to evaluate all64 fixed class combinations.
+- Only a recurring modeled board gain beyond3% would justify a subsequent
+  whole-layer candidate check;resource observations alone cannot raise rank.

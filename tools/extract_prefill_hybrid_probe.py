@@ -13,6 +13,7 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("job")
+parser.add_argument("--variants", type=int, nargs="+", default=[44, 45])
 args = parser.parse_args()
 assert re.fullmatch(r"[0-9a-f]{16}", args.job)
 track = ROOT / "muse_prefill_layer"
@@ -45,13 +46,14 @@ for (label, group), row in records.items():
     assert (row["batch"], row["q_len"], row["ctx"]) == labels[label][:3]
     assert row["repetitions"] == 9
 
-baseline = json.loads((track / "run_receipts/25a1e0e5df0d4949.json").read_text())
-assert receipt["cluster"] == baseline["cluster"], "cross-cluster model needs explicit review"
+# Each diagnostic times parent43 in the official full-layer call. Use this
+# same job's profile as the model baseline, preserving cluster matching.
+baseline = receipt
 classes = ("full_short", "full_batch", "full_long")
 eligible = {kind: {43: True} for kind in classes}
 eligibility_detail = {}
 for kind in classes:
-    for variant in (44, 45):
+    for variant in args.variants:
         key = str(variant)
         checks = []
         for label, shape in labels.items():
@@ -83,7 +85,7 @@ for benchmark, profile in zip(baseline["benchmarks"], baseline["profiles"]):
                        "shape_us": benchmark["median_ns"] / 1000, "forward_us": phase})
 
 combinations = []
-for variants in itertools.product((43, 44, 45), repeat=3):
+for variants in itertools.product((43, *args.variants), repeat=3):
     choice = dict(zip(classes, variants))
     valid = all(eligible[kind][variant] for kind, variant in choice.items())
     factors = []
@@ -111,7 +113,7 @@ payload = {
     "method": "independent synthetic fixtures; two seeds/groups; nine counterbalanced cold-L2 graph replays; duplicate parent controls",
     "gates": {"max_phase_relative_l2": 0.01, "max_duplicate_control_offset": 0.01,
               "min_phase_gain_each_group_case": 0.02, "min_modeled_board_gain_each_group": 0.03},
-    "model_limits": "Uses prior same-cluster native forward durations and independent microbenchmark ratios. Overlap, allocator layout and end-to-end effects are not isolated; actual full-layer checks required before promotion.",
+    "model_limits": "Uses this same job's timed-parent native forward durations and independent microbenchmark ratios. Overlap, allocator layout and end-to-end effects are not isolated; actual full-layer checks required before promotion.",
     "records": [records[k] for k in sorted(records)],
     "eligibility": eligibility_detail, "fixed_class_combinations": combinations, "best_eligible_model": best,
 }

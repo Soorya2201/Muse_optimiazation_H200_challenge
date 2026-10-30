@@ -72,18 +72,28 @@ okc withdraw <job>            # take a run off the board
 Previous goal turn classified progress(native MoE port validated,not a score
 gain). No live old job;external drive still absent. Continuing in internal
 checkout. MoE binding cycle done;performance work now prefill only.
-Prefill check2d21c2cf18c84e2e is active forv21_hybrid_pipeline_probe,
+Prefill check2d21c2cf18c84e2e completed forv21_hybrid_pipeline_probe,
 SHA1cda34bc6d5f67eeda2959288e2cca48365bced652bf4d9ac95c8802e2382952.
 Combines existing FP32 cubic EXPMODE16/32 with selected PIPE/RRS full-attention
 schedule43(new44/45),not the separate closed decode-attention B1 family.
 Native template bodies and exact hardenedv20 prefix retained;timed dispatch
-staysparent sliding8/full43. Prepare diagnostics:FA3 validation,all5full
-geometries,two independent seeds,9cold-L2 graph pairs,duplicate A/A controls.
+staysparent sliding8/full43. All5tests/8timings pass1.788602x(sfo3),
+216595.972us,CI1.761773-1.815431,prepare57.13s. This is not a hybrid score.
+Prepare diagnostics cover all5full geometries,two seeds,9cold-L2 graph pairs,
+duplicate A/A controls. Both hybrids lose everywhere:25%FMA16.33-20.58%longer;
+50%FMA21.66-27.19%longer. Control offsets<=0.2302%;allfinite andphaseerrors
+0.001009-0.001731. Allprofiles/logs read,receipt+fullJSON archived.
 Loose full-forward-zero board bound15.623%;idealized half-exp-work resource
 model+4.748%,not measured exposure or expected gain. Do not borrow decode
-kernel's40.5% SFU fraction. Canonical unchanged. Read allprofiles/logs,
-archive receipt/extract diagnostic JSON,then decide from weighted evidence.
-Prefill2/8checks,1/2submits;other budgets unchanged. See
+kernel's40.5% SFU fraction. Canonical unchanged;no eligible fixed combination.
+Adaptive v22 resource/two-WG probe2f9fe01a6f8f4702 now active on sfo3c,
+SHA9e7aee12321ad86c2b5a6615d4cab56c0569708e599d8c392553b7f901071ec4.
+Queries compiler registers/local bytes and compares2WGPIPE/RRS48native,
+49FMA25,50FMA50 withfeature-off48andduplicate43controls. Same5fullgeometries,
+2seeds,9reps;timed full-layer path staysparent43. Extract with--variants48 49 50.
+Updated extractor models from each job's own timed-parent profiles;never
+mix sfo3/sfo3c durations. Read/archive terminal result next.
+Prefill3/8checks,1/2submits;other budgets unchanged. See
 muse_prefill_layer/HYBRID_PIPELINE_2026-10-30.md for sources/method/gates.
 
 #### Oct30 17:50UTC internal-disk continuation
