@@ -100,6 +100,12 @@ target; another small boundary fusion cannot plausibly close the whole gap.
 
 ## Compiler diagnostic: inconclusive, not a performance result
 
+**Later follow-up:** [WGS_REGISTER_SPLIT_2026-10-31.md](WGS_REGISTER_SPLIT_2026-10-31.md)
+supersedes the unrun-arm/compile-timeout status below. It preserves the old
+failure, all additional compiler responses, explicit target correction,
+SASS truncation limits and the new independent H200 experiment. No gain is
+established by the earlier timeout or by compiler-only reductions.
+
 Inspected whether explicitly retaining four decoded KPERM scale pairs could
 avoid repeated calculations. Existing KPERM3 already intends compiler reuse;
 source-level repetition alone does not demonstrate redundant machine code.

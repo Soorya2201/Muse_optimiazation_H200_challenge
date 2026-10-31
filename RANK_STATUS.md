@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 06:47:22 UTC** from the live OKC boards. Overall **#121/1739**.
+Captured **2026-10-31 07:17:09 UTC** from the live OKC boards. Overall **#121/1740**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|220/1518|1.535843x|1.6523x|7.05%|
-|Routed experts|154/1223|2.372309x|2.7578x|13.98%|
-|Attention decode|169/1168|2.603505x|3.2221x|19.20%|
+|BF16 projections|220/1520|1.535843x|1.6523x|7.05%|
+|Routed experts|155/1224|2.372309x|2.7578x|13.98%|
+|Attention decode|169/1169|2.603505x|3.2221x|19.20%|
 |Whole decoder|121/1090|2.211495x|2.4178x|8.53%|
-|Prefill|162/731|1.784958x|2.0325x|12.18%|
+|Prefill|163/732|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -64,3 +64,9 @@ PIPE3 loses;ten public Lt choices across80fully captured groups fail gates.
 One earlier Lt diagnostic was truncated and remains explicitly inconclusive.
 Canonical sources/scores unchanged;no new scored submit. Detailed dated
 reports and all32profiles are archived.
+
+Oct31 decoder V20/check98ca0484be124a39 passed13tests/12timings while
+its independent register/GS4 comparisons found no eligible gain. All16
+groups and8changed policies fail gates;GS4 full build has32localbytes.
+Canonical scores/ranks unchanged. See
+muse_decode_layer/WGS_REGISTER_SPLIT_2026-10-31.md.

@@ -67,6 +67,47 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 decoder register/GS4 cycle complete; no eligible gain
+
+Read `muse_decode_layer/WGS_REGISTER_SPLIT_2026-10-31.md`. Standalone CE
+probes now use the judge's explicit compute90a->sm90a target; the original
+shorthand also generated invalid generic sm90 WGMMA. Eleven additional
+requests/responses archived; one observed HTTP502 has no response archive
+and remains compiler-statusUNKNOWN. Full-body requests hit CE JSON size
+errors. Reduced fixed-NTT diagnostics compile, but SASS is clipped at5000
+lines: equal4767 displayed instructions is not whole-kernel equality.
+NTT8 explicit scale retention changes PTX counts but no displayed scale-site
+count (16both),96regs/zero spills both. No blind scale-hoist GPU check.
+
+New decoder V20, `98ca0484be124a39` (sfo3), tests the combined full-producer
+warpgroup32/112 redistribution plusGS4 scheduling. Redistribution alone
+was an older MoEv21 negative; this adds GS4 with matched eight-k16 flush
+progress and retains x-producer range overlap. GS2 is a negative control.
+Full general native builds,640threads. Check passed13tests/12timings:
+2.195103x,10304.892us,CI2.162176–2.228030,prepare187.956s. Timed dispatch
+is exact incumbent;no source gain. Complete independent84.367s probe:
+3nearby40/96/192 fixtures plus16timing groups,2seeds/4retainedpads/9cold
+rounds,allrawdata in3592char report. Timing+fresh agreement0;nearby max
+2.438e-8 including AAvariation. AAoffset<=.4094%. SplitGS2 ratios at128
+.997318–.999690,256 .996112–1.004021;GS4at128 .990645–.998470,256
+.994567–1.003779. FullGS4 has32localbytes despite zero-spill reducedNTT8;
+GS2zero,static96regs both. All8changedpolicies rejected. Best optimistic
+board model+0.039%,not3%. All12profiles/fullavailablelogs/rawgroups read.
+Close this register/group combination;no blind parameter sweep.
+
+Canonical/scored kernels unchanged,no rank1. Oct31 budget:decoder1/8checks,
+prefill4/8checks,allothertracks0;zero submits throughout. No GPU job running.
+Live snapshot `research/leaderboards/snapshot_20261031071709.json`:
+overall121/1740;decoder121/1090,MoE155/1224,attention169/1169,
+BF16220/1520,prefill163/732. Private GitHub verified. Externalvolumeabsent;
+internal `/Users/soorya/muse_work/continuation_20261030` authoritative.
+
+Sequential next track is MoE. The same register/group negative is relevant
+there;do not duplicate this experiment merely to spend its budget. Next GPU
+candidate needs a distinct mechanism,practicalphasebound and same-input
+controls. Existing ring-depth,tails,fence,8-op decode,bs16,double-read and
+glue negatives remain closed. The goal remains open;do not mark complete.
+
 #### Oct31 prefill cycle complete; no eligible gain
 
 The previous goal turn made research progress on decoder discovery and phase

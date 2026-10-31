@@ -15,6 +15,11 @@ to private/unpublished winners. Latest detailed reviews:
 - [Decoder](muse_decode_layer/GLOBAL_SOURCE_FOLLOWUP_2026-10-31.md): six
   additional Rohan sources plus11files/five other repositories screened;
   no stronger replacement established. FP32 small-T router preserved.
+  [WGS compiler/register experiment](muse_decode_layer/WGS_REGISTER_SPLIT_2026-10-31.md)
+  corrects the standalone sm90a target and identifies CE's clipped SASS.
+  Explicit scale reuse establishes no new displayed scale-site reduction.
+  New full-producer-warpgroup register allocation and GS4 schedule are tested
+  independently; the dated report records runtime status and limits.
 - [Prefill](muse_prefill_layer/GLOBAL_SOURCE_FOLLOWUP_2026-10-31.md): seven
   Rohan sources plus four other prefill sources inspected. Gemini's active
   FP8 dense branches violate precision; constant-ratio external timings are

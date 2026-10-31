@@ -1,0 +1,111 @@
+{
+  "captured_utc": "2026-10-31T07:17:09.123694+00:00",
+  "method": "live OKC leaderboard JSON; compact own/leader snapshot",
+  "boards": {
+    "muse_bf16_proj": {
+      "you": {
+        "rank": 220,
+        "team": "Soorya2201",
+        "speedup": 1.5358,
+        "first": false,
+        "ahead": 219,
+        "to_first": 1.0759
+      },
+      "ranked": 1520,
+      "leader": {
+        "rank": 1,
+        "team": "arashattar",
+        "speedup": 1.6523,
+        "first": true,
+        "ahead": 0
+      }
+    },
+    "muse_moe_w4a16": {
+      "you": {
+        "rank": 155,
+        "team": "Soorya2201",
+        "speedup": 2.3723,
+        "first": false,
+        "ahead": 154,
+        "to_first": 1.1625
+      },
+      "ranked": 1224,
+      "leader": {
+        "rank": 1,
+        "team": "dolanzhao",
+        "speedup": 2.7578,
+        "first": true,
+        "ahead": 0
+      }
+    },
+    "muse_attention_decode": {
+      "you": {
+        "rank": 169,
+        "team": "Soorya2201",
+        "speedup": 2.6035,
+        "first": false,
+        "ahead": 168,
+        "to_first": 1.2376
+      },
+      "ranked": 1169,
+      "leader": {
+        "rank": 1,
+        "team": "tjiang-fair",
+        "speedup": 3.2221,
+        "first": true,
+        "ahead": 0
+      }
+    },
+    "muse_decode_layer": {
+      "you": {
+        "rank": 121,
+        "team": "Soorya2201",
+        "speedup": 2.2115,
+        "first": false,
+        "ahead": 120,
+        "to_first": 1.0933
+      },
+      "ranked": 1090,
+      "leader": {
+        "rank": 1,
+        "team": "mpeng19",
+        "speedup": 2.4178,
+        "first": true,
+        "ahead": 0
+      }
+    },
+    "muse_prefill_layer": {
+      "you": {
+        "rank": 163,
+        "team": "Soorya2201",
+        "speedup": 1.785,
+        "first": false,
+        "ahead": 162,
+        "to_first": 1.1387
+      },
+      "ranked": 732,
+      "leader": {
+        "rank": 1,
+        "team": "zzz0906",
+        "speedup": 2.0325,
+        "first": true,
+        "ahead": 0
+      }
+    },
+    "overall": {
+      "you": {
+        "rank": 121,
+        "team": "Soorya2201",
+        "first": false,
+        "ahead": 120
+      },
+      "ranked": 1740,
+      "leader": {
+        "rank": 1,
+        "team": "mpeng19",
+        "first": true,
+        "ahead": 0
+      }
+    }
+  }
+}

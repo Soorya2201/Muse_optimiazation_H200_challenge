@@ -1,0 +1,213 @@
+{
+  "source_sha256": "8f17613bafb2369152f2739638bf8f6dfb193f6a79dbad3e6d25795cf1ebaf4a",
+  "receipt": "eff0b59dc26c4c74",
+  "cluster": "sfo3",
+  "scope": "Same-job optimistic phase-subtraction model restricted to three loads using main WGS. Dependency waits/overlap make this a planning estimate, not a measured gain or critical-path proof.",
+  "target_tokens": [
+    32,
+    128,
+    256
+  ],
+  "rows": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 7068074368847456457,
+        "weight": 46
+      },
+      "parent_us": 66.09049662412755,
+      "target_expert_duration_us": 0.0
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 7068080627622534098,
+        "weight": 16
+      },
+      "parent_us": 75.57211635738236,
+      "target_expert_duration_us": 0.0
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7068086886397611740,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "parent_us": 128.21676315274138,
+      "target_expert_duration_us": 0.0
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7068093145172689383,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "parent_us": 207.27111653446505,
+      "target_expert_duration_us": 0.0
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7068099403947767027,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "parent_us": 148.45364026886296,
+      "target_expert_duration_us": 83.6
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7068105662722844672,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "parent_us": 298.5607587057179,
+      "target_expert_duration_us": 81.0
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068111921497922318,
+        "weight": 46
+      },
+      "parent_us": 105.57444641537502,
+      "target_expert_duration_us": 0.0
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068118180272999965,
+        "weight": 16
+      },
+      "parent_us": 112.67085297324537,
+      "target_expert_duration_us": 0.0
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068124439048077613,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "parent_us": 241.98570417158393,
+      "target_expert_duration_us": 146.6
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068130697823155262,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "parent_us": 336.1883774970836,
+      "target_expert_duration_us": 145.9
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068136956598232912,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "parent_us": 307.531426585654,
+      "target_expert_duration_us": 206.4
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068143215373310563,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "parent_us": 471.6682327619814,
+      "target_expert_duration_us": 196.1
+    }
+  ],
+  "phase_cut_board_multiplier": {
+    "0.05": 1.013392925480295,
+    "0.1": 1.027343973692801,
+    "0.2": 1.0570856066421188,
+    "1.0": 1.456536755996745
+  },
+  "scale_reuse_hypothesis": {
+    "distinct_scale_pairs_per_stage": 4,
+    "unrolled_k16_steps_per_stage": 16,
+    "potential_scale_operations_before_CSE": 32,
+    "potential_scale_operations_after_CSE": 8,
+    "maximum_source_scale_ops_removed_if_not_already_reused": 24,
+    "limitation": "Source-level count of PRMT+IMAD pairs only. Compiler may already reuse them; unequal instruction throughput, register pressure and scheduling prevent treating count ratios as a runtime bound. No eligible gain established."
+  },
+  "canonical_changed": false,
+  "gpu_checks_used_this_review": 0
+}
