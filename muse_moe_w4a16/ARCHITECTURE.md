@@ -22,6 +22,12 @@ allocation. The latter releases producer registers and requests 112 consumer reg
 but it remains at one CTA per SM and did not improve the aggregate score. Adding another
 shared-memory ring is not a free tuning parameter at this capacity.
 
+Oct31 profiling caveat: these zero-local statements concern the production
+and original register-control builds. V29's detailed diagnostic has 8 local
+bytes in the complete H200 kernel despite a zero-spill reduced NTT8 compile.
+See `UNIT_FLUSH_FOLLOWUP_2026-10-31.md` for resources, perturbation gates and
+the simpler V30 repair. Do not infer full dispatch resources from one NTT.
+
 Minimal NVCC 13.0 device SASS shows that the old nine-op dequantizer's two literal shifts
 already use IMAD.SHL. The eight-op port removes one IMAD while retaining the same five
 LOP3 and two SHF operations. Identical-input measurements show at most small benefits on

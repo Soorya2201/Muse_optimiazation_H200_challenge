@@ -43,6 +43,13 @@ to private/unpublished winners. Latest detailed reviews:
   established. b12x/DistMoE components and Stream-K hybrid scheduling added
   to the library. Two H200 checks repair/validate a zero-local phase trace;
   split counts and integer partition models now constrain scheduling ideas.
+- [Sampled unit/flush follow-up](muse_moe_w4a16/UNIT_FLUSH_FOLLOWUP_2026-10-31.md):
+  complete V29 diagnostic exposes a reduced/full-build resource mismatch;
+  rejects perturbed timing attribution. V30 simplifies sampling and uses
+  adjacent CTA pairs with explicit controls. CE's API/NVCC adapter and
+  NVIDIA's compiler/shared-spilling documentation are linked; the latter
+  technique is incompatible as a drop-in change to this dynamic-SMEM,
+  register-redistributing kernel. No public performance claim is our gain.
 
 These additions supersede older "unreviewed" labels below within the
 documented scope, without changing the historical capture-time ranks.

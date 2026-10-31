@@ -67,6 +67,34 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 sampled-unit/flush cycle in progress
+
+Authoritative workspace remains the original external project path. No
+subagents. Read `muse_moe_w4a16/UNIT_FLUSH_FOLLOWUP_2026-10-31.md` next.
+V29/e038ff14796944dc passes5tests/6timings on sfo3,2.374572x,prepare229.001s,
+but detailed trace attribution FAILS:8localbytes despite reducedNTT8zero,
+11–16% timing inflation,oneREG112controlgroup misses2%canonicalgate.
+All24groups/92unitrecords,twofulltraces,sixprofiles/fullavailablelogs read
+and archived. No optimizationgain or scoredsubmit. Quarter-position sampling
+missesM32phaseAreadbacks;M256hasthree. Do not useperturbedclocks asparent.
+
+V30/b22622ebb61946df is RUNNING;pollsamejob. ImmutableSHA
+957edc0e485fc5878431a057eb081e6799485a6c5362035883d7d3b8713f91d0.
+Onlyflushstart/end,samplesWG0atCTAs0/1/66/67;kind/stagecountinferredfrom
+metadata,phaseApartialreadbackUNKNOWN. REG112four-arm controls24groups,
+twofulltracesplanned. ReducedNTT8trace/controlzeroframe/spills;fullCEthree
+requestsRangeError,eventriedskipAsm/hostasm. FullnativeH200resources/gates
+pending. Original96budget variantsNOTsentGPU. CPUtelemetry8340chars,
+exact24rows/2x96frames/u64clocks. Ifthisconfigurationstillspillsorfails
+perturbation,closeit;do notrelaxgates orburnchecksrepeatingit.
+
+Oct31budgetsnowMoE4/8checks,decoder1/8,prefill4/8,othertracks0;allsubmits0.
+Allfivecanonicalhashesunchanged,no rank1. Snapshot08:28:05UTC
+`research/leaderboards/snapshot_20261031082805.json`:overall123/1742,
+decoder123/1092,MoE158/1227,attention172/1171,BF16224/1521,prefill165/732.
+PrivateGitHubreverified. Preserveuntrackedresearch/public/madhavan_721c627;
+do notstage/publish. Internalcontinuationbackupneedsff-syncafterthiscycle.
+
 #### Oct31 MoE current-base trace and broader-source cycle
 
 Previous decoder turn made progress:complete register/GS4 negative controls.

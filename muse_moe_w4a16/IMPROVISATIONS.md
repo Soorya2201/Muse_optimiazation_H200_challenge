@@ -1,6 +1,13 @@
 # `muse_moe_w4a16` optimization record
 
 This file records measured results, including regressions. Estimates are explicitly marked.
+Oct31 sampled-unit/flush follow-up is in
+[UNIT_FLUSH_FOLLOWUP_2026-10-31.md](UNIT_FLUSH_FOLLOWUP_2026-10-31.md).
+V29 passes the challenge but fails timing-attribution gates; its clocks are
+perturbed. V30 is the separately controlled repair, with schedule-derived
+labels explicitly distinguished from observed timestamps. No production
+optimization is promoted by either diagnostic's whole-run point score.
+
 The current verified local submission is `submission.py` = `submission_v24_alygg77_6cae49a.py`.
 Oct30 scored job `ce241acf7ab84c04` passes all5tests/6timings at **2.372309x**,
 5668.949us,CI[2.336725,2.407894],prepare164.59s,sfo3. Live MoE#79/1150,

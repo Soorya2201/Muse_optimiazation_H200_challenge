@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 07:56:48 UTC** from the live OKC boards. Overall **#122/1740**.
+Captured **2026-10-31 08:28:05 UTC** from the live OKC boards. Overall **#123/1742**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|222/1520|1.535843x|1.6523x|7.05%|
-|Routed experts|157/1225|2.372309x|2.7578x|13.98%|
-|Attention decode|172/1169|2.603505x|3.2221x|19.20%|
-|Whole decoder|122/1090|2.211495x|2.4178x|8.53%|
-|Prefill|163/732|1.784958x|2.0325x|12.18%|
+|BF16 projections|224/1521|1.535843x|1.6523x|7.05%|
+|Routed experts|158/1227|2.372309x|2.7578x|13.98%|
+|Attention decode|172/1171|2.603505x|3.2221x|19.20%|
+|Whole decoder|123/1092|2.211495x|2.4178x|8.53%|
+|Prefill|165/732|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -77,3 +77,9 @@ localallocation andnear-parenttiming across24groups. Exactroute/cutdata
 andtwoindividualCTAclockcaptures narrow scheduling hypotheses;no new
 candidate score or rankgain. See
 muse_moe_w4a16/PHASE_AND_LIBRARY_FOLLOWUP_2026-10-31.md.
+
+Oct31 sampled-unit diagnostic e038ff14796944dc passes5tests/6timings but
+fails timing attribution (8localbytes and11–16%traceinflation). Its2.374572x
+point is the unchanged timed parent. The simpler flush diagnostic
+b22622ebb61946df is running with independent controls; no scoredchange.
+See muse_moe_w4a16/UNIT_FLUSH_FOLLOWUP_2026-10-31.md.

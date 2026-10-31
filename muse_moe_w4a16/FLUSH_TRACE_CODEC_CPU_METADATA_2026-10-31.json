@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "scope": "CPU synthetic frames and existing V29 timing-row roundtrip, no new GPU data",
+  "rows": 24,
+  "traces": 2,
+  "frames_per_trace": 96,
+  "payload_chars": 8452,
+  "payload_plus_1600_tail_chars": 10052,
+  "exact_rows": true,
+  "exact_uint64_clocks": true,
+  "zero_width_u32_boundaries": true,
+  "source_sha256": "e8fa983ba7f19db491b53d926f531a96c45f6bd318adcbe8c9dc0190db97dc18"
+}

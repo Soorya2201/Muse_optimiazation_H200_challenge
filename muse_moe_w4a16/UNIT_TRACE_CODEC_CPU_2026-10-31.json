@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "scope": "CPU stress data, no GPU timing",
+  "rows": 24,
+  "traces": 2,
+  "frames_per_trace": 96,
+  "payload_chars": 11820,
+  "payload_plus_1200_tail_chars": 13020,
+  "exact_rows": true,
+  "exact_clock_and_metadata_matrices": true,
+  "zero_width_and_u32_boundary_cases": true,
+  "source_sha256": "173176c5b14b36a694e8c73f6009561c711b105729eb86eb066fc5872a81394e"
+}
