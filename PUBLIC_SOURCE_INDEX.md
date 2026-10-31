@@ -6,6 +6,19 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Oct31 latest BF16 follow-up:
+[new lossless source review](muse_bf16_proj/LOSSLESS_SOURCE_REVIEW_LATE_2026-10-31.md),
+[inline-compression protocol](muse_bf16_proj/ILC_RESEARCH_2026-10-31.md).
+Indexed244paths/13repos/0newblobs; four knownpublicHEADsunchanged, current
+leader arashattar publicownerquery0repos. New Apache2NWC648b35f8files/
+179515bytes and ZipServ6f8a2099files/130752bytes, plusBSD3NVIDIA sample
+5443602sixfiles/18704bytes pinned with original licenses and verified Git
+blobs/SHA256. Static source review only; trained/GDDR/A16 projections are
+not H200 gains. The selected new mechanism is optional hardware inline
+compression, independently implemented with VMM properties/owner guards
+and fixed-VA controls. V48checkb7b14f03bf854aa4 pending sfo3c; no score
+claim or promotion before terminal evidence and required repeats.
+
 Oct31 attention integer-exp follow-up:
 [research and terminal H200 result](muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md).
 Fresh225indexedpaths/13repos,0newblobs. Previously pinned Fast Polynomial

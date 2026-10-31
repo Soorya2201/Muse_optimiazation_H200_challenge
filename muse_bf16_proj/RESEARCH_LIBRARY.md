@@ -1,5 +1,16 @@
 # BF16 projection optimization research library
 
+Oct31 latest: [Hopper inline-compression allocation experiment](ILC_RESEARCH_2026-10-31.md),
+checkb7b14f03bf854aa4 pending on sfo3c, routineBF165/8. No mathematical
+kernel or scored source changed. The new twin-allocation wrapper compares
+normal/compressible physical handles at one VA with the same graph; it must
+verify support/actual flags and exact bytes before timing eight large cells.
+CPU copy/state/order/lossless-wire preflight passes; native binding/support
+and performance remain unproven. The32group protocol retains both seeds,
+two layouts and all1024event values. A gain needs broader ownership/repeat
+and changed-dispatch checks before promotion. New source reviews/pins:
+[NWC, ZipServ and NVIDIA](LOSSLESS_SOURCE_REVIEW_LATE_2026-10-31.md).
+
 Oct31 late [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md)
 is now terminal. V43/check3aa502d1eb8f4854 passes9tests/30timings with the
 unchanged timed parent1.557816x. The actual new SK2 path passes5nearby and
