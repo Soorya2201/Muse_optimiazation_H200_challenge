@@ -1,22 +1,13 @@
 --- parent.cu
 +++ ss_r184.cu
-@@ -429,9 +429,10 @@
- }
- 
- // ---- persistent variant: grid = #SMs, items (tile, ntile) round-robin, fixed slot ring + separate staging ----
+@@ -432 +432 @@
 -constexpr int SLOT = 43008;     // bytes per ring slot (1024-aligned): fits kps k-stages of any tile size
 +constexpr int SLOT = 49152;     // bytes per ring slot (1024-aligned): fits kps k-stages of any tile size
- constexpr int NSLOT = 4;
+@@ -434 +434,2 @@
 -constexpr int STG_BYTES = 45056; // epilogue staging
 +static_assert(1024 + NSLOT * SLOT + 34816 <= 232448, "SS shared memory exceeds H200 block budget");
 +constexpr int STG_BYTES = 34816; // epilogue staging
- 
- // k-blocks per ring stage by token-tile size (a stage must fit SLOT: N=32 allows 1/2/4, N=64 and 128 1/2, N=256 1)
- #define MOE_KPS32 4
-@@ -803,6 +804,190 @@
-   }
- }
- 
+@@ -805,0 +807,184 @@
 +
 +// Two otherwise idle producer warps expand one packed weight block in
 +// place. Every packed word/scale is in registers before the 64-thread
@@ -201,34 +192,15 @@
 +  }
 +}
 +
- template <bool GATED>
- __global__ void __launch_bounds__(384, 1) moe_gemm_persistent(Args p) {
-   extern __shared__ __align__(1024) uint8_t smem_raw[];
-@@ -1115,9 +1300,10 @@
-       mbar_init(bars + 8 * s, 1);
-       mbar_init(bars + 8 * NSLOT + 8 * s, 8 * REL_LANES);
-     }
+@@ -1117,0 +1303 @@
 +    for (int s = 0; s < NSLOT; ++s) mbar_init(bars + 128 + 8 * s, 64);
-     for (int k = 0; k < 2; ++k) {
-       mbar_init(ibar + 8 * k, 1);
+@@ -1120 +1306 @@
 -      mbar_init(ibar + 16 + 8 * k, MOE_ALLLANE_RELEASE ? 256 : 1);
 +      mbar_init(ibar + 16 + 8 * k, 320);
-     }
-     asm volatile("fence.mbarrier_init.release.cluster;" ::: "memory");
-   }
-@@ -1128,7 +1314,7 @@
-   int slot = 0;
-   uint32_t ph = 0;
-   if (MOE_CONS_FIRST ? threadIdx.x >= 256 : threadIdx.x < 128) {
+@@ -1131 +1317 @@
 -    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.dec.sync.aligned.u32 40;\n");
 +    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.dec.sync.aligned.u32 120;\n");
-     if (threadIdx.x == MOE_PB) {
-       int k = 0;
-       uint32_t iph = 0;
-@@ -1236,9 +1422,38 @@
-         __nanosleep(64);
-       }
-       asm volatile("cp.async.bulk.wait_group 0;" ::: "memory");
+@@ -1238,0 +1425,29 @@
 +    } else {
 +      static_assert(!MOE_CONS_FIRST && MOE_ALLLANE_RELEASE, "SS requires the original full producer WG and all-lane releases");
 +      const int dtid = threadIdx.x - 64;
@@ -258,33 +230,19 @@
 +          mbar_arrive(bars + 128 + 8 * s);
 +        }
 +      }
-     }
-   } else {
+@@ -1241 +1456 @@
 -    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.inc.sync.aligned.u32 232;\n");
 +    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.inc.sync.aligned.u32 184;\n");
-     int k = 0;
-     uint32_t iph = 0;
-     volatile long long* pq = pubq;
-@@ -1274,17 +1489,17 @@
-         case 128: consumer_item<128, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
-         case 160:
-           if constexpr (FINE != 0) {
+@@ -1277,2 +1492,2 @@
 -            if constexpr (MOE_FINE_NOINLINE) consumer_item_ni<160>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
 -            else consumer_item<160, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
 +            if constexpr (false) consumer_item_ni<160>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
 +            else consumer_item_ss<160, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
-           }
-           break;
-         case 192:
-           if constexpr (FINE != 0) {
+@@ -1283,2 +1498,2 @@
 -            if constexpr (MOE_FINE_NOINLINE) consumer_item_ni<192>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
 -            else consumer_item<192, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
 +            if constexpr (false) consumer_item_ni<192>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
 +            else consumer_item_ss<192, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
-           }
-           break;
+@@ -1287 +1502 @@
 -        default: consumer_item<256, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
 +        default: consumer_item_ss<256, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
-       }
-       if (fa.dbg && threadIdx.x == MOE_CB) {
-         unsigned long long t_end;

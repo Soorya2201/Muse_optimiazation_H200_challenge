@@ -74,7 +74,7 @@ Previous decoder cycle made progress and pusheda6f428d. This cycle stays
 onprefill, implementing producer-owned NVFP4 dequantization and shared/shared
 BF16WGMMA. Read muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md before
 any further run. Canonical v20 is unchanged. V28 isolated probe SHA
-b3db5f275b783dfca2c70d553e3535b3f6f6cd6693652b2547d663c138f76d4e
+82683481123affacafaecfb8fe70cd4c96ac898df5714353f6c7c0d1c7df9c2c
 retains exact canonical prefix/timedkernel_fn. MixedRS/SS variants are
 rejected compiler forms: C7512 and/or spills. Do not run those variants.
 Resolved allSS/KPS1 fullFINE0+FINE1 NVCC13sm90a builds168regs/8ABIstack/

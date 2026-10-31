@@ -88,7 +88,7 @@ def _ss_movement(new,st,weights):
             out=torch.empty((16384,),device=dev,dtype=torch.uint8)
             new.ss_move(packed[0,0,ks],out)
             c=_codes(weights[key][0,perm,ks*32:(ks+1)*32]).long()
-            scales=weights[key+'_sf'][0,perm,ks*4:(ks+1)*4].float().repeat_interleave(16,dim=1)
+            scales=weights[key+'_sf'][0].float()[perm,ks*4:(ks+1)*4].repeat_interleave(16,dim=1)
             expected=(lut[c]*scales/128).to(torch.bfloat16)
             actual=out.view(torch.bfloat16).reshape(128,64).gather(1,physical)
             assert torch.equal(actual.view(torch.int16),expected.view(torch.int16)),('raw SS mapping',key,ks)

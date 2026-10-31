@@ -127,17 +127,19 @@ for regs in (184,216):
     conversion=native[native.index('DEVI void convert8('):native.index('\n\nstruct Args')]
     assert conversion in changed
     path=TRACK/f'SS_NATIVE_R{regs}_2026-10-31.cu.gz'
-    with gzip.open(path,'wt') as f:f.write(changed)
-    diff=''.join(difflib.unified_diff(native.splitlines(True),changed.splitlines(True),fromfile='parent.cu',tofile=f'ss_r{regs}.cu'))
+    if not path.exists() or gzip.open(path,'rt').read()!=changed:
+        with gzip.open(path,'wt') as f:f.write(changed)
+    diff=''.join(difflib.unified_diff(native.splitlines(True),changed.splitlines(True),fromfile='parent.cu',tofile=f'ss_r{regs}.cu',n=0))
     (TRACK/f'SS_NATIVE_R{regs}_2026-10-31.diff').write_text(diff)
     pr=120 if regs==184 else 72
     artifacts.append(dict(consumer_regs=regs,producer_regs=pr,role_register_request=128*pr+256*regs,
                           native_sha256=hashlib.sha256(changed.encode()).hexdigest(),path=str(path.relative_to(ROOT))))
 changed=shared_weight_native(native,184,True)
 path=TRACK/'SS_NATIVE_ALL_R184_2026-10-31.cu.gz'
-with gzip.open(path,'wt') as f:f.write(changed)
+if not path.exists() or gzip.open(path,'rt').read()!=changed:
+    with gzip.open(path,'wt') as f:f.write(changed)
 (TRACK/'SS_NATIVE_ALL_R184_2026-10-31.diff').write_text(''.join(difflib.unified_diff(
-    native.splitlines(True),changed.splitlines(True),fromfile='parent.cu',tofile='ss_all_r184.cu')))
+    native.splitlines(True),changed.splitlines(True),fromfile='parent.cu',tofile='ss_all_r184.cu',n=0)))
 artifacts.append(dict(mode='all widths SS, KPS1',consumer_regs=184,producer_regs=120,
                       role_register_request=62464,native_sha256=hashlib.sha256(changed.encode()).hexdigest(),
                       path=str(path.relative_to(ROOT))))
