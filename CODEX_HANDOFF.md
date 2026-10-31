@@ -68,6 +68,41 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 prefill SS pipeline implementation; H200 diagnostic next
+
+Previous decoder cycle made progress and pusheda6f428d. This cycle stays
+onprefill, implementing producer-owned NVFP4 dequantization and shared/shared
+BF16WGMMA. Read muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md before
+any further run. Canonical v20 is unchanged. V28 isolated probe SHA
+b3db5f275b783dfca2c70d553e3535b3f6f6cd6693652b2547d663c138f76d4e
+retains exact canonical prefix/timedkernel_fn. MixedRS/SS variants are
+rejected compiler forms: C7512 and/or spills. Do not run those variants.
+Resolved allSS/KPS1 fullFINE0+FINE1 NVCC13sm90a builds168regs/8ABIstack/
+zero spills/noC751x. FINE0SASScomplete4469rows; FINE1SASS5000clipped.
+Use the allSS184consumer/120producer form only for the proposed probe.
+
+Two previously idle producer warps hold all packed words/scales before a
+64threadbarrier, then overwrite same-region storage with exact parent
+BF16fragments. Four49152byte slots+34816epilogue+1024metadata=232448bytes,
+same dynamicrequest. Metadata queue readers320; extra decoded-ready bars.
+No globalpass/repack/precisionchange. FullCPUmodel64Kblocks,262144register
+pairs,524288destinations,all4096code/scalebyte pairs,1000phase sequences.
+This is representation/phase proof,not numericGPU/racecheck. Native sources,
+diffs,compilerresponsesand conditional phase model are archived. All-load
+expert7.5568%cut or firstturn-only22.7142%cut models3%board;not prediction.
+
+V28 probe predeclares 8raw movement tests,full linked resources,5nearby,
+24timinggroups/768timestamps,2seeds4pads,256MiBreadflush and balanced order.
+Old/new shareweightpointers; no formatcopies. Numericgates.002/.01,
+component>2%everygroup,A/A<2%,matched<3%,all7routepolicies require worst
+wholeboardproxy>=1.03. Realdispatch+independentrepeat required before scoring.
+GPUdiagnosticnotlaunched at this paragraph's writing; see subsequent
+RESULTS.md/receipts for authoritative live/terminal status before proceeding.
+Budgets verifiedjustnow:MoE8/8,attention1/8,BF164/8,decoder1/8,prefill5/8;
+allsubmits0,reserveintact. Fresh118path/13repocodeindex0new. Noagents.
+Preserve research/public/madhavan_721c627/ untouched/untracked.
+
+
 #### Oct31 decoder rounded-width/compiler cycle complete; next track prefill
 
 Previous goal turn only refreshed ranks (no optimization progress), pushed
