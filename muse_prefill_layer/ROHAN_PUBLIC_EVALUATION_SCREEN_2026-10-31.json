@@ -1,0 +1,327 @@
+{
+  "warning": "External unverified claims, not own judge results; ratio arithmetic recomputed from weighted loads. Whole modules never imported/executed.",
+  "candidates": [
+    {
+      "model": "claude-haiku-5-5",
+      "source_sha256": "48f41199e686eaf2664943efa36b82b543c27ee45984ce435e737aac6e13b356",
+      "source_bytes": 12893,
+      "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_prefill_layer/submission.py",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 0.05314235496689104,
+          "baseline_us": [
+            1076.9813060760498,
+            1450.8907000223796,
+            3393.8239415486655,
+            4814.271926879883,
+            18566.09598795573,
+            18763.12510172526,
+            22652.570088704426,
+            26371.33280436198
+          ],
+          "ratio_range": [
+            0.022486701725124934,
+            0.19391900125036102
+          ]
+        },
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 0.041918388627445326,
+          "baseline_us": [
+            878.6346912384033,
+            1310.9599749247234,
+            2508.117357889811,
+            4215.269406636556,
+            14476.634979248047,
+            12953.146616617838,
+            19500.208536783855,
+            21786.298116048176
+          ],
+          "ratio_range": [
+            0.0202894433307894,
+            0.13682426460830596
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "source_sha256": "aba395f1d2939f56556c9def73fc09bd54792fc374f5d061d978b651fb3bf667",
+      "source_bytes": 18724,
+      "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_prefill_layer/submission.py",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.007498216624762,
+          "baseline_us": [
+            718.5013294219971,
+            1113.0506992340088,
+            1846.9546635945637,
+            3465.1788075764975,
+            8373.818715413412,
+            8683.055877685547,
+            12696.192423502604,
+            16804.799397786457
+          ],
+          "ratio_range": [
+            0.9988062941936294,
+            1.0247308632218906
+          ]
+        },
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.0032524946168793,
+          "baseline_us": [
+            931.3546816507975,
+            1294.2132949829102,
+            3122.2826639811196,
+            4332.528114318848,
+            18802.757263183594,
+            19151.599884033203,
+            19394.906361897785,
+            23069.15791829427
+          ],
+          "ratio_range": [
+            0.9707148782172829,
+            1.0271362449357084
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "source_sha256": "4989732e775b756a7799e9d5fff7537ab2de28218d6f8435d07d4149956d2baa",
+      "source_bytes": 19027,
+      "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_prefill_layer/submission.py",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 0.9965808281869727,
+          "baseline_us": [
+            837.3599847157797,
+            1296.9013055165608,
+            2439.8719469706216,
+            4069.4828033447266,
+            14947.311401367188,
+            13652.554829915365,
+            17694.88016764323,
+            21068.60860188802
+          ],
+          "ratio_range": [
+            0.9755512677462904,
+            1.0082707195074665
+          ]
+        },
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.0056920018075233,
+          "baseline_us": [
+            1102.021296819051,
+            1406.8694114685059,
+            3355.0987243652344,
+            4800.554593404134,
+            17131.802876790363,
+            17799.072265625,
+            21348.960876464844,
+            23474.314371744793
+          ],
+          "ratio_range": [
+            0.9782473114595693,
+            1.0277506146992235
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-6-astra",
+      "source_sha256": "e28e0daf5cceabad6e88c796d942440d6a1f17383573df34e49bdd043df84d74",
+      "source_bytes": 21418,
+      "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gpt-6-astra/kernel-muse_prefill_layer/submission.py",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.000663301437964,
+          "baseline_us": [
+            946.8053181966146,
+            1450.9387016296387,
+            2949.7226079305015,
+            4706.480026245117,
+            16102.063496907553,
+            14416.453043619791,
+            19582.53351847331,
+            23628.85284423828
+          ],
+          "ratio_range": [
+            0.9559694063893159,
+            1.0156273091772443
+          ]
+        },
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.0002870864860687,
+          "baseline_us": [
+            1107.8186829884846,
+            1453.8505872090657,
+            3825.8771896362305,
+            5316.501299540202,
+            21657.89794921875,
+            20091.64810180664,
+            23264.048258463543,
+            27932.25606282552
+          ],
+          "ratio_range": [
+            0.9726782621924686,
+            1.0191474351485752
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "source_sha256": "61ba8519af8fc82c85d77dcad704938f087b47a2d26a668eba1468e1f6e1e4e2",
+      "source_bytes": 19073,
+      "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_prefill_layer/submission.py",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.0044612816308147,
+          "baseline_us": [
+            701.8133004506429,
+            1068.4479872385662,
+            2013.759930928548,
+            3772.063891092936,
+            10968.607584635416,
+            9423.306783040365,
+            14849.872589111328,
+            19820.410410563152
+          ],
+          "ratio_range": [
+            0.9967189171825855,
+            1.0092321834758755
+          ]
+        },
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.0060101140865327,
+          "baseline_us": [
+            759.9093119303385,
+            1176.810661951701,
+            2275.610605875651,
+            3696.4588165283203,
+            8523.002624511719,
+            9803.263982137045,
+            14502.218882242838,
+            16761.258443196613
+          ],
+          "ratio_range": [
+            0.9925388870494175,
+            1.0143133416786674
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-opus-5-5",
+      "source_sha256": "de1e284f78ea3bd237243191711322efd9bdd942db655a56e010e5c7c27176ee",
+      "source_bytes": 24124,
+      "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/claude-opus-5-5/kernel-muse_prefill_layer/submission.py",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.0083512981204286,
+          "baseline_us": [
+            760.474681854248,
+            1176.4372984568279,
+            2138.703982035319,
+            3816.2399927775064,
+            11720.92310587565,
+            10546.709060668945,
+            15637.413024902344,
+            18283.023834228516
+          ],
+          "ratio_range": [
+            0.9811840745490824,
+            1.0728819195531978
+          ]
+        },
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.026653924466681,
+          "baseline_us": [
+            760.7839902242025,
+            1176.527976989746,
+            2246.239980061849,
+            4079.3708165486655,
+            12514.432271321615,
+            11403.610229492188,
+            16279.460906982422,
+            19510.645548502605
+          ],
+          "ratio_range": [
+            0.9992163748894927,
+            1.1077322281392068
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gemini-3.8-flash-opencode",
+      "source_sha256": "c251bd840e53551f7ccb40c23a419252e1a6355c3d1cbbfd809d6cf3a42fd1eb",
+      "source_bytes": 349899,
+      "source_url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_prefill_layer/submission.py",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.9562,
+          "baseline_us": [
+            100.0,
+            115.0,
+            130.0,
+            145.0,
+            160.0,
+            175.0,
+            190.0,
+            205.0
+          ],
+          "ratio_range": [
+            1.9561999999999997,
+            1.9562000000000002
+          ]
+        },
+        {
+          "status": "pass",
+          "cases": 8,
+          "geomean_load_speedup": 1.9562,
+          "baseline_us": [
+            100.0,
+            115.0,
+            130.0,
+            145.0,
+            160.0,
+            175.0,
+            190.0,
+            205.0
+          ],
+          "ratio_range": [
+            1.9561999999999997,
+            1.9562000000000002
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "repo": "novitalabs/chord",
+  "commit": "6199d44a863a165139d2fd8387b307bbe21f1ca9",
+  "url": "https://github.com/novitalabs/chord/tree/6199d44a863a165139d2fd8387b307bbe21f1ca9",
+  "scope": "Research-only pinned docs and five component files; not imported, installed or executed. Root Apache2 and vendored DeepGEMM MIT license retained. No claim of NVFP4 support or performance against our parent.",
+  "files": [
+    {
+      "archive_name": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/LICENSE"
+    },
+    {
+      "archive_name": "docs_design.md",
+      "sha256": "af5fe44d05d2633891cf2d35672ef323f5d44143e1bb9b17e56366fe84f8e338",
+      "bytes": 6178,
+      "source_path": "docs/design.md",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/docs/design.md"
+    },
+    {
+      "archive_name": "docs_performance.md",
+      "sha256": "67c05acaa5733a70cb339f1bf162d78c33b37c8aff2c8db42458e43b03894b40",
+      "bytes": 8588,
+      "source_path": "docs/performance.md",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/docs/performance.md"
+    },
+    {
+      "archive_name": "docs_getting_started.md",
+      "sha256": "5209471e7c23828ff13b533630e85fd4ce52ce9ec5a28123a1c611e2d3f7d9fa",
+      "bytes": 3598,
+      "source_path": "docs/getting_started.md",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/docs/getting_started.md"
+    },
+    {
+      "archive_name": "chord_kernels_operator_include_humming_datatype_dequant.cuh",
+      "sha256": "199623061159366fdbf64199a55fef6783eb29311a6feab4d414aa2a081c94d4",
+      "bytes": 1550,
+      "source_path": "chord_kernels/operator/include/humming/datatype/dequant.cuh",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/chord_kernels/operator/include/humming/datatype/dequant.cuh"
+    },
+    {
+      "archive_name": "chord_kernels_operator_include_humming_arith_mainloop_arith.cuh",
+      "sha256": "18fda381bffa848a26390ea22e670dafb1585a0566ae793194acdf23d5e023ee",
+      "bytes": 3931,
+      "source_path": "chord_kernels/operator/include/humming/arith/mainloop_arith.cuh",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/chord_kernels/operator/include/humming/arith/mainloop_arith.cuh"
+    },
+    {
+      "archive_name": "chord_kernels_operator_include_deep_gemm_impls_sm90_w4a16_gemm.cuh",
+      "sha256": "a2a28fb6651292d255ca2e7d877c763b26d5faa66e1fab394a47192368b115cd",
+      "bytes": 48474,
+      "source_path": "chord_kernels/operator/include/deep_gemm/impls/sm90_w4a16_gemm.cuh",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/chord_kernels/operator/include/deep_gemm/impls/sm90_w4a16_gemm.cuh"
+    },
+    {
+      "archive_name": "chord_kernels_operator_include_humming_memory_s2r_loader_loader_b.cuh",
+      "sha256": "828eba667c94c138415340ea9b65181f56e49e6985043e193d29cd41dd8f2e1c",
+      "bytes": 2151,
+      "source_path": "chord_kernels/operator/include/humming/memory/s2r_loader/loader_b.cuh",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/chord_kernels/operator/include/humming/memory/s2r_loader/loader_b.cuh"
+    },
+    {
+      "archive_name": "chord_kernels_operator_include_humming_memory_s2r_loader_loader_bs.cuh",
+      "sha256": "a402afa7ca3c1a87135d3ce5a7aa9b7de38e93f3986ed5ac76d1e9476c76b52e",
+      "bytes": 2326,
+      "source_path": "chord_kernels/operator/include/humming/memory/s2r_loader/loader_bs.cuh",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/chord_kernels/operator/include/humming/memory/s2r_loader/loader_bs.cuh"
+    },
+    {
+      "archive_name": "chord_kernels_operator_include_deep_gemm_LICENSE",
+      "sha256": "6c73a30c14a2938abaa6afe98ebb19e6d81dac5bd4ace0cb05c61c20afa37b85",
+      "bytes": 1065,
+      "source_path": "chord_kernels/operator/include/deep_gemm/LICENSE",
+      "source_url": "https://github.com/novitalabs/chord/blob/6199d44a863a165139d2fd8387b307bbe21f1ca9/chord_kernels/operator/include/deep_gemm/LICENSE"
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "job": "4c855e373fee4973",
+  "board": "muse_prefill_layer",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 124.97,
+      "power.limit": 700,
+      "temperature.gpu": 36
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 128.24,
+      "power.limit": 700,
+      "temperature.gpu": 32
+    },
+    "node": "n-tyjmfajcegskfoydlmojkcfmco"
+  },
+  "created_at": 1793427649.928116,
+  "source": "muse_prefill_layer/submission_v23_dual_score_probe.py",
+  "source_sha256": "f0b6b986080441848dfec5e62e5fc777e719eec8aea4f757a9efd6869d0b6e17",
+  "profile_capture": "local CLI profile JSON",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 214376.4834804046,
+    "speedup": 1.8071193897319957,
+    "speedup_ci": [
+      1.7800125988860158,
+      1.8342261805779754
+    ],
+    "status": "ok",
+    "tests": 5,
+    "tests_passed": 5
+  },
+  "setup": [
+    {
+      "baseline_copies": 2,
+      "baseline_prepare_pad": 8922624,
+      "copies": 3,
+      "error": null,
+      "event": "setup",
+      "first": "baseline",
+      "prepare_pad": 2865152,
+      "prepare_s": 63.980202581,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740036150881976931,
+        "weight": 46
+      },
+      "median_ns": 563437.071627398,
+      "baseline_ns": 1071423.979010433,
+      "paired_ratio": 1.9015858788201419,
+      "speedup": 1.901585878820142,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740063526431610484,
+        "weight": 16
+      },
+      "median_ns": 896264.28450185,
+      "baseline_ns": 1462912.0044410229,
+      "paired_ratio": 1.632232846647593,
+      "speedup": 1.632232846647593,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740090901981244038,
+        "weight": 46
+      },
+      "median_ns": 1805929.160682502,
+      "baseline_ns": 3402704.0409855545,
+      "paired_ratio": 1.8841846707318213,
+      "speedup": 1.8841846707318213,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740118277530877593,
+        "weight": 16
+      },
+      "median_ns": 3121306.5384599897,
+      "baseline_ns": 4944864.086806774,
+      "paired_ratio": 1.5842289201260262,
+      "speedup": 1.5842289201260262,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740173028630144706,
+        "weight": 16
+      },
+      "median_ns": 9588762.34767726,
+      "baseline_ns": 17965919.62967068,
+      "paired_ratio": 1.8736432271702577,
+      "speedup": 1.8736432271702577,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740200404179778264,
+        "weight": 138
+      },
+      "median_ns": 8969161.161499431,
+      "baseline_ns": 17184128.57502699,
+      "paired_ratio": 1.9159125659142697,
+      "speedup": 1.91591256591427,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740227779729411823,
+        "weight": 16
+      },
+      "median_ns": 12567646.712489601,
+      "baseline_ns": 21265728.348866105,
+      "paired_ratio": 1.6921010619858081,
+      "speedup": 1.6921010619858081,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740282530828678944,
+        "weight": 16
+      },
+      "median_ns": 15401545.21858616,
+      "baseline_ns": 24565279.359463602,
+      "paired_ratio": 1.5949879710653254,
+      "speedup": 1.5949879710653254,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740036150881976931,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<0>(okc_moe::FusedArgs)        245.8 \u00b5s  43.8%      1\nnvjet_sm90_tst_128x192_64x5_2x1_v_bz_coopB_TNN                   152.9 \u00b5s  27.2%      3\nnvjet_sm90_tst_112x128_64x7_1x2_h_bz_TNN                          39.4 \u00b5s   7.0%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      20.7 \u00b5s   3.7%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, false, false,...      20.4 \u00b5s   3.6%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      18.8 \u00b5s   3.4%      1\nvoid okc_attn::attn_combine2_kernel<2>(float const*, int,...      17.6 \u00b5s   3.1%      1\nnvjet_sm90_tss_128x96_64x7_1x2_h_bz_splitK_TNT                    12.9 \u00b5s   2.3%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...       9.4 \u00b5s   1.7%      1\n_combine_kernel                                                    9.0 \u00b5s   1.6%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...       5.2 \u00b5s   0.9%      1\nvoid cublasLt::splitKreduce_kernel<32, 16, int, float, fl...       3.5 \u00b5s   0.6%      1\n... 2 more\ntotal                                                            561.7 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       548.0 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740063526431610484,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...     347.5 \u00b5s  26.4%      1\nvoid okc_attn::attn_combine2_kernel<2>(float const*, int,...     346.0 \u00b5s  26.3%      1\nvoid okc_moe::moe_fused_persistent<0>(okc_moe::FusedArgs)        268.6 \u00b5s  20.4%      1\nnvjet_sm90_tst_128x192_64x5_2x1_v_bz_coopB_TNN                   151.6 \u00b5s  11.5%      3\nnvjet_sm90_tss_128x96_64x7_1x2_h_bz_splitK_TNT                    77.8 \u00b5s   5.9%      1\nnvjet_sm90_tst_112x128_64x7_1x2_h_bz_TNN                          39.3 \u00b5s   3.0%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      20.4 \u00b5s   1.6%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      18.2 \u00b5s   1.4%      1\nokc_attn::attn_prep2_kernel(unsigned char const*, unsigne...      12.1 \u00b5s   0.9%      1\n_combine_kernel                                                    9.9 \u00b5s   0.8%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...       9.5 \u00b5s   0.7%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...       6.4 \u00b5s   0.5%      1\n... 2 more\ntotal                                                           1313.8 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                       901.5 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740090901981244038,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)        757.0 \u00b5s  42.0%      1\nnvjet_sm90_tst_256x152_64x4_1x2_h_bz_coopA_TNT                   318.3 \u00b5s  17.7%      2\nnvjet_sm90_tst_128x256_64x4_2x1_v_bz_coopA_TNN                   253.4 \u00b5s  14.1%      1\nnvjet_sm90_tst_192x144_64x5_1x2_h_bz_coopB_TNT                   150.2 \u00b5s   8.3%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      74.3 \u00b5s   4.1%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      73.9 \u00b5s   4.1%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, false, false,...      61.9 \u00b5s   3.4%      1\nnvjet_sm90_tss_128x104_64x7_4x2_h_bz_TNT                          37.9 \u00b5s   2.1%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...      27.7 \u00b5s   1.5%      1\n_combine_kernel                                                   26.5 \u00b5s   1.5%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...       8.1 \u00b5s   0.5%      1\nvoid okc_moe::qk_prep_kernel<true, false, long long, long...       6.5 \u00b5s   0.4%      1\n... 2 more\ntotal                                                           1803.0 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 4740118277530877593,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...    1357.3 \u00b5s  42.2%      1\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)        746.8 \u00b5s  23.2%      1\nnvjet_sm90_tst_256x152_64x4_1x2_h_bz_coopA_TNT                   319.6 \u00b5s   9.9%      2\nnvjet_sm90_tst_128x256_64x4_2x1_v_bz_coopA_TNN                   290.7 \u00b5s   9.0%      1\nnvjet_sm90_tst_192x144_64x5_1x2_h_bz_coopB_TNT                   148.8 \u00b5s   4.6%      1\nvoid okc_moe::boundary_kernel<512, false, false, 0>(__nv_...      75.7 \u00b5s   2.4%      1\nvoid okc_moe::boundary_kernel<512, true, false, 0>(__nv_b...      75.6 \u00b5s   2.3%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      56.7 \u00b5s   1.8%      1\nokc_attn::attn_prep2_kernel(unsigned char const*, unsigne...      45.3 \u00b5s   1.4%      1\nnvjet_sm90_tss_128x104_64x7_4x2_h_bz_TNT                          39.8 \u00b5s   1.2%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...      27.4 \u00b5s   0.9%      1\n_combine_kernel                                                   25.2 \u00b5s   0.8%      1\n... 2 more\ntotal                                                           3217.2 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                      3108.8 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740173028630144706,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3762.1 \u00b5s  38.7%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1662.9 \u00b5s  17.1%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1407.8 \u00b5s  14.5%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...     835.4 \u00b5s   8.6%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   765.0 \u00b5s   7.9%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     461.2 \u00b5s   4.7%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     281.6 \u00b5s   2.9%      1\nnvjet_sm90_tss_128x128_64x6_2x1_v_bz_TNT                         180.0 \u00b5s   1.9%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     137.9 \u00b5s   1.4%      1\n_combine_kernel                                                  133.2 \u00b5s   1.4%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      67.7 \u00b5s   0.7%      1\nvoid okc_moe::qk_prep_kernel<false, false, long long, lon...      22.4 \u00b5s   0.2%      1\n... 2 more\ntotal                                                           9728.0 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                      9618.8 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740200404179778264,
+        "weight": 138
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3710.0 \u00b5s  40.6%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1660.4 \u00b5s  18.2%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1407.2 \u00b5s  15.4%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   764.7 \u00b5s   8.4%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     462.2 \u00b5s   5.1%      1\nvoid okc_attn::attn_fwd_kernel<3, 0, false, false, false,...     299.9 \u00b5s   3.3%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     280.8 \u00b5s   3.1%      1\nnvjet_sm90_tss_128x128_64x6_2x1_v_bz_TNT                         181.4 \u00b5s   2.0%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     134.8 \u00b5s   1.5%      1\n_combine_kernel                                                  129.8 \u00b5s   1.4%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      66.8 \u00b5s   0.7%      1\nvoid okc_moe::qk_prep_kernel<true, false, long long, long...      24.1 \u00b5s   0.3%      1\n... 2 more\ntotal                                                           9133.6 \u00b5s\nGPU busy (kernels overlap: PDL or streams)                      9023.6 \u00b5s\nan overlapping kernel's time includes any wait for the one before it, so the rows add up to more"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740227779729411823,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...    3874.3 \u00b5s  31.2%      1\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3495.1 \u00b5s  28.1%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1658.4 \u00b5s  13.3%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1340.9 \u00b5s  10.8%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   765.5 \u00b5s   6.2%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     458.0 \u00b5s   3.7%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     278.4 \u00b5s   2.2%      1\nnvjet_sm90_tss_128x128_64x6_2x1_v_bz_TNT                         236.8 \u00b5s   1.9%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     131.5 \u00b5s   1.1%      1\n_combine_kernel                                                  126.6 \u00b5s   1.0%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      28.0 \u00b5s   0.2%      1\nvoid okc_moe::qk_prep_kernel<false, false, long long, lon...      21.8 \u00b5s   0.2%      1\n... 2 more\ntotal                                                          12432.9 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 4740282530828678944,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc_attn::attn_fwd_kernel<3, 0, false, true, false, ...    6730.3 \u00b5s  43.6%      1\nvoid okc_moe::moe_fused_persistent<1>(okc_moe::FusedArgs)       3619.1 \u00b5s  23.4%      1\nnvjet_sm90_tst_176x128_64x5_1x2_h_bz_TNN                        1667.4 \u00b5s  10.8%      2\nnvjet_sm90_tst_128x160_64x5_2x1_v_bz_TNT                        1341.1 \u00b5s   8.7%      1\nnvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN                   765.1 \u00b5s   5.0%      1\nvoid okc_moe::boundary_kernel<512, true, false, 2>(__nv_b...     461.5 \u00b5s   3.0%      1\nvoid okc_moe::boundary_kernel<512, false, false, 1>(__nv_...     279.9 \u00b5s   1.8%      1\nnvjet_sm90_tss_128x128_64x6_2x1_v_bz_TNT                         237.5 \u00b5s   1.5%      1\nvoid okc_moe::moe_gather_kernel<true>(__nv_bfloat16 const...     135.2 \u00b5s   0.9%      1\n_combine_kernel                                                  129.3 \u00b5s   0.8%      1\nokc_moe::moe_route_kernel(float const*, float const*, int...      28.2 \u00b5s   0.2%      1\nvoid okc_moe::qk_prep_kernel<false, false, long long, lon...      21.9 \u00b5s   0.1%      1\n... 2 more\ntotal                                                          15436.1 \u00b5s"
+    }
+  ],
+  "log_tail": "LT tune T=753 qkv: torch.mm 42.3us, best 42.3us algo None of 8\nLT tune T=753 o: torch.mm 24.8us, best 24.8us algo None of 8\nLT T=753 router: pinned (33, 4, 2, 3) -> algo 6\nLT tune T=753 pooler: torch.mm 69.1us, best 69.1us algo None of 8\nLT tune T=753 unpooler: torch.mm 70.2us, best 70.2us algo None of 8\nLT tune T=3012 qkv: torch.mm 148.3us, best 148.3us algo None of 8\nLT tune T=3012 o: torch.mm 75.2us, best 75.2us algo None of 8\nLT tune T=3012 router: torch.mm 40.4us, best 40.4us algo None of 8\nLT tune T=3012 pooler: torch.mm 256.4us, best 256.4us algo None of 8\nLT tune T=3012 unpooler: torch.mm 257.3us, best 257.3us algo None of 8\nLT tune T=16384 qkv: torch.mm 768.4us, best 768.4us algo None of 8\nLT T=16384 o: pinned (201, 1, 0, 2) -> algo 6\nLT tune T=16384 router: torch.mm 205.3us, best 194.4us algo 3 of 8\nLT T=16384 pooler: pinned (29, 1, 0, 1) -> algo 5\nLT T=16384 unpooler: pinned (201, 1, 0, 2) -> algo 6\nATTN own kernel validation (worst rel err): {0: 0.0151, 1: 0.0151, 8: 0.0151, 9: 0.0151, 16: 0.0151, 24: 0.0151, 43: 0.0151, 48: 0.0151, 49: 0.0151} -> [0, 1, 8, 9, 16, 24, 43, 48, 49]\n[pfctx] fresh-thread bind passed: initial_context=False, Lt=(753, 'router'), relerr=3.8119867440400412e-06\nATTN own kernel validation (worst rel err): {43: 0.0151, 48: 0.0151, 49: 0.0151} -> [43, 48, 49]\nPREFILL_DUAL_SCORE_Z eNrFnFuPHDl2hP9LPzcKPLxTjwv/AMPrt8Vi0Nb07AjWXCBp1l4P5r87Is7JykytalaqbcsvnWwmk5UX8vBjMDJ/fXj/4enDL+8fXj28/umHn98+f3h+eGTeX56R9d2bH9+8//75W2S9++m/UOhPvz68fnrPXR/sO+T+5d1Pv/z88CrhkGcUe1Us2ePDz0/ffvPDm//w/J/fvvmAI399qOXhVX58qPPhlaFQXdz+9vjw/O7dT++8BHalS7I6W0+p5FxnXSNF4U/tweG/6NCnhJMrI1+w87H0fjHjtl2scVsva/m2je75sXvWw7ZeRul/fnx4MtaG7EPZvcrUmD0uluKYPrU/1an9terfkuqff+MNwJ3hTfoV/zw98ToWTmatx4fv3j2///4bXb/v/vnp3fOPH755/f3Tj7z/dqlWR+u9tb5KajX/9rg/gHrPA7B4AHH/P3X7r3f7fHOtrHmZ1h+tpnopuF/IGbw32qY5jbvyZQ2VGRcv0i4rlcVUxuV0Jsolz+0u6+BSo2jNkSgq2C8rT1aGSpp+aF5qyV7ZSNUTaUWtOIc/+/X9KdtKl1xwl5WqvSIxcQEJ9wephd/EWeWcyqVbi5TOVOXYXJAYl2GRmEmVL1aO9oenPHFQWRfrg4cXtBOcNRLlUpP2VZ1szmgraTCRJy/I+GPj0lix35RzO4kH0csotW1Po+fW6oomZBdcRmrl4yb0qUf4iTbVWsu5oQdZs26HNvXdm3fvP6Sv2qxmwZ3AfZu4fzglbfFQte3m+fbR/hX/5+Llart2WmV3FuuXZrF7Tv1f4vBRfdvrPOz3xqf8ayuy3MulsAmiTpT3LRsgd/TpWz5bJaYKoGV6oujEt8TWeCzPdJkLTQ4puxR2ICZaZwfKM19yYsUo1VUxcoxd6lio6CJVCG3x082nWy1782nZFC6vEWiMO1vPLGgNeaSSFvrAx62nZITDr9qCyizGpmCPZeaFbpM9waCiRB3ah+7IB1PYFKYKlYkbmrRvXDCkmO/saazrIDDRZxnXuZ29mqdsZU/gOS4/fk6WQvNJONx/zmrdfti8GJ6b9a11sQfisDEf22x2GaMbU4hWvknc0RNPNjNlfiVIZY41kWKIQfHBCGlbI2vV8JAHGlmriGuFZ9lqRUNMBbVW3LE+U2aqKjgi0dB+cTNaxbms0ljMcFlZB+A2rlnt0y0NNde+PZ2R2srjEKhSReu9N1Ah9OIJIYTOND5uahgWS/+qTa0P9t1i87GPgQDAXowUnp0pj48DNxOJilGpTU+xofkBM9fMlAaGHJUglG+tTRno49qV2f+jkLH9oDLGmJQ9hdiCLdpiHsvLM0R4eTz56Xl7LEvV+0l7ZDIhyqJOJjPHssqkYQhsplxrHNimkhigzUYclgz4gyQaf7GoAW3N8tb2Vs2IYWh2jwtPHqEGh66KBspRcVV2MIzjj4uDObrKQl4efl2LtWLg7NjbGPcb96Kbov+MT7e9uqpdAXEgUM7jIIlRct3b9mpDSEgFI2Q/cdfngK99ZfAldY4AXWfWlOsBVhvjjkNsrTukine1RYzZuRfBUJkl4HirqyXfKsTyoPitHPxrfWPp2+CbSv888G0FdYLoZh8Asi8FX3tR8EXzbD14V/2jpqSZBLKWOEI53Ap4nV6nZgTKySUwGU/pQL6L7GBexPm264l4hvPz5Dig7RpxDjVFtWiatmH4J8k3a6RTFqYjDr5sKMgxnbcSjdekfVkozLw4CiPmgXon5zrC142kczbNnZDVfcARAJPWsW/oVqDRgokQyp2AdUbMQsy4MaBwpKw7+Y7Mmc9hQEFkvbNTWyF6zYkwXfod5GsvS765zgOqDvVW/l+V709a+4fnB/By5hnEuoPvCm5eAbJ77VOHEWy81rH8/3SgbdZ9wN7mc7KMbt16bFf2BPv5R4kg4UDlExIfuLduRBtzLiEtg4v2pRL7St4gVx2J+2YJSrYZ2MvHeIt7ceiBe7ONYwAC1dwLvmjCYLTJAa7fyb32otyLjl4DTRmK9RTbBruzbhyapm9L6U69VaV9Nnql5h15i/q9qtF4vxxsa9tSG+J2zb3FtQiQgc8YMpdXak69+B3E8LVjL9gWUwdSK86tjsDckpOQtjjMC3gTfxIplOs1ezkgQxBzYpRzVAYO7+xLuMGlglpx0jxV8WsifAGHF4IYeZe9SoCcOWSJcq1eMkYblkLfm34k21q/Tb4ofiVfEGk7trV1f6DC7C3XURhqc7uTfO0lyXfgLq0VvJtTCjJlmBBoNuopjq1pED5n99kVUmhfXQw8m0KaimGgO4JvJQxqF2749OrxiNFwPG9EjhVxNcWo6bVTmRN+Tz5a5bEONKwD+6IRIoi2AF7KO8zsIsvHYONehLNsuWyLSAJCF+UdJo3Xrwpap/ikAhjiED939OWJNhPnagQ3pNDiGoWlxeq6E695F1gtqRMWpnDnhL7XCZjQF2H3JvnmciBfjIrHQRKx6u5ZV0GfGECvseqXkm/52uTbpY4QR/vIO442jX7MtnWm1dm8uGKfy7c7+napL0dleKtmhNq7HbZVN+L/Vq+Q/En6Nd73zwHfUTCFbgN9JZUvV3zLC4IvddfeQ+hNGwEHCq/LogBbE0DyUEL/93oCYfQRRNoT916F3qBchxOXfFeQcBUjMCXhRancAq1Lqle0PqCvcVrs5NoCYZ2FEbHQMAivotsSDDwDlE3h2lPUA3Ukup7t9MtZLiUapcwcZ5eePxJJ/ALYQFySMoxEcVimWDx0Dhwdu2BZ7eoW/YqVr/Q75zrSLyZGd3fshKiCmFKXzXyP7lteln57cKktp9/qum1Qa3eI5XRFhfpps/JOvlqF2AF3B10u/giAVz8owGpPj7vw3Bk5TuxLqevRU+JYTogP/17h2KfXSvQViRoqcd/XCywvnxIJaqczcPV1C+bUFonsOdknjsxxBRk53cskhatb3IuhbOdeDAEn7k33LhcA5TKHwlVyt3En+JaXBF8O5sQNpTQUH8VYzTHFoBjptd53ptcthZgt/C1DqtdJ8m2jh55czJXl4SSgvDRDEe4pRN+cUmD3kuyMRJ8jfjAI4ar5oq1k51YTgTJVeBWiWkbENofWtULjFQ8p1XONFGbPAcQIPAf4rVKnqeMaiIURCLdKWqV03Mr1JuYl3jlRb3VFR8IvTjX7AYB37QS8IGrcwt9yFH4roOGIIKnfHakmJukYgbFtw+7E3/KS+NuLtxsxaFkWrIuIElwqsFO55cpsuYxAYsBDTqHpqmX20YrmHDv/4olmse7EQLVCyE3+lFU/R1svVvyHrlrzdiR/yLx8pjzVTtovB+G+q7UBr41PmRovO8PYlF8uvDElzs1bJkgs8Nk4z8dgQhrvO/2WpVY/qO0CD9j2yKicSVECrhh3OSddWqvNxF8uP2AGKIG48soIvaTySRBuSdrjTfxNecffiVZ6En7n/cJvRizF+I9+tfqX8u/42vy7ybQ+sOBxXMS3PmJwq4CEufRqvrtnL26yLRSucB8tDwHTmSGOoafOQy3ZpQPmW2x9t1bW9Nu/43lInyn99oJrbQNzeMxDvlj6HS8p/c4ZVgdaAap8DMySWIuJZ+nTAXcIWlFIUMyEgy3He4EtCgPrdgZGidqk3s6Q1piIY2PPytsvjQDm6avPrFYSGzNsHQB4TCn8SMhVQdwddctynVGJzMEJKUQrE/f25Us/yIvBSKnl4B4IbIP9kUxr3YdIqcbSfrSXqwxAZ19b9/KNAnAubqTISaU98TsEPC0fnA895dO4ghh6Z9+uiLmtIQqhK7V79N/xkgSMiwGHxpr1jLjM/9lVueWasoS06eVmruf/59wp2CV+VSfc1STlMUTC60YTJK2Ke9kSZdLB9IBQrBaAVBP5No5gsZUA21w2RqI4E7eqSKGERhcWGePgehi6Wm0dc9H2xMqDeiIPRXMzz8nyVCmh2SAPumYA8m4BMJvywfAwj9Fn1n43/yJU5tqKjDN38u94Sf4Fu2WH2NR9lqnUcmhN3aen5YoSZXA8Lr6XsduPTTJkKWG7Iwv/Dx8cWFOT0yG5CY5bsS/r8xK0q5BzmTOcyRNPHZui2fVOvrY8sDVyOc6fKq5pwYsga4k1MS9JjyUXJ61XZs9D3MieV1wBNll98o6+SeoMCrmVjFUwdHK1pClaJ2UN6cVeCpDChJs+nIozI5wqoxnwluw7j9xbz4vOud/NHkDbhHu/liXWeRf3jpfkXsu+zI+UbA6RCgE4mwI8EpoBm6Nn4fQZxQon0l7emdg+Vn3x0NUYtYvz3Kjd3RFoMN014QyyaDoLjiRDR0hW9R/KLuWrPjSYHXtLCSRmkpMgKlNI4gCTz6HQblOyciujoTnZZj1HlW3u8PPK1ISY5OramDv6Dsk9QNpSo0uswuUNwAxShqni1F7OsbL2ci4PwmEebhmmBCzHRRoqv2B1SkXlJvu2eZB+0T1O7S+1u9kXg/5ohklXb+0W+9rW8MZK4wXsvgOtnVaW1Rta1JF9P9rz99qva7LUc4iyAbgbujrfpuT/uj3BwhEsHj5ZfWVqKIoIpbsoI0xO9YDTFiaILPQT+UZ1XEG7oftiImzzM8XfnhcmM3yiSN9C389+AP8U+jafMXK2tlylrW4AJvCGH3f3IPSwPxQp5n6U/EEslOqBfOtm3ZUhKmTga3V+sLvSVKY7CbfNI5y2U6kHty8BwZxHkytCMu1qyq6UliyVcu0XFK+FShrMPLYoz4VaFVsH8uUujRDy+VYRbDhJc24e1WhqmB6IkAJiD0nEYSyV48G3ArRb0i8nElfwtWX1ZHyY93bsiniDDoQZQaq/g71foWFhbLh02RTcxeDOSa5KJ2m7myw8VErrX4dSm1Z7VX6HH9O6K7557kryZnTYNOR9u5XuB9V3XEq4Geb0bc/hgNBaQ/a1IfOUWZgh5uaB2EufvL6aUGtb3dY7Nk13OxaJJezl/M99Dt1x2+eMfvQEztzC3pb7jr12HgsYDO9rMgMjLDmyD64a/APs/QoNR+YCrv8crbwl/L4Uc8OK2zTjxvBaw+abYhHvCMZ4HM6mm+Wh+nKyUpLTVJO55MufCSuFbYjd8obdOqWkFcGom4Fv516NNTbPjgYBTeTl6b6HTnXMy5ucDfTfuj8YrDuHBN+g6IPg2x1xJO4q9CHF8UhGhhJei+rGeHMvxHQ47sNnBU0raqJqhn0883wLfK2Mo9O3n92WdG3dCb4Y92pt+Av8/gfg+xUam4i2ynMAupxu9LVYJVTeynI55DDlI6X2ZsGtdWw8ap4nslsH9M0urn6Er8OJufh0R+Q7sjwNdNo1CxouXb8OBl5B5746eUDfKjEqB7h2zrccfUefNXLpZxLvFsbKvFFwrUVJmotnibJVi7DiaDB/3dG3VncqL8QEjt9MeSegj1c3yOE21juEua4TM7IhfBGCMSA0gitwGCc+b029KsDjKg1RVj8tONT7jYF1sGc0XL/lLwVf+9rgy0mQ42kN2A3IrWHNrSHbnlhYi0ZerNcj+24eh0DgUesuJNtlU361r4fue4Xi23pvHfa5em9ZmAUmTL4wSH4p9NoL671STNy1YCHLcp3wuA+DeLfgUilVZVvFJd1OvY9G++JaB9cD3UmbSmw9NOE8tp+Ig93ggJ+iAK+c5T+e4803JNpJ8W2UVs3F3CYOlQosDqUMbNPFXJEztlnTJSW4Ai121sReqbXTi1wNruPyjT1uI7ApZ8n2e8VbvpeVqnuDg6IlEsklbBo5bzFv7ge7QxupHO0OI93fp1ebGYM5o2u5g3pf0uy7qbklBdG6CCXZtke+4NU0YZV8W+tZFZ4Ht29xuM3runWodXWVh03z7ZhRTVSXXFOerZ8U36tqKzptvlbge0SnxyL+8hk13+ll1eQ946D4uuNUicq51inlSq7npdB2RVCu9lpIxPrJoau9hb+z2UH1LcVOSNLuRZKBUX8sRCa05nYn/r6o3Tf10Fop0Gq5Wdip5T90M4UrV3pdmjW387vQ62bgxBFUmIu97SDFqc5mW50byl5rr+7G0nGTAql+iFPpQium1hSZk6L2rOnvQfv1MgJZaa7MEUxLAy7Ou7jC6qaHFKZOKb/LncFJb3GLgV0muzIwps1+rY3CAOdMTfG3S9O1sAPjBGkZJuSO4u/7NQoM7nQQ+FapxyEV39R+cz0g8KzjtsPvsyPVAHKXnIHgqd1Jvy/q9gXqYhYVcmxYGyy5/UQi7BybRFsDVH3NWMWqc/CBTvmSST4Kv2Q8p9+ryYHCb9+UYwTLwN8sw3DW67D2eNKM5U6ffqg5XV+FX/qQ5yb8phkKrrzrI8wLY6PfAFNHXl5UlM0plYBmRLkSlblwGPCL/1sqtDwoUlt3+DVH2U1zXmxx1SGZlXH6hTzGVh2LLoAOSiDmLIJvBN582W3tuu+a7WTxWvPuFy0TYL1Q85upfDH+lq+Nv5vfoEg3PGLwZnrQstXOve5WcIFYL5js9Ls5dw9w7DpwOhoeyqXlo6hcor71O/xLcfPz+HcgauKeYiib64tF3/Ki/NtDeOXLYMGobrWlOFo/Rl3/9MJV0XU3gif6UfKd8r1KU57Ote6lPNRR/A24zQVJzk1Rsm2IXfqBe7u/+SqylXX/aGzoYcwl0rrguyvEI/tbMl5qbaYH6kcH9F3xFQf6eF3dNa1g65W3NfXxCOu+DnslZVofkn/8IfuIKfbVzP8G/Naj4IuhpR/ppY174ReTrzZnR0BKecw74PdFvb4+Au+Qq2s90Wp4FLZidcsezsou9l+dDvXkb6jd6wqOnsHVV/tDEO+aXmyleiDfzX3Q4i1NGReu6LslplY5mKob6l736b3M3CZ/8EC/3TvFwfAQGqPzbHfrg+wUQ98FcAa27kW2etWmb1p+e60H6bf2k0/GVrmbfbsWAXFmM92r/ZYXhl+9uixG7JHIos3h7yJEqoQuK+ta5E0XdMGuNW2qbT595QFD9lguDQ9fMWRWc2sx+Vm4vdcvA4S04KO1Am3ORWgSQLOz9yE76q7lWIvG4HSb3BOR9CaRUlMPzylYSw5Sgk2+YNO6yW568IU3fbchSTeeruuyCTeKGF2iL9l3ye6rr+sw6CHP39DQzkI5E3XQ8WG30deO6m8+q7+JkexO/kVwXWMg4KW7+fdF7b6J4X8c0DIsCksIeubfOe0EowdjQvG5i8TbUuvJ+FCKuPnwS4lynTn1Jn8FLvNtSIm+5eoi5huMeTu3sCJHuSMAdzdUOLOCR0tQL2YsNVCXDzTkX/NvORSawVPahN7Z9LGHI01XrajvAJx94rnomZD7ZrFdNRl4S2FQtHV0RWTXwYzS8PRXcsTJuI62p27xL1rvgX9rP/Pv/X5zm4DnnBtfMh5fyr/j68u/Fu6DeJct8LbH9vRhshyvtIW8q3+P+Oulti+j7caGbRvEa8XV4Bm+CLdVyId62/ewRvnMz5zZzJg3EZQwq/lSBB4v7HvwF9imf/KJJNo3MbbWGZ5dcz+C62sqtEm5VR93Iq9SmD1RsAXZyql3sPPysx3JfN+sofe612LOXVB20XluM5hdAW6u8R5MvFrxWU67LfRh/6pD19stu703LL99emE7Y3CKD53xM0gu/Wb3xBzfa7N4TdbZ2L/9UN1I56/guRUiedu7AcK86TsIWyknS9PdIIxQjKCB1ppAAf0OEB4vC8Kb+rtte3ysocjJYPFVMtO3FLhteodt20qz/3sS3iTkpUqq2uvmL8ZmDq/DQiKusXueXL/+JbSDrutSneXo9cgZ3jWY0KSM2u8Kvdjtv/RenCA4hY4rI8PYbMKjRJVDr/RhOzYE5m+UEIbd/jD05t7Nr5ytw9cecIX93G7uJeBVENn4ymYvpdxJwOOl5d+RP3b1buKv3mTDnhIaruewBIWL6WwRDt520n354UoXh0U1djUEh8a7Ng1ZA8SID944C4fzIfurbnRVnD70YGrW4ldvwCdL7+Q3spajL1ue67+yLVAd1scDdnIeRKmz2Xe4eVfqHVNtbV812165lww8RldeppKR3e4r71fja0pNn37AHdKKyA3uPbxZCe7FBZxXne/mXkzfJkJ3WnWNO7F3vLDsW6fQMt6idYND2RTe4F//IlgIuxZWBP9oppsYAnr1UY/8Sbuv6QUWAbS+uonSffuiQww6rg3XujFvT/lM4f5VoSPz8juko2/wqk+SysyLy2kb/tKW4LnxGpsCoovCNP+k0cLhi7F0bB5hhKSdec1fIV5Xs4ST7pBzt1a3Ay4O3W00KcLmUwIwL18I0ityJqWCvKzbmW9+5uGw3IBJ0tUR6BrjPyH5Tn4Vw3Kpo9pvuDjU8tMv714/+3d+//r07s3Tjx8eXuHyHl7/8u3T9gOo+Mdffvi357+gHO/gw9ufXj+9/eOb/3n+w98+8GDacL7HD357zvvh6b//5W8/Pv3w5vUfP947Cwcalvj37989P337/l+f3/0B1f7nw6vmboz9bObvnE3/vz6b4ka4/WzW//fZ4Ln99entm2+/ef/D09u3eHJ4XLhHla31+e3Tz++fsevhVadk+dv/Aj2p7HU=\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 06:24:46 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:47 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 06:24:47 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:47 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 06:24:47 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 06:24:47 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}
