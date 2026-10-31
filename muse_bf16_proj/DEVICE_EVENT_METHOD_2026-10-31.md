@@ -84,3 +84,55 @@ One initial read/synchronize drains initialization before measurements.
 The time frames use exact u16nanoseconds when every sample fits,otherwise
 u32;no quantization or dropped samples. A CPU codec roundtrip restores all
 2304samples exactly. The earlier V40 u32codec remains supported.
+
+## V41 terminal result: read-flush repair complete, no eligible gain
+
+Check `b89f4e5d007047d9`, sfo3, passes all 9 challenge tests and 30 timing
+cells: 1.542033518x, CI [1.5189030155, 1.5651640211], 3132.746430us,
+prepare 166.691983s. The challenge still times the unchanged parent.
+The independent read-flush diagnostic completed in 0.887s with all five
+nearby validations and 72 groups, retaining all raw samples in 6852
+characters (exact u16 ns frames). Initial and fresh-input outputs agree
+exactly; maximum FP64-relative global/row errors are 0.00166718/0.00174107,
+with zero one-hot error. All 18 full native resource records have zero local
+allocation. Registers remain the V39/V40 pairs; standalone register parity
+must not be generalized to full kernels.
+
+| Route | Median matched-old/new ratio | Worst ratio |
+|---|---:|---:|
+| qkv8 | 1.003738 | 0.993985 |
+| unpooler8 | 0.999992 | 0.986008 |
+| qkv16 | 1.015004 | 1.003574 |
+| O16 | 1.008650 | 1.000000 |
+| unpooler16 | 0.998669 | 0.993625 |
+| qkv32 | 1.002714 | 0.981644 |
+| O32 | 1.004186 | 0.991689 |
+| pooler32 | 0.990783 | 0.973742 |
+| unpooler32 | 1.000879 | 0.987820 |
+
+No route clears the fixed performance gates. Maximum A/A offset is 2.677%
+and matched-control offset 3.410%, so some attribution gates fail too.
+All 511 fixed nonempty policies reject. The best worst-group board proxy
+is 1.000442840x (median 1.000841123x, routes 0/2/4); all nine routes give
+0.998898345x worst and 0.999587229x median. Neither supports promotion.
+
+Event-only inner medians are 2.912–2.976us; simultaneous host-minus-inner
+paired medians are 5.824–5.920us. These instrumented boundaries do not provide
+a universal correction. Differences from V40 across separate jobs, random
+weights and allocations do not identify the causal effect of flush mode.
+All 30 profiles, the full available remote log, all resource/numerical
+records, all 72 raw device frames and all nine simultaneous host frames
+were inspected. Across V39–V41, all 90 profiles and 216 timing groups were
+inspected; each run rejects its 511 policies (these are overlapping policy
+sets, not 1533 unique algorithms).
+
+The external volume disappeared while the same V41 job was being recovered.
+Its structured result was archived from that existing handle in the internal
+checkout; no run was restarted. The receipt preserves complete remote
+profiles/log data, not an invented original local CLI log. See
+`run_receipts/b89f4e5d007047d9.json` and
+`C12_PERMUTE_REPORT_b89f4e5d007047d9.json`.
+
+Close the tested C12 sign-layout transfer. No source promotion, scored
+submission or rank gain. BF16 Oct31 checks: 3/8 routine allocation; submits 0.
+Move sequentially to decoder; preserve its small-T FP32 router contract.

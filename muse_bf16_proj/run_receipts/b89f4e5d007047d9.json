@@ -1,0 +1,851 @@
+{
+  "job": "b89f4e5d007047d9",
+  "board": "muse_bf16_proj",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 124.62,
+      "power.limit": 700,
+      "temperature.gpu": 37
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 465,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 101.93,
+      "power.limit": 700,
+      "temperature.gpu": 33
+    },
+    "node": "n-hbquzsoc2fbla3mk4cpu32bkrb"
+  },
+  "created_at": 1793443628.8385804,
+  "source": "muse_bf16_proj/submission_v41_read_flush_probe.py",
+  "source_sha256": "53433583563e8a9227a12dfde2786c705714be720419ff016e5ec0d597eaeef0",
+  "profile_capture": "remote structured records; local CLI profile unavailable",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "passed": true,
+    "status": "ok",
+    "error": null,
+    "speedup": 1.5420335182860518,
+    "speedup_ci": [
+      1.518903015511761,
+      1.5651640210603424
+    ],
+    "score_us": 3132.7464304208934,
+    "returncode": 0,
+    "tests": 9,
+    "tests_passed": 9
+  },
+  "setup": [
+    {
+      "baseline_copies": 16,
+      "baseline_prepare_pad": 6892032,
+      "copies": 4,
+      "error": null,
+      "event": "setup",
+      "first": "baseline",
+      "prepare_pad": 13052416,
+      "prepare_s": 166.691983035,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680285484891627091,
+        "weight": 62
+      },
+      "median_ns": 8565.537907518083,
+      "baseline_ns": 13919.999822974205,
+      "paired_ratio": 1.625116831338338,
+      "speedup": 1.625116831338338,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680505085153372386,
+        "weight": 62
+      },
+      "median_ns": 5222.162352128226,
+      "baseline_ns": 6752.000190317631,
+      "paired_ratio": 1.292951029675655,
+      "speedup": 1.292951029675655,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680724685415117682,
+        "weight": 62
+      },
+      "median_ns": 13420.970919833218,
+      "baseline_ns": 21472.000516951084,
+      "paired_ratio": 1.5998842889392026,
+      "speedup": 1.5998842889392026,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680944285676862979,
+        "weight": 62
+      },
+      "median_ns": 3563.5399311469414,
+      "baseline_ns": 7071.999832987785,
+      "paired_ratio": 1.9845434510710338,
+      "speedup": 1.9845434510710338,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7681163885938608277,
+        "weight": 62
+      },
+      "median_ns": 3908.3498493830443,
+      "baseline_ns": 10560.00031530857,
+      "paired_ratio": 2.701907639352073,
+      "speedup": 2.701907639352073,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7681383486200353576,
+        "weight": 62
+      },
+      "median_ns": 9505.412068753765,
+      "baseline_ns": 14016.000088304281,
+      "paired_ratio": 1.4745284041265019,
+      "speedup": 1.474528404126502,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7681603086462098876,
+        "weight": 62
+      },
+      "median_ns": 5684.132280387692,
+      "baseline_ns": 6816.000677645206,
+      "paired_ratio": 1.1991277369041655,
+      "speedup": 1.1991277369041655,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7681822686723844177,
+        "weight": 62
+      },
+      "median_ns": 14171.95752189335,
+      "baseline_ns": 21823.999471962452,
+      "paired_ratio": 1.5399424841803224,
+      "speedup": 1.5399424841803224,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7682042286985589479,
+        "weight": 62
+      },
+      "median_ns": 13901.864409798633,
+      "baseline_ns": 18688.000738620758,
+      "paired_ratio": 1.3442801762221657,
+      "speedup": 1.3442801762221657,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7682261887247334782,
+        "weight": 62
+      },
+      "median_ns": 4872.270644952146,
+      "baseline_ns": 15008.000191301107,
+      "paired_ratio": 3.0802886959594407,
+      "speedup": 3.0802886959594407,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7682481487509080086,
+        "weight": 62
+      },
+      "median_ns": 10796.704168169352,
+      "baseline_ns": 14624.000526964664,
+      "paired_ratio": 1.3544874712858095,
+      "speedup": 1.3544874712858095,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7682701087770825391,
+        "weight": 62
+      },
+      "median_ns": 5950.39478086571,
+      "baseline_ns": 6880.0002336502075,
+      "paired_ratio": 1.1562258450101106,
+      "speedup": 1.1562258450101106,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7682920688032570697,
+        "weight": 62
+      },
+      "median_ns": 15009.4619064042,
+      "baseline_ns": 22176.00028961897,
+      "paired_ratio": 1.4774680416862225,
+      "speedup": 1.4774680416862225,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7683140288294316004,
+        "weight": 62
+      },
+      "median_ns": 14335.413211541789,
+      "baseline_ns": 18720.00005096197,
+      "paired_ratio": 1.3058570251668815,
+      "speedup": 1.3058570251668815,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7683359888556061312,
+        "weight": 62
+      },
+      "median_ns": 5540.854452645541,
+      "baseline_ns": 15391.99985563755,
+      "paired_ratio": 2.7779108776785275,
+      "speedup": 2.7779108776785275,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7683579488817806621,
+        "weight": 62
+      },
+      "median_ns": 9254.123621647828,
+      "baseline_ns": 14208.000618964434,
+      "paired_ratio": 1.5353156279140452,
+      "speedup": 1.5353156279140452,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7683799089079551931,
+        "weight": 62
+      },
+      "median_ns": 5087.318390252206,
+      "baseline_ns": 6496.000103652477,
+      "paired_ratio": 1.2769006390674194,
+      "speedup": 1.2769006390674194,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7684018689341297242,
+        "weight": 62
+      },
+      "median_ns": 13651.419970520355,
+      "baseline_ns": 21472.000516951084,
+      "paired_ratio": 1.5728767090397138,
+      "speedup": 1.5728767090397138,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7684238289603042554,
+        "weight": 62
+      },
+      "median_ns": 3920.5359087118245,
+      "baseline_ns": 6704.000290483236,
+      "paired_ratio": 1.7099703832800701,
+      "speedup": 1.7099703832800701,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7684457889864787867,
+        "weight": 62
+      },
+      "median_ns": 4048.3361515445554,
+      "baseline_ns": 25951.999705284834,
+      "paired_ratio": 6.410534781155317,
+      "speedup": 6.410534781155317,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7684677490126533181,
+        "weight": 62
+      },
+      "median_ns": 14141.589875358148,
+      "baseline_ns": 16991.999931633472,
+      "paired_ratio": 1.201562206328879,
+      "speedup": 1.201562206328879,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7684897090388278496,
+        "weight": 62
+      },
+      "median_ns": 6799.073338394219,
+      "baseline_ns": 7119.99973282218,
+      "paired_ratio": 1.0472014903289388,
+      "speedup": 1.0472014903289388,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7685116690650023812,
+        "weight": 62
+      },
+      "median_ns": 20611.899428707453,
+      "baseline_ns": 24911.999702453613,
+      "paired_ratio": 1.2086222227417405,
+      "speedup": 1.2086222227417405,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7685336290911769129,
+        "weight": 62
+      },
+      "median_ns": 19086.747400616172,
+      "baseline_ns": 19792.000763118267,
+      "paired_ratio": 1.0369498976278864,
+      "speedup": 1.0369498976278864,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7685555891173514447,
+        "weight": 62
+      },
+      "median_ns": 6135.295851097114,
+      "baseline_ns": 16383.999958634377,
+      "paired_ratio": 2.6704498619580974,
+      "speedup": 2.6704498619580974,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7685775491435259766,
+        "weight": 62
+      },
+      "median_ns": 18478.64409718219,
+      "baseline_ns": 19743.99946630001,
+      "paired_ratio": 1.06847663510716,
+      "speedup": 1.06847663510716,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7685995091697005086,
+        "weight": 62
+      },
+      "median_ns": 8943.241627360405,
+      "baseline_ns": 9312.000591307878,
+      "paired_ratio": 1.0412332551565324,
+      "speedup": 1.0412332551565324,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7686214691958750407,
+        "weight": 62
+      },
+      "median_ns": 24901.81462888436,
+      "baseline_ns": 30719.999689608812,
+      "paired_ratio": 1.2336450233621032,
+      "speedup": 1.2336450233621032,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7686434292220495729,
+        "weight": 62
+      },
+      "median_ns": 23625.373635523545,
+      "baseline_ns": 24607.99878463149,
+      "paired_ratio": 1.0415919411166668,
+      "speedup": 1.0415919411166668,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7686653892482241052,
+        "weight": 62
+      },
+      "median_ns": 7163.06716156835,
+      "baseline_ns": 17791.999503970146,
+      "paired_ratio": 2.483852112881013,
+      "speedup": 2.483852112881013,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680285484891627091,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 512, 8192, 2>(unsigned char const*, ...       7.1 \u00b5s 100.0%      1\ntotal                                                              7.1 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680505085153372386,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 64, 1024>(unsigned char const*, unsi...       4.1 \u00b5s 100.0%      1\ntotal                                                              4.1 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680724685415117682,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 512, 8192>(unsigned char const*, uns...      13.0 \u00b5s 100.0%      1\ntotal                                                             13.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7680944285676862979,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 128, 4096, 4>(unsigned char const*, ...       2.2 \u00b5s 100.0%      1\ntotal                                                              2.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 7681163885938608277,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rgemv_kernel<1, 1>(float const*, __nv_bfloat16 const...       2.4 \u00b5s 100.0%      1\ntotal                                                              2.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7681383486200353576,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 16, 3, 1, 4, 2, 5, true, false, 2, 1, ...       8.2 \u00b5s 100.0%      1\ntotal                                                              8.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7681603086462098876,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 16, 2, 2, 1, 4, 3, true, false, 2, 1, ...       4.4 \u00b5s 100.0%      1\ntotal                                                              4.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7681822686723844177,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid dd_cap2_b_cpssm_gemv<1, 2, 1, 2, 0, 0, 256, 0, 4096,...      13.6 \u00b5s 100.0%      1\ntotal                                                             13.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7682042286985589479,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 8,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 16, 2, 2, 2, 2, 3, true, false, 1, 1, ...      14.4 \u00b5s 100.0%      1\ntotal                                                             14.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 7682261887247334782,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 9,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rr_small_kernel<2, 16, 8>(int4 const*, __nv_bfloat16...       4.0 \u00b5s 100.0%      1\ntotal                                                              4.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7682481487509080086,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 10,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 3, 1, 4, 2, 4, true, false, 1, 1, ...       9.5 \u00b5s 100.0%      1\ntotal                                                              9.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7682701087770825391,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 11,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 3, true, false, 1, 1, ...       4.8 \u00b5s 100.0%      1\ntotal                                                              4.8 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7682920688032570697,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 12,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 5, true, false, 1, 1, ...      14.6 \u00b5s 100.0%      1\ntotal                                                             14.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7683140288294316004,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 13,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 3, true, false, 1, 1, ...      14.2 \u00b5s 100.0%      1\ntotal                                                             14.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 7683359888556061312,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 14,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 1, 1, 8, 1, 4, false, true, 4, 3, ...       4.7 \u00b5s 100.0%      1\ntotal                                                              4.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7683579488817806621,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 15,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 8, 3, 1, 4, 2, 5, true, false, 2, 1, _...       7.5 \u00b5s 100.0%      1\ntotal                                                              7.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7683799089079551931,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 16,
+      "report": "kernel                                                           GPU time  share  calls\nvoid v18s_gemv<1, 1, 1, 2, 0, 0, 256, 0, 8192, 1024, 1, 8...       4.8 \u00b5s 100.0%      1\ntotal                                                              4.8 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7684018689341297242,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 17,
+      "report": "kernel                                                           GPU time  share  calls\nvoid smallm2_gemv<1, 1, 1, 1, 0, 0, 1024, 0, 4096, 8192, ...      14.2 \u00b5s 100.0%      1\ntotal                                                             14.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7684238289603042554,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 18,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 8, 1, 1, 8, 2, 4, true, false, 2, 1, _...       3.2 \u00b5s 100.0%      1\ntotal                                                              3.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 7684457889864787867,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 19,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rr_small_kernel<1, 16, 8>(int4 const*, __nv_bfloat16...       3.5 \u00b5s 100.0%      1\ntotal                                                              3.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7684677490126533181,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 20,
+      "report": "kernel                                                           GPU time  share  calls\nvoid qb_e12dcf82a592343f::qb_kernel<64, 36, 128, 3, 8, 53...      14.0 \u00b5s 100.0%      1\ntotal                                                             14.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7684897090388278496,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 21,
+      "report": "kernel                                                           GPU time  share  calls\nvoid ol_projection<128, 128, 4, 3, 1, 1, 1>(CUtensorMap_s...       6.6 \u00b5s 100.0%      1\ntotal                                                              6.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7685116690650023812,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 22,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_64x64_64x13_1x1_v_bz_coopB_NNN                     21.0 \u00b5s 100.0%      1\ntotal                                                             21.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7685336290911769129,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 23,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x64_64x8_1x2_h_bz_NNT                           18.9 \u00b5s 100.0%      1\ntotal                                                             18.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 7685555891173514447,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 24,
+      "report": "kernel                                                           GPU time  share  calls\nrk_kernel(CUtensorMap_st, CUtensorMap_st, float*, int, in...       4.7 \u00b5s 100.0%      1\ntotal                                                              4.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7685775491435259766,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 25,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_72x64_64x12_1x1_v_bz_TNN                           17.3 \u00b5s 100.0%      1\ntotal                                                             17.3 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7685995091697005086,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 26,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rl_early_projection<256, 64, 5, 3, 1, 1, 1>(CUtensor...       8.5 \u00b5s 100.0%      1\ntotal                                                              8.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7686214691958750407,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 27,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x64_64x8_1x1_v_bz_NNN                           24.0 \u00b5s 100.0%      1\ntotal                                                             24.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7686434292220495729,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 28,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x128_64x6_1x1_v_bz_coopA_NNN                    23.5 \u00b5s 100.0%      1\ntotal                                                             23.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 7686653892482241052,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 29,
+      "report": "kernel                                                           GPU time  share  calls\nrk_kernel(CUtensorMap_st, CUtensorMap_st, float*, int, in...       6.0 \u00b5s 100.0%      1\ntotal                                                              6.0 \u00b5s"
+    }
+  ],
+  "log_tail": "[proj] pinned choices: {('qkv_gate', 1): ('cgemv',), ('o', 1): ('cgemv',), ('pooler', 1): ('cgemv',), ('unpooler', 1): ('cgemv',), ('router', 1): ('rgemv',), ('qkv_gate', 16): ('sk2',), ('o', 16): ('sk2',), ('pooler', 16): ('sk2',), ('unpooler', 16): ('sk2',), ('router', 16): ('rsmall',), ('qkv_gate', 32): ('sk2',), ('o', 32): ('sk2',), ('pooler', 32): ('sk2',), ('unpooler', 32): ('sk2',), ('router', 32): ('sk2',), ('qkv_gate', 8): ('sk2',), ('o', 8): ('sk2',), ('pooler', 8): ('sk2',), ('unpooler', 8): ('sk2',), ('router', 8): ('rsmall',), ('qkv_gate', 128): ('gqx',), ('o', 128): ('torchT',), ('pooler', 128): ('gq',), ('unpooler', 128): ('torchT',), ('router', 128): ('rk',), ('qkv_gate', 256): ('torch',), ('o', 256): ('torchT',), ('pooler', 256): ('cutlass',), ('unpooler', 256): ('torchT',), ('router', 256): ('rk',)}\nBF16_C12_DEVICE_Z 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\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 10:51:21 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

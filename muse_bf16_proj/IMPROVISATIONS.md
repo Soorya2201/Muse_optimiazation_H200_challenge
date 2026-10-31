@@ -1,5 +1,14 @@
 # `muse_bf16_proj` optimization record
 
+Oct31 terminal update: V39/V40/V41 all pass the unchanged timed parent;
+all nine-route transfer policy sets reject. The final read-flush run
+completes 72 groups with best worst-group board proxy 1.000443x and no
+eligible route. No promotion or score gain. The transfer is closed; see
+[terminal method/results](DEVICE_EVENT_METHOD_2026-10-31.md) and
+[public-source audit](PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md). All 90 profiles
+and 216 independent timing groups were inspected. Current BF16 score stays
+1.535843x; Oct31 routine checks 3/8, submits 0.
+
 The broader, source-indexed catalog of published and challenge-specific techniques is maintained
 in `RESEARCH_LIBRARY.md`. This file remains the chronological implementation and measurement log.
 

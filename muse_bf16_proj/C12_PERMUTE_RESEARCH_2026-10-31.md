@@ -149,3 +149,20 @@ The actual submitted `_cp_repack` AST function was also executed with CPU
 PyTorch2.8.0 on three representative stream shapes totaling3,816,192bytes.
 All inverse/low-byte checks pass,with20064words independently compared to
 integer layout emulation. See`C12_PERMUTE_PACK_CPU_2026-10-31.json`.
+
+## Final follow-ups supersede the one-check budget above
+
+V40 repaired balanced arm ordering and captured timestamp boundaries;
+V41 also matched the judge's read-flush protocol. Both pass the unchanged
+parent's challenge checks; neither certifies a changed-path speedup.
+V41 completes all 72 groups and rejects all 511 fixed policies, best
+worst-group proxy 1.000442840x. The full terminal results, raw observations,
+control limitations and event-only calibration are in
+[Device event method](DEVICE_EVENT_METHOD_2026-10-31.md). BF16 Oct31
+checks are now 3/8, submits 0. This transfer is closed without promotion.
+
+Fresh public-source follow-up additionally reviews Kushagra and ScrashOff,
+pins the Apache-2.0 lossless-bf16 library and CC-BY-4.0 H200 notes with
+provenance, and records 77 passing local CPU library tests. Those tests
+establish storage/emulation properties, not a new H200 kernel gain.
+See [Public-source follow-up](PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md).

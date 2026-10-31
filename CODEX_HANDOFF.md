@@ -67,6 +67,59 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+
+#### Oct31 BF16 C12 cycle complete; internal workspace is active
+
+**Workspace override:** the external volume/root disappeared around
+12:50 UTC. Use `/Users/soorya/muse_work/continuation_20261030` explicitly
+as every tool command's working directory. It was fast-forwarded to pushed
+commit 0144e5c before V41 recovery; all prior research/source is present.
+No GPU run restarted. V41 full structured remote profiles/logs were recovered
+from the same job and archived here. External ignored CLI profiles are not
+locally available, but committed receipts preserve the evidence. If the
+external drive returns, inspect its worktree first and synchronize safely;
+preserve its untracked `research/public/madhavan_721c627/`, never publish it.
+Do not create a replacement external directory or overwrite that checkout.
+
+Read `muse_bf16_proj/C12_PERMUTE_RESEARCH_2026-10-31.md`,
+`DEVICE_EVENT_METHOD_2026-10-31.md`, and `PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md`.
+New sign-layout transfer reduces standalone decode12->9 SASS instructions,
+CPU223904 cases and actual repack3,816,192bytes pass. Full kernels change
+some register counts; all18 target specializations retain zero local bytes.
+Nine routes tested against actual/matched/duplicate controls, two seeds,
+four pads, five nearby cases and fresh-input graph replays. V39/d925cb081b0e4763
+passes parent9/30; V40/1a1ec90bda294d64 repairs order/events; final
+V41/b89f4e5d007047d9 also repairs read flushing, passes parent9/30 at
+1.542033518x, prepare166.691983s. These point scores time the UNCHANGED
+parent, not a faster candidate. Each 72-group experiment rejects all511
+fixed policies. Final best worst-group proxy1.000442840x; AAmax2.677%,
+matched-controlmax3.410%. All90 profiles,216 groups and available logs/raw
+frames inspected. No gain/promotion/submit. Close this transfer; do not
+retry geometry/fraction/ring affixes without a distinct mechanism.
+
+Fresh BF16 public index244paths/13repos, owner metadata1526accounts,
+11 unresolved404; default-branch metadata is not exhaustive source access.
+Five Kushagra files and seven ScrashOff BF16 source versions screened,
+no stronger component established, licenses unestablished so no port/mirror.
+Apache2 lossless-bf164429b1d:27files/197689bytes pinned; 77 CPU tests pass,
+no new package H200 execution. Seven-instruction format changes row scales/
+escapes and is not a free decoder replacement. CC-BY4 H200 notes4f195ed:
+10 files pinned, read/write-flush and instrumentation limits documented.
+Deferred Kushagra/ScrashOff decoder sources belong to the next track.
+
+Live16:54:11 UTC snapshot: overall142/1757; decoder142/1100,
+MoE176/1243, attention186/1185, BF16241/1537, prefill175/746.
+Scored speedups and all five canonical files unchanged; no rank1.
+GitHub reverified PRIVATE. Oct31 routine checks: MoE6/8, attention1/8,
+BF163/8, decoder1/8, prefill4/8; all submits0 (service caps20/10).
+No GPU job live. Goal has made progress but remains incomplete, not blocked.
+**Next sequential track: decoder.** Its AGENTS/TASK reread; preserve the
+T<=8 FP32 router contract. Start with deferred public-source delta and a
+credible >=3% opportunity screen; existing closed families stay closed.
+No parallel agents. This section supersedes the older attention-next-BF16
+and external-authoritative statements below. Cycle evidence commit follows.
+
+
 #### Oct31 attention bit-exp cycle complete; accuracy rejection, no gain
 
 Read `muse_attention_decode/BIT_EXP_RESEARCH_2026-10-31.md` and

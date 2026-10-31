@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 09:27:37 UTC** from the live OKC boards. Overall **#124/1742**.
+Captured **2026-10-31 16:54:11 UTC** from the live OKC boards. Overall **#142/1757**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|227/1523|1.535843x|1.6523x|7.05%|
-|Routed experts|162/1227|2.372309x|2.7578x|13.98%|
-|Attention decode|173/1174|2.603505x|3.2221x|19.20%|
-|Whole decoder|124/1092|2.211495x|2.4178x|8.53%|
-|Prefill|167/735|1.784958x|2.0325x|12.18%|
+|BF16 projections|241/1537|1.535843x|1.6523x|7.05%|
+|Routed experts|176/1243|2.372309x|2.7578x|13.98%|
+|Attention decode|186/1185|2.603505x|3.2221x|19.20%|
+|Whole decoder|142/1100|2.211495x|2.4178x|8.53%|
+|Prefill|175/746|1.784958x|2.1220x|15.88%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -101,3 +101,11 @@ No timing groups recorded,so performance remains unknown. No gate relaxation,
 canonical change or scoredsubmit. Detailed result,primary sources,CPU/sm90a
 evidence and new public-code delta225paths/13repos are in
 muse_attention_decode/BIT_EXP_RESEARCH_2026-10-31.md.
+
+Oct31 BF16 V39/V40/V41: all 9 tests/30 timings pass per check, with the
+unchanged parent timed path. Independent C12 layout-transfer diagnostics
+reject all fixed policies; the final read-flush best worst-group proxy is
+1.000443x. No canonical/scored changes. See
+muse_bf16_proj/DEVICE_EVENT_METHOD_2026-10-31.md. The external workspace
+volume is unavailable; the current pushed work and recovered V41 evidence
+are maintained in /Users/soorya/muse_work/continuation_20261030.

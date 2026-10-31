@@ -39,3 +39,10 @@ Details and terminal results:
 parent point scores are not improvements. Closed algorithm families remain
 closed unless a distinct new mechanism and a meaningful gain screen justify
 investigation;this protocol repair is not permission for blind retries.
+
+
+V41 completes the repair with read-sum eviction, balanced ordering and
+inside-graph timestamps. All 72 groups remain nonqualifying: best worst-group
+board proxy 1.000443x, maximum A/A offset 2.677%, matched-control offset
+3.410%. All raw frames and profiles are preserved and inspected. No universal
+timing correction, causal write/read claim, or algorithm promotion follows.
