@@ -1,0 +1,211 @@
+{
+  "scope": "Exact bit-position feasibility for a restricted seven nominal-operation family, plus existing reduced compiler inspection. No kernel executed, no exhaustive optimality claim.",
+  "source_sha256": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",
+  "mask": "0x81c081c0",
+  "rotations_considered": 465,
+  "disjoint_rotation_triples": [
+    {
+      "a": 3,
+      "b": 6,
+      "free_mask": "0x6c006c00"
+    },
+    {
+      "a": 3,
+      "b": 13,
+      "free_mask": "0x60036003"
+    },
+    {
+      "a": 3,
+      "b": 22,
+      "free_mask": "0x6c006c00"
+    },
+    {
+      "a": 3,
+      "b": 29,
+      "free_mask": "0x60036003"
+    },
+    {
+      "a": 4,
+      "b": 10,
+      "free_mask": "0x6030603"
+    },
+    {
+      "a": 4,
+      "b": 26,
+      "free_mask": "0x6030603"
+    },
+    {
+      "a": 5,
+      "b": 10,
+      "free_mask": "0xa110a11"
+    },
+    {
+      "a": 5,
+      "b": 11,
+      "free_mask": "0x42214221"
+    },
+    {
+      "a": 5,
+      "b": 26,
+      "free_mask": "0xa110a11"
+    },
+    {
+      "a": 5,
+      "b": 27,
+      "free_mask": "0x42214221"
+    },
+    {
+      "a": 6,
+      "b": 10,
+      "free_mask": "0xc180c18"
+    },
+    {
+      "a": 6,
+      "b": 11,
+      "free_mask": "0x44284428"
+    },
+    {
+      "a": 6,
+      "b": 12,
+      "free_mask": "0x60306030"
+    },
+    {
+      "a": 6,
+      "b": 19,
+      "free_mask": "0x6c006c00"
+    },
+    {
+      "a": 6,
+      "b": 26,
+      "free_mask": "0xc180c18"
+    },
+    {
+      "a": 6,
+      "b": 27,
+      "free_mask": "0x44284428"
+    },
+    {
+      "a": 6,
+      "b": 28,
+      "free_mask": "0x60306030"
+    },
+    {
+      "a": 10,
+      "b": 13,
+      "free_mask": "0x1b001b"
+    },
+    {
+      "a": 10,
+      "b": 20,
+      "free_mask": "0x6030603"
+    },
+    {
+      "a": 10,
+      "b": 21,
+      "free_mask": "0xa110a11"
+    },
+    {
+      "a": 10,
+      "b": 22,
+      "free_mask": "0xc180c18"
+    },
+    {
+      "a": 10,
+      "b": 29,
+      "free_mask": "0x1b001b"
+    },
+    {
+      "a": 11,
+      "b": 21,
+      "free_mask": "0x42214221"
+    },
+    {
+      "a": 11,
+      "b": 22,
+      "free_mask": "0x44284428"
+    },
+    {
+      "a": 12,
+      "b": 22,
+      "free_mask": "0x60306030"
+    },
+    {
+      "a": 13,
+      "b": 19,
+      "free_mask": "0x60036003"
+    },
+    {
+      "a": 13,
+      "b": 26,
+      "free_mask": "0x1b001b"
+    },
+    {
+      "a": 19,
+      "b": 22,
+      "free_mask": "0x6c006c00"
+    },
+    {
+      "a": 19,
+      "b": 29,
+      "free_mask": "0x60036003"
+    },
+    {
+      "a": 20,
+      "b": 26,
+      "free_mask": "0x6030603"
+    },
+    {
+      "a": 21,
+      "b": 26,
+      "free_mask": "0xa110a11"
+    },
+    {
+      "a": 21,
+      "b": 27,
+      "free_mask": "0x42214221"
+    },
+    {
+      "a": 22,
+      "b": 26,
+      "free_mask": "0xc180c18"
+    },
+    {
+      "a": 22,
+      "b": 27,
+      "free_mask": "0x44284428"
+    },
+    {
+      "a": 22,
+      "b": 28,
+      "free_mask": "0x60306030"
+    },
+    {
+      "a": 26,
+      "b": 29,
+      "free_mask": "0x1b001b"
+    }
+  ],
+  "byte_select_combinations_examined": 442368,
+  "solutions": [],
+  "exclusions": [
+    "Other instruction sets/circuits and different BF16 encodings are outside this search.",
+    "PRMT sign-replication cannot yield two independent desired bits in each destination byte, so excluded.",
+    "No operation count is turned into a speedup estimate."
+  ],
+  "existing_scale_hoist": {
+    "compiler_archive": "muse_moe_w4a16/STAGE_CODEGEN_parent_NTT8_2026-10-31.json.gz",
+    "archive_sha256": "34530d7ead97a86369d562c1d8687eaffea3ee4a50af3cfb306b269e2826992e",
+    "scope": "Isolated phase-A NTT8 wgs_seg, two static first/steady stage bodies; not full runtime counter evidence.",
+    "static_prmt_sites": [
+      "PRMT R13, R18.reuse, 0x4140, RZ",
+      "PRMT R15, R18, 0x4342, RZ",
+      "PRMT R11, R19.reuse, 0x4140, RZ",
+      "PRMT R19, R19, 0x4342, RZ",
+      "PRMT R15, R2.reuse, 0x4140, RZ",
+      "PRMT R19, R2, 0x4342, RZ",
+      "PRMT R11, R3.reuse, 0x4140, RZ",
+      "PRMT R19, R3, 0x4342, RZ"
+    ],
+    "conclusion": "Four scale-pair constructions per static stage body already hoisted across four load groups; no new explicit-hoisting saving established."
+  }
+}

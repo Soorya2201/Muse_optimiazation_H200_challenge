@@ -1,0 +1,56 @@
+{
+  "captured_utc": "2026-10-31T19:32:05.857852+00:00",
+  "scope": "Selected default-branch fork comparisons; other branches excluded.",
+  "forks": [
+    {
+      "repo": "1sgtpepper/sglang",
+      "branch": "main",
+      "parent": "sgl-project/sglang",
+      "comparison_status": "behind",
+      "ahead_by": 0,
+      "behind_by": 3591,
+      "changed_paths": [],
+      "url": "https://github.com/sgl-project/sglang/compare/main...1sgtpepper:main"
+    },
+    {
+      "repo": "anmolsinghal/sglang",
+      "branch": "main",
+      "parent": "sgl-project/sglang",
+      "comparison_status": "behind",
+      "ahead_by": 0,
+      "behind_by": 51,
+      "changed_paths": [],
+      "url": "https://github.com/sgl-project/sglang/compare/main...anmolsinghal:main"
+    },
+    {
+      "repo": "baobabtr33/sglang",
+      "branch": "main",
+      "parent": "sgl-project/sglang",
+      "comparison_status": "behind",
+      "ahead_by": 0,
+      "behind_by": 92,
+      "changed_paths": [],
+      "url": "https://github.com/sgl-project/sglang/compare/main...baobabtr33:main"
+    },
+    {
+      "repo": "oniisanlabs/sglang",
+      "branch": "main",
+      "parent": "sgl-project/sglang",
+      "comparison_status": "behind",
+      "ahead_by": 0,
+      "behind_by": 265,
+      "changed_paths": [],
+      "url": "https://github.com/sgl-project/sglang/compare/main...oniisanlabs:main"
+    },
+    {
+      "repo": "anencore94/sglang",
+      "branch": "main",
+      "parent": "sgl-project/sglang",
+      "comparison_status": "behind",
+      "ahead_by": 0,
+      "behind_by": 10159,
+      "changed_paths": [],
+      "url": "https://github.com/sgl-project/sglang/compare/main...anencore94:main"
+    }
+  ]
+}

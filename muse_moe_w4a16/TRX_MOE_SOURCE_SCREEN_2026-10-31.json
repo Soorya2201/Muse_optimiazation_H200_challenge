@@ -1,0 +1,33 @@
+{
+  "repo": "trxphxle/okc-2026-muse-kernels",
+  "commit": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+  "files": [
+    {
+      "path": "kernels/moe.py",
+      "bytes": 193527,
+      "sha256": "ee6183000e8d179428308a1dbd28d48d3ae06481f133591dcaae2f488d3d451f",
+      "git_blob_sha1": "11b968e39d669575eab7f79fd55d1349f539098e",
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/kernels/moe.py"
+    },
+    {
+      "path": "kernels/BEST.json",
+      "bytes": 3312,
+      "sha256": "97367602eaaee8dc84410f82b2dee74c13e54d862359ff4118b47341f18d176a",
+      "git_blob_sha1": "1a33cd84824410838845db310fdcfed5eeb50b0d",
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/kernels/BEST.json"
+    }
+  ],
+  "publisher_manifest": {
+    "file": "best/moe.py",
+    "problem": "muse_moe_w4a16",
+    "ranked_speedup": 2.3249,
+    "job": "c159271f4be34bc6",
+    "run_record": "outputs/openkernel-challenge/runs/moe-multilayout-ranked.json",
+    "original": "outputs/openkernel-challenge/moe/submission_persistent_reproduction.py",
+    "sha256": "ee6183000e8d179428308a1dbd28d48d3ae06481f133591dcaae2f488d3d451f",
+    "counts_toward_overall": true,
+    "first_line": "# okc: problem=muse_moe_w4a16"
+  },
+  "independently_reproduced": false,
+  "scope": "Header,prepare,dispatch,native BF16-boundary changes reviewed. Source predates KPERM3; no stronger additive performance component established; no code executed or ported."
+}

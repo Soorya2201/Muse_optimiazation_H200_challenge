@@ -1,0 +1,266 @@
+{
+  "captured_utc": "2026-10-31T18:55:17.806017+00:00",
+  "scope": "Selected hash-verified source downloaded to temporary research storage; no source imported or executed; no kernel port or performance claim.",
+  "files": [
+    {
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "head": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "path": "README.md",
+      "git_blob_sha1": "dc6b2c88416d6700fa3fb2ff308a278517df2f0d",
+      "sha256": "2cb0f0ee6c546f260f4184c607983d0603da7714b6a4a2d0ece6b2eb5261c284",
+      "bytes": 9826,
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/README.md",
+      "local_temporary": "/tmp/moe_component_review_20261031/trxphxle__okc-2026-muse-kernels/README.md"
+    },
+    {
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "head": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "path": "results/official-runs/moe-multilayout-ranked.json",
+      "git_blob_sha1": "b20c78d7ea59fdae312fe1adfa0c537392e82fba",
+      "sha256": "ffe5a3fb4237ef287c5125a382fb89508e11a0e9af5aca384b797c9d78b0a470",
+      "bytes": 63278,
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/results/official-runs/moe-multilayout-ranked.json",
+      "local_temporary": "/tmp/moe_component_review_20261031/trxphxle__okc-2026-muse-kernels/results/official-runs/moe-multilayout-ranked.json"
+    },
+    {
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "head": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "path": "results/official-runs/moe-single-layout-ranked.json",
+      "git_blob_sha1": "8b69346c316c7f7b283c2a92fba99454ec78b906",
+      "sha256": "7d880350dab37d8ab0af4ad6422cf8345d502fe0fddc6db7da5b4939f591f611",
+      "bytes": 63436,
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/results/official-runs/moe-single-layout-ranked.json",
+      "local_temporary": "/tmp/moe_component_review_20261031/trxphxle__okc-2026-muse-kernels/results/official-runs/moe-single-layout-ranked.json"
+    },
+    {
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "head": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "path": "results/official-runs/moe-split-storage-ranked.json",
+      "git_blob_sha1": "d32062c4e314b9bbd429c6b5f317b9098d60cd1d",
+      "sha256": "da0bb406f8d9a8203b6f7278e7de0548940d875425682ad1adf429bda4542503",
+      "bytes": 63794,
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/results/official-runs/moe-split-storage-ranked.json",
+      "local_temporary": "/tmp/moe_component_review_20261031/trxphxle__okc-2026-muse-kernels/results/official-runs/moe-split-storage-ranked.json"
+    },
+    {
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "head": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "path": "tools/screen_moe.py",
+      "git_blob_sha1": "00a0aa2dc6d88357d10b11baa34e3e940525d00f",
+      "sha256": "87354be80513d66105df3b003079a5a69212380a994d806a11e92225d71508c5",
+      "bytes": 20963,
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/tools/screen_moe.py",
+      "local_temporary": "/tmp/moe_component_review_20261031/trxphxle__okc-2026-muse-kernels/tools/screen_moe.py"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v1/submission.py",
+      "git_blob_sha1": "3f4bb3b16b0a15d5761d899d70a2d53f61a793ea",
+      "sha256": "5b3f41a2213fd4d4fc69e50bb2d3ec328d2073a512ecbead6b3e3680a63676b2",
+      "bytes": 25845,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v1/submission.py",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v1/submission.py"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v1/judge-profile.txt",
+      "git_blob_sha1": "78f86ef4ac906b4480e4e3907d405a03cb42745b",
+      "sha256": "cf0e63ad225726f6a303fc24a68264ef884bccb3fcba0c05b19da918d6fa9172",
+      "bytes": 5285,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v1/judge-profile.txt",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v1/judge-profile.txt"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v2/submission.py",
+      "git_blob_sha1": "334cf66ab04bb2d2168ab97204ecd41094a8b46f",
+      "sha256": "207b8dfaf17ca2d3dd4e29a88411cc60ccfef75949f71c944af96486280e1fe9",
+      "bytes": 29638,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v2/submission.py",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v2/submission.py"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v2/judge-profile.txt",
+      "git_blob_sha1": "2be222c4f18f9ebf1da02f8a02f54a6d50f9db56",
+      "sha256": "d972385b63bd286e8a9f8ef6ac236eb69fabcdef7af46a78eb9f6e56f00c6ac6",
+      "bytes": 5284,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v2/judge-profile.txt",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v2/judge-profile.txt"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v3/submission.py",
+      "git_blob_sha1": "58b6b9f05eb4c26eafb39c7bc108e5ba99785a3c",
+      "sha256": "a37142d3cc20f40d502fe30580b9b020c6fdce5750c196d066586b70a82c6546",
+      "bytes": 31476,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v3/submission.py",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v3/submission.py"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v3/judge-profile.txt",
+      "git_blob_sha1": "6e678fbd1ce11889890593efa4524882334f89d7",
+      "sha256": "d101054cc9b48c69af6c9d56cb25fbb630e562ac81e0a9030d96875057d34287",
+      "bytes": 5284,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v3/judge-profile.txt",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v3/judge-profile.txt"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v4/submission.py",
+      "git_blob_sha1": "77d90694a4514e50964f3cf9a53f3b26871e0ce5",
+      "sha256": "225e7e6de3067aa8b5fe124602ef521da3d3e4c332aa4726143e5617d7e3684f",
+      "bytes": 31837,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v4/submission.py",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v4/submission.py"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v4/judge-profile.txt",
+      "git_blob_sha1": "b3d884db046087daf63bbe104401924a4016728e",
+      "sha256": "f4ae1c094a6514cad4fb0cbd848529c59363df1a1e040e9acdf8e32e87a61483",
+      "bytes": 5283,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v4/judge-profile.txt",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v4/judge-profile.txt"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v5/submission.py",
+      "git_blob_sha1": "4cf39ed30f5048a7cfc6ec72fac4586f6a8b2af0",
+      "sha256": "94a965bfac0b7db6179a6cf47e3c59acec066d9e8e9943483aa0ef7c21b12945",
+      "bytes": 32028,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v5/submission.py",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v5/submission.py"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v5/judge-profile.txt",
+      "git_blob_sha1": "4d490796f38817e456b5f7035e1b53c32644d097",
+      "sha256": "0edcfab5053c2ff07f3aeee941bf26726814c86fe33d6560d06cb0188119d1d4",
+      "bytes": 5283,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v5/judge-profile.txt",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v5/judge-profile.txt"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v6/submission.py",
+      "git_blob_sha1": "01fd7786c0c70f4ac78f366869df75cd0bccd42e",
+      "sha256": "6045575ab1b70afe33de1f0e72297e8fa3f251b10b74ff7146f712d7bf93f94d",
+      "bytes": 8623,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v6/submission.py",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v6/submission.py"
+    },
+    {
+      "repo": "ScrashOff/okc-muse-kernels",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "path": "history/muse_moe_w4a16/v6/judge-profile.txt",
+      "git_blob_sha1": "e14406ee8ae304503a97498ab524d28eb3e74d66",
+      "sha256": "cd69d3c71c09f5e928cec35120ea4aa3d366a34790ac3d1328950922d2b55882",
+      "bytes": 10567,
+      "url": "https://github.com/ScrashOff/okc-muse-kernels/blob/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_moe_w4a16/v6/judge-profile.txt",
+      "local_temporary": "/tmp/moe_component_review_20261031/ScrashOff__okc-muse-kernels/history/muse_moe_w4a16/v6/judge-profile.txt"
+    },
+    {
+      "repo": "dnv2003/v100-skinny",
+      "head": "5b589c0dc81223e0ba65bcb3e755874723f8b515",
+      "path": "README.md",
+      "git_blob_sha1": "bb6450e217daad3cdc7317dcd3e0c902a6f24309",
+      "sha256": "433e66b4b538297893223431fe6da56a4df3d2ec33d175809b12e73331a0162b",
+      "bytes": 33617,
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/README.md",
+      "local_temporary": "/tmp/moe_component_review_20261031/dnv2003__v100-skinny/README.md"
+    },
+    {
+      "repo": "dnv2003/v100-skinny",
+      "head": "5b589c0dc81223e0ba65bcb3e755874723f8b515",
+      "path": "LICENSE",
+      "git_blob_sha1": "4ebe0915f22751ae35f4d5960afb9944507a94f9",
+      "sha256": "ea8d0bfb05424067d00b913000fff307526d0e84010d60bf6dc5003c461bf273",
+      "bytes": 2007,
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/LICENSE",
+      "local_temporary": "/tmp/moe_component_review_20261031/dnv2003__v100-skinny/LICENSE"
+    },
+    {
+      "repo": "dnv2003/v100-skinny",
+      "head": "5b589c0dc81223e0ba65bcb3e755874723f8b515",
+      "path": "NOTICE",
+      "git_blob_sha1": "10009ceadc3c8cbafbe96aef14f5e667c0e59b2b",
+      "sha256": "1d9ac30258f015c2351636c2195d2a9d7ffe4d5d6b8a55e9f3c4f7ae50624578",
+      "bytes": 2188,
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/NOTICE",
+      "local_temporary": "/tmp/moe_component_review_20261031/dnv2003__v100-skinny/NOTICE"
+    },
+    {
+      "repo": "dnv2003/v100-skinny",
+      "head": "5b589c0dc81223e0ba65bcb3e755874723f8b515",
+      "path": "docs/qpn_race_notes.md",
+      "git_blob_sha1": "5755c1d8458d7486db0cb75bf0638710a6d70e2a",
+      "sha256": "bac4ce23492a5b72e7f091b7aa91a9012bd8dcc97cd212ce6c060233760fb3ab",
+      "bytes": 3911,
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/docs/qpn_race_notes.md",
+      "local_temporary": "/tmp/moe_component_review_20261031/dnv2003__v100-skinny/docs/qpn_race_notes.md"
+    },
+    {
+      "repo": "dnv2003/v100-skinny",
+      "head": "5b589c0dc81223e0ba65bcb3e755874723f8b515",
+      "path": "kernels/skinny_kernels.cu",
+      "git_blob_sha1": "6e2f33760712f6da933b001693f09806ffefa698",
+      "sha256": "112ae57bdae0a0763d9898ad7b49eaf927be411cda0bde5344a76821d166533e",
+      "bytes": 82010,
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/kernels/skinny_kernels.cu",
+      "local_temporary": "/tmp/moe_component_review_20261031/dnv2003__v100-skinny/kernels/skinny_kernels.cu"
+    },
+    {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "head": "2d1a7d170eb808bbe0e1203aa9d34dea702d52c5",
+      "path": "LICENSE",
+      "git_blob_sha1": "0b58d015e42efd81c98a44b91bb2a6dd7293e9f2",
+      "sha256": "a56e691155bb532ea212f701d3ecacb2db549fa64757f9bad3e06bc9177f46ea",
+      "bytes": 40678,
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/2d1a7d170eb808bbe0e1203aa9d34dea702d52c5/LICENSE",
+      "local_temporary": "/tmp/moe_component_review_20261031/NVIDIA__TensorRT-LLM/LICENSE"
+    },
+    {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "head": "2d1a7d170eb808bbe0e1203aa9d34dea702d52c5",
+      "path": "cpp/tensorrt_llm/kernels/weightOnlyBatchedGemv/cudaCoreGemmNVFP4.cu",
+      "git_blob_sha1": "5c8f6615d8b2fc30dcb07c2caac11ef904270774",
+      "sha256": "afe355df20c36746d599898024cf681fd0613c22370ba8ccf4a8bc0d30d059df",
+      "bytes": 12849,
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/2d1a7d170eb808bbe0e1203aa9d34dea702d52c5/cpp/tensorrt_llm/kernels/weightOnlyBatchedGemv/cudaCoreGemmNVFP4.cu",
+      "local_temporary": "/tmp/moe_component_review_20261031/NVIDIA__TensorRT-LLM/cpp/tensorrt_llm/kernels/weightOnlyBatchedGemv/cudaCoreGemmNVFP4.cu"
+    },
+    {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "head": "2d1a7d170eb808bbe0e1203aa9d34dea702d52c5",
+      "path": "cpp/tensorrt_llm/kernels/marlin/marlin_nvfp4_moe_template.h",
+      "git_blob_sha1": "2dc9d6390e6dcab7e333bcef86fa7deb4f1ba616",
+      "sha256": "d70954bd7f3ecba289f9a86d76d3aa0b9274fbff2f93b540257a7444088c3da9",
+      "bytes": 84089,
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/2d1a7d170eb808bbe0e1203aa9d34dea702d52c5/cpp/tensorrt_llm/kernels/marlin/marlin_nvfp4_moe_template.h",
+      "local_temporary": "/tmp/moe_component_review_20261031/NVIDIA__TensorRT-LLM/cpp/tensorrt_llm/kernels/marlin/marlin_nvfp4_moe_template.h"
+    },
+    {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "head": "2d1a7d170eb808bbe0e1203aa9d34dea702d52c5",
+      "path": "cpp/tensorrt_llm/kernels/marlin/marlin_nvfp4_moe_gemm.cu",
+      "git_blob_sha1": "97a75344d150c1cffa179d02d63af14300a6543c",
+      "sha256": "dbb8a92201a2dabf0bdc5934a11c466993d098682737b16024e09e40bba31f30",
+      "bytes": 12146,
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/2d1a7d170eb808bbe0e1203aa9d34dea702d52c5/cpp/tensorrt_llm/kernels/marlin/marlin_nvfp4_moe_gemm.cu",
+      "local_temporary": "/tmp/moe_component_review_20261031/NVIDIA__TensorRT-LLM/cpp/tensorrt_llm/kernels/marlin/marlin_nvfp4_moe_gemm.cu"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "captured_utc": "2026-10-31T19:34:09.150981+00:00",
+  "repo": "dnv2003/v100-skinny",
+  "commit": "5b589c0dc81223e0ba65bcb3e755874723f8b515",
+  "scope": "Unmodified licensed source/docs retained for research. Reviewed QPN geometry/scale lifetime and FP16 operand contract; no module executed or imported into submissions. Does not establish an H200 gain.",
+  "license": "Directory-scoped MIT for selected kernels/docs; root dual-license notice and Apache license retained.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 2007,
+      "sha256": "ea8d0bfb05424067d00b913000fff307526d0e84010d60bf6dc5003c461bf273",
+      "git_blob_sha1": "4ebe0915f22751ae35f4d5960afb9944507a94f9",
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/LICENSE"
+    },
+    {
+      "path": "LICENSE-APACHE-2.0",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/LICENSE-APACHE-2.0"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 2188,
+      "sha256": "1d9ac30258f015c2351636c2195d2a9d7ffe4d5d6b8a55e9f3c4f7ae50624578",
+      "git_blob_sha1": "10009ceadc3c8cbafbe96aef14f5e667c0e59b2b",
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/NOTICE"
+    },
+    {
+      "path": "README.md",
+      "bytes": 33617,
+      "sha256": "433e66b4b538297893223431fe6da56a4df3d2ec33d175809b12e73331a0162b",
+      "git_blob_sha1": "bb6450e217daad3cdc7317dcd3e0c902a6f24309",
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/README.md"
+    },
+    {
+      "path": "docs/qpn_race_notes.md",
+      "bytes": 3911,
+      "sha256": "bac4ce23492a5b72e7f091b7aa91a9012bd8dcc97cd212ce6c060233760fb3ab",
+      "git_blob_sha1": "5755c1d8458d7486db0cb75bf0638710a6d70e2a",
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/docs/qpn_race_notes.md"
+    },
+    {
+      "path": "kernels/skinny_kernels.cu",
+      "bytes": 82010,
+      "sha256": "112ae57bdae0a0763d9898ad7b49eaf927be411cda0bde5344a76821d166533e",
+      "git_blob_sha1": "6e2f33760712f6da933b001693f09806ffefa698",
+      "url": "https://github.com/dnv2003/v100-skinny/blob/5b589c0dc81223e0ba65bcb3e755874723f8b515/kernels/skinny_kernels.cu"
+    }
+  ]
+}

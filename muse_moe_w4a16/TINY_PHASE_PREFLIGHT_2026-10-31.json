@@ -1,0 +1,18 @@
+{
+  "scope": "CPU-only report/fixture/source preflight, not CUDA correctness or timing.",
+  "source_sha256": "ec031d29e2218830859b0b452d72b638d3a3541323761decf2089c216d8f9270",
+  "canonical_prefix_exact": true,
+  "kernel_functions_unchanged": true,
+  "cpu_routing_fixtures": 120,
+  "stress_rows": 40,
+  "exact_event_timestamps": 1280,
+  "exact_u64_clocks": 1584,
+  "payload_chars": 13792,
+  "retention_limit": 16000,
+  "edge_roundtrip": true,
+  "lossy_metric_rejected": true,
+  "rejected_initial_protocol": {
+    "payload_chars": 20388,
+    "reason": "Exceeded 16000 tail; repaired before GPU launch without dropping samples."
+  }
+}

@@ -68,6 +68,60 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 MoE tiny-phase diagnostic in progress; poll V34, no new check
+
+Previous turn made progress: prefill K64 integration/paired H200 result
+committed and pushed2add674, no eligible whole-board gain. Current cycle
+stays MoE. Read `muse_moe_w4a16/TINY_PHASE_RESEARCH_2026-10-31.md` and
+`PUBLIC_COMPONENT_REVIEW_2026-10-31T1855Z.md`.
+
+**Live check0311db63cda7430f on sfo3, V34. Poll this same handle.** Source
+`submission_v34_tiny_phase_import_repair.py`, SHA100ac4f6f3ed9d4f3abb9bf4e8a3a4c74b9c578f562e5a634918967e85c36338.
+It is the eighth of eight routine MoE checks Oct31; no submits. Keep owner
+reserve; do not start a replacement for observation timeout. Canonical full
+kernel_fn remains unchanged parent. Prepare-only TINY attribution aims for
+40one-token groups/2seeds/4scratchpads/0,1,2,4,8local routes, three nearby
+fixtures and two132-CTA/six-clock traces. Fixed numerical/resource/control/
+perturbation gates in dated report. Full exact codec preserves1280events/
+1584clocks at13792stresschars; all timings use balanced external events and
+read-only256MiB cache eviction. No candidate or score improvement yet.
+
+V33/98d6fe3859ed47c8 sfo3 passes5parent tests/6timings2.366531492x,
+CI2.331034–2.402029,prepare168.185s; independent probe fails immediately
+with missing hashlib import before any CUDA build. No resources/groups/
+traces;failure archived, all six profiles/local+remote logs read. Preserve
+immutable V33 SHAec031d29e2218830859b0b452d72b638d3a3541323761decf2089c216d8f9270.
+V34 changes only host hash import/tag call. New CPU dry-run reproduces old
+NameError, executes four repaired trace/control build setups with both scale
+flags, and proves generated CUDA differs only DEBUG0/1 and prefix unchanged.
+This is host verification, not a CUDA correctness/resource claim.
+
+Fresh indexed MoE217paths/13repos,0newblobs.1249owner metadata177above/
+1071below+self,5unresolved404;19newrepo matches vs Oct30 inventory. Five
+SGLang default forks0ahead/0changed.26selectedfiles/691225bytes and2trx
+supplement files hash-verified. ScrashOff6versions/42externalcells parsed,
+finalMarlin source no stronger component/license unestablished/no port.
+TrxMoE ee618300 matchespublisher2.3249xmanifest,olderpre-KPERMparent.
+V100skinny5b589c0 six MIT/dual-license source/docs filespinned;FP16Volta
+QPN geometry/scale reuse,not a directBF16H200port. TRTMarlinBF16 path
+compatibleinprinciplebutalreadybaselinefamily;CUDAcoreFP4pathconsumes
+FP4activations and is excluded. No downloaded codeexecuted/imported.
+
+New restricted7-op decoder feasibility search442368byte-selections has no
+solution;not all circuits proof. Existing reducedNTT8SASS has8PRMTsites
+in two stage bodies,alreadyhoistsKPERMscale pairs;no explicit-hoist gain.
+Closed uniform-loop/fence/ring/dequant families stayclosed. No canonical/
+scoredchange. Latest19:28:04UTC snapshotoverall147/1764,decoder147/1108,
+MoE179/1251,attention192/1192,BF16246/1546,prefill181/754;speedupsunchanged.
+MoE8/8,attention1/8,BF163/8,decoder1/8,prefill5/8,allsubmits0.
+
+Active internal checkout `/Users/soorya/muse_work/continuation_20261030`;
+external volume absent. No agents. Goal active/incomplete, no rank1.
+Finish V34 polling/archive/read all passing profiles/logs, decode via
+`tools/extract_moe_tiny_phase_probe.py`, document terminalgates before any
+next-track decision. Evidence push pending; do not mark goalcomplete.
+
+
 #### Oct31 prefill K64 integration cycle complete; next sequential track MoE
 
 Read `muse_prefill_layer/SCALE_SHARE_H200_2026-10-31.md`. Previous turn made

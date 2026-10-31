@@ -1,6 +1,15 @@
 # `muse_moe_w4a16` optimization record
 
 This file records measured results, including regressions. Estimates are explicitly marked.
+
+Oct31 current cycle: new public component/library and restricted decoder
+screens are in PUBLIC_COMPONENT_REVIEW_2026-10-31T1855Z.md. No faster
+replacement established. V33 tiny-phase diagnostic fails before GPU build
+(missing host hashlib import); parent passes but yields no diagnostic data.
+V34 host-only repair0311db63cda7430f is live on sfo3, final routine check8/8.
+Poll same handle; canonical/scored unchanged. Read TINY_PHASE_RESEARCH and
+TINY_PHASE_REPAIR_PREFLIGHT before continuing. Do not treat parent point
+score as an optimization gain. No new scored submission.
 The next Oct31 main-loop experiment and expanded branch/gist/component
 research are in [STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md](STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md).
 It studies a new uniform stage body and asynchronous zero-MMA initialization,

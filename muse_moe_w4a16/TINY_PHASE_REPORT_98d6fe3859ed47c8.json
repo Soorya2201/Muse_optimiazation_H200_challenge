@@ -1,0 +1,35 @@
+{
+  "job": "98d6fe3859ed47c8",
+  "cluster": "sfo3",
+  "source_sha256": "ec031d29e2218830859b0b452d72b638d3a3541323761decf2089c216d8f9270",
+  "scope": "Independent synthetic tiny-kernel attribution only. Timed challenge dispatch unchanged. Counterfactual subtractions are not critical-path bounds or measured speedups.",
+  "payload_chars": 620,
+  "diagnostic": {
+    "status": "failed",
+    "stage": "build",
+    "rows": [],
+    "nearby": [],
+    "traces": [],
+    "clock_columns": [
+      "entry",
+      "routed",
+      "phase_a_end",
+      "phase_b_end",
+      "grid_barrier_end",
+      "exit"
+    ],
+    "arms": [
+      "a0",
+      "old",
+      "trace",
+      "a1"
+    ],
+    "rounds": 8,
+    "error": "NameError(\"name 'hashlib' is not defined\")",
+    "trace": "Traceback (most recent call last):\n  File \"/tmp/muse_moe_w4a16-h1upqd38/run/submission.py\", line 3690, in _tp_probe\n    old=_tp_build(st,False);trace=_tp_build(st,True)\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/muse_moe_w4a16-h1upqd38/run/submission.py\", line 3639, in _tp_build\n    tag=hashlib.sha256((cpp+native+repr(defines)).encode()).hexdigest()[:16]\n        ^^^^^^^\nNameError: name 'hashlib' is not defined. Did you forget to import 'hashlib'\n",
+    "seconds": 0.002238878980278969
+  },
+  "summary_by_local_routes": [],
+  "trace_analysis": [],
+  "attribution_gate": false
+}
