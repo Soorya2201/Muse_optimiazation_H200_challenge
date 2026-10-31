@@ -67,6 +67,26 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### LIVE Oct31 attention integer-exp V28 check d5959e1bdf8b4ad8
+
+Source/protocol/CPU/compiler checkpoint pushed314a889. Only attention active.
+Read muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md. SourceSHA
+881f9a61d5f9f6343505680eae30b092e23f1c79090dee436102d03b388ad252.
+This is prepare-only25/37.5% integer quadratic packed-P; timed parent
+prefix unchanged. Checkd5959e1bdf8b4ad8 submitted, pollsamehandle until
+terminal; do notrestart onobservationtimeout. Secondof8routineattention
+checks,allsubmits0,reserveintact. CPU32769fractionstates/375090FP32
+samples worst.002689395; finalNVCC13.0.1 standalone32regs/0spills,
+pack32native112sites/new25=192,new37.5=224. Not fullkernelresources
+or speedup. Fixed1%parentglobal/5%row gates unchanged;6nearby/16groups
+planned,576eventfloat32bit values retained. Primary/cleanup errors both
+preserved. V25/26/27earlier unsubmitteddrafts retained,onlyV28launched.
+TwoNVCC13.0.0HTTP502responses archived;13.0.1works. Fullrepo diffcheck
+flags inherited parent-prefix whitespace; preserve canonical/source hashes,
+verify new suffix separately. No new scored result orrank1yet. Noagents.
+Preserve untracked research/public/madhavan_721c627/ untouched.
+
+
 #### Oct31 tiny MoE pair-table screen complete; next sequential track attention
 
 Previous goal turn only refreshed ranks (no optimization progress). This
