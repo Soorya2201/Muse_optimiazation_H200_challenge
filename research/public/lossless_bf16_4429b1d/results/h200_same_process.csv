@@ -1,0 +1,54 @@
+# H200 SXM, CUDA graph of one call, L2 flushed before every replay by reading (sum) a 64 MiB buffer.
+# Each value is the median of 24 replays (column best_12bit_replays: '24'; '3x24' = median of three 24-replay
+# medians, used at m = 1; '5' = 5-replay screening median, used when no 24-replay value of a 12-bit kernel was logged).
+# Times include the fixed cost of launching a graph (about 3-4 us) on both sides. cublas = cuBLAS default heuristic.
+# best_cublaslt_listed_us / best_bf16_custom_listed_us: fastest non-default cuBLASLt algorithm / uncompressed custom
+# kernel among the four fastest candidates logged for the row (empty = none of them was among the four fastest).
+run,shape,role,n,k,m,cublas_us,best_12bit_us,best_12bit_kernel,best_12bit_cfg,best_12bit_grid,best_12bit_replays,speedup_vs_cublas,best_cublaslt_listed_us,best_bf16_custom_listed_us,fastest_candidate_kind
+R1,qkv,fused Q/K/V/gate projection,2304,8192,1,17.28,14.02,rowpair,1,,3x24,1.233,,13.70,uncompressed custom kernel
+R1,qkv,fused Q/K/V/gate projection,2304,8192,8,17.31,14.91,fullk,6,,24,1.161,,,12-bit
+R1,qkv,fused Q/K/V/gate projection,2304,8192,16,17.31,15.90,splitk,1,132,24,1.089,,,12-bit
+R1,qkv,fused Q/K/V/gate projection,2304,8192,32,17.73,18.50,splitk,2,128,5,0.958,17.38,,cuBLASLt other algorithm
+R1,attn_out,attention output projection,8192,1024,1,9.98,8.90,rowpair,6,,3x24,1.121,,8.93,12-bit
+R1,attn_out,attention output projection,8192,1024,8,9.92,10.30,fullk,1,,5,0.963,9.79,,cuBLASLt other algorithm
+R1,attn_out,attention output projection,8192,1024,16,9.82,12.03,splitk,1,132,5,0.816,9.79,,cuBLASLt other algorithm
+R1,attn_out,attention output projection,8192,1024,32,9.89,13.06,splitk,2,132,5,0.757,9.92,,cuBLAS default
+R1,moe_in,hidden -> MoE width,4096,8192,1,24.54,18.05,fullk,6,,3x24,1.360,,,12-bit
+R1,moe_in,hidden -> MoE width,4096,8192,8,24.13,18.11,fullk,6,,24,1.332,,,12-bit
+R1,moe_in,hidden -> MoE width,4096,8192,16,24.45,19.81,fullk,3,,24,1.234,,,12-bit
+R1,moe_in,hidden -> MoE width,4096,8192,32,25.02,23.17,fullk,8,,24,1.080,23.39,,12-bit
+R1,moe_out_tp8,"MoE width -> hidden, 1/8 tensor-parallel slice",1024,4096,1,10.14,7.17,rowpair,3,,3x24,1.414,,7.23,12-bit
+R1,moe_out_tp8,"MoE width -> hidden, 1/8 tensor-parallel slice",1024,4096,8,10.34,9.02,fullk,6,,24,1.146,,9.12,12-bit
+R1,moe_out,MoE width -> hidden,8192,4096,16,21.76,19.46,fullk,10,,24,1.118,21.06,,12-bit
+R1,moe_out,MoE width -> hidden,8192,4096,32,21.95,25.73,fullk,8,,5,0.853,21.41,,cuBLASLt other algorithm
+R2,qkv,fused Q/K/V/gate projection,2304,8192,1,17.34,13.86,fullk_tma,0,,3x24,1.251,,13.76,uncompressed custom kernel
+R2,qkv,fused Q/K/V/gate projection,2304,8192,8,17.73,15.07,fullk,6,,24,1.177,,,12-bit
+R2,qkv,fused Q/K/V/gate projection,2304,8192,16,17.47,15.87,splitk,1,132,24,1.101,,,12-bit
+R2,qkv,fused Q/K/V/gate projection,2304,8192,32,17.86,18.43,splitk,2,128,24,0.969,17.31,,cuBLASLt other algorithm
+R2,attn_out,attention output projection,8192,1024,1,10.02,9.02,rowpair,6,,3x24,1.111,,9.09,12-bit
+R2,attn_out,attention output projection,8192,1024,8,9.92,10.24,fullk,1,,5,0.969,9.95,,cuBLAS default
+R2,attn_out,attention output projection,8192,1024,16,9.98,12.10,splitk,1,128,5,0.825,9.76,,cuBLASLt other algorithm
+R2,attn_out,attention output projection,8192,1024,32,9.98,13.12,splitk,2,128,5,0.761,9.95,,cuBLASLt other algorithm
+R2,moe_in,hidden -> MoE width,4096,8192,1,24.51,18.37,fullk,6,,3x24,1.334,,,12-bit
+R2,moe_in,hidden -> MoE width,4096,8192,8,24.48,18.46,fullk,6,,24,1.326,,,12-bit
+R2,moe_in,hidden -> MoE width,4096,8192,16,24.48,19.84,fullk,3,,24,1.234,,,12-bit
+R2,moe_in,hidden -> MoE width,4096,8192,32,25.18,23.07,fullk,8,,24,1.091,23.62,,12-bit
+R2,moe_out_tp8,"MoE width -> hidden, 1/8 tensor-parallel slice",1024,4096,1,10.18,7.30,rowpair,3,,3x24,1.395,,7.36,12-bit
+R2,moe_out_tp8,"MoE width -> hidden, 1/8 tensor-parallel slice",1024,4096,8,10.27,9.06,fullk,6,,24,1.134,,9.28,12-bit
+R2,moe_out,MoE width -> hidden,8192,4096,16,21.70,19.42,fullk,10,,24,1.117,21.09,,12-bit
+R2,moe_out,MoE width -> hidden,8192,4096,32,21.63,26.14,fullk,8,,5,0.827,21.31,,cuBLASLt other algorithm
+R3,qkv,fused Q/K/V/gate projection,2304,8192,8,17.18,15.04,fullk,6,,24,1.142,,,12-bit
+R3,qkv,fused Q/K/V/gate projection,2304,8192,16,17.31,15.97,splitk,1,132,24,1.084,,,12-bit
+R3,qkv,fused Q/K/V/gate projection,2304,8192,32,17.57,18.14,splitk,2,128,5,0.969,,,cuBLASLt split-K + custom reduction
+R3,attn_out,attention output projection,8192,1024,1,9.82,8.70,rowpair,6,,3x24,1.129,,8.83,12-bit
+R3,attn_out,attention output projection,8192,1024,8,9.73,10.05,fullk,1,,5,0.968,9.76,,cuBLAS default
+R3,attn_out,attention output projection,8192,1024,16,9.73,12.32,fullk,3,,5,0.790,9.79,,cuBLAS default
+R3,attn_out,attention output projection,8192,1024,32,9.95,13.15,splitk,2,132,5,0.757,9.86,,cuBLASLt other algorithm
+R3,moe_in,hidden -> MoE width,4096,8192,1,24.03,17.86,fullk,6,,3x24,1.345,,,12-bit
+R3,moe_in,hidden -> MoE width,4096,8192,8,24.19,18.11,fullk,6,,24,1.336,,,12-bit
+R3,moe_in,hidden -> MoE width,4096,8192,16,24.26,19.65,fullk,3,,24,1.235,,,12-bit
+R3,moe_in,hidden -> MoE width,4096,8192,32,24.74,23.01,fullk,8,,24,1.075,23.39,,12-bit
+R3,moe_out_tp8,"MoE width -> hidden, 1/8 tensor-parallel slice",1024,4096,1,9.98,7.23,rowpair,3,,3x24,1.380,,7.20,uncompressed custom kernel
+R3,moe_out_tp8,"MoE width -> hidden, 1/8 tensor-parallel slice",1024,4096,8,10.18,8.99,fullk,6,,24,1.132,,9.09,12-bit
+R3,moe_out,MoE width -> hidden,8192,4096,16,21.50,19.26,fullk,10,,24,1.116,21.09,,12-bit
+R3,moe_out,MoE width -> hidden,8192,4096,32,21.86,25.50,fullk,8,,5,0.857,21.28,,cuBLASLt other algorithm

@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import statistics
+import struct
 import zlib
 
 parser = argparse.ArgumentParser(description=__doc__)
@@ -14,10 +15,18 @@ args = parser.parse_args()
 ROOT = Path(__file__).resolve().parents[1]
 folder = ROOT / 'muse_bf16_proj'
 receipt = json.loads((folder / 'run_receipts' / (args.job+'.json')).read_text())
-payloads = [s.split('BF16_C12_PERMUTE_Z ',1)[1] for s in receipt['log_tail'].splitlines()
-            if s.startswith('BF16_C12_PERMUTE_Z ')]
+markers=('BF16_C12_PERMUTE_Z ','BF16_C12_DEVICE_Z ')
+lines=[s for s in receipt['log_tail'].splitlines() if s.startswith(markers)]
+payloads=[s.split(' ',1)[1] for s in lines]
 assert len(payloads)==1, 'Require one complete final diagnostic, never treat missing logs as a pass'
-d = json.loads(zlib.decompress(base64.b64decode(payloads[0])))
+wire=zlib.decompress(base64.b64decode(payloads[0]))
+if lines[0].startswith(markers[1]):
+    size=struct.unpack_from('<I',wire)[0];d=json.loads(wire[4:4+size]);buf=wire[4+size:]
+    count=len(d['cases'])*4*d['rounds'];width=d.get('time_word_bytes',4)
+    assert width in(2,4) and len(buf)==count*width
+    times=iter(struct.unpack('<'+str(count)+('H'if width==2 else'I'),buf))
+    for row in d['cases']:row['ns']=[[next(times) for _ in range(d['rounds'])] for _ in range(4)]
+else:d=json.loads(wire)
 out = dict(job=args.job,cluster=receipt['cluster'],source_sha256=receipt['source_sha256'],
     scope='Independent synthetic diagnostic; timed challenge dispatch remains parent. Policy models are not measured board gains.',
     payload_chars=len(payloads[0]),diagnostic=d,summaries=[],policies=[])
@@ -28,7 +37,7 @@ if d['status']=='complete':
         rows=[r for r in d['cases'] if r['id']==spec['id']]
         ratios,matched,controls,aa=[],[],[],[]
         for row in rows:
-            t=row['ns'];assert len(t)==4 and all(len(v)==5 for v in t)
+            t=row['ns'];assert len(t)==4 and all(len(v)==d.get('rounds',5) for v in t)
             row['ratios']={
                 'parent_new':statistics.median(math.sqrt(a*z)/c for a,_,c,z in zip(*t)),
                 'old_new':statistics.median(b/c for _,b,c,_ in zip(*t)),

@@ -1,0 +1,1634 @@
+{
+  "repository": "ScrashOff/okc-muse-kernels",
+  "commit": "d870912e7c5a030c52050bb2445418224c28d9de",
+  "license": null,
+  "scope": "README and seven BF16 Python architecture/dispatch screens,six historical plus shipped profile tables;external claims not independently reproduced.",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/README.md",
+      "git_blob": "d3cc4bd2de9b0519b03413fefe1c9825112646c8",
+      "sha256": "565b33f256c91826aaab6f016ed230cb34e321f11f72677809c886a411ebc7ff",
+      "bytes": 5684
+    },
+    {
+      "path": "history/muse_bf16_proj/v1/judge-profile.txt",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v1/judge-profile.txt",
+      "git_blob": "8120ab3f1e481d37ef0d951dad723960784e51aa",
+      "sha256": "dd59906d463587441389c77d551ce03bdfcda52031c5e3bcd744fb1545b897b8",
+      "bytes": 12877
+    },
+    {
+      "path": "history/muse_bf16_proj/v1/submission.py",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v1/submission.py",
+      "git_blob": "8acb983bcc3fb9d6be86c078db0705f5990ea07c",
+      "sha256": "37e6ddd88419ec356fe9b6bcd4895000399e64b6422693016c6fca00ff6db67e",
+      "bytes": 13290
+    },
+    {
+      "path": "history/muse_bf16_proj/v2/judge-profile.txt",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v2/judge-profile.txt",
+      "git_blob": "317649c76490143e45dccd3d96f7f9899ac9e0a7",
+      "sha256": "254efe4fa1a85e564a3a0399eec48684ce1af75045384b86347f6c49cee53de3",
+      "bytes": 12877
+    },
+    {
+      "path": "history/muse_bf16_proj/v2/submission.py",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v2/submission.py",
+      "git_blob": "31836d4ee630ac69c61077095db8e63294ea10b4",
+      "sha256": "850fadf0d74d6d1cc19ea191c75a0c357eb44d5e2df5d78677dccc87d5401093",
+      "bytes": 15854
+    },
+    {
+      "path": "history/muse_bf16_proj/v3/judge-profile.txt",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v3/judge-profile.txt",
+      "git_blob": "1b54f178418114bad05d119c623f694ac894587a",
+      "sha256": "a5fa140f7886b3430119e36448b06683d2071dc94dc206b5368d12f7a9283b68",
+      "bytes": 12788
+    },
+    {
+      "path": "history/muse_bf16_proj/v3/submission.py",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v3/submission.py",
+      "git_blob": "81599dd50c1fb01a5e30b855f4cc85d7b38207aa",
+      "sha256": "8b0541de88a784acf61c6d72aaba697822add5d8076b6c8fa18caa8aeb36863f",
+      "bytes": 18752
+    },
+    {
+      "path": "history/muse_bf16_proj/v4/judge-profile.txt",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v4/judge-profile.txt",
+      "git_blob": "1650b756ce3376388c26376ffe5232962586163b",
+      "sha256": "e5f83e0c9660992921cfd4c0acc3d20f0b6fb1e24254e3eec6e19e7c0c1a9470",
+      "bytes": 12878
+    },
+    {
+      "path": "history/muse_bf16_proj/v4/submission.py",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v4/submission.py",
+      "git_blob": "cc958294e8bc6280942357b1bf2f1c837523fecf",
+      "sha256": "0a9de41345e8f9a8ba04830f59f3089c2956a93473be619364d0c2356389e853",
+      "bytes": 20194
+    },
+    {
+      "path": "history/muse_bf16_proj/v5/judge-profile.txt",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v5/judge-profile.txt",
+      "git_blob": "616b86aeba5839a7672e3e6fd41c67990bea281d",
+      "sha256": "769c4caba94275eeb356d3613243e41edd90cbd71960297e21368b2fca349488",
+      "bytes": 12787
+    },
+    {
+      "path": "history/muse_bf16_proj/v5/submission.py",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v5/submission.py",
+      "git_blob": "2b76e862f4a61e18e28f9f3ac248d12cd16ad8d4",
+      "sha256": "deb093e2ced0f2de50f455ae775024dbdfee682b0c9fe2e459b6cee76047bef4",
+      "bytes": 16426
+    },
+    {
+      "path": "history/muse_bf16_proj/v6/judge-profile.txt",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v6/judge-profile.txt",
+      "git_blob": "85be8b987900272d5b1c9e46cd58f81eb03e40b1",
+      "sha256": "ecd26be67834109afe434649554a5cabe7e678fbe5f15c2c105e1ea811c2134e",
+      "bytes": 12789
+    },
+    {
+      "path": "history/muse_bf16_proj/v6/submission.py",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_bf16_proj/v6/submission.py",
+      "git_blob": "6f097a6bd5742a113cab74715cf5169ef55f105a",
+      "sha256": "b30003d8ae1504b8ce05ed1286cee4fa7fb459f42e7e71d42e9983f0f0f4a4f1",
+      "bytes": 16965
+    },
+    {
+      "path": "kernels/muse_bf16_proj/judge-profile.txt",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/kernels/muse_bf16_proj/judge-profile.txt",
+      "git_blob": "616b86aeba5839a7672e3e6fd41c67990bea281d",
+      "sha256": "769c4caba94275eeb356d3613243e41edd90cbd71960297e21368b2fca349488",
+      "bytes": 12787
+    },
+    {
+      "path": "kernels/muse_bf16_proj/submission.py",
+      "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/kernels/muse_bf16_proj/submission.py",
+      "git_blob": "2b76e862f4a61e18e28f9f3ac248d12cd16ad8d4",
+      "sha256": "deb093e2ced0f2de50f455ae775024dbdfee682b0c9fe2e459b6cee76047bef4",
+      "bytes": 16426
+    }
+  ],
+  "profiles": [
+    {
+      "path": "history/muse_bf16_proj/v1/judge-profile.txt",
+      "score": 1.1856756002730375,
+      "cells": [
+        {
+          "layer": "qkv_gate",
+          "m": 1,
+          "sglang_us": 13.92,
+          "ours_us": 11.18,
+          "ratio": 1.245
+        },
+        {
+          "layer": "o",
+          "m": 1,
+          "sglang_us": 6.53,
+          "ours_us": 5.98,
+          "ratio": 1.092
+        },
+        {
+          "layer": "pooler",
+          "m": 1,
+          "sglang_us": 21.44,
+          "ours_us": 17.98,
+          "ratio": 1.192
+        },
+        {
+          "layer": "unpooler",
+          "m": 1,
+          "sglang_us": 7.2,
+          "ours_us": 4.24,
+          "ratio": 1.699
+        },
+        {
+          "layer": "router",
+          "m": 1,
+          "sglang_us": 10.29,
+          "ours_us": 5.67,
+          "ratio": 1.815
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 16,
+          "sglang_us": 14.03,
+          "ours_us": 13.15,
+          "ratio": 1.067
+        },
+        {
+          "layer": "o",
+          "m": 16,
+          "sglang_us": 6.69,
+          "ours_us": 6.17,
+          "ratio": 1.084
+        },
+        {
+          "layer": "pooler",
+          "m": 16,
+          "sglang_us": 21.6,
+          "ours_us": 19.73,
+          "ratio": 1.095
+        },
+        {
+          "layer": "unpooler",
+          "m": 16,
+          "sglang_us": 18.74,
+          "ours_us": 18.55,
+          "ratio": 1.01
+        },
+        {
+          "layer": "router",
+          "m": 16,
+          "sglang_us": 14.64,
+          "ours_us": 7.34,
+          "ratio": 1.994
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 32,
+          "sglang_us": 14.16,
+          "ours_us": 13.96,
+          "ratio": 1.014
+        },
+        {
+          "layer": "o",
+          "m": 32,
+          "sglang_us": 6.96,
+          "ours_us": 6.34,
+          "ratio": 1.098
+        },
+        {
+          "layer": "pooler",
+          "m": 32,
+          "sglang_us": 22.24,
+          "ours_us": 20.68,
+          "ratio": 1.076
+        },
+        {
+          "layer": "unpooler",
+          "m": 32,
+          "sglang_us": 18.82,
+          "ours_us": 18.62,
+          "ratio": 1.01
+        },
+        {
+          "layer": "router",
+          "m": 32,
+          "sglang_us": 15.3,
+          "ours_us": 10.06,
+          "ratio": 1.52
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 8,
+          "sglang_us": 14.27,
+          "ours_us": 12.98,
+          "ratio": 1.099
+        },
+        {
+          "layer": "o",
+          "m": 8,
+          "sglang_us": 6.78,
+          "ours_us": 6.32,
+          "ratio": 1.074
+        },
+        {
+          "layer": "pooler",
+          "m": 8,
+          "sglang_us": 21.42,
+          "ours_us": 19.34,
+          "ratio": 1.108
+        },
+        {
+          "layer": "unpooler",
+          "m": 8,
+          "sglang_us": 6.93,
+          "ours_us": 6.16,
+          "ratio": 1.125
+        },
+        {
+          "layer": "router",
+          "m": 8,
+          "sglang_us": 26.18,
+          "ours_us": 7.25,
+          "ratio": 3.61
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 128,
+          "sglang_us": 17.5,
+          "ours_us": 17.41,
+          "ratio": 1.005
+        },
+        {
+          "layer": "o",
+          "m": 128,
+          "sglang_us": 7.26,
+          "ours_us": 7.49,
+          "ratio": 0.969
+        },
+        {
+          "layer": "pooler",
+          "m": 128,
+          "sglang_us": 24.94,
+          "ours_us": 25.45,
+          "ratio": 0.98
+        },
+        {
+          "layer": "unpooler",
+          "m": 128,
+          "sglang_us": 19.62,
+          "ours_us": 19.93,
+          "ratio": 0.984
+        },
+        {
+          "layer": "router",
+          "m": 128,
+          "sglang_us": 16.13,
+          "ours_us": 10.22,
+          "ratio": 1.578
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 256,
+          "sglang_us": 19.86,
+          "ours_us": 20.21,
+          "ratio": 0.983
+        },
+        {
+          "layer": "o",
+          "m": 256,
+          "sglang_us": 9.57,
+          "ours_us": 9.61,
+          "ratio": 0.996
+        },
+        {
+          "layer": "pooler",
+          "m": 256,
+          "sglang_us": 31.07,
+          "ours_us": 31.44,
+          "ratio": 0.988
+        },
+        {
+          "layer": "unpooler",
+          "m": 256,
+          "sglang_us": 24.48,
+          "ours_us": 24.63,
+          "ratio": 0.994
+        },
+        {
+          "layer": "router",
+          "m": 256,
+          "sglang_us": 17.76,
+          "ours_us": 11.51,
+          "ratio": 1.543
+        }
+      ]
+    },
+    {
+      "path": "history/muse_bf16_proj/v2/judge-profile.txt",
+      "score": 1.196523078515248,
+      "cells": [
+        {
+          "layer": "qkv_gate",
+          "m": 1,
+          "sglang_us": 14.37,
+          "ours_us": 10.93,
+          "ratio": 1.314
+        },
+        {
+          "layer": "o",
+          "m": 1,
+          "sglang_us": 6.4,
+          "ours_us": 6.4,
+          "ratio": 1.0
+        },
+        {
+          "layer": "pooler",
+          "m": 1,
+          "sglang_us": 21.44,
+          "ours_us": 18.22,
+          "ratio": 1.177
+        },
+        {
+          "layer": "unpooler",
+          "m": 1,
+          "sglang_us": 7.1,
+          "ours_us": 4.33,
+          "ratio": 1.642
+        },
+        {
+          "layer": "router",
+          "m": 1,
+          "sglang_us": 10.48,
+          "ours_us": 5.9,
+          "ratio": 1.775
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 16,
+          "sglang_us": 14.08,
+          "ours_us": 13.28,
+          "ratio": 1.06
+        },
+        {
+          "layer": "o",
+          "m": 16,
+          "sglang_us": 6.82,
+          "ours_us": 6.4,
+          "ratio": 1.065
+        },
+        {
+          "layer": "pooler",
+          "m": 16,
+          "sglang_us": 21.87,
+          "ours_us": 19.99,
+          "ratio": 1.094
+        },
+        {
+          "layer": "unpooler",
+          "m": 16,
+          "sglang_us": 18.98,
+          "ours_us": 18.16,
+          "ratio": 1.045
+        },
+        {
+          "layer": "router",
+          "m": 16,
+          "sglang_us": 15.14,
+          "ours_us": 7.36,
+          "ratio": 2.056
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 32,
+          "sglang_us": 14.62,
+          "ours_us": 14.17,
+          "ratio": 1.032
+        },
+        {
+          "layer": "o",
+          "m": 32,
+          "sglang_us": 6.85,
+          "ours_us": 6.23,
+          "ratio": 1.1
+        },
+        {
+          "layer": "pooler",
+          "m": 32,
+          "sglang_us": 21.92,
+          "ours_us": 20.39,
+          "ratio": 1.075
+        },
+        {
+          "layer": "unpooler",
+          "m": 32,
+          "sglang_us": 18.78,
+          "ours_us": 18.29,
+          "ratio": 1.027
+        },
+        {
+          "layer": "router",
+          "m": 32,
+          "sglang_us": 15.58,
+          "ours_us": 9.32,
+          "ratio": 1.672
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 8,
+          "sglang_us": 14.96,
+          "ours_us": 13.44,
+          "ratio": 1.113
+        },
+        {
+          "layer": "o",
+          "m": 8,
+          "sglang_us": 7.23,
+          "ours_us": 6.57,
+          "ratio": 1.101
+        },
+        {
+          "layer": "pooler",
+          "m": 8,
+          "sglang_us": 21.5,
+          "ours_us": 19.4,
+          "ratio": 1.109
+        },
+        {
+          "layer": "unpooler",
+          "m": 8,
+          "sglang_us": 7.26,
+          "ours_us": 6.46,
+          "ratio": 1.124
+        },
+        {
+          "layer": "router",
+          "m": 8,
+          "sglang_us": 26.1,
+          "ours_us": 7.12,
+          "ratio": 3.664
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 128,
+          "sglang_us": 17.44,
+          "ours_us": 16.88,
+          "ratio": 1.033
+        },
+        {
+          "layer": "o",
+          "m": 128,
+          "sglang_us": 7.36,
+          "ours_us": 7.4,
+          "ratio": 0.995
+        },
+        {
+          "layer": "pooler",
+          "m": 128,
+          "sglang_us": 25.71,
+          "ours_us": 25.4,
+          "ratio": 1.012
+        },
+        {
+          "layer": "unpooler",
+          "m": 128,
+          "sglang_us": 20.13,
+          "ours_us": 20.28,
+          "ratio": 0.993
+        },
+        {
+          "layer": "router",
+          "m": 128,
+          "sglang_us": 16.53,
+          "ours_us": 10.77,
+          "ratio": 1.534
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 256,
+          "sglang_us": 20.0,
+          "ours_us": 19.92,
+          "ratio": 1.004
+        },
+        {
+          "layer": "o",
+          "m": 256,
+          "sglang_us": 9.66,
+          "ours_us": 9.62,
+          "ratio": 1.004
+        },
+        {
+          "layer": "pooler",
+          "m": 256,
+          "sglang_us": 29.33,
+          "ours_us": 29.56,
+          "ratio": 0.992
+        },
+        {
+          "layer": "unpooler",
+          "m": 256,
+          "sglang_us": 24.38,
+          "ours_us": 24.33,
+          "ratio": 1.002
+        },
+        {
+          "layer": "router",
+          "m": 256,
+          "sglang_us": 17.95,
+          "ours_us": 11.51,
+          "ratio": 1.56
+        }
+      ]
+    },
+    {
+      "path": "history/muse_bf16_proj/v3/judge-profile.txt",
+      "score": 1.1816502098762474,
+      "cells": [
+        {
+          "layer": "qkv_gate",
+          "m": 1,
+          "sglang_us": 13.84,
+          "ours_us": 11.28,
+          "ratio": 1.227
+        },
+        {
+          "layer": "o",
+          "m": 1,
+          "sglang_us": 7.36,
+          "ours_us": 6.95,
+          "ratio": 1.059
+        },
+        {
+          "layer": "pooler",
+          "m": 1,
+          "sglang_us": 20.91,
+          "ours_us": 18.52,
+          "ratio": 1.129
+        },
+        {
+          "layer": "unpooler",
+          "m": 1,
+          "sglang_us": 6.88,
+          "ours_us": 4.09,
+          "ratio": 1.683
+        },
+        {
+          "layer": "router",
+          "m": 1,
+          "sglang_us": 10.69,
+          "ours_us": 6.15,
+          "ratio": 1.738
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 16,
+          "sglang_us": 14.1,
+          "ours_us": 13.83,
+          "ratio": 1.019
+        },
+        {
+          "layer": "o",
+          "m": 16,
+          "sglang_us": 6.58,
+          "ours_us": 6.21,
+          "ratio": 1.059
+        },
+        {
+          "layer": "pooler",
+          "m": 16,
+          "sglang_us": 20.85,
+          "ours_us": 19.43,
+          "ratio": 1.073
+        },
+        {
+          "layer": "unpooler",
+          "m": 16,
+          "sglang_us": 18.53,
+          "ours_us": 17.86,
+          "ratio": 1.037
+        },
+        {
+          "layer": "router",
+          "m": 16,
+          "sglang_us": 14.8,
+          "ours_us": 7.11,
+          "ratio": 2.081
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 32,
+          "sglang_us": 14.38,
+          "ours_us": 14.78,
+          "ratio": 0.973
+        },
+        {
+          "layer": "o",
+          "m": 32,
+          "sglang_us": 6.59,
+          "ours_us": 6.15,
+          "ratio": 1.072
+        },
+        {
+          "layer": "pooler",
+          "m": 32,
+          "sglang_us": 21.38,
+          "ours_us": 20.2,
+          "ratio": 1.058
+        },
+        {
+          "layer": "unpooler",
+          "m": 32,
+          "sglang_us": 18.54,
+          "ours_us": 18.48,
+          "ratio": 1.003
+        },
+        {
+          "layer": "router",
+          "m": 32,
+          "sglang_us": 15.01,
+          "ours_us": 9.1,
+          "ratio": 1.65
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 8,
+          "sglang_us": 14.19,
+          "ours_us": 13.62,
+          "ratio": 1.042
+        },
+        {
+          "layer": "o",
+          "m": 8,
+          "sglang_us": 6.69,
+          "ours_us": 6.27,
+          "ratio": 1.066
+        },
+        {
+          "layer": "pooler",
+          "m": 8,
+          "sglang_us": 20.98,
+          "ours_us": 19.44,
+          "ratio": 1.079
+        },
+        {
+          "layer": "unpooler",
+          "m": 8,
+          "sglang_us": 7.14,
+          "ours_us": 6.56,
+          "ratio": 1.088
+        },
+        {
+          "layer": "router",
+          "m": 8,
+          "sglang_us": 26.24,
+          "ours_us": 7.22,
+          "ratio": 3.635
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 128,
+          "sglang_us": 16.88,
+          "ours_us": 17.04,
+          "ratio": 0.991
+        },
+        {
+          "layer": "o",
+          "m": 128,
+          "sglang_us": 7.33,
+          "ours_us": 7.17,
+          "ratio": 1.022
+        },
+        {
+          "layer": "pooler",
+          "m": 128,
+          "sglang_us": 25.31,
+          "ours_us": 24.92,
+          "ratio": 1.016
+        },
+        {
+          "layer": "unpooler",
+          "m": 128,
+          "sglang_us": 19.97,
+          "ours_us": 19.61,
+          "ratio": 1.018
+        },
+        {
+          "layer": "router",
+          "m": 128,
+          "sglang_us": 16.64,
+          "ours_us": 10.58,
+          "ratio": 1.572
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 256,
+          "sglang_us": 19.79,
+          "ours_us": 19.61,
+          "ratio": 1.009
+        },
+        {
+          "layer": "o",
+          "m": 256,
+          "sglang_us": 9.36,
+          "ours_us": 9.24,
+          "ratio": 1.013
+        },
+        {
+          "layer": "pooler",
+          "m": 256,
+          "sglang_us": 29.02,
+          "ours_us": 28.03,
+          "ratio": 1.036
+        },
+        {
+          "layer": "unpooler",
+          "m": 256,
+          "sglang_us": 24.74,
+          "ours_us": 24.49,
+          "ratio": 1.01
+        },
+        {
+          "layer": "router",
+          "m": 256,
+          "sglang_us": 17.15,
+          "ours_us": 10.77,
+          "ratio": 1.592
+        }
+      ]
+    },
+    {
+      "path": "history/muse_bf16_proj/v4/judge-profile.txt",
+      "score": 1.1934999153467838,
+      "cells": [
+        {
+          "layer": "qkv_gate",
+          "m": 1,
+          "sglang_us": 13.76,
+          "ours_us": 10.7,
+          "ratio": 1.285
+        },
+        {
+          "layer": "o",
+          "m": 1,
+          "sglang_us": 6.75,
+          "ours_us": 6.26,
+          "ratio": 1.079
+        },
+        {
+          "layer": "pooler",
+          "m": 1,
+          "sglang_us": 21.5,
+          "ours_us": 18.5,
+          "ratio": 1.162
+        },
+        {
+          "layer": "unpooler",
+          "m": 1,
+          "sglang_us": 6.78,
+          "ours_us": 3.94,
+          "ratio": 1.721
+        },
+        {
+          "layer": "router",
+          "m": 1,
+          "sglang_us": 10.42,
+          "ours_us": 5.96,
+          "ratio": 1.747
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 16,
+          "sglang_us": 14.29,
+          "ours_us": 13.1,
+          "ratio": 1.091
+        },
+        {
+          "layer": "o",
+          "m": 16,
+          "sglang_us": 6.94,
+          "ours_us": 6.98,
+          "ratio": 0.994
+        },
+        {
+          "layer": "pooler",
+          "m": 16,
+          "sglang_us": 21.38,
+          "ours_us": 18.46,
+          "ratio": 1.158
+        },
+        {
+          "layer": "unpooler",
+          "m": 16,
+          "sglang_us": 18.4,
+          "ours_us": 17.51,
+          "ratio": 1.051
+        },
+        {
+          "layer": "router",
+          "m": 16,
+          "sglang_us": 14.88,
+          "ours_us": 7.65,
+          "ratio": 1.944
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 32,
+          "sglang_us": 14.29,
+          "ours_us": 14.64,
+          "ratio": 0.976
+        },
+        {
+          "layer": "o",
+          "m": 32,
+          "sglang_us": 6.78,
+          "ours_us": 6.38,
+          "ratio": 1.064
+        },
+        {
+          "layer": "pooler",
+          "m": 32,
+          "sglang_us": 21.86,
+          "ours_us": 19.23,
+          "ratio": 1.136
+        },
+        {
+          "layer": "unpooler",
+          "m": 32,
+          "sglang_us": 18.5,
+          "ours_us": 17.89,
+          "ratio": 1.034
+        },
+        {
+          "layer": "router",
+          "m": 32,
+          "sglang_us": 15.3,
+          "ours_us": 9.43,
+          "ratio": 1.622
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 8,
+          "sglang_us": 14.02,
+          "ours_us": 13.42,
+          "ratio": 1.044
+        },
+        {
+          "layer": "o",
+          "m": 8,
+          "sglang_us": 6.91,
+          "ours_us": 6.48,
+          "ratio": 1.066
+        },
+        {
+          "layer": "pooler",
+          "m": 8,
+          "sglang_us": 21.79,
+          "ours_us": 19.16,
+          "ratio": 1.137
+        },
+        {
+          "layer": "unpooler",
+          "m": 8,
+          "sglang_us": 6.59,
+          "ours_us": 5.97,
+          "ratio": 1.105
+        },
+        {
+          "layer": "router",
+          "m": 8,
+          "sglang_us": 26.05,
+          "ours_us": 7.02,
+          "ratio": 3.713
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 128,
+          "sglang_us": 17.14,
+          "ours_us": 17.46,
+          "ratio": 0.981
+        },
+        {
+          "layer": "o",
+          "m": 128,
+          "sglang_us": 7.17,
+          "ours_us": 7.28,
+          "ratio": 0.985
+        },
+        {
+          "layer": "pooler",
+          "m": 128,
+          "sglang_us": 25.17,
+          "ours_us": 24.76,
+          "ratio": 1.016
+        },
+        {
+          "layer": "unpooler",
+          "m": 128,
+          "sglang_us": 20.19,
+          "ours_us": 20.5,
+          "ratio": 0.985
+        },
+        {
+          "layer": "router",
+          "m": 128,
+          "sglang_us": 16.11,
+          "ours_us": 10.22,
+          "ratio": 1.577
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 256,
+          "sglang_us": 19.71,
+          "ours_us": 19.71,
+          "ratio": 1.0
+        },
+        {
+          "layer": "o",
+          "m": 256,
+          "sglang_us": 9.57,
+          "ours_us": 9.75,
+          "ratio": 0.981
+        },
+        {
+          "layer": "pooler",
+          "m": 256,
+          "sglang_us": 30.82,
+          "ours_us": 31.17,
+          "ratio": 0.989
+        },
+        {
+          "layer": "unpooler",
+          "m": 256,
+          "sglang_us": 24.38,
+          "ours_us": 24.46,
+          "ratio": 0.997
+        },
+        {
+          "layer": "router",
+          "m": 256,
+          "sglang_us": 17.55,
+          "ours_us": 11.4,
+          "ratio": 1.54
+        }
+      ]
+    },
+    {
+      "path": "history/muse_bf16_proj/v5/judge-profile.txt",
+      "score": 1.228593219263217,
+      "cells": [
+        {
+          "layer": "qkv_gate",
+          "m": 1,
+          "sglang_us": 13.76,
+          "ours_us": 10.41,
+          "ratio": 1.322
+        },
+        {
+          "layer": "o",
+          "m": 1,
+          "sglang_us": 6.86,
+          "ours_us": 6.09,
+          "ratio": 1.127
+        },
+        {
+          "layer": "pooler",
+          "m": 1,
+          "sglang_us": 21.98,
+          "ours_us": 18.38,
+          "ratio": 1.196
+        },
+        {
+          "layer": "unpooler",
+          "m": 1,
+          "sglang_us": 6.91,
+          "ours_us": 3.88,
+          "ratio": 1.78
+        },
+        {
+          "layer": "router",
+          "m": 1,
+          "sglang_us": 10.62,
+          "ours_us": 5.8,
+          "ratio": 1.832
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 16,
+          "sglang_us": 13.86,
+          "ours_us": 12.32,
+          "ratio": 1.125
+        },
+        {
+          "layer": "o",
+          "m": 16,
+          "sglang_us": 6.82,
+          "ours_us": 6.21,
+          "ratio": 1.098
+        },
+        {
+          "layer": "pooler",
+          "m": 16,
+          "sglang_us": 21.7,
+          "ours_us": 19.11,
+          "ratio": 1.135
+        },
+        {
+          "layer": "unpooler",
+          "m": 16,
+          "sglang_us": 18.46,
+          "ours_us": 17.43,
+          "ratio": 1.06
+        },
+        {
+          "layer": "router",
+          "m": 16,
+          "sglang_us": 14.88,
+          "ours_us": 6.34,
+          "ratio": 2.349
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 32,
+          "sglang_us": 14.54,
+          "ours_us": 13.66,
+          "ratio": 1.065
+        },
+        {
+          "layer": "o",
+          "m": 32,
+          "sglang_us": 7.04,
+          "ours_us": 6.72,
+          "ratio": 1.048
+        },
+        {
+          "layer": "pooler",
+          "m": 32,
+          "sglang_us": 22.14,
+          "ours_us": 19.52,
+          "ratio": 1.135
+        },
+        {
+          "layer": "unpooler",
+          "m": 32,
+          "sglang_us": 19.07,
+          "ours_us": 19.02,
+          "ratio": 1.002
+        },
+        {
+          "layer": "router",
+          "m": 32,
+          "sglang_us": 15.04,
+          "ours_us": 7.07,
+          "ratio": 2.127
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 8,
+          "sglang_us": 14.11,
+          "ours_us": 12.4,
+          "ratio": 1.138
+        },
+        {
+          "layer": "o",
+          "m": 8,
+          "sglang_us": 6.51,
+          "ours_us": 5.94,
+          "ratio": 1.096
+        },
+        {
+          "layer": "pooler",
+          "m": 8,
+          "sglang_us": 21.31,
+          "ours_us": 19.05,
+          "ratio": 1.119
+        },
+        {
+          "layer": "unpooler",
+          "m": 8,
+          "sglang_us": 6.88,
+          "ours_us": 5.89,
+          "ratio": 1.168
+        },
+        {
+          "layer": "router",
+          "m": 8,
+          "sglang_us": 25.86,
+          "ours_us": 5.86,
+          "ratio": 4.414
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 128,
+          "sglang_us": 17.06,
+          "ours_us": 17.12,
+          "ratio": 0.996
+        },
+        {
+          "layer": "o",
+          "m": 128,
+          "sglang_us": 7.46,
+          "ours_us": 7.39,
+          "ratio": 1.009
+        },
+        {
+          "layer": "pooler",
+          "m": 128,
+          "sglang_us": 24.9,
+          "ours_us": 24.94,
+          "ratio": 0.998
+        },
+        {
+          "layer": "unpooler",
+          "m": 128,
+          "sglang_us": 20.1,
+          "ours_us": 19.91,
+          "ratio": 1.009
+        },
+        {
+          "layer": "router",
+          "m": 128,
+          "sglang_us": 15.94,
+          "ours_us": 9.97,
+          "ratio": 1.599
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 256,
+          "sglang_us": 19.98,
+          "ours_us": 20.15,
+          "ratio": 0.992
+        },
+        {
+          "layer": "o",
+          "m": 256,
+          "sglang_us": 9.46,
+          "ours_us": 9.38,
+          "ratio": 1.008
+        },
+        {
+          "layer": "pooler",
+          "m": 256,
+          "sglang_us": 30.85,
+          "ours_us": 30.43,
+          "ratio": 1.014
+        },
+        {
+          "layer": "unpooler",
+          "m": 256,
+          "sglang_us": 24.13,
+          "ours_us": 23.98,
+          "ratio": 1.006
+        },
+        {
+          "layer": "router",
+          "m": 256,
+          "sglang_us": 17.44,
+          "ours_us": 11.18,
+          "ratio": 1.559
+        }
+      ]
+    },
+    {
+      "path": "history/muse_bf16_proj/v6/judge-profile.txt",
+      "score": 1.2220851855476904,
+      "cells": [
+        {
+          "layer": "qkv_gate",
+          "m": 1,
+          "sglang_us": 13.97,
+          "ours_us": 11.07,
+          "ratio": 1.262
+        },
+        {
+          "layer": "o",
+          "m": 1,
+          "sglang_us": 7.14,
+          "ours_us": 6.65,
+          "ratio": 1.074
+        },
+        {
+          "layer": "pooler",
+          "m": 1,
+          "sglang_us": 21.47,
+          "ours_us": 18.23,
+          "ratio": 1.178
+        },
+        {
+          "layer": "unpooler",
+          "m": 1,
+          "sglang_us": 7.04,
+          "ours_us": 4.2,
+          "ratio": 1.674
+        },
+        {
+          "layer": "router",
+          "m": 1,
+          "sglang_us": 10.22,
+          "ours_us": 5.64,
+          "ratio": 1.811
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 16,
+          "sglang_us": 13.78,
+          "ours_us": 12.54,
+          "ratio": 1.098
+        },
+        {
+          "layer": "o",
+          "m": 16,
+          "sglang_us": 6.5,
+          "ours_us": 6.18,
+          "ratio": 1.051
+        },
+        {
+          "layer": "pooler",
+          "m": 16,
+          "sglang_us": 21.7,
+          "ours_us": 18.78,
+          "ratio": 1.155
+        },
+        {
+          "layer": "unpooler",
+          "m": 16,
+          "sglang_us": 18.62,
+          "ours_us": 17.58,
+          "ratio": 1.06
+        },
+        {
+          "layer": "router",
+          "m": 16,
+          "sglang_us": 14.78,
+          "ours_us": 6.27,
+          "ratio": 2.357
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 32,
+          "sglang_us": 14.08,
+          "ours_us": 13.43,
+          "ratio": 1.048
+        },
+        {
+          "layer": "o",
+          "m": 32,
+          "sglang_us": 6.86,
+          "ours_us": 6.51,
+          "ratio": 1.054
+        },
+        {
+          "layer": "pooler",
+          "m": 32,
+          "sglang_us": 22.16,
+          "ours_us": 19.56,
+          "ratio": 1.133
+        },
+        {
+          "layer": "unpooler",
+          "m": 32,
+          "sglang_us": 18.7,
+          "ours_us": 17.69,
+          "ratio": 1.058
+        },
+        {
+          "layer": "router",
+          "m": 32,
+          "sglang_us": 15.1,
+          "ours_us": 7.04,
+          "ratio": 2.147
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 8,
+          "sglang_us": 14.06,
+          "ours_us": 12.46,
+          "ratio": 1.129
+        },
+        {
+          "layer": "o",
+          "m": 8,
+          "sglang_us": 6.34,
+          "ours_us": 5.81,
+          "ratio": 1.091
+        },
+        {
+          "layer": "pooler",
+          "m": 8,
+          "sglang_us": 21.74,
+          "ours_us": 19.11,
+          "ratio": 1.138
+        },
+        {
+          "layer": "unpooler",
+          "m": 8,
+          "sglang_us": 7.09,
+          "ours_us": 5.97,
+          "ratio": 1.187
+        },
+        {
+          "layer": "router",
+          "m": 8,
+          "sglang_us": 26.42,
+          "ours_us": 6.34,
+          "ratio": 4.164
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 128,
+          "sglang_us": 16.93,
+          "ours_us": 17.26,
+          "ratio": 0.981
+        },
+        {
+          "layer": "o",
+          "m": 128,
+          "sglang_us": 7.2,
+          "ours_us": 7.22,
+          "ratio": 0.997
+        },
+        {
+          "layer": "pooler",
+          "m": 128,
+          "sglang_us": 25.54,
+          "ours_us": 25.05,
+          "ratio": 1.019
+        },
+        {
+          "layer": "unpooler",
+          "m": 128,
+          "sglang_us": 19.82,
+          "ours_us": 20.25,
+          "ratio": 0.979
+        },
+        {
+          "layer": "router",
+          "m": 128,
+          "sglang_us": 16.61,
+          "ours_us": 10.61,
+          "ratio": 1.565
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 256,
+          "sglang_us": 19.82,
+          "ours_us": 19.62,
+          "ratio": 1.01
+        },
+        {
+          "layer": "o",
+          "m": 256,
+          "sglang_us": 9.12,
+          "ours_us": 9.26,
+          "ratio": 0.985
+        },
+        {
+          "layer": "pooler",
+          "m": 256,
+          "sglang_us": 31.1,
+          "ours_us": 31.15,
+          "ratio": 0.999
+        },
+        {
+          "layer": "unpooler",
+          "m": 256,
+          "sglang_us": 24.9,
+          "ours_us": 25.09,
+          "ratio": 0.992
+        },
+        {
+          "layer": "router",
+          "m": 256,
+          "sglang_us": 17.47,
+          "ours_us": 11.22,
+          "ratio": 1.558
+        }
+      ]
+    },
+    {
+      "path": "kernels/muse_bf16_proj/judge-profile.txt",
+      "score": 1.228593219263217,
+      "cells": [
+        {
+          "layer": "qkv_gate",
+          "m": 1,
+          "sglang_us": 13.76,
+          "ours_us": 10.41,
+          "ratio": 1.322
+        },
+        {
+          "layer": "o",
+          "m": 1,
+          "sglang_us": 6.86,
+          "ours_us": 6.09,
+          "ratio": 1.127
+        },
+        {
+          "layer": "pooler",
+          "m": 1,
+          "sglang_us": 21.98,
+          "ours_us": 18.38,
+          "ratio": 1.196
+        },
+        {
+          "layer": "unpooler",
+          "m": 1,
+          "sglang_us": 6.91,
+          "ours_us": 3.88,
+          "ratio": 1.78
+        },
+        {
+          "layer": "router",
+          "m": 1,
+          "sglang_us": 10.62,
+          "ours_us": 5.8,
+          "ratio": 1.832
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 16,
+          "sglang_us": 13.86,
+          "ours_us": 12.32,
+          "ratio": 1.125
+        },
+        {
+          "layer": "o",
+          "m": 16,
+          "sglang_us": 6.82,
+          "ours_us": 6.21,
+          "ratio": 1.098
+        },
+        {
+          "layer": "pooler",
+          "m": 16,
+          "sglang_us": 21.7,
+          "ours_us": 19.11,
+          "ratio": 1.135
+        },
+        {
+          "layer": "unpooler",
+          "m": 16,
+          "sglang_us": 18.46,
+          "ours_us": 17.43,
+          "ratio": 1.06
+        },
+        {
+          "layer": "router",
+          "m": 16,
+          "sglang_us": 14.88,
+          "ours_us": 6.34,
+          "ratio": 2.349
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 32,
+          "sglang_us": 14.54,
+          "ours_us": 13.66,
+          "ratio": 1.065
+        },
+        {
+          "layer": "o",
+          "m": 32,
+          "sglang_us": 7.04,
+          "ours_us": 6.72,
+          "ratio": 1.048
+        },
+        {
+          "layer": "pooler",
+          "m": 32,
+          "sglang_us": 22.14,
+          "ours_us": 19.52,
+          "ratio": 1.135
+        },
+        {
+          "layer": "unpooler",
+          "m": 32,
+          "sglang_us": 19.07,
+          "ours_us": 19.02,
+          "ratio": 1.002
+        },
+        {
+          "layer": "router",
+          "m": 32,
+          "sglang_us": 15.04,
+          "ours_us": 7.07,
+          "ratio": 2.127
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 8,
+          "sglang_us": 14.11,
+          "ours_us": 12.4,
+          "ratio": 1.138
+        },
+        {
+          "layer": "o",
+          "m": 8,
+          "sglang_us": 6.51,
+          "ours_us": 5.94,
+          "ratio": 1.096
+        },
+        {
+          "layer": "pooler",
+          "m": 8,
+          "sglang_us": 21.31,
+          "ours_us": 19.05,
+          "ratio": 1.119
+        },
+        {
+          "layer": "unpooler",
+          "m": 8,
+          "sglang_us": 6.88,
+          "ours_us": 5.89,
+          "ratio": 1.168
+        },
+        {
+          "layer": "router",
+          "m": 8,
+          "sglang_us": 25.86,
+          "ours_us": 5.86,
+          "ratio": 4.414
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 128,
+          "sglang_us": 17.06,
+          "ours_us": 17.12,
+          "ratio": 0.996
+        },
+        {
+          "layer": "o",
+          "m": 128,
+          "sglang_us": 7.46,
+          "ours_us": 7.39,
+          "ratio": 1.009
+        },
+        {
+          "layer": "pooler",
+          "m": 128,
+          "sglang_us": 24.9,
+          "ours_us": 24.94,
+          "ratio": 0.998
+        },
+        {
+          "layer": "unpooler",
+          "m": 128,
+          "sglang_us": 20.1,
+          "ours_us": 19.91,
+          "ratio": 1.009
+        },
+        {
+          "layer": "router",
+          "m": 128,
+          "sglang_us": 15.94,
+          "ours_us": 9.97,
+          "ratio": 1.599
+        },
+        {
+          "layer": "qkv_gate",
+          "m": 256,
+          "sglang_us": 19.98,
+          "ours_us": 20.15,
+          "ratio": 0.992
+        },
+        {
+          "layer": "o",
+          "m": 256,
+          "sglang_us": 9.46,
+          "ours_us": 9.38,
+          "ratio": 1.008
+        },
+        {
+          "layer": "pooler",
+          "m": 256,
+          "sglang_us": 30.85,
+          "ours_us": 30.43,
+          "ratio": 1.014
+        },
+        {
+          "layer": "unpooler",
+          "m": 256,
+          "sglang_us": 24.13,
+          "ours_us": 23.98,
+          "ratio": 1.006
+        },
+        {
+          "layer": "router",
+          "m": 256,
+          "sglang_us": 17.44,
+          "ours_us": 11.18,
+          "ratio": 1.559
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    "Default source exactly history/v5;v6 rejected externally.",
+    "Fused Triton FP32 FMA GEMV at M1 and swap-AB BF16 tensor-core streaming at M8\u201332 with last-CTA reduction.",
+    "Allowed hi+lo router retained;no FP8 dense route found in static source screen.",
+    "Current parent already fuses these operations with newer C12/native paths;published cells establish no large additive lead.",
+    "No source executed,ported,or mirrored;license unestablished. Other track trees left for their sequential turns."
+  ]
+}

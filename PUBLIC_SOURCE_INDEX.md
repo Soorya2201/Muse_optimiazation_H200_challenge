@@ -15,6 +15,17 @@ the dated report records terminal status. Public-code search now244paths/
 13repos,ten newentries:five BF16 files atKushagrabainsla0778ecd statically
 screened and hash-verified,five decoder references left for that track.
 No new unlicensed source executed,ported or whole-source mirrored.
+The complete fresh BF16 owner-metadata screen1526accounts yields14new
+repository matches;11profiles404unresolved. Relevant default-source reviews
+and limits are in
+[Oct31 follow-up](muse_bf16_proj/PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md).
+New pins:MrNirmata/lossless-bf16 at4429b1d,27filesApache2,77CPUformat/
+emulation tests pass;new packageGPUbindingsuntested,no faster portestablished.
+MrNirmata/h200-decode-notes at4f195ed,10filesCC-BY4withattribution,adds
+primary methodology data. ScrashOffd870912sevenBF16source/profile families
+screened;licenseunestablished,no implementationcopied. See
+[benchmark protocol correction](research/BENCHMARK_PROTOCOL_2026-10-31.md)
+for read-flush,balanced orders and captured-event calibration scope.
 
 Oct31 attention delta:
 [public source follow-up](muse_attention_decode/PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md)

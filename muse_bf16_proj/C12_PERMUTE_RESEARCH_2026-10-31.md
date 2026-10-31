@@ -99,3 +99,53 @@ all five Git blobs/SHA-256 hashes verified,default=E14 exact bytes,primary
 experiment notes read. Owner#1025vsours#229atcapture;source uses older
 Triton/cluster/C12 families and reports no new faster replacement component.
 License remains unestablished;no implementation executed,ported or mirrored.
+
+## Terminal H200 result: correct, no qualifying speedup
+
+Check`d925cb081b0e4763`,sfo3,passes9challenge tests/30timed cells at
+1.554971678x,CI[1.531647103,1.578296253],3106.680378us,prepare170.223491s.
+It times the unchanged parent and is not a new algorithm score. The complete
+0.831s independent report is6336characters,fully preserved and decoded in
+`C12_PERMUTE_REPORT_d925cb081b0e4763.json`;raw receipt is archived alongside
+all30profiles and the full available local/remote logs. All were inspected.
+
+Five nearby cases and all72timing groups pass. Initial and fresh parent,
+matched-old and new outputs are bit-identical across the timed groups;
+maximum FP64-relative global/row errors0.00167029/0.00174885,one-hot0.
+Full-kernel local allocation is0for all18queried specializations. Standalone
+register parity does not carry into the full kernel:qkv8old/new90/87,
+qkv16=81/85,qkv32=101/104;O16=78/76,others unchanged. No resource failure.
+
+|Route|Median matched-old/new ratio|Worst matched-old/new ratio|
+|---|---:|---:|
+|qkv8|1.009230|0.956522|
+|unpooler8|1.001852|0.988971|
+|qkv16|1.002012|0.980080|
+|O16|0.984856|0.975385|
+|unpooler16|1.005164|0.968345|
+|qkv32|1.005646|0.987061|
+|O32|1.004482|0.978852|
+|pooler32|0.996590|0.943299|
+|unpooler32|1.000009|0.946309|
+
+No route consistently clears2%against both controls. Some control offsets
+reach8.827%,duplicate A/A8.076%;their strict attribution gates fail too.
+Five event samples and occasional~2us outliers cannot establish subpercent
+gains. These limitations are retained,not discarded as inconvenient rows.
+All511nonemptyfixed policies reject. Best worst-group board proxy1.001005x
+(median1.001590x);all-nine policy0.997988x worst/1.001159x median. Even before
+component gates,no composition's worst-group model meets3%. No unchanged
+submission repeat is spent on the higher parent point score.
+
+The25% decoder-site instruction reduction is real in the standalone proof,
+but does not establish a useful runtime gain in these full kernels. Memory,
+issue scheduling and register allocation are possible explanations,not
+measured causal conclusions. Close this transfer combination;do not reopen
+it with a geometry/ring/fraction sweep. A future claim needs a distinct
+architecture and stronger phase evidence. Canonical/scored source stays
+unchanged;BF16Oct31checks1/8,submits0.
+
+The actual submitted `_cp_repack` AST function was also executed with CPU
+PyTorch2.8.0 on three representative stream shapes totaling3,816,192bytes.
+All inverse/low-byte checks pass,with20064words independently compared to
+integer layout emulation. See`C12_PERMUTE_PACK_CPU_2026-10-31.json`.

@@ -1,0 +1,11 @@
+{
+  "scope": "Public library CPU format/emulation suite only; no CUDA wrappers,compilation or GPU numerical/performance certification.",
+  "repository": "MrNirmata/lossless-bf16",
+  "commit": "4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2",
+  "command": "PYTHONPATH=research/public/lossless_bf16_4429b1d PYTHONDONTWRITEBYTECODE=1 python3 -m pytest tests/test_format.py tests/test_emulation.py -q -p no:cacheprovider",
+  "exit_code": 0,
+  "passed_test_indicators": 77,
+  "log_sha256": "68c39cd0a4408ff8987669813e8c488b4abd81584afd5fd1f479d622c596249a",
+  "torch": "2.8.0 CPU Mac",
+  "limits": "Tests validate storage and their specific emulations. Fullk FP32 escape-cancellation and subnormal limitations documented by author still apply; package GPU integration untested."
+}

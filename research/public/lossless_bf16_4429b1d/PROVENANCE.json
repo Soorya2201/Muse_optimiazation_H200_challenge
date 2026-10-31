@@ -1,0 +1,198 @@
+{
+  "repository": "MrNirmata/lossless-bf16",
+  "commit": "4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2",
+  "license": "Apache-2.0",
+  "captured_utc": "2026-10-31T10:35:38.300617+00:00",
+  "scope": "Selected source/docs/data/tests pinned and hash verified; no source executed or ported.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "b31aed0025119dea3f8c330e7fc3b6debe53aa18",
+      "sha256": "f25ad720c05d0dd227e6e7ca8c67a6848e06c5c1785dedacd3e3136015108979",
+      "bytes": 13476,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/README.md"
+    },
+    {
+      "path": "bench/bench_linear.py",
+      "git_blob": "6fcbbbeadf6b0558e6a4dbe581be00e32a1b7e36",
+      "sha256": "65d441d9849cf270e826bbe6cc878a087df460fe7c380c0d541bf7833d86ae33",
+      "bytes": 4695,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/bench/bench_linear.py"
+    },
+    {
+      "path": "docs/format.md",
+      "git_blob": "2a4bb2e07b24b5cd7ae84def937ef054db6b87d5",
+      "sha256": "3a18fe7f6664a7a0b031ad328d7267072576966b1caadb64a613fde9e711a6f1",
+      "bytes": 11634,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/docs/format.md"
+    },
+    {
+      "path": "docs/kernels.md",
+      "git_blob": "12b97210fd58ac044d63b2d82945f96167882193",
+      "sha256": "c0fa2757526120178d6766f004c2f49ef716d25eaf44991357c4c2bd75afd8c1",
+      "bytes": 12867,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/docs/kernels.md"
+    },
+    {
+      "path": "lossless_bf16/__init__.py",
+      "git_blob": "158c9acc53cee608bbb925a364120cfe95f676fd",
+      "sha256": "da6d9a7a11a0a9851140091d0180c926476e2c76b766ba4cbaf8112e935c22a4",
+      "bytes": 1224,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/__init__.py"
+    },
+    {
+      "path": "lossless_bf16/configs.py",
+      "git_blob": "e93602dce036e99b8f5b661c4b69b1520d7a9c2b",
+      "sha256": "e48ecf9101cf1e9b49ee7b984a239bf259af0522aed9bed4a2c5c3629ab4b0bf",
+      "bytes": 7262,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/configs.py"
+    },
+    {
+      "path": "lossless_bf16/csrc/README.md",
+      "git_blob": "a2fc24e8e9e43d77430532e2bddad042c8e94499",
+      "sha256": "41db315bbcb1a740641b7dd7383498c743c3509e16213c27e36206491b225cd4",
+      "bytes": 1654,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/csrc/README.md"
+    },
+    {
+      "path": "lossless_bf16/csrc/bindings.cpp",
+      "git_blob": "21674ee24919fc968378d8b2d528f28bab104fdf",
+      "sha256": "54fb4b17ae0c74083da0f6c71a4ebe46f8639716e28fe5ec690b7f76c8b72d7c",
+      "bytes": 1853,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/csrc/bindings.cpp"
+    },
+    {
+      "path": "lossless_bf16/csrc/zg.cu",
+      "git_blob": "3df6ad518f6a641a407f326d46504bf297d8ea0c",
+      "sha256": "142974b9b163b842ed972c281e3d0a910135b20c2bad7444cdd080f43214628f",
+      "bytes": 10045,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/csrc/zg.cu"
+    },
+    {
+      "path": "lossless_bf16/csrc/zr.cu",
+      "git_blob": "ee59085a4479a9ae8817d4c7819f2f315bd76732",
+      "sha256": "7b17f03e890db26e7af5dc08322b917bdcb16c5d42c4f7053c33d1e74d270f40",
+      "bytes": 10109,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/csrc/zr.cu"
+    },
+    {
+      "path": "lossless_bf16/csrc/zs.cu",
+      "git_blob": "34a1d4d14d78431fc4adc300f4cf6b837b956a23",
+      "sha256": "d9a75510f5be74ebccc564752b86b795d5b634f8b1704dd4bd0d2bbb905eff48",
+      "bytes": 24639,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/csrc/zs.cu"
+    },
+    {
+      "path": "lossless_bf16/csrc/zt.cu",
+      "git_blob": "f76ac1c103615f69dca69c895fecc86c74935019",
+      "sha256": "683f581d74362ed38cfb3c1110659cc7c726f32401ecf67cc0e3592014a4b544",
+      "bytes": 13776,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/csrc/zt.cu"
+    },
+    {
+      "path": "lossless_bf16/format.py",
+      "git_blob": "6cbe008fa17409b391df9e4f4ca1badc14bf5e94",
+      "sha256": "81540aa886bddc5fcfb6fe917a5979d5da177a85feb6d16365d1968f7d13414b",
+      "bytes": 9422,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/format.py"
+    },
+    {
+      "path": "lossless_bf16/ops.py",
+      "git_blob": "196fbd5950e6aa7b9c966d0ae38e25a0ccb0f26b",
+      "sha256": "51082d1ebc7f42f93ad8b1afb906fcabb584e6610173892e022a4c8b7a4b64cb",
+      "bytes": 5814,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/ops.py"
+    },
+    {
+      "path": "lossless_bf16/packing.py",
+      "git_blob": "08899c0956fdd79e0a07339d05869a3e6eefb4ed",
+      "sha256": "f7fceec1b2f180f58b23e996ccd9c26467a55bfcae7931d1eeec98f6be0bd7f2",
+      "bytes": 10451,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/packing.py"
+    },
+    {
+      "path": "lossless_bf16/timing.py",
+      "git_blob": "857492c9dbd20ea4c120d0caed050decb1489445",
+      "sha256": "fe4b071df9593b284b42512a5fd8969876853f18a3d3d6da2a0c9a6c0062b18f",
+      "bytes": 4480,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/lossless_bf16/timing.py"
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob": "3fdb61333f944285530af28fee4a6d39b1525d45",
+      "sha256": "d0f4dce95fb8fdddfcd8c64585beb05fda6a1c8ae7f36ca0247c0129d8bccd5f",
+      "bytes": 687,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/pyproject.toml"
+    },
+    {
+      "path": "results/README.md",
+      "git_blob": "af90b7f1aca00b28b3ab95cf29f564e028624d3b",
+      "sha256": "622290d089a6ca80f818ea7b862a40ca418d691ace3b9806201029832efc8e4c",
+      "bytes": 2745,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/results/README.md"
+    },
+    {
+      "path": "results/escape_counts.csv",
+      "git_blob": "d828bf28919025b2f5fcbca27aaf04c384880eae",
+      "sha256": "97b031f0466778a7a7a70ff57dcd1b2b6d915b8f59656c90ba08928ac275d369",
+      "bytes": 2855,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/results/escape_counts.csv"
+    },
+    {
+      "path": "results/h200_paired.csv",
+      "git_blob": "8c32e84b9449463250f6981172b1466e69bd57e2",
+      "sha256": "ddf13dda255a31c38dd0096f0a7c1647e6fb7c449a2125f0c01863df99f063b8",
+      "bytes": 3735,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/results/h200_paired.csv"
+    },
+    {
+      "path": "results/h200_same_process.csv",
+      "git_blob": "dd5ad7cca7e60f54e179b86c80887bc169a8043e",
+      "sha256": "faa24188ea17bcec869d1e010d9963b1b18f1da4a4856fbb9022677a8551adc1",
+      "bytes": 5637,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/results/h200_same_process.csv"
+    },
+    {
+      "path": "results/h200_splitk_timeline.csv",
+      "git_blob": "430546725ce568895f1f6de1225e84d7fa2a5db0",
+      "sha256": "a577d553409ca8e685c4d4ccd6ce1d2e2bb198340dfe40e157b2d0152b7fee2b",
+      "bytes": 4410,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/results/h200_splitk_timeline.csv"
+    },
+    {
+      "path": "results/plot_results.py",
+      "git_blob": "f67aaa7ae001b082a6d0925baa3ace156d8815e4",
+      "sha256": "dcbf441433b40a3435bd43efb91d4a12ecaa8f7db82391a94b2355c2877a67d9",
+      "bytes": 5022,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/results/plot_results.py"
+    },
+    {
+      "path": "tests/test_emulation.py",
+      "git_blob": "70cc3acf9d8a77aee1f6ba782a1c157cc210edcb",
+      "sha256": "fd4d6841976fff4f421192223fa46764f472611e250e89544529693dd3f77b6f",
+      "bytes": 7116,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/tests/test_emulation.py"
+    },
+    {
+      "path": "tests/test_format.py",
+      "git_blob": "bfd35ae11ad323337123460d6354b71505e272f2",
+      "sha256": "f1e9ca5f1f237df095deebe909ae7676df0d4b5053664ac4dc5a144203182678",
+      "bytes": 7515,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/tests/test_format.py"
+    },
+    {
+      "path": "tests/test_gpu.py",
+      "git_blob": "6a52781a49338cbcc1eb45879576b8c9d59a4767",
+      "sha256": "b1fb4948d4f54af6cf609855bf99bcf2ac9ba62e749ada9d12e8c770bfd31e09",
+      "bytes": 3209,
+      "url": "https://raw.githubusercontent.com/MrNirmata/lossless-bf16/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2/tests/test_gpu.py"
+    }
+  ]
+}

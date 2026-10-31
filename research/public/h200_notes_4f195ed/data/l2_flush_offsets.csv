@@ -1,0 +1,29 @@
+kernel,layer,shape_NxK,weight_MB,flush,run,tuner_raw_us,harness_us
+cublas_gemm,in-proj,4096x8192,67.1,write,W1,30.08,21.22
+cublas_gemm,in-proj,4096x8192,67.1,write,W2,30.78,21.15
+cublas_gemm,in-proj,4096x8192,67.1,read,R1,24.61,21.46
+cublas_gemm,in-proj,4096x8192,67.1,read,R2,24.61,21.63
+cublas_gemm,qkv+gate,2304x8192,37.7,write,W1,20.67,14.19
+cublas_gemm,qkv+gate,2304x8192,37.7,write,W2,20.64,13.98
+cublas_gemm,qkv+gate,2304x8192,37.7,read,R1,17.09,14.11
+cublas_gemm,qkv+gate,2304x8192,37.7,read,R2,17.25,13.63
+cublas_gemm,o-proj,8192x1024,16.8,write,W1,12.06,6.82
+cublas_gemm,o-proj,8192x1024,16.8,write,W2,11.87,6.94
+cublas_gemm,o-proj,8192x1024,16.8,read,R1,10.11,6.88
+cublas_gemm,o-proj,8192x1024,16.8,read,R2,10.05,6.56
+cublas_gemm,out-proj slice,1024x4096,8.4,write,W1,11.23,6.59
+cublas_gemm,out-proj slice,1024x4096,8.4,write,W2,11.23,6.62
+cublas_gemm,out-proj slice,1024x4096,8.4,read,R1,10.24,7.09
+cublas_gemm,out-proj slice,1024x4096,8.4,read,R2,10.24,7.07
+gemv_1row_per_cta,in-proj,4096x8192,67.1,write,W1,26.34,16.78
+gemv_1row_per_cta,qkv+gate,2304x8192,37.7,write,W1,17.66,9.98
+gemv_1row_per_cta,qkv+gate,2304x8192,37.7,read,R1,13.66,10.08
+gemv_4rows_per_cta,o-proj,8192x1024,16.8,write,W1,10.88,5.54
+gemv_4rows_per_cta,o-proj,8192x1024,16.8,read,R1,8.96,5.70
+gemv_4rows_per_cta,o-proj,8192x1024,16.8,read,R2,8.96,5.39
+gemv_1row_per_cta,out-proj slice,1024x4096,8.4,write,W1,8.48,3.52
+gemv_1row_per_cta,out-proj slice,1024x4096,8.4,write,W2,8.48,3.62
+gemv_1row_per_cta,out-proj slice,1024x4096,8.4,read,R1,7.33,4.09
+gemv_1row_per_cta,out-proj slice,1024x4096,8.4,read,R2,7.26,3.96
+compressed12_splitk,in-proj,4096x8192,50.7,write,W2,24.77,20.86
+compressed12_splitk,qkv+gate,2304x8192,28.5,write,W2,17.22,12.10

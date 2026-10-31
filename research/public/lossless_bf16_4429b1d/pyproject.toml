@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lossless-bf16"
+version = "0.1.0"
+description = "Exact 12-bit storage for BF16 LLM weights, decoded in registers by Hopper (sm_90a) GEMV/GEMM kernels"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "MrNirmata" }]
+dependencies = ["torch>=2.4"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+plot = ["matplotlib>=3.7"]
+
+[tool.setuptools]
+packages = ["lossless_bf16"]
+
+[tool.setuptools.package-data]
+lossless_bf16 = ["csrc/*.cu", "csrc/*.cpp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

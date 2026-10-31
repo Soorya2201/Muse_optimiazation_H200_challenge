@@ -1,0 +1,15 @@
+design,ctas_per_sm,weight_slots_per_sm,weight_kib_per_sm,consumers,marginal_tb_s,intercept_us,source
+persistent,1,8,72,no-op,3.41,7.1,fit over 4 sizes (85/198/340/425 MB)
+persistent,1,8,72,spin-700ns,2.94,6.8,fit over 4 sizes
+persistent,1,12,108,no-op,3.32,7.3,fit over 4 sizes
+persistent,1,12,108,spin-700ns,2.95,7.9,fit over 4 sizes
+persistent,1,16,144,no-op,3.42,8.7,fit over 4 sizes
+persistent,1,16,144,spin-700ns,3.04,9.4,fit over 4 sizes
+persistent,2,12,108,no-op,4.23,11.4,fit over 4 sizes
+persistent,2,12,108,spin-700ns,3.91,16.1,fit over 4 sizes
+persistent,2,16,144,no-op,4.30,12.9,fit over 4 sizes
+persistent,2,16,144,spin-700ns,3.87,16.8,fit over 4 sizes
+two-kernel,4,16,144,no-op,4.24,13.2,my fit of 4 stream samples (run M1)
+two-kernel,4,16,144,no-op,4.29,13.5,my fit of 4 stream samples (run M2)
+two-kernel,4,16,144,no-op,4.13,12.6,my fit of 4 stream samples (run M3)
+two-kernel,4,16,144,no-op,4.22,13.0,my fit of 4 stream samples (run M4)

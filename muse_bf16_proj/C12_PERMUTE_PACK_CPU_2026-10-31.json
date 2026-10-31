@@ -1,0 +1,42 @@
+{
+  "scope": "Actual submitted _cp_repack AST function executed on CPU PyTorch; no CUDA/performance claim.",
+  "source_sha256": "99f9deba704a7bf85e46dfe0e162e2feff49db8a18902f8bf565251ff3ea0a38",
+  "torch_version": "2.8.0",
+  "records": [
+    {
+      "shape": [
+        1,
+        768
+      ],
+      "bytes": 768,
+      "words_checked": 64
+    },
+    {
+      "shape": [
+        3,
+        5,
+        4,
+        2,
+        3,
+        768
+      ],
+      "bytes": 276480,
+      "words_checked": 10000
+    },
+    {
+      "shape": [
+        2,
+        96,
+        4,
+        2,
+        3,
+        768
+      ],
+      "bytes": 3538944,
+      "words_checked": 10000
+    }
+  ],
+  "all_inverses_exact": true,
+  "low_bytes_unchanged": true,
+  "independent_integer_layout_matches": true
+}

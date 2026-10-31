@@ -1,0 +1,18 @@
+{
+  "scope": "CPU AST identity and exact time-frame codec validation;not H200 performance.",
+  "source_sha256": "53433583563e8a9227a12dfde2786c705714be720419ff016e5ec0d597eaeef0",
+  "unchanged_ast": [
+    "_cp_source",
+    "_cp_specs",
+    "_cp_repack",
+    "_cp_run",
+    "_cp_capture",
+    "_cp_escape_body",
+    "_cp_accuracy",
+    "_cp_difference"
+  ],
+  "actual_v40_samples_roundtripped": 2304,
+  "u16_max_value": 26272,
+  "u32_large_outlier_roundtrip": true,
+  "flush": "Read-sum over256MiB,scalar output only;initial drain and all per-arm reads outside device timestamp nodes."
+}

@@ -1,0 +1,80 @@
+{
+  "repository": "MrNirmata/h200-decode-notes",
+  "commit": "4f195ed71190f5556d48adbf23a0e1a9db5412b1",
+  "license": "CC-BY-4.0",
+  "attribution": "Copyright(c)2026MrNirmata;selected files copied unmodified,metadata manifest added by this project;see LICENSE for legal-code link.",
+  "captured_utc": "2026-10-31T10:40:18.174673+00:00",
+  "scope": "Selected primary methodology notes/data;not independently reproduced;no code executed.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob": "61a8e7f77cb5f820522ee348c7cba58eaaac644b",
+      "sha256": "65d85017071ec325e745fe61a31eb799e524d45d5325092cb687be624ed42e4f",
+      "bytes": 1192,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "24c392f45f84596da19d013976d2bf4d1fdf8e9b",
+      "sha256": "e07c14ed0e492c9bda49258ec68639c6f2b2e1ae3f602ce0213845daa19bec25",
+      "bytes": 5178,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/README.md"
+    },
+    {
+      "path": "data/graph_node_calibration.csv",
+      "git_blob": "4d1d86d39a2ed6e1500bbf93363c1c7fdc50c2e3",
+      "sha256": "a2d25b4dfccdae5c670896794d3219e7cf87d819f7c87a1cfcd93914db9e6a39",
+      "bytes": 41304,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/data/graph_node_calibration.csv"
+    },
+    {
+      "path": "data/l2_flush_offsets.csv",
+      "git_blob": "9e11928aa99f72ffa9f2f61974cc2d9000b719e6",
+      "sha256": "cb70665023e34fc12b0dd1270ebf52b3ca7a1f7412d552aeb2c9356dca2bee39",
+      "bytes": 1727,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/data/l2_flush_offsets.csv"
+    },
+    {
+      "path": "data/stream_rate_vs_inflight.csv",
+      "git_blob": "87cb89ed7bb1998a4b100bc65c239fb6092fd7d4",
+      "sha256": "fbf7c735ab4788832aca1ca762e7b9c01b41d54c263c2d54e8c8d5e2364c04a7",
+      "bytes": 954,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/data/stream_rate_vs_inflight.csv"
+    },
+    {
+      "path": "notes/00-method.md",
+      "git_blob": "09c304084f7336e2b8de58c4b2cac86ca51a8794",
+      "sha256": "dea9dbb41e918e8f91efeb6af1e1c45e9b8f77cef1fc7b0678d4cae247f99d1c",
+      "bytes": 4768,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/notes/00-method.md"
+    },
+    {
+      "path": "notes/01-l2-flush-bias.md",
+      "git_blob": "e782ad2800da1445ced339632dfab69355c6666b",
+      "sha256": "e98dfd08da562fd417ef7f0504f7313e084287a1b4e2bd2900700ddff6d56887",
+      "bytes": 8811,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/notes/01-l2-flush-bias.md"
+    },
+    {
+      "path": "notes/02-bytes-in-flight-per-sm.md",
+      "git_blob": "1f836d0d2cf3546a65a5588229878a8a261fe23b",
+      "sha256": "d8fd0d288d1dd48179385ef7f7cbebfb64c09efe49064b72e53e030212c47187",
+      "bytes": 9975,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/notes/02-bytes-in-flight-per-sm.md"
+    },
+    {
+      "path": "notes/04-kernel-boundaries-and-pdl.md",
+      "git_blob": "bed1114fdf1eb758e52bb7446d17fb171132edd7",
+      "sha256": "baeea321d3b5ee2d0195573a0558ed4be6aa080071ab92089aa6debeb4ed769b",
+      "bytes": 10029,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/notes/04-kernel-boundaries-and-pdl.md"
+    },
+    {
+      "path": "notes/05-small-facts.md",
+      "git_blob": "40bd3bb803b4a6b26fcf7797656cace2ad30727f",
+      "sha256": "56c60e636c84daeb3253f5a330dcd7eb6dc8c30107ba44913ada817717d81e46",
+      "bytes": 8658,
+      "url": "https://raw.githubusercontent.com/MrNirmata/h200-decode-notes/4f195ed71190f5556d48adbf23a0e1a9db5412b1/notes/05-small-facts.md"
+    }
+  ]
+}

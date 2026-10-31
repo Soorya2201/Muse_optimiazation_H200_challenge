@@ -1,0 +1,1257 @@
+{
+  "captured_utc": "2026-10-31T10:34:57.585704+00:00",
+  "scope": "Fourteen new repository metadata matches;three relevant default trees plus SGLang default comparisons. Not all branches/private source.",
+  "repositories": [
+    {
+      "rank": 13,
+      "team": "RunFMe",
+      "repo": "RunFMe/sglang",
+      "url": "https://github.com/RunFMe/sglang",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "fork": true,
+      "pushed_at": "2026-08-29T14:59:20Z",
+      "commit": "828411e6f1adba2a6f8885119f4228439469951f",
+      "compare": {
+        "parent": "sgl-project/sglang",
+        "status": "behind",
+        "ahead": 0,
+        "behind": 6786,
+        "total_commits": 0,
+        "files": [],
+        "limits": "GitHub compare may cap files/commits; default branch only,not all-branch source review."
+      },
+      "status": "default_compare"
+    },
+    {
+      "rank": 78,
+      "team": "islamborghini",
+      "repo": "islamborghini/sglang",
+      "url": "https://github.com/islamborghini/sglang",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "fork": true,
+      "pushed_at": "2026-08-07T06:35:45Z",
+      "commit": "163b739b34023c30231062a46caecd62fc4aff83",
+      "compare": {
+        "parent": "sgl-project/sglang",
+        "status": "behind",
+        "ahead": 0,
+        "behind": 5179,
+        "total_commits": 0,
+        "files": [],
+        "limits": "GitHub compare may cap files/commits; default branch only,not all-branch source review."
+      },
+      "status": "default_compare"
+    },
+    {
+      "rank": 278,
+      "team": "anmolsinghal",
+      "repo": "anmolsinghal/sglang",
+      "url": "https://github.com/anmolsinghal/sglang",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "fork": true,
+      "pushed_at": "2026-10-31T02:50:09Z",
+      "commit": "d2cf2371b0361db4b4f37d163bc9b4ecfa7a2d0d",
+      "compare": {
+        "parent": "sgl-project/sglang",
+        "status": "behind",
+        "ahead": 0,
+        "behind": 26,
+        "total_commits": 0,
+        "files": [],
+        "limits": "GitHub compare may cap files/commits; default branch only,not all-branch source review."
+      },
+      "status": "default_compare"
+    },
+    {
+      "rank": 357,
+      "team": "1sgtpepper",
+      "repo": "1sgtpepper/sglang",
+      "url": "https://github.com/1sgtpepper/sglang",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "fork": true,
+      "pushed_at": "2026-10-05T03:42:59Z",
+      "commit": "bd16c22a04b0eb9bc2e775795bda6b11727a5d38",
+      "compare": {
+        "parent": "sgl-project/sglang",
+        "status": "behind",
+        "ahead": 0,
+        "behind": 3566,
+        "total_commits": 0,
+        "files": [],
+        "limits": "GitHub compare may cap files/commits; default branch only,not all-branch source review."
+      },
+      "status": "default_compare"
+    },
+    {
+      "rank": 510,
+      "team": "MrNirmata",
+      "repo": "MrNirmata/h200-decode-notes",
+      "url": "https://github.com/MrNirmata/h200-decode-notes",
+      "default_branch": "main",
+      "license": "NOASSERTION",
+      "fork": false,
+      "pushed_at": "2026-10-30T17:33:19Z",
+      "commit": "4f195ed71190f5556d48adbf23a0e1a9db5412b1",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "LICENSE",
+          "type": "blob",
+          "sha": "61a8e7f77cb5f820522ee348c7cba58eaaac644b",
+          "size": 1192
+        },
+        {
+          "path": "README.md",
+          "type": "blob",
+          "sha": "24c392f45f84596da19d013976d2bf4d1fdf8e9b",
+          "size": 5178
+        },
+        {
+          "path": "data",
+          "type": "tree",
+          "sha": "a10bc579c3bad18d58ed0997d642538082b37912",
+          "size": null
+        },
+        {
+          "path": "data/gate_shadow_ab.csv",
+          "type": "blob",
+          "sha": "da0b3763de2ff240b38d097cc8ebbcc8ec864242",
+          "size": 315
+        },
+        {
+          "path": "data/graph_node_calibration.csv",
+          "type": "blob",
+          "sha": "4d1d86d39a2ed6e1500bbf93363c1c7fdc50c2e3",
+          "size": 41304
+        },
+        {
+          "path": "data/l2_flush_offsets.csv",
+          "type": "blob",
+          "sha": "9e11928aa99f72ffa9f2f61974cc2d9000b719e6",
+          "size": 1727
+        },
+        {
+          "path": "data/moe_cta_end_spread.csv",
+          "type": "blob",
+          "sha": "0b1de2c521970f8ea00ba12430396eb5a9a62144",
+          "size": 264
+        },
+        {
+          "path": "data/moe_stream_noop_vs_real.csv",
+          "type": "blob",
+          "sha": "dc59fbd040baad99753d2074f8a326dfe0d03084",
+          "size": 404
+        },
+        {
+          "path": "data/moe_tuner_flush.csv",
+          "type": "blob",
+          "sha": "81b2adb19deebedd2377541190e91ab9a7b5748e",
+          "size": 319
+        },
+        {
+          "path": "data/one_cta_per_sm_timeline.csv",
+          "type": "blob",
+          "sha": "18dfb4e8ab0d80e7fc6604c5f0c63b4ae2cf63e2",
+          "size": 662
+        },
+        {
+          "path": "data/stream_rate_vs_inflight.csv",
+          "type": "blob",
+          "sha": "87cb89ed7bb1998a4b100bc65c239fb6092fd7d4",
+          "size": 954
+        },
+        {
+          "path": "data/wgmma_dequant_bench.csv",
+          "type": "blob",
+          "sha": "d9d59e624ef9097233bac81d90e73ad76f2cddda",
+          "size": 461
+        },
+        {
+          "path": "figures",
+          "type": "tree",
+          "sha": "d928ae185e30797856c26d9c6b74749475a0d077",
+          "size": null
+        },
+        {
+          "path": "figures/fig1_flush_excess.png",
+          "type": "blob",
+          "sha": "511b3b8ca0a16124656f6fd61cc6d5f00b2faa9e",
+          "size": 93404
+        },
+        {
+          "path": "figures/fig2_rate_vs_inflight.png",
+          "type": "blob",
+          "sha": "f3df04e4f91a9d3f4ae2682b59bf0ded6d080f31",
+          "size": 99369
+        },
+        {
+          "path": "figures/fig3_consumer_vs_supply.png",
+          "type": "blob",
+          "sha": "da7c26014a75c0cc504036d1ce0de108b0945af5",
+          "size": 102183
+        },
+        {
+          "path": "figures/fig4_node_cost.png",
+          "type": "blob",
+          "sha": "3e2d2c3248c4ec18a01f9636794aa75c787c1c27",
+          "size": 70672
+        },
+        {
+          "path": "figures/make_figures.py",
+          "type": "blob",
+          "sha": "e4491d9458b58928c8cbf6e0b4bb84950efb522a",
+          "size": 8744
+        },
+        {
+          "path": "notes",
+          "type": "tree",
+          "sha": "d379f73f491fc5fe5a6aa10bfbb47733561c770b",
+          "size": null
+        },
+        {
+          "path": "notes/00-method.md",
+          "type": "blob",
+          "sha": "09c304084f7336e2b8de58c4b2cac86ca51a8794",
+          "size": 4768
+        },
+        {
+          "path": "notes/01-l2-flush-bias.md",
+          "type": "blob",
+          "sha": "e782ad2800da1445ced339632dfab69355c6666b",
+          "size": 8811
+        },
+        {
+          "path": "notes/02-bytes-in-flight-per-sm.md",
+          "type": "blob",
+          "sha": "1f836d0d2cf3546a65a5588229878a8a261fe23b",
+          "size": 9975
+        },
+        {
+          "path": "notes/03-nvfp4-moe-streaming.md",
+          "type": "blob",
+          "sha": "898b900cbc28006652b206abe32c897ea1323cbc",
+          "size": 16674
+        },
+        {
+          "path": "notes/04-kernel-boundaries-and-pdl.md",
+          "type": "blob",
+          "sha": "bed1114fdf1eb758e52bb7446d17fb171132edd7",
+          "size": 10029
+        },
+        {
+          "path": "notes/05-small-facts.md",
+          "type": "blob",
+          "sha": "40bd3bb803b4a6b26fcf7797656cace2ad30727f",
+          "size": 8658
+        }
+      ],
+      "status": "tree_inspected"
+    },
+    {
+      "rank": 510,
+      "team": "MrNirmata",
+      "repo": "MrNirmata/lossless-bf16",
+      "url": "https://github.com/MrNirmata/lossless-bf16",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "fork": false,
+      "pushed_at": "2026-10-30T17:33:06Z",
+      "commit": "4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": ".gitignore",
+          "type": "blob",
+          "sha": "bd5eff44f06fb40159e70728f49e418ad85890c6",
+          "size": 87
+        },
+        {
+          "path": "LICENSE",
+          "type": "blob",
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "size": 11357
+        },
+        {
+          "path": "README.md",
+          "type": "blob",
+          "sha": "b31aed0025119dea3f8c330e7fc3b6debe53aa18",
+          "size": 13476
+        },
+        {
+          "path": "bench",
+          "type": "tree",
+          "sha": "1515d390ef090331c066922b59336a4dae39df9e",
+          "size": null
+        },
+        {
+          "path": "bench/bench_linear.py",
+          "type": "blob",
+          "sha": "6fcbbbeadf6b0558e6a4dbe581be00e32a1b7e36",
+          "size": 4695
+        },
+        {
+          "path": "docs",
+          "type": "tree",
+          "sha": "f72e58a38ed11fd7f085cfc633e5a8e6c8308ac0",
+          "size": null
+        },
+        {
+          "path": "docs/format.md",
+          "type": "blob",
+          "sha": "2a4bb2e07b24b5cd7ae84def937ef054db6b87d5",
+          "size": 11634
+        },
+        {
+          "path": "docs/kernels.md",
+          "type": "blob",
+          "sha": "12b97210fd58ac044d63b2d82945f96167882193",
+          "size": 12867
+        },
+        {
+          "path": "lossless_bf16",
+          "type": "tree",
+          "sha": "d1a0d8c8547664432c1f89ef98a66e0eef057a8f",
+          "size": null
+        },
+        {
+          "path": "lossless_bf16/__init__.py",
+          "type": "blob",
+          "sha": "158c9acc53cee608bbb925a364120cfe95f676fd",
+          "size": 1224
+        },
+        {
+          "path": "lossless_bf16/configs.py",
+          "type": "blob",
+          "sha": "e93602dce036e99b8f5b661c4b69b1520d7a9c2b",
+          "size": 7262
+        },
+        {
+          "path": "lossless_bf16/csrc",
+          "type": "tree",
+          "sha": "5b48759c18c1a03fe2a20840aacfe00e67329e90",
+          "size": null
+        },
+        {
+          "path": "lossless_bf16/csrc/README.md",
+          "type": "blob",
+          "sha": "a2fc24e8e9e43d77430532e2bddad042c8e94499",
+          "size": 1654
+        },
+        {
+          "path": "lossless_bf16/csrc/bindings.cpp",
+          "type": "blob",
+          "sha": "21674ee24919fc968378d8b2d528f28bab104fdf",
+          "size": 1853
+        },
+        {
+          "path": "lossless_bf16/csrc/zg.cu",
+          "type": "blob",
+          "sha": "3df6ad518f6a641a407f326d46504bf297d8ea0c",
+          "size": 10045
+        },
+        {
+          "path": "lossless_bf16/csrc/zr.cu",
+          "type": "blob",
+          "sha": "ee59085a4479a9ae8817d4c7819f2f315bd76732",
+          "size": 10109
+        },
+        {
+          "path": "lossless_bf16/csrc/zs.cu",
+          "type": "blob",
+          "sha": "34a1d4d14d78431fc4adc300f4cf6b837b956a23",
+          "size": 24639
+        },
+        {
+          "path": "lossless_bf16/csrc/zt.cu",
+          "type": "blob",
+          "sha": "f76ac1c103615f69dca69c895fecc86c74935019",
+          "size": 13776
+        },
+        {
+          "path": "lossless_bf16/format.py",
+          "type": "blob",
+          "sha": "6cbe008fa17409b391df9e4f4ca1badc14bf5e94",
+          "size": 9422
+        },
+        {
+          "path": "lossless_bf16/ops.py",
+          "type": "blob",
+          "sha": "196fbd5950e6aa7b9c966d0ae38e25a0ccb0f26b",
+          "size": 5814
+        },
+        {
+          "path": "lossless_bf16/packing.py",
+          "type": "blob",
+          "sha": "08899c0956fdd79e0a07339d05869a3e6eefb4ed",
+          "size": 10451
+        },
+        {
+          "path": "lossless_bf16/timing.py",
+          "type": "blob",
+          "sha": "857492c9dbd20ea4c120d0caed050decb1489445",
+          "size": 4480
+        },
+        {
+          "path": "pyproject.toml",
+          "type": "blob",
+          "sha": "3fdb61333f944285530af28fee4a6d39b1525d45",
+          "size": 687
+        },
+        {
+          "path": "results",
+          "type": "tree",
+          "sha": "5f913d1c9c1139a72752891a06e1d2e879adabc3",
+          "size": null
+        },
+        {
+          "path": "results/README.md",
+          "type": "blob",
+          "sha": "af90b7f1aca00b28b3ab95cf29f564e028624d3b",
+          "size": 2745
+        },
+        {
+          "path": "results/escape_counts.csv",
+          "type": "blob",
+          "sha": "d828bf28919025b2f5fcbca27aaf04c384880eae",
+          "size": 2855
+        },
+        {
+          "path": "results/h200_paired.csv",
+          "type": "blob",
+          "sha": "8c32e84b9449463250f6981172b1466e69bd57e2",
+          "size": 3735
+        },
+        {
+          "path": "results/h200_same_process.csv",
+          "type": "blob",
+          "sha": "dd5ad7cca7e60f54e179b86c80887bc169a8043e",
+          "size": 5637
+        },
+        {
+          "path": "results/h200_splitk_timeline.csv",
+          "type": "blob",
+          "sha": "430546725ce568895f1f6de1225e84d7fa2a5db0",
+          "size": 4410
+        },
+        {
+          "path": "results/plot_results.py",
+          "type": "blob",
+          "sha": "f67aaa7ae001b082a6d0925baa3ace156d8815e4",
+          "size": 5022
+        },
+        {
+          "path": "results/speedup.png",
+          "type": "blob",
+          "sha": "f11d4bc638df1a4f41831a794b9d1c779122bc39",
+          "size": 98386
+        },
+        {
+          "path": "results/splitk_timeline.png",
+          "type": "blob",
+          "sha": "963bcb3e7a46d0fcdb038532e303f7c428bb3143",
+          "size": 92963
+        },
+        {
+          "path": "tests",
+          "type": "tree",
+          "sha": "f3e3d0b22007f572afa66da4b82d7a6d1346b44c",
+          "size": null
+        },
+        {
+          "path": "tests/test_emulation.py",
+          "type": "blob",
+          "sha": "70cc3acf9d8a77aee1f6ba782a1c157cc210edcb",
+          "size": 7116
+        },
+        {
+          "path": "tests/test_format.py",
+          "type": "blob",
+          "sha": "bfd35ae11ad323337123460d6354b71505e272f2",
+          "size": 7515
+        },
+        {
+          "path": "tests/test_gpu.py",
+          "type": "blob",
+          "sha": "6a52781a49338cbcc1eb45879576b8c9d59a4767",
+          "size": 3209
+        },
+        {
+          "path": "tools",
+          "type": "tree",
+          "sha": "685814fa24f6b87eead99d41e094a582d1d3948a",
+          "size": null
+        },
+        {
+          "path": "tools/Dockerfile",
+          "type": "blob",
+          "sha": "1da952c49a6d2a529f57646740e9054fb1098cbc",
+          "size": 1309
+        },
+        {
+          "path": "tools/compile_check.py",
+          "type": "blob",
+          "sha": "9c37923c215f11223ac22dff80dfec14c622338c",
+          "size": 4931
+        },
+        {
+          "path": "tools/compile_check.sh",
+          "type": "blob",
+          "sha": "c989605bcb62f77c226ea3d92d8acab43fdbe0a9",
+          "size": 544
+        }
+      ],
+      "status": "tree_inspected"
+    },
+    {
+      "rank": 544,
+      "team": "goldbar123467",
+      "repo": "goldbar123467/NVFP4-Group-Gemm",
+      "url": "https://github.com/goldbar123467/NVFP4-Group-Gemm",
+      "default_branch": "main",
+      "license": null,
+      "fork": false,
+      "pushed_at": "2026-02-06T03:20:33Z",
+      "commit": "39fd1d746615bfbebbd71e18ce0d7bd952b1a6c5",
+      "status": "metadata_only_deferred_or_unrelated"
+    },
+    {
+      "rank": 544,
+      "team": "goldbar123467",
+      "repo": "goldbar123467/nvfp4_group_gemm",
+      "url": "https://github.com/goldbar123467/nvfp4_group_gemm",
+      "default_branch": "main",
+      "license": null,
+      "fork": false,
+      "pushed_at": "2026-01-20T02:27:48Z",
+      "commit": "21e86b69bbba4f924cf1b2dc514fd47f8d5282cf",
+      "status": "metadata_only_deferred_or_unrelated"
+    },
+    {
+      "rank": 689,
+      "team": "oniisanlabs",
+      "repo": "oniisanlabs/sglang",
+      "url": "https://github.com/oniisanlabs/sglang",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "fork": true,
+      "pushed_at": "2026-10-30T07:24:25Z",
+      "commit": "5d8e90a0f96e6ba35603f9b27f2f1039268c810e",
+      "compare": {
+        "parent": "sgl-project/sglang",
+        "status": "behind",
+        "ahead": 0,
+        "behind": 240,
+        "total_commits": 0,
+        "files": [],
+        "limits": "GitHub compare may cap files/commits; default branch only,not all-branch source review."
+      },
+      "status": "default_compare"
+    },
+    {
+      "rank": 909,
+      "team": "ScrashOff",
+      "repo": "ScrashOff/okc-muse-kernels",
+      "url": "https://github.com/ScrashOff/okc-muse-kernels",
+      "default_branch": "main",
+      "license": null,
+      "fork": false,
+      "pushed_at": "2026-10-30T21:52:16Z",
+      "commit": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "truncated": false,
+      "paths": [
+        {
+          "path": ".gitignore",
+          "type": "blob",
+          "sha": "e8b33a544574a01bf3679e9a69bea4a5243db16c",
+          "size": 39
+        },
+        {
+          "path": "README.md",
+          "type": "blob",
+          "sha": "d3cc4bd2de9b0519b03413fefe1c9825112646c8",
+          "size": 5684
+        },
+        {
+          "path": "history",
+          "type": "tree",
+          "sha": "5a062bb3e77640cd645fae86ae2abebadf966be9",
+          "size": null
+        },
+        {
+          "path": "history/muse_attention_decode",
+          "type": "tree",
+          "sha": "e19ad4ca28d138895a90bf9ea917b1d68e01b3d3",
+          "size": null
+        },
+        {
+          "path": "history/muse_attention_decode/v1",
+          "type": "tree",
+          "sha": "53b161bdf5ec6529fe0927bc35d6c4897f388dfe",
+          "size": null
+        },
+        {
+          "path": "history/muse_attention_decode/v1/judge-profile.txt",
+          "type": "blob",
+          "sha": "133d126ac3d03fc4bf7af68be05194b9646f4487",
+          "size": 7306
+        },
+        {
+          "path": "history/muse_attention_decode/v1/submission.py",
+          "type": "blob",
+          "sha": "f7d37aa3034bc833bd3fa519ba02c373a175ee0c",
+          "size": 11885
+        },
+        {
+          "path": "history/muse_attention_decode/v2",
+          "type": "tree",
+          "sha": "d228dceca8f6890422fbdb473e608d93e07a4fc9",
+          "size": null
+        },
+        {
+          "path": "history/muse_attention_decode/v2/judge-profile.txt",
+          "type": "blob",
+          "sha": "91c02788aa3f4922fdd017dedea10d2980e293d0",
+          "size": 7305
+        },
+        {
+          "path": "history/muse_attention_decode/v2/submission.py",
+          "type": "blob",
+          "sha": "9b973dcebef839253102601d135f683e1ce31556",
+          "size": 13499
+        },
+        {
+          "path": "history/muse_attention_decode/v3",
+          "type": "tree",
+          "sha": "e259307594f4d764d567857a70528970ffbb0480",
+          "size": null
+        },
+        {
+          "path": "history/muse_attention_decode/v3/judge-profile.txt",
+          "type": "blob",
+          "sha": "c6cd982ed4a70780065f3baa1c92b737de564ddf",
+          "size": 7840
+        },
+        {
+          "path": "history/muse_attention_decode/v3/submission.py",
+          "type": "blob",
+          "sha": "2cb1da04554e8fd1fbcd27bce5032d9a95e6f0df",
+          "size": 18802
+        },
+        {
+          "path": "history/muse_attention_decode/v4",
+          "type": "tree",
+          "sha": "b407c1c1030fa1e680fa93212dd4e7f4357c77e2",
+          "size": null
+        },
+        {
+          "path": "history/muse_attention_decode/v4/judge-profile.txt",
+          "type": "blob",
+          "sha": "98b39052f90bca9c2ac2af4c7f221f9edfe49394",
+          "size": 7840
+        },
+        {
+          "path": "history/muse_attention_decode/v4/submission.py",
+          "type": "blob",
+          "sha": "a153e5e7747bd55d7560a83123c99bb31e1b5f90",
+          "size": 18939
+        },
+        {
+          "path": "history/muse_bf16_proj",
+          "type": "tree",
+          "sha": "3c0b2a7ab832df9c91b0df4b11a9cfe102d28add",
+          "size": null
+        },
+        {
+          "path": "history/muse_bf16_proj/v1",
+          "type": "tree",
+          "sha": "37ab2aae76c1818e14b791069dbdbe28e7a3f96f",
+          "size": null
+        },
+        {
+          "path": "history/muse_bf16_proj/v1/judge-profile.txt",
+          "type": "blob",
+          "sha": "8120ab3f1e481d37ef0d951dad723960784e51aa",
+          "size": 12877
+        },
+        {
+          "path": "history/muse_bf16_proj/v1/submission.py",
+          "type": "blob",
+          "sha": "8acb983bcc3fb9d6be86c078db0705f5990ea07c",
+          "size": 13290
+        },
+        {
+          "path": "history/muse_bf16_proj/v2",
+          "type": "tree",
+          "sha": "7f1ed906fc9a91c6c252274efb4664120e255d01",
+          "size": null
+        },
+        {
+          "path": "history/muse_bf16_proj/v2/judge-profile.txt",
+          "type": "blob",
+          "sha": "317649c76490143e45dccd3d96f7f9899ac9e0a7",
+          "size": 12877
+        },
+        {
+          "path": "history/muse_bf16_proj/v2/submission.py",
+          "type": "blob",
+          "sha": "31836d4ee630ac69c61077095db8e63294ea10b4",
+          "size": 15854
+        },
+        {
+          "path": "history/muse_bf16_proj/v3",
+          "type": "tree",
+          "sha": "b1913797617d24fb174a84b48f44c2d2ca1339e7",
+          "size": null
+        },
+        {
+          "path": "history/muse_bf16_proj/v3/judge-profile.txt",
+          "type": "blob",
+          "sha": "1b54f178418114bad05d119c623f694ac894587a",
+          "size": 12788
+        },
+        {
+          "path": "history/muse_bf16_proj/v3/submission.py",
+          "type": "blob",
+          "sha": "81599dd50c1fb01a5e30b855f4cc85d7b38207aa",
+          "size": 18752
+        },
+        {
+          "path": "history/muse_bf16_proj/v4",
+          "type": "tree",
+          "sha": "b43bf05e691ec33545fbb62c7f2adc4bb8b4125e",
+          "size": null
+        },
+        {
+          "path": "history/muse_bf16_proj/v4/judge-profile.txt",
+          "type": "blob",
+          "sha": "1650b756ce3376388c26376ffe5232962586163b",
+          "size": 12878
+        },
+        {
+          "path": "history/muse_bf16_proj/v4/submission.py",
+          "type": "blob",
+          "sha": "cc958294e8bc6280942357b1bf2f1c837523fecf",
+          "size": 20194
+        },
+        {
+          "path": "history/muse_bf16_proj/v5",
+          "type": "tree",
+          "sha": "a53435261f20f8b80aa2bf9c3f5a13eb7b33b5ca",
+          "size": null
+        },
+        {
+          "path": "history/muse_bf16_proj/v5/judge-profile.txt",
+          "type": "blob",
+          "sha": "616b86aeba5839a7672e3e6fd41c67990bea281d",
+          "size": 12787
+        },
+        {
+          "path": "history/muse_bf16_proj/v5/submission.py",
+          "type": "blob",
+          "sha": "2b76e862f4a61e18e28f9f3ac248d12cd16ad8d4",
+          "size": 16426
+        },
+        {
+          "path": "history/muse_bf16_proj/v6",
+          "type": "tree",
+          "sha": "37256203fdd3bc8ea75c620fb6ad78ba33bc50c7",
+          "size": null
+        },
+        {
+          "path": "history/muse_bf16_proj/v6/judge-profile.txt",
+          "type": "blob",
+          "sha": "85be8b987900272d5b1c9e46cd58f81eb03e40b1",
+          "size": 12789
+        },
+        {
+          "path": "history/muse_bf16_proj/v6/submission.py",
+          "type": "blob",
+          "sha": "6f097a6bd5742a113cab74715cf5169ef55f105a",
+          "size": 16965
+        },
+        {
+          "path": "history/muse_decode_layer",
+          "type": "tree",
+          "sha": "2033f0afda2944fab43aaf5e4f3669316704cf8b",
+          "size": null
+        },
+        {
+          "path": "history/muse_decode_layer/v1",
+          "type": "tree",
+          "sha": "b02b67848fa43fe1a4fa725ee0265e6fb487b8a7",
+          "size": null
+        },
+        {
+          "path": "history/muse_decode_layer/v1/judge-profile.txt",
+          "type": "blob",
+          "sha": "1dd0b2ed8fbe9ee116dda893ee8db45af00bc487",
+          "size": 18356
+        },
+        {
+          "path": "history/muse_decode_layer/v1/submission.py",
+          "type": "blob",
+          "sha": "d91b40bd1eac58538e9de23f20bceb25240fb5a7",
+          "size": 35212
+        },
+        {
+          "path": "history/muse_decode_layer/v2",
+          "type": "tree",
+          "sha": "f83c1259ebf81aed47ce341bab3cd0d7c7d6385b",
+          "size": null
+        },
+        {
+          "path": "history/muse_decode_layer/v2/judge-profile.txt",
+          "type": "blob",
+          "sha": "8396ac677585788616abd89294ea49f4d9ceaabf",
+          "size": 18524
+        },
+        {
+          "path": "history/muse_decode_layer/v2/submission.py",
+          "type": "blob",
+          "sha": "a4f055db44d4ebaf1a594fdba06d56ba481952dc",
+          "size": 40813
+        },
+        {
+          "path": "history/muse_decode_layer/v3",
+          "type": "tree",
+          "sha": "3ddb690c258f01e35ded1f1e25555af23f163a7e",
+          "size": null
+        },
+        {
+          "path": "history/muse_decode_layer/v3/judge-profile.txt",
+          "type": "blob",
+          "sha": "babb86383c1a5ffb07d36730bc0ee4448a61b794",
+          "size": 18356
+        },
+        {
+          "path": "history/muse_decode_layer/v3/submission.py",
+          "type": "blob",
+          "sha": "16ffa87b66644b195e9c04ac4ddd7e668649765d",
+          "size": 53759
+        },
+        {
+          "path": "history/muse_decode_layer/v4",
+          "type": "tree",
+          "sha": "2154eb4f670efb770c45476c831db9ab34e01bd3",
+          "size": null
+        },
+        {
+          "path": "history/muse_decode_layer/v4/judge-profile.txt",
+          "type": "blob",
+          "sha": "722718b08bd21a7c84d0ed8fce04c195c5bb7237",
+          "size": 18179
+        },
+        {
+          "path": "history/muse_decode_layer/v4/submission.py",
+          "type": "blob",
+          "sha": "b25e5022aa1af9372ff5a2b5b7830b4e92a78917",
+          "size": 56749
+        },
+        {
+          "path": "history/muse_decode_layer/v5",
+          "type": "tree",
+          "sha": "f3ab66c085fc1080f7548575b4def9f76def98b1",
+          "size": null
+        },
+        {
+          "path": "history/muse_decode_layer/v5/judge-profile.txt",
+          "type": "blob",
+          "sha": "483619b6046e6ccadc5fd607bb9f83d1fd02a2e4",
+          "size": 18177
+        },
+        {
+          "path": "history/muse_decode_layer/v5/submission.py",
+          "type": "blob",
+          "sha": "e194d760d25203fdf790d1fd54f417ed26ac1929",
+          "size": 60174
+        },
+        {
+          "path": "history/muse_decode_layer/v6",
+          "type": "tree",
+          "sha": "29a33354af128c7eb7e98c62fa503368b1597bcc",
+          "size": null
+        },
+        {
+          "path": "history/muse_decode_layer/v6/judge-profile.txt",
+          "type": "blob",
+          "sha": "36a95b87ddb2ce2fc1c5d3c920de5a4fe277e48c",
+          "size": 18176
+        },
+        {
+          "path": "history/muse_decode_layer/v6/submission.py",
+          "type": "blob",
+          "sha": "8acf4969bd5f9a73b3027a3948e8d27a51fa6edd",
+          "size": 63753
+        },
+        {
+          "path": "history/muse_moe_w4a16",
+          "type": "tree",
+          "sha": "bc46f47d3a3e89a5611a1762a60343cb91880c80",
+          "size": null
+        },
+        {
+          "path": "history/muse_moe_w4a16/v1",
+          "type": "tree",
+          "sha": "9dab29cf818b40b52bf46cbb5793ccd2984f25db",
+          "size": null
+        },
+        {
+          "path": "history/muse_moe_w4a16/v1/judge-profile.txt",
+          "type": "blob",
+          "sha": "78f86ef4ac906b4480e4e3907d405a03cb42745b",
+          "size": 5285
+        },
+        {
+          "path": "history/muse_moe_w4a16/v1/submission.py",
+          "type": "blob",
+          "sha": "3f4bb3b16b0a15d5761d899d70a2d53f61a793ea",
+          "size": 25845
+        },
+        {
+          "path": "history/muse_moe_w4a16/v2",
+          "type": "tree",
+          "sha": "d656a026733e3be15713ee087db0839710a17a3a",
+          "size": null
+        },
+        {
+          "path": "history/muse_moe_w4a16/v2/judge-profile.txt",
+          "type": "blob",
+          "sha": "2be222c4f18f9ebf1da02f8a02f54a6d50f9db56",
+          "size": 5284
+        },
+        {
+          "path": "history/muse_moe_w4a16/v2/submission.py",
+          "type": "blob",
+          "sha": "334cf66ab04bb2d2168ab97204ecd41094a8b46f",
+          "size": 29638
+        },
+        {
+          "path": "history/muse_moe_w4a16/v3",
+          "type": "tree",
+          "sha": "efc40ce7349fc034ca1b0fb7cfd6744398949a9f",
+          "size": null
+        },
+        {
+          "path": "history/muse_moe_w4a16/v3/judge-profile.txt",
+          "type": "blob",
+          "sha": "6e678fbd1ce11889890593efa4524882334f89d7",
+          "size": 5284
+        },
+        {
+          "path": "history/muse_moe_w4a16/v3/submission.py",
+          "type": "blob",
+          "sha": "58b6b9f05eb4c26eafb39c7bc108e5ba99785a3c",
+          "size": 31476
+        },
+        {
+          "path": "history/muse_moe_w4a16/v4",
+          "type": "tree",
+          "sha": "1eb213ac3ec2c99e2a671305bdba29a34cf8b1c1",
+          "size": null
+        },
+        {
+          "path": "history/muse_moe_w4a16/v4/judge-profile.txt",
+          "type": "blob",
+          "sha": "b3d884db046087daf63bbe104401924a4016728e",
+          "size": 5283
+        },
+        {
+          "path": "history/muse_moe_w4a16/v4/submission.py",
+          "type": "blob",
+          "sha": "77d90694a4514e50964f3cf9a53f3b26871e0ce5",
+          "size": 31837
+        },
+        {
+          "path": "history/muse_moe_w4a16/v5",
+          "type": "tree",
+          "sha": "868e1d507d2439584eeb79d1e044c26278a2a35e",
+          "size": null
+        },
+        {
+          "path": "history/muse_moe_w4a16/v5/judge-profile.txt",
+          "type": "blob",
+          "sha": "4d490796f38817e456b5f7035e1b53c32644d097",
+          "size": 5283
+        },
+        {
+          "path": "history/muse_moe_w4a16/v5/submission.py",
+          "type": "blob",
+          "sha": "4cf39ed30f5048a7cfc6ec72fac4586f6a8b2af0",
+          "size": 32028
+        },
+        {
+          "path": "history/muse_moe_w4a16/v6",
+          "type": "tree",
+          "sha": "cef55ac65860954b946205301b7f3a32ea9b834a",
+          "size": null
+        },
+        {
+          "path": "history/muse_moe_w4a16/v6/judge-profile.txt",
+          "type": "blob",
+          "sha": "e14406ee8ae304503a97498ab524d28eb3e74d66",
+          "size": 10567
+        },
+        {
+          "path": "history/muse_moe_w4a16/v6/submission.py",
+          "type": "blob",
+          "sha": "01fd7786c0c70f4ac78f366869df75cd0bccd42e",
+          "size": 8623
+        },
+        {
+          "path": "history/muse_prefill_layer",
+          "type": "tree",
+          "sha": "29bf7b81f95696c8be2a972cc7bb6dee1b6cdd97",
+          "size": null
+        },
+        {
+          "path": "history/muse_prefill_layer/v1",
+          "type": "tree",
+          "sha": "9685672248f36ac6bf0f164d944658b7c82015f3",
+          "size": null
+        },
+        {
+          "path": "history/muse_prefill_layer/v1/judge-profile.txt",
+          "type": "blob",
+          "sha": "732300503ad8b3d85570d9ce6f086e887dfc0fd0",
+          "size": 12458
+        },
+        {
+          "path": "history/muse_prefill_layer/v1/submission.py",
+          "type": "blob",
+          "sha": "87dfcf78a93ef031114f16666ce123768f3b72e8",
+          "size": 34101
+        },
+        {
+          "path": "history/muse_prefill_layer/v2",
+          "type": "tree",
+          "sha": "87f993b26a569bbe911721f3fdc651627efb0d78",
+          "size": null
+        },
+        {
+          "path": "history/muse_prefill_layer/v2/judge-profile.txt",
+          "type": "blob",
+          "sha": "362ceda4ea95916e6d0c40b0a59b338200ff1137",
+          "size": 12802
+        },
+        {
+          "path": "history/muse_prefill_layer/v2/submission.py",
+          "type": "blob",
+          "sha": "82a51747ef71c4914fcfdcdae8c646513c224709",
+          "size": 46073
+        },
+        {
+          "path": "history/muse_prefill_layer/v3",
+          "type": "tree",
+          "sha": "812e0a04e2e039e362fd367f8717a174495b2f44",
+          "size": null
+        },
+        {
+          "path": "history/muse_prefill_layer/v3/judge-profile.txt",
+          "type": "blob",
+          "sha": "ad740eb52f8a0bb58de4f8635003632543de0bc6",
+          "size": 12800
+        },
+        {
+          "path": "history/muse_prefill_layer/v3/submission.py",
+          "type": "blob",
+          "sha": "5dc24657d72788f9d440dffb3a0f9248f5df3092",
+          "size": 55564
+        },
+        {
+          "path": "history/muse_prefill_layer/v4",
+          "type": "tree",
+          "sha": "e53d63006600315a48604737c25ba48f4f0be666",
+          "size": null
+        },
+        {
+          "path": "history/muse_prefill_layer/v4/judge-profile.txt",
+          "type": "blob",
+          "sha": "f78d628e4ed08bc69cf9c87ba0125a470d10912c",
+          "size": 13146
+        },
+        {
+          "path": "history/muse_prefill_layer/v4/submission.py",
+          "type": "blob",
+          "sha": "db36de5006290c7a8afd583a65f5b835ae490bfa",
+          "size": 56697
+        },
+        {
+          "path": "history/muse_prefill_layer/v5",
+          "type": "tree",
+          "sha": "98f2d0657f4feae4424e6d8478dc28a85a799655",
+          "size": null
+        },
+        {
+          "path": "history/muse_prefill_layer/v5/judge-profile.txt",
+          "type": "blob",
+          "sha": "bdcb96519fe620ee47a195f8d4cc61b3db3239bc",
+          "size": 13146
+        },
+        {
+          "path": "history/muse_prefill_layer/v5/submission.py",
+          "type": "blob",
+          "sha": "8c2a7c6c43cb7124bd1671d7b7c32b1df1a6630f",
+          "size": 41449
+        },
+        {
+          "path": "kernels",
+          "type": "tree",
+          "sha": "8e8bbc30b2a1fcdf4a1751a0cff977bb1ba00da2",
+          "size": null
+        },
+        {
+          "path": "kernels/muse_attention_decode",
+          "type": "tree",
+          "sha": "b407c1c1030fa1e680fa93212dd4e7f4357c77e2",
+          "size": null
+        },
+        {
+          "path": "kernels/muse_attention_decode/judge-profile.txt",
+          "type": "blob",
+          "sha": "98b39052f90bca9c2ac2af4c7f221f9edfe49394",
+          "size": 7840
+        },
+        {
+          "path": "kernels/muse_attention_decode/submission.py",
+          "type": "blob",
+          "sha": "a153e5e7747bd55d7560a83123c99bb31e1b5f90",
+          "size": 18939
+        },
+        {
+          "path": "kernels/muse_bf16_proj",
+          "type": "tree",
+          "sha": "a53435261f20f8b80aa2bf9c3f5a13eb7b33b5ca",
+          "size": null
+        },
+        {
+          "path": "kernels/muse_bf16_proj/judge-profile.txt",
+          "type": "blob",
+          "sha": "616b86aeba5839a7672e3e6fd41c67990bea281d",
+          "size": 12787
+        },
+        {
+          "path": "kernels/muse_bf16_proj/submission.py",
+          "type": "blob",
+          "sha": "2b76e862f4a61e18e28f9f3ac248d12cd16ad8d4",
+          "size": 16426
+        },
+        {
+          "path": "kernels/muse_decode_layer",
+          "type": "tree",
+          "sha": "29a33354af128c7eb7e98c62fa503368b1597bcc",
+          "size": null
+        },
+        {
+          "path": "kernels/muse_decode_layer/judge-profile.txt",
+          "type": "blob",
+          "sha": "36a95b87ddb2ce2fc1c5d3c920de5a4fe277e48c",
+          "size": 18176
+        },
+        {
+          "path": "kernels/muse_decode_layer/submission.py",
+          "type": "blob",
+          "sha": "8acf4969bd5f9a73b3027a3948e8d27a51fa6edd",
+          "size": 63753
+        },
+        {
+          "path": "kernels/muse_moe_w4a16",
+          "type": "tree",
+          "sha": "cef55ac65860954b946205301b7f3a32ea9b834a",
+          "size": null
+        },
+        {
+          "path": "kernels/muse_moe_w4a16/judge-profile.txt",
+          "type": "blob",
+          "sha": "e14406ee8ae304503a97498ab524d28eb3e74d66",
+          "size": 10567
+        },
+        {
+          "path": "kernels/muse_moe_w4a16/submission.py",
+          "type": "blob",
+          "sha": "01fd7786c0c70f4ac78f366869df75cd0bccd42e",
+          "size": 8623
+        },
+        {
+          "path": "kernels/muse_prefill_layer",
+          "type": "tree",
+          "sha": "98f2d0657f4feae4424e6d8478dc28a85a799655",
+          "size": null
+        },
+        {
+          "path": "kernels/muse_prefill_layer/judge-profile.txt",
+          "type": "blob",
+          "sha": "bdcb96519fe620ee47a195f8d4cc61b3db3239bc",
+          "size": 13146
+        },
+        {
+          "path": "kernels/muse_prefill_layer/submission.py",
+          "type": "blob",
+          "sha": "8c2a7c6c43cb7124bd1671d7b7c32b1df1a6630f",
+          "size": 41449
+        }
+      ],
+      "status": "tree_inspected"
+    },
+    {
+      "rank": 933,
+      "team": "baobabtr33",
+      "repo": "baobabtr33/pocket-muse",
+      "url": "https://github.com/baobabtr33/pocket-muse",
+      "default_branch": "main",
+      "license": null,
+      "fork": false,
+      "pushed_at": "2026-10-31T08:59:13Z",
+      "commit": "31790ebd93ee8d9962f8d12519df5910fe2e1c02",
+      "status": "metadata_only_deferred_or_unrelated"
+    },
+    {
+      "rank": 933,
+      "team": "baobabtr33",
+      "repo": "baobabtr33/sglang",
+      "url": "https://github.com/baobabtr33/sglang",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "fork": true,
+      "pushed_at": "2026-10-30T19:49:42Z",
+      "commit": "8ecabd3c1e1227ca91b0bbb48d75cf33b4626a73",
+      "compare": {
+        "parent": "sgl-project/sglang",
+        "status": "behind",
+        "ahead": 0,
+        "behind": 67,
+        "total_commits": 0,
+        "files": [],
+        "limits": "GitHub compare may cap files/commits; default branch only,not all-branch source review."
+      },
+      "status": "default_compare"
+    },
+    {
+      "rank": 1025,
+      "team": "Kushagrabainsla",
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open",
+      "default_branch": "main",
+      "license": null,
+      "fork": false,
+      "pushed_at": "2026-10-31T01:41:12Z",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "status": "metadata_only_deferred_or_unrelated"
+    },
+    {
+      "rank": 1126,
+      "team": "oswalpalash",
+      "repo": "oswalpalash/lysithea",
+      "url": "https://github.com/oswalpalash/lysithea",
+      "default_branch": "master",
+      "license": "MIT",
+      "fork": true,
+      "pushed_at": "2024-04-23T00:08:19Z",
+      "commit": "1e731f9eb2861f2d341dd1ddabd37ee82339e5e4",
+      "status": "metadata_only_deferred_or_unrelated"
+    }
+  ]
+}
