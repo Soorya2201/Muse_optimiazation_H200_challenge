@@ -1,0 +1,15 @@
+{
+  "scope": "Source-isolated draft, no GPU correctness/performance result and no promotion.",
+  "parent_sha256": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",
+  "candidate_sha256": "4287248c5cae1043f30be8759823389441965020f4ba00614ee4fa8ee74baebc",
+  "attribution": "trxphxle/okc-2026-muse-kernels@72db638fa2718bc0ea5645fdd5c52a5511594579 kernels/moe.py, Apache-2.0",
+  "exact_source_reversal_passed": true,
+  "syntax_passed": true,
+  "mechanism": "For zero jobs, initialize both totals/all four stage cuts to zero and return before wgs_stage_at reads a nonexistent job; other source is unchanged except collision-safe extension identity.",
+  "caveats": [
+    "No actual parent empty-WGS failure has been measured.",
+    "Current TINY phase diagnostic uses non-WGS kernels; its empty-route coverage does not validate WGS.",
+    "GPU validation must cover empty32/128/256 and nearby/fresh routes, fallback scales, normal nonempty controls and full challenge tests.",
+    "No additional Oct31 routine MoE checks remain; do not use the owner reserve."
+  ]
+}

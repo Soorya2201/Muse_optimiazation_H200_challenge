@@ -1,15 +1,16 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 18:24:13 UTC** from the live OKC boards. Overall **#145/1762**.
-No track has reached rank1. Positions change as others submit.
+Captured **2026-10-31 19:43:04 UTC** from six live OKC boards. Overall **#149/1764**.
+No track has reached rank1. Positions change as others submit. Compact evidence:
+[rank_summary_20261031194304.json](research/leaderboards/rank_summary_20261031194304.json).
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|243/1543|1.535843x|1.6523x|7.05%|
-|Routed experts|178/1248|2.372309x|2.7578x|13.98%|
-|Attention decode|190/1190|2.603505x|3.2221x|19.20%|
-|Whole decoder|145/1107|2.211495x|2.4178x|8.53%|
-|Prefill|180/752|1.784958x|2.1551x|17.18%|
+|BF16 projections|246/1546|1.535843x|1.6523x|7.05%|
+|Routed experts|179/1251|2.372309x|2.7578x|13.98%|
+|Attention decode|193/1193|2.603505x|3.2221x|19.20%|
+|Whole decoder|149/1108|2.211495x|2.4178x|8.53%|
+|Prefill|181/754|1.784958x|2.1551x|17.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -106,9 +107,10 @@ Oct31 BF16 V39/V40/V41: all 9 tests/30 timings pass per check, with the
 unchanged parent timed path. Independent C12 layout-transfer diagnostics
 reject all fixed policies; the final read-flush best worst-group proxy is
 1.000443x. No canonical/scored changes. See
-muse_bf16_proj/DEVICE_EVENT_METHOD_2026-10-31.md. The external workspace
-volume is unavailable; the current pushed work and recovered V41 evidence
-are maintained in /Users/soorya/muse_work/continuation_20261030.
+muse_bf16_proj/DEVICE_EVENT_METHOD_2026-10-31.md. The external volume was
+unavailable during that recovery; the internal continuation preserved V41.
+The drive returned later and tracked commits were safely fast-forwarded;
+its untracked research folder is preserved, never published.
 
 Oct31 decoder fresh-source/compiler cycle: no H200 check or scored change.
 New licensed trxphxle measurement data and18verified route tuples narrow
@@ -119,8 +121,19 @@ peer precision note distinguishes policy-unconfirmed higher-FP32 fusion
 from the small-T FP32-to-BF16 router reduction already corrected here.
 Passing tests are not an organizer ruling on every fused intermediate.
 
-Oct31 late prefill work: K64 scale-sharing CPU encoding proof passes
-65536words/524288weight-scale assignments; no GPU implementation/check yet.
-The next obstacle is matched normalized-X gathering and GEMM1 output
-staging. No scored improvement or canonical change. See
-muse_prefill_layer/SCALE_SHARE_RESEARCH_2026-10-31.md.
+Oct31 late prefill work now implements actual K64 packing/gather/GEMM1
+staging. Check0ad97c9c2d0b4170 passes parent5/8; independent24groups show
+753-token expert-chain gains2.8–3.6%,3012 gains1.0–1.5%,16384 loses~1%.
+All numerics/resources pass but every fixed whole-prefill policy fails3%
+gate. No scored submission/promotion. See
+muse_prefill_layer/SCALE_SHARE_H200_2026-10-31.md.
+
+Oct31 MoE TINY V33/V34: original host import error retained; repaired
+check0311db63cda7430f passes5/6 with parent timed dispatch2.377273x.
+Independent40groups/3nearby/2full traces complete, all numerics/resources
+pass but A/A and matched-control offsets exceed2%; global attribution
+rejected. All raw durations/clocks and failed gates archived. No algorithm
+or scored gain. Separate V35 empty-job WGS guard is an unvalidated source
+correctness draft; canonical unchanged. Routine MoE checks8/8, owner
+reserve untouched. Next sequential trackattention. See
+muse_moe_w4a16/TINY_PHASE_RESEARCH_2026-10-31.md and its RESEARCH_LIBRARY.md.

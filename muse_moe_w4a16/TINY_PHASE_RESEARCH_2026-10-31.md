@@ -54,7 +54,7 @@ Forty one-token groups:two seeds, four independently allocated scratch
 layouts with retained0/1/3/7MiB pads, and0/1/2/4/8local routes. Shared weight
 pointers are identical. Eight balanced Williams rounds use external device
 CUDA events and an untimed256MiB read-sum eviction before each arm.
-All1280raw event timestamps are retained without overhead subtraction.
+All1280raw integer event-duration samples are retained without overhead subtraction.
 Three nearby2/3/4-token fixtures and every group's initial/fresh graph
 replay must match parent within.002relativeL2/.01normalizedrow and be finite.
 Fresh activations, IDs and routing weights must alter output. Empty-route
@@ -105,3 +105,54 @@ flags match, canonical prefix/kernel_fn unchanged. This is not a CUDA
 compile claim. Original V33 remains immutable, all six profiles and logs
 read. V34 check0311db63cda7430f is pending, eighth of eight routine checks,
 zero submits. Same protocol/gates; no source changes after launch.
+
+
+## V34 terminal outcome
+
+Check0311db63cda7430f on sfo3 completes. All five parent challenge tests and
+six benchmark cells pass at2.377272865x,CI2.341614–2.412932,5657.112482us;
+prepare242.062161s. This still times the UNCHANGED parent, not a faster
+candidate. Independent diagnostic76.578019s completes40groups, three
+nearby fixtures, all1280integer event-duration samples and1584exact uint64
+clock observations. Final payload6344chars is intact. All initial/fresh
+numerics pass,maxrelativeL2 and normalizedrow0.000111977308. Small nonzero
+parent-repeat differences occur; do not claim universal bit identity.
+
+Full linked control/trace attributes for both BIG instantiations:
+149/145registers,0local bytes,288maxthreads,214784dynamicshared bytes.
+The trace is within its5% matched perturbation gate in every group, but
+other predeclared attribution gates fail:
+
+- Empty-route A/A median offset reaches2.405498%, above2%.
+- Two-route actual/matched offset reaches2.402941%, above2%.
+- Four-route actual/matched offset reaches2.238275%, above2%.
+
+One/eight-route groups pass their class gates; the complete experiment's
+required all-group gate fails. Both retained full traces are two-route
+fixtures. We do not drop failing pads, relax thresholds or accept causal
+attribution from the overall parent pass. Neither a memory-layout cause
+nor a specific hardware stall is established by these offsets.
+
+Observed lane0 phase medians in the instrumented traces are, respectively:
+startup2.048/2.080us, phaseA9.888/11.072us, phaseB6.944/6.976us,
+helper-join/gridbarrier1.280/1.248us, final0.368/0.384us. Trace envelopes
+are21.152/22.368us. These are descriptive, perturbed observations, not
+certified parent costs. All31nonempty phase-deletion combinations per
+trace are retained as explicitly unaccepted counterfactual arithmetic;
+none is an eligible optimization or a measured board gain. For example,
+the single-startup deletion proxies are1.01401/1.01392x, but those are not
+predictions, bounds or a justification to spend another check.
+
+All12profiletables from V33/V34, local and remote available logs, complete
+decoded reports,40raw timing groups, resource/numerical gates and all264
+clock-row ordering/coverage checks were inspected. The repaired codec
+retains every sample without new rounding. No canonical/scored change or
+submission. MoE routine checks8/8; owner reserve untouched. No GPUjob live.
+
+Stop this cycle. Do not rerun the same tiny measurement or losing loop/
+fence/ring families. A stronger measurement design or different streaming
+architecture needs a new opportunity argument. The separately isolated
+V35 empty-job WGS guard is an unvalidated correctness draft; it needs future
+empty32/128/256/fresh/fallback checks and must not be promoted from these
+non-WGS tiny results. Next sequential track:attention. Goal remains active,
+incomplete, not blocked; rank1 remains unachieved.

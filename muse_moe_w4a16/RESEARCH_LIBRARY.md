@@ -24,7 +24,8 @@ BF16 activations, fresh-input CUDA graphs and per-route output norm.
 | V100 QPN | FP16/Volta architecture; fragment packing/scale reuse studied, no direct BF16/H200 execution or gain. |
 | trxphxle MoE | Manifest/source match2.3249x, external older pre-KPERM source; no stronger additive component. |
 | ScrashOff MoE | Six versions/42external cells reviewed; Marlin/Triton family, no stronger component. License unestablished, no port/mirror. |
-| One-token phase accounting | New controlled prepare-only diagnostic, current status in dated TINY_PHASE report. No optimization claim from parent point score. |
+| Empty-job WGS range guard | New licensed source-isolated V35 draft prevents nonexistent-job lookup; CPU source/syntax only, no measured failure/gain or promotion. Needs future empty/fresh/full H200 validation. |
+| One-token phase accounting | V34 complete40groups/2traces; all numerics/resources pass but A/A/control offsets exceed2%, global attribution rejected. Raw observations retained, no score gain or automatic rerun. See dated TINY_PHASE report. |
 
 Sources/provenance and exact current findings:
 [PUBLIC_COMPONENT_REVIEW_2026-10-31T1855Z.md](PUBLIC_COMPONENT_REVIEW_2026-10-31T1855Z.md).

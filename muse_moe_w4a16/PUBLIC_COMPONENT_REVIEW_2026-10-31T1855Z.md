@@ -60,3 +60,21 @@ The new concrete direction is independent TINY phase accounting on M1,
 with controls and exact telemetry, before attempting a stream/synchronization
 redesign. See TINY_PHASE_RESEARCH_2026-10-31.md. No new optimized dispatch,
 canonical change or score improvement is established by this research.
+
+
+## Additional isolated correctness component
+
+The trxphxle source has a useful zero-job guard in `wgs_ranges`. Our current
+source calls `wgs_stage_at` with nj=0, which still reads S.jC[0] for a job
+that does not exist. The resulting empty-WGS behavior has not been measured;
+this is a static robustness issue, not a proven judge failure or reward hack.
+The TINY phase probe's empty routes exercise a different non-WGS path.
+
+`tools/build_moe_empty_job_guard.py` isolates that Apache2 guard, retaining
+attribution. Draft V35 SHA4287248c5cae1043f30be8759823389441965020f4ba00614ee4fa8ee74baebc
+sets both totals/all four cuts to zero and returns before job lookup. Exact
+source reversal proves only this branch and collision-safe extension naming
+change. Other arithmetic/packing/precision are unchanged. Syntax passes;
+no GPU validation, score or promotion. Future checks must cover emptyWGS
+32/128/256, nearby/fresh routes and fallback scales. Oct31 routine MoE
+budget is exhausted; do not consume the owner's reserve for this draft.

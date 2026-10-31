@@ -2,14 +2,18 @@
 
 This file records measured results, including regressions. Estimates are explicitly marked.
 
-Oct31 current cycle: new public component/library and restricted decoder
-screens are in PUBLIC_COMPONENT_REVIEW_2026-10-31T1855Z.md. No faster
-replacement established. V33 tiny-phase diagnostic fails before GPU build
-(missing host hashlib import); parent passes but yields no diagnostic data.
-V34 host-only repair0311db63cda7430f is live on sfo3, final routine check8/8.
-Poll same handle; canonical/scored unchanged. Read TINY_PHASE_RESEARCH and
-TINY_PHASE_REPAIR_PREFLIGHT before continuing. Do not treat parent point
-score as an optimization gain. No new scored submission.
+Oct31 current cycle: see PUBLIC_COMPONENT_REVIEW_2026-10-31T1855Z.md
+and the new RESEARCH_LIBRARY.md. Fresh source metadata/component review
+and restricted442368-selection decoder screen establish no new speedup.
+V33 failed before GPU build (missing hashlib); V34 host repair completes
+40tiny timing groups/3nearby/2full traces, all numerical/resource gates pass.
+Attribution rejects: A/Amax2.405498%,matchedcontrolmax2.402941%,above2%.
+All1280event durations/1584clock values archived; no relaxed gates or gains
+claimed. V34 parent check2.377272865x times unchanged canonical. No submit.
+Separate V35 empty-WGS job guard is an attributed source-isolated draft,
+no GPU validation/promotion. Routine MoE checks8/8, owner reserve untouched.
+No GPU job live. Next sequential trackattention.
+
 The next Oct31 main-loop experiment and expanded branch/gist/component
 research are in [STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md](STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md).
 It studies a new uniform stage body and asynchronous zero-MMA initialization,
