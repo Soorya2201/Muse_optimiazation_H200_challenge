@@ -68,46 +68,63 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
-#### Oct31 BF16 global normalization in progress; stay on BF16
+#### Oct31 BF16 global normalization complete; next sequential track decoder
 
-Previous attention cycle made actual CPU/compiler/source progress,pushed
-8397194. Current work implements a new global-exponent-normalized SK2
-component,retaining original escape records and restoring each FP32 MMA
-partial before original-unit correction/reduction. Read
-`muse_bf16_proj/GLOBAL_NORMALIZATION_2026-10-31.md`.
+Previous attention cycle made CPU/compiler/source progress, pushed8397194.
+This cycle implements and tests global exponent normalization in the current
+SK2 path; source/research pushed d4a4570, terminal evidence push follows.
+Read `muse_bf16_proj/GLOBAL_NORMALIZATION_2026-10-31.md`.
 
-V42C++prototype is unsubmitted:NVCC split mask/OR,core9not7;preserved.
-V43packs originalbase metadata intoignoredLOP3bits;actualsm90acore7vsold12,
-both16regs/0stack/spills. Restorecostisoutsidehotdecode,notanotherlaunch.
-CPU487424normaldecodedpatterns/119bases/243712ternarywords/512bounded
-256termFP32dotfixturespass. Homogeneityrequiresnooverflow/underflow/FTZ
-crossing;notallBF16inputsorGPUproof. Complete127010bytegeneratednative
-source/specs/238hostmetadata-callpreflightpasses,canonicalprefixunchanged.
-Same-jobmodel:3%boardneeds9.2082%targetcellcut;noforecast. Prior sign-only
-transferclosed,noaccuracy/resource/controlgatesrelaxed.
+V42 C++ prototype is unsubmitted: NVCC split mask/OR, core9 rather than7.
+V43 packs the original base into ignored LOP3 bits: actual sm90a core7 vs12,
+both16registers/zero stack/spills. Each main FP32 MMA partial is restored to
+original units before unchanged escape corrections/shared reduction. No
+extra GPU launch or weight precision change. CPU487424 decoded patterns,
+119bases,243712 ternary-word cases,512 bounded256term FP32 dot fixtures,
+and238 actual host-call metadata setups pass. Homogeneity requires no
+underflow/overflow/FTZ crossing; not a universal arithmetic proof.
+Complete127010byte generated native source and unchanged specs archived.
 
-V43SHA7967d1c4492558893b9c95d605f3193e78067f51f6d8cf27839fe9bf2c095e65.
-Check3aa502d1eb8f4854launched20:26UTC,sfo3,lastconfirmedRUNNING.
-FourthofeightBF16routinechecks,allsubmits0. Pollsamehandlethroughtransient
-failures,no duplicate job. Readall30profiles/logsifparentpasses;decodefull
-BF16_C12_NORM_Zreport withtools/extract_bf16_c12_permute_probe.py.
-Expected72groups/5nearby,2seeds/4pads,8balancedgraphrounds,read256MiBflush,
-rawdeviceevents/selectedhostcalibration,fullresources/numerics/freshdata.
-Onlyqualifiersgetrealchangedtimed-pathchecks/repeatbeforepromotion.
+V43 SHA7967d1c4492558893b9c95d605f3193e78067f51f6d8cf27839fe9bf2c095e65.
+Check3aa502d1eb8f4854 is TERMINAL, sfo3. All9tests/30timings pass at
+1.557815841x, CI1.534449–1.581183,3101.008394us,prepare166.796349s.
+Timed challenge dispatch is the unchanged parent; point score is NOT a gain.
+Independent0.901s diagnostic completes5nearby/72groups/2seeds/4pads,
+8balanced read-flush rounds,2304integer device timestamps,288selected host
+samples and full event-only calibration. Complete payload6948characters.
+Initial/fresh parent differences zero; all72old/new outputs bit-identical.
+FP64 maximum global/row/hot=.00166698/.00178266/0. All observed GPU bases54;
+CPU proof covers others, GPU does not. All18full resource records0local;
+QKV16 registers81->92, others same/lower. All30profiles/full available logs,
+all72groups/resources/errors/calibration inspected and archived.
 
-FreshBF16index244paths/13repos,0newblobs. NewBSD3Unweightdb0e6d3
-17files113104bytespinned/hashesverified,neverexecuted. Itsdirectpalette
-runtimeis12bits/weightplusmetadata/verbatim;noin-kernelHuffmandecode.
-OwnCPUGaussian256rows/K1024/4096/8192:directpalette0.46–0.63%largerthan
-optimisticC12bytes;Huffman0.94–8.22%smallerincludingsmall-sample32KiBtable,
-butseparateexpdecode~3.327logicalB/weightbeforecache/metadata/activations.
-78legalgeometryrowsmodeled;notH200timing. Author'sH100reporthasthroughput
-penalty,notcompression=speedup. No whole-stack port.
+No route qualifies; all511fixed policies reject3%worst-group board gate.
+Best worst-group model O16=.999847554x; strongest best-group model1.001941x
+has worst.997766x. AAmax4.282743%,matched-control max3.232205%also fail some
+attribution gates. No dropped pads/relaxed gates or causal hardware claim.
+Close this tested7instruction/global-normalization form. No promotion,
+canonical change or scored submit. BF16 routine checks4/8; MoE8/8,
+attention1/8,decoder1/8,prefill5/8;allsubmits0Oct31UTC,reserve untouched.
 
-Canonical/scoredsourcesunchanged. Goalactive/incomplete,no rank1.
-Externalworkspaceactive,internalbackupat8397194untilnextpush/FF.
-Untrackedresearch/public/madhavan_721c627/preserved,neverstage/publish.
-Noagents. StayBF16untiljobterminalandevidenceinspected;pushWIPfollows.
+Fresh BF16 index244paths/13repos,0newblobs. NewBSD3Unweightdb0e6d3:
+17files113104bytes pinned/hash-verified,neverexecuted. Direct palette remains
+12bits/weight plus metadata/verbatim; Huffman preprocessing is separate.
+Own CPU Gaussian256rows/K1024/4096/8192:direct palette.46–.63%larger than
+optimistic C12bytes;Huffman.94–8.22%smaller including32KiB sample table,
+but separate exp-decode models~3.327logicalB/weight before caches/metadata/
+activations.78legal geometries modeled. These are not H200 timings. Author's
+H100 report has throughput penalties; no whole-stack port or speedup claim.
+
+Fresh20:33:07UTC snapshot rank_summary_20261031203307.json:
+overall150/1766, BF16247/1548,MoE180/1254,attention193/1197,
+decoder150/1112,prefill182/755; scored speedups unchanged. RepoPRIVATE
+reverified. Goalactive/incomplete,no rank1,no GPU job live. Active workspace
+is external; internal backup must FF after terminal push. Untracked
+research/public/madhavan_721c627/ remains untouched and never staged.
+Next sequential track decoder: read its AGENTS/TASK and latest closed
+register/public-operand reports. Find a distinct useful mechanism before
+another check; no blind arithmetic-only retry or unchanged score chasing.
+No agents.
 
 
 #### Oct31 attention direct-FP8 CPU/compiler cycle complete; next track BF16

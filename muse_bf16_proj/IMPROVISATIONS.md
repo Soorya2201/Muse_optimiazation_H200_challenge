@@ -1,12 +1,15 @@
 # `muse_bf16_proj` optimization record
 
-Oct31 late active experiment: [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md).
+Oct31 late completed experiment: [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md).
 V42preserves an unsubmitted C++form that compiles to9decoder instructions.
 V43uses a scalar parameter's otherwise ignored bits to carry the original
 base while a fixed-window LOP3 decoder runs at7instructions. Original-unit
 partial restoration precedes unchanged escape corrections. CPU exact-bit,
-bounded FP32 and source/host setup screens pass;H200check3aa502d1eb8f4854
-is running. Canonical timed source unchanged;no gain claimed before results.
+bounded FP32 and source/host setup screens pass. H200check3aa502d1eb8f4854
+is terminal:9tests/30timings pass with unchanged timed parent;independent
+72groups/5nearby pass exactly,but no route or511fixed policy qualifies.
+All30profiles/logs/raw evidence inspected. No promotion or scored gain.
+Close this tested global-normalization form;next sequential track decoder.
 
 Oct31 terminal update: V39/V40/V41 all pass the unchanged timed parent;
 all nine-route transfer policy sets reject. The final read-flush run

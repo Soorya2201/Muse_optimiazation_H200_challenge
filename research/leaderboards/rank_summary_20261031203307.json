@@ -1,0 +1,123 @@
+{
+  "captured_at": "2026-10-31T20:33:07.486677+00:00",
+  "source": "live okc leaderboard --json",
+  "boards": {
+    "overall": {
+      "board": "overall",
+      "measure": "rank across the problems; the API gives ranks only",
+      "ranked": 1766,
+      "leader": {
+        "rank": 1,
+        "team": "pjmullin3",
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 150,
+        "team": "Soorya2201",
+        "first": false,
+        "ahead": 149
+      }
+    },
+    "muse_bf16_proj": {
+      "board": "muse_bf16_proj",
+      "measure": "speedup over SGLang; higher ranks higher",
+      "ranked": 1548,
+      "leader": {
+        "rank": 1,
+        "team": "arashattar",
+        "speedup": 1.6523,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 247,
+        "team": "Soorya2201",
+        "speedup": 1.5358,
+        "first": false,
+        "ahead": 246,
+        "to_first": 1.0759
+      }
+    },
+    "muse_moe_w4a16": {
+      "board": "muse_moe_w4a16",
+      "measure": "speedup over SGLang; higher ranks higher",
+      "ranked": 1254,
+      "leader": {
+        "rank": 1,
+        "team": "dolanzhao",
+        "speedup": 2.7578,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 180,
+        "team": "Soorya2201",
+        "speedup": 2.3723,
+        "first": false,
+        "ahead": 179,
+        "to_first": 1.1625
+      }
+    },
+    "muse_attention_decode": {
+      "board": "muse_attention_decode",
+      "measure": "speedup over SGLang; higher ranks higher",
+      "ranked": 1197,
+      "leader": {
+        "rank": 1,
+        "team": "tjiang-fair",
+        "speedup": 3.2221,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 193,
+        "team": "Soorya2201",
+        "speedup": 2.6035,
+        "first": false,
+        "ahead": 192,
+        "to_first": 1.2376
+      }
+    },
+    "muse_decode_layer": {
+      "board": "muse_decode_layer",
+      "measure": "speedup over SGLang; higher ranks higher",
+      "ranked": 1112,
+      "leader": {
+        "rank": 1,
+        "team": "pjmullin3",
+        "speedup": 2.4592,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 150,
+        "team": "Soorya2201",
+        "speedup": 2.2115,
+        "first": false,
+        "ahead": 149,
+        "to_first": 1.112
+      }
+    },
+    "muse_prefill_layer": {
+      "board": "muse_prefill_layer",
+      "measure": "speedup over SGLang; higher ranks higher",
+      "ranked": 755,
+      "leader": {
+        "rank": 1,
+        "team": "GodlyDonuts",
+        "speedup": 2.1551,
+        "first": true,
+        "ahead": 0
+      },
+      "you": {
+        "rank": 182,
+        "team": "Soorya2201",
+        "speedup": 1.785,
+        "first": false,
+        "ahead": 181,
+        "to_first": 1.2073
+      }
+    }
+  }
+}

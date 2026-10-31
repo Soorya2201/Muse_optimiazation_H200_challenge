@@ -1,0 +1,183 @@
+{
+  "job": "3aa502d1eb8f4854",
+  "all_30_profiles_and_full_available_log_read": true,
+  "all_72_groups_and_2304_integer_samples_inspected": true,
+  "all_initial_fresh_parent_differences_zero": true,
+  "all_72_old_new_bit_identical": true,
+  "nearby_agreement_zero": true,
+  "max_fp64_error_global_row_hot": [
+    0.00166698,
+    0.00178266,
+    0.0
+  ],
+  "full_resource_records": {
+    "0": [
+      [
+        90,
+        0,
+        0,
+        288
+      ],
+      [
+        90,
+        0,
+        0,
+        288
+      ]
+    ],
+    "1": [
+      [
+        64,
+        0,
+        0,
+        416
+      ],
+      [
+        63,
+        0,
+        0,
+        416
+      ]
+    ],
+    "2": [
+      [
+        81,
+        0,
+        0,
+        288
+      ],
+      [
+        92,
+        0,
+        0,
+        288
+      ]
+    ],
+    "3": [
+      [
+        78,
+        0,
+        0,
+        192
+      ],
+      [
+        75,
+        0,
+        0,
+        192
+      ]
+    ],
+    "4": [
+      [
+        69,
+        0,
+        0,
+        256
+      ],
+      [
+        69,
+        0,
+        0,
+        256
+      ]
+    ],
+    "5": [
+      [
+        101,
+        0,
+        0,
+        288
+      ],
+      [
+        100,
+        0,
+        0,
+        288
+      ]
+    ],
+    "6": [
+      [
+        80,
+        0,
+        0,
+        256
+      ],
+      [
+        80,
+        0,
+        0,
+        256
+      ]
+    ],
+    "7": [
+      [
+        80,
+        0,
+        0,
+        288
+      ],
+      [
+        80,
+        0,
+        0,
+        288
+      ]
+    ],
+    "8": [
+      [
+        80,
+        0,
+        0,
+        256
+      ],
+      [
+        80,
+        0,
+        0,
+        256
+      ]
+    ]
+  },
+  "original_bases": {
+    "0": 54,
+    "1": 54,
+    "2": 54,
+    "3": 54,
+    "4": 54,
+    "5": 54,
+    "6": 54,
+    "7": 54,
+    "8": 54
+  },
+  "max_aa_offset": 0.04282743400390454,
+  "max_matched_control_offset": 0.03232204579278819,
+  "best_worst_policy": {
+    "ids": [
+      3
+    ],
+    "worst": 0.9998475537823035,
+    "median": 1.0000715765170927,
+    "best": 1.0002852822889126,
+    "component_gates": false,
+    "qualifies": false
+  },
+  "strongest_best_group_policy": {
+    "ids": [
+      0,
+      2,
+      3,
+      4,
+      7,
+      8
+    ],
+    "worst": 0.9977656126161295,
+    "median": 0.9994963973501413,
+    "best": 1.0019410472391748,
+    "component_gates": false,
+    "qualifies": false
+  },
+  "qualifying_routes": 0,
+  "qualifying_policies": 0,
+  "standalone_core_reduction_did_not_establish_speedup": true,
+  "conclusion": "Reject tested global-normalized seven-instruction SK2 form; no promotion/score change. Smaller unresolved effects cannot be inferred as zero, and no hardware bottleneck causally identified."
+}

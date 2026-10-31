@@ -141,6 +141,54 @@ Budget before check:BF16 routine3/8,all scored submits0Oct31 UTC. Preserve
 the owner's reserve. Log any job immediately in RESULTS.md,poll the same
 handle through transient failures,and inspect every passing profile/log.
 
-Check `3aa502d1eb8f4854` launched20:26UTC,cluster sfo3,fourth routine
-check. Its current status is running;no terminal accuracy/performance result
-yet. Source is immutable. Do not start a duplicate run.
+## Terminal H200 result: correct, no qualifying speed improvement
+
+Check `3aa502d1eb8f4854`, sfo3, passes all9challenge tests and30timing
+cells at1.557815841x, CI[1.534448604,1.581183079],3101.008394us,
+prepare166.796349s. Those timings use the unchanged parent and establish
+no new algorithm gain. Full receipt, decoded report and audit are archived
+under the job ID. All30profiles and the full available12,684-character
+service log were read. Their kernel names confirm the parent timed paths.
+
+The independent diagnostic completes in0.901s, with5nearby cases and all
+72groups. All2304integer device timestamps, selected288host timestamps,
+event-only calibration and numerical/resource records survive in the
+6948-character compressed payload. All nine observed weight bases are54.
+Initial/fresh parent differences are zero;all72old/new outputs are
+bit-identical. Maximum FP64 global/row errors are0.00166698/0.00178266;
+one-hot error is zero. This validates these fixtures,not all possible BF16
+activation ranges or every supported base on GPU.
+
+|Route|Median matched-old/new ratio|Worst matched-old/new ratio|Old/new registers|
+|---|---:|---:|---:|
+|QKV8|1.000594|0.979817|90/90|
+|Unpooler8|0.998039|0.990079|64/63|
+|QKV16|0.994110|0.985904|81/92|
+|O16|1.010182|0.993272|78/75|
+|Unpooler16|1.005798|0.997313|69/69|
+|QKV32|1.002264|0.985949|101/100|
+|O32|0.998392|0.985368|80/80|
+|Pooler32|0.994602|0.977429|80/80|
+|Unpooler32|0.996558|0.993091|80/80|
+
+Every full-native instance has zero local allocation. QKV16's register
+increase is real;it is not a measured causal explanation for the result.
+Maximum A/A offset4.282743% and matched-control offset3.232205% fail some
+predeclared attribution gates. No individual route qualifies even before
+combining. All511fixed nonempty policies fail the3%worst-group board gate.
+The best worst-group model is O16 alone at0.999847554x. Even the strongest
+best-group policy reaches only1.001941047x,with a0.997765613xworst group.
+These are conditional models,not new judged scores.
+
+The experiment demonstrates that reducing this decoder from12to7hot
+instructions does not produce a supported whole-track gain in this tested
+implementation. It does not prove a zero effect,or identify a particular
+hardware bottleneck. Memory/communication costs remain hypotheses;the
+restoration and generated full-kernel schedule also changed. Do not claim
+that instruction counts predict kernel speed,drop bad pads,relax gates or
+submit the unchanged parent to chase this run's higher point score.
+
+Close the tested global-normalized SK2 form. No canonical promotion or
+scored submission. BF16 routine checks4/8,all submits0Oct31UTC;reserve
+untouched. Next sequential track is decoder. Reopen this family only with
+a different concrete mechanism and evidence for a useful full-track gain.

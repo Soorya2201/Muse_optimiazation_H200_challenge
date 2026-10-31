@@ -1,16 +1,16 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 20:00:53 UTC** from six live OKC boards. Overall **#149/1764**.
+Captured **2026-10-31 20:33:07 UTC** from six live OKC boards. Overall **#150/1766**.
 No track has reached rank1. Positions change as others submit. Compact evidence:
-[rank_summary_20261031200053.json](research/leaderboards/rank_summary_20261031200053.json).
+[rank_summary_20261031203307.json](research/leaderboards/rank_summary_20261031203307.json).
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|246/1546|1.535843x|1.6523x|7.05%|
-|Routed experts|180/1252|2.372309x|2.7578x|13.98%|
-|Attention decode|193/1195|2.603505x|3.2221x|19.20%|
-|Whole decoder|149/1107|2.211495x|2.4178x|8.53%|
-|Prefill|181/754|1.784958x|2.1551x|17.18%|
+|BF16 projections|247/1548|1.535843x|1.6523x|7.05%|
+|Routed experts|180/1254|2.372309x|2.7578x|13.98%|
+|Attention decode|193/1197|2.603505x|3.2221x|19.20%|
+|Whole decoder|150/1112|2.211495x|2.4592x|10.07%|
+|Prefill|182/755|1.784958x|2.1551x|17.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -143,3 +143,9 @@ mappings pass1.11million distinct ideal-rounding checks, but standalone
 sm90a packing costs provide no credible GPU gain case. No H200 check or
 scored change. Two newly pinned licensed primary repositories and their
 transfer limits are in muse_attention_decode/DIRECT_FP8_RESEARCH_2026-10-31.md.
+
+Oct31 late BF16 check3aa502d1eb8f4854 passes9tests/30timings with unchanged
+parent1.557816x. Independent seven-instruction normalized SK2 passes5nearby/
+72groups exactly,but all routes and511fixed policies reject performance
+gates. No new scored result. Full evidence:
+muse_bf16_proj/GLOBAL_NORMALIZATION_2026-10-31.md.

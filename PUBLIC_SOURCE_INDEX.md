@@ -15,8 +15,9 @@ verified,neverexecuted. Directpalette/Huffman stage distinctions,ownCPU
 byte estimates and78legalshape/variantgeometries are archived. No direct
 whole-stack port;compression is not a measured speedup. A narrower existing
 fixed-window normalization idea is implemented independently in SK2 while
-retaining original escape corrections. V43H200check3aa502d1eb8f4854running;
-no canonical/scored change or gain yet.
+retaining original escape corrections. V43H200check3aa502d1eb8f4854 passes
+parent9/30 and independent72groups/5nearby exactly,but every route/fixed
+policy fails performance gates. No canonical/scored change or gain.
 
 
 Oct31 late attention follow-up:

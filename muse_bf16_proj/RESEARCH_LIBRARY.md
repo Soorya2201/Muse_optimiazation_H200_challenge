@@ -1,14 +1,17 @@
 # BF16 projection optimization research library
 
-Oct31 late work in progress: [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md)
-adds actual fixed-window arithmetic/parameter-layout code to the existing
-SK2 path. CPU storage/FP32 and sm90a7-instruction core screens pass;full
-H200check3aa502d1eb8f4854is running. This is additional normalization,
-not a retry of the closed sign-only transfer. No score gain yet;timed
-parent unchanged. New pinned BSD-3-Clause
+Oct31 late [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md)
+is now terminal. V43/check3aa502d1eb8f4854 passes9tests/30timings with the
+unchanged timed parent1.557816x. The actual new SK2 path passes5nearby and
+72independent groups with zero initial/fresh differences,all old/new outputs
+bit-identical,and zero full-native local allocation. Despite a12->7 decoder
+core reduction,no route/511fixed policies qualify;best worst-group board
+model.999847554x. Full raw times/resources/numerics,30profiles and available
+logs inspected. No scored change;BF16 routine checks4/8,submits0. Close
+this tested normalization form. Newly pinned BSD-3-Clause
 [Unweight source](https://github.com/cloudflareresearch/unweight-kernels/tree/db0e6d3d4505cf71379f6b9b4567acf598bc186c)
-and independent byte/geometry screen reject a direct whole-stack port.
-The dated report preserves all sample terms and transfer limits.
+and our independent byte/geometry screen supply no stronger direct port.
+Next sequential track decoder;the dated report preserves the complete result.
 
 Oct31 terminal update: V39/V40/V41 all pass the unchanged timed parent;
 all nine-route transfer policy sets reject. The final read-flush run
