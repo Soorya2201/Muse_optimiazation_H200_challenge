@@ -1,0 +1,1148 @@
+{
+  "scope": "Public-source static discovery only; not imported or executed. Text signals do not establish compliance or performance.",
+  "repositories": [
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "commit": "3831ab3c3538a9878031b667624240bd24bb7082",
+      "license": null,
+      "files": [
+        {
+          "path": "problems/muse_decode_layer/submission.py",
+          "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_decode_layer/submission.py",
+          "sha256": "c69c15ccc5bd05d16446325d1c88c6131b63aee6003ccd5a6c6cdab99875ec4f",
+          "bytes": 47580,
+          "functions": [
+            [
+              "_gemv",
+              32
+            ],
+            [
+              "_skinny",
+              60
+            ],
+            [
+              "_launch",
+              98
+            ],
+            [
+              "_candidates",
+              142
+            ],
+            [
+              "_time_graph",
+              176
+            ],
+            [
+              "_default_cfg",
+              202
+            ],
+            [
+              "proj_prepare",
+              210
+            ],
+            [
+              "_weights",
+              253
+            ],
+            [
+              "_pick",
+              259
+            ],
+            [
+              "proj_kernel_fn",
+              276
+            ],
+            [
+              "_rope_pair",
+              319
+            ],
+            [
+              "_prep",
+              330
+            ],
+            [
+              "_attn",
+              382
+            ],
+            [
+              "_attn_tok",
+              448
+            ],
+            [
+              "_combine_tok",
+              516
+            ],
+            [
+              "_combine",
+              548
+            ],
+            [
+              "_qk_norm",
+              593
+            ],
+            [
+              "_cos_sin",
+              600
+            ],
+            [
+              "_fa3_path",
+              609
+            ],
+            [
+              "_window_tok_path",
+              646
+            ],
+            [
+              "_plan",
+              684
+            ],
+            [
+              "attn_kernel_fn",
+              697
+            ],
+            [
+              "_finalize",
+              759
+            ],
+            [
+              "_marlin_layer",
+              777
+            ],
+            [
+              "moe_prepare",
+              795
+            ],
+            [
+              "_experts_marlin",
+              812
+            ],
+            [
+              "_moe_core",
+              841
+            ],
+            [
+              "moe_kernel_fn",
+              852
+            ],
+            [
+              "_local_ids_kernel",
+              877
+            ],
+            [
+              "_dual_proj_kernel",
+              888
+            ],
+            [
+              "_dual_proj",
+              930
+            ],
+            [
+              "_param",
+              961
+            ],
+            [
+              "_norm",
+              965
+            ],
+            [
+              "_residual",
+              973
+            ],
+            [
+              "prepare",
+              980
+            ],
+            [
+              "_proj",
+              1006
+            ],
+            [
+              "kernel_fn",
+              1011
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": false,
+            "router_dtype": true,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        }
+      ]
+    },
+    {
+      "repo": "PostTrainLLM/posttrainllm",
+      "commit": "f216fead93aebc68aeebe62d3ccb5b73811cb282",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "experiments/openkernel/muse_decode_layer/submission.py",
+          "url": "https://github.com/PostTrainLLM/posttrainllm/blob/f216fead93aebc68aeebe62d3ccb5b73811cb282/experiments/openkernel/muse_decode_layer/submission.py",
+          "sha256": "48655c1bef954efc8c894169eacc504c1338a44a102e18a62bd5a4d1f329e894",
+          "bytes": 38175,
+          "functions": [
+            [
+              "_fused_qk_cache_kernel",
+              186
+            ],
+            [
+              "_block_config",
+              267
+            ],
+            [
+              "_fused_q_and_cache",
+              277
+            ],
+            [
+              "_dense_gemv",
+              314
+            ],
+            [
+              "_paged_attention_partials",
+              342
+            ],
+            [
+              "_merge_attention_partials",
+              466
+            ],
+            [
+              "_splitk_attention",
+              502
+            ],
+            [
+              "_gemv_whole_row",
+              617
+            ],
+            [
+              "_gemm",
+              636
+            ],
+            [
+              "_param",
+              663
+            ],
+            [
+              "_norm",
+              667
+            ],
+            [
+              "_residual",
+              676
+            ],
+            [
+              "_marlin_bank",
+              683
+            ],
+            [
+              "prepare",
+              716
+            ],
+            [
+              "_norm_and_local_ids",
+              808
+            ],
+            [
+              "_experts",
+              837
+            ],
+            [
+              "kernel_fn",
+              966
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": true,
+            "griddepcontrol": false,
+            "baseline": true,
+            "reference": false
+          }
+        },
+        {
+          "path": "experiments/openkernel/candidates/final-layer.py",
+          "url": "https://github.com/PostTrainLLM/posttrainllm/blob/f216fead93aebc68aeebe62d3ccb5b73811cb282/experiments/openkernel/candidates/final-layer.py",
+          "sha256": "48655c1bef954efc8c894169eacc504c1338a44a102e18a62bd5a4d1f329e894",
+          "bytes": 38175,
+          "functions": [
+            [
+              "_fused_qk_cache_kernel",
+              186
+            ],
+            [
+              "_block_config",
+              267
+            ],
+            [
+              "_fused_q_and_cache",
+              277
+            ],
+            [
+              "_dense_gemv",
+              314
+            ],
+            [
+              "_paged_attention_partials",
+              342
+            ],
+            [
+              "_merge_attention_partials",
+              466
+            ],
+            [
+              "_splitk_attention",
+              502
+            ],
+            [
+              "_gemv_whole_row",
+              617
+            ],
+            [
+              "_gemm",
+              636
+            ],
+            [
+              "_param",
+              663
+            ],
+            [
+              "_norm",
+              667
+            ],
+            [
+              "_residual",
+              676
+            ],
+            [
+              "_marlin_bank",
+              683
+            ],
+            [
+              "prepare",
+              716
+            ],
+            [
+              "_norm_and_local_ids",
+              808
+            ],
+            [
+              "_experts",
+              837
+            ],
+            [
+              "kernel_fn",
+              966
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": true,
+            "griddepcontrol": false,
+            "baseline": true,
+            "reference": false
+          }
+        }
+      ]
+    },
+    {
+      "repo": "tommyyliu/okc",
+      "commit": "f134725e27f368588bd9ef27cb5e97d023b415a5",
+      "license": null,
+      "files": [
+        {
+          "path": "muse_decode_layer/submission.py",
+          "url": "https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_decode_layer/submission.py",
+          "sha256": "ed244591a48fd0ee86786e5dcc293d52cd418d6e74bb889370dc62080853b2ed",
+          "bytes": 31008,
+          "functions": [
+            [
+              "_gemv",
+              95
+            ],
+            [
+              "_small_gemm",
+              105
+            ],
+            [
+              "_reduce_projection",
+              129
+            ],
+            [
+              "_project",
+              137
+            ],
+            [
+              "_norm",
+              169
+            ],
+            [
+              "_boundary",
+              178
+            ],
+            [
+              "_residual_boundary",
+              200
+            ],
+            [
+              "_decode_nvfp4",
+              217
+            ],
+            [
+              "_nvfp4_gate_up",
+              228
+            ],
+            [
+              "_nvfp4_down",
+              262
+            ],
+            [
+              "_single_token_experts",
+              283
+            ],
+            [
+              "_small_expert_finalize",
+              314
+            ],
+            [
+              "_marlin_bank",
+              332
+            ],
+            [
+              "_experts",
+              357
+            ],
+            [
+              "_qkv_norm_store",
+              408
+            ],
+            [
+              "_attention_parts",
+              435
+            ],
+            [
+              "_attention_finish",
+              488
+            ],
+            [
+              "_split_attention",
+              510
+            ],
+            [
+              "_attention_gate",
+              541
+            ],
+            [
+              "_fa3_attention",
+              551
+            ],
+            [
+              "_attention",
+              586
+            ],
+            [
+              "prepare",
+              597
+            ],
+            [
+              "kernel_fn",
+              631
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": false,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        },
+        {
+          "path": "muse_decode_layer/results/moe-m8/candidate.py",
+          "url": "https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_decode_layer/results/moe-m8/candidate.py",
+          "sha256": "8211d1bc0b5c0d98be021668c1e96c78aa4e392c39913a4830cd2fa2e764cd81",
+          "bytes": 26604,
+          "functions": [
+            [
+              "_gemv",
+              93
+            ],
+            [
+              "_small_gemm",
+              103
+            ],
+            [
+              "_reduce_projection",
+              127
+            ],
+            [
+              "_project",
+              135
+            ],
+            [
+              "_norm",
+              167
+            ],
+            [
+              "_boundary",
+              176
+            ],
+            [
+              "_residual_boundary",
+              198
+            ],
+            [
+              "_small_expert_finalize",
+              231
+            ],
+            [
+              "_marlin_bank",
+              249
+            ],
+            [
+              "_experts",
+              274
+            ],
+            [
+              "_qkv_norm_store",
+              319
+            ],
+            [
+              "_attention_parts",
+              346
+            ],
+            [
+              "_attention_finish",
+              399
+            ],
+            [
+              "_split_attention",
+              421
+            ],
+            [
+              "_attention_gate",
+              452
+            ],
+            [
+              "_fa3_attention",
+              462
+            ],
+            [
+              "_attention",
+              497
+            ],
+            [
+              "prepare",
+              508
+            ],
+            [
+              "kernel_fn",
+              536
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": false,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        },
+        {
+          "path": "muse_decode_layer/results/fp8-fix/candidate.py",
+          "url": "https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_decode_layer/results/fp8-fix/candidate.py",
+          "sha256": "82be848591dd01d3aa0eebf8d9a2e599333b0031f7669860d5c198798fd3828b",
+          "bytes": 23174,
+          "functions": [
+            [
+              "_marlin_bank",
+              93
+            ],
+            [
+              "_experts",
+              120
+            ],
+            [
+              "_gemv",
+              155
+            ],
+            [
+              "_small_gemm",
+              166
+            ],
+            [
+              "_reduce_projection",
+              191
+            ],
+            [
+              "_project",
+              200
+            ],
+            [
+              "_qkv_norm_store",
+              231
+            ],
+            [
+              "_attention_parts",
+              259
+            ],
+            [
+              "_attention_finish",
+              313
+            ],
+            [
+              "_attention",
+              336
+            ],
+            [
+              "_norm",
+              368
+            ],
+            [
+              "_boundary",
+              378
+            ],
+            [
+              "_residual_boundary",
+              401
+            ],
+            [
+              "prepare",
+              416
+            ],
+            [
+              "kernel_fn",
+              445
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": false,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": false,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        },
+        {
+          "path": "muse_decode_layer/results/moe-m16/candidate.py",
+          "url": "https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_decode_layer/results/moe-m16/candidate.py",
+          "sha256": "bc92b48f1b31b8b3bc3b2ea37abbc018921e325e9b24ff409b7e5aaf404858a3",
+          "bytes": 25500,
+          "functions": [
+            [
+              "_gemv",
+              91
+            ],
+            [
+              "_small_gemm",
+              101
+            ],
+            [
+              "_reduce_projection",
+              125
+            ],
+            [
+              "_project",
+              133
+            ],
+            [
+              "_norm",
+              165
+            ],
+            [
+              "_boundary",
+              174
+            ],
+            [
+              "_residual_boundary",
+              196
+            ],
+            [
+              "_marlin_bank",
+              228
+            ],
+            [
+              "_experts",
+              253
+            ],
+            [
+              "_qkv_norm_store",
+              293
+            ],
+            [
+              "_attention_parts",
+              320
+            ],
+            [
+              "_attention_finish",
+              373
+            ],
+            [
+              "_split_attention",
+              395
+            ],
+            [
+              "_attention_gate",
+              426
+            ],
+            [
+              "_fa3_attention",
+              436
+            ],
+            [
+              "_attention",
+              471
+            ],
+            [
+              "prepare",
+              482
+            ],
+            [
+              "kernel_fn",
+              510
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": false,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        },
+        {
+          "path": "muse_decode_layer/results/full-fa3/candidate.py",
+          "url": "https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_decode_layer/results/full-fa3/candidate.py",
+          "sha256": "d6f5544fb7a63f326cc56584cb8b21144f45b6e8cdcce1d2ebcc23e9aab525ef",
+          "bytes": 25512,
+          "functions": [
+            [
+              "_gemv",
+              91
+            ],
+            [
+              "_small_gemm",
+              101
+            ],
+            [
+              "_reduce_projection",
+              125
+            ],
+            [
+              "_project",
+              133
+            ],
+            [
+              "_norm",
+              165
+            ],
+            [
+              "_boundary",
+              174
+            ],
+            [
+              "_residual_boundary",
+              196
+            ],
+            [
+              "_marlin_bank",
+              228
+            ],
+            [
+              "_experts",
+              253
+            ],
+            [
+              "_qkv_norm_store",
+              293
+            ],
+            [
+              "_attention_parts",
+              320
+            ],
+            [
+              "_attention_finish",
+              373
+            ],
+            [
+              "_split_attention",
+              395
+            ],
+            [
+              "_attention_gate",
+              426
+            ],
+            [
+              "_fa3_attention",
+              436
+            ],
+            [
+              "_attention",
+              471
+            ],
+            [
+              "prepare",
+              482
+            ],
+            [
+              "kernel_fn",
+              510
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": false,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        },
+        {
+          "path": "muse_decode_layer/results/small-finalize/candidate.py",
+          "url": "https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_decode_layer/results/small-finalize/candidate.py",
+          "sha256": "07261bfcb6aa17088ee5d198f4badc8db360339292ef1680d1bb98d400682cd6",
+          "bytes": 26607,
+          "functions": [
+            [
+              "_gemv",
+              93
+            ],
+            [
+              "_small_gemm",
+              103
+            ],
+            [
+              "_reduce_projection",
+              127
+            ],
+            [
+              "_project",
+              135
+            ],
+            [
+              "_norm",
+              167
+            ],
+            [
+              "_boundary",
+              176
+            ],
+            [
+              "_residual_boundary",
+              198
+            ],
+            [
+              "_small_expert_finalize",
+              231
+            ],
+            [
+              "_marlin_bank",
+              249
+            ],
+            [
+              "_experts",
+              274
+            ],
+            [
+              "_qkv_norm_store",
+              319
+            ],
+            [
+              "_attention_parts",
+              346
+            ],
+            [
+              "_attention_finish",
+              399
+            ],
+            [
+              "_split_attention",
+              421
+            ],
+            [
+              "_attention_gate",
+              452
+            ],
+            [
+              "_fa3_attention",
+              462
+            ],
+            [
+              "_attention",
+              497
+            ],
+            [
+              "prepare",
+              508
+            ],
+            [
+              "kernel_fn",
+              536
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": false,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        }
+      ]
+    },
+    {
+      "repo": "lilaclilac09/open-kernel-challenge",
+      "commit": "d9bdcc9f01dff1018f2f256a0a1a63911a16557e",
+      "license": null,
+      "files": [
+        {
+          "path": "muse_decode_layer/submission.py",
+          "url": "https://github.com/lilaclilac09/open-kernel-challenge/blob/d9bdcc9f01dff1018f2f256a0a1a63911a16557e/muse_decode_layer/submission.py",
+          "sha256": "c90d9dafdefac27d37232f22d6cbdae6fe0d50b3f098f1644d847801f3bf0a92",
+          "bytes": 10691,
+          "functions": [
+            [
+              "prepare",
+              84
+            ],
+            [
+              "rms",
+              89
+            ],
+            [
+              "gain",
+              94
+            ],
+            [
+              "rope",
+              99
+            ],
+            [
+              "residual_coefficients",
+              108
+            ],
+            [
+              "post_expert_norm",
+              114
+            ],
+            [
+              "round_queries",
+              119
+            ],
+            [
+              "unpool",
+              124
+            ],
+            [
+              "gather_unpooled",
+              132
+            ],
+            [
+              "attention",
+              137
+            ],
+            [
+              "route",
+              179
+            ],
+            [
+              "experts",
+              187
+            ],
+            [
+              "kernel_fn",
+              201
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": false,
+            "marlin": false,
+            "flash_attn_with_kvcache": false,
+            "wgmma": false,
+            "MOE_CUDA_SRC": false,
+            "F.linear": false,
+            "router_dtype": false,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        }
+      ]
+    },
+    {
+      "repo": "xharshvardhan/open-kernel-challenge",
+      "commit": "4958d3141aa977c4b6b26df7a8d06c90dd094ee9",
+      "license": null,
+      "files": [
+        {
+          "path": "kernels/decoder_layer.py",
+          "url": "https://github.com/xharshvardhan/open-kernel-challenge/blob/4958d3141aa977c4b6b26df7a8d06c90dd094ee9/kernels/decoder_layer.py",
+          "sha256": "4e2edb3f76be0679202604af1464ee0aa189e9b93d98d802901c3ed09154fb89",
+          "bytes": 49819,
+          "functions": [
+            [
+              "_gemm",
+              127
+            ],
+            [
+              "_param",
+              131
+            ],
+            [
+              "_norm",
+              135
+            ],
+            [
+              "_residual",
+              144
+            ],
+            [
+              "_marlin_bank",
+              151
+            ],
+            [
+              "prepare",
+              177
+            ],
+            [
+              "_experts",
+              223
+            ],
+            [
+              "kernel_fn",
+              268
+            ],
+            [
+              "_small_post_expert_norm_weighted_sum",
+              356
+            ],
+            [
+              "_fused_local_alignment_kernel",
+              386
+            ],
+            [
+              "_fused_local_alignment",
+              443
+            ],
+            [
+              "_fused_attention_preprocess",
+              486
+            ],
+            [
+              "_transposed_gqa_stage1",
+              560
+            ],
+            [
+              "_own_gqa_compile_diagnostic",
+              623
+            ],
+            [
+              "_try_transposed_full_decode",
+              646
+            ],
+            [
+              "_transposed_window_gqa_stage1",
+              686
+            ],
+            [
+              "_transposed_window_gqa_parallel_merge",
+              752
+            ],
+            [
+              "_window_sm_count",
+              784
+            ],
+            [
+              "_own_window_compile_diagnostic",
+              793
+            ],
+            [
+              "_try_transposed_window_decode",
+              815
+            ],
+            [
+              "_one_token_projection",
+              859
+            ],
+            [
+              "_dense_project",
+              884
+            ],
+            [
+              "_parallel_alignment_map_counts",
+              913
+            ],
+            [
+              "_parallel_alignment_stable_scatter",
+              932
+            ],
+            [
+              "_parallel_alignment_diagnostic",
+              981
+            ],
+            [
+              "_launch_parallel_alignment",
+              1005
+            ]
+          ],
+          "text_signals_not_compliance_proof": {
+            "Marlin": true,
+            "marlin": true,
+            "flash_attn_with_kvcache": true,
+            "wgmma": true,
+            "MOE_CUDA_SRC": false,
+            "F.linear": true,
+            "router_dtype": true,
+            "griddepcontrol": false,
+            "baseline": false,
+            "reference": false
+          }
+        }
+      ]
+    }
+  ]
+}

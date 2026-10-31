@@ -1,0 +1,161 @@
+{
+  "warning": "External evaluation claims, not own judge results; comparability and provenance unverified. Recomputed load-weighted ratios.",
+  "candidates": [
+    {
+      "candidate": "claude-haiku-5-5",
+      "source_sha256": "1f611c62c54aaf17ed61fac2ee8c3322ada6036e788096bf5910e02cfa01c1d1",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 0.00644822988852569,
+          "case_ratio_range": [
+            0.00432399738524366,
+            0.012908865378309582
+          ],
+          "all_cases_correct": true
+        },
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 0.007027656490150206,
+          "case_ratio_range": [
+            0.004397215665255531,
+            0.016911764758018547
+          ],
+          "all_cases_correct": true
+        }
+      ]
+    },
+    {
+      "candidate": "claude-opus-5-5",
+      "source_sha256": "bd6aa40816ef6da849239bf354e59e491de8203051c7221387b4f1b8affabed7",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.041822035739486,
+          "case_ratio_range": [
+            1.0154272835734561,
+            1.0750987910984682
+          ],
+          "all_cases_correct": true
+        },
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.0396366640502646,
+          "case_ratio_range": [
+            1.0112899904058188,
+            1.0627260877438154
+          ],
+          "all_cases_correct": true
+        }
+      ]
+    },
+    {
+      "candidate": "claude-sonnet-5-5",
+      "source_sha256": "12657b7d9e86eb1030fc809af7fd4f0797cf80902c235f6c2fae62c19f9ad28d",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.0228235934236958,
+          "case_ratio_range": [
+            1.008200483919241,
+            1.0389617175202703
+          ],
+          "all_cases_correct": true
+        },
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.0221885773175527,
+          "case_ratio_range": [
+            1.0093304969989365,
+            1.0396611135747147
+          ],
+          "all_cases_correct": true
+        }
+      ]
+    },
+    {
+      "candidate": "gpt-5.6-sol",
+      "source_sha256": "2bddf929e2ba027db0f56a506625d038fc99b1c1a9780ebeaff44f9fdc4c3208",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.0033660813015002,
+          "case_ratio_range": [
+            0.9976905952256242,
+            1.0091728269714408
+          ],
+          "all_cases_correct": true
+        },
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.0042856663469308,
+          "case_ratio_range": [
+            0.9996132540742918,
+            1.0127605283850531
+          ],
+          "all_cases_correct": true
+        }
+      ]
+    },
+    {
+      "candidate": "gpt-6-astra",
+      "source_sha256": "3c71bb26e42128abba0be3ccc87fdd3a51881f93664fa1c5014e7d2a3629a727",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.1127636703608657,
+          "case_ratio_range": [
+            1.0199096064332684,
+            1.22121731699501
+          ],
+          "all_cases_correct": true
+        },
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.112909391113587,
+          "case_ratio_range": [
+            1.0139247373577447,
+            1.2295769828352632
+          ],
+          "all_cases_correct": true
+        }
+      ]
+    },
+    {
+      "candidate": "gpt-6.1-sol",
+      "source_sha256": "1d18c40c8f961e764c5ecf23b70b7f15d9f1c7e497730fdfb4f996efa143cb7f",
+      "banks": [
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.1014353134659332,
+          "case_ratio_range": [
+            0.9859216472188985,
+            1.7929596905434377
+          ],
+          "all_cases_correct": true
+        },
+        {
+          "status": "pass",
+          "cases": 12,
+          "geomean_load_speedup": 1.0920804136002218,
+          "case_ratio_range": [
+            0.9765539223428376,
+            1.4343104842493293
+          ],
+          "all_cases_correct": true
+        }
+      ]
+    }
+  ]
+}

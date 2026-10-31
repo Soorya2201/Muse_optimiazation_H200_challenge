@@ -67,6 +67,24 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 decoder broader-source review completed; canonical unchanged
+
+See `muse_decode_layer/GLOBAL_SOURCE_FOLLOWUP_2026-10-31.md` first for this
+cycle:87 public code matches/nine repos, six additional Rohan decoder sources
+hash-matched to their external manifests, another11files/five repos pinned.
+No stronger new replacement established. Ranoobaba and lilac small-T router
+activation paths round to BF16; do not adopt unchanged. Current decoder
+still exact compliant alygg77 SHA8f17613b...af4a, scored eff0b59dc26c4c74.
+Same-job phase model gives optimistic1.10714x board multiplier for20% less
+expert duration; all-glue removal only1.05888x vs1.0933x needed at capture.
+Full public WGS CompilerExplorer NVCC13sm90a diagnostic timed out/code143:
+no device SASS/no scale-reuse or register conclusion; explicit-reuse arm
+unrun. No new OKC job. UTC day reset:all tracks0checks/0submits Oct31.
+Latest snapshot `research/leaderboards/snapshot_20261031051147.json`:
+overall118/1732;decoder118/1083,MoE152/1218,attention168/1164,
+BF16218/1513,prefill161/729. Scores unchanged,no rank1. Next useful source
+discovery pass is prefill global code search (other four tracks covered).
+
 #### Oct30 attention hybrid cycle completed; no eligible gain
 
 Previous goal turn made progress (BF16 negative controls). This turn extended

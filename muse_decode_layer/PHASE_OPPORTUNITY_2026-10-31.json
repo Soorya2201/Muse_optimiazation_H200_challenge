@@ -1,0 +1,291 @@
+{
+  "scope": "Optimistic phase-subtraction planning model. Profile durations include dependency waits/overlap; not isolated critical-path times or achievable measured gains. Canonical same-job benchmark cells, six equally weighted loads.",
+  "job": "eff0b59dc26c4c74",
+  "source_sha256": "8f17613bafb2369152f2739638bf8f6dfb193f6a79dbad3e6d25795cf1ebaf4a",
+  "cluster": "sfo3",
+  "rows": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 7068074368847456457,
+        "weight": 46
+      },
+      "benchmark_us": 66.09049662412755,
+      "profile_phase_us": {
+        "experts": 24.1,
+        "dense": 40.99999999999999,
+        "attention": 4.8,
+        "glue": 4.4
+      }
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "repeats": 60,
+        "seed": 7068080627622534098,
+        "weight": 16
+      },
+      "benchmark_us": 75.57211635738236,
+      "profile_phase_us": {
+        "experts": 22.5,
+        "dense": 39.6,
+        "attention": 11.0,
+        "glue": 4.4
+      }
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7068086886397611740,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "benchmark_us": 128.21676315274138,
+      "profile_phase_us": {
+        "experts": 67.4,
+        "dense": 50.99999999999999,
+        "attention": 7.6,
+        "glue": 8.9
+      }
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 7068093145172689383,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "benchmark_us": 207.27111653446505,
+      "profile_phase_us": {
+        "attention": 90.3,
+        "experts": 71.3,
+        "dense": 50.8,
+        "glue": 9.4
+      }
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7068099403947767027,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "benchmark_us": 148.45364026886296,
+      "profile_phase_us": {
+        "experts": 83.6,
+        "dense": 58.89999999999999,
+        "attention": 9.2,
+        "glue": 9.600000000000001
+      }
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 7068105662722844672,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "benchmark_us": 298.5607587057179,
+      "profile_phase_us": {
+        "attention": 169.9,
+        "experts": 81.0,
+        "dense": 59.7,
+        "glue": 10.1
+      }
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068111921497922318,
+        "weight": 46
+      },
+      "benchmark_us": 105.57444641537502,
+      "profile_phase_us": {
+        "experts": 52.6,
+        "dense": 41.1,
+        "attention": 7.1,
+        "glue": 6.6000000000000005
+      }
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068118180272999965,
+        "weight": 16
+      },
+      "benchmark_us": 112.67085297324537,
+      "profile_phase_us": {
+        "experts": 64.4,
+        "dense": 41.699999999999996,
+        "attention": 14.6,
+        "glue": 7.199999999999999
+      }
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068124439048077613,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "benchmark_us": 241.98570417158393,
+      "profile_phase_us": {
+        "experts": 146.6,
+        "dense": 71.5,
+        "attention": 11.7,
+        "glue": 11.899999999999999
+      }
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068130697823155262,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "benchmark_us": 336.1883774970836,
+      "profile_phase_us": {
+        "experts": 145.9,
+        "attention": 103.6,
+        "dense": 70.69999999999999,
+        "glue": 12.5
+      }
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068136956598232912,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "benchmark_us": 307.531426585654,
+      "profile_phase_us": {
+        "experts": 206.4,
+        "dense": 88.1,
+        "attention": 15.0,
+        "glue": 17.0
+      }
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 7068143215373310563,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "benchmark_us": 471.6682327619814,
+      "profile_phase_us": {
+        "experts": 196.1,
+        "attention": 186.7,
+        "dense": 87.5,
+        "glue": 16.7
+      }
+    }
+  ],
+  "board_speedup_multiplier_if_profile_phase_duration_reduced": {
+    "experts": {
+      "0.1": 1.0508074235190545,
+      "0.2": 1.1071401590123455,
+      "0.3": 1.169966594225335,
+      "1.0": 1.9565562645833603
+    },
+    "attention": {
+      "0.1": 1.0160310379556263,
+      "0.2": 1.0326303282736229,
+      "0.3": 1.049831172923646,
+      "1.0": 1.1905725138533583
+    },
+    "dense": {
+      "0.1": 1.037321847336493,
+      "0.2": 1.0777101366598583,
+      "0.3": 1.1215875326553522,
+      "1.0": 1.5903660866124765
+    },
+    "glue": {
+      "0.1": 1.005588845353278,
+      "0.2": 1.0112410768479407,
+      "0.3": 1.0169577884538614,
+      "1.0": 1.0588776643353208
+    }
+  },
+  "decoder_score_at_capture": {
+    "error": null,
+    "passed": true,
+    "score_us": 10228.511612016704,
+    "speedup": 2.21149477636855,
+    "speedup_ci": [
+      2.1783223547230217,
+      2.244667198014078
+    ],
+    "status": "ok",
+    "tests": 13,
+    "tests_passed": 13
+  }
+}
