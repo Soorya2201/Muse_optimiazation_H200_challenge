@@ -88,3 +88,37 @@ removing half of the externally reported40.5% exponential fraction gives
 5.9400%, assuming exposed work and free replacement. This passes the initial
 research screen but is not a prediction; the new helper's overhead and
 packing/max-check interactions must be measured.
+
+## Terminal result: accuracy gate fails; performance remains unknown
+
+Check `9c335063894c4abc`,cluster sfo3c,passes16challenge tests and12timed
+cells at2.604626189x,CI[2.565556796,2.643695582],1446.004043us. Those timings
+use the unchanged parent and establish no optimization gain. All12profiles
+and the full available service log were read; immutable receipt and complete
+decoded diagnostic are archived in `run_receipts/9c335063894c4abc.json` and
+`PK2_HYBRID_REPORT_9c335063894c4abc.json`.
+
+The target full-verify specialization in each full native module reports
+80registers and0local bytes;
+the resource getter's49152dynamic-shared value is its pre-launch allowance,
+not the final launch allocation. The independent diagnostic lasts137.015s.
+All six nearby coherent fixtures pass numerical/cache checks: parent global
+differences are0.206–0.614%,maximum row2.058%; fallback global3.079–4.336%,
+maximum row10.364%. Both new-cache tensors are bit-identical to the parent.
+
+The first timing fixture,random B16/context86000/seed3209/pad0,then fails
+the fixed parent-global<1% requirement before event measurements or fresh
+replay. Bit50 has global1.461049%/row2.509642%;bit100 has
+global2.007676%/row3.369145%. No timing groups are recorded. This is a
+numerical robustness rejection,not proof of a challenge-rule violation or
+a measured slowdown. The parent's challenge pass does not certify either
+changed path. Do not loosen the gate or report a gain from its point score.
+
+The small scalar relative-error bound did not ensure a sufficiently small
+relative attention-output difference: weighted signed-value cancellation
+and subsequent normalization make the mapping data-dependent. That is a
+mechanistic explanation,not a measured causal decomposition. Coherent-only
+validation would have missed this random-input failure. Close the tested
+linear bit50/100 combination; a follow-up needs genuinely better accuracy
+and credible instruction-cost/phase evidence before another GPU check.
+No canonical/scored change or submit;attention Oct31checks1/8.

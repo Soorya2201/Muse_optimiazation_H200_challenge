@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 09:11:38 UTC** from the live OKC boards. Overall **#124/1742**.
+Captured **2026-10-31 09:27:37 UTC** from the live OKC boards. Overall **#124/1742**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|225/1523|1.535843x|1.6523x|7.05%|
+|BF16 projections|227/1523|1.535843x|1.6523x|7.05%|
 |Routed experts|162/1227|2.372309x|2.7578x|13.98%|
-|Attention decode|174/1174|2.603505x|3.2221x|19.20%|
+|Attention decode|173/1174|2.603505x|3.2221x|19.20%|
 |Whole decoder|124/1092|2.211495x|2.4178x|8.53%|
-|Prefill|167/733|1.784958x|2.0325x|12.18%|
+|Prefill|167/735|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -92,3 +92,12 @@ agreement error and zero full-native local allocation. Both candidates
 are consistently slower; all14per-run policy combinations reject. No
 canonical/scored change. Expanded branches/gists and four component pins
 are documented in muse_moe_w4a16/STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md.
+
+Oct31 attention V24/check9c335063894c4abc passes16tests/12timings with
+unchanged timed parent2.604626x. Independent bit50/100 interpolation paths
+pass six nearby coherent/cache checks,but fail the predeclared1%parent
+global-error gate on the first random long-context fixture(1.461/2.008%).
+No timing groups recorded,so performance remains unknown. No gate relaxation,
+canonical change or scoredsubmit. Detailed result,primary sources,CPU/sm90a
+evidence and new public-code delta225paths/13repos are in
+muse_attention_decode/BIT_EXP_RESEARCH_2026-10-31.md.

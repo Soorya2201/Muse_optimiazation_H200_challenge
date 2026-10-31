@@ -127,6 +127,12 @@ precede an H200 check; numerical and performance gates are fixed in advance.
 See [full derivation and outcome](BIT_EXP_RESEARCH_2026-10-31.md) and
 [new public-source applicability review](PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md).
 There is no gain claim based on the unchanged timed parent score.
+Terminal9c335063894c4abc:sfo3c,parent2.604626x passes16/12. Allthreefull
+modules80regs/0local,six nearby coherent fixtures/cache pass. First random
+B16/context86000/seed3209/pad0 fails global-error gate:bit50=1.461%,
+bit100=2.008%vsfixed<1%. No timing groups;speed unknown. No changed
+path promoted/submitted,and no gate relaxed. Scalar exponential error alone
+did not establish sufficiently small normalized output difference.
 
 ## Novel next ideas
 

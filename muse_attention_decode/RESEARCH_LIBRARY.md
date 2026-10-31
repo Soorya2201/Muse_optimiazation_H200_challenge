@@ -69,7 +69,11 @@ CPU314482grid/random samples validate a2.984% scalar error ceiling; standalone
 sm90a emits FMNMX/FADD/LEA plus a high-tail predicate/fallback. V24 tests
 50/100% replacement while retaining PK2 and fresh-input/cache checks.
 Its timed challenge path remains parent, so its point score is diagnostic.
-The dated report records terminal results and adoption decision.
+Check9c335063894c4abc passes16challenge tests/12timings,but both changed
+paths fail the fixed1%parent-global gate on the first random timing fixture:
+1.461/2.008%,despite six passing coherent nearby/cache cases. No timing
+groups recorded;performance unknown. Reject tested linear forms without
+loosening gates. The dated report preserves all evidence.
 
 The [Oct31 public source delta](PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md)
 adds18indexed paths/one repository,13attention files hash-verified and

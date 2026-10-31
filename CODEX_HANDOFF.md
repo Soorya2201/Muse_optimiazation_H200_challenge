@@ -67,6 +67,56 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 attention bit-exp cycle complete; accuracy rejection, no gain
+
+Read `muse_attention_decode/BIT_EXP_RESEARCH_2026-10-31.md` and
+`PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md`. Primary Schraudolph1999/NVIDIA forum
+research led to an independently derived fixed-binade IEEE interpolation:
+FP32 add-bias383.956329,bit shift8/modulo-add0x7f800000. No numericF2I.
+CPU262145grid+52337random-bit samples maxscalarrelativeerror.029836948;
+standaloneNVCC13sm90a normalpathFMNMX/FADD/LEA plushigh-tailpredicate,
+10regs/0spill. Complete math/compiler request/responses archived. Neither
+CPU error bounds nor standalone SASS establish an attention gain.
+
+V24/9c335063894c4abc,sfo3c,passes16challenge tests/12timings2.604626189x,
+CI2.565557–2.643696,1446.004043us,UNCHANGEDparenttimedpath. ImmutableSHA
+3eed711fdf8586a7e92f2996c5f2740acc737d7ff737debe66c0c492cc1bb2e6.
+Independent137.015s diagnostic compilesparent/bit50/bit100 withPK2retained;
+targetfull-verify specialization80regs/0local ineachmodule. Six nearby
+coherent/page1/64/scale1/64/TP/DP/cache-bit validations pass. First random
+B16/context86000/seed3209/pad0failsfixed1%parent-global gate:bit50=1.461049%
+(row2.509642%),bit100=2.007676%(row3.369145%). No timinggroupsor fresh
+timingreplaycompleted;performanceUNKNOWN,not ameasuredslowdown. Do not
+relaxgates or treat parentchallengepass aschanged-path certification.
+All12profiles,localfullavailablelog,remoteavailablelog andcomplete decoded
+diagnostic/tracebackreadandarchived. No canonical/scoredchange,no submit.
+Closetestedlinearbit50/100forms;newexpworkneedsbetteraccuracyand credible
+costevidence,notafractionorpolynomial-affixretry.
+
+Freshattentionpubliccodeindex225paths/13repos,18addedentries:13attention
+filesinKushagrabainsla/muse-spark-open at0778ecd,allGitblob/SHA256verified,
+staticarchitecture/dispatch/author-notereview. Owner#773vsour#173atcapture.
+Default=a14exactbytes. Existingfusion/WGMMA/DSMEMcomponentsalreadyinparent;
+authorA15merge variantsregress. Licenseunestablished,nosourceexecuted/
+ported/mirrored. Five newly indexeddecoderreferencesleftforthattrack.
+Idle-producermerge-codewarmingclue screenedwitholdphasefixtures:freely
+removeentirehead0-loop-to-finalizerintervalonbatchedfullverifycellsproxy
+1.007323xonly;notarigorousboardboundorI-cachecountermeasurement. No>=3%
+warmingcandidateestablished;do not reopenclosedB1merge/workspacefamily.
+
+Oct31budgets:MoE6/8checks,attention1/8,decoder1/8,prefill4/8,BF160;all
+submits0. Allfivecanonicalhashesunchanged. No rank1. Live09:27:37UTC
+snapshot`research/leaderboards/snapshot_20261031092737.json`:overall124/1742,
+decoder124/1092,MoE162/1227,attention173/1174,BF16227/1523,prefill167/735.
+PrivateGitHubreverified;research/sourcecommitf2c8bbepushed,terminalresult
+commitfollowsthisnote. Internalcontinuationbackupff-syncedandnewignored
+profilescopiedaftercyclecommit;externalworkspaceauthoritative.Preserve
+untrackedresearch/public/madhavan_721c627;neverstage/publish. No GPUjoblive.
+Currentturnmakesprogress(newarithmetic/compiler/H200failureandpublicsource
+evidence),notachievedorblocked. NextsequentialtrackBF16:readitsAGENTS/TASK
+andlatestTMA/publicfollow-upfirst;closedTMA/cluster/compressionlosersstay
+closed. Researchaboundednewcomponentbeforeanycheck. No subagents.
+
 #### Oct31 main-loop/branch cycle complete; both candidates rejected
 
 Previous goal turn made progress: validatedV30 profiling. Current cycle:

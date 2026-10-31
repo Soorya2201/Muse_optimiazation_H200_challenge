@@ -1,0 +1,20 @@
+{
+  "scope": "Planning proxy only; independent synthetic phase fixture mixed with scored-parent load weights, not a board bound or causal instruction-fetch measurement.",
+  "phase_job": "13bc760e093343f3",
+  "score_job": "30c669b9702d434f",
+  "phase_fractions": {
+    "16": {
+      "tail_us": 3.7439999999999998,
+      "parent_raw_us": 112.32000216841698,
+      "fraction": 0.033333332689809786
+    },
+    "32": {
+      "tail_us": 4.351999999999975,
+      "parent_raw_us": 195.5520063638687,
+      "fraction": 0.02225494936575642
+    }
+  },
+  "hypothesis": "Treat the entire last-head0-loop-mark to last-finalizer-exit interval as freely removable on both full verify cells, all other cells unchanged.",
+  "board_proxy": 1.0073234424181265,
+  "limits": "Different inputs/jobs; markers sample head0, instrumentation perturbs timings, interval includes other-head work/coordination. Warming cannot remove all this interval. This does not cover sliding/B1; their closed merge family stays closed."
+}

@@ -34,8 +34,6 @@ changes = {
         "                  variant_names={'0': 'parent', '1': 'bit50', '2': 'bit100'},\n"
         "                  gates={'parent_global': .01, 'parent_row': .05, 'fallback_global': .15, 'fallback_row': .75})",
     'e[0] < .002 and e[1] < .01': 'e[0] < .01 and e[1] < .05',
-    "_aq_fixture(batch, ctx, 4319 + batch + page, True, page, scale, pairs)":
-        "_aq_fixture(batch, ctx, 4319 + batch + page, True, page, scale, pairs)",
 }
 for old, new in changes.items():
     assert old in source, old

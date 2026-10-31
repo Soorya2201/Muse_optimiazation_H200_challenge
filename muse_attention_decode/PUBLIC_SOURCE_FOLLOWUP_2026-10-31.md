@@ -34,6 +34,17 @@ hybrids slower while preserving PK2; do not reopen them based on that note.
 The independently derived bit-interpolation experiment is documented in
 `BIT_EXP_RESEARCH_2026-10-31.md`, with its own H200 measurement required.
 
+`CODE_WARMING_PLANNING_2026-10-31.json` screens the merge-warming clue against
+existing current-parent phase data. Artificially removing the entire
+head0-loop-end to finalizer-exit interval on both batched full-verify cells
+gives only a1.007323x board planning proxy. This mixes independent synthetic
+phase fixtures with scored-parent load weights; it is neither a rigorous
+board bound nor an instruction-fetch counter measurement. The interval
+includes other-head work and coordination; a warming helper cannot remove
+it all. No >=3% full-verify-only warming candidate is established, so do not
+spend a check on that speculative transfer. Sliding/B1 is outside this
+model and remains subject to the closed merge/workspace-family instruction.
+
 No newly published rank-one implementation or demonstrated additive gain is
 established by this delta screen. Existing earlier ahead/behind account
 screens remain historical coverage; this refresh is the public-code index,
