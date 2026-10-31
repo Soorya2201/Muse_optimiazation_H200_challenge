@@ -128,5 +128,50 @@ No rented GPU or agents. The global rank1 objective remains incomplete.
 
 ## H200 outcome
 
-Not launched at the time this protocol was written. Append the exact job,
-cluster, profiles, full report and decision after terminal evidence.
+Check `d5959e1bdf8b4ad8` is terminal on sfo3. All16challenge tests and12timing
+cells pass at2.597584427x,CI[2.558620661,2.649855915],1449.923999us. Those
+challenge calls use the **unchanged parent**; this point is not an integer-exp
+score. The independent142.304s diagnostic completes all6nearby fixtures,
+16timing groups and576exact event-duration values. No primary/cleanup error.
+
+All independent accuracy, finite-output, fresh-input and new-cache checks pass.
+Maximum initial/fresh parent-global difference is0.00441105 and normalized
+row difference0.01641259. Nearby fallback-global maximum0.0433148 and
+row maximum0.10361274 pass their original gates. The integer evaluator fixes
+the tested linear form's accuracy failure; it does not fix performance.
+
+All three full linked modules report80registers, zero local/static-shared
+bytes and384maxthreads. The reported49152dynamic-shared field is the
+pre-launch allowance, not the eventual runtime shared allocation. No local
+spill growth explains these observations; no causal hardware stall is measured.
+
+|Batch|Parent/new ratio, integer25|Parent/new ratio, integer37.5|
+|---|---:|---:|
+|16|0.894681–0.917807|0.836752–0.867340|
+|32|0.879055–0.898734|0.814045–0.836276|
+
+Every retained group favors the parent. B16/random/pad3 also has a duplicate
+parent offset1.166961%, exceeding the fixed1% gate; B32 maximum0.6296%.
+The complete timing-control protocol therefore does not qualify for causal
+attribution. Do not drop that group, relax the gate, or infer an SFU/INT32
+stall explanation. The smaller offsets elsewhere do not rescue any candidate:
+all8changed fixed compositions reject; best changed worst planning proxy is
+0.985858478x (B16integer25only). The unchanged composition is1.0x.
+
+All12local profile tables,83text-profile lines,5CLI log lines, every available
+remote log line, complete decoded report, every raw event bit and reconstructed
+ratio were inspected. Profile/read hashes and complete decoded microseconds
+are retained in `INTEGER_EXP_PROFILE_READ_AUDIT_2026-10-31.json` and
+`INTEGER_EXP_AUDIT_d5959e1bdf8b4ad8.json`; receipt and full terminal status
+are in `run_receipts/`. All576event values are retained without rounding.
+Ignored CLI JSON/text/log files are copied and checksummed to the internal backup.
+
+Close this exact25/37.5% integer-quadratic form. No promotion, scored submit,
+canonical change or automatic fraction/coefficient/architecture retry.
+The optimistic two-pipeline scenario failed to establish a real gain;
+better scalar accuracy and lower standalone register use were insufficient.
+Preserve the validated integer evaluator as a component, with the measured
+integration loss attached. A new use needs an independently justified phase
+or architecture change, not a port to another track based on scalar tests.
+Attention routine checks2/8, all scored submits0, reserve intact. No live
+GPU job. Next sequential track: BF16. Rank1 objective remains active/incomplete.

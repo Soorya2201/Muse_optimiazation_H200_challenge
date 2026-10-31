@@ -1,4 +1,4 @@
-"""Offline FP32/integer arithmetic and E4M3 packing screen, not attention proof."""
+"""Offline FP32/integer arithmetic and E4M3 boundary sampling, not attention proof."""
 import argparse
 import hashlib
 import json

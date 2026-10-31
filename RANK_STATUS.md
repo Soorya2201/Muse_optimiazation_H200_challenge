@@ -1,16 +1,16 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 21:40:46 UTC** from six live OKC boards. Overall **#152/1768**.
+Captured **2026-10-31 22:07:30 UTC** from six live OKC boards. Overall **#153/1771**.
 No track has reached rank1. Positions change as others submit. Compact evidence:
-[rank_summary_20261031214046.json](research/leaderboards/rank_summary_20261031214046.json).
+[rank_summary_20261031220730.json](research/leaderboards/rank_summary_20261031220730.json).
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|249/1549|1.535843x|1.6523x|7.05%|
+|BF16 projections|251/1550|1.535843x|1.6523x|7.05%|
 |Routed experts|181/1256|2.372309x|2.7578x|13.98%|
-|Attention decode|194/1198|2.603505x|3.2221x|19.20%|
-|Whole decoder|152/1115|2.211495x|2.4592x|10.07%|
-|Prefill|182/756|1.784958x|2.1551x|17.18%|
+|Attention decode|195/1200|2.603505x|3.2221x|19.20%|
+|Whole decoder|153/1117|2.211495x|2.4592x|10.07%|
+|Prefill|183/757|1.784958x|2.1551x|17.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -159,3 +159,9 @@ reject. No canonical/scoredchange. K64/vector-store combination hasnewCPU/
 compiler evidence but no H200qualification. See
 muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md. Prefillroutine7/8;reserve
 intact. No GPUjoblive. No rank1 or new verified speedup.
+
+Oct31 attention integer-exp checkd5959e1bdf8b4ad8 passes16tests/12timings
+with unchangedparent2.597584427x. Independent6nearby/16groups/576exact
+event values pass accuracy but every group is slower;oneAAgroupalso
+fails1% and all8changed fixed policiesreject. No promotion/scoredchange.
+Complete evidence in muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md.

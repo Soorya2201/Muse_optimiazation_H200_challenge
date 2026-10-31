@@ -6,6 +6,18 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Oct31 attention integer-exp follow-up:
+[research and terminal H200 result](muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md).
+Fresh225indexedpaths/13repos,0newblobs. Previously pinned Fast Polynomial
+Transcendentals endpoint quadratic and primary NVIDIA integer arithmetic
+inform an independently implemented integer evaluator; no new source copy
+or polynomial novelty claim. CPU/sm90a pipeline/operand-lifetime evidence
+and two terminal compiler502s retained. V28checkd5959e1bdf8b4ad8 on sfo3
+passes parent16/12 and independent6nearby/16groups/576eventbit values.
+All accuracy/full-native local-memory gates pass, but every group is slower;
+oneAAgroup also fails1%, all8changed fixed policies reject. No promotion
+or new scored result. Detailed report preserves all outcomes and limits.
+
 Oct31 late tiny MoE follow-up:
 [pair-table screen](muse_moe_w4a16/TINY_PAIR_LUT_RESEARCH_2026-10-31.md).
 217indexedpaths/13repos,zero new blobs. FLUTEhead9eb83a1unchanged;

@@ -1,0 +1,494 @@
+{
+  "job": "d5959e1bdf8b4ad8",
+  "board": "muse_attention_decode",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 128.3,
+      "power.limit": 700,
+      "temperature.gpu": 39
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 147.4,
+      "power.limit": 700,
+      "temperature.gpu": 37
+    },
+    "node": "n-hbquzsoc2fbla3mk4cpu32bkrb"
+  },
+  "created_at": 1793483865.7878156,
+  "source": "muse_attention_decode/submission_v28_integer_exp_probe.py",
+  "source_sha256": "881f9a61d5f9f6343505680eae30b092e23f1c79090dee436102d03b388ad252",
+  "profile_capture": "local CLI profile JSON",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 1449.923998954774,
+    "speedup": 2.597584426987251,
+    "speedup_ci": [
+      2.558620660582442,
+      2.6498559154888275
+    ],
+    "status": "ok",
+    "tests": 16,
+    "tests_passed": 16
+  },
+  "setup": [],
+  "benchmarks": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 553103659342201177,
+        "weight": 46
+      },
+      "median_ns": 4984.367927758592,
+      "baseline_ns": 20736.000034958124,
+      "paired_ratio": 4.160206536816163,
+      "speedup": 4.160206536816163,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 553226870173642280,
+        "weight": 16
+      },
+      "median_ns": 11003.98904551205,
+      "baseline_ns": 31647.998839616776,
+      "paired_ratio": 2.876047832174491,
+      "speedup": 2.876047832174491,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 553350081005083384,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 8218.937398520464,
+      "baseline_ns": 26544.000022113323,
+      "paired_ratio": 3.229614576075449,
+      "speedup": 3.2296145760754493,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 553473291836524489,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 86995.41110583184,
+      "baseline_ns": 201088.004745543,
+      "paired_ratio": 2.311478297411745,
+      "speedup": 2.311478297411745,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 553596502667965595,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 10316.747770873046,
+      "baseline_ns": 31696.000136435032,
+      "paired_ratio": 3.072286038234003,
+      "speedup": 3.072286038234003,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 553719713499406702,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 166114.1562439907,
+      "baseline_ns": 383456.0066461563,
+      "paired_ratio": 2.3083884920857134,
+      "speedup": 2.3083884920857134,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 553842924330847810,
+        "weight": 46
+      },
+      "median_ns": 6814.540415390375,
+      "baseline_ns": 22816.00097194314,
+      "paired_ratio": 3.348134955721165,
+      "speedup": 3.348134955721165,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 553966135162288919,
+        "weight": 16
+      },
+      "median_ns": 13941.284284077092,
+      "baseline_ns": 36000.000312924385,
+      "paired_ratio": 2.582258533673361,
+      "speedup": 2.582258533673361,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554089345993730029,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 11267.994661103412,
+      "baseline_ns": 29151.99939161539,
+      "paired_ratio": 2.5871506215961144,
+      "speedup": 2.5871506215961144,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554212556825171140,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 101390.2166637012,
+      "baseline_ns": 205200.00252872705,
+      "paired_ratio": 2.023863931658713,
+      "speedup": 2.023863931658713,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554335767656612252,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "median_ns": 14684.731453488555,
+      "baseline_ns": 34272.00159057975,
+      "paired_ratio": 2.3338527979984254,
+      "speedup": 2.3338527979984254,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554458978488053365,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "median_ns": 185705.63393562933,
+      "baseline_ns": 390000.001527369,
+      "paired_ratio": 2.1000978444334852,
+      "speedup": 2.1000978444334852,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 553103659342201177,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 13>((an...       4.3 \u00b5s 100.0%      1\ntotal                                                              4.3 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 1",
+        "page": 1,
+        "seed": 553226870173642280,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 11>((an...       9.8 \u00b5s 100.0%      1\ntotal                                                              9.8 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 553350081005083384,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       6.8 \u00b5s 100.0%      1\ntotal                                                              6.8 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 16",
+        "page": 1,
+        "seed": 553473291836524489,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...      86.0 \u00b5s 100.0%      1\ntotal                                                             86.0 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 553596502667965595,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, false, 1>((ano...       8.9 \u00b5s 100.0%      1\ntotal                                                              8.9 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "decode 32",
+        "page": 1,
+        "seed": 553719713499406702,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<1, true, 0>((anon...     165.2 \u00b5s 100.0%      1\ntotal                                                            165.2 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 553842924330847810,
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 15>((an...       6.2 \u00b5s 100.0%      1\ntotal                                                              6.2 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 1",
+        "page": 1,
+        "q_len": 8,
+        "seed": 553966135162288919,
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 11>((an...      13.5 \u00b5s 100.0%      1\ntotal                                                             13.5 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554089345993730029,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 8,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      10.7 \u00b5s 100.0%      1\ntotal                                                             10.7 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 16",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554212556825171140,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 9,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...      98.7 \u00b5s 100.0%      1\ntotal                                                             98.7 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "soft",
+        "heads": "tp8",
+        "layer": "sliding",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554335767656612252,
+        "spread": "agentic",
+        "weight": 46
+      },
+      "event": "profile",
+      "index": 10,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, false, 3>((ano...      14.3 \u00b5s 100.0%      1\ntotal                                                             14.3 \u00b5s"
+    },
+    {
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "dist": "coherent",
+        "heads": "tp8",
+        "layer": "full",
+        "load": "verify 32",
+        "page": 1,
+        "q_len": 8,
+        "seed": 554458978488053365,
+        "spread": "agentic",
+        "weight": 16
+      },
+      "event": "profile",
+      "index": 11,
+      "report": "kernel                                                           GPU time  share  calls\nvoid (anonymous namespace)::attn_kernel<8, true, 0>((anon...     184.8 \u00b5s 100.0%      1\ntotal                                                            184.8 \u00b5s"
+    }
+  ],
+  "log_tail": "ATTN_INTEGER_STAGE build_parent\nATTN_INTEGER_STAGE build_integer_arms\nATTN_INTEGER_STAGE nearby\nATTN_INTEGER_STAGE timing\nATTN_PK2_HYBRID_Z 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\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 22:04:54 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

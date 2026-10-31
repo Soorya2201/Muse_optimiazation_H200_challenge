@@ -67,24 +67,48 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### LIVE Oct31 attention integer-exp V28 check d5959e1bdf8b4ad8
+#### Oct31 attention integer-exp V28 TERMINAL; next sequential track BF16
 
-Source/protocol/CPU/compiler checkpoint pushed314a889. Only attention active.
-Read muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md. SourceSHA
-881f9a61d5f9f6343505680eae30b092e23f1c79090dee436102d03b388ad252.
-This is prepare-only25/37.5% integer quadratic packed-P; timed parent
-prefix unchanged. Checkd5959e1bdf8b4ad8 submitted, pollsamehandle until
-terminal; do notrestart onobservationtimeout. Secondof8routineattention
-checks,allsubmits0,reserveintact. CPU32769fractionstates/375090FP32
-samples worst.002689395; finalNVCC13.0.1 standalone32regs/0spills,
-pack32native112sites/new25=192,new37.5=224. Not fullkernelresources
-or speedup. Fixed1%parentglobal/5%row gates unchanged;6nearby/16groups
-planned,576eventfloat32bit values retained. Primary/cleanup errors both
-preserved. V25/26/27earlier unsubmitteddrafts retained,onlyV28launched.
-TwoNVCC13.0.0HTTP502responses archived;13.0.1works. Fullrepo diffcheck
-flags inherited parent-prefix whitespace; preserve canonical/source hashes,
-verify new suffix separately. No new scored result orrank1yet. Noagents.
-Preserve untracked research/public/madhavan_721c627/ untouched.
+Previous MoE cycle made progress,pushed97edd6e. This cycle implements a
+known endpoint quadratic with six integer correction operations, avoiding
+mantissa extraction/three FMAs and numeric F2I. Read
+muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md. Source/protocol
+pushed314a889,livejob/compileranalysis a08b579; terminalevidence follows.
+V25predicate temporary preservation createsSELs;V26initializes core;
+V27protects primary/cleanup errors;V28fixes assembly output-before-final-
+input-read hazard. Earlier drafts never sent toGPU. OnlyV28SHA
+881f9a61d5f9f6343505680eae30b092e23f1c79090dee436102d03b388ad252
+launched. Native high tail/PK2/context/precision/state math unchanged.
+CPU32769fraction states/375090FP32samples worst.002689395,576event codec
+checks. TwoNVCC13.0.0HTTP502s archived;13.0.1 compiles complete final
+PTX5325/SASS1215,standalone32regs/0spills. Fullcompile resources only
+established onH200 below; toy4.32%boardproxy was optimistic,not a bound.
+
+Checkd5959e1bdf8b4ad8 TERMINAL sfo3,16tests/12timings pass2.597584427x,
+CI2.558620661–2.649855915,1449.923999us. Timedpath unchangedparent,
+NOTnew algorithm score. Independent142.304s completes6nearby/16groups/
+576exacteventfloat32 values with original1%global/5%row gates. Maxparent
+.00441105global/.01641259row,all cache/fresh/fallback gates pass. Full
+all3modules80regs/0local/0static/max384threads. 49152dynamic field is
+prelaunch allowance,not runtimeallocation. Every measured group slower:
+B16integer25ratios.894681–.917807,integer37.5 .836752–.867340;
+B32 .879055–.898734/.814045–.836276. AAmax1.166961% also fails1%gate,
+so no causalstall attribution. All8changed fixed policiesreject; best
+changed worstproxy.985858478x. All12profiles/83textlines/5CLIloglines/
+available remote logs/full decodedreport andeveryevent/ratio inspected.
+ThreeignoredCLI files copied/checksummed to internalbackup. No promotion,
+scoredsubmit orcanonicalchange. Close exactform, no blindfraction retry
+or port from scalaraccuracy. A new use needs distinct phase/architecture.
+
+Fresh22:07:30UTC rank_summary_20261031220730.json:overall153/1771,
+BF16251/1550,MoE181/1256,attention195/1200,decoder153/1117,prefill183/757.
+Scoresunchanged;repoPRIVATEverified. Freshindexed225paths/13repos/0newblobs.
+CurrentroutinechecksMoE8/8,attention2/8,BF164/8,decoder1/8,prefill7/8;
+allsubmits0,reserveintact. NoGPUjoblive. Goalactive/incomplete,no rank1.
+NextsequentialtrackBF16:readAGENTS/TASK/latestglobal-normalization/C12
+negatives and find a distinct >=3% mechanism before spending another check.
+Noagents. Preserve untracked research/public/madhavan_721c627/ untouched.
+Preserve inherited canonical-prefix whitespace/hashes; new suffixes clean.
 
 
 #### Oct31 tiny MoE pair-table screen complete; next sequential track attention

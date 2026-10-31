@@ -4,7 +4,7 @@ Updated October 31, 2026. This records mechanisms and transfer limits, rather th
 published speedup numbers into our score. The verified parent remains vjeux f35a41e,
 scored **2.603505x**. Source reviews and experiments are in PUBLIC_RESEARCH.md and root RESULTS.md.
 
-Latest cycle: [direct FP8 quantizer and primary-source review](DIRECT_FP8_RESEARCH_2026-10-31.md).
+Previous cycle: [direct FP8 quantizer and primary-source review](DIRECT_FP8_RESEARCH_2026-10-31.md).
 Two actual CPU/CUDA mappings pass1.11million distinct CPU inputs; standalone
 sm90a costs remain too high to justify H200 use (not a measured GPU slowdown).
 The branchless implementation removes reconvergence and reduces32-value
@@ -14,6 +14,18 @@ New pinned Apache-2.0 sources:
 and [Fast Polynomial Transcendentals](https://github.com/MrHuff/fast-polynomial-transcendentals/tree/e022698f44c0e5816ca0cdb4d41bb64a1753c86e).
 The dated report distinguishes their hardware/format/cutoff limits and
 retains all evidence. No source port, score change or new GPU check.
+
+Latest follow-up: [integer quadratic evaluator](INTEGER_EXP_RESEARCH_2026-10-31.md).
+The polynomial family is known; a bounded integer correction replaces the
+mantissa extraction/three-FMA evaluator. CPU32769fraction states and375090
+FP32 samples pass at.26894% worst sampled scalar error. Compiler iterations
+and pre-GPU operand-lifetime fixes are retained; final standalone32registers,
+zero spills,112/192/224sites native/25%/37.5%. V28 checkd5959e1bdf8b4ad8
+is terminal on sfo3, routineattention2/8. Parent16tests/12timings pass;
+independent6nearby/16groups/576rawvalues complete. Accuracy passes, max
+parent-global.441105%/row1.641259%, all full modules80regs/0local. Every
+measured group is slower, oneAAgroup exceeds1%, all8changed policies reject.
+Close exactform without promotion/score change or blind fraction retry.
 
 |Primary source|Relevant mechanism|Current-source finding and next action|
 |---|---|---|
