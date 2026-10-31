@@ -1,16 +1,16 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 20:42:14 UTC** from six live OKC boards. Overall **#150/1766**.
+Captured **2026-10-31 21:27:52 UTC** from six live OKC boards. Overall **#151/1768**.
 No track has reached rank1. Positions change as others submit. Compact evidence:
-[rank_summary_20261031204214.json](research/leaderboards/rank_summary_20261031204214.json).
+[rank_summary_20261031212752.json](research/leaderboards/rank_summary_20261031212752.json).
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|247/1548|1.535843x|1.6523x|7.05%|
-|Routed experts|180/1255|2.372309x|2.7578x|13.98%|
-|Attention decode|193/1198|2.603505x|3.2221x|19.20%|
-|Whole decoder|150/1112|2.211495x|2.4592x|10.07%|
-|Prefill|182/755|1.784958x|2.1551x|17.18%|
+|BF16 projections|249/1549|1.535843x|1.6523x|7.05%|
+|Routed experts|181/1255|2.372309x|2.7578x|13.98%|
+|Attention decode|194/1198|2.603505x|3.2221x|19.20%|
+|Whole decoder|151/1114|2.211495x|2.4592x|10.07%|
+|Prefill|182/756|1.784958x|2.1551x|17.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -149,3 +149,13 @@ parent1.557816x. Independent seven-instruction normalized SK2 passes5nearby/
 72groups exactly,but all routes and511fixed policies reject performance
 gates. No new scored result. Full evidence:
 muse_bf16_proj/GLOBAL_NORMALIZATION_2026-10-31.md.
+
+
+Oct31 producer-dequant/SS prefill cycle: V28check43142b86fed74840 fails
+setup withCUDA719; role-selector defect found and archived. Corrected V29
+checkdad7baa049c943dc passes5/8(parent1.779896x)and independent8raw/5nearby/
+24groups numerics/resources,but SS loses every timinggroup. All7policies
+reject. No canonical/scoredchange. K64/vector-store combination hasnewCPU/
+compiler evidence but no H200qualification. See
+muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md. Prefillroutine7/8;reserve
+intact. No GPUjoblive. No rank1 or new verified speedup.

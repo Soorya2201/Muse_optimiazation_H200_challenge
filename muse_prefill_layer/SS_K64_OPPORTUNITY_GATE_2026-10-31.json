@@ -1,0 +1,7 @@
+{
+  "scope": "Conditional phase-duration model using same-job parent profiles and synthetic ordinary-SS ratios. Not a prediction or rigorous bound on K64. Uniform follow-up multiplier applied only to first-turn expert chains.",
+  "job": "dad7baa049c943dc",
+  "required_followup_speedup_over_ordinary_ss_for_worst_group_3pct_board": 1.6935770434525477,
+  "required_ordinary_ss_time_cut": 0.4095338007408348,
+  "decision": "Defer K64 follow-up before H200: substantial ordinary-SS regression and no measured producer critical-path fraction support the required recovery. Compiler/source reductions alone are insufficient. Preserve final routine check; do not relax gates."
+}

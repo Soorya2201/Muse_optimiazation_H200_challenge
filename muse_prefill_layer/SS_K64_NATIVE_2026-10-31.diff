@@ -1,0 +1,277 @@
+--- parent.cu
++++ ss_k64.cu
+@@ -432 +432 @@
+-constexpr int SLOT = 43008;     // bytes per ring slot (1024-aligned): fits kps k-stages of any tile size
++constexpr int SLOT = 49152;     // bytes per ring slot (1024-aligned): fits kps k-stages of any tile size
+@@ -434 +434,2 @@
+-constexpr int STG_BYTES = 45056; // epilogue staging
++static_assert(1024 + NSLOT * SLOT + 34816 <= 232448, "SS shared memory exceeds H200 block budget");
++constexpr int STG_BYTES = 34816; // epilogue staging
+@@ -437,3 +438,3 @@
+-#define MOE_KPS32 4
+-#define MOE_KPS64 2
+-#define MOE_KPS128 2
++#define MOE_KPS32 1
++#define MOE_KPS64 1
++#define MOE_KPS128 1
+@@ -443 +444 @@
+-DEVI int kps_for(int n) { return n >= 160 ? 1 : (n <= 32 ? MOE_KPS32 : (n <= 64 ? MOE_KPS64 : MOE_KPS128)); }
++DEVI int kps_for(int n) { return 1; }
+@@ -805,0 +807,196 @@
++
++DEVI void ss_expand(uint8_t* packed, int dtid) {
++  uint4 codes[4];
++  uint16_t scales[4];
++#pragma unroll
++  for (int i = 0; i < 4; ++i) {
++    const int q = dtid + i * 64;
++    codes[i] = *reinterpret_cast<const uint4*>(packed + q * 16);
++    const int warp = q >> 5, lane = q & 31, g = lane >> 2, t = lane & 3;
++    scales[i] = *reinterpret_cast<const uint16_t*>(packed + 4096 + (warp * 8 + g) * 8 + 2 * t);
++  }
++  named_bar_sync(2, 64);
++#pragma unroll
++  for (int i = 0; i < 4; ++i) {
++    const int q = dtid + i * 64;
++    const int lane = q & 31, row = (q >> 5) * 16 + (lane >> 2), t = lane & 3;
++    const uint4 c = codes[i];
++    const uint32_t scale = scale_pair_sel((uint32_t)scales[i], 0);
++#pragma unroll
++    for (int half = 0; half < 2; ++half) {
++      uint32_t a[4], b[4];
++      convert8(half ? c.z : c.x, scale, a);
++      convert8(half ? c.w : c.y, scale, b);
++      // Physical K64 steps (2*half,2*half+1) cover consecutive original
++      // groups of eight values in the lane's original 16-value scale block.
++      // Permutation preserves BF16 pairs, permitting aligned vector stores.
++      const int k = t * 16 + half * 8;
++      const int sw = (row & 7) * 16;
++      const int lo = row * 128 + ((k * 2) ^ sw);
++      const int hi = (row + 8) * 128 + ((k * 2) ^ sw);
++      *reinterpret_cast<uint4*>(packed + lo) = make_uint4(a[0], a[2], b[0], b[2]);
++      *reinterpret_cast<uint4*>(packed + hi) = make_uint4(a[1], a[3], b[1], b[3]);
++    }
++  }
++  asm volatile("fence.proxy.async.shared::cta;" ::: "memory");
++}
++
++template <int N> DEVI void ss_mma(float (&acc)[128], uint64_t ad, uint64_t bd);
++
++template <> DEVI void ss_mma<32>(float (&acc)[128], uint64_t ad, uint64_t bd) {
++  asm volatile("wgmma.mma_async.sync.aligned.m64n32k16.f32.bf16.bf16 {%0, %1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15}, %16, %17, 1, 1, 1, 0, 0;"
++               : "+f"(acc[0]), "+f"(acc[1]), "+f"(acc[2]), "+f"(acc[3]), "+f"(acc[4]), "+f"(acc[5]), "+f"(acc[6]), "+f"(acc[7]), "+f"(acc[8]), "+f"(acc[9]), "+f"(acc[10]), "+f"(acc[11]), "+f"(acc[12]), "+f"(acc[13]), "+f"(acc[14]), "+f"(acc[15]) : "l"(ad), "l"(bd));
++}
++
++template <> DEVI void ss_mma<64>(float (&acc)[128], uint64_t ad, uint64_t bd) {
++  asm volatile("wgmma.mma_async.sync.aligned.m64n64k16.f32.bf16.bf16 {%0, %1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15, %16, %17, %18, %19, %20, %21, %22, %23, %24, %25, %26, %27, %28, %29, %30, %31}, %32, %33, 1, 1, 1, 0, 0;"
++               : "+f"(acc[0]), "+f"(acc[1]), "+f"(acc[2]), "+f"(acc[3]), "+f"(acc[4]), "+f"(acc[5]), "+f"(acc[6]), "+f"(acc[7]), "+f"(acc[8]), "+f"(acc[9]), "+f"(acc[10]), "+f"(acc[11]), "+f"(acc[12]), "+f"(acc[13]), "+f"(acc[14]), "+f"(acc[15]), "+f"(acc[16]), "+f"(acc[17]), "+f"(acc[18]), "+f"(acc[19]), "+f"(acc[20]), "+f"(acc[21]), "+f"(acc[22]), "+f"(acc[23]), "+f"(acc[24]), "+f"(acc[25]), "+f"(acc[26]), "+f"(acc[27]), "+f"(acc[28]), "+f"(acc[29]), "+f"(acc[30]), "+f"(acc[31]) : "l"(ad), "l"(bd));
++}
++
++template <> DEVI void ss_mma<128>(float (&acc)[128], uint64_t ad, uint64_t bd) {
++  asm volatile("wgmma.mma_async.sync.aligned.m64n128k16.f32.bf16.bf16 {%0, %1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15, %16, %17, %18, %19, %20, %21, %22, %23, %24, %25, %26, %27, %28, %29, %30, %31, %32, %33, %34, %35, %36, %37, %38, %39, %40, %41, %42, %43, %44, %45, %46, %47, %48, %49, %50, %51, %52, %53, %54, %55, %56, %57, %58, %59, %60, %61, %62, %63}, %64, %65, 1, 1, 1, 0, 0;"
++               : "+f"(acc[0]), "+f"(acc[1]), "+f"(acc[2]), "+f"(acc[3]), "+f"(acc[4]), "+f"(acc[5]), "+f"(acc[6]), "+f"(acc[7]), "+f"(acc[8]), "+f"(acc[9]), "+f"(acc[10]), "+f"(acc[11]), "+f"(acc[12]), "+f"(acc[13]), "+f"(acc[14]), "+f"(acc[15]), "+f"(acc[16]), "+f"(acc[17]), "+f"(acc[18]), "+f"(acc[19]), "+f"(acc[20]), "+f"(acc[21]), "+f"(acc[22]), "+f"(acc[23]), "+f"(acc[24]), "+f"(acc[25]), "+f"(acc[26]), "+f"(acc[27]), "+f"(acc[28]), "+f"(acc[29]), "+f"(acc[30]), "+f"(acc[31]), "+f"(acc[32]), "+f"(acc[33]), "+f"(acc[34]), "+f"(acc[35]), "+f"(acc[36]), "+f"(acc[37]), "+f"(acc[38]), "+f"(acc[39]), "+f"(acc[40]), "+f"(acc[41]), "+f"(acc[42]), "+f"(acc[43]), "+f"(acc[44]), "+f"(acc[45]), "+f"(acc[46]), "+f"(acc[47]), "+f"(acc[48]), "+f"(acc[49]), "+f"(acc[50]), "+f"(acc[51]), "+f"(acc[52]), "+f"(acc[53]), "+f"(acc[54]), "+f"(acc[55]), "+f"(acc[56]), "+f"(acc[57]), "+f"(acc[58]), "+f"(acc[59]), "+f"(acc[60]), "+f"(acc[61]), "+f"(acc[62]), "+f"(acc[63]) : "l"(ad), "l"(bd));
++}
++
++template <> DEVI void ss_mma<160>(float (&acc)[128], uint64_t ad, uint64_t bd) {
++  asm volatile("wgmma.mma_async.sync.aligned.m64n160k16.f32.bf16.bf16 {%0, %1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15, %16, %17, %18, %19, %20, %21, %22, %23, %24, %25, %26, %27, %28, %29, %30, %31, %32, %33, %34, %35, %36, %37, %38, %39, %40, %41, %42, %43, %44, %45, %46, %47, %48, %49, %50, %51, %52, %53, %54, %55, %56, %57, %58, %59, %60, %61, %62, %63, %64, %65, %66, %67, %68, %69, %70, %71, %72, %73, %74, %75, %76, %77, %78, %79}, %80, %81, 1, 1, 1, 0, 0;"
++               : "+f"(acc[0]), "+f"(acc[1]), "+f"(acc[2]), "+f"(acc[3]), "+f"(acc[4]), "+f"(acc[5]), "+f"(acc[6]), "+f"(acc[7]), "+f"(acc[8]), "+f"(acc[9]), "+f"(acc[10]), "+f"(acc[11]), "+f"(acc[12]), "+f"(acc[13]), "+f"(acc[14]), "+f"(acc[15]), "+f"(acc[16]), "+f"(acc[17]), "+f"(acc[18]), "+f"(acc[19]), "+f"(acc[20]), "+f"(acc[21]), "+f"(acc[22]), "+f"(acc[23]), "+f"(acc[24]), "+f"(acc[25]), "+f"(acc[26]), "+f"(acc[27]), "+f"(acc[28]), "+f"(acc[29]), "+f"(acc[30]), "+f"(acc[31]), "+f"(acc[32]), "+f"(acc[33]), "+f"(acc[34]), "+f"(acc[35]), "+f"(acc[36]), "+f"(acc[37]), "+f"(acc[38]), "+f"(acc[39]), "+f"(acc[40]), "+f"(acc[41]), "+f"(acc[42]), "+f"(acc[43]), "+f"(acc[44]), "+f"(acc[45]), "+f"(acc[46]), "+f"(acc[47]), "+f"(acc[48]), "+f"(acc[49]), "+f"(acc[50]), "+f"(acc[51]), "+f"(acc[52]), "+f"(acc[53]), "+f"(acc[54]), "+f"(acc[55]), "+f"(acc[56]), "+f"(acc[57]), "+f"(acc[58]), "+f"(acc[59]), "+f"(acc[60]), "+f"(acc[61]), "+f"(acc[62]), "+f"(acc[63]), "+f"(acc[64]), "+f"(acc[65]), "+f"(acc[66]), "+f"(acc[67]), "+f"(acc[68]), "+f"(acc[69]), "+f"(acc[70]), "+f"(acc[71]), "+f"(acc[72]), "+f"(acc[73]), "+f"(acc[74]), "+f"(acc[75]), "+f"(acc[76]), "+f"(acc[77]), "+f"(acc[78]), "+f"(acc[79]) : "l"(ad), "l"(bd));
++}
++
++template <> DEVI void ss_mma<192>(float (&acc)[128], uint64_t ad, uint64_t bd) {
++  asm volatile("wgmma.mma_async.sync.aligned.m64n192k16.f32.bf16.bf16 {%0, %1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15, %16, %17, %18, %19, %20, %21, %22, %23, %24, %25, %26, %27, %28, %29, %30, %31, %32, %33, %34, %35, %36, %37, %38, %39, %40, %41, %42, %43, %44, %45, %46, %47, %48, %49, %50, %51, %52, %53, %54, %55, %56, %57, %58, %59, %60, %61, %62, %63, %64, %65, %66, %67, %68, %69, %70, %71, %72, %73, %74, %75, %76, %77, %78, %79, %80, %81, %82, %83, %84, %85, %86, %87, %88, %89, %90, %91, %92, %93, %94, %95}, %96, %97, 1, 1, 1, 0, 0;"
++               : "+f"(acc[0]), "+f"(acc[1]), "+f"(acc[2]), "+f"(acc[3]), "+f"(acc[4]), "+f"(acc[5]), "+f"(acc[6]), "+f"(acc[7]), "+f"(acc[8]), "+f"(acc[9]), "+f"(acc[10]), "+f"(acc[11]), "+f"(acc[12]), "+f"(acc[13]), "+f"(acc[14]), "+f"(acc[15]), "+f"(acc[16]), "+f"(acc[17]), "+f"(acc[18]), "+f"(acc[19]), "+f"(acc[20]), "+f"(acc[21]), "+f"(acc[22]), "+f"(acc[23]), "+f"(acc[24]), "+f"(acc[25]), "+f"(acc[26]), "+f"(acc[27]), "+f"(acc[28]), "+f"(acc[29]), "+f"(acc[30]), "+f"(acc[31]), "+f"(acc[32]), "+f"(acc[33]), "+f"(acc[34]), "+f"(acc[35]), "+f"(acc[36]), "+f"(acc[37]), "+f"(acc[38]), "+f"(acc[39]), "+f"(acc[40]), "+f"(acc[41]), "+f"(acc[42]), "+f"(acc[43]), "+f"(acc[44]), "+f"(acc[45]), "+f"(acc[46]), "+f"(acc[47]), "+f"(acc[48]), "+f"(acc[49]), "+f"(acc[50]), "+f"(acc[51]), "+f"(acc[52]), "+f"(acc[53]), "+f"(acc[54]), "+f"(acc[55]), "+f"(acc[56]), "+f"(acc[57]), "+f"(acc[58]), "+f"(acc[59]), "+f"(acc[60]), "+f"(acc[61]), "+f"(acc[62]), "+f"(acc[63]), "+f"(acc[64]), "+f"(acc[65]), "+f"(acc[66]), "+f"(acc[67]), "+f"(acc[68]), "+f"(acc[69]), "+f"(acc[70]), "+f"(acc[71]), "+f"(acc[72]), "+f"(acc[73]), "+f"(acc[74]), "+f"(acc[75]), "+f"(acc[76]), "+f"(acc[77]), "+f"(acc[78]), "+f"(acc[79]), "+f"(acc[80]), "+f"(acc[81]), "+f"(acc[82]), "+f"(acc[83]), "+f"(acc[84]), "+f"(acc[85]), "+f"(acc[86]), "+f"(acc[87]), "+f"(acc[88]), "+f"(acc[89]), "+f"(acc[90]), "+f"(acc[91]), "+f"(acc[92]), "+f"(acc[93]), "+f"(acc[94]), "+f"(acc[95]) : "l"(ad), "l"(bd));
++}
++
++template <> DEVI void ss_mma<256>(float (&acc)[128], uint64_t ad, uint64_t bd) {
++  asm volatile("wgmma.mma_async.sync.aligned.m64n256k16.f32.bf16.bf16 {%0, %1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11, %12, %13, %14, %15, %16, %17, %18, %19, %20, %21, %22, %23, %24, %25, %26, %27, %28, %29, %30, %31, %32, %33, %34, %35, %36, %37, %38, %39, %40, %41, %42, %43, %44, %45, %46, %47, %48, %49, %50, %51, %52, %53, %54, %55, %56, %57, %58, %59, %60, %61, %62, %63, %64, %65, %66, %67, %68, %69, %70, %71, %72, %73, %74, %75, %76, %77, %78, %79, %80, %81, %82, %83, %84, %85, %86, %87, %88, %89, %90, %91, %92, %93, %94, %95, %96, %97, %98, %99, %100, %101, %102, %103, %104, %105, %106, %107, %108, %109, %110, %111, %112, %113, %114, %115, %116, %117, %118, %119, %120, %121, %122, %123, %124, %125, %126, %127}, %128, %129, 1, 1, 1, 0, 0;"
++               : "+f"(acc[0]), "+f"(acc[1]), "+f"(acc[2]), "+f"(acc[3]), "+f"(acc[4]), "+f"(acc[5]), "+f"(acc[6]), "+f"(acc[7]), "+f"(acc[8]), "+f"(acc[9]), "+f"(acc[10]), "+f"(acc[11]), "+f"(acc[12]), "+f"(acc[13]), "+f"(acc[14]), "+f"(acc[15]), "+f"(acc[16]), "+f"(acc[17]), "+f"(acc[18]), "+f"(acc[19]), "+f"(acc[20]), "+f"(acc[21]), "+f"(acc[22]), "+f"(acc[23]), "+f"(acc[24]), "+f"(acc[25]), "+f"(acc[26]), "+f"(acc[27]), "+f"(acc[28]), "+f"(acc[29]), "+f"(acc[30]), "+f"(acc[31]), "+f"(acc[32]), "+f"(acc[33]), "+f"(acc[34]), "+f"(acc[35]), "+f"(acc[36]), "+f"(acc[37]), "+f"(acc[38]), "+f"(acc[39]), "+f"(acc[40]), "+f"(acc[41]), "+f"(acc[42]), "+f"(acc[43]), "+f"(acc[44]), "+f"(acc[45]), "+f"(acc[46]), "+f"(acc[47]), "+f"(acc[48]), "+f"(acc[49]), "+f"(acc[50]), "+f"(acc[51]), "+f"(acc[52]), "+f"(acc[53]), "+f"(acc[54]), "+f"(acc[55]), "+f"(acc[56]), "+f"(acc[57]), "+f"(acc[58]), "+f"(acc[59]), "+f"(acc[60]), "+f"(acc[61]), "+f"(acc[62]), "+f"(acc[63]), "+f"(acc[64]), "+f"(acc[65]), "+f"(acc[66]), "+f"(acc[67]), "+f"(acc[68]), "+f"(acc[69]), "+f"(acc[70]), "+f"(acc[71]), "+f"(acc[72]), "+f"(acc[73]), "+f"(acc[74]), "+f"(acc[75]), "+f"(acc[76]), "+f"(acc[77]), "+f"(acc[78]), "+f"(acc[79]), "+f"(acc[80]), "+f"(acc[81]), "+f"(acc[82]), "+f"(acc[83]), "+f"(acc[84]), "+f"(acc[85]), "+f"(acc[86]), "+f"(acc[87]), "+f"(acc[88]), "+f"(acc[89]), "+f"(acc[90]), "+f"(acc[91]), "+f"(acc[92]), "+f"(acc[93]), "+f"(acc[94]), "+f"(acc[95]), "+f"(acc[96]), "+f"(acc[97]), "+f"(acc[98]), "+f"(acc[99]), "+f"(acc[100]), "+f"(acc[101]), "+f"(acc[102]), "+f"(acc[103]), "+f"(acc[104]), "+f"(acc[105]), "+f"(acc[106]), "+f"(acc[107]), "+f"(acc[108]), "+f"(acc[109]), "+f"(acc[110]), "+f"(acc[111]), "+f"(acc[112]), "+f"(acc[113]), "+f"(acc[114]), "+f"(acc[115]), "+f"(acc[116]), "+f"(acc[117]), "+f"(acc[118]), "+f"(acc[119]), "+f"(acc[120]), "+f"(acc[121]), "+f"(acc[122]), "+f"(acc[123]), "+f"(acc[124]), "+f"(acc[125]), "+f"(acc[126]), "+f"(acc[127]) : "l"(ad), "l"(bd));
++}
++
++template <int N, int CB = 128>
++DEVI void consumer_item_ss(const Args& p, uint8_t* ring, uint8_t* stg, uint32_t bars, int& slot, uint32_t& ph,
++                          int e, int row0, int ntile, bool GATED, int* done = nullptr,
++                          unsigned long long* t_mid = nullptr, volatile long long* pubq = nullptr, int nreal = 256) {
++  static_assert(N == 32 || N == 64 || N == 128 || N == 160 || N == 192 || N == 256, "SS supports the complete parent width set");
++  const int ctid = threadIdx.x - CB, wg = ctid >> 7, w = (ctid >> 5) & 3;
++  const int lane = ctid & 31, g = lane >> 2, t = lane & 3;
++  float acc[128];
++#pragma unroll
++  for (int i = 0; i < N / 2; ++i) acc[i] = 0.f;
++  int prev = -1;
++#pragma unroll 1
++  for (int it = 0; it < KS; ++it) {
++    mbar_wait(bars + 128 + 8 * slot, ph);
++    const uint32_t base = smem_u32(ring + slot * SLOT);
++    const uint64_t ad = desc_sw128(base + N * 128 + wg * 8192);
++    const uint64_t bd = desc_sw128(base);
++    wg_fence();
++#pragma unroll
++    for (int j = 0; j < 4; ++j) ss_mma<N>(acc, ad + 2 * j, bd + 2 * j);
++    wg_commit();
++    wg_wait<1>();
++    if (prev >= 0) mbar_arrive(bars + 8 * NSLOT + 8 * prev);
++    prev = slot;
++    if (++slot == NSLOT) { slot = 0; ph ^= 1; }
++  }
++  wg_wait<0>();
++  mbar_arrive(bars + 8 * NSLOT + 8 * prev);
++  if (t_mid) {
++    unsigned long long stamp;
++    asm volatile("mov.u64 %0, %%globaltimer;" : "=l"(stamp));
++    *t_mid = stamp;
++  }
++  // ---- epilogue through the dedicated staging buffer ----
++  const float cs = p.gscale[e] * 128.f;
++  if (pubq && ctid == 0) wait_staging_free(pubq);
++  named_bar_sync(1, 256);  // previous item's copy-out is done with the staging buffer
++  if (GATED) {
++    const int q = wg * 4 + w;
++    // stmatrix.trans: the accumulator fragment of an 8-token group is an 8x8 matrix [row g][token]; stored transposed,
++    // each token's 8 rows (16 bytes) land in its tile-layout chunk in one instruction per 4 groups
++#pragma unroll
++    for (int j4 = 0; j4 < N / 32; ++j4) {
++      uint32_t r[4];
++#pragma unroll
++      for (int u = 0; u < 4; ++u) {
++        const int jj = 4 * j4 + u;
++        const float h0 = silu_fast(acc[4 * jj] * cs) * (acc[4 * jj + 2] * cs);
++        const float h1 = silu_fast(acc[4 * jj + 1] * cs) * (acc[4 * jj + 3] * cs);
++        r[u] = bf162_u32(__floats2bfloat162_rn(h0, h1));
++      }
++      const int rr = lane & 7, tokr = 8 * (4 * j4 + (lane >> 3)) + rr;
++      const uint32_t addr = smem_u32(stg + tokr * 128 + ((q ^ rr) << 4));
++      asm volatile("stmatrix.sync.aligned.m8n8.x4.trans.shared.b16 [%0], {%1, %2, %3, %4};" ::"r"(addr), "r"(r[0]),
++                   "r"(r[1]), "r"(r[2]), "r"(r[3]) : "memory");
++    }
++    if (pubq) {  // fused sm_90: the publisher warp copies the staged tile out (bulk copy) and then publishes `done`
++      asm volatile("fence.proxy.async.shared::cta;" ::: "memory");
++      named_bar_sync(1, 256);
++      if (ctid == 0) enqueue_out(pubq, p.out + (size_t)row0 * 8192 + (size_t)ntile * N * 128, done, 0, N * 128);
++    } else {
++      named_bar_sync(1, 256);
++      uint4* dst = reinterpret_cast<uint4*>(p.out + (size_t)row0 * 8192 + (size_t)ntile * N * 128);
++      const uint4* src = reinterpret_cast<const uint4*>(stg);
++      for (int i = ctid; i < N * 8; i += 256) dst[i] = src[i];
++      if (done) {  // fused kernel: publish this n-tile of the tile's intermediate rows
++        __threadfence();
++        named_bar_sync(1, 256);
++        if (ctid == 0) atomicAdd(done, 1);
++      }
++    }
++  } else {
++    const int c0 = (wg * 4 + w) * 16 + g;
++    // halves of up to 128 tokens through the 128-row staging buffer: half 1 (tiles over 128 rows) holds N - 128 rows
++    auto gemm2_half = [&]<int half, int NJ>() {
++      if (half) named_bar_sync(1, 256);  // (half 0 was copied out by the consumers themselves)
++      // stmatrix.trans: per 8-token group, two 8x8 matrices (this warp's columns 16w..16w+7 and 16w+8..16w+15)
++      if constexpr (NJ >= 2) {
++#pragma unroll
++        for (int j2 = 0; j2 < NJ / 2; ++j2) {
++          uint32_t r[4];
++#pragma unroll
++          for (int u = 0; u < 2; ++u) {
++            const int ai = 4 * (2 * j2 + u + half * 16);
++            r[2 * u] = bf162_u32(__floats2bfloat162_rn(acc[ai] * cs, acc[ai + 1] * cs));
++            r[2 * u + 1] = bf162_u32(__floats2bfloat162_rn(acc[ai + 2] * cs, acc[ai + 3] * cs));
++          }
++          const int m = lane >> 3, rr = lane & 7;
++          const int tl = 8 * (2 * j2 + (m >> 1)) + rr;
++          const uint32_t addr = smem_u32(stg + tl * 272 + ((wg * 4 + w) * 16 + 8 * (m & 1)) * 2);
++          asm volatile("stmatrix.sync.aligned.m8n8.x4.trans.shared.b16 [%0], {%1, %2, %3, %4};" ::"r"(addr), "r"(r[0]),
++                       "r"(r[1]), "r"(r[2]), "r"(r[3]) : "memory");
++        }
++      } else {
++#pragma unroll
++        for (int jj = 0; jj < NJ; ++jj) {
++#pragma unroll
++          for (int b = 0; b < 2; ++b) {
++            const int tl = 8 * jj + 2 * t + b;
++            const int ai = 4 * (jj + half * 16) + b;
++            __nv_bfloat16* r = reinterpret_cast<__nv_bfloat16*>(stg + tl * 272);
++            r[c0] = __float2bfloat16_rn(acc[ai] * cs);
++            r[c0 + 8] = __float2bfloat16_rn(acc[ai + 2] * cs);
++          }
++        }
++      }
++      constexpr int ntok = 8 * NJ;
++      // the last half goes to the publisher warp (its copy loop overlaps the next item); a first half is copied by the
++      // consumers, since the second half needs the staging buffer right away
++      if (pubq && half == (N > 128 ? 1 : 0)) {
++        named_bar_sync(1, 256);
++        if (ctid == 0)
++          enqueue_out(pubq, p.out + ((size_t)(row0 + half * 128) * 4096 + ntile * 128) * 2, done, 1, ntok, row0, nreal);
++      } else {
++        named_bar_sync(1, 256);
++        for (int i = ctid; i < ntok * 16; i += 256) {
++          const int tl = i >> 4, c = i & 15;
++          *reinterpret_cast<uint4*>(p.out + ((size_t)(row0 + half * 128 + tl) * 4096 + ntile * 128) * 2 + c * 16) =
++              *reinterpret_cast<const uint4*>(stg + tl * 272 + c * 16);
++        }
++      }
++    };
++    gemm2_half.template operator()<0, (N > 128 ? 16 : N / 8)>();
++    if constexpr (N > 128) gemm2_half.template operator()<1, (N - 128) / 8>();
++  }
++}
++
+@@ -1117,0 +1315 @@
++    for (int s = 0; s < NSLOT; ++s) mbar_init(bars + 128 + 8 * s, 64);
+@@ -1120 +1318 @@
+-      mbar_init(ibar + 16 + 8 * k, MOE_ALLLANE_RELEASE ? 256 : 1);
++      mbar_init(ibar + 16 + 8 * k, 320);
+@@ -1131 +1329 @@
+-    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.dec.sync.aligned.u32 40;\n");
++    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.dec.sync.aligned.u32 120;\n");
+@@ -1238,0 +1437,29 @@
++    } else if (threadIdx.x >= 64 && threadIdx.x < 128) {
++      static_assert(!MOE_CONS_FIRST && MOE_ALLLANE_RELEASE, "SS requires the original full producer WG and all-lane releases");
++      const int dtid = threadIdx.x - 64;
++      int k = 0;
++      uint32_t iph = 0;
++      while (true) {
++        mbar_wait(ibar + 8 * k, iph);
++        const int item = iring[k];
++        mbar_arrive(ibar + 16 + 8 * k); // each of 64 metadata readers releases its own read
++        if (item >= nitems) break;
++        k ^= 1;
++        if (k == 0) iph ^= 1;
++        const bool second = item >= n1;
++        const Args& p = second ? fa.g2 : fa.g1;
++        const int it2 = second ? item - n1 : item;
++        const int4 ti = p.tiles[it2 / p.NT];
++        // Every item has an even number of complete four-slot ring cycles.
++        // Narrow items do not change decoded-barrier parity; wide items
++        // have 64 stages and also restore that parity before the next item.
++        // Every width uses KPS1 and the SS/dequant pipeline in this arm.
++#pragma unroll 1
++        for (int it = 0; it < KS; ++it) {
++          const int s = it & 3;
++          const uint32_t ph = (uint32_t)(it >> 2) & 1u;
++          mbar_wait(bars + 8 * s, ph);
++          ss_expand(ring + s * SLOT + ti.z * 128, dtid);
++          mbar_arrive(bars + 128 + 8 * s);
++        }
++      }
+@@ -1241 +1468 @@
+-    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.inc.sync.aligned.u32 232;\n");
++    if (!MOE_CONS_FIRST) asm volatile("setmaxnreg.inc.sync.aligned.u32 184;\n");
+@@ -1272,3 +1499,3 @@
+-        case 32: consumer_item<32, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
+-        case 64: consumer_item<64, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
+-        case 128: consumer_item<128, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
++        case 32: consumer_item_ss<32, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
++        case 64: consumer_item_ss<64, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
++        case 128: consumer_item_ss<128, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
+@@ -1277,2 +1504,2 @@
+-            if constexpr (MOE_FINE_NOINLINE) consumer_item_ni<160>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
+-            else consumer_item<160, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
++            if constexpr (false) consumer_item_ni<160>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
++            else consumer_item_ss<160, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
+@@ -1283,2 +1510,2 @@
+-            if constexpr (MOE_FINE_NOINLINE) consumer_item_ni<192>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
+-            else consumer_item<192, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
++            if constexpr (false) consumer_item_ni<192>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
++            else consumer_item_ss<192, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);
+@@ -1287 +1514 @@
+-        default: consumer_item<256, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;
++        default: consumer_item_ss<256, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w); break;

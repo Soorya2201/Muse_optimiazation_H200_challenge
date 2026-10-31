@@ -1,5 +1,19 @@
 # Prefill-layer optimization record
 
+
+## Oct31 producer-dequant/shared-shared pipeline result
+
+V28setupCUDA719 failure is preserved; a source role-selector bug and masked
+finallyerror were fixed. V29checkdad7baa049c943dc passes5/8parent and8raw/
+5nearby/24independent groups,all numeric/resource gates. Every SS group
+loses (753~2.2xlonger,3012~43%more,16384~31%more). All7policies reject.
+Close measuredordinarySS form; canonical/scoredfiles unchanged. Full
+[report](SS_PIPELINE_H200_2026-10-31.md) includes all evidence and limits.
+New[K64/vector-store prototype](SS_K64_RESEARCH_2026-10-31.md) passesCPU/full
+compilerchecks but lacks credible~1.69x recovery case;defer beforeH200,
+not a measuredK64negative. Prefillroutine7/8,submits0,reserveintact.
+NextsequentialtrackMoE;no GPUjoblive. Earlier statuses below are history.
+
 ## Oct31 scale-sharing H200 result (supersedes earlier proof-only status)
 
 Actual K64 repack, BF16 gather and shared GEMM1 staging are implemented.

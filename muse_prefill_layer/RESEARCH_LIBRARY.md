@@ -7,6 +7,8 @@ fresh-input graph behavior and independent H200 measurements.
 
 | Mechanism | Evidence and current decision |
 |---|---|
+| Producer dequantization plus shared/shared WGMMA | Implemented and corrected role bounds after setup failure. Full H200 raw/numeric/resource tests pass; every timing group loses, all7policies reject. Close tested ordinary SS/KPS1 form. See SS_PIPELINE_H200_2026-10-31.md. |
+| K64 scale reuse with vector producer stores into standard shared A | New CPU and full compiler evidence removes X/GEMM1 permutation; actual repack/full GPU probe unbuilt. Current ordinary-SS loss requires~1.69x recovery for first-turn-only3%board proxy. Defer without a causal producer-time case. Not GPU-tested. See SS_K64_RESEARCH_2026-10-31.md. |
 | Persistent RS-WGMMA NVFP4 experts, fused SwiGLU, variable token widths | Already in canonical vjeux parent; avoid crediting it as a new optimization. |
 | Lee eight-operation decode layout | CPU and paired H200 comparisons complete; recurring2% gate not met, not adopted. |
 | KPERM-style scale reuse on prefill K64 blocks | Implemented and H200-tested:753-token chain gains2.8–3.6%,3012 gains1.0–1.5%,16384 loses~1%. All numerics/resources pass; seven fixed policies fail3% whole-board gate (753-only worst proxy1.004024x). No promotion. Close tested post-stmatrix form; preserve small-size component result. See SCALE_SHARE_H200_2026-10-31.md. |

@@ -11,9 +11,10 @@ import urllib.error
 import urllib.request
 from prefill_scale_native import scale_shared_native
 from prefill_ss_native import shared_weight_native
+from prefill_ss_k64_native import scale_reused_shared_native
 
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('arm',choices=['parent','shared','ss','ss_all']);p.add_argument('--width',type=int,choices=[32,64,128,160,192,256],default=256)
+p=argparse.ArgumentParser();p.add_argument('arm',choices=['parent','shared','ss','ss_all','ss_k64']);p.add_argument('--width',type=int,choices=[32,64,128,160,192,256],default=256)
 p.add_argument('--full-switch',action='store_true');p.add_argument('--fine',type=int,choices=[0,1],default=0)
 p.add_argument('--ss-consumer-regs',type=int,choices=[184,216],default=184)
 p.add_argument('--label',default='');args=p.parse_args();assert re.fullmatch('[a-z0-9_]*',args.label)
@@ -21,12 +22,13 @@ parent=(ROOT/'muse_prefill_layer/submission.py').read_text();t=ast.parse(parent)
 native=next(ast.literal_eval(n.value) for n in t.body if isinstance(n,ast.Assign) and any(isinstance(x,ast.Name) and x.id=='_CUDA_SRC' for x in n.targets))
 if args.arm=='shared':native=scale_shared_native(native)
 if args.arm in ('ss','ss_all'):native=shared_weight_native(native,args.ss_consumer_regs,args.arm=='ss_all')
+if args.arm=='ss_k64':native=scale_reused_shared_native(native)
 source=native.split('// ---- routing plan:')[0]
 # Only this width is instantiated; full CUDA/GLUE compilation is still required.
 if not args.full_switch:
  a=source.index('      switch (ti.z) {',source.index('__global__ void __launch_bounds__(MOE_FUSED_THREADS'))
  b=source.index('      if (fa.dbg && threadIdx.x == MOE_CB)',a)
- fn='consumer_item_ss' if args.arm=='ss_all' or args.arm=='ss' and args.width>=160 else 'consumer_item'
+ fn='consumer_item_ss' if args.arm in ('ss_all','ss_k64') or args.arm=='ss' and args.width>=160 else 'consumer_item'
  source=source[:a]+f'      {fn}<{args.width}, MOE_CB>(p, ring, stg, bars, slot, ph, ti.x, ti.y, ntile, first, dn, tm, pq, ti.w);\n'+source[b:]
 source+=f'\n}} // namespace okc_moe\nvoid instantiate_prefill(okc_moe::FusedArgs fa, cudaStream_t stream) {{\n okc_moe::moe_fused_persistent<{args.fine}><<<132, 384, 232448, stream>>>(fa);\n}}\n'
 source=re.sub(r'^DEVI\b','static DEVI',source,flags=re.M)

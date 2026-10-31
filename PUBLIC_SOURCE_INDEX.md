@@ -7,6 +7,17 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 ## Coverage status (2026-10-30)
 
 
+Oct31 late prefill SS follow-up:
+[H200 report](muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md),
+[K64 source/compiler follow-up](muse_prefill_layer/SS_K64_RESEARCH_2026-10-31.md).
+118indexedpaths/13repos unchanged. Primary CUTLASS/Hopper and humans&
+Blackwell producer-dequant principles informed an independently implemented
+H200/shared-memory adaptation,not a direct TMEM/native-FP4 port. V28role
+selection bug/failure retained; corrected V29 fully validates numerics and
+resources but every group loses. No new scored result. K64/vector-store
+adaptation is CPU/compiler-only and deferred after practical scope screen.
+
+
 Oct31 late decoder follow-up:
 [rounded widths](muse_decode_layer/ROUNDED_WIDTHS_RESEARCH_2026-10-31.md),
 [new decoder library](muse_decode_layer/RESEARCH_LIBRARY.md).

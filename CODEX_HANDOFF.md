@@ -68,52 +68,65 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
-#### Oct31 prefill SS V28 terminal failure; corrected V29 ready
+#### Oct31 prefill SS pipeline cycle TERMINAL; next sequential track MoE
 
-Check43142b86fed74840 is TERMINAL failed setup on sfo3,CUDA719/return112,
-no tests/timing/score. Originalstage masked by finallysync; availablelogs read.
-Concrete sourcebug: finalproducerelse includedidleDMA lanes1..31, giving
-95dequantworkers/31negativeindices. CorrectV29boundsworkers64..127explicitly.
-CPUall384roles verified; metadatareaders320. Modelpreviouslyassumed64worker
-population,nowrecordslegacycounterexample. Rawmappingproofstillpasses.
-V29SHAa1cb7606de19c6cf61a004ce76e77b76ec5817726f2e3a94ba0591dd7670ad58, retainsparentprefixandallgates. Newstage/arm prints
-andfinallysyncguard preservefirst/secondaryerrors; CPUinjectederrorcheckpass.
-FINE1rolefixcompile168regs/8ABI/zero spills/noC751x; FINE0follows. Native
-source/diff/roleproofarchived. Prefill6/8,allsubmits0. V29notlaunched at
-thiswriting; seeRESULTS.md/receiptsbeforefurtherchecks. Sourcespushed6c0a0aa/
-d5d99a9; terminalfailureandcorrectionscheckpointfollows. NoGPUjoblive.
+Previous decoder cycle made progress,pusheda6f428d. This cycle implements
+producer-owned NVFP4 dequantization/shared-shared WGMMA, fixes a real source
+role bug, validates it on H200, and rejects the performance form. Read
+muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md and
+SS_K64_RESEARCH_2026-10-31.md. Sources/checkpoints pushed6c0a0aa,d5d99a9,
+8f8b89e; terminal evidence push follows. Canonical/scored sources unchanged.
 
-Previous decoder cycle made progress and pusheda6f428d. This cycle stays
-onprefill, implementing producer-owned NVFP4 dequantization and shared/shared
-BF16WGMMA. Read muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md before
-any further run. Canonical v20 is unchanged. V28 isolated probe SHA
-82683481123affacafaecfb8fe70cd4c96ac898df5714353f6c7c0d1c7df9c2c
-retains exact canonical prefix/timedkernel_fn. MixedRS/SS variants are
-rejected compiler forms: C7512 and/or spills. Do not run those variants.
-Resolved allSS/KPS1 fullFINE0+FINE1 NVCC13sm90a builds168regs/8ABIstack/
-zero spills/noC751x. FINE0SASScomplete4469rows; FINE1SASS5000clipped.
-Use the allSS184consumer/120producer form only for the proposed probe.
+V28/check43142b86fed74840 TERMINAL sfo3 setup CUDA719/return112, no score.
+Its unbounded producerelse included DMA-idle lanes1..31:95workers rather
+than64,31negativeindices. Original finallysync masked initialstage and
+exception. Sourcecounterexample/availablelogs retained. CPU rolemodel now
+covers all384threads. CorrectV29 explicitly selects64..127, preservesall
+fixtures/gates, printsstage/arm and retainsprimary+secondaryerrors.
+V29SHAa1cb7606de19c6cf61a004ce76e77b76ec5817726f2e3a94ba0591dd7670ad58.
 
-Two previously idle producer warps hold all packed words/scales before a
-64threadbarrier, then overwrite same-region storage with exact parent
-BF16fragments. Four49152byte slots+34816epilogue+1024metadata=232448bytes,
-same dynamicrequest. Metadata queue readers320; extra decoded-ready bars.
-No globalpass/repack/precisionchange. FullCPUmodel64Kblocks,262144register
-pairs,524288destinations,all4096code/scalebyte pairs,1000phase sequences.
-This is representation/phase proof,not numericGPU/racecheck. Native sources,
-diffs,compilerresponsesand conditional phase model are archived. All-load
-expert7.5568%cut or firstturn-only22.7142%cut models3%board;not prediction.
+V29/checkdad7baa049c943dc TERMINAL sfo3,5tests/8timings pass1.779895544x,
+CI1.753197–1.806594,217655.413137us,prepare127.077294s. Challenge timed
+path is unchanged parent; that score is NOT an SS gain. Independent72.587s
+completes8rawbitexactmovement/5nearby/24groups/768timestamps,2seeds4pads.
+MaximumrelativeL2.000561151/row.002595532 pass. FullFINE0/1linkedold/new
+both168regs/8localABI/0staticshared/max384threads. Allsamples retained;
+largegroupsdrift~4.25–4.87msparent,5.18–6.37msnew. No causalstallclaim.
+753parent/SSratios.452676–.463822;3012.694310–.703649;16384.764239–.768414.
+A/Amax.278%,matchedmax.265%;everycomponentgroupandall7policiesreject.
+Bestworstboardproxy16384only.964328383x. All8profiletables,135CLIloglines,
+fullavailableremotelog/report/resources/errors/rawgroupsreadandarchived.
 
-V28 probe predeclares 8raw movement tests,full linked resources,5nearby,
-24timinggroups/768timestamps,2seeds4pads,256MiBreadflush and balanced order.
-Old/new shareweightpointers; no formatcopies. Numericgates.002/.01,
-component>2%everygroup,A/A<2%,matched<3%,all7routepolicies require worst
-wholeboardproxy>=1.03. Realdispatch+independentrepeat required before scoring.
-GPUdiagnosticnotlaunched at this paragraph's writing; see subsequent
-RESULTS.md/receipts for authoritative live/terminal status before proceeding.
-Budgets verifiedjustnow:MoE8/8,attention1/8,BF164/8,decoder1/8,prefill5/8;
-allsubmits0,reserveintact. Fresh118path/13repocodeindex0new. Noagents.
-Preserve research/public/madhavan_721c627/ untouched/untracked.
+Actualnewsource:64deqworkersholdallpackedbytesbefore64threadbarrier,
+thenoverwritepackedregionwithstandardBF16A. Four49152slots+34816staging+
+1024metadata=232448B,sameallocation. Metadatareaders320. AllSS/KPS1 needs
+184consumer/120producerregs62464total; mixedRS/SSC7512formsclosed. Full
+FINE0/1compilezero spills;FINE0SASScomplete,FINE1clipped. CPU64blocks/
+262144pairs/524288destinations/4096code-scalepairs/1000phase sequences.
+Defaultgeneratorstrict_roles=True;False only reproduces unsafe archived
+sources for CPU/forensics, NEVER another GPU run. Close testedordinarySS
+performanceform; no blindgeometry/registerretry or port toothertracks.
+
+New SS+K64/vector-store native prototype undoesweightKpermutation during
+sharedA stores, leaving X/GEMM1 layouts unchanged. CPU524288destinations/
+65536aligned16Bstores/all4096code-scalepairs pass. FullFINE0/1compiles168regs/
+8ABI/0spills/noC751x. CompleteFINE0SASS showsSTS119->55 plus16STS.128,
+PRMT19->7;static sites,not timings. Native code in tools/prefill_ss_k64_native.py;
+requires actual v27 K64weightrepack in a new full probe, NOT integrated/GPUtested.
+Current samejobgate requires1.693577x gain overordinarySS (~40.95%timecut)
+for firstturn-only3%boardproxy. No causalproducerfractionjustifiesit;
+deferbeforeH200,preservefinalroutinecheck. Not a measuredK64loser.
+
+Fresh21:27:52UTC rank_summary_20261031212752.json:overall151/1768,
+BF16249/1549,MoE181/1255,attention194/1198,decoder151/1114,prefill182/756.
+Scoredspeedupsunchanged;repoPRIVATEverified. Freshprefillindex118paths/
+13repos,0newblobs. RoutinechecksMoE8/8,attention1/8,BF164/8,decoder1/8,
+prefill7/8;allsubmits0,reserveintact. NoGPUjoblive. Goalactive/incomplete,
+no rank1. NextsequentialtrackMoE:readAGENTS/TASK/latestclosedfamilies;
+routineGPUbudgetexhaustedtoday, source/CPU/compiler work only untilreset,
+or progress to attention after local stop condition. Noagents.
+Preserve research/public/madhavan_721c627/ untouched/untracked. Active
+workspaceexternal;internalbackup mustFF afterterminalpush.
 
 
 #### Oct31 decoder rounded-width/compiler cycle complete; next track prefill

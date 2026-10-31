@@ -1,0 +1,81 @@
+{
+  "scope": "Terminal audit of two H200 jobs and unchanged canonical files; no achieved rank1 or speedup claim.",
+  "terminal_jobs": {
+    "43142b86fed74840": "setup failed",
+    "dad7baa049c943dc": "parent checks pass; independent SS negative"
+  },
+  "canonical_sha256": {
+    "muse_bf16_proj": "290a86ab852c851ad0307002a55a432a1ffce44d7ef51d529e19284193647b90",
+    "muse_moe_w4a16": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",
+    "muse_attention_decode": "5811d22bb985092ba5a29a8f4c8e266de189399ee708d7b14efcb9c9bf5a510e",
+    "muse_decode_layer": "8f17613bafb2369152f2739638bf8f6dfb193f6a79dbad3e6d25795cf1ebaf4a",
+    "muse_prefill_layer": "8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5"
+  },
+  "independent_timing_groups": 24,
+  "exact_timestamps": 768,
+  "qualified_policies": 0,
+  "all_profiles_and_available_logs_inspected": true,
+  "cli_log_lines": 135,
+  "source_budget_limits": {
+    "muse_bf16_proj": {
+      "scored": {
+        "per_day": 10,
+        "used": 0,
+        "left": 10
+      },
+      "checks": {
+        "per_day": 20,
+        "used": 4,
+        "left": 16
+      }
+    },
+    "muse_attention_decode": {
+      "scored": {
+        "per_day": 10,
+        "used": 0,
+        "left": 10
+      },
+      "checks": {
+        "per_day": 20,
+        "used": 1,
+        "left": 19
+      }
+    },
+    "muse_moe_w4a16": {
+      "scored": {
+        "per_day": 10,
+        "used": 0,
+        "left": 10
+      },
+      "checks": {
+        "per_day": 20,
+        "used": 8,
+        "left": 12
+      }
+    },
+    "muse_decode_layer": {
+      "scored": {
+        "per_day": 10,
+        "used": 0,
+        "left": 10
+      },
+      "checks": {
+        "per_day": 20,
+        "used": 1,
+        "left": 19
+      }
+    },
+    "muse_prefill_layer": {
+      "scored": {
+        "per_day": 10,
+        "used": 0,
+        "left": 10
+      },
+      "checks": {
+        "per_day": 20,
+        "used": 7,
+        "left": 13
+      }
+    }
+  }
+}

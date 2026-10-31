@@ -1,0 +1,9 @@
+{
+  "captured_utc": "2026-10-31T21:18:47.430408+00:00",
+  "source": "muse_prefill_layer/submission_v29_ss_pipeline_probe.py",
+  "source_sha256": "a1cb7606de19c6cf61a004ce76e77b76ec5817726f2e3a94ba0591dd7670ad58",
+  "response": {
+    "job_id": "dad7baa049c943dc",
+    "problem": "muse_prefill_layer"
+  }
+}

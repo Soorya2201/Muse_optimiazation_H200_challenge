@@ -1,0 +1,19 @@
+{
+  "scope": "Exact symbolic proof for K64 code/scale reuse with standard shared A.\n\nNo GPU timing or floating-point/concurrency claim. BF16 pair positions are\nvalidated by code/scale tags and the already-pinned parent nibble map.\n",
+  "parent_sha256": "8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5",
+  "native_sha256": "32d70a49fcf3fa1c2f59eef95471ef93ebd222aa49ffedfd2f9f948c2d10e8d9",
+  "blocks": 64,
+  "destinations": 524288,
+  "raw_code_scale_pairs": 4096,
+  "aligned_vector_stores": 65536,
+  "standard_activation_and_intermediate_layout": true,
+  "unchanged_from_routing_plan_to_end": true,
+  "source_stores_per_worker_stage_old": 64,
+  "source_stores_per_worker_stage_new": 16,
+  "source_store_bytes_per_worker_stage_old": 256,
+  "source_store_bytes_per_worker_stage_new": 256,
+  "scale_pair_constructions_per_worker_stage_old": 16,
+  "scale_pair_constructions_per_worker_stage_new": 4,
+  "extra_global_activation_passes": 0,
+  "required_weight_repack": "Existing exact _ks_repack from v27; scale storage unchanged"
+}
