@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 08:37:11 UTC** from the live OKC boards. Overall **#123/1742**.
+Captured **2026-10-31 09:11:38 UTC** from the live OKC boards. Overall **#124/1742**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|224/1522|1.535843x|1.6523x|7.05%|
-|Routed experts|160/1227|2.372309x|2.7578x|13.98%|
-|Attention decode|173/1172|2.603505x|3.2221x|19.20%|
-|Whole decoder|123/1091|2.211495x|2.4178x|8.53%|
-|Prefill|166/732|1.784958x|2.0325x|12.18%|
+|BF16 projections|225/1523|1.535843x|1.6523x|7.05%|
+|Routed experts|162/1227|2.372309x|2.7578x|13.98%|
+|Attention decode|174/1174|2.603505x|3.2221x|19.20%|
+|Whole decoder|124/1092|2.211495x|2.4178x|8.53%|
+|Prefill|167/733|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -84,3 +84,11 @@ point is the unchanged timed parent. The simpler flush diagnostic
 b22622ebb61946df passes full resource/numerical/perturbation/control gates.
 Its2.381024x point also uses unchanged timed dispatch; no scoredchange.
 See muse_moe_w4a16/UNIT_FLUSH_FOLLOWUP_2026-10-31.md.
+
+Oct31 main-loop cycle: V31/c364de8b14af4f36 and V32/72dff8caec5047d8
+pass challenge checks with unchanged timed parent. Independent four-arm
+comparisons each complete3nearby validations+24timinggroups with zero
+agreement error and zero full-native local allocation. Both candidates
+are consistently slower; all14per-run policy combinations reject. No
+canonical/scored change. Expanded branches/gists and four component pins
+are documented in muse_moe_w4a16/STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md.

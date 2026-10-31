@@ -1,0 +1,50 @@
+{
+  "repository": "titoatwork/qgemm-mx",
+  "commit": "f83c8511e49fa7fa7feef960fc1cc2e8b7588513",
+  "captured_utc": "2026-10-31T08:45:51.709280+00:00",
+  "scope": "Selected public MoE operand-delivery/conversion research; not executed or ported. Root license preserved verbatim.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/titoatwork/qgemm-mx/f83c8511e49fa7fa7feef960fc1cc2e8b7588513/LICENSE",
+      "git_blob_sha": "b45f8bc5edf985dde99aedcb8d901844e963dea3",
+      "sha256": "e53ced65119831e6f940250ddf523d6d70fee9ed024ab76aa2c63d53446fdae5",
+      "bytes": 1078
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/titoatwork/qgemm-mx/f83c8511e49fa7fa7feef960fc1cc2e8b7588513/README.md",
+      "git_blob_sha": "1db9ecfecab0c29688bac8fbae62c9e1d76b574b",
+      "sha256": "18c558f4073376ec515d1b7e47c6fe9b70a18c5f03af904edb7f7de82d26f193",
+      "bytes": 9720
+    },
+    {
+      "path": "docs/STATUS.md",
+      "url": "https://raw.githubusercontent.com/titoatwork/qgemm-mx/f83c8511e49fa7fa7feef960fc1cc2e8b7588513/docs/STATUS.md",
+      "git_blob_sha": "a3e6604268cba6ce4512a061a817296181c6bc97",
+      "sha256": "59451c63631077a8d70c0ecd90e9c827f9bf307be71e8cf6c3b63ee0dd11ce10",
+      "bytes": 5525
+    },
+    {
+      "path": "include/qgemm/dequant_device.cuh",
+      "url": "https://raw.githubusercontent.com/titoatwork/qgemm-mx/f83c8511e49fa7fa7feef960fc1cc2e8b7588513/include/qgemm/dequant_device.cuh",
+      "git_blob_sha": "7216fc27ed5061eee2644a63fe92f8b969f62476",
+      "sha256": "3554719967f1bc579119fc11f5075e7222b4fa0e9bf21fad1a7203556ac52a0a",
+      "bytes": 9183
+    },
+    {
+      "path": "include/qgemm/permute.hpp",
+      "url": "https://raw.githubusercontent.com/titoatwork/qgemm-mx/f83c8511e49fa7fa7feef960fc1cc2e8b7588513/include/qgemm/permute.hpp",
+      "git_blob_sha": "0f6787f8a35347faacbde085ecda0a59976dea91",
+      "sha256": "dd092d3347c6067b84bcd6c87a63217c55e54c0fbda8d0e2e6b094514d19e84f",
+      "bytes": 4642
+    },
+    {
+      "path": "include/qgemm/a_fragment.hpp",
+      "url": "https://raw.githubusercontent.com/titoatwork/qgemm-mx/f83c8511e49fa7fa7feef960fc1cc2e8b7588513/include/qgemm/a_fragment.hpp",
+      "git_blob_sha": "769b2abd6f2302b874f460dbd5a4aea5596fc291",
+      "sha256": "1e66f705b80cffacb3159fb615e314b76bd4631dd9731ecdeee17c8a9c54dff3",
+      "bytes": 11193
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "scope": "CPU telemetry stress only, no candidate GPU evidence",
+  "rows": 24,
+  "nearby": 3,
+  "payload_chars": 3940,
+  "payload_plus_1600_tail_chars": 5540,
+  "exact_uint32_timings": true,
+  "exact_fp32_metrics": true,
+  "exact_fp64_ratios": true,
+  "source_sha256": "0453862337d3ba2f04535c470ed1edc66c37207cb33f6839b6b02a7783a11363"
+}

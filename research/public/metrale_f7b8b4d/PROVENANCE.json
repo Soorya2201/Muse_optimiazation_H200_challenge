@@ -1,0 +1,43 @@
+{
+  "repository": "SeedSource/metrale-inference",
+  "commit": "f7b8b4d70fd23f50079e6f5a7716c3d5c8025f72",
+  "captured_utc": "2026-10-31T08:48:14.093277+00:00",
+  "scope": "Selected public W4A16 sources, not executed or ported. MIT OR Apache-2.0; both root licenses preserved. Initial LICENSE URL404 repaired to exact root license paths.",
+  "files": [
+    {
+      "path": "LICENSE-APACHE",
+      "url": "https://raw.githubusercontent.com/SeedSource/metrale-inference/f7b8b4d70fd23f50079e6f5a7716c3d5c8025f72/LICENSE-APACHE",
+      "git_blob_sha": "137069b823873b8bcf42979bcf8e9371052d26a2",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "bytes": 10280
+    },
+    {
+      "path": "LICENSE-MIT",
+      "url": "https://raw.githubusercontent.com/SeedSource/metrale-inference/f7b8b4d70fd23f50079e6f5a7716c3d5c8025f72/LICENSE-MIT",
+      "git_blob_sha": "0882c6eb19e87db3eb17fd5569aa776306402821",
+      "sha256": "f6f5a912524007c41fa474a40259f5f8447975f638c5ebe3bf0c569ac6f1f489",
+      "bytes": 1070
+    },
+    {
+      "path": "kernels/gb10/common/e2m1_branchless.cu",
+      "url": "https://raw.githubusercontent.com/SeedSource/metrale-inference/f7b8b4d70fd23f50079e6f5a7716c3d5c8025f72/kernels/gb10/common/e2m1_branchless.cu",
+      "git_blob_sha": "69c7497e5b271e87fb9cd924ca63ab706fdc7aa0",
+      "sha256": "6caf664a9f4d2c792cdfb00ea4a4a480f29b4ce2ef17c873efd6b7e4f2329676",
+      "bytes": 2477
+    },
+    {
+      "path": "kernels/gb10/common/w4a16_gemm.cu",
+      "url": "https://raw.githubusercontent.com/SeedSource/metrale-inference/f7b8b4d70fd23f50079e6f5a7716c3d5c8025f72/kernels/gb10/common/w4a16_gemm.cu",
+      "git_blob_sha": "95caa43a440db96a943940603668aadda21ab183",
+      "sha256": "cbc898d2cae0c87f2adb78b5ca04a21f1c95333d8c86acd49d09da1355cbc063",
+      "bytes": 12322
+    },
+    {
+      "path": "kernels/gb10/common/moe_prefill.cu",
+      "url": "https://raw.githubusercontent.com/SeedSource/metrale-inference/f7b8b4d70fd23f50079e6f5a7716c3d5c8025f72/kernels/gb10/common/moe_prefill.cu",
+      "git_blob_sha": "6e90492ad7c07e243f2492e7ffb1ed4a78368bc6",
+      "sha256": "cbcc82a191ecae69ae92a1c4eb7c4beff31a16e2bfe6b1d380fc21c6f9d4a4c1",
+      "bytes": 16222
+    }
+  ]
+}

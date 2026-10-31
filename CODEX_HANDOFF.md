@@ -67,6 +67,69 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 main-loop/branch cycle complete; both candidates rejected
+
+Previous goal turn made progress: validatedV30 profiling. Current cycle:
+read `muse_moe_w4a16/STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md`.
+New publiccoverage13indexedMoErepos:26branches/21tags/169PR metadata;
+14Rohanbranch/PRheads no additional candidate Python blobs. Publicgist
+metadata43owners,42resolved,188gists,no relevant filename/descriptionmatch;
+Abarbir12returns404unresolved. No gistcontentsdownloaded. Four component
+pins:FLUTE9eb83a1(6files,Apache2),qgemm-mxf83c851(6,MIT),UnslothPR13840
+ea03b13(2,Apache2),Metralef7b8b4d(5,MITORApache2),allhashes/licensesverified.
+No direct faster replacement. FLUTEBF16supported,butduplicatedpairLUTsneed
+8–32KiB vs1280bytesheadroom;single1KiBcopyfitsbutbenefitunproven.
+qgemm publishedHopperperformancekernelnotimplemented;UnslothnoH100default
+win;MetraleFP32->E2M1helperisquantization,nottask-compatibleactivationport.
+
+New uniformstage-loop idea reduces isolatedcompleteSASS~18.5–18.7%,but
+V31/c364de8b14af4f36(sfo3) rejects:5tests/6timings2.375219xparenttimedpath,
+prepare265.245s;complete99.821s four-arm3nearby/24groups3500charreport.
+Fullcandidate/control96regs/0local/640threads/231168sharedbothBIG;errors0,
+AAmax1.6671%. Candidateparentratios32 .944454–.962790,128 .910065–.935259,
+256 .908642–.922796. SameREG112controlalsoloses. All7policiesreject;
+allthreeproxy.964284x. Allprofiles/logs/rawgroupsread. No gain/submit.
+
+V32/72dff8caec5047d8(sfo3)also rejects:5tests/6timings2.361043xparent,
+prepare264.468s. ImmutableSHA
+ff0ca7c6116e0f4103d9b35019fc5ac9ba51af089b0e86df290aab26bb6fcde8.
+Scalarzeros+explicitfence removeextraMMA/initialXwait. Complete97.599s,
+3nearby/24groups3500charreport;full96regs/0local/640threads/231168shared,
+bothBIG. Errors0,AAmax1.27887%. Candidateparentratios32 .955689–.970549,
+128 .921098–.933850,256 .919313–.930443;matchedREG112alsoallslower.
+All7policiesreject,bestmedianproxy.993269x;allthree.968380x. All6profiles/
+logs/all24rawgroupsread. SecondGPUnegative:closeuniformloopimplementations;
+noextraMoEsweep,no canonicalchange/submit. No GPU job remains live.
+
+IsolatedNTT1/8scalarinitzeroframe/spills/noC75warnings,NTT8has16HGMMA,
+zerosCS2R. RuntimeFIRSTREG112still3C7519warnings,NOTsentGPU/notmeasuredloser.
+ElevencompleteCErequest/responses andinitial/finalanalysisarchivespreserve
+allattempts;reducedcorecountsnotwholekernel/cachestallmeasurements.
+Finalnativehashmatchescompiledprefix;four-arm/3nearby/24groupscodecunchanged.
+No instructioncachecounters,cannotassigncausalstallfromsmallercodealone.
+
+ExactV28payloadmodels:18/26activeexperts,509.608/736.100MBtotalW13+W2,
+rawparentgraph141.583/205.248us ->3.59935/3.58640TB/spayloadquotient.
+Assumed4.3TB/sweight-onlytargets118.513/171.186us,twofixtureproxy1.061717x;
+nominal4.8proxy1.101370x. NotmeasuredDRAMbandwidthorboardupperbounds;
+allothertraffic/computeexcluded,onlytwofixtures. Small-loadphaseaccounting
+remainsopenforlaterMoEcycle;donotrepeatclosedbs16double-read orringfamilies.
+
+Oct31MoE6/8checks,decoder1/8,prefill4/8,othertracks0;allsubmits0.
+Allcanonical/scoredkernelsunchanged,no rank1. Snapshot09:11:38UTC
+`research/leaderboards/snapshot_20261031091138.json`:overall124/1742,decoder124/1092,
+MoE162/1227,attention174/1174,BF16225/1523,prefill167/733. PrivateGitHub
+reverified. Externalworkspaceauthoritative;
+preserveuntrackedMadhavanfolder. Owner-authorizedworkpushedtoprivateGitHub;internalbackupff-syncedand
+newignoredprofilescopiedwithoutoverwritesafterthiscyclecommit.
+MoEcyclefinished;nextsequentialtrackattention. ItsoldB1merge,
+workspace anddegree3Codyhybrid25/50%familiesremainclosed. One researchlead
+fornexttrack:acheaperbit-approximationexp2,ratherthanthatCodypolynomial;
+unimplemented/unverified,checkexistingvariantsandprimaryliteratureplus
+CPUerror/maskedge sweepsbeforeanyGPUcheck. Preserveallkeysandprecision.
+Do not markgoal
+achievedorblocked:currentcycle hasnewcompiler/research/H200evidence.
+
 #### Oct31 sampled-unit/flush cycle complete; no production gain
 
 Authoritative workspace remains the original external project path. No

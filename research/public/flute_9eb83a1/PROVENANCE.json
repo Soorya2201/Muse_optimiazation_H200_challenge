@@ -1,0 +1,50 @@
+{
+  "repository": "HanGuo97/flute",
+  "commit": "9eb83a12d56949bbe7fe9c836ba97a67bd1e3761",
+  "captured_utc": "2026-10-31T08:45:51.023896+00:00",
+  "scope": "Selected public MoE operand-delivery/conversion research; not executed or ported. Root license preserved verbatim.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/HanGuo97/flute/9eb83a12d56949bbe7fe9c836ba97a67bd1e3761/LICENSE",
+      "git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/HanGuo97/flute/9eb83a12d56949bbe7fe9c836ba97a67bd1e3761/README.md",
+      "git_blob_sha": "a305f9a67f81b7a2644d5c908d33c209c6cd12cf",
+      "sha256": "76fe114ebd120e3740aa811fd56704fdedc3954ac7bad379e7ffdd31fa6bccba",
+      "bytes": 24929
+    },
+    {
+      "path": "flute/csrc/config.hpp",
+      "url": "https://raw.githubusercontent.com/HanGuo97/flute/9eb83a12d56949bbe7fe9c836ba97a67bd1e3761/flute/csrc/config.hpp",
+      "git_blob_sha": "880ecfa3a3dd5ece766e8cafbe0389a3d77c2265",
+      "sha256": "d3c5f5827dcd2dd0c26cdd50677716f991287bbf8a5cc61f66b0eff0e0dcd4f5",
+      "bytes": 27300
+    },
+    {
+      "path": "flute/csrc/qgemm_kernel.hpp",
+      "url": "https://raw.githubusercontent.com/HanGuo97/flute/9eb83a12d56949bbe7fe9c836ba97a67bd1e3761/flute/csrc/qgemm_kernel.hpp",
+      "git_blob_sha": "f4f2732941c86d50f5173402881652094cb957c3",
+      "sha256": "4393c715f17d677082524c8b9f795f4c8de5ff29e70427470c61c1f3018a68d1",
+      "bytes": 40858
+    },
+    {
+      "path": "flute/csrc/conversion_utils.hpp",
+      "url": "https://raw.githubusercontent.com/HanGuo97/flute/9eb83a12d56949bbe7fe9c836ba97a67bd1e3761/flute/csrc/conversion_utils.hpp",
+      "git_blob_sha": "3115cf0c2bf73f91cca8ced85316309641e39f6c",
+      "sha256": "c7a03d5bb748415bdba2441ff1232b6bde2f2f579f62cd51e219ea1b2e9c9c17",
+      "bytes": 2402
+    },
+    {
+      "path": "flute/csrc/packbits_utils.hpp",
+      "url": "https://raw.githubusercontent.com/HanGuo97/flute/9eb83a12d56949bbe7fe9c836ba97a67bd1e3761/flute/csrc/packbits_utils.hpp",
+      "git_blob_sha": "48a0ddb81c283d5b8b4cfa82729abcf40d53ea66",
+      "sha256": "abefabff7d2b4d4e2416c17c4d64bafca96c22cdda3af17d3a11cfe58e80efb8",
+      "bytes": 21241
+    }
+  ]
+}

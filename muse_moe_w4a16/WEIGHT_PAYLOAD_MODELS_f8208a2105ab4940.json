@@ -1,0 +1,73 @@
+{
+  "job": "f8208a2105ab4940",
+  "status": "planning_only",
+  "fixtures": [
+    {
+      "m": 32,
+      "seed": 3101,
+      "pad_mib": 0,
+      "jobs": 18,
+      "phase_a_stages": 9216,
+      "phase_b_stages": 4608,
+      "stage_payload_bytes": 36864,
+      "phase_a_weight_bytes": 339738624,
+      "phase_b_weight_bytes": 169869312,
+      "control_event_us": 141.58334094094545,
+      "end_to_end_weight_payload_tb_s": 3.59934956057124,
+      "entry_to_last_a_end_us": 88.736,
+      "entry_to_last_b_end_us": 129.888,
+      "a_b_overlap_envelope_us": 6.72
+    },
+    {
+      "m": 256,
+      "seed": 3101,
+      "pad_mib": 0,
+      "jobs": 26,
+      "phase_a_stages": 13312,
+      "phase_b_stages": 6656,
+      "stage_payload_bytes": 36864,
+      "phase_a_weight_bytes": 490733568,
+      "phase_b_weight_bytes": 245366784,
+      "control_event_us": 205.24751106895303,
+      "end_to_end_weight_payload_tb_s": 3.586403304801619,
+      "entry_to_last_a_end_us": 133.248,
+      "entry_to_last_b_end_us": 191.808,
+      "a_b_overlap_envelope_us": 13.408
+    }
+  ],
+  "models": [
+    {
+      "assumed_weight_rate_tb_s": 3.2,
+      "weight_only_target_us": [
+        159.25248,
+        230.03136
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 0.9621352671341107
+    },
+    {
+      "assumed_weight_rate_tb_s": 4.3,
+      "weight_only_target_us": [
+        118.5134734883721,
+        171.18612837209304
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.0617174609176308
+    },
+    {
+      "assumed_weight_rate_tb_s": 4.8,
+      "weight_only_target_us": [
+        106.16832,
+        153.35424
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.1013699435512712
+    }
+  ],
+  "limits": [
+    "Exact weights payload from actual producer stage partition metadata; no claim of measuring DRAM transactions or counters.",
+    "Selected fixtures have one job per expert; other routings can duplicate jobs and require different accounting.",
+    "Raw graph event time includes overhead; payload/event quotient is not isolated phase HBM bandwidth.",
+    "3.2/4.3TB/s are measured reference stream rates in other experiments, not hard device limits. 4.8TB/s is nominal.",
+    "Weight-only target omits activation/routing/output transfers and all compute, synchronization and launch work.",
+    "A/B overlap envelope uses consumer boundary timestamps, not producer memory-transaction timestamps.",
+    "Two synthetic M32/M256 inputs only; not a board upper bound or a prediction for M128/small loads."
+  ]
+}

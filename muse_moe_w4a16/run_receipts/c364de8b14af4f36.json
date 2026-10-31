@@ -1,0 +1,226 @@
+{
+  "job": "c364de8b14af4f36",
+  "board": "muse_moe_w4a16",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 122.71,
+      "power.limit": 700,
+      "temperature.gpu": 37
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 127.89,
+      "power.limit": 700,
+      "temperature.gpu": 33
+    },
+    "node": "n-jilerexm7jzqtha3u5ugsjopko"
+  },
+  "created_at": 1793436728.1697557,
+  "source": "muse_moe_w4a16/submission_v31_stage_loop_probe.py",
+  "source_sha256": "0453862337d3ba2f04535c470ed1edc66c37207cb33f6839b6b02a7783a11363",
+  "profile_capture": "local CLI profile JSON",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 5662.004060251141,
+    "speedup": 2.3752190667633477,
+    "speedup_ci": [
+      2.3395907807618976,
+      2.410847352764798
+    ],
+    "status": "ok",
+    "tests": 5,
+    "tests_passed": 5
+  },
+  "setup": [
+    {
+      "baseline_copies": 4,
+      "baseline_prepare_pad": 23266816,
+      "copies": 1,
+      "error": null,
+      "event": "setup",
+      "first": "baseline",
+      "prepare_pad": 10721280,
+      "prepare_s": 265.245471062,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "bs": 1,
+        "load": "decode 1",
+        "seed": 2124274984226306718,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 25767.62847643634,
+      "baseline_ns": 80143.99977400899,
+      "paired_ratio": 3.1102590541965505,
+      "speedup": 3.1102590541965505,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 16,
+        "load": "decode 16",
+        "seed": 2124524263219044879,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 93650.00177342266,
+      "baseline_ns": 189008.0040320754,
+      "paired_ratio": 2.0182381254979838,
+      "speedup": 2.0182381254979838,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 32,
+        "load": "decode 32",
+        "seed": 2124773542211783041,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 119479.86279154423,
+      "baseline_ns": 196575.99832862616,
+      "paired_ratio": 1.6452646808909637,
+      "speedup": 1.6452646808909637,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 8,
+        "load": "verify 1",
+        "seed": 2125022821204521204,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 64260.06212032671,
+      "baseline_ns": 143536.00051254034,
+      "paired_ratio": 2.2336735411766293,
+      "speedup": 2.2336735411766293,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 128,
+        "load": "verify 16",
+        "seed": 2125272100197259368,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 172766.65055982897,
+      "baseline_ns": 457583.9997269213,
+      "paired_ratio": 2.6485667126391403,
+      "speedup": 2.6485667126391403,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 256,
+        "load": "verify 32",
+        "seed": 2125521379189997533,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 210537.74276250653,
+      "baseline_ns": 618752.0166859031,
+      "paired_ratio": 2.938912560603804,
+      "speedup": 2.938912560603804,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "bs": 1,
+        "load": "decode 1",
+        "seed": 2124274984226306718,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           29.2 \u00b5s 100.0%      1\ntotal                                                             29.2 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 16,
+        "load": "decode 16",
+        "seed": 2124524263219044879,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                          119.4 \u00b5s 100.0%      1\ntotal                                                            119.4 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 32,
+        "load": "decode 32",
+        "seed": 2124773542211783041,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                          110.0 \u00b5s 100.0%      1\ntotal                                                            110.0 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 8,
+        "load": "verify 1",
+        "seed": 2125022821204521204,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           70.0 \u00b5s 100.0%      1\ntotal                                                             70.0 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 128,
+        "load": "verify 16",
+        "seed": 2125272100197259368,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           165.5 \u00b5s 100.0%      1\ntotal                                                            165.5 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 256,
+        "load": "verify 32",
+        "seed": 2125521379189997533,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           160.1 \u00b5s 100.0%      1\ntotal                                                            160.1 \u00b5s"
+    }
+  ],
+  "log_tail": "MOE_STAGE_LOOP_Z eNrNmFtv4sgWhf9KxCs54wsGTHReylUO2GBskxBCRkctMKbCJTgxFye0+r/PXgV0Oprh4Yh+GKRuZVMXdrnW/ryqvpfWm9Fmuy7dlJLs5XWZbtLSNb6T6devVukoH3+Ubv78Xnop3Vg6dUrTSemmbpuV61Ka51leuvle2uSjhEb+qf+hX9O//12XRsaXMBmtstUsGS1/+fbHdWmap+vnSyZInkcr5Gz8YdZ1yzIsw2yY1bqpmz+uVcqN2inlRrXyL0u5YjTMhlFtGDXLMu36MWP68pSyYZiVxr8s56phW1W7plu2YdZM8wfmyF++5dkyXeMnRjoUdJrm6nWUp6tN6fBDf/v+Kk9f0xGaj5mVem6TVn1VvtqnefafIGBX29VsmuUvV0qdV8ssey19yfM0JMtncraiqX/pSKlvZi/p5Ntktn4dbRJ6CKXt6rCaydU/ZEkPKtvmCZbyp35N4tGva6R6s2IYNfv6b9/giWWrDS3+2/8/cp3S2An1bzT+sE3dblTpmdpVi7qX8qz4lmRbyunGtA4hHgI9qpvSf03LM8ypNSmphvW3cc2irz1GH0cP2OcnZqnjM8lYm3ks4xlnLlsw6TA/9lghbM4CRzDJZVR4LHYDzppOk0nBPOkxj0tqZznF8hB7nIUYL1g7xnzU7rG5mk967NLPy/PTcz3pWfV52Xt9qeb3LC+iYjCeusmdVrY19Cl4HjdEWfVvxcXnYIc5Vsgof75Hvjusp4P8eB3rr1OiRUjrZaKgfGWd8h9GLtobyH9L/b0gplg4aN9Qu9VJOGsLhuezofaio9N49L90pc609/g0fg0rm6jyUDeanYf91tbMh2rFvg9ubWFTHyHFrTCiglbG2ET8MtpltzKmjSm4K1iTTWgjZUsGzHJ0Qfv5TjGbxAGLmxRzxJwl1D9zaOM4e2aFI5vU3+OxoMlm6N/CfM4aPzNl9ISaBdoDcfGmhs3uPKwN3bKu3eXlvRCeoPX5b+V3o5I87iJsYZPt2ru+phQUBukX/Y6ERv9LU7rM6xYO42LEYi6t2GVZ1HdYKOosdmSjcJkVJQ7tn0Exq9DCrO7aYYGYoL9JcdxdOLSfNF7IaoH5LPQfY7xB8aWf4eDBzTtGrz7XWsUo32rFvohsv1UzmM53TOl36Dvlxv1Bv9a79UW/skP11+YR9Lsg/TFvDT1H0Oee9Gd1qZ0LtDMD9ddV+k2gxyX07KN++YhiuaR6jH1q5/wR86E9xnycP/wG/bpOI4y8+XgT2R9vI9uf7VJbIxy8xRMvPOqXNTc7/aBfMW/Jr/rlpK9hSMIMxSvWUwOPwjX4ZEB/Ael3KBLo24BeA9KnDDP0L5B/DfUdLvA8tqjXGtW3DC3EL1SvrIb1Y/5LP6LX3/F3b0D6dRavVlZb7ev7cnU6GLnT6fygX9dJdlGs/cJf5+d4z3GRH9GFZAiegJ9cepR/5jLw1cZ6wF9PrJGvpfpjfeCt4iuTPvYfvHXZCv19rJcPEUs8P8SXfrrx0+v0rhIRfzdp+8230ojWp3dG6T2vpef4+1k3w5D0F3Bd8Rcr7hTQcx37Uaf8ZaT0C/6q/faiIfQKPssN3h/gNTvymGIryMBjgfYtrW/YsTFe/Ab9frz7U87tzibaz7fJRI+pyrR02JmZj258lr/xz/FyAL7yPvS5BD87Kia9uo4OHifga6uPuEr6VTzOwOs226G/Fx/526T9LbjStyVc8HmHuE0x4/rl/L0N5xUZaK1Q1+p2lK9t994W5UUrmo1z/lic4e+nftviCbw0FC/X4G9KMauAx9EQPC3AV5vai8hFrFPMNAn+2uDr4sTrArxtg8cHnhfdDPNNwN8Ku5y/jb6TVNaDGun30ew4yXg13UWNZvVxrY/1o37/zt/P3y18Bv0FqL8F6stHffEe9PsBPXdRj6J34jHrMrQXaJ+j/jzyByFX7XPw1h8e+U08B488C/3j36Dfce1Nj+OeRv5h3mkN4/x2yrQdXz+1+/3mWf7+ot8G5VNEyF/ska99qs+QfUCvIfRMJQBbAL12oV+H/miCt4I1wOvIQz1WsR7Mp+o5oP0nviEeRvHl/PWT9GkUtp+Jv/PO87M2nS/qe/LIYq8PilZxhr+nupFsQH4HvJTgZQz+zrBfiq+uh/w05NvD+9OlBu5w7H8PPOYB+LpUvAafwOMm+SPwFnzi/aOfZspPX/qp9vLIay5FfW6fXj5FZKV3y3t3Q2/9M/w92n3OHK+j9FbB+groF/zlvIzYVvuTYH92ar/UfuP9I+6xXsVb+FuPKz2At6xj4X17i3bwvOgoP6Jdrl+2v1t9OPPxbhN9JHO9NumRy9PW4+huzZPBWf4e7b5HbtUj/2DxIXi5hF/wlT5twULnA3pNKC6aGQ1zCoxL4GfdNfR86I8Y/clGQu8+EXjIqd2DH8ZrGTyXl/PXnz3XPtbzmPQbWWPzKY/y+r4xqA9XpvM+PsffX/Sr+EimAP41gd9NUcfws1RfDtVjFYXaAE8j4qkL/grF3yH42hQD8PXgf0/85Wp8Fnror/hr/Qb+jvOsku8SnN+M9LHZX8lpEe09d+b0H8VZ//upXwa/6vIB9Af+xj478ZPp0HOg4zzWhR8Aj4eBBb2aaJ+jPn0P/qMDfYK/EuP5wQ8jLjA/w3yXrpT7/SieRf36JjKTycd4t8T67ownT7zL27P8/alfV9qn82dbqPM1/FEWKd5o0G9IesyE0qsOPYYFzmcZ+Kvqt07rzXCeDRHT+xfne8zH6fwDP43nES0u56/HjU6wm/qprjUbzHt/KKhqyi/mKPH3xfgcf1vH5xSzFP6Vq/sHC341PPC0Bf7A/yr+MsXfzCU+heAvl3fqvkK9j1aID7yldn4YD7+r+MwxGs/0cv5GbFvRnoykPm/sNo+rva+1dtG7pS0LkRThOf+bHOucOfGBtw3kB/4qXrrwt0Li/cqwv4GoQN/Y7xj74wq8P+RO9cf5gBsqhn7hh5u8iueH+wwWQB/cvly/YrGZ9bhd22+ixpa2sfPkkH8wc57PHix2jr/OUb8LOr95ys/G4OUCum6p+wLvyF8mD/wtcB9RwM/i/oHRyZ9Y93LytxLjw8N9RFvdZ3jQ+xv07/8u/t7ms+fpahGT/11XZFqdPw7IP9TFeO8OYu0cfz/1O4DCDvcJGe4P2PE+QflfCR6r+4ay8r/JT/+r/G3ogr+KrybuF+CfQ/Gs/DAObvDHrkgw3vwN9w+vRvA2ezKeSL9L4W1Gs2i1i/Tlw7vbalKVneHvp36zQN0n3OF9v4T/8WPwFDH7AD/hd73D/cP+xGOm7hMO/vbgn+/QjvsGz+9DzzHGI7Z8nOfgjy9e6nLRvbt/a5J+Px5i/WFdE9BvMKvcx4Ler//M30/9tkjBpEf4VQa/6sia4m8C/pahz4P/XeP8xnCei3C/hvsFVb9Mgq8S9w/h4f4B94kylMfzLT/6YXY5f5nXfx447Haray2n3PbG6x3V53Lc3L5Ek/qX+4fSj78AUh9seQ==\nMOE_STAGE_LOOP_SUMMARY {\"status\":\"complete\",\"stage\":\"complete\",\"rows\":24,\"nearby\":3,\"chars\":3500,\"seconds\":99.82089548185468}\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 08:57:18 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

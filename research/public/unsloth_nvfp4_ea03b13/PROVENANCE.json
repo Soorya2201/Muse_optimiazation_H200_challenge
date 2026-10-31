@@ -1,0 +1,22 @@
+{
+  "repository": "unslothai/unsloth",
+  "commit": "ea03b135b5202634054a116001b1105986bcdd72",
+  "captured_utc": "2026-10-31T08:45:52.555545+00:00",
+  "scope": "Selected public MoE operand-delivery/conversion research; not executed or ported. Root license preserved verbatim.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/unslothai/unsloth/ea03b135b5202634054a116001b1105986bcdd72/LICENSE",
+      "git_blob_sha": "e1600b0c03fcac2af12eff408fc5436d8d1b8c30",
+      "sha256": "40e0b458a68b557560def38b106a1a0da1aac57685536dcb882f1c78c647e4d3",
+      "bytes": 11550
+    },
+    {
+      "path": "unsloth/kernels/nvfp4.py",
+      "url": "https://raw.githubusercontent.com/unslothai/unsloth/ea03b135b5202634054a116001b1105986bcdd72/unsloth/kernels/nvfp4.py",
+      "git_blob_sha": "7e1f0c8156994c8010227cf18aadf4a8238e5717",
+      "sha256": "534deb4c3c363b65d316feaf27ef39a5effb4c9a55c059f802de2970ae9844b0",
+      "bytes": 23367
+    }
+  ]
+}

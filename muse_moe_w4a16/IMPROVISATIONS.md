@@ -1,6 +1,12 @@
 # `muse_moe_w4a16` optimization record
 
 This file records measured results, including regressions. Estimates are explicitly marked.
+The next Oct31 main-loop experiment and expanded branch/gist/component
+research are in [STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md](STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md).
+It studies a new uniform stage body and asynchronous zero-MMA initialization,
+with a matched register-control arm. Compiler-only instruction counts do
+not establish a production speedup; see the report for full runtime status.
+
 Oct31 sampled-unit/flush follow-up is in
 [UNIT_FLUSH_FOLLOWUP_2026-10-31.md](UNIT_FLUSH_FOLLOWUP_2026-10-31.md).
 V29 passes the challenge but fails timing-attribution gates; its clocks are

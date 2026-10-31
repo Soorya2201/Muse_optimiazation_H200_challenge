@@ -28,6 +28,14 @@ bytes in the complete H200 kernel despite a zero-spill reduced NTT8 compile.
 See `UNIT_FLUSH_FOLLOWUP_2026-10-31.md` for resources, perturbation gates and
 the simpler V30 repair. Do not infer full dispatch resources from one NTT.
 
+The next uniform-stage-loop experiment also demonstrates that smaller
+static code does not imply less dynamic work or faster execution. V31's
+complete isolated SASS shrinks about18.5%, yet its same-input H200 candidate
+loses4–10% despite zero local allocation. Its zero-initialization MMA and
+loop schedule differ from the parent. See
+`STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md` for the bounded scalar-init
+follow-up and the distinction between compiler counts and cache counters.
+
 Minimal NVCC 13.0 device SASS shows that the old nine-op dequantizer's two literal shifts
 already use IMAD.SHL. The eight-op port removes one IMAD while retaining the same five
 LOP3 and two SHF operations. Identical-input measurements show at most small benefits on

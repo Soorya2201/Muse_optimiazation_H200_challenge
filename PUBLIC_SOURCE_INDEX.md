@@ -6,6 +6,21 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Oct31 branch/component expansion: see
+[MoE stage-loop and branch research](muse_moe_w4a16/STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md).
+All13indexedMoErepositories'26branches/21tags/169PR metadata are archived.
+Fourteen Rohan branch/PR heads yield no additional candidate Python source
+beyond the default-branch index. Public gist metadata:43owners,42resolved,
+188gists,no relevant filename/description matches;one404 unresolved.
+This is bounded metadata/path coverage,not exhaustive private/source access.
+FLUTE9eb83a1,qgemm-mxf83c851,UnslothPR13840ea03b13 andMetralef7b8b4d
+components are pinned with exact hashes/licenses. No direct faster
+replacement is established. A new uniform-stage-loop/zero-MMA hypothesis
+has complete isolated compiler evidence;two full H200 controlled tests
+reject its zero-MMA/scalar-zero forms and all14per-run changed-load policies.
+Static code reduction did not yield a speedup. Allprofiles/logs/rawgroups
+are archived;canonical/scored kernels unchanged. Details in the dated report.
+
 Oct31 continuation: indexed public-code search now supplements all five
 account screens. It returned234 BF16,203 MoE,207 attention,87 decoder and118
 prefill unique paths (different capture times; changing index totals are

@@ -1,0 +1,1285 @@
+{
+  "captured_utc": "2026-10-31T08:42:37.319076+00:00",
+  "scope": "MoE paths in all14distinct public branch/PR17 heads; comparison to earlier default-branch indexed blob SHAs.",
+  "heads": [
+    {
+      "head": "b881fce7beb86de1f8cec0391134e1ad4dd50fa2",
+      "name": "add-opencode-provider",
+      "truncated": false,
+      "total_tree_entries": 141,
+      "items": []
+    },
+    {
+      "head": "7c8eb70418cfcc31f50ad2b60c9fb9c38142017b",
+      "name": "benchmark-gemini-3.8-flash-results",
+      "truncated": false,
+      "total_tree_entries": 477,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7e35fbc85477e27bfef29c115b60260f015858fb",
+          "size": 12228,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/7e35fbc85477e27bfef29c115b60260f015858fb"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0",
+          "size": 210815,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "758f1d8fbf470a1e094f435e604fae63c429a9c5",
+          "size": 17843,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/758f1d8fbf470a1e094f435e604fae63c429a9c5"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "size": 7520,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/96e0fb0bfc05a7e27430229cfc3645f7bffb2339"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b0ed91bf7db99de809af2fa0045f328c9ab4bdc",
+          "size": 17856,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/3b0ed91bf7db99de809af2fa0045f328c9ab4bdc"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+          "size": 8691,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/580739b6c5169bfe6d1e8a7b42d40c2c99f7421e"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90bb0564adbec3e32ef00afa40a6d95362859490",
+          "size": 17879,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/90bb0564adbec3e32ef00afa40a6d95362859490"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+          "size": 8677,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/105463a640a97df42b6f312a54a29cb32048bfe3"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/AGENTS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "size": 2706,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/699b46245ad2f96c8ed4b757ec8ed5380363fcd6"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/TASK.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "size": 6782,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/1755b9ecebe4f52825244681682b68822af97b97"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "size": 7086,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/489b210f27a38ffb3f83b8da3f297b6f569ea57f"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/checks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "size": 2484,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/bc51923c9041b04b0ce9e57348f10cfae84b73d9"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "size": 5929,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/aa688f50e4bdbf500c5a09e9f546ec37c68e3dad"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "size": 6764,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/b937352204a206cc2de669d3aa36a014755afe86"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+          "size": 3088,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/8eeb6a4778875e37a1d9c55a5e27ee6079999847"
+        },
+        {
+          "path": "benchmarks/data/snapshot-hashes/kernel-muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "884189f6d1f2c7045af65db4bedc48dac216804a",
+          "size": 688,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/884189f6d1f2c7045af65db4bedc48dac216804a"
+        },
+        {
+          "path": "benchmarks/gpu/specs/muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ecebf286f66f30233baeb62aab8a27af8deea16d",
+          "size": 41465,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ecebf286f66f30233baeb62aab8a27af8deea16d"
+        }
+      ]
+    },
+    {
+      "head": "4905fc6c9482793339fdd64da37e538e6729df8c",
+      "name": "claude-cohort-20261030",
+      "truncated": false,
+      "total_tree_entries": 529,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ab73a3b227be1f6b5256834ec60c8dc6563a3216",
+          "size": 9711,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ab73a3b227be1f6b5256834ec60c8dc6563a3216"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c43068f8b50c9343dabda1000a62585bb8dacdb2",
+          "size": 9234,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/c43068f8b50c9343dabda1000a62585bb8dacdb2"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e4d55231f88ebfa1ae88ee476aa93a53eb88fc07",
+          "size": 17715,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/e4d55231f88ebfa1ae88ee476aa93a53eb88fc07"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "32112ae698a8d6d47f6167c80dfc8251aa233ec8",
+          "size": 11090,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/32112ae698a8d6d47f6167c80dfc8251aa233ec8"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c94eb79e97534b41027976117fd49bef8661600f",
+          "size": 17614,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/c94eb79e97534b41027976117fd49bef8661600f"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "086eb2ba975608311de7382f1e43d9bc5d51815f",
+          "size": 7257,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/086eb2ba975608311de7382f1e43d9bc5d51815f"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7e35fbc85477e27bfef29c115b60260f015858fb",
+          "size": 12228,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/7e35fbc85477e27bfef29c115b60260f015858fb"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0",
+          "size": 210815,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "758f1d8fbf470a1e094f435e604fae63c429a9c5",
+          "size": 17843,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/758f1d8fbf470a1e094f435e604fae63c429a9c5"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "size": 7520,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/96e0fb0bfc05a7e27430229cfc3645f7bffb2339"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b0ed91bf7db99de809af2fa0045f328c9ab4bdc",
+          "size": 17856,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/3b0ed91bf7db99de809af2fa0045f328c9ab4bdc"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+          "size": 8691,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/580739b6c5169bfe6d1e8a7b42d40c2c99f7421e"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90bb0564adbec3e32ef00afa40a6d95362859490",
+          "size": 17879,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/90bb0564adbec3e32ef00afa40a6d95362859490"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+          "size": 8677,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/105463a640a97df42b6f312a54a29cb32048bfe3"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/AGENTS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "size": 2706,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/699b46245ad2f96c8ed4b757ec8ed5380363fcd6"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/TASK.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "size": 6782,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/1755b9ecebe4f52825244681682b68822af97b97"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "size": 7086,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/489b210f27a38ffb3f83b8da3f297b6f569ea57f"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/checks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "size": 2484,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/bc51923c9041b04b0ce9e57348f10cfae84b73d9"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "size": 5929,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/aa688f50e4bdbf500c5a09e9f546ec37c68e3dad"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "size": 6764,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/b937352204a206cc2de669d3aa36a014755afe86"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+          "size": 3088,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/8eeb6a4778875e37a1d9c55a5e27ee6079999847"
+        },
+        {
+          "path": "benchmarks/data/snapshot-hashes/kernel-muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "884189f6d1f2c7045af65db4bedc48dac216804a",
+          "size": 688,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/884189f6d1f2c7045af65db4bedc48dac216804a"
+        },
+        {
+          "path": "benchmarks/gpu/specs/muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ecebf286f66f30233baeb62aab8a27af8deea16d",
+          "size": 41465,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ecebf286f66f30233baeb62aab8a27af8deea16d"
+        }
+      ]
+    },
+    {
+      "head": "d8077e157ad23cc24553229d574eafaf37395c2e",
+      "name": "codex/agent37-sandboxes",
+      "truncated": false,
+      "total_tree_entries": 217,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        }
+      ]
+    },
+    {
+      "head": "f03e7a2f7afbf60df203f8acb0ac47ef52a28c48",
+      "name": "codex/benchmark-any-speedup",
+      "truncated": false,
+      "total_tree_entries": 455,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "758f1d8fbf470a1e094f435e604fae63c429a9c5",
+          "size": 17843,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/758f1d8fbf470a1e094f435e604fae63c429a9c5"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "size": 7520,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/96e0fb0bfc05a7e27430229cfc3645f7bffb2339"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b0ed91bf7db99de809af2fa0045f328c9ab4bdc",
+          "size": 17856,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/3b0ed91bf7db99de809af2fa0045f328c9ab4bdc"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+          "size": 8691,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/580739b6c5169bfe6d1e8a7b42d40c2c99f7421e"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90bb0564adbec3e32ef00afa40a6d95362859490",
+          "size": 17879,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/90bb0564adbec3e32ef00afa40a6d95362859490"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+          "size": 8677,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/105463a640a97df42b6f312a54a29cb32048bfe3"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/AGENTS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "size": 2706,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/699b46245ad2f96c8ed4b757ec8ed5380363fcd6"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/TASK.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "size": 6782,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/1755b9ecebe4f52825244681682b68822af97b97"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "size": 7086,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/489b210f27a38ffb3f83b8da3f297b6f569ea57f"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/checks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "size": 2484,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/bc51923c9041b04b0ce9e57348f10cfae84b73d9"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "size": 5929,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/aa688f50e4bdbf500c5a09e9f546ec37c68e3dad"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "size": 6764,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/b937352204a206cc2de669d3aa36a014755afe86"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+          "size": 3088,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/8eeb6a4778875e37a1d9c55a5e27ee6079999847"
+        },
+        {
+          "path": "benchmarks/data/snapshot-hashes/kernel-muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "884189f6d1f2c7045af65db4bedc48dac216804a",
+          "size": 688,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/884189f6d1f2c7045af65db4bedc48dac216804a"
+        },
+        {
+          "path": "benchmarks/gpu/specs/muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ecebf286f66f30233baeb62aab8a27af8deea16d",
+          "size": 41465,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ecebf286f66f30233baeb62aab8a27af8deea16d"
+        }
+      ]
+    },
+    {
+      "head": "d7e17b1128942270bb7495a38d6f1259c6fcde9d",
+      "name": "codex/lean-search-verifiers",
+      "truncated": false,
+      "total_tree_entries": 210,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4a4fbf61099d44ef3d10cce8a24c4897ea190bb6",
+          "size": 1076,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/4a4fbf61099d44ef3d10cce8a24c4897ea190bb6"
+        }
+      ]
+    },
+    {
+      "head": "7a14f0d0c80313ed2705a9fee3ebd515f17bd6c9",
+      "name": "codex/muse-jumpstart-prompts",
+      "truncated": false,
+      "total_tree_entries": 210,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "dd9b33c749ec94b7a4c759c0dc5a407c9747b400",
+          "size": 2275,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/dd9b33c749ec94b7a4c759c0dc5a407c9747b400"
+        }
+      ]
+    },
+    {
+      "head": "c4d9b643cafea317bb891816107fb803c1f0126c",
+      "name": "codex/muse-kernel-projects",
+      "truncated": false,
+      "total_tree_entries": 196,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4a4fbf61099d44ef3d10cce8a24c4897ea190bb6",
+          "size": 1076,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/4a4fbf61099d44ef3d10cce8a24c4897ea190bb6"
+        }
+      ]
+    },
+    {
+      "head": "21d44c28f757f5f85ca898eca40a1d5be15e24d4",
+      "name": "codex/offline-research-benchmark",
+      "truncated": false,
+      "total_tree_entries": 448,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "758f1d8fbf470a1e094f435e604fae63c429a9c5",
+          "size": 17843,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/758f1d8fbf470a1e094f435e604fae63c429a9c5"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "size": 7520,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/96e0fb0bfc05a7e27430229cfc3645f7bffb2339"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b0ed91bf7db99de809af2fa0045f328c9ab4bdc",
+          "size": 17856,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/3b0ed91bf7db99de809af2fa0045f328c9ab4bdc"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+          "size": 8691,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/580739b6c5169bfe6d1e8a7b42d40c2c99f7421e"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90bb0564adbec3e32ef00afa40a6d95362859490",
+          "size": 17879,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/90bb0564adbec3e32ef00afa40a6d95362859490"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+          "size": 8677,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/105463a640a97df42b6f312a54a29cb32048bfe3"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/AGENTS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "size": 2706,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/699b46245ad2f96c8ed4b757ec8ed5380363fcd6"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/TASK.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "size": 6782,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/1755b9ecebe4f52825244681682b68822af97b97"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "size": 7086,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/489b210f27a38ffb3f83b8da3f297b6f569ea57f"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/checks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "size": 2484,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/bc51923c9041b04b0ce9e57348f10cfae84b73d9"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "size": 5929,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/aa688f50e4bdbf500c5a09e9f546ec37c68e3dad"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "size": 6764,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/b937352204a206cc2de669d3aa36a014755afe86"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+          "size": 3088,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/8eeb6a4778875e37a1d9c55a5e27ee6079999847"
+        },
+        {
+          "path": "benchmarks/data/snapshot-hashes/kernel-muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "884189f6d1f2c7045af65db4bedc48dac216804a",
+          "size": 688,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/884189f6d1f2c7045af65db4bedc48dac216804a"
+        },
+        {
+          "path": "benchmarks/gpu/specs/muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ecebf286f66f30233baeb62aab8a27af8deea16d",
+          "size": 41465,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ecebf286f66f30233baeb62aab8a27af8deea16d"
+        }
+      ]
+    },
+    {
+      "head": "b94e66eb6098d8db5e1de2450eab556a2b1cbc9a",
+      "name": "codex/okc-whole-candidate-guidelines",
+      "truncated": false,
+      "total_tree_entries": 210,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        }
+      ]
+    },
+    {
+      "head": "db2dea5bd5490485c17699a2b4384f9224998949",
+      "name": "codex/readme-benchmark-charts",
+      "truncated": false,
+      "total_tree_entries": 477,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7e35fbc85477e27bfef29c115b60260f015858fb",
+          "size": 12228,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/7e35fbc85477e27bfef29c115b60260f015858fb"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0",
+          "size": 210815,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "758f1d8fbf470a1e094f435e604fae63c429a9c5",
+          "size": 17843,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/758f1d8fbf470a1e094f435e604fae63c429a9c5"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "size": 7520,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/96e0fb0bfc05a7e27430229cfc3645f7bffb2339"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b0ed91bf7db99de809af2fa0045f328c9ab4bdc",
+          "size": 17856,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/3b0ed91bf7db99de809af2fa0045f328c9ab4bdc"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+          "size": 8691,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/580739b6c5169bfe6d1e8a7b42d40c2c99f7421e"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90bb0564adbec3e32ef00afa40a6d95362859490",
+          "size": 17879,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/90bb0564adbec3e32ef00afa40a6d95362859490"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+          "size": 8677,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/105463a640a97df42b6f312a54a29cb32048bfe3"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/AGENTS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "size": 2706,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/699b46245ad2f96c8ed4b757ec8ed5380363fcd6"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/TASK.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "size": 6782,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/1755b9ecebe4f52825244681682b68822af97b97"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "size": 7086,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/489b210f27a38ffb3f83b8da3f297b6f569ea57f"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/checks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "size": 2484,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/bc51923c9041b04b0ce9e57348f10cfae84b73d9"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "size": 5929,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/aa688f50e4bdbf500c5a09e9f546ec37c68e3dad"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "size": 6764,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/b937352204a206cc2de669d3aa36a014755afe86"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+          "size": 3088,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/8eeb6a4778875e37a1d9c55a5e27ee6079999847"
+        },
+        {
+          "path": "benchmarks/data/snapshot-hashes/kernel-muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "884189f6d1f2c7045af65db4bedc48dac216804a",
+          "size": 688,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/884189f6d1f2c7045af65db4bedc48dac216804a"
+        },
+        {
+          "path": "benchmarks/gpu/specs/muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ecebf286f66f30233baeb62aab8a27af8deea16d",
+          "size": 41465,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ecebf286f66f30233baeb62aab8a27af8deea16d"
+        }
+      ]
+    },
+    {
+      "head": "85ee60399f431becca40903f419cf0ef979dc91c",
+      "name": "codex/release-1.5.0",
+      "truncated": false,
+      "total_tree_entries": 218,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        }
+      ]
+    },
+    {
+      "head": "018b7a102348ea3b73701e8be52d24f82d8c91ee",
+      "name": "main",
+      "truncated": false,
+      "total_tree_entries": 527,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ab73a3b227be1f6b5256834ec60c8dc6563a3216",
+          "size": 9711,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ab73a3b227be1f6b5256834ec60c8dc6563a3216"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c43068f8b50c9343dabda1000a62585bb8dacdb2",
+          "size": 9234,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/c43068f8b50c9343dabda1000a62585bb8dacdb2"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e4d55231f88ebfa1ae88ee476aa93a53eb88fc07",
+          "size": 17715,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/e4d55231f88ebfa1ae88ee476aa93a53eb88fc07"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "32112ae698a8d6d47f6167c80dfc8251aa233ec8",
+          "size": 11090,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/32112ae698a8d6d47f6167c80dfc8251aa233ec8"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c94eb79e97534b41027976117fd49bef8661600f",
+          "size": 17614,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/c94eb79e97534b41027976117fd49bef8661600f"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "086eb2ba975608311de7382f1e43d9bc5d51815f",
+          "size": 7257,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/086eb2ba975608311de7382f1e43d9bc5d51815f"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7e35fbc85477e27bfef29c115b60260f015858fb",
+          "size": 12228,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/7e35fbc85477e27bfef29c115b60260f015858fb"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0",
+          "size": 210815,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "758f1d8fbf470a1e094f435e604fae63c429a9c5",
+          "size": 17843,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/758f1d8fbf470a1e094f435e604fae63c429a9c5"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "size": 7520,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/96e0fb0bfc05a7e27430229cfc3645f7bffb2339"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b0ed91bf7db99de809af2fa0045f328c9ab4bdc",
+          "size": 17856,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/3b0ed91bf7db99de809af2fa0045f328c9ab4bdc"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+          "size": 8691,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/580739b6c5169bfe6d1e8a7b42d40c2c99f7421e"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90bb0564adbec3e32ef00afa40a6d95362859490",
+          "size": 17879,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/90bb0564adbec3e32ef00afa40a6d95362859490"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+          "size": 8677,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/105463a640a97df42b6f312a54a29cb32048bfe3"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/AGENTS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "size": 2706,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/699b46245ad2f96c8ed4b757ec8ed5380363fcd6"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/TASK.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "size": 6782,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/1755b9ecebe4f52825244681682b68822af97b97"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "size": 7086,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/489b210f27a38ffb3f83b8da3f297b6f569ea57f"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/checks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "size": 2484,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/bc51923c9041b04b0ce9e57348f10cfae84b73d9"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "size": 5929,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/aa688f50e4bdbf500c5a09e9f546ec37c68e3dad"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "size": 6764,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/b937352204a206cc2de669d3aa36a014755afe86"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+          "size": 3088,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/8eeb6a4778875e37a1d9c55a5e27ee6079999847"
+        },
+        {
+          "path": "benchmarks/data/snapshot-hashes/kernel-muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "884189f6d1f2c7045af65db4bedc48dac216804a",
+          "size": 688,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/884189f6d1f2c7045af65db4bedc48dac216804a"
+        },
+        {
+          "path": "benchmarks/gpu/specs/muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ecebf286f66f30233baeb62aab8a27af8deea16d",
+          "size": 41465,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ecebf286f66f30233baeb62aab8a27af8deea16d"
+        }
+      ]
+    },
+    {
+      "head": "5d9c0036cdfcecd51a40791057d9e98c73789ca0",
+      "name": "PR17-head",
+      "truncated": false,
+      "total_tree_entries": 527,
+      "items": [
+        {
+          "path": "Resources/StarterPrompts/muse_moe_w4a16.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d4243105fac3a3f6ab94acaef14d250d26463e17",
+          "size": 2623,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/d4243105fac3a3f6ab94acaef14d250d26463e17"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ab73a3b227be1f6b5256834ec60c8dc6563a3216",
+          "size": 9711,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ab73a3b227be1f6b5256834ec60c8dc6563a3216"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c43068f8b50c9343dabda1000a62585bb8dacdb2",
+          "size": 9234,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/c43068f8b50c9343dabda1000a62585bb8dacdb2"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e4d55231f88ebfa1ae88ee476aa93a53eb88fc07",
+          "size": 17715,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/e4d55231f88ebfa1ae88ee476aa93a53eb88fc07"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "32112ae698a8d6d47f6167c80dfc8251aa233ec8",
+          "size": 11090,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/32112ae698a8d6d47f6167c80dfc8251aa233ec8"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c94eb79e97534b41027976117fd49bef8661600f",
+          "size": 17614,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/c94eb79e97534b41027976117fd49bef8661600f"
+        },
+        {
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "086eb2ba975608311de7382f1e43d9bc5d51815f",
+          "size": 7257,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/086eb2ba975608311de7382f1e43d9bc5d51815f"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7e35fbc85477e27bfef29c115b60260f015858fb",
+          "size": 12228,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/7e35fbc85477e27bfef29c115b60260f015858fb"
+        },
+        {
+          "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0",
+          "size": 210815,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "758f1d8fbf470a1e094f435e604fae63c429a9c5",
+          "size": 17843,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/758f1d8fbf470a1e094f435e604fae63c429a9c5"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "size": 7520,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/96e0fb0bfc05a7e27430229cfc3645f7bffb2339"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b0ed91bf7db99de809af2fa0045f328c9ab4bdc",
+          "size": 17856,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/3b0ed91bf7db99de809af2fa0045f328c9ab4bdc"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+          "size": 8691,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/580739b6c5169bfe6d1e8a7b42d40c2c99f7421e"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/evaluation.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "90bb0564adbec3e32ef00afa40a6d95362859490",
+          "size": 17879,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/90bb0564adbec3e32ef00afa40a6d95362859490"
+        },
+        {
+          "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+          "size": 8677,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/105463a640a97df42b6f312a54a29cb32048bfe3"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/AGENTS.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "size": 2706,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/699b46245ad2f96c8ed4b757ec8ed5380363fcd6"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/TASK.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "size": 6782,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/1755b9ecebe4f52825244681682b68822af97b97"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "size": 7086,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/489b210f27a38ffb3f83b8da3f297b6f569ea57f"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/checks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "size": 2484,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/bc51923c9041b04b0ce9e57348f10cfae84b73d9"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "size": 5929,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/aa688f50e4bdbf500c5a09e9f546ec37c68e3dad"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "size": 6764,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/b937352204a206cc2de669d3aa36a014755afe86"
+        },
+        {
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+          "size": 3088,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/8eeb6a4778875e37a1d9c55a5e27ee6079999847"
+        },
+        {
+          "path": "benchmarks/data/snapshot-hashes/kernel-muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "884189f6d1f2c7045af65db4bedc48dac216804a",
+          "size": 688,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/884189f6d1f2c7045af65db4bedc48dac216804a"
+        },
+        {
+          "path": "benchmarks/gpu/specs/muse_moe_w4a16.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ecebf286f66f30233baeb62aab8a27af8deea16d",
+          "size": 41465,
+          "url": "https://api.github.com/repos/rohanarun/Auto-research-agent/git/blobs/ecebf286f66f30233baeb62aab8a27af8deea16d"
+        }
+      ]
+    }
+  ]
+}
