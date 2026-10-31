@@ -1,0 +1,32 @@
+{
+  "repository": "Dao-AILab/sonic-moe",
+  "commit": "7396f3e604827d8186c2e16e64b28ee33d3defd0",
+  "license": "Apache-2.0",
+  "scope": "Four unmodified selected source/docs/license files; research only, not installed/executed/ported.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://github.com/Dao-AILab/sonic-moe/blob/7396f3e604827d8186c2e16e64b28ee33d3defd0/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "6431e5454f128513107dfa2760a969fd1c7926fc",
+      "sha256": "f20645f12ae56546fbd9349ea79cde8861041bb90c1d68996c738b437ca77342",
+      "url": "https://github.com/Dao-AILab/sonic-moe/blob/7396f3e604827d8186c2e16e64b28ee33d3defd0/README.md"
+    },
+    {
+      "path": "sonicmoe/functional/forward.py",
+      "git_blob": "95f11b2eeab3c9e5d22dedd6e6f7180efaed10c8",
+      "sha256": "ab81bd844e862a200cb89beebac021f73b6347906fe970b95a31456a17d7459a",
+      "url": "https://github.com/Dao-AILab/sonic-moe/blob/7396f3e604827d8186c2e16e64b28ee33d3defd0/sonicmoe/functional/forward.py"
+    },
+    {
+      "path": "sonicmoe/functional/__init__.py",
+      "git_blob": "2a15f8ff998437986df9faa844c55a9ebde01aeb",
+      "sha256": "af41a42d8fe5722615a4a1f2ce4157c992ef1fff4aaadc7fc9adec9097800a35",
+      "url": "https://github.com/Dao-AILab/sonic-moe/blob/7396f3e604827d8186c2e16e64b28ee33d3defd0/sonicmoe/functional/__init__.py"
+    }
+  ]
+}

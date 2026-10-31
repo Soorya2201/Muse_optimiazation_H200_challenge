@@ -1,5 +1,26 @@
 # Prefill-layer optimization record
 
+## Oct31 scale-sharing representation proof (work in progress)
+
+Current canonicalv20 and scored1.784958x are unchanged. No new GPUjob.
+A K64bit permutation can share one pair of scales across four MMA steps;
+CPU proof passes65536words/524288assignments,8192gatedrow positions and
+64exactinteger dots covering all16codes/254finite scale patterns. This
+adapts KPERM-style reuse,not a newcodec. Timed normalized-X gathering and
+GEMM1 stmatrix/publishing mapping are NOT implemented; output staging is
+the next concrete feasibility obstacle. Lower logical scale-load requests
+are not HBM/physicalshared-bus savings. FP32 accumulation order changes.
+Same-job phase-duration proxy needs7.5568%expert cut to model3%board gain;
+no practical runtime gain is established. Stay on prefill for the full
+packing/staging/consumer feasibility work before any H200 allocation.
+See [research/proof](SCALE_SHARE_RESEARCH_2026-10-31.md),
+[library](RESEARCH_LIBRARY.md) and
+[source follow-up](PUBLIC_COMPONENT_FOLLOWUP_2026-10-31.md).
+Fresh118paths/13repos unchanged;752rankedowner metadata,4unresolved.
+New licensed SonicMoE docs/source pinned; finegrained explicit BF16 path
+is compatible in principle but B200-only published validation; Sail isPPU.
+Routine checksremain4/8,submits0;no canonicalchange or rank1claim.
+
 Oct30: controlled hybrid-exp/PIPE-RRS study is archived in
 HYBRID_PIPELINE_2026-10-30.md. Checks2d21c2cf18c84e2e(sfo3) and
 2f9fe01a6f8f4702(sfo3c) pass5tests/8timings each,timing parent dispatch.

@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 18:09:50 UTC** from the live OKC boards. Overall **#145/1760**.
+Captured **2026-10-31 18:24:13 UTC** from the live OKC boards. Overall **#145/1762**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|243/1542|1.535843x|1.6523x|7.05%|
-|Routed experts|178/1245|2.372309x|2.7578x|13.98%|
-|Attention decode|190/1189|2.603505x|3.2221x|19.20%|
-|Whole decoder|145/1106|2.211495x|2.4178x|8.53%|
-|Prefill|178/750|1.784958x|2.1551x|17.18%|
+|BF16 projections|243/1543|1.535843x|1.6523x|7.05%|
+|Routed experts|178/1248|2.372309x|2.7578x|13.98%|
+|Attention decode|190/1190|2.603505x|3.2221x|19.20%|
+|Whole decoder|145/1107|2.211495x|2.4178x|8.53%|
+|Prefill|180/752|1.784958x|2.1551x|17.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -118,3 +118,9 @@ See muse_decode_layer/PUBLIC_DELTA_AND_OPERAND_SCREEN_2026-10-31.md. The
 peer precision note distinguishes policy-unconfirmed higher-FP32 fusion
 from the small-T FP32-to-BF16 router reduction already corrected here.
 Passing tests are not an organizer ruling on every fused intermediate.
+
+Oct31 late prefill work: K64 scale-sharing CPU encoding proof passes
+65536words/524288weight-scale assignments; no GPU implementation/check yet.
+The next obstacle is matched normalized-X gathering and GEMM1 output
+staging. No scored improvement or canonical change. See
+muse_prefill_layer/SCALE_SHARE_RESEARCH_2026-10-31.md.

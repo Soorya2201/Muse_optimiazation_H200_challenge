@@ -1,0 +1,154 @@
+{
+  "captured_utc": "2026-10-31T18:23:55.690374+00:00",
+  "rows": [
+    {
+      "rank": 68,
+      "team": "alygg77",
+      "repo": "alygg77/okc-muse-spark-kernels",
+      "head": "6cae49a639ee6d14b929a5fd4a63c627f96d7dc0",
+      "branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "scope": "Metadata; source follow-up explicitly in component report."
+    },
+    {
+      "rank": 100,
+      "team": "islamborghini",
+      "repo": "islamborghini/sglang",
+      "head": "163b739b34023c30231062a46caecd62fc4aff83",
+      "branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "ahead_by": 0,
+      "changed_files": [],
+      "scope": "Default branch comparison only; not all branches."
+    },
+    {
+      "rank": 339,
+      "team": "baobabtr33",
+      "repo": "baobabtr33/pocket-muse",
+      "head": "1252382545c605c382710db2c10b8d5bb449a3e9",
+      "branch": "main",
+      "license": null,
+      "scope": "Metadata; source follow-up explicitly in component report."
+    },
+    {
+      "rank": 339,
+      "team": "baobabtr33",
+      "repo": "baobabtr33/sglang",
+      "head": "8ecabd3c1e1227ca91b0bbb48d75cf33b4626a73",
+      "branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "ahead_by": 0,
+      "changed_files": [],
+      "scope": "Default branch comparison only; not all branches."
+    },
+    {
+      "rank": 399,
+      "team": "trxphxle",
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "head": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "scope": "Metadata; source follow-up explicitly in component report."
+    },
+    {
+      "rank": 471,
+      "team": "goldbar123467",
+      "repo": "goldbar123467/NVFP4-Group-Gemm",
+      "head": "39fd1d746615bfbebbd71e18ce0d7bd952b1a6c5",
+      "branch": "main",
+      "license": null,
+      "scope": "Metadata; source follow-up explicitly in component report."
+    },
+    {
+      "rank": 471,
+      "team": "goldbar123467",
+      "repo": "goldbar123467/nvfp4_group_gemm",
+      "head": "21e86b69bbba4f924cf1b2dc514fd47f8d5282cf",
+      "branch": "main",
+      "license": null,
+      "scope": "Metadata; source follow-up explicitly in component report."
+    },
+    {
+      "rank": 551,
+      "team": "anencore94",
+      "repo": "anencore94/sglang",
+      "head": "97adf8a2909dc642ddf58e98cdd607aa5e76046c",
+      "branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "ahead_by": 0,
+      "changed_files": [],
+      "scope": "Default branch comparison only; not all branches."
+    },
+    {
+      "rank": 615,
+      "team": "oswalpalash",
+      "repo": "oswalpalash/lysithea",
+      "head": "1e731f9eb2861f2d341dd1ddabd37ee82339e5e4",
+      "branch": "master",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "scope": "Metadata; source follow-up explicitly in component report."
+    },
+    {
+      "rank": 632,
+      "team": "1sgtpepper",
+      "repo": "1sgtpepper/sglang",
+      "head": "bd16c22a04b0eb9bc2e775795bda6b11727a5d38",
+      "branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "ahead_by": 0,
+      "changed_files": [],
+      "scope": "Default branch comparison only; not all branches."
+    },
+    {
+      "rank": 671,
+      "team": "gaidar0yegor",
+      "repo": "gaidar0yegor/w4a16-dequant-gemm",
+      "head": "c7af21a9606b386fa8b87816a5880fa571e79557",
+      "branch": "main",
+      "license": null,
+      "scope": "Metadata; source follow-up explicitly in component report."
+    }
+  ]
+}

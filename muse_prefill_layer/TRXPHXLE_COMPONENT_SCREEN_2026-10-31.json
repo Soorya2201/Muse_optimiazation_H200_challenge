@@ -1,0 +1,26 @@
+{
+  "repo": "trxphxle/okc-2026-muse-kernels",
+  "commit": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+  "path": "kernels/prefill_layer.py",
+  "url": "https://github.com/trxphxle/okc-2026-muse-kernels/blob/72db638fa2718bc0ea5645fdd5c52a5511594579/kernels/prefill_layer.py",
+  "sha256": "59177ca631cc2bb69bc745d5045a9c74bc6578b7dcd8fb4b0f890995802f0495",
+  "bytes": 460992,
+  "publisher_manifest": {
+    "file": "best/prefill_layer.py",
+    "problem": "muse_prefill_layer",
+    "ranked_speedup": 1.4774,
+    "job": "23badfd3441943cc",
+    "run_record": "outputs/openkernel-challenge/runs/prefill-grouped-ranked.json",
+    "original": "outputs/openkernel-challenge/prefill-layer/submission_grouped_experts.py",
+    "sha256": "59177ca631cc2bb69bc745d5045a9c74bc6578b7dcd8fb4b0f890995802f0495",
+    "counts_toward_overall": false,
+    "first_line": "# okc: problem=muse_prefill_layer"
+  },
+  "scope": "AST parsed; effective late grouped-expert attach/dispatch/fresh-input validation and native consumer/packing sections screened. Not a complete native conformance audit; no source execution/port.",
+  "observations": [
+    "Publisher reported ranked1.4774x, below our1.784958x; not paired comparison or reason to reject every component.",
+    "Grouped native NVFP4xBF16 paths retain older nine-operation conversion/persistent variable tile widths already in our newer vjeux parent. No additive measured faster component established.",
+    "Source validates independent nearby/fresh/empty routes but those author results do not certify a port to our norm/whole-layer contract.",
+    "Whole source remains temporary; no new implementation copied into submissions."
+  ]
+}

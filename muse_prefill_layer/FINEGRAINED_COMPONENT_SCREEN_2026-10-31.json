@@ -1,0 +1,62 @@
+{
+  "repo": "huggingface/kernels-community",
+  "commit": "5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0",
+  "files": [
+    {
+      "path": "finegrained-kernels/README.md",
+      "git_blob": "6260e12e139e5a8788a901ec60fe49d52e2b65f0",
+      "sha256": "33ab40f235472d420e6c8220bab852fbd690654f9aacc3813dd47a0a9f20acf4",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/README.md"
+    },
+    {
+      "path": "finegrained-kernels/torch-ext/finegrained_kernels/matmul.py",
+      "git_blob": "54f02019720e3d68f631a4a6ccdab0f5d026839b",
+      "sha256": "a64008a7191d3afbe603c96beac8374b0e0facb5ea3c9c40c994ea8487db5b28",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/torch-ext/finegrained_kernels/matmul.py"
+    },
+    {
+      "path": "finegrained-kernels/torch-ext/finegrained_kernels/quant.py",
+      "git_blob": "ad4d9015a1b69243455c186ec8d9272ca570f4a1",
+      "sha256": "e73b32441a88650da4a7eea54120fa5a6218574a9c428535512eef5f6b34c787",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/torch-ext/finegrained_kernels/quant.py"
+    },
+    {
+      "path": "finegrained-kernels/bench/README.md",
+      "git_blob": "8ce5f9379622f8800118e0af5bea9339557e3418",
+      "sha256": "ae5991abcd83fbe531724d91e5e6985d464f4a48b0f7dd0e28186abc742e6af8",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/bench/README.md"
+    },
+    {
+      "path": "finegrained-kernels/build.toml",
+      "git_blob": "fbc1893ae386708d141b744fb3b3f7b1d0501f7b",
+      "sha256": "6db81270f5454e8b0ea8502c304c64c6db8344878a70cd9c5035892fddb5c34a",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/build.toml"
+    },
+    {
+      "path": "finegrained-kernels/torch-ext/finegrained_kernels/mma.py",
+      "git_blob": "2efc0a25017d5b361b17e3b8e0f0ff75215aeeea",
+      "sha256": "80b90253942385054c69c8b1351db8622d3b68d7a543237e234a493ae4711381",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/torch-ext/finegrained_kernels/mma.py"
+    },
+    {
+      "path": "finegrained-kernels/torch-ext/finegrained_kernels/grouped.py",
+      "git_blob": "69e4a6b111039e3b31f3bd10396f037dbd1c2c5c",
+      "sha256": "e45f9e60bfbc792af70554705fd4777771e19af2a3e18755c3abb75ba3253568",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/torch-ext/finegrained_kernels/grouped.py"
+    },
+    {
+      "path": "finegrained-kernels/torch-ext/finegrained_kernels/loading/tiles.py",
+      "git_blob": "c8bedcbb26652065a3963d48fccdf86c9cb3348b",
+      "sha256": "a75828e33cdc67a9e883a2425e035b8c5ca1a7970bf22bba22cf7a814578fa4b",
+      "url": "https://github.com/huggingface/kernels-community/blob/5fe9dbb3d45f6f2652958c1f70e5381891fa7aa0/finegrained-kernels/torch-ext/finegrained_kernels/loading/tiles.py"
+    }
+  ],
+  "scope": "Selected contract/dispatch/loading/converter inspection only; temporary sources not installed/executed/ported. No complete library audit.",
+  "declared_license": "Apache-2.0 in package README frontmatter and build.toml; source not mirrored.",
+  "observations": [
+    "Explicit activation_format=bf16 grouped path accepts NVFP4 group16 E4M3 plus separate per-expert FP32 global scale. Compatible arithmetic contract in principle; do not exclude it because other branches quantize activations.",
+    "Weight-only dot branch upcasts packed E2M1 and E4M3 scale to BF16 in-loop, ordinary tl.dot. Optional TMA/persistent grouped schedule/gate epilogue.",
+    "README says tuning/validation is B200/SM100; prefill benchmark eager rather than our paired cold graph. No H200/current-parent speedup established.",
+    "Do not enable dot_scaled/nativeBlackwell or activation/intermediate requantization for H200 task; no whole-package GPU check yet."
+  ]
+}

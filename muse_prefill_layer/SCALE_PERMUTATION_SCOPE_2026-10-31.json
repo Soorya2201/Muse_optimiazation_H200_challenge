@@ -1,0 +1,146 @@
+{
+  "scope": "Optimistic same-job expert-profile-duration subtraction. Durations contain PDL waits/overlap; not critical-path isolated costs or a practical KPERM speedup prediction.",
+  "job": "0848e5e1b2ba40e5",
+  "cluster": "sfo3",
+  "timed_path": "Unchanged canonical v20 parent",
+  "rows": [
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 3411873033063238961,
+        "weight": 46
+      },
+      "benchmark_us": 572.6467138995849,
+      "expert_profile_us": 276.5
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 1",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 3412069217174116829,
+        "weight": 16
+      },
+      "benchmark_us": 889.993751507718,
+      "expert_profile_us": 256.4
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 3412265401284994698,
+        "weight": 46
+      },
+      "benchmark_us": 1762.6846683186263,
+      "expert_profile_us": 777.5
+    },
+    {
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "dist": "soft",
+        "layer": "full",
+        "load": "turn 4",
+        "page": 1,
+        "q_len": 753,
+        "repeats": 6,
+        "seed": 3412461585395872568,
+        "weight": 16
+      },
+      "benchmark_us": 3101.4404893147635,
+      "expert_profile_us": 772.1
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 3412853953617628311,
+        "weight": 16
+      },
+      "benchmark_us": 9727.209571345982,
+      "expert_profile_us": 3891.5
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "sliding",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 3413050137728506184,
+        "weight": 138
+      },
+      "benchmark_us": 8980.19230646325,
+      "expert_profile_us": 3705.8
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 3413246321839384058,
+        "weight": 16
+      },
+      "benchmark_us": 12207.514122754585,
+      "expert_profile_us": 3476.5
+    },
+    {
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "dist": "soft",
+        "layer": "full",
+        "load": "first turn",
+        "page": 1,
+        "q_len": 16384,
+        "repeats": 6,
+        "seed": 3413638690061139809,
+        "weight": 16
+      },
+      "benchmark_us": 15288.50357966983,
+      "expert_profile_us": 3512.0
+    }
+  ],
+  "model_by_fraction_removed": {
+    "0.05": 1.019649916652919,
+    "0.1": 1.0400887801500818,
+    "0.15": 1.0613651588548156,
+    "0.2": 1.0835316983808545,
+    "1.0": 1.6280483717224818
+  },
+  "expert_duration_fraction_for_3pct_board_proxy": 0.07556799934836247,
+  "candidate_status": "Encoding proof only; timed X packing and GEMM1 staging required before GPU candidate. No observed runtime reduction.",
+  "caution": "Do not equate six fewer scale-construction instructions with this fraction of elapsed expert time. No physical bandwidth or traffic saving inferred."
+}

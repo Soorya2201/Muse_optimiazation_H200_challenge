@@ -1,4 +1,5 @@
 """Read-only public code search delta; stores selected metadata, not source."""
+import argparse
 import datetime
 import json
 from pathlib import Path
@@ -14,12 +15,18 @@ def command(args):
     return json.loads(r.stdout)
 
 
-track = sys.argv[1] if len(sys.argv) > 1 else 'muse_attention_decode'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('track', nargs='?', default='muse_attention_decode')
+parser.add_argument('--previous', default='GLOBAL_CODE_SEARCH_2026-10-30.json')
+parser.add_argument('--output', default='GLOBAL_CODE_SEARCH_2026-10-31.json')
+args = parser.parse_args()
+track = args.track
 assert track in {'muse_attention_decode', 'muse_bf16_proj', 'muse_decode_layer',
                  'muse_moe_w4a16', 'muse_prefill_layer'}
-old = json.loads((ROOT / track / 'GLOBAL_CODE_SEARCH_2026-10-30.json').read_text())
+assert Path(args.previous).name == args.previous and Path(args.output).name == args.output
+old = json.loads((ROOT / track / args.previous).read_text())
 old_items = {(r['repo'], r['path'], r['blob_sha']) for r in old['items']}
-target = ROOT / track / 'GLOBAL_CODE_SEARCH_2026-10-31.json'
+target = ROOT / track / args.output
 assert not target.exists()
 items, pages = {}, []
 query = track + ' in:file language:python'
@@ -41,7 +48,7 @@ ranks = {r['team'].lower(): {k:r.get(k) for k in ('rank', 'speedup', 'job')}
          for r in board['rows']}
 out = dict(captured_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(), query=query,
     method='Paginated public GitHub code search; metadata only. Dynamic index, not exhaustive/private source access.',
-    previous='GLOBAL_CODE_SEARCH_2026-10-30.json', you=board['you'], ranked=board['ranked'],
+    previous=args.previous, you=board['you'], ranked=board['ranked'],
     pages=pages, items=list(items.values()), added=[v for k,v in items.items() if k not in old_items],
     repository_owners={o:ranks.get(o.lower()) for o in sorted(owners)})
 target.write_text(json.dumps(out, indent=2) + '\n')

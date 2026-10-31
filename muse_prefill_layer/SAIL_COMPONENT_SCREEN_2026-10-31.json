@@ -1,0 +1,17 @@
+{
+  "repo": "t-head/DeepGEMM-for-sail",
+  "commit": "a90b6037c6a578e55bdd8882b84de85ed155f826",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "path": "README.md",
+  "git_blob": "aae6f6e6b6040d1db5a8e9a5bfc0f3de597676de",
+  "sha256": "ff45691b725bfb6a277a00bed5e4238fc2e2b1ee11d0aca0cabf163f7c44688b",
+  "url": "https://github.com/t-head/DeepGEMM-for-sail/blob/a90b6037c6a578e55bdd8882b84de85ed155f826/README.md",
+  "scope": "README/platform/API screen only; not source-port/runtime evaluation.",
+  "finding": "PPU fork requiring PPU SDK/HGCC/HGRTC and Zhenwu hardware; W4A16 API lists MXFP4 E8M0/INT4 BF16 recipes. Not a directly executable H200/NVFP4 component. No installation/port/check."
+}

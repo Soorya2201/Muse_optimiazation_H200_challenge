@@ -7,6 +7,22 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 ## Coverage status (2026-10-30)
 
 
+Oct31 late prefill follow-up:
+[components](muse_prefill_layer/PUBLIC_COMPONENT_FOLLOWUP_2026-10-31.md),
+[research library](muse_prefill_layer/RESEARCH_LIBRARY.md),
+[scale-sharing proof](muse_prefill_layer/SCALE_SHARE_RESEARCH_2026-10-31.md).
+118codepaths/13repos unchanged;752owner metadata179above/572below+self,
+4unresolved. Eleven newrepo matches,4SGLang defaultforks0ahead/nochanges.
+Trxphxle prefillmanifesthash checked,1.4774x external,not a pairedwin.
+Finegrained8files temporarily inspected: compatible NVFP4/BF16 grouped
+branch but no H200current-parent benchmark. Sonic7396f3e4Apache2selected
+license/docs/forward files pinned; inspected upstream path is ordinary
+Quack weights,not a complete NVFP4 adapter. Token rounding does not
+implement task routing. SailcurrentPPU-only backend excluded asdirectport.
+New K64scale-sharing CPU proof passes; actual activation/staging GPUport
+unimplemented. No GPUjob/submit or scoregain;currentprefillworkcontinues.
+
+
 Oct31 decoder follow-up:
 [public delta and operand screen](muse_decode_layer/PUBLIC_DELTA_AND_OPERAND_SCREEN_2026-10-31.md).
 Fresh94indexedpaths/10repos;1106rankedowner metadata,144above/961below+self,

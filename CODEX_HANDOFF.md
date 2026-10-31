@@ -68,6 +68,62 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 prefill scale-sharing work in progress; stay on prefill
+
+Previous goal turn made research/compiler/model progress and pushedb491e3e.
+Current work also makes progress: an independent K64scale-sharing encoding
+model now proves a prospective transfer of existing KPERM-style scale reuse
+to the current prefill expert layout. Read
+`muse_prefill_layer/SCALE_SHARE_RESEARCH_2026-10-31.md`,
+`PUBLIC_COMPONENT_FOLLOWUP_2026-10-31.md` and the new `RESEARCH_LIBRARY.md`.
+No new GPUjob or scored submission; canonical/scored sources unchanged.
+
+`tools/prefill_scale_permutation.py` and verifier pass4096Kbijection/inverse,
+65536actual-CODE_POS packed words/524288nibble+scale assignments,8192gated
+row positions and64exactinteger dots covering all16codes/all254finiteSF
+patterns. Weight/global-scale values preserved; FP32accumulation order
+would change. Scale pair constructions4->1 perthread/K64stage; logical
+SFload requests2048->512bytes,storedblock4096code+512SF unchanged. Existing
+same-address SFloads can broadcast; no HBM/physicalsharedtraffic win claim.
+Proofmodels source metadata,not an executed new torchrepack or GPUkernel.
+
+Actual normalized-X gather permutation and GEMM1->GEMM2 intermediate layout
+are NOT implemented. Currentgather uses2vectorstores/16elements; naiveperm
+scattersBF16pairs. GEMM1 usesstmatrix.trans contiguous8-column chunks then
+bulkpublish; permutationbreaksthatmapping,so a pointer edit is insufficient.
+**Next action on this same track:** derive concrete staging/shuffle/publish
+mapping that avoids an extra globalpass, estimate its cost, then implement
+matched actualpack/gather/consumer and inspectfullnative resources before
+allocatingH200. A per-lane decodedscale/shuffle alternative avoids Kperm
+but saves only8-(2+4)=2nominalops; unimplemented/unmeasured.
+
+Same-job0848e5e expert-profile model5/10/15/20%cuts ->1.019650/1.040089/
+1.061365/1.083532x;phasezero1.628048x;3%boardneeds7.5568%expertcut.
+These includePDLwaits/overlap,notcritical-path bounds or forecasts. No
+practical>=3%case frominstructioncountalone; do notlaunchblindwholeport.
+ClosedPIPE3/hybridexp/Lt-pin andolddecoder/MoEfamiliesstayclosed.
+
+Freshprefillpublicindex118paths/13repos unchanged;752owner metadata
+179above/572below+self,4unresolved. Metadatareuseonlyoriginaltimestamps
+<1h; ranksfresh. Elevennewrepo matches,4SGLangdefaultforks0ahead/nochanges.
+Trxphxleprefill59177ca matchespublishermanifest1.4774x;oldernativefamily,
+no stronger component established,no port. Finegrained-kernels5fe9dbb:
+8tempfileshashverified;explicitBF16activation branch acceptsNVFP4group16/
+E4M3/FP32globals,compatibleinprinciple,butB200-onlypublishedvalidation and
+prefilleagerbenchnoH200current-parentgain. Sonic7396f3e4Apache2unmodified
+license/docs/dispatch filespinned;reviewedupstreamordinaryQuackweights,
+notpackNVFP4adapter. Router/aggregationdiffers;tokenroundingnotlegalgeneric
+replacement. Modulepatchinginitializationmustnotbeimportedintosubmission;
+no sourceexecuted. Sail a90b603 isPPU/HGCC/HGRTCbackend,notdirectH200port.
+
+Live18:24:13UTC snapshotoverall145/1762,decoder145/1107,MoE178/1248,
+attention190/1190,BF16243/1543,prefill180/752. Allscoresunchanged;no rank1.
+Oct31routinechecksMoE6/8,attention1/8,BF163/8,decoder1/8,prefill4/8;
+allsubmits0. No GPUprocesslive. Stayonprefill; goalactive/incomplete,
+notblocked. Activecheckout `/Users/soorya/muse_work/continuation_20261030`;
+externalvolume stillabsent. No parallel agents. Evidencepushfollows.
+
+
 #### Oct31 decoder source/operand screen complete; no GPU run allocated
 
 Read `muse_decode_layer/PUBLIC_DELTA_AND_OPERAND_SCREEN_2026-10-31.md`.
