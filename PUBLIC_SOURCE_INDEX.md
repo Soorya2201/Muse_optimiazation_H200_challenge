@@ -46,7 +46,9 @@ to private/unpublished winners. Latest detailed reviews:
 - [Sampled unit/flush follow-up](muse_moe_w4a16/UNIT_FLUSH_FOLLOWUP_2026-10-31.md):
   complete V29 diagnostic exposes a reduced/full-build resource mismatch;
   rejects perturbed timing attribution. V30 simplifies sampling and uses
-  adjacent CTA pairs with explicit controls. CE's API/NVCC adapter and
+  adjacent CTA pairs with explicit controls; full H200 resource/perturbation/
+  numerical/control gates pass. Limited two-fixture models give no practical
+  >=3% publication-only lead. CE's API/NVCC adapter and
   NVIDIA's compiler/shared-spilling documentation are linked; the latter
   technique is incompatible as a drop-in change to this dynamic-SMEM,
   register-redistributing kernel. No public performance claim is our gain.

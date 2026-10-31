@@ -1,0 +1,273 @@
+{
+  "job": "b22622ebb61946df",
+  "status": "planning_only",
+  "scope": "Two individual synthetic M32/M256 fixtures, WG0 at four CTAs; no M128 full trace.",
+  "models": [
+    {
+      "scope": "phase_a_whole_publication",
+      "assumed_removed": "mean_flush_sum_us",
+      "fixtures": [
+        {
+          "m": 32,
+          "event_us": 140.4948839495588,
+          "per_cta_selected_flush_sum_us": [
+            4.16,
+            1.696,
+            5.504,
+            2.08
+          ],
+          "mean_flush_sum_us": 3.36,
+          "max_flush_sum_us": 5.504,
+          "sampled_phase_a_us": [
+            76.192,
+            82.08,
+            80.96,
+            83.072
+          ]
+        },
+        {
+          "m": 256,
+          "event_us": 206.8319251179566,
+          "per_cta_selected_flush_sum_us": [
+            5.055999999999999,
+            4.896,
+            4.608,
+            3.8720000000000003
+          ],
+          "mean_flush_sum_us": 4.608,
+          "max_flush_sum_us": 5.055999999999999,
+          "sampled_phase_a_us": [
+            110.752,
+            113.856,
+            124.896,
+            127.264
+          ]
+        }
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.0078199108632473
+    },
+    {
+      "scope": "phase_a_whole_publication",
+      "assumed_removed": "max_flush_sum_us",
+      "fixtures": [
+        {
+          "m": 32,
+          "event_us": 140.4948839495588,
+          "per_cta_selected_flush_sum_us": [
+            4.16,
+            1.696,
+            5.504,
+            2.08
+          ],
+          "mean_flush_sum_us": 3.36,
+          "max_flush_sum_us": 5.504,
+          "sampled_phase_a_us": [
+            76.192,
+            82.08,
+            80.96,
+            83.072
+          ]
+        },
+        {
+          "m": 256,
+          "event_us": 206.8319251179566,
+          "per_cta_selected_flush_sum_us": [
+            5.055999999999999,
+            4.896,
+            4.608,
+            3.8720000000000003
+          ],
+          "mean_flush_sum_us": 4.608,
+          "max_flush_sum_us": 5.055999999999999,
+          "sampled_phase_a_us": [
+            110.752,
+            113.856,
+            124.896,
+            127.264
+          ]
+        }
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.0108437944129758
+    },
+    {
+      "scope": "phase_a_all_flush",
+      "assumed_removed": "mean_flush_sum_us",
+      "fixtures": [
+        {
+          "m": 32,
+          "event_us": 140.4948839495588,
+          "per_cta_selected_flush_sum_us": [
+            5.984,
+            8.032,
+            7.167999999999999,
+            8.256
+          ],
+          "mean_flush_sum_us": 7.359999999999999,
+          "max_flush_sum_us": 8.256,
+          "sampled_phase_a_us": [
+            76.192,
+            82.08,
+            80.96,
+            83.072
+          ]
+        },
+        {
+          "m": 256,
+          "event_us": 206.8319251179566,
+          "per_cta_selected_flush_sum_us": [
+            5.055999999999999,
+            4.896,
+            8.991999999999999,
+            10.815999999999999
+          ],
+          "mean_flush_sum_us": 7.4399999999999995,
+          "max_flush_sum_us": 10.815999999999999,
+          "sampled_phase_a_us": [
+            110.752,
+            113.856,
+            124.896,
+            127.264
+          ]
+        }
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.015187922200715
+    },
+    {
+      "scope": "phase_a_all_flush",
+      "assumed_removed": "max_flush_sum_us",
+      "fixtures": [
+        {
+          "m": 32,
+          "event_us": 140.4948839495588,
+          "per_cta_selected_flush_sum_us": [
+            5.984,
+            8.032,
+            7.167999999999999,
+            8.256
+          ],
+          "mean_flush_sum_us": 7.359999999999999,
+          "max_flush_sum_us": 8.256,
+          "sampled_phase_a_us": [
+            76.192,
+            82.08,
+            80.96,
+            83.072
+          ]
+        },
+        {
+          "m": 256,
+          "event_us": 206.8319251179566,
+          "per_cta_selected_flush_sum_us": [
+            5.055999999999999,
+            4.896,
+            8.991999999999999,
+            10.815999999999999
+          ],
+          "mean_flush_sum_us": 7.4399999999999995,
+          "max_flush_sum_us": 10.815999999999999,
+          "sampled_phase_a_us": [
+            110.752,
+            113.856,
+            124.896,
+            127.264
+          ]
+        }
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.0192277951518294
+    },
+    {
+      "scope": "all_flush",
+      "assumed_removed": "mean_flush_sum_us",
+      "fixtures": [
+        {
+          "m": 32,
+          "event_us": 140.4948839495588,
+          "per_cta_selected_flush_sum_us": [
+            7.4879999999999995,
+            10.336,
+            8.703999999999999,
+            11.04
+          ],
+          "mean_flush_sum_us": 9.392,
+          "max_flush_sum_us": 11.04,
+          "sampled_phase_a_us": [
+            76.192,
+            82.08,
+            80.96,
+            83.072
+          ]
+        },
+        {
+          "m": 256,
+          "event_us": 206.8319251179566,
+          "per_cta_selected_flush_sum_us": [
+            7.263999999999999,
+            8.416,
+            11.136,
+            12.767999999999999
+          ],
+          "mean_flush_sum_us": 9.895999999999999,
+          "max_flush_sum_us": 12.767999999999999,
+          "sampled_phase_a_us": [
+            110.752,
+            113.856,
+            124.896,
+            127.264
+          ]
+        }
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.0198981763443395
+    },
+    {
+      "scope": "all_flush",
+      "assumed_removed": "max_flush_sum_us",
+      "fixtures": [
+        {
+          "m": 32,
+          "event_us": 140.4948839495588,
+          "per_cta_selected_flush_sum_us": [
+            7.4879999999999995,
+            10.336,
+            8.703999999999999,
+            11.04
+          ],
+          "mean_flush_sum_us": 9.392,
+          "max_flush_sum_us": 11.04,
+          "sampled_phase_a_us": [
+            76.192,
+            82.08,
+            80.96,
+            83.072
+          ]
+        },
+        {
+          "m": 256,
+          "event_us": 206.8319251179566,
+          "per_cta_selected_flush_sum_us": [
+            7.263999999999999,
+            8.416,
+            11.136,
+            12.767999999999999
+          ],
+          "mean_flush_sum_us": 9.895999999999999,
+          "max_flush_sum_us": 12.767999999999999,
+          "sampled_phase_a_us": [
+            110.752,
+            113.856,
+            124.896,
+            127.264
+          ]
+        }
+      ],
+      "two_fixtures_other_four_loads_unchanged_proxy": 1.0245562466973248
+    }
+  ],
+  "limits": [
+    "These are counterfactual scheduling proxies, not measured optimization gains or rigorous board/critical-path upper bounds.",
+    "Assumes every selected interval can be removed in full without replacement costs, lost overlap, extra work or memory-layout changes.",
+    "An interval can overlap WGMMA or a dependency elsewhere. Summing durations does not identify exposed latency.",
+    "Mean/max cover four selected CTAs only, not all CTAs/warpgroups or nearby routings.",
+    "REG112 instrumented scheduling differs from canonical; aggregate timing gates do not establish per-phase equivalence.",
+    "Synthetic fixture event times are not official scored inputs; M128 and the other four loads cannot be inferred from this sample."
+  ]
+}

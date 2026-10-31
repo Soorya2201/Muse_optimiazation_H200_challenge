@@ -92,22 +92,74 @@ Final V30 stress payload is 8340 characters, 9940 including a 1600-character
 tail allowance, below the service's 16,000-character limit. This tests
 telemetry fidelity and retention; it is not GPU performance evidence.
 
-## V30 status
+## V30: complete, all attribution gates pass
 
-Check `b22622ebb61946df` is queued/running. Immutable source
-`submission_v30_flush_trace_probe.py`, SHA-256
+Check `b22622ebb61946df`, cluster `sfo3`, passed five challenge tests and
+six timing cells: 2.381024185x, 5648.200 us, CI 2.345308822–2.416739548.
+Preparation took 271.711 seconds, within the 300-second limit. Immutable
+source `submission_v30_flush_trace_probe.py`, SHA-256
 `957edc0e485fc5878431a057eb081e6799485a6c5362035883d7d3b8713f91d0`.
 This is the fourth of eight reserved MoE checks on Oct31 UTC; zero submits.
-The four-arm controls, 24 timing groups and two full traces are retained.
-Full native resources and numerical/perturbation/canonical gates are
-pending. Do not start another job to replace this observation.
+The timed kernel is still canonical. This score is not an implementation gain.
 
-If the complete kernel still spills or the perturbation gate fails,
-close this profiling configuration. Do not compensate by treating the
-perturbed clocks as parent measurements or relaxing the gates afterward.
-A production change still needs a distinct mechanism, a practical model
-for at least 3% board gain, fresh/nearby/full correctness checks and an
-independent paired repeat before promotion.
+The complete 104.966-second independent diagnostic preserves all 24 groups,
+two traces and a 7172-character payload. Both BIG modes of both full native
+trace/control builds report 96 static registers, zero local bytes, 640 threads
+and 231168 dynamic shared bytes. Actual H200 results now establish full-build
+resource status that CE could not establish. The final source and generated
+native hashes also match the successful reduced compile archive.
+
+|M|Baseline / trace range|Canonical / matched baseline range|
+|---|---:|---:|
+|32|0.989401–1.009654|0.989723–0.997834|
+|128|0.990106–1.005233|0.986463–0.998220|
+|256|0.988564–1.011072|0.987760–1.006688|
+
+Every group passes the ±5% trace and ±2% control gates. Initial/fresh
+agreement errors are zero, A0/A1 maximum median offset is 1.10654%, and
+all local-memory gates pass. Accepted aggregate gates make this diagnostic
+more useful; they do not prove identical internal schedules to canonical.
+
+The M32 and M256 full replays contain 26 and 35 flush intervals. All six
+profiles, complete available logs, 24 raw groups, 61 raw frames, roster and
+all 132 CTA cuts were read and archived. Whole-publication median intervals
+are 0.880/0.672 us. Phase-A partial-flush medians are 2.912/3.184 us, with
+readback membership unknown. Phase-B designated-finisher medians are
+1.504/1.696 us. Four selected CTAs and WG0 are not a sample of all hardware
+work. Labels come from schedule metadata; timestamps are observed.
+
+## What this changes in the next optimization decision
+
+`FLUSH_SCOPE_MODELS_b22622ebb61946df.json`, reproduced by
+`tools/model_moe_flush_scope.py`, retains the per-CTA interval sums and
+explicitly limited planning models. Only the two sampled synthetic loads
+change, with the other four held unchanged. Raw event times come from the
+same-job A0/A1 control, with no cross-job subtraction or guessed graph cost.
+
+|Counterfactual removal|Mean selected-CTA proxy|Max selected-CTA proxy|
+|---|---:|---:|
+|All phase-A whole-publication intervals|1.007820x|1.010844x|
+|All phase-A flush intervals|1.015188x|1.019228x|
+|All flush intervals in both phases|1.019898x|1.024556x|
+
+These are not measured gains, rigorous upper bounds, or predictions of the
+board. They assume entire intervals vanish without replacement/overlap costs.
+M128, other CTAs/warpgroups and other routes remain unmeasured. The result
+provides no new practical >=3% case for a publication-only rewrite. Prior
+NOFENCE/REG112/group-depth negatives remain closed; do not relaunch them.
+Removing split fixups also requires accounting for the workload imbalance
+already quantified in `PHASE_AND_LIBRARY_FOLLOWUP_2026-10-31.md`.
+
+Next design work should target the phase-A operand-delivery/compute path
+outside flushes, or a genuinely different scheduling architecture with a
+measured workload model. A template/code-footprint change is only a research
+hypothesis until its issued instructions and live-state costs are established;
+it is not evidence for another H200 sweep. The accepted V30 diagnostic can
+be reused for a distinct candidate, retaining controls and the original
+sampling limitations. A production candidate still needs a practical >=3%
+model, fresh/nearby/full correctness and independent paired repetitions.
+No other GPU job is live, no canonical/scored kernel changed, and rank1
+remains open. Do not spend the remaining reserve simply to repeat negatives.
 
 ## Additional compiler technique screened
 
