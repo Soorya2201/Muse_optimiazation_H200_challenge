@@ -1,0 +1,243 @@
+{
+  "scope": "CPU execution-model proof of subgroup shuffle and warp-owned in-place staging. No CUDA execution, resource or performance claim.",
+  "parent_sha256": "8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5",
+  "native_before_sha256": "1d1ae00d03c48625eaa90b0ca10bcf74bd5a7df1f638da42ab77c26f440f44fd",
+  "native_after_sha256": "e36c0290411a94823005672cda2c075242311ec4f732e04baec84e99f164dbbe",
+  "helper_sha256": "7709a1a7bd28ae77ac7ca1e3237c3edd1e6a05f076a838b1d65f13e7745562fc",
+  "gather_words": 2048,
+  "staging_cases": [
+    {
+      "token_width": 32,
+      "raw_offset": 0,
+      "words": 1024,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 32,
+      "raw_offset": 16384,
+      "words": 1024,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 32,
+      "raw_offset": 32768,
+      "words": 1024,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 32,
+      "raw_offset": 49152,
+      "words": 1024,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 64,
+      "raw_offset": 0,
+      "words": 2048,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 64,
+      "raw_offset": 16384,
+      "words": 2048,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 64,
+      "raw_offset": 32768,
+      "words": 2048,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 64,
+      "raw_offset": 49152,
+      "words": 2048,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 96,
+      "raw_offset": 0,
+      "words": 3072,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 96,
+      "raw_offset": 16384,
+      "words": 3072,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 96,
+      "raw_offset": 32768,
+      "words": 3072,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 96,
+      "raw_offset": 49152,
+      "words": 3072,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 128,
+      "raw_offset": 0,
+      "words": 4096,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 128,
+      "raw_offset": 16384,
+      "words": 4096,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 128,
+      "raw_offset": 32768,
+      "words": 4096,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 128,
+      "raw_offset": 49152,
+      "words": 4096,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 160,
+      "raw_offset": 0,
+      "words": 5120,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 160,
+      "raw_offset": 16384,
+      "words": 5120,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 160,
+      "raw_offset": 32768,
+      "words": 5120,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 160,
+      "raw_offset": 49152,
+      "words": 5120,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 192,
+      "raw_offset": 0,
+      "words": 6144,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 192,
+      "raw_offset": 16384,
+      "words": 6144,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 192,
+      "raw_offset": 32768,
+      "words": 6144,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 192,
+      "raw_offset": 49152,
+      "words": 6144,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 224,
+      "raw_offset": 0,
+      "words": 7168,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 224,
+      "raw_offset": 16384,
+      "words": 7168,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 224,
+      "raw_offset": 32768,
+      "words": 7168,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 224,
+      "raw_offset": 49152,
+      "words": 7168,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 256,
+      "raw_offset": 0,
+      "words": 8192,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 256,
+      "raw_offset": 16384,
+      "words": 8192,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 256,
+      "raw_offset": 32768,
+      "words": 8192,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    },
+    {
+      "token_width": 256,
+      "raw_offset": 49152,
+      "words": 8192,
+      "extra_global_bytes": 0,
+      "extra_shared_allocation_bytes": 0
+    }
+  ],
+  "staging_words": 147456,
+  "bf16_raw_patterns": 65536,
+  "scale_addresses_checked": true,
+  "synchronization": "Consumer barrier after all stmatrix writers; warp reads then __syncwarp then disjoint row permutation stores; existing proxy fence and consumer barrier before original queue/bulk publish.",
+  "caveats": [
+    "Source address proof is not actual GPU race-checking.",
+    "Complete fused-kernel resource status is unknown.",
+    "No physical bank-conflict, throughput or whole-board gain is established."
+  ]
+}

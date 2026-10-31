@@ -1,25 +1,22 @@
 # Prefill-layer optimization record
 
-## Oct31 scale-sharing representation proof (work in progress)
+## Oct31 scale-sharing H200 result (supersedes earlier proof-only status)
 
-Current canonicalv20 and scored1.784958x are unchanged. No new GPUjob.
-A K64bit permutation can share one pair of scales across four MMA steps;
-CPU proof passes65536words/524288assignments,8192gatedrow positions and
-64exactinteger dots covering all16codes/254finite scale patterns. This
-adapts KPERM-style reuse,not a newcodec. Timed normalized-X gathering and
-GEMM1 stmatrix/publishing mapping are NOT implemented; output staging is
-the next concrete feasibility obstacle. Lower logical scale-load requests
-are not HBM/physicalshared-bus savings. FP32 accumulation order changes.
-Same-job phase-duration proxy needs7.5568%expert cut to model3%board gain;
-no practical runtime gain is established. Stay on prefill for the full
-packing/staging/consumer feasibility work before any H200 allocation.
-See [research/proof](SCALE_SHARE_RESEARCH_2026-10-31.md),
-[library](RESEARCH_LIBRARY.md) and
-[source follow-up](PUBLIC_COMPONENT_FOLLOWUP_2026-10-31.md).
-Fresh118paths/13repos unchanged;752rankedowner metadata,4unresolved.
-New licensed SonicMoE docs/source pinned; finegrained explicit BF16 path
-is compatible in principle but B200-only published validation; Sail isPPU.
-Routine checksremain4/8,submits0;no canonicalchange or rank1claim.
+Actual K64 repack, BF16 gather and shared GEMM1 staging are implemented.
+CPU movement/packing and reduced compiler checks pass. H200 diagnostic
+0ad97c9c2d0b4170 on sfo3 completes5nearby/24timing groups; all initial/fresh
+numerics and raw staging tests pass. Full linked FINE0/1 modules both have
+168regs/8local bytes/max384threads; no new local allocation.
+
+753-token expert chain gains2.8–3.6%;3012 gains1.0–1.5%;16384 loses~1%.
+A/A max0.361%, matched control max0.288%. All seven fixed policies fail
+whole-board>=3% gate.753-only worst model1.004024288x; small component gain
+is preserved for combinations, not promoted. Whole check1.817619290x times
+UNCHANGED parent, not this candidate. All8profiles,available logs and768raw
+timestamps read/archived. No canonical/scored change or submission.
+See [full implementation and outcome](SCALE_SHARE_H200_2026-10-31.md).
+Prefill checks5/8, all submits0. Close tested post-stmatrix staging form;
+next sequential track is MoE. No blind family rerun or relaxed gates.
 
 Oct30: controlled hybrid-exp/PIPE-RRS study is archived in
 HYBRID_PIPELINE_2026-10-30.md. Checks2d21c2cf18c84e2e(sfo3) and
@@ -251,3 +248,18 @@ co-resident kernels compete for HBM, as v6 demonstrated. Plan: use PDL/TMA prefe
 for metadata and the first hot-expert tiles, cap residency, and benchmark bandwidth
 contention before expanding the overlap.
 
+
+
+## Oct31 K64 scale-sharing integration
+
+Implemented the missing gather and GEMM1 output mapping without an extra
+global pass: eight subgroup shuffles before existing gather vector stores;
+one consumer barrier and warp-owned raw BF16-pair permutation in existing
+GEMM1 shared staging. Existing proxy fence/publisher remain. Actual torch
+repack preserves nibbles/scales, CPU tests pass, and reduced N256/FINE0
+parent/new native compiles both report168regs/8-byte ABI frame/zero spills.
+These prove neither a whole-dispatch resource result nor a performance win.
+Prepare-only H200 diagnostic0ad97c9c2d0b4170 on sfo3 is complete; all
+numerics/resources pass but no fixed policy meets3% whole-board gate.
+Canonical whole-layer timed path unchanged. The fixed numerical/control/
+policy gates and all protocol details are in SCALE_SHARE_H200_2026-10-31.md.

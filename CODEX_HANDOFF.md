@@ -68,6 +68,42 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 prefill K64 integration cycle complete; next sequential track MoE
+
+Read `muse_prefill_layer/SCALE_SHARE_H200_2026-10-31.md`. Previous turn made
+CPU/source research progress; this cycle implements actual torch repacking,
+eight-shuffle BF16 gather and warp-owned in-place GEMM1 staging. CPU actual
+pack/movement proofs pass; reduced N256/FINE0 native builds both168regs/
+8-byte ABI stack/zero spills. Full H200 check0ad97c9c2d0b4170, sfo3, passes
+5tests/8timings at1.817619290x,CI1.790355–1.844884,prepare126.770s.
+Timed whole-layer kernel remains unchanged parent; point score is NOT gain.
+
+Independent73.640s diagnostic completes5nearby/24groups/768exacttimestamps,
+all raw8width movement and initial/fresh numerical gates pass. Full FINE0/1
+old/new resources both168regs/8local bytes/max384threads. MaxrelativeL2
+.000273915/maxnormalizedrow.002163922. Matched old/new ratios7531.028412–
+1.036009,30121.009664–1.014855,16384.989214–.990395. AAmax.360943%,control
+max.288000%; all seven fixed policies fail3% whole-board gate.753only
+passes component gates but worst proxy1.004024288x. Preserve this small
+positive component for qualifying combinations; do not promote alone.
+Large-token absolute drift retained; no causal bottleneck established.
+All available8profiletables/local+remote logs/full decoded report read.
+
+No canonical/scored file changed or scored submission. Close this tested
+post-stmatrix permutation form; no blind width/fraction sweeps or relaxed
+gates. Distinct no-staging/per-GEMM approaches remain unimplemented, not
+assumed wins. Prefill checks5/8;MoE6/8,attention1/8,BF163/8,decoder1/8;
+all submits0 for Oct31 UTC. No GPU job live. Goal active/incomplete, no rank1.
+Next sequential trackMoE: read its AGENTS/TASK and latest closed stage-loop,
+scalar-stage and unit/flush reports; find a distinct >=3% opportunity first.
+
+Live18:45:36UTC snapshot overall147/1763,decoder147/1108,MoE178/1249,
+attention192/1190,BF16245/1545,prefill181/753; all scored speedups unchanged.
+GitHub reverified PRIVATE. Active workspace remains internal continuation
+`/Users/soorya/muse_work/continuation_20261030`,external volume absent.
+No subagents. Evidence commit/push follows this note.
+
+
 #### Oct31 prefill scale-sharing work in progress; stay on prefill
 
 Previous goal turn made research/compiler/model progress and pushedb491e3e.

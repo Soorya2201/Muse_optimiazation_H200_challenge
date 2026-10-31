@@ -9,7 +9,7 @@ fresh-input graph behavior and independent H200 measurements.
 |---|---|
 | Persistent RS-WGMMA NVFP4 experts, fused SwiGLU, variable token widths | Already in canonical vjeux parent; avoid crediting it as a new optimization. |
 | Lee eight-operation decode layout | CPU and paired H200 comparisons complete; recurring2% gate not met, not adopted. |
-| KPERM-style scale reuse on prefill K64 blocks | New exact encoding proof; normalized-X gather and GEMM1 output staging remain unimplemented. See dated scale-share report. |
+| KPERM-style scale reuse on prefill K64 blocks | Implemented and H200-tested:753-token chain gains2.8–3.6%,3012 gains1.0–1.5%,16384 loses~1%. All numerics/resources pass; seven fixed policies fail3% whole-board gate (753-only worst proxy1.004024x). No promotion. Close tested post-stmatrix form; preserve small-size component result. See SCALE_SHARE_H200_2026-10-31.md. |
 | Cooperative per-lane scale construction plus subgroup exchange | Proposed smaller alternative; no implementation or timing. |
 | Three-WG/single-score hybrid exp | Measured negative on identical independent fixtures; closed. |
 | Two-WG dual-score PIPE3 | Numerics/resource checks completed, slower than three-WG incumbent; closed configuration. |

@@ -1,0 +1,12 @@
+{
+  "scope": "CPU-only source/fixture/report preflight; no GPU claim.",
+  "source_sha256": "be06c8608f34889a35e57255af2ed08e97b747f0af5bbfb1ad125461dcb0c054",
+  "canonical_prefix_exact": true,
+  "kernel_functions_unchanged": true,
+  "fixture_unique_routes_checked": true,
+  "stress_rows": 24,
+  "stress_exact_ns_values": 768,
+  "stress_payload_chars": 9440,
+  "retention_limit": 16000,
+  "own_source_syntax": "passed"
+}
