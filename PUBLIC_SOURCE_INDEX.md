@@ -7,6 +7,18 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 ## Coverage status (2026-10-30)
 
 
+Oct31 late BF16 follow-up:
+[global normalization](muse_bf16_proj/GLOBAL_NORMALIZATION_2026-10-31.md).
+244indexedpaths/13repos unchanged. Newly pinned BSD-3-Clause
+CloudflareUnweight db0e6d3:17source/license/buildfiles113104bytes,allhashes
+verified,neverexecuted. Directpalette/Huffman stage distinctions,ownCPU
+byte estimates and78legalshape/variantgeometries are archived. No direct
+whole-stack port;compression is not a measured speedup. A narrower existing
+fixed-window normalization idea is implemented independently in SK2 while
+retaining original escape corrections. V43H200check3aa502d1eb8f4854running;
+no canonical/scored change or gain yet.
+
+
 Oct31 late attention follow-up:
 [direct FP8 research](muse_attention_decode/DIRECT_FP8_RESEARCH_2026-10-31.md).
 Challenge index225paths/13repos,zero new blobs. Two new general primary

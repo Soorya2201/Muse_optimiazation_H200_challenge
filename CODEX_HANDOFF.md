@@ -68,6 +68,48 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 BF16 global normalization in progress; stay on BF16
+
+Previous attention cycle made actual CPU/compiler/source progress,pushed
+8397194. Current work implements a new global-exponent-normalized SK2
+component,retaining original escape records and restoring each FP32 MMA
+partial before original-unit correction/reduction. Read
+`muse_bf16_proj/GLOBAL_NORMALIZATION_2026-10-31.md`.
+
+V42C++prototype is unsubmitted:NVCC split mask/OR,core9not7;preserved.
+V43packs originalbase metadata intoignoredLOP3bits;actualsm90acore7vsold12,
+both16regs/0stack/spills. Restorecostisoutsidehotdecode,notanotherlaunch.
+CPU487424normaldecodedpatterns/119bases/243712ternarywords/512bounded
+256termFP32dotfixturespass. Homogeneityrequiresnooverflow/underflow/FTZ
+crossing;notallBF16inputsorGPUproof. Complete127010bytegeneratednative
+source/specs/238hostmetadata-callpreflightpasses,canonicalprefixunchanged.
+Same-jobmodel:3%boardneeds9.2082%targetcellcut;noforecast. Prior sign-only
+transferclosed,noaccuracy/resource/controlgatesrelaxed.
+
+V43SHA7967d1c4492558893b9c95d605f3193e78067f51f6d8cf27839fe9bf2c095e65.
+Check3aa502d1eb8f4854launched20:26UTC,sfo3,lastconfirmedRUNNING.
+FourthofeightBF16routinechecks,allsubmits0. Pollsamehandlethroughtransient
+failures,no duplicate job. Readall30profiles/logsifparentpasses;decodefull
+BF16_C12_NORM_Zreport withtools/extract_bf16_c12_permute_probe.py.
+Expected72groups/5nearby,2seeds/4pads,8balancedgraphrounds,read256MiBflush,
+rawdeviceevents/selectedhostcalibration,fullresources/numerics/freshdata.
+Onlyqualifiersgetrealchangedtimed-pathchecks/repeatbeforepromotion.
+
+FreshBF16index244paths/13repos,0newblobs. NewBSD3Unweightdb0e6d3
+17files113104bytespinned/hashesverified,neverexecuted. Itsdirectpalette
+runtimeis12bits/weightplusmetadata/verbatim;noin-kernelHuffmandecode.
+OwnCPUGaussian256rows/K1024/4096/8192:directpalette0.46–0.63%largerthan
+optimisticC12bytes;Huffman0.94–8.22%smallerincludingsmall-sample32KiBtable,
+butseparateexpdecode~3.327logicalB/weightbeforecache/metadata/activations.
+78legalgeometryrowsmodeled;notH200timing. Author'sH100reporthasthroughput
+penalty,notcompression=speedup. No whole-stack port.
+
+Canonical/scoredsourcesunchanged. Goalactive/incomplete,no rank1.
+Externalworkspaceactive,internalbackupat8397194untilnextpush/FF.
+Untrackedresearch/public/madhavan_721c627/preserved,neverstage/publish.
+Noagents. StayBF16untiljobterminalandevidenceinspected;pushWIPfollows.
+
+
 #### Oct31 attention direct-FP8 CPU/compiler cycle complete; next track BF16
 
 Read `muse_attention_decode/DIRECT_FP8_RESEARCH_2026-10-31.md`. The previous

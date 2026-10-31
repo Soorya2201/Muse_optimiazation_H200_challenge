@@ -1,5 +1,15 @@
 # BF16 projection optimization research library
 
+Oct31 late work in progress: [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md)
+adds actual fixed-window arithmetic/parameter-layout code to the existing
+SK2 path. CPU storage/FP32 and sm90a7-instruction core screens pass;full
+H200check3aa502d1eb8f4854is running. This is additional normalization,
+not a retry of the closed sign-only transfer. No score gain yet;timed
+parent unchanged. New pinned BSD-3-Clause
+[Unweight source](https://github.com/cloudflareresearch/unweight-kernels/tree/db0e6d3d4505cf71379f6b9b4567acf598bc186c)
+and independent byte/geometry screen reject a direct whole-stack port.
+The dated report preserves all sample terms and transfer limits.
+
 Oct31 terminal update: V39/V40/V41 all pass the unchanged timed parent;
 all nine-route transfer policy sets reject. The final read-flush run
 completes 72 groups with best worst-group board proxy 1.000443x and no

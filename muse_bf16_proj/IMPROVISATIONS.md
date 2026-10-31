@@ -1,5 +1,13 @@
 # `muse_bf16_proj` optimization record
 
+Oct31 late active experiment: [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md).
+V42preserves an unsubmitted C++form that compiles to9decoder instructions.
+V43uses a scalar parameter's otherwise ignored bits to carry the original
+base while a fixed-window LOP3 decoder runs at7instructions. Original-unit
+partial restoration precedes unchanged escape corrections. CPU exact-bit,
+bounded FP32 and source/host setup screens pass;H200check3aa502d1eb8f4854
+is running. Canonical timed source unchanged;no gain claimed before results.
+
 Oct31 terminal update: V39/V40/V41 all pass the unchanged timed parent;
 all nine-route transfer policy sets reject. The final read-flush run
 completes 72 groups with best worst-group board proxy 1.000443x and no

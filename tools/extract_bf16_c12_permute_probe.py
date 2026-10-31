@@ -15,12 +15,12 @@ args = parser.parse_args()
 ROOT = Path(__file__).resolve().parents[1]
 folder = ROOT / 'muse_bf16_proj'
 receipt = json.loads((folder / 'run_receipts' / (args.job+'.json')).read_text())
-markers=('BF16_C12_PERMUTE_Z ','BF16_C12_DEVICE_Z ')
+markers=('BF16_C12_PERMUTE_Z ','BF16_C12_DEVICE_Z ','BF16_C12_NORM_Z ')
 lines=[s for s in receipt['log_tail'].splitlines() if s.startswith(markers)]
 payloads=[s.split(' ',1)[1] for s in lines]
 assert len(payloads)==1, 'Require one complete final diagnostic, never treat missing logs as a pass'
 wire=zlib.decompress(base64.b64decode(payloads[0]))
-if lines[0].startswith(markers[1]):
+if lines[0].startswith(markers[1:]):
     size=struct.unpack_from('<I',wire)[0];d=json.loads(wire[4:4+size]);buf=wire[4+size:]
     count=len(d['cases'])*4*d['rounds'];width=d.get('time_word_bytes',4)
     assert width in(2,4) and len(buf)==count*width
@@ -74,7 +74,8 @@ if d['status']=='complete':
             models.append(math.prod(loadratios)**(1/len(loadratios)))
         out['policies'].append(dict(ids=sorted(chosen),worst=min(models),median=statistics.median(models),
             best=max(models),component_gates=chosen<=eligible,qualifies=chosen<=eligible and min(models)>=1.03))
-target=folder/('C12_PERMUTE_REPORT_'+args.job+'.json')
+label='GLOBAL_NORMALIZATION_REPORT_' if lines[0].startswith(markers[2]) else 'C12_PERMUTE_REPORT_'
+target=folder/(label+args.job+'.json')
 assert not target.exists()
 target.write_text(json.dumps(out,indent=2)+'\n')
 print('Diagnostic',d['status'],'elapsed',d.get('elapsed_s'),'payload',out['payload_chars'],'error',d.get('error'))

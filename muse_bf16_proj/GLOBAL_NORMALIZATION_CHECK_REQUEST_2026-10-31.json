@@ -1,0 +1,8 @@
+{
+  "requested_utc": "2026-10-31T20:26:07.488274+00:00",
+  "source_sha256": "7967d1c4492558893b9c95d605f3193e78067f51f6d8cf27839fe9bf2c095e65",
+  "response": {
+    "job_id": "3aa502d1eb8f4854",
+    "problem": "muse_bf16_proj"
+  }
+}

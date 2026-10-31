@@ -1,0 +1,21 @@
+{
+  "scope": "CPU exact storage recovery plus bounded scalar FP32/libc-fmaf arithmetic; not GPU MMA validation.",
+  "status": "pass",
+  "decoded_bit_patterns": 487424,
+  "global_base_range": [
+    1,
+    119
+  ],
+  "dot_fixtures": 512,
+  "terms_each": 256,
+  "accumulators": 4,
+  "lut_parameter_cases": 119,
+  "ternary_word_cases": 243712,
+  "module_sha256": "f35189a65eb1cba7cc45b275c240a19a732185a1894b997f163f7ab98477eb24",
+  "limitations": [
+    "FP32 homogeneity requires no intermediate overflow/underflow/FTZ crossing.",
+    "Extreme BF16 activations and GPU MMA accumulation remain unproven.",
+    "Escaped original weight bits/correction pipeline are unchanged; only main partials rescaled.",
+    "Existing sign-layout-only experiment is closed; this tests additional global exponent normalization."
+  ]
+}

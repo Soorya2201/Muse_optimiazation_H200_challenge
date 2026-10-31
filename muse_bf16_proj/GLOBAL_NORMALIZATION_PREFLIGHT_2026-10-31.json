@@ -1,0 +1,210 @@
+{
+  "scope": "CPU AST/native generation, exact host-call metadata and same-job scenario screen; no GPU performance prediction.",
+  "source_sha256": "7967d1c4492558893b9c95d605f3193e78067f51f6d8cf27839fe9bf2c095e65",
+  "native_sha256": "f1eaffe74feecafca16b879acd10d259b9dc2a680e5fd3041427e55a807338ad",
+  "native_bytes": 127010,
+  "specs": [
+    {
+      "id": 0,
+      "layer": "qkv_gate",
+      "m": 8,
+      "cfg": [
+        "qkv8t_r144",
+        "qkv_gate",
+        2304,
+        24,
+        3,
+        1,
+        4,
+        2,
+        2,
+        1
+      ],
+      "args": "1,8,3,1,4,2,5,true,false,2,1,__nv_bfloat16",
+      "family": 1,
+      "pk": true,
+      "n": 2304
+    },
+    {
+      "id": 1,
+      "layer": "unpooler",
+      "m": 8,
+      "cfg": [
+        "slice8_r192",
+        "unpooler",
+        1024,
+        8,
+        1,
+        1,
+        8,
+        2,
+        2,
+        1
+      ],
+      "args": "1,8,1,1,8,2,4,true,false,2,1,__nv_bfloat16",
+      "family": 1,
+      "pk": true,
+      "n": 1024
+    },
+    {
+      "id": 2,
+      "layer": "qkv_gate",
+      "m": 16,
+      "cfg": [
+        "qkv16t_r200",
+        "qkv_gate",
+        2304,
+        24,
+        3,
+        1,
+        4,
+        2,
+        2,
+        1
+      ],
+      "args": "1,16,3,1,4,2,5,true,false,2,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 2304
+    },
+    {
+      "id": 3,
+      "layer": "o",
+      "m": 16,
+      "cfg": [
+        "o16t_r68",
+        "o",
+        8192,
+        32,
+        2,
+        2,
+        1,
+        4,
+        2,
+        1
+      ],
+      "args": "1,16,2,2,1,4,3,true,false,2,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    },
+    {
+      "id": 4,
+      "layer": "unpooler",
+      "m": 16,
+      "cfg": [
+        "unpooler16t_r72",
+        "unpooler",
+        8192,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "1,16,2,2,2,2,3,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    },
+    {
+      "id": 5,
+      "layer": "qkv_gate",
+      "m": 32,
+      "cfg": [
+        "qkv32_r208",
+        "qkv_gate",
+        2304,
+        24,
+        3,
+        1,
+        4,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,3,1,4,2,4,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 2304
+    },
+    {
+      "id": 6,
+      "layer": "o",
+      "m": 32,
+      "cfg": [
+        "o32h_r100",
+        "o",
+        8192,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,2,2,2,2,3,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    },
+    {
+      "id": 7,
+      "layer": "pooler",
+      "m": 32,
+      "cfg": [
+        "pooler32_r144",
+        "pooler",
+        4096,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,2,2,2,2,5,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 4096
+    },
+    {
+      "id": 8,
+      "layer": "unpooler",
+      "m": 32,
+      "cfg": [
+        "u32_r96",
+        "unpooler",
+        8192,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,2,2,2,2,3,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    }
+  ],
+  "host_calls": 238,
+  "stage_counts_unchanged": true,
+  "source_changes": "Packed1 decoder/metadata/base extraction and pre-correction partial rescale only; original timed prefix unchanged.",
+  "opportunity_receipt": "b89f4e5d007047d9",
+  "phase_zero_board": 1.8268410518786338,
+  "uniform_cut_to_gain": {
+    "0.05": 1.0159310246758282,
+    "0.1": 1.0327189075324696,
+    "0.15": 1.050449511863739,
+    "0.25": 1.089152001303573
+  },
+  "uniform_target_cell_time_cut_needed_for_3pct": 0.09208226652062729,
+  "limitations": "Decoder share is not measured. Earlier sign-layout-only transfer found no eligible gain. This additional normalization may still lose to memory bandwidth, restore overhead or register pressure."
+}

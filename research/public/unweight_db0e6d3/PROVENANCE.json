@@ -1,0 +1,128 @@
+{
+  "captured_utc": "2026-10-31T20:13:41.856324+00:00",
+  "repository": "cloudflareresearch/unweight-kernels",
+  "commit": "db0e6d3d4505cf71379f6b9b4567acf598bc186c",
+  "license": "BSD-3-Clause",
+  "files": [
+    {
+      "path": ".gitmodules",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/.gitmodules",
+      "bytes": 134,
+      "git_blob": "b02bac2e1bba362b5ad3d5685ea4c58bfe4717f1",
+      "sha256": "f125d2b402d568427029d246961bfc7d1fe4178fe069cfed3ba0e0ded16b524f"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/LICENSE",
+      "bytes": 1501,
+      "git_blob": "36839cb880ed6bde9c83fb81b63089662b390be2",
+      "sha256": "1fe748a35e168bf28d3ed6d52db822f9730d13b75f6e6b88e7fdf077c224426a"
+    },
+    {
+      "path": "Makefile",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/Makefile",
+      "bytes": 694,
+      "git_blob": "1dd118222e435d5b02c644833f494d0f5c7e80be",
+      "sha256": "6ec05bb6c7d01a8dfd0fb0e176fb36b8a7b24b118ecc32772afe473933cb31f0"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/README.md",
+      "bytes": 1893,
+      "git_blob": "e0e71912c88beaebcc44799b3a9944803d6cf524",
+      "sha256": "b29e0f079611c1785617a383eff7412a14b8496860f1df160f304ae17806d6ba"
+    },
+    {
+      "path": "src/build_tables.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/build_tables.cuh",
+      "bytes": 6582,
+      "git_blob": "b2f72c50321fe76b8d0308da596452c3eeac1b3d",
+      "sha256": "c94ad647a162a297cdc6b292343b73dd5d9ea897239e778a4f4a8390b94dd9ec"
+    },
+    {
+      "path": "src/collect_stats_and_extract_sm.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/collect_stats_and_extract_sm.cuh",
+      "bytes": 7884,
+      "git_blob": "5b8f29a6e9b463cfcbd5f9aced5581b4c6acc6f9",
+      "sha256": "7db675fd47cac0f72edf7176204edcc660e6f5c6682d4d8bceb40b920617fef0"
+    },
+    {
+      "path": "src/common.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/common.cuh",
+      "bytes": 7699,
+      "git_blob": "10082e7c064a8fd4c7e7fc194dbac39e7c80978d",
+      "sha256": "fbbfdd4eec289b35893a17b26337f77b107c4221c68396032b03a0b5bea4f7ca"
+    },
+    {
+      "path": "src/compute_tile_metadata.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/compute_tile_metadata.cuh",
+      "bytes": 10467,
+      "git_blob": "5a753b4c13d57df72f53d2ce8830bc4acadd318b",
+      "sha256": "1751f019fbcebf84259d4813c95105cfcba7ffd9f0b4c8575a4945f208a4071b"
+    },
+    {
+      "path": "src/decode.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/decode.cuh",
+      "bytes": 13737,
+      "git_blob": "01835ec4a9d415d9cef052a8ef7a21fb4352d414",
+      "sha256": "1733b0460e374324db93767d1b0d1cf92efc269744c63e210d35f35b0f821797"
+    },
+    {
+      "path": "src/encode.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/encode.cuh",
+      "bytes": 6355,
+      "git_blob": "930ef0af986ed9f002d758f55e85668288217405",
+      "sha256": "c5002da9fd67c87b0233e53916d2aa59e0214725b51a7ead7d09e33cf86a8a8f"
+    },
+    {
+      "path": "src/encode_to_palette.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/encode_to_palette.cuh",
+      "bytes": 4769,
+      "git_blob": "427f91199bb7487bbe356ab0afbc8b8856b83280",
+      "sha256": "e2ef91afead3c89d73ccbc86c08011b53a7304e5421659849f4fb5cd2d1fd74c"
+    },
+    {
+      "path": "src/huffman_bit_reader.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/huffman_bit_reader.cuh",
+      "bytes": 1751,
+      "git_blob": "52dacfc4da8dd8b8b38912d9fec3f93b28aece14",
+      "sha256": "97c64f01be739504bdffc5be496ad510b572bb92d8c130aea797feeebf116dbc"
+    },
+    {
+      "path": "src/layouts.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/layouts.cuh",
+      "bytes": 6262,
+      "git_blob": "64f5de889c6f108c061be814e537246d38e92fd5",
+      "sha256": "1e7a6d57b4a37039000cd0399f56958f312b83f487d74037d9b8f10153da7726"
+    },
+    {
+      "path": "src/metadata_lens_to_offsets.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/metadata_lens_to_offsets.cuh",
+      "bytes": 5623,
+      "git_blob": "0451e382fef786b49fd61c64bfff71aed07328b5",
+      "sha256": "9a0d02a9e46f2e5ed2f845c6ef01c354410b22cab3c4705b52f9b74eeb887a8e"
+    },
+    {
+      "path": "src/reconstructive_matmul.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/reconstructive_matmul.cuh",
+      "bytes": 30565,
+      "git_blob": "61ee49c1f7d4c8505a7693c880e6939f6cabff0c",
+      "sha256": "aae13e0268a1ebae96bb240516976681b7fc353eb89881caaa5d7b6b0627560b"
+    },
+    {
+      "path": "src/transcode_to_palette.cuh",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/transcode_to_palette.cuh",
+      "bytes": 6844,
+      "git_blob": "512c59dc043fe5ce32c140908ff6f85efd804f8c",
+      "sha256": "f103d3d57eb2fc52d880f742b70d2e1f3e3cae63ffe187bffb5e83eca6ce0072"
+    },
+    {
+      "path": "src/unweight.cu",
+      "url": "https://raw.githubusercontent.com/cloudflareresearch/unweight-kernels/db0e6d3d4505cf71379f6b9b4567acf598bc186c/src/unweight.cu",
+      "bytes": 344,
+      "git_blob": "8b15d2047faf54b9eabb6212d81c591bbb9edead",
+      "sha256": "b05e3250b32694c297d603e32727a34599884ba39b5f1ea4f5dd01c21a23ec91"
+    }
+  ],
+  "scope": "Public primary source static research only. No downloaded modules imported or executed; no kernel port yet."
+}
