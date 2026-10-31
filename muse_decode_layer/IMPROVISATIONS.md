@@ -1,5 +1,14 @@
 # muse_decode_layer: optimizations, measurements, and new ideas
 
+
+Latest Oct31 decoder cycle: see [rounded-width experiment](ROUNDED_WIDTHS_RESEARCH_2026-10-31.md)
+and [research library](RESEARCH_LIBRARY.md). New native four-width code passes
+64-count CPU address/guard checks and full-switch NVCC compilation, but
+spills16bytes and adds arithmetic/shared writes; no credible>=3%gain case.
+No H200 job/submit/promotion. Current leader public-repo count0; licensed
+FlashInfer MonoMoE source/transfer limits pinned. Next sequential trackprefill.
+Older priorities below are history and do not authorize closed-family retries.
+
 ## Oct31 fresh-source and operand scheduling screen
 
 Canonical score remains2.211495x; no new GPU check or scored submit.

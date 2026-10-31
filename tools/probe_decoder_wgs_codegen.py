@@ -15,11 +15,12 @@ from pathlib import Path
 import re
 import urllib.error
 import urllib.request
-from decoder_wgs_variants import register_split, delayed_activation_wait
+from decoder_wgs_variants import register_split, delayed_activation_wait, rounded_widths
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
-parser.add_argument("arm", choices=["base", "explicit_scale_reuse", "regsplit_gs2", "regsplit_gs4", "delayed_x_wait"])
+parser.add_argument("arm", choices=["base", "explicit_scale_reuse", "regsplit_gs2", "regsplit_gs4", "delayed_x_wait", "rounded_widths"])
+parser.add_argument("--skip-asm", action="store_true", help="Suppress host assembly; this service may still return device views")
 parser.add_argument("--instantiation", choices=["both", "true", "false"], default="both")
 parser.add_argument("--binary-host", action="store_true",
                     help="Avoid host fatbinary assembly; request object disassembly plus device views")
@@ -39,6 +40,9 @@ node = next(n for n in tree.body if isinstance(n, ast.Assign)
             and any(isinstance(t, ast.Name) and t.id == "MOE_CUDA_SRC" for t in n.targets))
 native = ast.literal_eval(node.value)
 source = native.split("#include <torch/extension.h>")[0]
+if args.arm == 'rounded_widths':
+    assert not args.fixed_ntt, 'rounded-width diagnostic must retain all four legal widths'
+    source = rounded_widths(source)
 if args.arm == 'delayed_x_wait':
     source = delayed_activation_wait(source)
 if args.arm.startswith('regsplit_gs'):
@@ -69,6 +73,8 @@ request = {"source": source, "options": {"userArguments": flags,
     "compilerOptions": {"executorRequest": False}, "filters": {"binary": args.binary_host,
     "execute": False, "intel": True, "demangle": False, "directives": False,
     "labels": True, "commentOnly": True, "libraryCode": False, "trim": False}}}
+if args.skip_asm:
+    request['options']['compilerOptions']['skipAsm'] = True
 output = ROOT / (f"muse_decode_layer/WGS_CODEGEN_{args.arm}_2026-10-30.json.gz"
                  if args.instantiation=='both' else
                  f"muse_decode_layer/WGS_CODEGEN_{args.arm}_single_{args.instantiation}_2026-10-31.json.gz")
@@ -80,6 +86,8 @@ if args.fixed_ntt:
     output = output.with_name(output.name.replace('.json.gz',f'_fixed_ntt{args.fixed_ntt}.json.gz'))
 if args.explicit_gencode and not args.legacy_arch_shorthand:
     output = output.with_name(output.name.replace('.json.gz','_explicit_gencode.json.gz'))
+if args.skip_asm:
+    output = output.with_name(output.name.replace('.json.gz','_skip_asm.json.gz'))
 assert not output.exists(), output
 req = urllib.request.Request("https://godbolt.org/api/compiler/nvcc130/compile",
     data=json.dumps(request).encode(), headers={"Content-Type": "application/json", "Accept": "application/json"})
@@ -94,6 +102,7 @@ archive = {"scope": "Standalone public-kernel compiler diagnostic; no GPU timing
     "captured_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
     "instantiation": args.instantiation,
     "binary_host": args.binary_host,
+    "skip_asm": args.skip_asm,
     "internal_helpers": args.internal_helpers,
     "fixed_ntt_diagnostic_only": args.fixed_ntt,
     "explicit_gencode": args.explicit_gencode and not args.legacy_arch_shorthand,

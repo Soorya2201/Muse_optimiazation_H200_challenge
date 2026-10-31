@@ -7,6 +7,21 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 ## Coverage status (2026-10-30)
 
 
+Oct31 late decoder follow-up:
+[rounded widths](muse_decode_layer/ROUNDED_WIDTHS_RESEARCH_2026-10-31.md),
+[new decoder library](muse_decode_layer/RESEARCH_LIBRARY.md).
+94indexedpaths/10repos unchanged. Current decoder leader pjmullin3 returns
+zero public owner repositories; prior leader mpeng19 returns11 (metadata
+screen only). New Apache2FlashInfer MonoMoE9112f5b:7selected files189522bytes,
+LICENSE/NOTICE/hash-verified,neverexecuted. Primary paper and exact source
+review distinguish already-used persistence/small-N from producer-warp
+sliced epilogues;FP8/BS<=8/pre-normalization semantics exclude directport.
+Hopper BF16pull backend is not an NVFP4 H200implementation. Own four-width
+native candidate and all64count CPUlayout assertions archived; full-width
+NVCCcompile spills16bytes,extra work and missing matched size/runtime
+comparison defer H200. No scored/canonical change or speedup claim.
+
+
 Oct31 late BF16 follow-up:
 [global normalization](muse_bf16_proj/GLOBAL_NORMALIZATION_2026-10-31.md).
 244indexedpaths/13repos unchanged. Newly pinned BSD-3-Clause

@@ -68,6 +68,49 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 decoder rounded-width/compiler cycle complete; next track prefill
+
+Previous goal turn only refreshed ranks (no optimization progress), pushed
+8432065. This cycle implements a distinct four-width WGS native candidate;
+read `muse_decode_layer/ROUNDED_WIDTHS_RESEARCH_2026-10-31.md` and the new
+`RESEARCH_LIBRARY.md`. Transform in tools/decoder_wgs_variants.py preserves
+xA/xB allocation/strides and initializes added shared columns with a complete
+producer warp after slot acquisition; masks dummy partial/epilogue outputs.
+No canonical/submission change. Exact generated native source/diff archived.
+CPU verifies64nonempty job sizes,66560valid/14336zero vector addresses and
+unchanged staging/flush/host-wrapper fragments. Initial CPU byte-bound
+assertion omitted BF16 element size; repaired before passing, native unchanged.
+External18histogram work model adds0–18.18%MMA columns and0–21MiB shared
+zero writes, no extra HBM bytes/scratch. Not numerical/synchronization proof.
+
+NVCC13/sm90a BIGtrue full-four-width/internal-helper compile succeeds with
+96regs,16stack/16spill-store/16spill-load bytes. Complete61916-row PTX has
+130WGMMA sites eachN8/16/32/64; SASS5000clipped. Parent matching request
+returns CE RangeError during JSON serialization, not NVCC/H200 failure.
+No matched full binary-size evidence or causal instruction-cache timing.
+Both complete requests/responses and summary archived. Defer this exact
+form before H200; no blind grouping sweep or promotion. No OKC run/submit;
+checks remain MoE8/8,attention1/8,BF164/8,decoder1/8,prefill5/8;reserve intact.
+
+New primary FlashInfer MonoMoE9112f5b:7Apache2files189522bytes pinned with
+LICENSE/NOTICE/verified Git blobs and SHA256, never imported/executed.
+Reviewed main flow/internal readiness and selected deferred up/down bodies.
+FP8quantized intermediates/BS<=8 and different semantics exclude directport;
+producer-warp sliced epilogues remain an architecture lead with explicit
+adapter/lifetime/normalization/benefit requirements in decoder library.
+Hopper BF16pull mega is BF16weights; BF16/NVFP4 mega is SM100/103, notH200.
+No inference that paper gains transfer to our already-persistent parent.
+
+Late codeindex94paths/10repos,0newblobs. Current decoder/overall leader is
+pjmullin3 at last20:42UTCcapture, whose public owner-repo query returns0.
+Previous leader mpeng19 has11publicrepos; metadata only, no new challenge
+source established. Bounded API metadata archived. No rank1 or new gain.
+Private repo verification/push follow. No GPUjob live. Next sequential
+trackprefill:read AGENTS/TASK/latestK64/PIPE3/Lt negatives, find a distinct
+plausible>=3%mechanism before another check. Goal active/incomplete. Noagents.
+Preserve untracked research/public/madhavan_721c627/;never stage it.
+
+
 #### Oct31 BF16 global normalization complete; next sequential track decoder
 
 Previous attention cycle made CPU/compiler/source progress, pushed8397194.

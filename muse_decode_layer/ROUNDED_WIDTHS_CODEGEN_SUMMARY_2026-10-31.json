@@ -1,0 +1,42 @@
+{
+  "scope": "Compiler Explorer NVCC13 explicit compute_90a->sm_90a diagnostics, not linked PyTorch/H200 resource validation. Base returned service serialization error: no matched resource/code-size comparison. Device assembly is returned despite skipAsm; SASS clipped; no whole-binary size/latency inference.",
+  "arms": [
+    {
+      "arm": "base",
+      "archive": "muse_decode_layer/WGS_CODEGEN_base_single_true_2026-10-31_binary_host_internal_helpers_explicit_gencode_skip_asm.json.gz",
+      "archive_sha256": "021f4df3aa2184b9f1832827762fd0f8b87f38d3ebe05682a1ed2477a9724ba8",
+      "code": -1,
+      "stderr": "Internal Compiler Explorer error: RangeError: Invalid string length\n    at JSON.stringify (<anonymous>)\n    at CompilationEnvironment.cachePut (file:///infra/.deploy/lib/compilation-env.js:118:41)\n    at NvccCompiler.afterCompilation (file:///infra/.deploy/lib/base-compiler.js:2743:28)\n    at async file:///infra/.deploy/lib/base-compiler.js:2670:24\n    at async env.enqueue.abandonIfStale (file:///infra/.deploy/lib/base-compiler.js:2646:25)",
+      "source_sha256": "740cc60026fb8f00c8117832932f83db0ba9cc727492e16913c881f99b6282f3",
+      "request_skipAsm": true,
+      "internal_helpers": true,
+      "instantiation": "BIG=true only; complete width switch, torch wrapper replaced",
+      "ptx_rows": 0,
+      "ptx_clipped": false,
+      "sass_rows": 0,
+      "sass_clipped": false,
+      "displayed_ptx_wgmma_sites_by_n": {}
+    },
+    {
+      "arm": "rounded_widths",
+      "archive": "muse_decode_layer/WGS_CODEGEN_rounded_widths_single_true_2026-10-31_binary_host_internal_helpers_explicit_gencode_skip_asm.json.gz",
+      "archive_sha256": "84da2d0a7e3bc328a3fa921448bd9206e2572341bd1c3d8c893cbf4dd04f1cf1",
+      "code": 0,
+      "stderr": "<source>(2011): warning #177-D: variable \"g\" was declared but never referenced\n    const int wg = warp >> 2, wp = warp & 3, g = lane >> 2, wt = tid & 127;\n                                             ^\n          detected during:\n            instantiation of \"void okc::wgs_phase<PB>(const okc::Params &, okc::Smem &, unsigned char *, int, int, int &) [with PB=false]\" at line 2424\n            instantiation of \"void okc::moe_fused<BIG>(okc::Params) [with BIG=true]\" at line 2672\n\nRemark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n<source>(117): warning #177-D: variable \"okc::NRB\" was declared but never referenced\n  constexpr int NRB = 0 ? 4 : 2;\n                ^\n\n<source>(132): warning #177-D: variable \"okc::UB_A\" was declared but never referenced\n  constexpr int UB_A = RB_A / 16, UB_B = RB_B / 16;\n                ^\n\n<source>(132): warning #177-D: variable \"okc::UB_B\" was declared but never referenced\n  constexpr int UB_A = RB_A / 16, UB_B = RB_B / 16;\n                                  ^\n\n<source>(135): warning #177-D: variable \"okc::BFLAG\" was declared but never referenced\n  constexpr int BFLAG = 1 << 30;\n                ^\n\n<source>(141): warning #177-D: variable \"okc::XP_SK\" was declared but never referenced\n  constexpr int XP_SK = HD + 8;\n                ^\n\n<source>(143): warning #177-D: variable \"okc::XP_FT\" was declared but never referenced\n  constexpr int XP_FT = KS + 8;\n                ^\n\n<source>(144): warning #177-D: variable \"okc::NST\" was declared but never referenced\n  constexpr int NST = 3;\n                ^\n\n<source>(223): warning #177-D: function \"okc::bmul2\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) uint32_t bmul2(uint32_t a, uint32_t b) {\n                                                                                    ^\n\n<source>(237): warning #177-D: function \"okc::mma_bf16\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mma_bf16(float* c, uint32_t a0, uint32_t a1, uint32_t a2, uint32_t a3, uint32_t b0,\n                                                                                ^\n\n<source>(244): warning #177-D: function \"okc::cp_async16\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void cp_async16(void* smem, const void* gmem, bool valid) {\n                                                                                ^\n\n<source>(249): warning #177-D: function \"okc::cp_commit\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void cp_commit() { asm volatile(\"cp.async.commit_group;\\n\" ::); }\n                                                                                ^\n\n<source>(415): warning #177-D: function \"okc::epi_A\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void epi_A(const Params& p, int pstart, int ntok, int tok0, int col, float gsc, const float* r) {\n                                                                                ^\n\n<source>(427): warning #177-D: function \"okc::epi_B\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void epi_B(const Params& p, int pstart, int ntok, int tok0, int n0, float gsc, const float* r,\n                                                                                ^\n\n<source>(441): warning #177-D: function \"okc::ss_reduce_add\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void ss_reduce_add(const Params& p, int pstart, int ntok, int tok0, float* sq, int g) {\n                                                                                ^\n\n<source>(528): warning #177-D: variable \"okc::X1P\" was declared but never referenced\n  constexpr int X1P = 512 + 8;\n                ^\n\n<source>(929): warning #177-D: variable \"okc::NSF\" was declared but never referenced\n  constexpr int NSF = 3;\n                ^\n\n<source>(945): warning #177-D: function \"okc::wg_desc_sw128\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) uint64_t wg_desc_sw128(uint32_t saddr) {\n                                                                                    ^\n\n<source>(1629): warning #177-D: variable \"okc::WGS_FIXF\" was declared but never referenced\n  constexpr size_t WGS_FIXF = (size_t)2 * WGS_SLOTS * 4 * WGS_FIXW + 2 * WGS_SLOTS * 4 + 136 * 16;\n                   ^\n\n<source>(1782): warning #177-D: variable \"okc::WGS_XROWS\" was declared but never referenced\n  constexpr int WGS_XROWS = EMAX + 8 * JMAX;\n                ^\n\nptxas info    : 0 bytes gmem\nptxas info    : Compiling entry function '_ZN3okc9moe_fusedILb1EEEvNS_6ParamsE' for 'sm_90a'\nptxas info    : Function properties for _ZN3okc9moe_fusedILb1EEEvNS_6ParamsE\n    16 bytes stack frame, 16 bytes spill stores, 16 bytes spill loads\nptxas info    : Used 96 registers, used 16 barriers, 16 bytes cumulative stack size\nptxas info    : Compile time = 1964.166 ms\nptxas info    : Function properties for _ZN41_INTERNAL_1c7773a2_10_example_cu_421b5c6d3okc10wgs_rangesERKNS0_6ParamsERNS0_4SmemE\n    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+      "source_sha256": "2a8e3cb968a31ff518074a41abee443b4a47a24a3f018fe7d30b249b7bc6dff3",
+      "request_skipAsm": true,
+      "internal_helpers": true,
+      "instantiation": "BIG=true only; complete width switch, torch wrapper replaced",
+      "ptx_rows": 61916,
+      "ptx_clipped": false,
+      "sass_rows": 5001,
+      "sass_clipped": true,
+      "displayed_ptx_wgmma_sites_by_n": {
+        "16": 130,
+        "32": 130,
+        "8": 130,
+        "64": 130
+      }
+    }
+  ]
+}

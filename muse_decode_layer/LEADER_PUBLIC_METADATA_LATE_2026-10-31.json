@@ -1,0 +1,164 @@
+{
+  "captured_utc": "2026-10-31T20:48:57.225854+00:00",
+  "scope": "Public GitHub owner-repository metadata only, not private repositories or full source coverage. Rank source is saved live snapshot rank_summary_20261031204214.json.",
+  "leaders": [
+    {
+      "user": "pjmullin3",
+      "role": "Current whole-decoder and overall leader at capture",
+      "api_url": "https://api.github.com/users/pjmullin3/repos?per_page=100&type=owner&sort=pushed",
+      "returned_repository_count": 0,
+      "pagination_limit": 100,
+      "repositories": []
+    },
+    {
+      "user": "mpeng19",
+      "role": "Previous whole-decoder leader; still ranked above us",
+      "api_url": "https://api.github.com/users/mpeng19/repos?per_page=100&type=owner&sort=pushed",
+      "returned_repository_count": 11,
+      "pagination_limit": 100,
+      "repositories": [
+        {
+          "full_name": "mpeng19/mpeng19.github.io",
+          "html_url": "https://github.com/mpeng19/mpeng19.github.io",
+          "description": "Personal website",
+          "fork": false,
+          "pushed_at": "2026-10-29T06:03:58Z",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "full_name": "mpeng19/vllm-neuron",
+          "html_url": "https://github.com/mpeng19/vllm-neuron",
+          "description": "Community maintained hardware plugin for vLLM on AWS Neuron",
+          "fork": true,
+          "pushed_at": "2026-10-19T23:37:27Z",
+          "default_branch": "release-0.24.0.1.1.0",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "full_name": "mpeng19/auto-inference",
+          "html_url": "https://github.com/mpeng19/auto-inference",
+          "description": "Auto-research for ML inference and serving",
+          "fork": false,
+          "pushed_at": "2026-10-08T05:50:44Z",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "full_name": "mpeng19/gpu-price-solver",
+          "html_url": "https://github.com/mpeng19/gpu-price-solver",
+          "description": "Optimizer for solving GPU demand splitting across compute providers.",
+          "fork": false,
+          "pushed_at": "2026-09-14T17:53:22Z",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "full_name": "mpeng19/multi-agent-tui",
+          "html_url": "https://github.com/mpeng19/multi-agent-tui",
+          "description": "TUI for managing multiple agents in a single or multiple harness sessions",
+          "fork": false,
+          "pushed_at": "2026-09-14T09:58:24Z",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "full_name": "mpeng19/terminal-md",
+          "html_url": "https://github.com/mpeng19/terminal-md",
+          "description": "Preview md files in a terminal UI",
+          "fork": false,
+          "pushed_at": "2026-09-14T09:57:19Z",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "full_name": "mpeng19/ThunderKittens",
+          "html_url": "https://github.com/mpeng19/ThunderKittens",
+          "description": "Tile primitives for speedy kernels",
+          "fork": true,
+          "pushed_at": "2026-09-12T19:29:53Z",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "full_name": "mpeng19/sglang",
+          "html_url": "https://github.com/mpeng19/sglang",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "fork": true,
+          "pushed_at": "2026-08-29T07:14:53Z",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "full_name": "mpeng19/vllm",
+          "html_url": "https://github.com/mpeng19/vllm",
+          "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+          "fork": true,
+          "pushed_at": "2026-08-29T06:52:24Z",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "full_name": "mpeng19/ahtvs",
+          "html_url": "https://github.com/mpeng19/ahtvs",
+          "description": "Automated High Throughput Virtual Screening Tools--Derived From A2G2 From the Aspuru-Guzik Group",
+          "fork": false,
+          "pushed_at": "2025-11-09T11:50:09Z",
+          "default_branch": "master",
+          "license": null
+        },
+        {
+          "full_name": "mpeng19/Activation-Aware-Bitdelta",
+          "html_url": "https://github.com/mpeng19/Activation-Aware-Bitdelta",
+          "description": null,
+          "fork": true,
+          "pushed_at": "2025-05-15T03:13:23Z",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        }
+      ]
+    }
+  ]
+}

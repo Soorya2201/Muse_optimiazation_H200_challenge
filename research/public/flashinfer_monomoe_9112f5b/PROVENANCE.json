@@ -1,0 +1,58 @@
+{
+  "repo": "flashinfer-ai/flashinfer",
+  "commit": "9112f5b919b7eed550b26f617a303820115c8905",
+  "captured_utc": "2026-10-31T20:47:49.738933+00:00",
+  "license": "Apache-2.0; original per-file copyright headers and root NOTICE retained",
+  "scope": "Seven selected files only, static research, no source imported or executed. Paper is a separate primary reference, not mirrored.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 12332,
+      "git_blob": "ba557f2bb968c1334057e4c0c567bd4a4fe76380",
+      "sha256": "cb67c224f503e0a063908950b12f89a7280c6e527dcffac972aa114e4bf3c5de",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/9112f5b919b7eed550b26f617a303820115c8905/LICENSE"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 2152,
+      "git_blob": "f876d2c3fb3b134fa2caa9f43b71e39645f8572c",
+      "sha256": "a4f5819a4c41f2aca065e62ed94ba4283a7ee5408861a7d37cf1b91571d9df0a",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/9112f5b919b7eed550b26f617a303820115c8905/NOTICE"
+    },
+    {
+      "path": "docs/design_docs/moe_ep_architecture.md",
+      "bytes": 50592,
+      "git_blob": "2fb88cbb971abb2068b5f386b0ba75283c1db939",
+      "sha256": "232407925615c715fa087b67e8234bd9fe283dbcdd0df7f3b22b4ad79481338f",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/9112f5b919b7eed550b26f617a303820115c8905/docs/design_docs/moe_ep_architecture.md"
+    },
+    {
+      "path": "csrc/fused_moe/monomoe/src/moe.cuh",
+      "bytes": 15836,
+      "git_blob": "f0f91198d62110690875deb021d6ba2e760044dc",
+      "sha256": "f21a01827c0d8c9bd54743ece448dddefac75c1220b7f25c8dd42d35cbdbe03f",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/9112f5b919b7eed550b26f617a303820115c8905/csrc/fused_moe/monomoe/src/moe.cuh"
+    },
+    {
+      "path": "csrc/fused_moe/monomoe/src/moe_internal.h",
+      "bytes": 41654,
+      "git_blob": "f2511772329cbe5c5c012e18bf1329827c49e20a",
+      "sha256": "6594b5de1450ec074f0c730ce7e9976f8f5e58162cfa4f556e1c16fd5e9b6655",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/9112f5b919b7eed550b26f617a303820115c8905/csrc/fused_moe/monomoe/src/moe_internal.h"
+    },
+    {
+      "path": "csrc/fused_moe/monomoe/src/moe_up_projection.cuh",
+      "bytes": 26286,
+      "git_blob": "16bb4f5fb85c1bafbe9cc0ba0e10bfdb63e14baf",
+      "sha256": "09bc2b464f5f3c99506ac79a8930ff0877f83b0699416c9b94e44d0e22c081ea",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/9112f5b919b7eed550b26f617a303820115c8905/csrc/fused_moe/monomoe/src/moe_up_projection.cuh"
+    },
+    {
+      "path": "csrc/fused_moe/monomoe/src/moe_down_projection.cuh",
+      "bytes": 40670,
+      "git_blob": "1db2ce22b32de884b5a71c81e29a332bf5fd47bb",
+      "sha256": "dda5fc10ae29fdeabc5498bfd27e4f8b40a5b8b2bf5bae954051645c462e799b",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/9112f5b919b7eed550b26f617a303820115c8905/csrc/fused_moe/monomoe/src/moe_down_projection.cuh"
+    }
+  ]
+}

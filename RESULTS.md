@@ -196,3 +196,15 @@
 2026-10-31 | muse_bf16_proj | submission_v43_global_normalization_probe.py | 3aa502d1eb8f4854 | check | pending | Fourth of eight routine BF16 checks,zero submits;cluster pending. SHA7967d1c4492558893b9c95d605f3193e78067f51f6d8cf27839fe9bf2c095e65. Timed canonical prefix unchanged;prepare-only global fixed-window normalization with original-unit partial restore and unchanged exact escape records. CPU487424decoded patterns/243712ternary cases/512bounded dot fixtures/238host calls pass;standalone sm90a12->7decoder core,full resources unknown. Fixed72group numerical/resource/control/3%board gates in GLOBAL_NORMALIZATION_2026-10-31.md. Poll same handle,do not restart on timeout.
 
 2026-10-31 | muse_bf16_proj | submission_v43_global_normalization_probe.py | 3aa502d1eb8f4854 | check terminal | 1.557816x parent;global-normalization forms fail performance gates | Cluster=sfo3. All9tests/30timings pass,3101.008394us,CI1.534449–1.581183,prepare166.796349s. Fourthofeight routinechecks,submits0. ImmutableSHA7967d1c4492558893b9c95d605f3193e78067f51f6d8cf27839fe9bf2c095e65. Actual timeddispatch remainsparent;pointscoreNOTcandidate gain. Complete.901s independentprobe5nearby/72groups/2seeds/4pads/8balancedread-flush rounds,all2304integerdevice samples retained in6948chars plusselectedhostcalibration. Initial/freshagreement0,all72old/newbit-identical;FP64maxglobal/row/hot[0.00166698, 0.00178266, 0.0]. All18fullnative resource records0local;QKV16registers81->92,otherssameorlower. AAmax4.282743400%,matchedcontrolmax3.232204579%;someattributiongatesfail. All9routes/511fixedpoliciesreject;bestworstpolicyO16=.999847554x (noteligible). All30profiles/fullavailablelogs/72groups inspected,receipt+decodedreport+auditarchived. No accuracygate relaxation,promotion/scoredsubmit orcanonicalchange. Close tested7instruction/globalnormalizationform;noblindarithmeticonlyretry. NewBSD3Unweight17files/113104bytespinned;ownCPUbyte/geometrylimitsrecorded,nodirectport. Nextsequentialtrackdecoder.
+
+
+2026-10-31 late decoder local/compiler-only cycle: **no OKC job or score**.
+Implemented four-width WGS experiment; CPU64counts passes after correcting
+its byte-bound model assertion. Full-switch candidate NVCC13/sm90a succeeds
+96regs/16-byte stack+spill stores+loads; parent response hits CE JSON RangeError,
+so no matched binary-size comparison. SASS clipped; defer before H200.
+18external histograms add0–18.18%matrix columns/0–21MiBshared zero writes.
+New7-file Apache2FlashInfer source pin/primary transfer review and current
+leader metadata archived. See muse_decode_layer/ROUNDED_WIDTHS_RESEARCH_2026-10-31.md.
+Budget unchanged:MoE8/8,attention1/8,BF164/8,decoder1/8,prefill5/8routine;
+all submits0,reserve untouched. No live GPU job. Next sequential trackprefill.
