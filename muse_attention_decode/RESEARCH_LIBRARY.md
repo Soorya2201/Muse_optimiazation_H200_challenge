@@ -62,6 +62,22 @@ by the failed local construction. Python syntax passes. The builder is
 
 ## Selection constraints
 
+Oct31 new primary-source lead:
+[fixed-binade bit exponential](BIT_EXP_RESEARCH_2026-10-31.md) derives IEEE
+linear interpolation from Schraudolph1999, with no numeric conversion.
+CPU314482grid/random samples validate a2.984% scalar error ceiling; standalone
+sm90a emits FMNMX/FADD/LEA plus a high-tail predicate/fallback. V24 tests
+50/100% replacement while retaining PK2 and fresh-input/cache checks.
+Its timed challenge path remains parent, so its point score is diagnostic.
+The dated report records terminal results and adoption decision.
+
+The [Oct31 public source delta](PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md)
+adds18indexed paths/one repository,13attention files hash-verified and
+statically reviewed,including an entrant below us. Existing fusion/WGMMA/
+DSMEM ideas are already in the parent; reported A15 merge regressions give
+no replacement. Idle-producer code warming needs a current-parent phase
+bound and measured overhead before a new experiment; no license assumed.
+
 Keep every key and the required precisions. Reject layout transfers that require an untimed
 rewrite of fresh KV contents. Preserve live WGMMA operand registers until the corresponding
 wait; a removed wait is not an optimization without a valid lifetime argument. Require

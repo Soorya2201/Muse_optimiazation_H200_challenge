@@ -6,6 +6,19 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Oct31 attention delta:
+[public source follow-up](muse_attention_decode/PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md)
+refreshes its code index to225paths/13repositories, adding18entries.
+Thirteen attention files from Kushagrabainsla at0778ecd were Git-blob/SHA-256
+verified and statically screened; five decoder references await that track.
+Current owner#773vsours#173 atcapture. Links/hashes/component applicability
+and reported negatives are archived; no source execution/port, no permissive
+license assumed. Primary exponential research and independently derived
+fixed-binade helper CPU/sm90a/H200 evidence are recorded in
+[bit-exp research](muse_attention_decode/BIT_EXP_RESEARCH_2026-10-31.md).
+Canonical/scored source remains unchanged unless that report explicitly
+records a validated promotion.
+
 Oct31 branch/component expansion: see
 [MoE stage-loop and branch research](muse_moe_w4a16/STAGE_LOOP_AND_BRANCH_RESEARCH_2026-10-31.md).
 All13indexedMoErepositories'26branches/21tags/169PR metadata are archived.

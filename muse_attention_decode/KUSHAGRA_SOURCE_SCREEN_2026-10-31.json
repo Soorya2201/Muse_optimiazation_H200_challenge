@@ -1,0 +1,813 @@
+{
+  "captured_utc": "2026-10-31T09:23:55.154397+00:00",
+  "repository": "Kushagrabainsla/muse-spark-open",
+  "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+  "owner_rank": {
+    "rank": 773,
+    "speedup": 1.525,
+    "job": "09b49ea4276e4306"
+  },
+  "our_rank": {
+    "rank": 173,
+    "team": "Soorya2201",
+    "speedup": 2.6035,
+    "first": false,
+    "ahead": 172,
+    "to_first": 1.2376
+  },
+  "license_metadata": null,
+  "license_scope": "Root license not established in preceding MoE repository screen; no newly found permissive license assumed.",
+  "files": [
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/bench.py",
+      "blob_sha": "a9d73ebfae5db5b1cfd01c1e1e9f6a5e789802f5",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/bench.py",
+      "sha256": "e915988665712abfef69a7ce535ec3b8508f2449a33ed83e7cd0d4c63563b7c1",
+      "bytes": 4682,
+      "lines": 90,
+      "interpretation": "Local benchmark with scored and nearby reference checks; not executed or submitted.",
+      "top_level_functions": [
+        {
+          "name": "load",
+          "line": 44,
+          "end": 48
+        },
+        {
+          "name": "main",
+          "line": 51,
+          "end": 86
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a1.py",
+      "blob_sha": "bb6a452e56c5cfe9039c601e851e954798a0ad0b",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a1.py",
+      "sha256": "2e1186f3ee07e9887afeeeadc86460e7d72cd25e527638b28e7c99cc217f7ac4",
+      "bytes": 11546,
+      "lines": 232,
+      "interpretation": "Two Triton kernels with fused prep/online attention and combine; historical reported0.56x.",
+      "top_level_functions": [
+        {
+          "name": "_rms_rope",
+          "line": 64,
+          "end": 76
+        },
+        {
+          "name": "_attn_chunk",
+          "line": 80,
+          "end": 161
+        },
+        {
+          "name": "_attn_combine",
+          "line": 165,
+          "end": 199
+        },
+        {
+          "name": "kernel_fn",
+          "line": 202,
+          "end": 232
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a4.py",
+      "blob_sha": "41cce5e63aaa1bc2c741bfb5a7c28f367d77d8e7",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a4.py",
+      "sha256": "aeb6552ac1a26b7340e4dad745897c7b6856fc5b05f45b0ecc86af58e4d0b319",
+      "bytes": 22598,
+      "lines": 481,
+      "interpretation": "CUDA FP16 MMA split-KV with cp.async ring, separate prep/combine; verify reconverts tiles.",
+      "top_level_functions": [
+        {
+          "name": "_rms_rope",
+          "line": 66,
+          "end": 76
+        },
+        {
+          "name": "_prep",
+          "line": 80,
+          "end": 95
+        },
+        {
+          "name": "_attn_combine",
+          "line": 99,
+          "end": 137
+        },
+        {
+          "name": "_module",
+          "line": 435,
+          "end": 440
+        },
+        {
+          "name": "kernel_fn",
+          "line": 443,
+          "end": 481
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a5.py",
+      "blob_sha": "5872dee3604d4f8667ec4112fddf72fcda2c12e0",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a5.py",
+      "sha256": "707567c9c2f3f0b8ce4170c4b77e7c2f9e6a1207977fdc736d1b81d2881d5d87",
+      "bytes": 26917,
+      "lines": 578,
+      "interpretation": "Page rows prefetched a stage ahead and shape dispatch to CUDA/FA3; historical scored1.129x.",
+      "top_level_functions": [
+        {
+          "name": "_rms_rope",
+          "line": 75,
+          "end": 85
+        },
+        {
+          "name": "_prep",
+          "line": 89,
+          "end": 104
+        },
+        {
+          "name": "_attn_combine",
+          "line": 108,
+          "end": 146
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 150,
+          "end": 165
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 168,
+          "end": 206
+        },
+        {
+          "name": "_module",
+          "line": 519,
+          "end": 524
+        },
+        {
+          "name": "kernel_fn",
+          "line": 527,
+          "end": 537
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 540,
+          "end": 578
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a9.py",
+      "blob_sha": "acb92a4e448135dac8ae507869a09f3534980529",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a9.py",
+      "sha256": "4d20e9b88d52e8841f34122ff218ce2d4c8cd028b956174ab20a8a37ba7c2363",
+      "bytes": 63555,
+      "lines": 1293,
+      "interpretation": "FP8 WGMMA verify with exact cache conversion, asynchronous register-lifetime pins; full verify kept FA3.",
+      "top_level_functions": [
+        {
+          "name": "_chunk",
+          "line": 77,
+          "end": 88
+        },
+        {
+          "name": "_rms_rope",
+          "line": 93,
+          "end": 103
+        },
+        {
+          "name": "_prep",
+          "line": 107,
+          "end": 122
+        },
+        {
+          "name": "_attn_combine",
+          "line": 126,
+          "end": 164
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 168,
+          "end": 183
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 186,
+          "end": 224
+        },
+        {
+          "name": "_wgmma_fn",
+          "line": 227,
+          "end": 241
+        },
+        {
+          "name": "_module",
+          "line": 1191,
+          "end": 1196
+        },
+        {
+          "name": "kernel_fn",
+          "line": 1199,
+          "end": 1208
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 1211,
+          "end": 1251
+        },
+        {
+          "name": "_kernel_cuda8",
+          "line": 1254,
+          "end": 1293
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a10.py",
+      "blob_sha": "c3df9eb98f7a6cdc897a97aafb6ddd59582c03d7",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a10.py",
+      "sha256": "288bee9df394ee8ef9ded43d78cd9e034304d6cf1e8baa9fa3eb0609c1428baf",
+      "bytes": 78519,
+      "lines": 1618,
+      "interpretation": "Producer/consumer warp-specialized WGMMA, value transpose buffers, overlap score/PV; full verify still FA3.",
+      "top_level_functions": [
+        {
+          "name": "_chunk",
+          "line": 78,
+          "end": 89
+        },
+        {
+          "name": "_rms_rope",
+          "line": 94,
+          "end": 104
+        },
+        {
+          "name": "_prep",
+          "line": 108,
+          "end": 123
+        },
+        {
+          "name": "_attn_combine",
+          "line": 127,
+          "end": 165
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 169,
+          "end": 184
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 187,
+          "end": 225
+        },
+        {
+          "name": "_wgmma_fn",
+          "line": 228,
+          "end": 243
+        },
+        {
+          "name": "_module",
+          "line": 1512,
+          "end": 1517
+        },
+        {
+          "name": "kernel_fn",
+          "line": 1520,
+          "end": 1529
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 1532,
+          "end": 1572
+        },
+        {
+          "name": "_kernel_cuda8",
+          "line": 1575,
+          "end": 1618
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a14.py",
+      "blob_sha": "a475897124df60f9462305bdeb9ee7635a099599",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a14.py",
+      "sha256": "087eae5fb170e4bc01d5a900642cf2ff88f01227beffd2cc429b5263011feac4",
+      "bytes": 122084,
+      "lines": 2495,
+      "interpretation": "Pushed decode partials and per-lane local merge, shared gated norm tail; source equals default submission.",
+      "top_level_functions": [
+        {
+          "name": "_chunk",
+          "line": 86,
+          "end": 97
+        },
+        {
+          "name": "_rms_rope",
+          "line": 102,
+          "end": 112
+        },
+        {
+          "name": "_prep",
+          "line": 116,
+          "end": 131
+        },
+        {
+          "name": "_attn_combine",
+          "line": 135,
+          "end": 173
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 177,
+          "end": 192
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 195,
+          "end": 233
+        },
+        {
+          "name": "_wgmma_fn",
+          "line": 236,
+          "end": 251
+        },
+        {
+          "name": "_module",
+          "line": 2341,
+          "end": 2346
+        },
+        {
+          "name": "kernel_fn",
+          "line": 2349,
+          "end": 2358
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 2361,
+          "end": 2406
+        },
+        {
+          "name": "pt_span",
+          "line": 2409,
+          "end": 2410
+        },
+        {
+          "name": "_kernel_cluster",
+          "line": 2413,
+          "end": 2428
+        },
+        {
+          "name": "_vchunk",
+          "line": 2431,
+          "end": 2433
+        },
+        {
+          "name": "_kernel_verify_cluster",
+          "line": 2436,
+          "end": 2449
+        },
+        {
+          "name": "_kernel_cuda8",
+          "line": 2452,
+          "end": 2495
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a2_triton_attn.py",
+      "blob_sha": "68d07a1681b961f5e3d53bfb899319b6d3d41c72",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a2_triton_attn.py",
+      "sha256": "a1f83b5fb0fab2a52ee6ad0b790662b45484c357765af05a84792e3de57c2137",
+      "bytes": 12716,
+      "lines": 250,
+      "interpretation": "Two KV heads per Triton program and per-row combine; historical reported0.54x.",
+      "top_level_functions": [
+        {
+          "name": "_rms_rope",
+          "line": 65,
+          "end": 77
+        },
+        {
+          "name": "_attn_chunk",
+          "line": 81,
+          "end": 172
+        },
+        {
+          "name": "_attn_combine",
+          "line": 176,
+          "end": 214
+        },
+        {
+          "name": "kernel_fn",
+          "line": 217,
+          "end": 250
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a15_cudamerge.py",
+      "blob_sha": "9fedd8d01f8819b6d66fb4c8815dbbe8c1d016d5",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a15_cudamerge.py",
+      "sha256": "88e959021a3df9b1d6f723c4b39189aaebb5b961324688e2aa70f204a4d9107a",
+      "bytes": 127887,
+      "lines": 2602,
+      "interpretation": "Separate CUDA merge replacing Triton combine; author reports all three batches slower, reverted.",
+      "top_level_functions": [
+        {
+          "name": "_chunk",
+          "line": 87,
+          "end": 98
+        },
+        {
+          "name": "_rms_rope",
+          "line": 103,
+          "end": 113
+        },
+        {
+          "name": "_prep",
+          "line": 117,
+          "end": 132
+        },
+        {
+          "name": "_attn_combine",
+          "line": 136,
+          "end": 174
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 178,
+          "end": 193
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 196,
+          "end": 234
+        },
+        {
+          "name": "_wgmma_fn",
+          "line": 237,
+          "end": 252
+        },
+        {
+          "name": "_module",
+          "line": 2445,
+          "end": 2450
+        },
+        {
+          "name": "kernel_fn",
+          "line": 2453,
+          "end": 2462
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 2465,
+          "end": 2513
+        },
+        {
+          "name": "pt_span",
+          "line": 2516,
+          "end": 2517
+        },
+        {
+          "name": "_kernel_cluster",
+          "line": 2520,
+          "end": 2535
+        },
+        {
+          "name": "_vchunk",
+          "line": 2538,
+          "end": 2540
+        },
+        {
+          "name": "_kernel_verify_cluster",
+          "line": 2543,
+          "end": 2556
+        },
+        {
+          "name": "_kernel_cuda8",
+          "line": 2559,
+          "end": 2602
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a3.py",
+      "blob_sha": "eb851a580613184e5c31dd4d6672d2cec89abe83",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a3.py",
+      "sha256": "7aa45f4a81b408c52223f60b311e29d71a739adfa913aedddd2c6804f2faa043",
+      "bytes": 6355,
+      "lines": 129,
+      "interpretation": "Fused Triton prep plus FA3 and gated norm; historical scored1.106x.",
+      "top_level_functions": [
+        {
+          "name": "_rms_rope",
+          "line": 60,
+          "end": 70
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 74,
+          "end": 89
+        },
+        {
+          "name": "kernel_fn",
+          "line": 92,
+          "end": 129
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission.py",
+      "blob_sha": "a475897124df60f9462305bdeb9ee7635a099599",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission.py",
+      "sha256": "087eae5fb170e4bc01d5a900642cf2ff88f01227beffd2cc429b5263011feac4",
+      "bytes": 122084,
+      "lines": 2495,
+      "interpretation": "Exact a14 bytes; fused sliding decode/verify, full decode split-KV, full verify FA3; scored1.525x.",
+      "top_level_functions": [
+        {
+          "name": "_chunk",
+          "line": 86,
+          "end": 97
+        },
+        {
+          "name": "_rms_rope",
+          "line": 102,
+          "end": 112
+        },
+        {
+          "name": "_prep",
+          "line": 116,
+          "end": 131
+        },
+        {
+          "name": "_attn_combine",
+          "line": 135,
+          "end": 173
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 177,
+          "end": 192
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 195,
+          "end": 233
+        },
+        {
+          "name": "_wgmma_fn",
+          "line": 236,
+          "end": 251
+        },
+        {
+          "name": "_module",
+          "line": 2341,
+          "end": 2346
+        },
+        {
+          "name": "kernel_fn",
+          "line": 2349,
+          "end": 2358
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 2361,
+          "end": 2406
+        },
+        {
+          "name": "pt_span",
+          "line": 2409,
+          "end": 2410
+        },
+        {
+          "name": "_kernel_cluster",
+          "line": 2413,
+          "end": 2428
+        },
+        {
+          "name": "_vchunk",
+          "line": 2431,
+          "end": 2433
+        },
+        {
+          "name": "_kernel_verify_cluster",
+          "line": 2436,
+          "end": 2449
+        },
+        {
+          "name": "_kernel_cuda8",
+          "line": 2452,
+          "end": 2495
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a13.py",
+      "blob_sha": "e5036da624914800916e2b6e537d1f2b051ff1a1",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a13.py",
+      "sha256": "86226355960c44f38bf0dea8aca0c279c3e3255cc7531db76d15836dbf86672d",
+      "bytes": 123712,
+      "lines": 2535,
+      "interpretation": "Sliding verify fused in a cluster, pushed partials, noinline merge warming by idle producer; scored1.499x reported.",
+      "top_level_functions": [
+        {
+          "name": "_chunk",
+          "line": 86,
+          "end": 97
+        },
+        {
+          "name": "_rms_rope",
+          "line": 102,
+          "end": 112
+        },
+        {
+          "name": "_prep",
+          "line": 116,
+          "end": 131
+        },
+        {
+          "name": "_attn_combine",
+          "line": 135,
+          "end": 173
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 177,
+          "end": 192
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 195,
+          "end": 233
+        },
+        {
+          "name": "_wgmma_fn",
+          "line": 236,
+          "end": 251
+        },
+        {
+          "name": "_module",
+          "line": 2381,
+          "end": 2386
+        },
+        {
+          "name": "kernel_fn",
+          "line": 2389,
+          "end": 2398
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 2401,
+          "end": 2446
+        },
+        {
+          "name": "pt_span",
+          "line": 2449,
+          "end": 2450
+        },
+        {
+          "name": "_kernel_cluster",
+          "line": 2453,
+          "end": 2468
+        },
+        {
+          "name": "_vchunk",
+          "line": 2471,
+          "end": 2473
+        },
+        {
+          "name": "_kernel_verify_cluster",
+          "line": 2476,
+          "end": 2489
+        },
+        {
+          "name": "_kernel_cuda8",
+          "line": 2492,
+          "end": 2535
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_attention_decode/submission_a15_fullattnc.py",
+      "blob_sha": "7d7ea9612baac0681e94d38daa1340103f93445e",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/submission_a15_fullattnc.py",
+      "sha256": "7f00445cf7feb95def76ca68e2f344bc5b2d7a36d4cff0d54041142f0da43640",
+      "bytes": 129250,
+      "lines": 2627,
+      "interpretation": "Full decode fused prep/attention plus PDL merge using __ldcg after wait; reported regression, reverted.",
+      "top_level_functions": [
+        {
+          "name": "_chunk",
+          "line": 86,
+          "end": 97
+        },
+        {
+          "name": "_rms_rope",
+          "line": 102,
+          "end": 112
+        },
+        {
+          "name": "_prep",
+          "line": 116,
+          "end": 131
+        },
+        {
+          "name": "_attn_combine",
+          "line": 135,
+          "end": 173
+        },
+        {
+          "name": "_qkv_prep",
+          "line": 177,
+          "end": 192
+        },
+        {
+          "name": "_kernel_fa3",
+          "line": 195,
+          "end": 233
+        },
+        {
+          "name": "_wgmma_fn",
+          "line": 236,
+          "end": 251
+        },
+        {
+          "name": "_module",
+          "line": 2470,
+          "end": 2475
+        },
+        {
+          "name": "kernel_fn",
+          "line": 2478,
+          "end": 2487
+        },
+        {
+          "name": "kernel_fn_cuda",
+          "line": 2490,
+          "end": 2535
+        },
+        {
+          "name": "pt_span",
+          "line": 2538,
+          "end": 2539
+        },
+        {
+          "name": "_kernel_cluster",
+          "line": 2542,
+          "end": 2560
+        },
+        {
+          "name": "_vchunk",
+          "line": 2563,
+          "end": 2565
+        },
+        {
+          "name": "_kernel_verify_cluster",
+          "line": 2568,
+          "end": 2581
+        },
+        {
+          "name": "_kernel_cuda8",
+          "line": 2584,
+          "end": 2627
+        }
+      ],
+      "review_scope": "Static architecture/dispatch review and author experiment notes, not exhaustive line-by-line conformance or our GPU validation."
+    }
+  ],
+  "notes": {
+    "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_attention_decode/EXPERIMENTS.md",
+    "sha256": "b9cf8162e62ca1429a22e18fcd0bd87cfe78cf9400996fdde5050d471cbf4721",
+    "bytes": 22163
+  },
+  "adoption": "No source executed or ported. Preserve metadata/hashes/links; temporary unlicensed source is not mirrored.",
+  "distinct_lead": "Producer warming of noinline merge code appears in this older sliding-only architecture; causal I-cache diagnosis is author claim, not our counters. First measure current-parent phase share and incremental overhead; B1 merge/workspace family remains closed."
+}

@@ -1,0 +1,7867 @@
+{
+  "captured_utc": "2026-10-31T09:19:40.575004+00:00",
+  "scope": "Standalone helper only; not full attention resource/performance evidence.",
+  "request": {
+    "source": "#include <cuda_runtime.h>\n#include <stdint.h>\n\n// IEEE exponent/mantissa linear interpolation, following Schraudolph (1999).\n// This independently derived fixed-binade form avoids numeric F2I conversion.\n// delta=log2((1+2/(e*ln(2)))/2); relative error <=0.02984 on normal range.\n// x is FP32 log2 probability; the caller retains hardware ex2 above120.\n__device__ __forceinline__ float ex2_poly(float x) {\n  x = fmaxf(x, -126.f);\n  const float biased = __fadd_rn(x, 383.956329345703125f);\n  return __uint_as_float((__float_as_uint(biased) << 8) + 0x7f800000u);\n}\n\n__device__ __forceinline__ float hw(float x) {\n float y; asm(\"ex2.approx.ftz.f32 %0, %1;\" : \"=f\"(y) : \"f\"(x)); return y;\n}\nextern \"C\" __global__ void hardware(const float* in,float* out) {\n int i=threadIdx.x+blockIdx.x*blockDim.x; out[i]=hw(in[i]);\n}\nextern \"C\" __global__ void bit_exp(const float* in,float* out) {\n int i=threadIdx.x+blockIdx.x*blockDim.x; float x=in[i];\n out[i]=x>120.f?hw(x):ex2_poly(x);\n}\n",
+    "options": {
+      "userArguments": "-O3 -std=c++17 -arch=sm_90a -Xptxas -v",
+      "compilerOptions": {
+        "executorRequest": false
+      },
+      "filters": {
+        "binary": true,
+        "execute": false,
+        "intel": true,
+        "demangle": false,
+        "directives": false,
+        "labels": true,
+        "commentOnly": true,
+        "libraryCode": false,
+        "trim": false
+      }
+    }
+  },
+  "response": {
+    "inputFilename": "example.cu",
+    "code": 0,
+    "okToCache": true,
+    "timedOut": false,
+    "stdout": [],
+    "stderr": [
+      {
+        "text": "ptxas info    : 0 bytes gmem"
+      },
+      {
+        "text": "ptxas info    : Compiling entry function 'bit_exp' for 'sm_90a'"
+      },
+      {
+        "text": "ptxas info    : Function properties for bit_exp"
+      },
+      {
+        "text": "    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads"
+      },
+      {
+        "text": "ptxas info    : Used 10 registers, used 0 barriers"
+      },
+      {
+        "text": "ptxas info    : Compile time = 25.336 ms"
+      },
+      {
+        "text": "ptxas info    : Compiling entry function 'hardware' for 'sm_90a'"
+      },
+      {
+        "text": "ptxas info    : Function properties for hardware"
+      },
+      {
+        "text": "    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads"
+      },
+      {
+        "text": "ptxas info    : Used 12 registers, used 0 barriers"
+      },
+      {
+        "text": "ptxas info    : Compile time = 1.342 ms"
+      }
+    ],
+    "truncated": false,
+    "execTime": 1970,
+    "processExecutionResultTime": 0.0445060133934021,
+    "instructionSet": "amd64",
+    "compilationOptions": [
+      "-o",
+      "/app/output.s",
+      "-g",
+      "-lineinfo",
+      "--keep-device-functions",
+      "-c",
+      "-keep",
+      "-keep-dir",
+      "/nosym/tmp/compiler-explorer-compilerIw5ACD",
+      "--compiler-bindir",
+      "/opt/compiler-explorer/gcc-14.1.0/bin",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_90a",
+      "-Xptxas",
+      "-v",
+      "/app/example.cu",
+      "-L./lib"
+    ],
+    "downloads": [],
+    "tools": [],
+    "asmSize": 50792,
+    "asm": [
+      {
+        "text": "_ZL26__cudaUnregisterBinaryUtilv:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "3d",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 0,
+        "text": " mov    rdi,QWORD PTR [rip+0x0]        # 7 <_ZL26__cudaUnregisterBinaryUtilv+0x7>",
+        "source": {
+          "file": null,
+          "line": 281,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL26__cudaUnregisterBinaryUtilv",
+            "range": {
+              "startCol": 45,
+              "endCol": 77
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 7,
+        "text": " jmp    c <_ZL26__cudaUnregisterBinaryUtilv+0xc>",
+        "source": {
+          "file": null,
+          "line": 281,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL26__cudaUnregisterBinaryUtilv",
+            "range": {
+              "startCol": 12,
+              "endCol": 44
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "0f",
+          "1f",
+          "40",
+          "00"
+        ],
+        "address": 12,
+        "text": " nop    DWORD PTR [rax+0x0]",
+        "source": {
+          "file": null,
+          "line": 281,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "text": "hardware:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "53"
+        ],
+        "address": 16,
+        "text": " push   rbx",
+        "source": {
+          "file": null,
+          "line": 17,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "ec",
+          "70"
+        ],
+        "address": 17,
+        "text": " sub    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 17,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "44",
+          "24",
+          "10"
+        ],
+        "address": 21,
+        "text": " lea    rax,[rsp+0x10]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "08"
+        ],
+        "address": 26,
+        "text": " lea    rdx,[rsp+0x8]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "7c",
+          "24",
+          "08"
+        ],
+        "address": 31,
+        "text": " mov    QWORD PTR [rsp+0x8],rdi",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "c8"
+        ],
+        "address": 36,
+        "text": " movq   xmm1,rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "c2"
+        ],
+        "address": 41,
+        "text": " movq   xmm0,rdx",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "74",
+          "24",
+          "10"
+        ],
+        "address": 46,
+        "text": " mov    QWORD PTR [rsp+0x10],rsi",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "0f",
+          "6c",
+          "c1"
+        ],
+        "address": 51,
+        "text": " punpcklqdq xmm0,xmm1",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "29",
+          "44",
+          "24",
+          "60"
+        ],
+        "address": 55,
+        "text": " movaps XMMWORD PTR [rsp+0x60],xmm0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "b6",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 60,
+        "text": " movzx  eax,BYTE PTR [rip+0x0]        # 43 <hardware+0x33>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 45,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "84",
+          "c0"
+        ],
+        "address": 67,
+        "text": " test   al,al",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "0e"
+        ],
+        "address": 69,
+        "text": " jne    55 <hardware+0x45>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 71,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 76,
+        "text": " call   51 <hardware+0x41>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 81,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "7b"
+        ],
+        "address": 83,
+        "text": " jne    d0 <hardware+0xc0>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 85,
+        "text": " mov    rax,QWORD PTR [rip+0x0]        # 5c <hardware+0x4c>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 46,
+              "endCol": 54
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "4c",
+          "24",
+          "20"
+        ],
+        "address": 92,
+        "text": " lea    rcx,[rsp+0x20]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "18"
+        ],
+        "address": 97,
+        "text": " lea    rdx,[rsp+0x18]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "30",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 102,
+        "text": " mov    DWORD PTR [rsp+0x30],0x1",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 110,
+        "text": " lea    rsi,[rsp+0x38]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "7c",
+          "24",
+          "28"
+        ],
+        "address": 115,
+        "text": " lea    rdi,[rsp+0x28]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "40",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 120,
+        "text": " mov    DWORD PTR [rsp+0x40],0x1",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "28"
+        ],
+        "address": 128,
+        "text": " mov    QWORD PTR [rsp+0x28],rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "38"
+        ],
+        "address": 133,
+        "text": " mov    QWORD PTR [rsp+0x38],rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 138,
+        "text": " call   8f <hardware+0x7f>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 143,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "2e"
+        ],
+        "address": 145,
+        "text": " jne    c1 <hardware+0xb1>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 147,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "3d",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 151,
+        "text": " mov    rdi,QWORD PTR [rip+0x0]        # 9e <hardware+0x8e>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 46,
+              "endCol": 54
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 158,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "4c",
+          "24",
+          "48"
+        ],
+        "address": 162,
+        "text": " mov    rcx,QWORD PTR [rsp+0x48]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "44",
+          "8b",
+          "44",
+          "24",
+          "50"
+        ],
+        "address": 167,
+        "text": " mov    r8d,DWORD PTR [rsp+0x50]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 172,
+        "text": " mov    rsi,QWORD PTR [rsp+0x38]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "8b",
+          "54",
+          "24",
+          "40"
+        ],
+        "address": 177,
+        "text": " mov    edx,DWORD PTR [rsp+0x40]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "4c",
+          "8d",
+          "4c",
+          "24",
+          "70"
+        ],
+        "address": 181,
+        "text": " lea    r9,[rsp+0x70]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 186,
+        "text": " call   bf <hardware+0xaf>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "58"
+        ],
+        "address": 191,
+        "text": " pop    rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5a"
+        ],
+        "address": 192,
+        "text": " pop    rdx",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "c4",
+          "70"
+        ],
+        "address": 193,
+        "text": " add    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 19,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5b"
+        ],
+        "address": 197,
+        "text": " pop    rbx",
+        "source": {
+          "file": null,
+          "line": 19,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c3"
+        ],
+        "address": 198,
+        "text": " ret",
+        "source": {
+          "file": null,
+          "line": 19,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "0f",
+          "1f",
+          "84",
+          "00",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 199,
+        "text": " nop    WORD PTR [rax+rax*1+0x0]",
+        "source": {
+          "file": null,
+          "line": 19,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "be",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 208,
+        "text": " mov    esi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 213,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 218,
+        "text": " call   df <hardware+0xcf>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 223,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 225,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "94",
+          "c0"
+        ],
+        "address": 230,
+        "text": " sete   al",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "88",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 233,
+        "text": " mov    BYTE PTR [rip+0x0],al        # ef <hardware+0xdf>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 44,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 239,
+        "text": " call   f4 <hardware+0xe4>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e9",
+          "5c",
+          "ff",
+          "ff",
+          "ff"
+        ],
+        "address": 244,
+        "text": " jmp    55 <hardware+0x45>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 13,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "c3"
+        ],
+        "address": 249,
+        "text": " mov    rbx,rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 252,
+        "text": " jmp    101 <hardware+0xf1>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "hardware",
+            "range": {
+              "startCol": 14,
+              "endCol": 22
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "66",
+          "66",
+          "2e",
+          "0f",
+          "1f",
+          "84",
+          "00",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 257,
+        "text": " data16 cs nop WORD PTR [rax+rax*1+0x0]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "1f",
+          "40",
+          "00"
+        ],
+        "address": 268,
+        "text": " nop    DWORD PTR [rax+0x0]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "text": "bit_exp:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "53"
+        ],
+        "address": 272,
+        "text": " push   rbx",
+        "source": {
+          "file": null,
+          "line": 20,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "ec",
+          "70"
+        ],
+        "address": 273,
+        "text": " sub    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 20,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "44",
+          "24",
+          "10"
+        ],
+        "address": 277,
+        "text": " lea    rax,[rsp+0x10]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "08"
+        ],
+        "address": 282,
+        "text": " lea    rdx,[rsp+0x8]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "7c",
+          "24",
+          "08"
+        ],
+        "address": 287,
+        "text": " mov    QWORD PTR [rsp+0x8],rdi",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "c8"
+        ],
+        "address": 292,
+        "text": " movq   xmm1,rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "c2"
+        ],
+        "address": 297,
+        "text": " movq   xmm0,rdx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "74",
+          "24",
+          "10"
+        ],
+        "address": 302,
+        "text": " mov    QWORD PTR [rsp+0x10],rsi",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "0f",
+          "6c",
+          "c1"
+        ],
+        "address": 307,
+        "text": " punpcklqdq xmm0,xmm1",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "29",
+          "44",
+          "24",
+          "60"
+        ],
+        "address": 311,
+        "text": " movaps XMMWORD PTR [rsp+0x60],xmm0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "b6",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 316,
+        "text": " movzx  eax,BYTE PTR [rip+0x0]        # 143 <bit_exp+0x33>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 46,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "84",
+          "c0"
+        ],
+        "address": 323,
+        "text": " test   al,al",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "0e"
+        ],
+        "address": 325,
+        "text": " jne    155 <bit_exp+0x45>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 327,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 332,
+        "text": " call   151 <bit_exp+0x41>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 337,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "7b"
+        ],
+        "address": 339,
+        "text": " jne    1d0 <bit_exp+0xc0>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 341,
+        "text": " mov    rax,QWORD PTR [rip+0x0]        # 15c <bit_exp+0x4c>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 47,
+              "endCol": 54
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "4c",
+          "24",
+          "20"
+        ],
+        "address": 348,
+        "text": " lea    rcx,[rsp+0x20]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "18"
+        ],
+        "address": 353,
+        "text": " lea    rdx,[rsp+0x18]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "30",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 358,
+        "text": " mov    DWORD PTR [rsp+0x30],0x1",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 366,
+        "text": " lea    rsi,[rsp+0x38]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "7c",
+          "24",
+          "28"
+        ],
+        "address": 371,
+        "text": " lea    rdi,[rsp+0x28]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "40",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 376,
+        "text": " mov    DWORD PTR [rsp+0x40],0x1",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "28"
+        ],
+        "address": 384,
+        "text": " mov    QWORD PTR [rsp+0x28],rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "38"
+        ],
+        "address": 389,
+        "text": " mov    QWORD PTR [rsp+0x38],rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 394,
+        "text": " call   18f <bit_exp+0x7f>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 399,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "2e"
+        ],
+        "address": 401,
+        "text": " jne    1c1 <bit_exp+0xb1>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 403,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "3d",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 407,
+        "text": " mov    rdi,QWORD PTR [rip+0x0]        # 19e <bit_exp+0x8e>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 47,
+              "endCol": 54
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 414,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "4c",
+          "24",
+          "48"
+        ],
+        "address": 418,
+        "text": " mov    rcx,QWORD PTR [rsp+0x48]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "44",
+          "8b",
+          "44",
+          "24",
+          "50"
+        ],
+        "address": 423,
+        "text": " mov    r8d,DWORD PTR [rsp+0x50]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 428,
+        "text": " mov    rsi,QWORD PTR [rsp+0x38]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "8b",
+          "54",
+          "24",
+          "40"
+        ],
+        "address": 433,
+        "text": " mov    edx,DWORD PTR [rsp+0x40]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "4c",
+          "8d",
+          "4c",
+          "24",
+          "70"
+        ],
+        "address": 437,
+        "text": " lea    r9,[rsp+0x70]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 442,
+        "text": " call   1bf <bit_exp+0xaf>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "58"
+        ],
+        "address": 447,
+        "text": " pop    rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5a"
+        ],
+        "address": 448,
+        "text": " pop    rdx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "c4",
+          "70"
+        ],
+        "address": 449,
+        "text": " add    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 23,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5b"
+        ],
+        "address": 453,
+        "text": " pop    rbx",
+        "source": {
+          "file": null,
+          "line": 23,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c3"
+        ],
+        "address": 454,
+        "text": " ret",
+        "source": {
+          "file": null,
+          "line": 23,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "0f",
+          "1f",
+          "84",
+          "00",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 455,
+        "text": " nop    WORD PTR [rax+rax*1+0x0]",
+        "source": {
+          "file": null,
+          "line": 23,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "be",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 464,
+        "text": " mov    esi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 469,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 474,
+        "text": " call   1df <bit_exp+0xcf>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 479,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 481,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "94",
+          "c0"
+        ],
+        "address": 486,
+        "text": " sete   al",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "88",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 489,
+        "text": " mov    BYTE PTR [rip+0x0],al        # 1ef <bit_exp+0xdf>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 45,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 495,
+        "text": " call   1f4 <bit_exp+0xe4>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e9",
+          "5c",
+          "ff",
+          "ff",
+          "ff"
+        ],
+        "address": 500,
+        "text": " jmp    155 <bit_exp+0x45>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "c3"
+        ],
+        "address": 505,
+        "text": " mov    rbx,rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 508,
+        "text": " jmp    201 <bit_exp+0xf1>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "bit_exp",
+            "range": {
+              "startCol": 14,
+              "endCol": 21
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "66",
+          "66",
+          "2e",
+          "0f",
+          "1f",
+          "84",
+          "00",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 513,
+        "text": " data16 cs nop WORD PTR [rax+rax*1+0x0]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "1f",
+          "40",
+          "00"
+        ],
+        "address": 524,
+        "text": " nop    DWORD PTR [rax+0x0]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "text": "_Z30__device_stub__Z8hardwarePKfPfPKfPf:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "53"
+        ],
+        "address": 528,
+        "text": " push   rbx",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "ec",
+          "70"
+        ],
+        "address": 529,
+        "text": " sub    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "08"
+        ],
+        "address": 533,
+        "text": " lea    rdx,[rsp+0x8]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "cc"
+        ],
+        "address": 538,
+        "text": " movq   xmm1,rsp",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "7c",
+          "24",
+          "08"
+        ],
+        "address": 543,
+        "text": " mov    QWORD PTR [rsp+0x8],rdi",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "c2"
+        ],
+        "address": 548,
+        "text": " movq   xmm0,rdx",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "34",
+          "24"
+        ],
+        "address": 553,
+        "text": " mov    QWORD PTR [rsp],rsi",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "0f",
+          "6c",
+          "c1"
+        ],
+        "address": 557,
+        "text": " punpcklqdq xmm0,xmm1",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "29",
+          "44",
+          "24",
+          "60"
+        ],
+        "address": 561,
+        "text": " movaps XMMWORD PTR [rsp+0x60],xmm0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "b6",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 566,
+        "text": " movzx  eax,BYTE PTR [rip+0x0]        # 23d <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0x2d>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 46,
+              "endCol": 85
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "84",
+          "c0"
+        ],
+        "address": 573,
+        "text": " test   al,al",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "0e"
+        ],
+        "address": 575,
+        "text": " jne    24f <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0x3f>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 577,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 582,
+        "text": " call   24b <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0x3b>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 587,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "79"
+        ],
+        "address": 589,
+        "text": " jne    2c8 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0xb8>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 591,
+        "text": " mov    rax,QWORD PTR [rip+0x0]        # 256 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0x46>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 47,
+              "endCol": 86
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "4c",
+          "24",
+          "20"
+        ],
+        "address": 598,
+        "text": " lea    rcx,[rsp+0x20]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "18"
+        ],
+        "address": 603,
+        "text": " lea    rdx,[rsp+0x18]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "30",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 608,
+        "text": " mov    DWORD PTR [rsp+0x30],0x1",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 616,
+        "text": " lea    rsi,[rsp+0x38]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "7c",
+          "24",
+          "28"
+        ],
+        "address": 621,
+        "text": " lea    rdi,[rsp+0x28]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "40",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 626,
+        "text": " mov    DWORD PTR [rsp+0x40],0x1",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "28"
+        ],
+        "address": 634,
+        "text": " mov    QWORD PTR [rsp+0x28],rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "38"
+        ],
+        "address": 639,
+        "text": " mov    QWORD PTR [rsp+0x38],rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 644,
+        "text": " call   289 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0x79>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 649,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "2e"
+        ],
+        "address": 651,
+        "text": " jne    2bb <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0xab>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 653,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "3d",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 657,
+        "text": " mov    rdi,QWORD PTR [rip+0x0]        # 298 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0x88>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 47,
+              "endCol": 86
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 664,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "4c",
+          "24",
+          "48"
+        ],
+        "address": 668,
+        "text": " mov    rcx,QWORD PTR [rsp+0x48]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "44",
+          "8b",
+          "44",
+          "24",
+          "50"
+        ],
+        "address": 673,
+        "text": " mov    r8d,DWORD PTR [rsp+0x50]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 678,
+        "text": " mov    rsi,QWORD PTR [rsp+0x38]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "8b",
+          "54",
+          "24",
+          "40"
+        ],
+        "address": 683,
+        "text": " mov    edx,DWORD PTR [rsp+0x40]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "4c",
+          "8d",
+          "4c",
+          "24",
+          "70"
+        ],
+        "address": 687,
+        "text": " lea    r9,[rsp+0x70]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 692,
+        "text": " call   2b9 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0xa9>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "58"
+        ],
+        "address": 697,
+        "text": " pop    rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5a"
+        ],
+        "address": 698,
+        "text": " pop    rdx",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "c4",
+          "70"
+        ],
+        "address": 699,
+        "text": " add    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5b"
+        ],
+        "address": 703,
+        "text": " pop    rbx",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c3"
+        ],
+        "address": 704,
+        "text": " ret",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "1f",
+          "80",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 705,
+        "text": " nop    DWORD PTR [rax+0x0]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "be",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 712,
+        "text": " mov    esi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 717,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 722,
+        "text": " call   2d7 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0xc7>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 727,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 729,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "94",
+          "c0"
+        ],
+        "address": 734,
+        "text": " sete   al",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "88",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 737,
+        "text": " mov    BYTE PTR [rip+0x0],al        # 2e7 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0xd7>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 45,
+              "endCol": 84
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 743,
+        "text": " call   2ec <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0xdc>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e9",
+          "5e",
+          "ff",
+          "ff",
+          "ff"
+        ],
+        "address": 748,
+        "text": " jmp    24f <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0x3f>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "c3"
+        ],
+        "address": 753,
+        "text": " mov    rbx,rax",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 756,
+        "text": " jmp    2f9 <_Z30__device_stub__Z8hardwarePKfPfPKfPf+0xe9>",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 53
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "0f",
+          "1f",
+          "80",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 761,
+        "text": " nop    DWORD PTR [rax+0x0]",
+        "source": {
+          "file": null,
+          "line": 14,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "text": "_Z29__device_stub__Z7bit_expPKfPfPKfPf:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "53"
+        ],
+        "address": 768,
+        "text": " push   rbx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "ec",
+          "70"
+        ],
+        "address": 769,
+        "text": " sub    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "08"
+        ],
+        "address": 773,
+        "text": " lea    rdx,[rsp+0x8]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "cc"
+        ],
+        "address": 778,
+        "text": " movq   xmm1,rsp",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "7c",
+          "24",
+          "08"
+        ],
+        "address": 783,
+        "text": " mov    QWORD PTR [rsp+0x8],rdi",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "48",
+          "0f",
+          "6e",
+          "c2"
+        ],
+        "address": 788,
+        "text": " movq   xmm0,rdx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "34",
+          "24"
+        ],
+        "address": 793,
+        "text": " mov    QWORD PTR [rsp],rsi",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "66",
+          "0f",
+          "6c",
+          "c1"
+        ],
+        "address": 797,
+        "text": " punpcklqdq xmm0,xmm1",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "29",
+          "44",
+          "24",
+          "60"
+        ],
+        "address": 801,
+        "text": " movaps XMMWORD PTR [rsp+0x60],xmm0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "b6",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 806,
+        "text": " movzx  eax,BYTE PTR [rip+0x0]        # 32d <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0x2d>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 46,
+              "endCol": 84
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "84",
+          "c0"
+        ],
+        "address": 813,
+        "text": " test   al,al",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "0e"
+        ],
+        "address": 815,
+        "text": " jne    33f <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0x3f>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 817,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 822,
+        "text": " call   33b <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0x3b>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 827,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "79"
+        ],
+        "address": 829,
+        "text": " jne    3b8 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0xb8>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 831,
+        "text": " mov    rax,QWORD PTR [rip+0x0]        # 346 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0x46>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 47,
+              "endCol": 85
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "4c",
+          "24",
+          "20"
+        ],
+        "address": 838,
+        "text": " lea    rcx,[rsp+0x20]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "54",
+          "24",
+          "18"
+        ],
+        "address": 843,
+        "text": " lea    rdx,[rsp+0x18]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "30",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 848,
+        "text": " mov    DWORD PTR [rsp+0x30],0x1",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 856,
+        "text": " lea    rsi,[rsp+0x38]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8d",
+          "7c",
+          "24",
+          "28"
+        ],
+        "address": 861,
+        "text": " lea    rdi,[rsp+0x28]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c7",
+          "44",
+          "24",
+          "40",
+          "01",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 866,
+        "text": " mov    DWORD PTR [rsp+0x40],0x1",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "28"
+        ],
+        "address": 874,
+        "text": " mov    QWORD PTR [rsp+0x28],rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "44",
+          "24",
+          "38"
+        ],
+        "address": 879,
+        "text": " mov    QWORD PTR [rsp+0x38],rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 884,
+        "text": " call   379 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0x79>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 889,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "75",
+          "2e"
+        ],
+        "address": 891,
+        "text": " jne    3ab <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0xab>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 893,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "3d",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 897,
+        "text": " mov    rdi,QWORD PTR [rip+0x0]        # 388 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0x88>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 47,
+              "endCol": 85
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "ff",
+          "74",
+          "24",
+          "20"
+        ],
+        "address": 904,
+        "text": " push   QWORD PTR [rsp+0x20]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "4c",
+          "24",
+          "48"
+        ],
+        "address": 908,
+        "text": " mov    rcx,QWORD PTR [rsp+0x48]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "44",
+          "8b",
+          "44",
+          "24",
+          "50"
+        ],
+        "address": 913,
+        "text": " mov    r8d,DWORD PTR [rsp+0x50]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "74",
+          "24",
+          "38"
+        ],
+        "address": 918,
+        "text": " mov    rsi,QWORD PTR [rsp+0x38]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "8b",
+          "54",
+          "24",
+          "40"
+        ],
+        "address": 923,
+        "text": " mov    edx,DWORD PTR [rsp+0x40]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "4c",
+          "8d",
+          "4c",
+          "24",
+          "70"
+        ],
+        "address": 927,
+        "text": " lea    r9,[rsp+0x70]",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 932,
+        "text": " call   3a9 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0xa9>",
+        "source": {
+          "file": "/opt/compiler-explorer/cuda/13.0.0/bin/../targets/x86_64-linux/include/crt/device_functions.h",
+          "line": 2963,
+          "mainsource": false
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "58"
+        ],
+        "address": 937,
+        "text": " pop    rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5a"
+        ],
+        "address": 938,
+        "text": " pop    rdx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "c4",
+          "70"
+        ],
+        "address": 939,
+        "text": " add    rsp,0x70",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5b"
+        ],
+        "address": 943,
+        "text": " pop    rbx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "c3"
+        ],
+        "address": 944,
+        "text": " ret",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "1f",
+          "80",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 945,
+        "text": " nop    DWORD PTR [rax+0x0]",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "be",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 952,
+        "text": " mov    esi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 957,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 962,
+        "text": " call   3c7 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0xc7>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "85",
+          "c0"
+        ],
+        "address": 967,
+        "text": " test   eax,eax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 969,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "0f",
+          "94",
+          "c0"
+        ],
+        "address": 974,
+        "text": " sete   al",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "88",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 977,
+        "text": " mov    BYTE PTR [rip+0x0],al        # 3d7 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0xd7>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 45,
+              "endCol": 83
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 983,
+        "text": " call   3dc <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0xdc>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e9",
+          "5e",
+          "ff",
+          "ff",
+          "ff"
+        ],
+        "address": 988,
+        "text": " jmp    33f <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0x3f>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "c3"
+        ],
+        "address": 993,
+        "text": " mov    rbx,rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 996,
+        "text": " jmp    3e9 <_Z29__device_stub__Z7bit_expPKfPfPKfPf+0xe9>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf",
+            "range": {
+              "startCol": 14,
+              "endCol": 52
+            }
+          }
+        ]
+      },
+      {
+        "text": "hardware.cold:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 0,
+        "text": " mov    edi,0x0",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 5,
+        "text": " call   a <hardware.cold+0xa>",
+        "source": null,
+        "labels": [
+          {
+            "name": "hardware.cold",
+            "range": {
+              "startCol": 12,
+              "endCol": 25
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "df"
+        ],
+        "address": 10,
+        "text": " mov    rdi,rbx",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 13,
+        "text": " call   12 <bit_exp.cold>",
+        "source": null,
+        "labels": [
+          {
+            "name": "bit_exp.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 25
+            }
+          }
+        ]
+      },
+      {
+        "text": "bit_exp.cold:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 18,
+        "text": " mov    edi,0x0",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 23,
+        "text": " call   1c <bit_exp.cold+0xa>",
+        "source": null,
+        "labels": [
+          {
+            "name": "bit_exp.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 25
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "df"
+        ],
+        "address": 28,
+        "text": " mov    rdi,rbx",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 31,
+        "text": " call   24 <_Z30__device_stub__Z8hardwarePKfPfPKfPf.cold>",
+        "source": null,
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 57
+            }
+          }
+        ]
+      },
+      {
+        "text": "_Z30__device_stub__Z8hardwarePKfPfPKfPf.cold:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 36,
+        "text": " mov    edi,0x0",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 41,
+        "text": " call   2e <_Z30__device_stub__Z8hardwarePKfPfPKfPf.cold+0xa>",
+        "source": null,
+        "labels": [
+          {
+            "name": "_Z30__device_stub__Z8hardwarePKfPfPKfPf.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 57
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "df"
+        ],
+        "address": 46,
+        "text": " mov    rdi,rbx",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 49,
+        "text": " call   36 <_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold>",
+        "source": null,
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 56
+            }
+          }
+        ]
+      },
+      {
+        "text": "_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 54,
+        "text": " mov    edi,0x0",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 59,
+        "text": " call   40 <_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold+0xa>",
+        "source": null,
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 56
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "df"
+        ],
+        "address": 64,
+        "text": " mov    rdi,rbx",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 67,
+        "text": " call   48 <_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold+0x12>",
+        "source": null,
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 56
+            }
+          }
+        ]
+      },
+      {
+        "text": "_ZL24__sti____cudaRegisterAllv:",
+        "source": null,
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "53"
+        ],
+        "address": 0,
+        "text": " push   rbx",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 1,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 6,
+        "text": " call   b <_ZL24__sti____cudaRegisterAllv+0xb>",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL24__sti____cudaRegisterAllv",
+            "range": {
+              "startCol": 12,
+              "endCol": 42
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 11,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "b9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 13,
+        "text": " mov    ecx,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "45",
+          "31",
+          "c9"
+        ],
+        "address": 18,
+        "text": " xor    r9d,r9d",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 21,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "c7"
+        ],
+        "address": 23,
+        "text": " mov    rdi,rax",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "ca"
+        ],
+        "address": 26,
+        "text": " mov    rdx,rcx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "41",
+          "b8",
+          "ff",
+          "ff",
+          "ff",
+          "ff"
+        ],
+        "address": 29,
+        "text": " mov    r8d,0xffffffff",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 35,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "be",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 37,
+        "text": " mov    esi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "c3"
+        ],
+        "address": 42,
+        "text": " mov    rbx,rax",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 45,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "05",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 47,
+        "text": " mov    QWORD PTR [rip+0x0],rax        # 36 <_ZL24__sti____cudaRegisterAllv+0x36>",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL24__sti____cudaRegisterAllv",
+            "range": {
+              "startCol": 46,
+              "endCol": 76
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 54,
+        "text": " call   3b <_ZL24__sti____cudaRegisterAllv+0x3b>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL24__sti____cudaRegisterAllv",
+            "range": {
+              "startCol": 13,
+              "endCol": 43
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "c4",
+          "20"
+        ],
+        "address": 59,
+        "text": " add    rsp,0x20",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "df"
+        ],
+        "address": 63,
+        "text": " mov    rdi,rbx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "45",
+          "31",
+          "c9"
+        ],
+        "address": 66,
+        "text": " xor    r9d,r9d",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 69,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "b9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 71,
+        "text": " mov    ecx,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "41",
+          "b8",
+          "ff",
+          "ff",
+          "ff",
+          "ff"
+        ],
+        "address": 76,
+        "text": " mov    r8d,0xffffffff",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "be",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 82,
+        "text": " mov    esi,0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 87,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "48",
+          "89",
+          "ca"
+        ],
+        "address": 89,
+        "text": " mov    rdx,rcx",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 92,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "6a",
+          "00"
+        ],
+        "address": 94,
+        "text": " push   0x0",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 96,
+        "text": " call   65 <_ZL24__sti____cudaRegisterAllv+0x65>",
+        "source": {
+          "file": null,
+          "line": 1,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL24__sti____cudaRegisterAllv",
+            "range": {
+              "startCol": 13,
+              "endCol": 43
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "8b",
+          "3d",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 101,
+        "text": " mov    rdi,QWORD PTR [rip+0x0]        # 6c <_ZL24__sti____cudaRegisterAllv+0x6c>",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL24__sti____cudaRegisterAllv",
+            "range": {
+              "startCol": 46,
+              "endCol": 76
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "48",
+          "83",
+          "c4",
+          "20"
+        ],
+        "address": 108,
+        "text": " add    rsp,0x20",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e8",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 112,
+        "text": " call   75 <_ZL24__sti____cudaRegisterAllv+0x75>",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_ZL24__sti____cudaRegisterAllv",
+            "range": {
+              "startCol": 13,
+              "endCol": 43
+            }
+          }
+        ]
+      },
+      {
+        "opcodes": [
+          "bf",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 117,
+        "text": " mov    edi,0x0",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "5b"
+        ],
+        "address": 122,
+        "text": " pop    rbx",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": []
+      },
+      {
+        "opcodes": [
+          "e9",
+          "00",
+          "00",
+          "00",
+          "00"
+        ],
+        "address": 123,
+        "text": " jmp    80 <_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold+0x4a>",
+        "source": {
+          "file": null,
+          "line": 2,
+          "mainsource": true
+        },
+        "labels": [
+          {
+            "name": "_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold",
+            "range": {
+              "startCol": 13,
+              "endCol": 56
+            }
+          }
+        ]
+      }
+    ],
+    "optOutput": [],
+    "devices": {
+      "PTX (compute_90)": {
+        "okToCache": false,
+        "asm": [
+          {
+            "text": ".version 9.0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".target sm_90",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".address_size 64",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .func  (.param .b32 func_retval0) _Z8ex2_polyf(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .b32 _Z8ex2_polyf_param_0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<7>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b32 \t%r<4>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 8 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.f32 \t%f1, [_Z8ex2_polyf_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 8,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 9 3",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f2, 0fC2FC0000;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmax.f32 \t%f3, %f1, %f2;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 10 3",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f4, 0f43BFFA69;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.rn.f32 \t%f5, %f3, %f4;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 11 3",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%r1, %f5;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tshl.b32 \t%r2, %r1, 8;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s32 \t%r3, %r2, 2139095040;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%f6, %r3;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.param.f32 \t[func_retval0+0], %f6;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .func  (.param .b32 func_retval0) _Z2hwf(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .b32 _Z2hwf_param_0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<3>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 14 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.f32 \t%f2, [_Z2hwf_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 14,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 15 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tex2.approx.ftz.f32 %f1, %f2;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.param.f32 \t[func_retval0+0], %f1;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .entry hardware(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 hardware_param_0,",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 hardware_param_1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<3>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b32 \t%r<5>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b64 \t%rd<8>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 17 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd1, [hardware_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 17,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd2, [hardware_param_1];",
+            "source": {
+              "file": "example.cu",
+              "line": 17,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd3, %rd2;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd4, %rd1;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r1, %tid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r2, %ctaid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r3, %ntid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmad.lo.s32 \t%r4, %r2, %r3, %r1;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmul.wide.s32 \t%rd5, %r4, 4;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd6, %rd4, %rd5;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.global.f32 \t%f2, [%rd6];",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 15 2, function_name $L__info_string0, inlined_at 1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tex2.approx.ftz.f32 %f1, %f2;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd7, %rd3, %rd5;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.global.f32 \t[%rd7], %f1;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 19 1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 19,
+              "column": 1,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .entry bit_exp(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 bit_exp_param_0,",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 bit_exp_param_1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .pred \t%p<2>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<12>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b32 \t%r<8>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b64 \t%rd<10>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 20 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd3, [bit_exp_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 20,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd2, [bit_exp_param_1];",
+            "source": {
+              "file": "example.cu",
+              "line": 20,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 21 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r1, %ntid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r2, %ctaid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r3, %tid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmad.lo.s32 \t%r4, %r2, %r1, %r3;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tcvt.s64.s32 \t%rd1, %r4;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd4, %rd3;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmul.wide.s32 \t%rd5, %r4, 4;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd6, %rd4, %rd5;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.global.f32 \t%f1, [%rd6];",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tsetp.gt.f32 \t%p1, %f1, 0f42F00000;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t@%p1 bra \t$L__BB3_2;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tbra.uni \t$L__BB3_1;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "$L__BB3_2:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 15 2, function_name $L__info_string0, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tex2.approx.ftz.f32 %f11, %f1;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tbra.uni \t$L__BB3_3;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "$L__BB3_1:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 9 3, function_name $L__info_string1, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f5, 0fC2FC0000;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmax.f32 \t%f6, %f1, %f5;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 10 3, function_name $L__info_string1, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f7, 0f43BFFA69;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.rn.f32 \t%f8, %f6, %f7;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 11 3, function_name $L__info_string1, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%r5, %f8;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tshl.b32 \t%r6, %r5, 8;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s32 \t%r7, %r6, 2139095040;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%f11, %r7;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "$L__BB3_3:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 21 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd7, %rd2;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tshl.b64 \t%rd8, %rd1, 2;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd9, %rd7, %rd8;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.global.f32 \t[%rd9], %f11;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 23 1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 23,
+              "column": 1,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.file\t1 \"/app/example.cu\"",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.section\t.debug_str",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "$L__info_string0:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.b8 95,90,50,104,119,102,0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "$L__info_string1:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.b8 95,90,56,101,120,50,95,112,111,108,121,102,0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t}",
+            "source": null,
+            "labels": []
+          }
+        ],
+        "labelDefinitions": {},
+        "languageId": "ptx",
+        "parsingTime": 0,
+        "filteredCount": 36
+      },
+      "PTX (compute_90a)": {
+        "okToCache": false,
+        "asm": [
+          {
+            "text": ".version 9.0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".target sm_90a",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".address_size 64",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .func  (.param .b32 func_retval0) _Z8ex2_polyf(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .b32 _Z8ex2_polyf_param_0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<7>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b32 \t%r<4>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 8 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.f32 \t%f1, [_Z8ex2_polyf_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 8,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 9 3",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f2, 0fC2FC0000;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmax.f32 \t%f3, %f1, %f2;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 10 3",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f4, 0f43BFFA69;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.rn.f32 \t%f5, %f3, %f4;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 11 3",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%r1, %f5;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tshl.b32 \t%r2, %r1, 8;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s32 \t%r3, %r2, 2139095040;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%f6, %r3;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.param.f32 \t[func_retval0+0], %f6;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .func  (.param .b32 func_retval0) _Z2hwf(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .b32 _Z2hwf_param_0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<3>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 14 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.f32 \t%f2, [_Z2hwf_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 14,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 15 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tex2.approx.ftz.f32 %f1, %f2;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.param.f32 \t[func_retval0+0], %f1;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .entry hardware(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 hardware_param_0,",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 hardware_param_1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<3>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b32 \t%r<5>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b64 \t%rd<8>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 17 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd1, [hardware_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 17,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd2, [hardware_param_1];",
+            "source": {
+              "file": "example.cu",
+              "line": 17,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd3, %rd2;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd4, %rd1;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r1, %tid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r2, %ctaid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r3, %ntid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmad.lo.s32 \t%r4, %r2, %r3, %r1;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmul.wide.s32 \t%rd5, %r4, 4;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd6, %rd4, %rd5;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.global.f32 \t%f2, [%rd6];",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 15 2, function_name $L__info_string0, inlined_at 1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tex2.approx.ftz.f32 %f1, %f2;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 18 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd7, %rd3, %rd5;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.global.f32 \t[%rd7], %f1;",
+            "source": {
+              "file": "example.cu",
+              "line": 18,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 19 1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 19,
+              "column": 1,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ".visible .entry bit_exp(",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 bit_exp_param_0,",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.param .u64 bit_exp_param_1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": ")",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .pred \t%p<2>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .f32 \t%f<12>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b32 \t%r<8>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.reg .b64 \t%rd<10>;",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 20 0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd3, [bit_exp_param_0];",
+            "source": {
+              "file": "example.cu",
+              "line": 20,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.param.u64 \t%rd2, [bit_exp_param_1];",
+            "source": {
+              "file": "example.cu",
+              "line": 20,
+              "column": 0,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 21 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r1, %ntid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r2, %ctaid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.u32 \t%r3, %tid.x;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmad.lo.s32 \t%r4, %r2, %r1, %r3;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tcvt.s64.s32 \t%rd1, %r4;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd4, %rd3;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmul.wide.s32 \t%rd5, %r4, 4;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd6, %rd4, %rd5;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tld.global.f32 \t%f1, [%rd6];",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tsetp.gt.f32 \t%p1, %f1, 0f42F00000;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t@%p1 bra \t$L__BB3_2;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tbra.uni \t$L__BB3_1;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "$L__BB3_2:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 15 2, function_name $L__info_string0, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tex2.approx.ftz.f32 %f11, %f1;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tbra.uni \t$L__BB3_3;",
+            "source": {
+              "file": "example.cu",
+              "line": 15,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "$L__BB3_1:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 9 3, function_name $L__info_string1, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f5, 0fC2FC0000;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmax.f32 \t%f6, %f1, %f5;",
+            "source": {
+              "file": "example.cu",
+              "line": 9,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 10 3, function_name $L__info_string1, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.f32 \t%f7, 0f43BFFA69;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.rn.f32 \t%f8, %f6, %f7;",
+            "source": {
+              "file": "example.cu",
+              "line": 10,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 11 3, function_name $L__info_string1, inlined_at 1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%r5, %f8;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tshl.b32 \t%r6, %r5, 8;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s32 \t%r7, %r6, 2139095040;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tmov.b32 \t%f11, %r7;",
+            "source": {
+              "file": "example.cu",
+              "line": 11,
+              "column": 3,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "$L__BB3_3:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 21 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tcvta.to.global.u64 \t%rd7, %rd2;",
+            "source": {
+              "file": "example.cu",
+              "line": 21,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 22 2",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tshl.b64 \t%rd8, %rd1, 2;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tadd.s64 \t%rd9, %rd7, %rd8;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\tst.global.f32 \t[%rd9], %f11;",
+            "source": {
+              "file": "example.cu",
+              "line": 22,
+              "column": 2,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "\t.loc\t1 23 1",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\tret;",
+            "source": {
+              "file": "example.cu",
+              "line": 23,
+              "column": 1,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": "}",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.file\t1 \"/app/example.cu\"",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.section\t.debug_str",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t{",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "$L__info_string0:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.b8 95,90,50,104,119,102,0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "$L__info_string1:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t.b8 95,90,56,101,120,50,95,112,111,108,121,102,0",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "\t}",
+            "source": null,
+            "labels": []
+          }
+        ],
+        "labelDefinitions": {},
+        "languageId": "ptx",
+        "parsingTime": 0,
+        "filteredCount": 36
+      },
+      "SASS (compute_90a, sm_90a)": {
+        "okToCache": false,
+        "asm": [
+          {
+            "text": "bit_exp:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "00000a00ff017b82"
+            ],
+            "address": 0,
+            "text": " LDC R1, c[0x0][0x28] ",
+            "source": {
+              "file": null,
+              "line": 20,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000057919"
+            ],
+            "address": 16,
+            "text": " S2R R5, SR_CTAID.X ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "00008400ff027b82"
+            ],
+            "address": 32,
+            "text": " LDC.64 R2, c[0x0][0x210] ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000047ab9"
+            ],
+            "address": 48,
+            "text": " ULDC UR4, c[0x0][0x0] ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000860000067ab9"
+            ],
+            "address": 64,
+            "text": " ULDC.64 UR6, c[0x0][0x218] ",
+            "source": {
+              "file": null,
+              "line": 22,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007919"
+            ],
+            "address": 80,
+            "text": " S2R R0, SR_TID.X ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000405057c24"
+            ],
+            "address": 96,
+            "text": " IMAD R5, R5, UR4, R0 ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000820000047ab9"
+            ],
+            "address": 112,
+            "text": " ULDC.64 UR4, c[0x0][0x208] ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000405027825"
+            ],
+            "address": 128,
+            "text": " IMAD.WIDE R2, R5, 0x4, R2 ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000402027981"
+            ],
+            "address": 144,
+            "text": " LDG.E R2, desc[UR4][R2.64] ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "42f000000200780b"
+            ],
+            "address": 160,
+            "text": " FSETP.GT.AND P0, PT, R2, 120, PT ",
+            "source": {
+              "file": null,
+              "line": 22,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "c2fc000002008809"
+            ],
+            "address": 176,
+            "text": " @!P0 FMNMX R0, R2, -126, !PT ",
+            "source": {
+              "file": null,
+              "line": 9,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "43bffa6900008421"
+            ],
+            "address": 192,
+            "text": " @!P0 FADD R0, R0, 383.956329345703125 ",
+            "source": {
+              "file": null,
+              "line": 10,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "7f80000000078811"
+            ],
+            "address": 208,
+            "text": " @!P0 LEA R7, R0, 0x7f800000, 0x8 ",
+            "source": {
+              "file": null,
+              "line": 11,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000001fff007819"
+            ],
+            "address": 224,
+            "text": " SHF.R.S32.HI R0, RZ, 0x1f, R5 ",
+            "source": {
+              "file": null,
+              "line": 21,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000200070308"
+            ],
+            "address": 240,
+            "text": " @P0 MUFU.EX2 R7, R2 ",
+            "source": {
+              "file": null,
+              "line": 15,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000605047c11"
+            ],
+            "address": 256,
+            "text": " LEA R4, P0, R5, UR6, 0x2 ",
+            "source": {
+              "file": null,
+              "line": 22,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000705057c11"
+            ],
+            "address": 272,
+            "text": " LEA.HI.X R5, R5, UR7, R0, 0x2, P0 ",
+            "source": {
+              "file": null,
+              "line": 22,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000704007986"
+            ],
+            "address": 288,
+            "text": " STG.E desc[UR4][R4.64], R7 ",
+            "source": {
+              "file": null,
+              "line": 22,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "000000000000794d"
+            ],
+            "address": 304,
+            "text": " EXIT ",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": ".L_x_0:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "fffffffc00fc7947"
+            ],
+            "address": 320,
+            "text": " BRA `(.L_x_0)",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 336,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 352,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 368,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 384,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 400,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 416,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 432,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 448,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 464,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 480,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 496,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 23,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": ".L_x_2:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "text": "hardware:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "00000a00ff017b82"
+            ],
+            "address": 0,
+            "text": " LDC R1, c[0x0][0x28] ",
+            "source": {
+              "file": null,
+              "line": 17,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000077919"
+            ],
+            "address": 16,
+            "text": " S2R R7, SR_TID.X ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "00000000000479c3"
+            ],
+            "address": 32,
+            "text": " S2UR UR4, SR_CTAID.X ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "00000000ff007b82"
+            ],
+            "address": 48,
+            "text": " LDC R0, c[0x0][RZ] ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "00008400ff027b82"
+            ],
+            "address": 64,
+            "text": " LDC.64 R2, c[0x0][0x210] ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "00008600ff047b82"
+            ],
+            "address": 80,
+            "text": " LDC.64 R4, c[0x0][0x218] ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000400077c24"
+            ],
+            "address": 96,
+            "text": " IMAD R7, R0, UR4, R7 ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000820000047ab9"
+            ],
+            "address": 112,
+            "text": " ULDC.64 UR4, c[0x0][0x208] ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000407027825"
+            ],
+            "address": 128,
+            "text": " IMAD.WIDE R2, R7, 0x4, R2 ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000402027981"
+            ],
+            "address": 144,
+            "text": " LDG.E R2, desc[UR4][R2.64] ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000407047825"
+            ],
+            "address": 160,
+            "text": " IMAD.WIDE R4, R7, 0x4, R4 ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000200097308"
+            ],
+            "address": 176,
+            "text": " MUFU.EX2 R9, R2 ",
+            "source": {
+              "file": null,
+              "line": 15,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000904007986"
+            ],
+            "address": 192,
+            "text": " STG.E desc[UR4][R4.64], R9 ",
+            "source": {
+              "file": null,
+              "line": 18,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "000000000000794d"
+            ],
+            "address": 208,
+            "text": " EXIT ",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": ".L_x_1:",
+            "source": null,
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "fffffffc00fc7947"
+            ],
+            "address": 224,
+            "text": " BRA `(.L_x_1)",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 240,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 256,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 272,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 288,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 304,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 320,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 336,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 352,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "opcodes": [
+              "0000000000007918"
+            ],
+            "address": 368,
+            "text": " NOP",
+            "source": {
+              "file": null,
+              "line": 19,
+              "mainsource": true
+            },
+            "labels": []
+          },
+          {
+            "text": ".L_x_3:",
+            "source": null,
+            "labels": []
+          }
+        ],
+        "labelDefinitions": {
+          "bit_exp": 1,
+          ".L_x_0": 22,
+          ".L_x_2": 35,
+          "hardware": 36,
+          ".L_x_1": 51,
+          ".L_x_3": 62
+        },
+        "parsingTime": 0,
+        "filteredCount": 102
+      }
+    },
+    "labelDefinitions": {
+      "_ZL26__cudaUnregisterBinaryUtilv": 1,
+      "hardware": 5,
+      "bit_exp": 63,
+      "_Z30__device_stub__Z8hardwarePKfPfPKfPf": 121,
+      "_Z29__device_stub__Z7bit_expPKfPfPKfPf": 177,
+      "hardware.cold": 232,
+      "bit_exp.cold": 237,
+      "_Z30__device_stub__Z8hardwarePKfPfPKfPf.cold": 242,
+      "_Z29__device_stub__Z7bit_expPKfPfPKfPf.cold": 247,
+      "_ZL24__sti____cudaRegisterAllv": 252
+    },
+    "parsingTime": 1,
+    "filteredCount": 112,
+    "popularArguments": {}
+  }
+}

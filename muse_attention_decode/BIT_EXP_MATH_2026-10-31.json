@@ -1,0 +1,87 @@
+{
+  "scope": "CPU FP32 emulation only; no H200 performance/output correctness claim.",
+  "source_sha256": "3eed711fdf8586a7e92f2996c5f2740acc737d7ff737debe66c0c492cc1bb2e6",
+  "helper_sha256": "f2c0048fa742570610ac82b82c768fc9db4e7f49c2b8dddc5a6564a96432180a",
+  "grid_samples": 262145,
+  "random_bit_samples_in_range": 52337,
+  "normal_range": [
+    -125,
+    120
+  ],
+  "relative_error_min": -0.02982689775724323,
+  "relative_error_max": 0.029836948020078635,
+  "worst_abs": [
+    0.029836948020078635,
+    -27.513656616210938
+  ],
+  "masked_tail": "Clamps to a positive subnormal that rounds to FP8 E4M3 zero; every key still processed.",
+  "edge_cases": [
+    {
+      "x": "-inf",
+      "y": "1.1241597433995979e-38"
+    },
+    {
+      "x": "-1e+30",
+      "y": "1.1241597433995979e-38"
+    },
+    {
+      "x": "-1000.0",
+      "y": "1.1241597433995979e-38"
+    },
+    {
+      "x": "-128.0",
+      "y": "1.1241597433995979e-38"
+    },
+    {
+      "x": "-127.0",
+      "y": "1.1241597433995979e-38"
+    },
+    {
+      "x": "-126.0",
+      "y": "1.1241597433995979e-38"
+    },
+    {
+      "x": "-125.999",
+      "y": "1.1253435603422595e-38"
+    },
+    {
+      "x": "-1.401298464324817e-45",
+      "y": "0.9781646728515625"
+    },
+    {
+      "x": "-0.0",
+      "y": "0.9781646728515625"
+    },
+    {
+      "x": "0.0",
+      "y": "0.9781646728515625"
+    },
+    {
+      "x": "1.401298464324817e-45",
+      "y": "0.9781646728515625"
+    },
+    {
+      "x": "8.0",
+      "y": "250.41015625"
+    },
+    {
+      "x": "120.0",
+      "y": "1.3002038676420903e+36"
+    },
+    {
+      "x": "120.00000762939453",
+      "y": "1.3292350251510185e+36"
+    },
+    {
+      "x": "127.0",
+      "y": "1.7014118346046923e+38"
+    },
+    {
+      "x": "inf",
+      "y": "inf"
+    }
+  ],
+  "normalized_weight_l1_max": 0.015382635418252771,
+  "derivation": "At biased x in [256,512), FP32 bit slope is2^15. Shift8 converts it to exponent slope2^23; modulo-add0x7f800000 restores bias127. Minimax delta=log2((1+2/(e ln2))/2).",
+  "limitations": "NaN input is outside finite-input contract. Above120 retains hardware ex2 in CUDA. CPU does not emulate FP8 packing, online max checks, WGMMA or output RMSNorm."
+}

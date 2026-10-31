@@ -117,6 +117,17 @@ main attention kernel is over 95% of profiled time.
 | v13 | `ccaa5314524e4001` check | **1.3116x** | NST4 plus C2 improved B16/B32 full decode to 123.86/232.86 us paired. This isolates C2 geometry as the main gain; the 1.25% aggregate lift over scored v12 does not clear the submit threshold. |
 | v14 | `d461fc4f71a74060` check | 1.3061x | NST3 plus C2 regressed B16/B32 full decode to 124.78/236.62 us paired. Four stages are retained; reserved budget closed at 8 checks/1 submit. |
 
+## October31 fixed-binade interpolation experiment
+
+V24 tests a new three-instruction bit-exponential core,distinct from the
+closed degree-three polynomial hybrids. The exact parent remains the timed
+dispatch. Independent parent/bit50/bit100 fixtures retain all keys,FP32 math,
+FP8 packing and PK2. CPU edge/error checks and standalone sm90a codegen
+precede an H200 check; numerical and performance gates are fixed in advance.
+See [full derivation and outcome](BIT_EXP_RESEARCH_2026-10-31.md) and
+[new public-source applicability review](PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md).
+There is no gain claim based on the unchanged timed parent score.
+
 ## Novel next ideas
 
 ### 1. One-read 64-row verify tile
