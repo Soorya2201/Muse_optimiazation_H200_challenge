@@ -6,6 +6,36 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Oct31 continuation: indexed public-code search now supplements all five
+account screens. It returned234 BF16,203 MoE,207 attention,87 decoder and118
+prefill unique paths (different capture times; changing index totals are
+recorded in the individual JSONs). This is not full-source review or access
+to private/unpublished winners. Latest detailed reviews:
+
+- [Decoder](muse_decode_layer/GLOBAL_SOURCE_FOLLOWUP_2026-10-31.md): six
+  additional Rohan sources plus11files/five other repositories screened;
+  no stronger replacement established. FP32 small-T router preserved.
+- [Prefill](muse_prefill_layer/GLOBAL_SOURCE_FOLLOWUP_2026-10-31.md): seven
+  Rohan sources plus four other prefill sources inspected. Gemini's active
+  FP8 dense branches violate precision; constant-ratio external timings are
+  not usable evidence. Existing dormant PIPE3 tested in check4c855e373fee4973;
+  all changed combinations rejected. Public Lt signatures are a separate
+  component lead; see the dated probe report for terminal status.
+- [Chord](research/public/chord_6199d44/PROVENANCE.json): pinned H200
+  scheduling/library references with licenses and exact file hashes.
+  Centered INT4 contract is incompatible with directly passing NVFP4 codes;
+  a complete compatible pipeline port remains unimplemented/unbenchmarked.
+- [Scheduling paper addition](research/SCHEDULING_READINGS_2026-10-31.md):
+  Twill's joint pipeline/warp-assignment model, applicability and limits.
+  No solver run or performance claim; actual H200 operation costs are needed.
+- [MoE](muse_moe_w4a16/GLOBAL_SOURCE_FOLLOWUP_2026-10-30.md),
+  [attention](muse_attention_decode/PK2_HYBRID_2026-10-30.md), and
+  [BF16](muse_bf16_proj/TMA_PUBLIC_FOLLOWUP_2026-10-30.md) preserve the other
+  recent source audits and measured negative controls.
+
+These additions supersede older "unreviewed" labels below within the
+documented scope, without changing the historical capture-time ranks.
+
 All five public-owner metadata screens were refreshed this UTC day. Dated
 `RANKED_GITHUB_REPO_SCREEN_2026-10-30.json` and
 `PUBLIC_REPO_FOLLOWUP_2026-10-30.md` in each track supersede the older metadata

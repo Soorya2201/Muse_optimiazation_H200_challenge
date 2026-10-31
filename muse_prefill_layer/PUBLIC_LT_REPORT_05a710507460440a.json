@@ -1,0 +1,37 @@
+{
+  "job": "05a710507460440a",
+  "cluster": "sfo3c",
+  "challenge_summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 212842.40951979262,
+    "speedup": 1.820144307114577,
+    "speedup_ci": [
+      1.7928421425078584,
+      1.8474464717212955
+    ],
+    "status": "ok",
+    "tests": 5,
+    "tests_passed": 5
+  },
+  "setup": [
+    {
+      "baseline_copies": 2,
+      "baseline_prepare_pad": 10507776,
+      "copies": 3,
+      "error": null,
+      "event": "setup",
+      "first": "submission",
+      "prepare_pad": 11466752,
+      "prepare_s": 55.591712862,
+      "status": "pass"
+    }
+  ],
+  "diagnostic_capture": "truncated",
+  "diagnostic_status": "unknown; compressed prefix and final report marker missing",
+  "service_log_tail_chars": 16000,
+  "raw_repetitions_recoverable": false,
+  "candidate_improvement_established": false,
+  "canonical_changed": false,
+  "followup": "A new immutable diagnostic will encode exact raw timings and metrics in binary and emit a small independent summary. Original job/source/partial logs remain unchanged."
+}

@@ -105,6 +105,18 @@ and routing distribution. They do not measure Muse or our parent and do
 not justify claiming its headline gains as transferable milliseconds.
 No Blackwell-only instruction or lower activation precision is adopted.
 
+The [official Muse deployment guide](https://dev.meta.ai/docs/muse-spark-open/deploy)
+also recommends MegaMoE for prefill.
+A read-only inspection of the pinned SGLang source `a55ab7d5` resolves the
+precision applicability: Muse's NVFP4 adapter selects `nvfp4xnvfp4` and
+quantizes its BF16 input during group16 pre-dispatch. The separate SM90
+MegaMoE path uses FP8 quantizing pre-dispatch and `fp8_mega_moe`. Neither is
+a direct replacement for this BF16-activation/NVFP4-weight task. The alternate
+BF16 branch expects a BF16 checkpoint-weight contract. Exact file URLs and
+hashes are in `MEGAMOE_COMPONENT_SCREEN_2026-10-31.json`; the two inspected
+tracked files were clean in the ignored checkout. No serving code was
+changed and no package executed for this review.
+
 ## Measurement order
 
 1. Complete PIPE3 check `4c855e373fee4973`, read every available log/profile,
@@ -118,3 +130,12 @@ No Blackwell-only instruction or lower activation precision is adopted.
    establish a compatible exact decode and phase bound before a GPU test.
 
 Existing FMA25/50 and single-score2WG negative results remain closed.
+
+The cycle is now complete: PIPE3 check rejects all changed combinations;
+Lt v24's diagnostic capture was lost, then two complete binary-report
+parts cover all ten signatures/80groups and reject every changed candidate.
+See both terminal reports and explicit capture-failure record. No canonical
+or scored change; four routine prefill checks, zero submits Oct31. Future
+work needs a distinct pipeline mechanism and a tighter practical bound,
+not a repeated pin-only sweep. Chord/Twill references remain research,
+not implemented or measured wins.

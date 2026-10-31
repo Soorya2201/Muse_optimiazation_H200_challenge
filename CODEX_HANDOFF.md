@@ -67,6 +67,68 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 prefill cycle complete; no eligible gain
+
+The previous goal turn made research progress on decoder discovery and phase
+costs. This turn completed prefill discovery: 118 unique indexed public paths
+in 13 repositories (page totals changed from 113 to 118), seven additional
+Rohan sources matched to their evaluation hashes, and four other prefill
+sources pinned. Gemini's constant-ratio 1.9562x timing claims are not usable
+evidence; its active FP8 pooler/unpooler violates the precision rule and was
+excluded. Chord `6199d44` docs/components/licenses are pinned, but its centered
+INT4 contract is not a direct NVFP4 replacement. Clean, pinned SGLang MegaMoE
+files were inspected: NVFP4 or SM90 FP8 activation quantization prevents a
+direct BF16-activation shortcut. Twill paper 2512.18134 is added with its
+machine-model/loop-class limits; no solver run or speed claim. Details:
+`muse_prefill_layer/GLOBAL_SOURCE_FOLLOWUP_2026-10-31.md`.
+
+Four H200 checks are terminal. All passed five challenge tests and eight
+benchmark cells. All 32 profiles and complete available logs were read and
+archived. Timed dispatch always remained the incumbent; point scores below
+are not algorithm gains.
+
+- V23 PIPE3, `4c855e373fee4973`, sfo3, 1.807119x: 40 independent groups,
+  two seeds/four pads. Dual-score attention is 38.85–60.79% longer where
+  numerically gated. Every changed combination is rejected. T1F two-WG error
+  1.479–1.486% exceeds the chosen 1% diagnostic gate; it was not timed there.
+  This is not a challenge failure. Static attributes: 128 versus 168 registers,
+  zero compiler-local bytes for all variants.
+- V24 Lt probe, `05a710507460440a`, sfo3c, 1.820144x: entire diagnostic
+  prefix lost to the 16,000-character service log tail. Its diagnostic
+  completion/plans/raw times remain UNKNOWN. Preserve the immutable source,
+  receipt and explicit capture-failure report; do not reconstruct old data.
+- V25 binary Part A, `fe20034a4ad04dea`, sfo3, 1.792476x: 40 groups/five
+  signatures, 6,344-character payload. All raw rounds, numerical gates and
+  fresh replays pass. No candidate clears the 2% component gate. Best of
+  31 nonempty combination models: worst 1.000627 / median 1.000753 /
+  best 1.001087.
+- V26 binary Part B, `0848e5e1b2ba40e5`, sfo3, 1.798536x: 40 groups/five
+  signatures, 7,092-character payload. Complete raw data and independent
+  summary agree. No candidate clears 2%. Best model: worst 1.000571 /
+  median 1.000718 / best 1.000814. Both halves use same-job models; no
+  cross-job sum is a measured joint gain.
+
+No canonical change or scored submission. Oct31 routine budget: prefill
+4/8 checks, zero submits; every other track 0/0. No GPU job remains live.
+Close this PIPE3 configuration and these ten Lt signatures. The broad 58.5%
+dense phase-zero bound was not a practical bound on these pins: the parent
+already tests offered algorithms with a 3% selection margin. Future pin-only
+leads need a genuinely new algorithm or an independently demonstrated
+in-chain interaction.
+
+Latest snapshot `research/leaderboards/snapshot_20261031064722.json`,
+06:47:22 UTC: overall 121/1739; decoder 121/1090; MoE 154/1223;
+attention 169/1168; BF16 220/1518; prefill 162/731. Scores unchanged,
+no rank1. All five canonical hashes verified. Keep the goal active.
+
+Next sequential track is decoder. Reassess practical bounds before a new
+GPU check. The earlier public-source WGS Compiler Explorer probe timed out
+with two BIG instantiations; a single-instantiation compile could reduce
+compilation work, but is untested and would only provide code-generation
+evidence. Do not reopen closed micro-families or call an unimplemented
+Chord/Twill port a gain. External volume remains absent; the internal
+continuation checkout is authoritative.
+
 #### Oct31 decoder broader-source review completed; canonical unchanged
 
 See `muse_decode_layer/GLOBAL_SOURCE_FOLLOWUP_2026-10-31.md` first for this

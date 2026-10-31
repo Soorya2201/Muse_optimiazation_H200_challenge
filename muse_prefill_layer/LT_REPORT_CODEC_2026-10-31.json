@@ -1,0 +1,23 @@
+{
+  "scope": "Synthetic CPU report-codec stress fixture, not GPU performance or an absolute compression-size bound.",
+  "source": "muse_prefill_layer/submission_v25_public_lt_binary_part_a.py",
+  "source_sha256": "93609c40abb929b20c877d2c4eb5ab61cec2fbd59b75fa7ad97634b9b3c1523a",
+  "seed": 3503,
+  "cases": [
+    {
+      "rows": 40,
+      "payload_chars": 8312,
+      "summary_chars": 855,
+      "below_12000_with_summary": true,
+      "all_values_exact": true
+    },
+    {
+      "rows": 80,
+      "payload_chars": 16236,
+      "summary_chars": 1651,
+      "below_12000_with_summary": false,
+      "all_values_exact": true
+    }
+  ],
+  "decision": "Split ten candidate signatures into two five-signature runs, keeping both seeds and all four pads per candidate."
+}

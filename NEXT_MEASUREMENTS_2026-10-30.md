@@ -4,6 +4,29 @@ This supplements CODEX_NEXT_STEPS.md; it does not reopen its closed directions.
 Rank1 has not been achieved. Work one track at a time and keep the8-check/
 2-submit routine limit per UTC day. Do not buy GPU access without owner authorization.
 
+Oct31 updates supersede older proposed experiments below. Global indexed
+public-code discovery now covers all five tracks, with source-level limits
+documented in PUBLIC_SOURCE_INDEX.md. Attention floor/bias hybrids are
+measured negatives; they are no longer untested proposals. Prefill PIPE3
+two-score check4c855e373fee4973 is also closed: all40groups complete, no
+changed class combination qualifies. See dated DUAL_SCORE_PIPELINE report.
+Prefill's separate public Lt signature experiment05a710507460440a passes
+challenge tests but loses its complete diagnostic to the16K log tail; no
+gain can be inferred. Two sequential five-signature binary-report parts
+retain2seeds/4pads/9rounds and exact raw evidence; terminal status belongs in
+PUBLIC_LT_PROBE_2026-10-31.md. No scored source has changed in these probes.
+Pinned Chord H200 schedules are a distinct longer-term research lead, but
+their centered INT4 decoder cannot consume NVFP4 codes unchanged. No full
+compatible port or comparative performance result has been established.
+Both Lt binary-report parts are now complete:fe20034a4ad04dea and
+0848e5e1b2ba40e5,all80groups/ten signatures,nothingqualifies. Each part's
+best optimistic whole-board model is below0.11%;no full-layer candidate or
+submit. The parent's tuner already considered these offered algorithms;
+the broad dense phase-zero bound was too loose for this specific lead.
+Close the ten-pin family. Prefill4/8routinechecks,0submits Oct31;others0/0.
+Sourceprecision/architecture screens exclude direct officialMegaMoE paths
+that quantize BF16 activations. Currentcanonicalsremainunchanged.
+
 ## Completed controls
 
 - Decoder: FP32 small-T router repaired; invalid scored entry withdrawn.

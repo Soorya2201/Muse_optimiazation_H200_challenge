@@ -1,0 +1,22 @@
+{
+  "scope": "Read-only precision/applicability screen; no serving code changed and no package executed. Exact tracked source in pinned SGLang checkout.",
+  "commit": "a55ab7d5ae1bba59ac351e55026fe7f7644ecc5f",
+  "files": [
+    {
+      "path": "python/sglang/srt/layers/moe/muse_spark_megamoe.py",
+      "sha256": "ac53c0348b111336bb4b6c7bb673bf784ce96a2076b5956ec30845ef4bf7affe",
+      "url": "https://github.com/sgl-project/sglang/blob/a55ab7d5ae1bba59ac351e55026fe7f7644ecc5f/python/sglang/srt/layers/moe/muse_spark_megamoe.py"
+    },
+    {
+      "path": "python/sglang/srt/layers/moe/mega_moe_sm90.py",
+      "sha256": "a8321b531086d88a83bdc8370d610f90a332f16d53497d91b164a54e61356ce9",
+      "url": "https://github.com/sgl-project/sglang/blob/a55ab7d5ae1bba59ac351e55026fe7f7644ecc5f/python/sglang/srt/layers/moe/mega_moe_sm90.py"
+    }
+  ],
+  "findings": [
+    "Muse adapter routes NVFP4 weights through mma_type=nvfp4xnvfp4 with group16 quantizing pre-dispatch, so original BF16 activation contract is not preserved.",
+    "Its alternate BF16 branch expects BF16 checkpoint weights, not a direct original-NVFP4-weight contract.",
+    "The separate SM90 MegaMoE path explicitly uses quantizing FP8 pre-dispatch and fp8_mega_moe; it cannot be adopted as a BF16-activation shortcut.",
+    "No performance result against our current H200 NVFP4/BF16 parent established."
+  ]
+}
