@@ -1,0 +1,40 @@
+{
+  "scope": "CPU host/source/codec tests only; no GPU validation.",
+  "source_sha256": "881f9a61d5f9f6343505680eae30b092e23f1c79090dee436102d03b388ad252",
+  "canonical_prefix_unchanged": true,
+  "native_source_transforms": 3,
+  "slot_counts": [
+    8,
+    12
+  ],
+  "values_per_thread": 32,
+  "measurement_groups": 16,
+  "event_float32_values": 576,
+  "event_bit_roundtrip_exact": true,
+  "ratios_reproduced": true,
+  "synthetic_cases_payload_chars": 1504,
+  "primary_and_secondary_errors_both_preserved": true,
+  "asm_output_written_only_after_all_input_reads": true,
+  "failure_probe": {
+    "status": "diagnostic_failed",
+    "resources": {},
+    "nearby": [],
+    "cases": [],
+    "variant_names": {
+      "0": "parent",
+      "1": "integer25",
+      "2": "integer375"
+    },
+    "gates": {
+      "parent_global": 0.01,
+      "parent_row": 0.05,
+      "fallback_global": 0.15,
+      "fallback_row": 0.75
+    },
+    "stage": "build_parent",
+    "error": "RuntimeError: injected_primary_build_error",
+    "traceback": "Traceback (most recent call last):\n  File \"<inspected host functions>\", line 3347, in _aq_probe\n  File \"/Volumes/Soorya_1_TB/Projects/Muse_optimiazation_H200_challenge/tools/verify_attention_integer_probe.py\", line 67, in primary_failure\n    def primary_failure(*args):raise RuntimeError('injected_primary_build_error')\nRuntimeError: injected_primary_build_error\n",
+    "cleanup_error": "RuntimeError: injected_secondary_cleanup_error",
+    "elapsed_s": 0.0
+  }
+}

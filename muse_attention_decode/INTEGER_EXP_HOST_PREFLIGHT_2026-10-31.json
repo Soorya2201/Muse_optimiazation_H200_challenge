@@ -1,0 +1,11 @@
+{
+  "scope": "CPU source transform, exact raw-event-bit codec and host measurement dry run; no CUDA execution or numerical attention proof.",
+  "source_sha256": "c63c87462857ae44e0380140396eb882a4e6603b03288c6433b15251e4f57603",
+  "transforms": 3,
+  "measurement_groups": 16,
+  "event_float32_values": 576,
+  "event_bits_roundtrip_exact": true,
+  "ratio_reproduction": true,
+  "synthetic_cases_payload_chars": 1504,
+  "canonical_timed_prefix_unchanged": true
+}

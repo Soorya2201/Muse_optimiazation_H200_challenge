@@ -1,0 +1,71 @@
+{
+  "scope": "Optimistic two-pipeline scenario, not measured current-parent costs, a bound, a timing prediction or an eligibility proof. INT32:SFU throughput ratio4 is a simplifying assumption; IMAD.HI need not achieve it. Assumes no competing work, free shared issue/packing/predicates and exposed exponential time fraction. Prior externally reported40.5% fraction is not validated attribution for our current parent.",
+  "source_receipt": "30c669b9702d434f",
+  "assumed_exponential_fraction": 0.405,
+  "assumed_int_to_sfu_throughput": 4,
+  "rows": [
+    {
+      "integer_sites_per_offload": 6,
+      "offload_fraction": 0.25,
+      "ideal_exponential_time_factor": 0.75,
+      "full_cell_time_factor": 0.8987499999999999,
+      "board_proxy": 1.0279864433612673
+    },
+    {
+      "integer_sites_per_offload": 6,
+      "offload_fraction": 0.375,
+      "ideal_exponential_time_factor": 0.625,
+      "full_cell_time_factor": 0.848125,
+      "board_proxy": 1.0432198102038348
+    },
+    {
+      "integer_sites_per_offload": 6,
+      "offload_fraction": 0.5,
+      "ideal_exponential_time_factor": 0.75,
+      "full_cell_time_factor": 0.8987499999999999,
+      "board_proxy": 1.0279864433612673
+    },
+    {
+      "integer_sites_per_offload": 7,
+      "offload_fraction": 0.25,
+      "ideal_exponential_time_factor": 0.75,
+      "full_cell_time_factor": 0.8987499999999999,
+      "board_proxy": 1.0279864433612673
+    },
+    {
+      "integer_sites_per_offload": 7,
+      "offload_fraction": 0.375,
+      "ideal_exponential_time_factor": 0.65625,
+      "full_cell_time_factor": 0.86078125,
+      "board_proxy": 1.0393265998336239
+    },
+    {
+      "integer_sites_per_offload": 7,
+      "offload_fraction": 0.5,
+      "ideal_exponential_time_factor": 0.875,
+      "full_cell_time_factor": 0.949375,
+      "board_proxy": 1.0136066475836671
+    },
+    {
+      "integer_sites_per_offload": 9,
+      "offload_fraction": 0.25,
+      "ideal_exponential_time_factor": 0.75,
+      "full_cell_time_factor": 0.8987499999999999,
+      "board_proxy": 1.0279864433612673
+    },
+    {
+      "integer_sites_per_offload": 9,
+      "offload_fraction": 0.375,
+      "ideal_exponential_time_factor": 0.84375,
+      "full_cell_time_factor": 0.93671875,
+      "board_proxy": 1.0171261649557568
+    },
+    {
+      "integer_sites_per_offload": 9,
+      "offload_fraction": 0.5,
+      "ideal_exponential_time_factor": 1.125,
+      "full_cell_time_factor": 1.050625,
+      "board_proxy": 0.9870964942548435
+    }
+  ]
+}

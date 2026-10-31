@@ -1,0 +1,25 @@
+{
+  "scope": "CPU scalar/core-integer coverage and FP32 sampled domain. Not native ex2.approx equivalence, complete FP32 coverage, attention-output validation or GPU timing.",
+  "status": "pass",
+  "coefficient_A": 0.3397660255432129,
+  "integer_coefficient": 11400656,
+  "coefficient_interpretation": "correction=floor(b*(32768-b)*round(A*2**25)/2**32)",
+  "full_fraction_states": 32769,
+  "additional_distinct_fp32_samples": 375090,
+  "worst_relative_error": [
+    0.0026893946479500386,
+    102.75755310058594
+  ],
+  "max_product": 268435456,
+  "max_correction": 712541,
+  "monotonic_on_all_fraction_states": true,
+  "endpoints": [
+    1.0,
+    2.0
+  ],
+  "exact_scale_equivariance_cases": 1715,
+  "masked_negative_infinity": "clamped to 2**-126; rounds to zero under native E4M3 conversion, with no K/V skipping",
+  "high_tail": "Caller must retain native ex2 for x>120; not covered by the core CPU model",
+  "model_sha256": "de0363d674927aa25894761e901146cc3bf359b2913f09c5e553c926bbbe6e9e",
+  "prior_art": "https://arxiv.org/html/2610.00049v1#A2.SS1"
+}
