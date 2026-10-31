@@ -1,0 +1,1546 @@
+{
+  "captured_utc": "2026-10-31T07:46:49.102793+00:00",
+  "query": "muse_moe_w4a16 in:file language:python",
+  "method": "Fresh paginated GitHub public-code search; explicitly public repositories only, deduplicated paths; per-page mutable totals preserved. Not every branch or private/unpublished source.",
+  "pages": [
+    {
+      "page": 1,
+      "total_count": 212,
+      "incomplete_results": false,
+      "returned": 100
+    },
+    {
+      "page": 2,
+      "total_count": 213,
+      "incomplete_results": false,
+      "returned": 100
+    },
+    {
+      "page": 3,
+      "total_count": 217,
+      "incomplete_results": false,
+      "returned": 17
+    }
+  ],
+  "items": [
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+      "blob_sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/kernel-starters/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "alygg77/okc-muse-spark-kernels",
+      "path": "kernels/muse_moe_w4a16.py",
+      "blob_sha": "4143c3f596f7ab23a154e4b344d077f995f4d61b",
+      "url": "https://github.com/alygg77/okc-muse-spark-kernels/blob/6cae49a639ee6d14b929a5fd4a63c627f96d7dc0/kernels/muse_moe_w4a16.py",
+      "private": false
+    },
+    {
+      "repo": "vjeux/okc-2026",
+      "path": "muse_moe_w4a16.py",
+      "blob_sha": "95b7860157c2d7289f07955c6683401707d22d57",
+      "url": "https://github.com/vjeux/okc-2026/blob/f35a41ee1c13e316dabbf772830d47b23b453393/muse_moe_w4a16.py",
+      "private": false
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+      "blob_sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+      "blob_sha": "105463a640a97df42b6f312a54a29cb32048bfe3",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gpt-6.1-sol/kernel-muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+      "blob_sha": "580739b6c5169bfe6d1e8a7b42d40c2c99f7421e",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gpt-6-astra/kernel-muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/submission.py",
+      "blob_sha": "086eb2ba975608311de7382f1e43d9bc5d51815f",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/submission.py",
+      "blob_sha": "c43068f8b50c9343dabda1000a62585bb8dacdb2",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/claude-haiku-5-5/kernel-muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/submission.py",
+      "blob_sha": "32112ae698a8d6d47f6167c80dfc8251aa233ec8",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/claude-opus-5-5/kernel-muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "path": "benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+      "blob_sha": "4d62b826aaec2d9b69cf77a8bf5447453a7ffdc0",
+      "url": "https://github.com/rohanarun/Auto-research-agent/blob/018b7a102348ea3b73701e8be52d24f82d8c91ee/benchmarks/data/candidates/gemini-3.8-flash-opencode/kernel-muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "PostTrainLLM/posttrainllm",
+      "path": "experiments/openkernel/muse_moe_w4a16/submission.py",
+      "blob_sha": "d7b4e00ad664ff7a563e242625f393275ded3e2d",
+      "url": "https://github.com/PostTrainLLM/posttrainllm/blob/f216fead93aebc68aeebe62d3ccb5b73811cb282/experiments/openkernel/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/bench.py",
+      "blob_sha": "fcc8d2cb9342419dcce0ee9c65f6ec1044cb5d6d",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/bench.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/diag_check.py",
+      "blob_sha": "19aa10dcbf49b8728b6167994816280560d0a569",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/diag_check.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v4.py",
+      "blob_sha": "ad887dd4ccb44ba556ff4202eecc9cf5b6c85a2b",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v4.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v7.py",
+      "blob_sha": "4b1399470b9781c8b6fbcffa1a4202c76aa21f52",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v7.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v8.py",
+      "blob_sha": "82c806cf7e4850a57f8017905f792a8b8128852b",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v8.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v9.py",
+      "blob_sha": "999d206c7e20b113e7bb6aa94535da2cdaf45f7c",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v9.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v6.py",
+      "blob_sha": "d8121716c647787f72374b48729011274828439a",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v6.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission.py",
+      "blob_sha": "dabfae1d6c69d262f64bf6665cc3ce67177f5e98",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v23.py",
+      "blob_sha": "6299c553a6828866b757b12ba5bf9a0aa280ff06",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v23.py",
+      "private": false
+    },
+    {
+      "repo": "lilaclilac09/open-kernel-challenge",
+      "path": "muse_moe_w4a16/submission.py",
+      "blob_sha": "8eeb6a4778875e37a1d9c55a5e27ee6079999847",
+      "url": "https://github.com/lilaclilac09/open-kernel-challenge/blob/d9bdcc9f01dff1018f2f256a0a1a63911a16557e/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v21.py",
+      "blob_sha": "e80caf21090f3e37f8cd02b41250e8c9e2b846c7",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v21.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v9d.py",
+      "blob_sha": "d92729fb05bf44578bd65b9496bcdc8a5b1cf690",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v9d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v14.py",
+      "blob_sha": "5908c8394540a5e10088b867725d4e45e6d3b83d",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v14.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v17.py",
+      "blob_sha": "a203e70afab01866363c5e7082e8acf43f6ede7d",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v17.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v28.py",
+      "blob_sha": "2928821a8155cd57a0bb048ab96eaf020d33148a",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v28.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v13.py",
+      "blob_sha": "ff7f711dc6f6ff9a856b3a52fbc980aeef175ce0",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v13.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v10.py",
+      "blob_sha": "8abda3bffdc3bce8e7bb30483b2daef2fbadcebc",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v10.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v15.py",
+      "blob_sha": "2a71c7a4d93121a2b8fd361024f52063f14fc260",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v15.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v11.py",
+      "blob_sha": "9be4153b36f2a1dfc56a3e4b4c0eb46e8e0511b5",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v11.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v16.py",
+      "blob_sha": "d19509c61f4ff4cd5b86d9a814052bb8ff4137fc",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v16.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v12.py",
+      "blob_sha": "9475c06b82cf34e07500b3237436894d18810c56",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v12.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v22.py",
+      "blob_sha": "e6a604f387407045f2feb5dd7bff8f4187d1a5f8",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v22.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v24.py",
+      "blob_sha": "396787af661e67ca791a01c472e9c51c7385e463",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v24.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v25.py",
+      "blob_sha": "d6f2bc5f5700e5a3df1fb9d04a2671d3312d6e8a",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v25.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v20.py",
+      "blob_sha": "22f4fbfa2f0c8399408b82b7997b741a4b514c2a",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v20.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v18.py",
+      "blob_sha": "1e0515a26d3e63df1fef6a9906e71ceb70611f6e",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v18.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v19.py",
+      "blob_sha": "8e4175efaf9e3002cb5620d60547158ab2d84cb5",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v19.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v27.py",
+      "blob_sha": "71f6d299c1244658fe1455d87038e08dc489fdb3",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v27.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v29.py",
+      "blob_sha": "b251405f83330ab8a6e857070a7868783806fe6e",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v29.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v30.py",
+      "blob_sha": "b1e3e2034c2339750b8e281513b9abbc3748d3e2",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v30.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v32.py",
+      "blob_sha": "7606023cbdf7123b842c5303f408c7a674b879ac",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v32.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v31.py",
+      "blob_sha": "8353a991ad60020969c2a81e07fdc30a550a4ba5",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v31.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v26.py",
+      "blob_sha": "3d6637c2f4a79afcdac5984b081c98b641029fcd",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v26.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v33.py",
+      "blob_sha": "96283d01e6da0fb8d62be2f126fb94fd908428bd",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v33.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v34.py",
+      "blob_sha": "b07d0ff62b23d31b7f2b31a4497fd89f367b9cb2",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v34.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v35.py",
+      "blob_sha": "798b627c6ad9f12ac3c9d39a521bddc593c8799b",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v35.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v36.py",
+      "blob_sha": "e5c24aa92cae639296c553bea18b709350c59f49",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v36.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v37.py",
+      "blob_sha": "abb34ad297fcb19b7bbbcfa9ca5c3c57598747ab",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v37.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v38.py",
+      "blob_sha": "45e81b915780e1294ca431d1775e37648371a3b6",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v38.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v39.py",
+      "blob_sha": "27f77e427c1751b8cedd5728e29c2f313ed1c612",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v39.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v41.py",
+      "blob_sha": "dd88c205d802dcc7e13f855e76a1be6d71e4346f",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v41.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v40.py",
+      "blob_sha": "62978b90a63890ed488cdc53fd8585e8d043a7bd",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v40.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v43.py",
+      "blob_sha": "4f142c14c992b1b16524181db56a49a3606aeb09",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v43.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v42.py",
+      "blob_sha": "c0612f656c0119b60969f901d3fae66a3043a31a",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v42.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v44.py",
+      "blob_sha": "53662eb6445f3bb0a4622f2b9b6b4e92a39cd62b",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v44.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v30d.py",
+      "blob_sha": "ae0ba36defc1667da41a347b4546743891a17356",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v30d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v45.py",
+      "blob_sha": "c82e18f5d50ce12e200871761c26ba842317b356",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v45.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v46.py",
+      "blob_sha": "395aac0a06c370addd8b81e134e723dc3a27648f",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v46.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v47.py",
+      "blob_sha": "ac0aee034f781ed63edd4d64d7dd929b28dd38b1",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v47.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v48.py",
+      "blob_sha": "c15b30b02cecda7aa5b07cd5e56930ef40301eba",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v48.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v49.py",
+      "blob_sha": "54dfe647545465cda320be8759237c2932afb2d9",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v49.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v51.py",
+      "blob_sha": "7e82a990b94354c39a48466f86b58129f58ea9f4",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v51.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v52.py",
+      "blob_sha": "3d3fb660b99a067efd40b710450018a84f12aa03",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v52.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v53.py",
+      "blob_sha": "24c85c04695b3126f49d95e20458780865938e05",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v53.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v54.py",
+      "blob_sha": "22bbec7e2c8bdf00731b7499f3cbd6c6d010a7ec",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v54.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v55.py",
+      "blob_sha": "ab3b863e10ab39ba2d988feb5c60ff59c2e49f0d",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v55.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v56.py",
+      "blob_sha": "dabfae1d6c69d262f64bf6665cc3ce67177f5e98",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v56.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v57.py",
+      "blob_sha": "08de72dae35d696309960830e4d56632aeb31003",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v57.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v50.py",
+      "blob_sha": "6118f32a8935e7b74f1b480fa0f3d6c35f8ba1e9",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v50.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v58.py",
+      "blob_sha": "34c4be1f5e854eabf70ca6cb7e0156e171fd54ea",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v58.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v59.py",
+      "blob_sha": "cd49926963fdab3306b9fb8bec958dfcc4efe2f0",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v59.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v60.py",
+      "blob_sha": "330e4d9fd5b30e3af14432d58177e4ecd3e71bd3",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v60.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v34d.py",
+      "blob_sha": "655361903ec3cb2418d5c0ef58b32a947f935c19",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v34d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v35d.py",
+      "blob_sha": "ff406b8a5aa304d2797f0f933a2fd8e08c94edac",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v35d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v36d.py",
+      "blob_sha": "e6b81314f41f1446f57f0f2225ea5def5378e544",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v36d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v37d.py",
+      "blob_sha": "9f80f93535d6fb58f8b862e4ed5dde8abf04399b",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v37d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v38d.py",
+      "blob_sha": "07e6fa15fbf7ed41809bfa751675f3ffa51705b8",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v38d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v39d.py",
+      "blob_sha": "6b77901a98ddddadbfe428f2153dccd95d29f814",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v39d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v41d.py",
+      "blob_sha": "bb9a16c9ddeebf431509b0c7615ab65af95e5cce",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v41d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v40d.py",
+      "blob_sha": "cfdbfc65e7879a26fe53a62275d9d134a5579641",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v40d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v43d.py",
+      "blob_sha": "341c0ab5c76f6fb83d8fc41b9089b1276d932c12",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v43d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v42d.py",
+      "blob_sha": "219201fc55bf452e9495c7afcac3958003d92c8e",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v42d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v44d.py",
+      "blob_sha": "f746b6ad7ba0c68261dec5ec29202265f2c9398d",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v44d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v45d.py",
+      "blob_sha": "368046fcb45a245e515cec5bb24c343decd00977",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v45d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v46d.py",
+      "blob_sha": "b467ad39cc943f44947e9a49d437daacf65f1290",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v46d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v47d.py",
+      "blob_sha": "295e802b08cab669d6b762ba0cae08784ae092c8",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v47d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v48d.py",
+      "blob_sha": "1818c2d284309cdcc861c40f5a3c8f126982b023",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v48d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v49d.py",
+      "blob_sha": "2988040af900e9c97d48e786231475d87e818e8e",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v49d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v51d.py",
+      "blob_sha": "d7a4c742e6905480bdfb580f4ce9978f5b48f5d3",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v51d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v52d.py",
+      "blob_sha": "62c9552b841dcc42da8e862ad39750c882d99724",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v52d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v53d.py",
+      "blob_sha": "8dcc751cf42fe90df1442b78f19bc892e4353026",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v53d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v54d.py",
+      "blob_sha": "d500f05fd9a1917d204f1680c61b1f38bf56cb34",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v54d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v55d.py",
+      "blob_sha": "edf36a1b07f821b28fe216f6c7982ad2f21c0a32",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v55d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v56d.py",
+      "blob_sha": "c9527fe46a9401ac565b4fd5658f07642b1823ac",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v56d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v57d.py",
+      "blob_sha": "c530fd4c2325b6f6db96ed606b37b775b8f86c03",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v57d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v50d.py",
+      "blob_sha": "810038c0b02d7250d35213495079919a3c5d1609",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v50d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v58d.py",
+      "blob_sha": "2b9e729793a1f579456df79f9fbf3a29f0e203eb",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v58d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v59d.py",
+      "blob_sha": "79c1b9d2db66e91d2a3849bd57d699625afa5a3c",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v59d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_v60d.py",
+      "blob_sha": "ca2c86b9866027fb9685531f1ef903664d68f9e9",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_v60d.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_moe_w4a16/submission_wip_wgl.py",
+      "blob_sha": "d789d181ebc60e8620bae64c3b8a835e297475de",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/submission_wip_wgl.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/cu.py",
+      "blob_sha": "d8f25984b820ef1f4273a592e16a12bd011e7248",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/cu.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/sk_t.py",
+      "blob_sha": "ecc11219586bbc2ba35f83f87055e66203802b3e",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/sk_t.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/moe_m.py",
+      "blob_sha": "29a8bb785ce04da0f34003c5234e3f841c87a9bd",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/moe_m.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/mkdiag.py",
+      "blob_sha": "44026c33dd822075003e72752ba20f57dbb02c2f",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/mkdiag.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_pf.py",
+      "blob_sha": "04ea1f1c0e1502bbb9061f3b7d5b136e7ba5f45a",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_pf.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/dbg_moel.py",
+      "blob_sha": "af84d4b0fcb60a9bb78544cdf400ea8c8dd35673",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/dbg_moel.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl.py",
+      "blob_sha": "3d247558201dde5a2cc6f2e767f9b6e2eddf15a6",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/lprof_moe.py",
+      "blob_sha": "23039df266aec42a841d9a330e6507e9d2b7a8cf",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/lprof_moe.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl16.py",
+      "blob_sha": "7eb6a87776dc612a7d771535cf94a30f5f10b421",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl16.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "virtualcuda/vc/sassdb.py",
+      "blob_sha": "6d09b119da0103dd36b3f1e0b724cc4b440d4d30",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/virtualcuda/vc/sassdb.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl19.py",
+      "blob_sha": "4b3a25f949299642864cd86479c4ba73c59a0505",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl19.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/submission.py",
+      "blob_sha": "cbc1c83f61b160b503d31f522a3644f39740bea9",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/mk32.py",
+      "blob_sha": "6b4408b69e100dc7a78b238a74dbcf8de2d65bda",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/mk32.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "virtualcuda/vc/collect.py",
+      "blob_sha": "c9c7a6c80003162b74ffe60c2e2409c280f5ee97",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/virtualcuda/vc/collect.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission.py",
+      "blob_sha": "35787110815cd1c927fb11a42c146d8012105d1d",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "ruwwww/open-kernel-challenge",
+      "path": "muse_moe_w4a16/submission.py",
+      "blob_sha": "95b7860157c2d7289f07955c6683401707d22d57",
+      "url": "https://github.com/ruwwww/open-kernel-challenge/blob/3b15eb8a6a16e0519378e28ea6c9b44d04e0a613/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "muse_moe_w4a16/submission.py",
+      "blob_sha": "8d546f9743c6b00371ca12027e66a26100296c6c",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission_r.py",
+      "blob_sha": "229e2ca4890788f7619a7e32b27c8c7f99040c28",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_r.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission_r2.py",
+      "blob_sha": "117c76b0238e70d521bd5791ee968abb17415535",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_r2.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission_r3.py",
+      "blob_sha": "64f335c69fd71713a35bbc681b1ee05a6fbd2588",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_r3.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission_m11.py",
+      "blob_sha": "c825ab2c71b6a2c217fd050a41dc6d401e404ce3",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_m11.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission_m14.py",
+      "blob_sha": "2c01142534d6e0077a5425307bba33bc7b174974",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_m14.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission_m16.py",
+      "blob_sha": "8d0ee66b6afaf949c9c44a1132cb5772965c41de",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_m16.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/mk31.py",
+      "blob_sha": "32faf6f11fd10ccb648b4d2ec9e36be1ca7c8faa",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/mk31.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_moe_w4a16/submission_wgmma.py",
+      "blob_sha": "4d27e1685915ba914a531954de7785cf6d48f0c1",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_wgmma.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "muse_moe_w4a16/submission_ours.py",
+      "blob_sha": "166a89378e323a53a35ff3d4c93aff8ee2cdb543",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_moe_w4a16/submission_ours.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/dbg_wt.py",
+      "blob_sha": "a66c32cbf583cc404e7386ca8114077fecbef48d",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/dbg_wt.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/nvcc_moe.py",
+      "blob_sha": "f023a2a0d194c13730a8da01a8ea6b6ab4e541f3",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/nvcc_moe.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/mk33.py",
+      "blob_sha": "96889e1c477e75f77f4e9ad91017e41665edd891",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/mk33.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/embed_cuda.py",
+      "blob_sha": "05d396445c4d232e292dc66e7ad051fdefbe4154",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/embed_cuda.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_stages.py",
+      "blob_sha": "915be4a3afbe5d362e44aeae8ff5a26183214b83",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_stages.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/check_repack.py",
+      "blob_sha": "11be548a38cc6f5a060663e784b788e98e9ffd02",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/check_repack.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/nvcc_pub_moe.py",
+      "blob_sha": "007daceb2368b9b8ae18d77756c6916c314241eb",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/nvcc_pub_moe.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/check_wt_policy.py",
+      "blob_sha": "59d8313e3f9c70b49f7679e39d1a8abc6b9e0ba4",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/check_wt_policy.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_drop_l2pf.py",
+      "blob_sha": "5147e65078cd0022b4d41b7e108782c129321ec1",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_drop_l2pf.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/compile_moe.py",
+      "blob_sha": "cf838c37b964676710aa654977a6c98b10bf6f3e",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/compile_moe.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "virtualcuda/vc/cases.py",
+      "blob_sha": "4b73cb1f23513b82972512ac8dbc3b960fd6b44f",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/virtualcuda/vc/cases.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/check_wt_grouped.py",
+      "blob_sha": "6f619f61569bb40a8a998038bd525c4b1ce151de",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/check_wt_grouped.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_final_lock.py",
+      "blob_sha": "8e52c2a5a99693e161f4a8579332970d878d9018",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_final_lock.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/moe_routing_stats.py",
+      "blob_sha": "c1e0e3062182e0e9cc835dfd58d74258506f1b3c",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/moe_routing_stats.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl14.py",
+      "blob_sha": "503824b7996111ad021e25d7e379de1961c601f0",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl14.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v3b_tuned.py",
+      "blob_sha": "c9f1c4ce2ab0655d9a8e3e0a22eda87a4bca46aa",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v3b_tuned.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/build_decode_layer.py",
+      "blob_sha": "93a325c6e254e43419c75d5b308a7a1661cd3043",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/build_decode_layer.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl14n.py",
+      "blob_sha": "4a72fd781dc02107f4247e02286d0dca9c6d7551",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl14n.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/gen_moe_kernel_only.py",
+      "blob_sha": "3171094f5d23469cafa27ad34af1651f4c39a89a",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/gen_moe_kernel_only.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v3c_block16.py",
+      "blob_sha": "49093a831bc2e1359ddb71fc20fbdf0b390fb152",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v3c_block16.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl15.py",
+      "blob_sha": "120959e5c2e4a942d9c27d3b57dd0ceae2f9f32c",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl15.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_route.py",
+      "blob_sha": "c45e16d9a53613fde0fc5f8555c19a85e7aff75d",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_route.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl20.py",
+      "blob_sha": "b975f4c3658c9560e215729b8c88bae2e1950b64",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl20.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v1_triton.py",
+      "blob_sha": "0554efddc9816ced870173f3bb78ac00e79e436e",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v1_triton.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl21.py",
+      "blob_sha": "d07805b168ab05b5b3d5a4f20081a30b435c3c67",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl21.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl23.py",
+      "blob_sha": "b1781e8c4674fc2cc5ed2ccc498c60b57f0a3ab7",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl23.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v3d_block_rule.py",
+      "blob_sha": "cbc1c83f61b160b503d31f522a3644f39740bea9",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v3d_block_rule.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl24.py",
+      "blob_sha": "9282516c7bc88cade3f4a09947fd8623b3c8a29c",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl24.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl25.py",
+      "blob_sha": "f477236293073ca72bcb7bc1ea8ef10c4c1c06fa",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl25.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl26.py",
+      "blob_sha": "83882815e02fae816dba8f1c5ae4c8e9f83d533f",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl26.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl27.py",
+      "blob_sha": "2b424ac81d2d828f2ea67554fd8b7ea57578ed15",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl27.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl28.py",
+      "blob_sha": "f5cfa976f4a445aa0b4a48e0e890e1b3ba16798c",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl28.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v2_vecload.py",
+      "blob_sha": "c9a8df13afe5225d87fb80e6217d77dc44141df6",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v2_vecload.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl31.py",
+      "blob_sha": "6e38b24fd6239f4c941143b83926fc2c6ceb686d",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl31.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl32.py",
+      "blob_sha": "42fd1f098a56c82a21953c42d725d41f9f6f5c43",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl32.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl33.py",
+      "blob_sha": "8615cdb22ee9d8f5a4a2e1cc266e3dfafe5855ff",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl33.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl34.py",
+      "blob_sha": "61c4664327aa6afd6f385d57b923d3694b9a7d39",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl34.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl35.py",
+      "blob_sha": "876dbb81665f58f6862cdadca2bba3db3cecddc7",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl35.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v3_marlin_fusedfin.py",
+      "blob_sha": "54e5dd7a70ee4ba7b0dfe04bd6a0efa53e1126e2",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v3_marlin_fusedfin.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4_cuda.py",
+      "blob_sha": "f3ca14001cf8a8377989e5b5fd28cb6c27bd844c",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4_cuda.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4h_lb8.py",
+      "blob_sha": "8b3ce1167ca6febbb067832ff49073ea61b45be1",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4h_lb8.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4g_lean.py",
+      "blob_sha": "e01d43e98d1a74780c2669e5331efc633407b296",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4g_lean.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4f_tiles.py",
+      "blob_sha": "3fd46b55b34f9bd588b1ab325f2fffd3a31fb9db",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4f_tiles.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_decode_layer/build_layer.py",
+      "blob_sha": "86a9b97d35d239220b6bed44f483f7dbacf5fe76",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/build_layer.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "harness/board.py",
+      "blob_sha": "50d58308637a05b1b8077687ab9ce4a5b3daf77d",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/harness/board.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v2b_directscale.py",
+      "blob_sha": "a6ed49205e12c6bc0283de667b065ee0e58ce831",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v2b_directscale.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4d_repack.py",
+      "blob_sha": "656e79ee52b6bddfacd40e1838b3889b74e7fd16",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4d_repack.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4e_splitk.py",
+      "blob_sha": "014198fd7b6fcea1ff8b5b9040abbfd9beda3081",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4e_splitk.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4c_bn32_s8.py",
+      "blob_sha": "396658c80897e9de71d66675bb91b28f5f2ca7bc",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4c_bn32_s8.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/check_repack_wt.py",
+      "blob_sha": "59198bae6bb0eacc9efdaa965d0db31a00a72137",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/check_repack_wt.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_moe_stream.py",
+      "blob_sha": "9b78b6c45aa828452ef41e83c234dc5f92643b7b",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_moe_stream.py",
+      "private": false
+    },
+    {
+      "repo": "ozgureyilmaz/okc-muse-kernels",
+      "path": "tools/common.py",
+      "blob_sha": "52c3c6a4eeb8c2bebcc01ef6f3c7a2345841c0f7",
+      "url": "https://github.com/ozgureyilmaz/okc-muse-kernels/blob/74daa3a6990168b52359c80955014a945fc7aa4e/tools/common.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_splitk_tmpl.py",
+      "blob_sha": "5221e7e6a9b512032caaa2f29d0afd99a9049357",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_splitk_tmpl.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_prefill_layer/glue_pf2.py",
+      "blob_sha": "a3afc891037985b9236f7fd64ae91976561499a7",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_prefill_layer/glue_pf2.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "problems/muse_moe_w4a16/candidates/v4b_cuda_asyncscale.py",
+      "blob_sha": "a5a568cd9e911423626c7d9d96c42b6f8c542a5b",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/candidates/v4b_cuda_asyncscale.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_final.py",
+      "blob_sha": "03a85f135816bd4079afc7565d593a2dd382da04",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_final.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "harness/assemble_layer.py",
+      "blob_sha": "85865b44ca3b98de7dbf48be6d8354e1789c88aa",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/harness/assemble_layer.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_ablate.py",
+      "blob_sha": "8d6516d965441f25b4480b502dfcea8db825677a",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_ablate.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_pdl2.py",
+      "blob_sha": "302ec1c69dee6c258397285f5eef6ee7ef0dde8b",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_pdl2.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "muse_prefill_layer/submission_pf11.py",
+      "blob_sha": "0835060f5d80a0ae8a649318b0c6c6b8d445dc09",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_prefill_layer/submission_pf11.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/check_route_logits.py",
+      "blob_sha": "501cb4e1f6794637f347af85ad6ccb0fe4cb3d94",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/check_route_logits.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_moe_cpc.py",
+      "blob_sha": "848fd9c89a696558aa24c493e4a804d6f3e112b3",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_moe_cpc.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_route_cuda.py",
+      "blob_sha": "b88ed93b84e36cf1f19a81e4754a727a5cc7b282",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_route_cuda.py",
+      "private": false
+    },
+    {
+      "repo": "Ranoobaba/okc-campaign",
+      "path": "harness/ncu_probe.py",
+      "blob_sha": "4919f4018d27a13936ebb576bc1346c77f563146",
+      "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/harness/ncu_probe.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_rs.py",
+      "blob_sha": "0633f952ab3311556bf2420907ab006082fa0bd9",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_rs.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_glue2.py",
+      "blob_sha": "cbd5b7058e607896ad986ba910ec7456d7fbf576",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_glue2.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_pdl.py",
+      "blob_sha": "fe147a69a4261c9c5df2e95c7f35c2aa0b82a513",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_pdl.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_mixed.py",
+      "blob_sha": "3cdba11b3c5d1c4c6745e59adc35b0827a802f19",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_mixed.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_tma.py",
+      "blob_sha": "17e5898df928efa294ed560a09c933b237ec8201",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_tma.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_r2_splitk.py",
+      "blob_sha": "7e7bfe51f39e4bb2d3c448cd5bb15a04364a52f2",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_r2_splitk.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "muse_decode_layer/glue.py",
+      "blob_sha": "ca86fc3f31dbdf1269bcbbb537269f85bbe452a0",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_decode_layer/glue.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_decode_layer/submission.py",
+      "blob_sha": "3f87e2be2ee5d09affd2d9ddd70bf8e085862d2d",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission.py",
+      "private": false
+    },
+    {
+      "repo": "ozgureyilmaz/okc-muse-kernels",
+      "path": "tools/test_tools.py",
+      "blob_sha": "d5fdcc2488f14be7a101a7e786315de50c8a5b15",
+      "url": "https://github.com/ozgureyilmaz/okc-muse-kernels/blob/74daa3a6990168b52359c80955014a945fc7aa4e/tools/test_tools.py",
+      "private": false
+    },
+    {
+      "repo": "tommyyliu/okc",
+      "path": "muse_moe_w4a16/submission.py",
+      "blob_sha": "c92bd51a6f671c98426bb1fdca75bd2927f043ae",
+      "url": "https://github.com/tommyyliu/okc/blob/f134725e27f368588bd9ef27cb5e97d023b415a5/muse_moe_w4a16/submission.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "bench/mk30.py",
+      "blob_sha": "6998f835be794b6634173e540cc56d4280b508f5",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/bench/mk30.py",
+      "private": false
+    },
+    {
+      "repo": "lee101/openkernels",
+      "path": "tools/build_dl22.py",
+      "blob_sha": "68ce5348f1345ec65c4ed6767d3ee257a43e1a27",
+      "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/tools/build_dl22.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_moe_bulk.py",
+      "blob_sha": "e08b409ead8592ce3a48f0ecd6b9ad20e5a25bb5",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_moe_bulk.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_pdl_glue.py",
+      "blob_sha": "271edce8a2f01f392d60d451331b1dbed827ab79",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_pdl_glue.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_lastcta.py",
+      "blob_sha": "8b8aaecc3abfe9eb54115422b291eb55e7924238",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_lastcta.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_moe_diag.py",
+      "blob_sha": "f1e39f12eaecf48d393835f1bb720a97ec614eb6",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_moe_diag.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/_edit_splitk.py",
+      "blob_sha": "4ab31f7c5f264de27493a52fd533f4bae5c4393a",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/_edit_splitk.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/compose_decode_layer.py",
+      "blob_sha": "2885114f5df8a243085d1634b2b875685276cd28",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/compose_decode_layer.py",
+      "private": false
+    },
+    {
+      "repo": "xharshvardhan/open-kernel-challenge",
+      "path": "kernels/routed_experts.py",
+      "blob_sha": "11c92e07f492602e7cdeea35aed9502d0be76472",
+      "url": "https://github.com/xharshvardhan/open-kernel-challenge/blob/4958d3141aa977c4b6b26df7a8d06c90dd094ee9/kernels/routed_experts.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/submission_diag_b.py",
+      "blob_sha": "d437e3da3d07a204a9ef22031ae696b5ca85483c",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/submission_diag_b.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/submission_diag_d.py",
+      "blob_sha": "70f1543a6d8a1b1335ab316bf86dc69b0c397c1f",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/submission_diag_d.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "muse_decode_layer/layer_glue.py",
+      "blob_sha": "78dcb77c2b6597958b24369229f91d8e34f7a99e",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_decode_layer/layer_glue.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_decode_layer/submission_l5.py",
+      "blob_sha": "77e68d2be552d4403c78d286139e1274e0d802ff",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission_l5.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_decode_layer/submission_l6.py",
+      "blob_sha": "58755ca4689080a2b2edc3828ca0a2eeb05d9166",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission_l6.py",
+      "private": false
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_decode_layer/submission_l7.py",
+      "blob_sha": "1c7f00963e64702ecd387d8836bb98f7c6a15a96",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission_l7.py",
+      "private": false
+    },
+    {
+      "repo": "Madhavan113/ParadigmKernelChallenge",
+      "path": "tools/test_moe_cpu.py",
+      "blob_sha": "29fa42ef01260e59f84367327ea326083c20571f",
+      "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/tools/test_moe_cpu.py",
+      "private": false
+    }
+  ]
+}

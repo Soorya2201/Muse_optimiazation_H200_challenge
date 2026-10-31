@@ -1,0 +1,3700 @@
+{
+  "captured_utc": "2026-10-31T07:23:48.550390+00:00",
+  "scope": "MoE follow-up: public repository heads and candidate component tree; no implementation executed",
+  "repositories": [
+    {
+      "full_name": "alygg77/okc-muse-spark-kernels",
+      "default_branch": "main",
+      "pushed_at": "2026-10-29T21:11:40Z",
+      "private": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "head": "6cae49a639ee6d14b929a5fd4a63c627f96d7dc0"
+    },
+    {
+      "full_name": "vjeux/okc-2026",
+      "default_branch": "main",
+      "pushed_at": "2026-10-28T02:03:36Z",
+      "private": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "head": "f35a41ee1c13e316dabbf772830d47b23b453393"
+    },
+    {
+      "full_name": "Madhavan113/ParadigmKernelChallenge",
+      "default_branch": "main",
+      "pushed_at": "2026-10-29T20:47:01Z",
+      "private": false,
+      "license": null,
+      "head": "721c62729fa0b407799692f311790643706f292d"
+    },
+    {
+      "full_name": "local-inference-lab/b12x",
+      "default_branch": "master",
+      "pushed_at": "2026-10-06T22:19:16Z",
+      "private": false,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "head": "2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88",
+      "tree_truncated": false,
+      "candidate_paths": [
+        {
+          "path": ".lil/changes/b12x-450-moe-routing.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9f04961d13a8094fcc38a5fb0d9af08e01c0554f",
+          "size": 832,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9f04961d13a8094fcc38a5fb0d9af08e01c0554f"
+        },
+        {
+          "path": ".lil/changes/b12x-450-nvfp4-csf-cooperative.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ad1ea422fa588ab668fd8bda0a83409daedbc9b9",
+          "size": 1017,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ad1ea422fa588ab668fd8bda0a83409daedbc9b9"
+        },
+        {
+          "path": ".lil/changes/b12x-karmic-nvfp4-grid-and-iq2-xs.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0c7db0b2c648072c048046606d96defee30b2fe6",
+          "size": 704,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0c7db0b2c648072c048046606d96defee30b2fe6"
+        },
+        {
+          "path": ".lil/changes/b12x-nvfp4-csf-expand-scales.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "197b8dad6a34a3489ca70e4e08b6067850e4280a",
+          "size": 810,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/197b8dad6a34a3489ca70e4e08b6067850e4280a"
+        },
+        {
+          "path": ".lil/changes/b12x-nvfp4-csf-tp6-residency.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "073c7ba67efeefb19725dd15513717aa3340d007",
+          "size": 752,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/073c7ba67efeefb19725dd15513717aa3340d007"
+        },
+        {
+          "path": "LICENSE",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "size": 11357,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+        },
+        {
+          "path": "b12x/_lib/dense_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2d03a6743bde663ac503619183b3cf78a6fc1aa0",
+          "size": 413019,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2d03a6743bde663ac503619183b3cf78a6fc1aa0"
+        },
+        {
+          "path": "b12x/_lib/dense_gemm_mxfp6.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "61f5cf9afad5fb7ca745d37689e59058941ee664",
+          "size": 4901,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/61f5cf9afad5fb7ca745d37689e59058941ee664"
+        },
+        {
+          "path": "b12x/_lib/quant/nvfp4_csf.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "58dacb5c004d7715a158027a0862fc3860626ea8",
+          "size": 36017,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/58dacb5c004d7715a158027a0862fc3860626ea8"
+        },
+        {
+          "path": "b12x/_lib/quant/nvfp4_csf_inline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "134941b9213bf53ae2bddc053c7990ee5d83a899",
+          "size": 25286,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/134941b9213bf53ae2bddc053c7990ee5d83a899"
+        },
+        {
+          "path": "b12x/_lib/quant/nvfp4_csf_packed.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6aa6c2b78d00afb4cc0ffd30743ae78f3335648d",
+          "size": 23163,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6aa6c2b78d00afb4cc0ffd30743ae78f3335648d"
+        },
+        {
+          "path": "b12x/gemm/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6ad85f037144fd762065b199ddcc1ab9d68cc5d9",
+          "size": 1997,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6ad85f037144fd762065b199ddcc1ab9d68cc5d9"
+        },
+        {
+          "path": "b12x/gemm/_bmm/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "85108aef271d13878991cbf4e494c8144d47733f",
+          "size": 1878,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/85108aef271d13878991cbf4e494c8144d47733f"
+        },
+        {
+          "path": "b12x/gemm/_bmm/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d94d6364597a1c28e267bdb4a3c9efc1e749a294",
+          "size": 2723,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d94d6364597a1c28e267bdb4a3c9efc1e749a294"
+        },
+        {
+          "path": "b12x/gemm/_bmm/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6599068445741e7ce82697af5730d50b71b48207",
+          "size": 1043,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6599068445741e7ce82697af5730d50b71b48207"
+        },
+        {
+          "path": "b12x/gemm/_bmm/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "48bccd07d128f40ad39aa5d3fc688bc0242bebaf",
+          "size": 2443,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/48bccd07d128f40ad39aa5d3fc688bc0242bebaf"
+        },
+        {
+          "path": "b12x/gemm/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "edfc2a3274f242414de32609915f0eab09dddf56",
+          "size": 12675,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/edfc2a3274f242414de32609915f0eab09dddf56"
+        },
+        {
+          "path": "b12x/gemm/_shared/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "407c9d728b0d2c5e64670dfa7778c083e35b3e1d",
+          "size": 66,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/407c9d728b0d2c5e64670dfa7778c083e35b3e1d"
+        },
+        {
+          "path": "b12x/gemm/_shared/block_fp8.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "03974df1b931aab0ea347d6ba11d73b175d8b570",
+          "size": 17996,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/03974df1b931aab0ea347d6ba11d73b175d8b570"
+        },
+        {
+          "path": "b12x/gemm/_shared/mxfp8_bmm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7b60aa1d274262228246f6561e879ffd839a0e8a",
+          "size": 79808,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7b60aa1d274262228246f6561e879ffd839a0e8a"
+        },
+        {
+          "path": "b12x/gemm/_shared/wo_mxfp8.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "28f37b0ea4ba4a21721992400b418ed919088c4c",
+          "size": 111503,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/28f37b0ea4ba4a21721992400b418ed919088c4c"
+        },
+        {
+          "path": "b12x/gemm/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3feaefed71ca9f9d26c1dbbf97f4f3742b243d12",
+          "size": 23950,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/3feaefed71ca9f9d26c1dbbf97f4f3742b243d12"
+        },
+        {
+          "path": "b12x/gemm/bf16_gemv/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2eaf5152457d7d6b5a3fcb91ed6ed59b336503f1",
+          "size": 1625,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2eaf5152457d7d6b5a3fcb91ed6ed59b336503f1"
+        },
+        {
+          "path": "b12x/gemm/bf16_gemv/_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "969b2b1d21f6c627af36a4d8ed7a82d2819eb434",
+          "size": 21374,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/969b2b1d21f6c627af36a4d8ed7a82d2819eb434"
+        },
+        {
+          "path": "b12x/gemm/bf16_gemv/_prefill.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b726b4805166e1cfe125ade64d54004adf21c75a",
+          "size": 18114,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b726b4805166e1cfe125ade64d54004adf21c75a"
+        },
+        {
+          "path": "b12x/gemm/bf16_gemv/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "65ed9452e46f998fc3ca581d945ab251e38a698a",
+          "size": 8144,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/65ed9452e46f998fc3ca581d945ab251e38a698a"
+        },
+        {
+          "path": "b12x/gemm/bf16_gemv/_tensor_core.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8d77b68796dc9706a461d657a429acf182faf6b8",
+          "size": 5838,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8d77b68796dc9706a461d657a429acf182faf6b8"
+        },
+        {
+          "path": "b12x/gemm/bf16_gemv/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e8064daa33ddb6bfe2a31fc7982d1a485dcb1038",
+          "size": 6118,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e8064daa33ddb6bfe2a31fc7982d1a485dcb1038"
+        },
+        {
+          "path": "b12x/gemm/bf16_gemv/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bbf8969e448a0e78efce5c4c79348e0e663bf674",
+          "size": 2307,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/bbf8969e448a0e78efce5c4c79348e0e663bf674"
+        },
+        {
+          "path": "b12x/gemm/bf16_vocab_projection/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "079aca5b51ab2a45034a1a15d3d11de68d11e72f",
+          "size": 1230,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/079aca5b51ab2a45034a1a15d3d11de68d11e72f"
+        },
+        {
+          "path": "b12x/gemm/bf16_vocab_projection/_contracts.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a59e199dfb301037f3020d1fd02c8fa20fb9b87f",
+          "size": 3497,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/a59e199dfb301037f3020d1fd02c8fa20fb9b87f"
+        },
+        {
+          "path": "b12x/gemm/bf16_vocab_projection/_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0b03d32b27733a9dd98785bc84427ee3999139fc",
+          "size": 2261,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0b03d32b27733a9dd98785bc84427ee3999139fc"
+        },
+        {
+          "path": "b12x/gemm/bf16_vocab_projection/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5d3be1e983a4e517ee1e021edfdd4da9bd8d4af7",
+          "size": 4068,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5d3be1e983a4e517ee1e021edfdd4da9bd8d4af7"
+        },
+        {
+          "path": "b12x/gemm/bf16_vocab_projection/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e02eaf5f689e01321dd590d1152044e567248115",
+          "size": 6408,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e02eaf5f689e01321dd590d1152044e567248115"
+        },
+        {
+          "path": "b12x/gemm/bf16_vocab_projection/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d3528333236a9813abc479a482960b5d2d05dd7b",
+          "size": 675,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d3528333236a9813abc479a482960b5d2d05dd7b"
+        },
+        {
+          "path": "b12x/gemm/block_fp8_linear/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "721be94c7f20f75d10ee3867a2d9938540b31db9",
+          "size": 1536,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/721be94c7f20f75d10ee3867a2d9938540b31db9"
+        },
+        {
+          "path": "b12x/gemm/block_fp8_linear/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "46bad6654dd8a871ba9130bf9070b89ca22c8e67",
+          "size": 9944,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/46bad6654dd8a871ba9130bf9070b89ca22c8e67"
+        },
+        {
+          "path": "b12x/gemm/block_fp8_linear/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "cc211205ee8fa8cfb588a5b7ad956b464960b837",
+          "size": 3216,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/cc211205ee8fa8cfb588a5b7ad956b464960b837"
+        },
+        {
+          "path": "b12x/gemm/block_fp8_linear/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7a3775e8f3103945579a173a66a30c3e22afaf55",
+          "size": 1374,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7a3775e8f3103945579a173a66a30c3e22afaf55"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "48aa76a3844949c64e1d5c750d86abce55b6612c",
+          "size": 4700,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/48aa76a3844949c64e1d5c750d86abce55b6612c"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_a16.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "088c315bf4cb0b71d8c5bcec664a671c4898e1e8",
+          "size": 7934,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/088c315bf4cb0b71d8c5bcec664a671c4898e1e8"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_block_fp8_gemv.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "327a7d551f2d91cba97cc279508b9f379f65a69f",
+          "size": 8369,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/327a7d551f2d91cba97cc279508b9f379f65a69f"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_iq2_xs.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "00c93650426bea490d520d42845706c22033d2a6",
+          "size": 3313,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/00c93650426bea490d520d42845706c22033d2a6"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_iq2_xs_gemv.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8fc832194c93c17d201c732596eaec27fbb65c5d",
+          "size": 8203,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8fc832194c93c17d201c732596eaec27fbb65c5d"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_linear.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "13765459afd81d4af863d6514689c175c55fc9b4",
+          "size": 33695,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/13765459afd81d4af863d6514689c175c55fc9b4"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_ops.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b6cbdd10e8f1034e18e64a866e7a2721a8f6249f",
+          "size": 7885,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b6cbdd10e8f1034e18e64a866e7a2721a8f6249f"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1f7d347f275b55ec3afb6c9fef221de0cd34b471",
+          "size": 46855,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1f7d347f275b55ec3afb6c9fef221de0cd34b471"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_quantize.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "05478444c659abdcf7ed0ae0a4ec267293cb4cd8",
+          "size": 4314,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/05478444c659abdcf7ed0ae0a4ec267293cb4cd8"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_reduce.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "872c0b6d4e24bd0cb0e36fac7e56f57c933e687c",
+          "size": 2033,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/872c0b6d4e24bd0cb0e36fac7e56f57c933e687c"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1af22c5a5822ab8e8a24f153e61e82b6e629877e",
+          "size": 17956,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1af22c5a5822ab8e8a24f153e61e82b6e629877e"
+        },
+        {
+          "path": "b12x/gemm/blockscaled/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b4aff30255c1e70c3aac352ff1d97b9a3a65912c",
+          "size": 3472,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b4aff30255c1e70c3aac352ff1d97b9a3a65912c"
+        },
+        {
+          "path": "b12x/gemm/mla_query_projection/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "fc12cf097323fb83229b26e9b8d24698605ccc07",
+          "size": 1530,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/fc12cf097323fb83229b26e9b8d24698605ccc07"
+        },
+        {
+          "path": "b12x/gemm/mla_query_projection/_bf16.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "42a810772cbbfed122eaf9fb456dc2a4344c57a3",
+          "size": 9868,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/42a810772cbbfed122eaf9fb456dc2a4344c57a3"
+        },
+        {
+          "path": "b12x/gemm/mla_query_projection/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5ba74546d3e356df02efafac6a633d4d555c3094",
+          "size": 4077,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5ba74546d3e356df02efafac6a633d4d555c3094"
+        },
+        {
+          "path": "b12x/gemm/mla_query_projection/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e3c6da60b9fd6d2895c32dc2959350fc87b376c5",
+          "size": 2161,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e3c6da60b9fd6d2895c32dc2959350fc87b376c5"
+        },
+        {
+          "path": "b12x/gemm/mla_query_projection/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "553599e3438a0031290f101e88fac59688be39e6",
+          "size": 2334,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/553599e3438a0031290f101e88fac59688be39e6"
+        },
+        {
+          "path": "b12x/gemm/mxfp8_linear/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d7a2432e3663d664dc5406489d79862956613fd0",
+          "size": 1315,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d7a2432e3663d664dc5406489d79862956613fd0"
+        },
+        {
+          "path": "b12x/gemm/mxfp8_linear/_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5b716731114319278269685bd076d98e3670307e",
+          "size": 386,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5b716731114319278269685bd076d98e3670307e"
+        },
+        {
+          "path": "b12x/gemm/mxfp8_linear/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d0199698fcb45caf148bc5b75378271e8616b5da",
+          "size": 356,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d0199698fcb45caf148bc5b75378271e8616b5da"
+        },
+        {
+          "path": "b12x/gemm/mxfp8_linear/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "dee007bca93ff8cdc8047fea9f2ee385b9703fab",
+          "size": 862,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/dee007bca93ff8cdc8047fea9f2ee385b9703fab"
+        },
+        {
+          "path": "b12x/gemm/tensor_fp8_linear/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "950cb9c0d1a05900ca9b229c276c816ab19c69bf",
+          "size": 1195,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/950cb9c0d1a05900ca9b229c276c816ab19c69bf"
+        },
+        {
+          "path": "b12x/gemm/tensor_fp8_linear/_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "610b1359e6fa36e19f641ec056d529e6e97def27",
+          "size": 480,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/610b1359e6fa36e19f641ec056d529e6e97def27"
+        },
+        {
+          "path": "b12x/gemm/tensor_fp8_linear/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "24c754a9ba33e5182d534bef6207948e47d44726",
+          "size": 358,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/24c754a9ba33e5182d534bef6207948e47d44726"
+        },
+        {
+          "path": "b12x/gemm/tensor_fp8_linear/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2795ddced6f7498187f04683cbaa7217ea7f805c",
+          "size": 1326,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2795ddced6f7498187f04683cbaa7217ea7f805c"
+        },
+        {
+          "path": "b12x/gemm/trellis_linear/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "979c70dbfef5e0cf7be5a9638e72014931e194e0",
+          "size": 1728,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/979c70dbfef5e0cf7be5a9638e72014931e194e0"
+        },
+        {
+          "path": "b12x/gemm/trellis_linear/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5c5783ee0eb97d64c255863eb803e1d944e7f4fd",
+          "size": 13118,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5c5783ee0eb97d64c255863eb803e1d944e7f4fd"
+        },
+        {
+          "path": "b12x/gemm/trellis_linear/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "fcb2a30600c930417f1618c76c09809fa5c542c0",
+          "size": 7133,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/fcb2a30600c930417f1618c76c09809fa5c542c0"
+        },
+        {
+          "path": "b12x/gemm/trellis_linear/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "37cdd68e987f506e57b4130ccc37bd6ca7a50b76",
+          "size": 3076,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/37cdd68e987f506e57b4130ccc37bd6ca7a50b76"
+        },
+        {
+          "path": "b12x/gemm/wo_projection/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "da8618f4f816b0bbc99af40c169ec1bd121c6078",
+          "size": 1991,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/da8618f4f816b0bbc99af40c169ec1bd121c6078"
+        },
+        {
+          "path": "b12x/gemm/wo_projection/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1971faa156c358a43b4c6e5015bcadbda12a4c0e",
+          "size": 19367,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1971faa156c358a43b4c6e5015bcadbda12a4c0e"
+        },
+        {
+          "path": "b12x/gemm/wo_projection/_quant_cute.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2c7efbad51a19a2e5561effb742dc1e409a4b892",
+          "size": 18871,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2c7efbad51a19a2e5561effb742dc1e409a4b892"
+        },
+        {
+          "path": "b12x/gemm/wo_projection/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0fa7b704c0888951d0e39979d0c005594d703af1",
+          "size": 5312,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0fa7b704c0888951d0e39979d0c005594d703af1"
+        },
+        {
+          "path": "b12x/gemm/wo_projection/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "eb963474609853d805045afa89e70ba5395aed73",
+          "size": 3441,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/eb963474609853d805045afa89e70ba5395aed73"
+        },
+        {
+          "path": "b12x/moe/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6e26843727db86acc955ce0dd93da460a30e38ea",
+          "size": 876,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6e26843727db86acc955ce0dd93da460a30e38ea"
+        },
+        {
+          "path": "b12x/moe/_shared/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7f707bd626dd52171b95ec5fa1e56468488dd7d5",
+          "size": 233,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7f707bd626dd52171b95ec5fa1e56468488dd7d5"
+        },
+        {
+          "path": "b12x/moe/_shared/execution.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ea41b71c204ed5d98f1e1ce42471d79b27591ce7",
+          "size": 51169,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ea41b71c204ed5d98f1e1ce42471d79b27591ce7"
+        },
+        {
+          "path": "b12x/moe/_shared/exl3_schema.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3cb6b33df100476ec8126d5d9f70825cf92b1802",
+          "size": 16478,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/3cb6b33df100476ec8126d5d9f70825cf92b1802"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f9f60e0d28ec51eea8b4aa23cff76110f88aaa0b",
+          "size": 852,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f9f60e0d28ec51eea8b4aa23cff76110f88aaa0b"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/activations.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "73afdf06c88b5bcd08f2ffcca0b33bd20b479dba",
+          "size": 2913,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/73afdf06c88b5bcd08f2ffcca0b33bd20b479dba"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/dynamic.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d28488e29a526ebca8d2a60d28afefd83c1b5b56",
+          "size": 538583,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d28488e29a526ebca8d2a60d28afefd83c1b5b56"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/micro.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5b433d8f395c6a267d689c5fb178ee35cdec1284",
+          "size": 283442,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5b433d8f395c6a267d689c5fb178ee35cdec1284"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/mxfp6_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b94835891ad045f12dd36e3b76dbe336bae43b02",
+          "size": 9992,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b94835891ad045f12dd36e3b76dbe336bae43b02"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/nvfp4_phase1.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9df94b92646fc92a130fcffbba2610f6a7c1a775",
+          "size": 29362,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9df94b92646fc92a130fcffbba2610f6a7c1a775"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/nvfp4_phase2.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2dd560b92001a0598755a52ce764320b3985a131",
+          "size": 21287,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2dd560b92001a0598755a52ce764320b3985a131"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7499ee79ba06fa61759be557fd16d569f4ad476e",
+          "size": 52035,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7499ee79ba06fa61759be557fd16d569f4ad476e"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/reference_flashinfer.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9f0e59420df564a9bbb33d3a1a8b0f2e40f61f23",
+          "size": 13006,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9f0e59420df564a9bbb33d3a1a8b0f2e40f61f23"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/relu2.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b12e5d0634b1b5f4293079fb2ed5cb750c6de97e",
+          "size": 3091,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b12e5d0634b1b5f4293079fb2ed5cb750c6de97e"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/silu.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "cbba75e8ddedc5f6050b63f135ee04cdcfc5d106",
+          "size": 8173,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/cbba75e8ddedc5f6050b63f135ee04cdcfc5d106"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/situ.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "680a8178cf2088ba0ca7ffd7de60f976ccb48a86",
+          "size": 3401,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/680a8178cf2088ba0ca7ffd7de60f976ccb48a86"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/tiny_decode.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0cf0ca4aad8120a37ab5015f37c6364262bdd1ad",
+          "size": 23170,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0cf0ca4aad8120a37ab5015f37c6364262bdd1ad"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/trellis_materialize.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b5897f17ffbed5de854c0f2983adbe93e2dacee0",
+          "size": 35767,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b5897f17ffbed5de854c0f2983adbe93e2dacee0"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/trellis_ring.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c9f63167e89e17dbbbcc2fb4c2218e60504e8193",
+          "size": 1684,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c9f63167e89e17dbbbcc2fb4c2218e60504e8193"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "de3318431c7fa91e16569ee10cb7b1145e68205c",
+          "size": 82,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/de3318431c7fa91e16569ee10cb7b1145e68205c"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/exl3.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "028980b86fa802fe7083b7331ba0a498850c3a4d",
+          "size": 10953,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/028980b86fa802fe7083b7331ba0a498850c3a4d"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/exl3_synth.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "daf07895b803846faf9988d50e94c3b04f095836",
+          "size": 11433,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/daf07895b803846faf9988d50e94c3b04f095836"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/host.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6ac71021126c7aebccc3d3d5f333e0153241f5c5",
+          "size": 18184,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6ac71021126c7aebccc3d3d5f333e0153241f5c5"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/iq2_xs.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e569ee0273da50b3064c3d51d70e03e22c9ae736",
+          "size": 7522,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e569ee0273da50b3064c3d51d70e03e22c9ae736"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f0648b6d6b1701cc0a188582bb72c3f8b277789a",
+          "size": 587034,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f0648b6d6b1701cc0a188582bb72c3f8b277789a"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/mixed_trellis.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8681ec9fea2d08a8a164969ec19965c6a2f58c40",
+          "size": 123773,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8681ec9fea2d08a8a164969ec19965c6a2f58c40"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/prepare.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f7a68ca1725f70927014969fd9110b20d4f5b7cc",
+          "size": 93638,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f7a68ca1725f70927014969fd9110b20d4f5b7cc"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a16/route_pack.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6de60ce8910fb41db2a481828df3eff479fb3d92",
+          "size": 27799,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6de60ce8910fb41db2a481828df3eff479fb3d92"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "50f4690c1733cc6b117f25e8bc4e7f3029f5794e",
+          "size": 151,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/50f4690c1733cc6b117f25e8bc4e7f3029f5794e"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8/weights.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b2c23c2b86be4c3251423832571dca3cc159ecc0",
+          "size": 1850,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b2c23c2b86be4c3251423832571dca3cc159ecc0"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8_compact_activation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0f7a248484e35f7fb2eed32fd42e7ba9be086927",
+          "size": 6151,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0f7a248484e35f7fb2eed32fd42e7ba9be086927"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8_compact_micro.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9e9de244c14b18f8c5f6a9350d061fc24f6cf8c4",
+          "size": 14889,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9e9de244c14b18f8c5f6a9350d061fc24f6cf8c4"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8_compact_projection.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "803a69c90e6e0006a0ba2d125c3bdef5913d5d97",
+          "size": 19767,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/803a69c90e6e0006a0ba2d125c3bdef5913d5d97"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8_phase1.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "483d6591d81fdeb1ab3a5d364f3ffd880fc4f434",
+          "size": 58059,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/483d6591d81fdeb1ab3a5d364f3ffd880fc4f434"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8_phase2.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6a0e1928a54ff07e8c7f46112ef56a1c3bf8b7ea",
+          "size": 38635,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6a0e1928a54ff07e8c7f46112ef56a1c3bf8b7ea"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w4a8_trellis_decode.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "becb9d0002be49d22431722aa7b3e4d0349b1ec5",
+          "size": 9405,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/becb9d0002be49d22431722aa7b3e4d0349b1ec5"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w6a8/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "395871e2ef64e0259baf84ab8453163de9b729a4",
+          "size": 226,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/395871e2ef64e0259baf84ab8453163de9b729a4"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w6a8/weights.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "581cc2d995997925effcb28a9fe2985bdbf27a29",
+          "size": 9929,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/581cc2d995997925effcb28a9fe2985bdbf27a29"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w8a8/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "54b35112b84990e8e1b885748f250cd81c4e9389",
+          "size": 295,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/54b35112b84990e8e1b885748f250cd81c4e9389"
+        },
+        {
+          "path": "b12x/moe/_shared/kernels/w8a8/weights.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6eea612b769555acd75d8f652c327d6573d2268b",
+          "size": 11927,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6eea612b769555acd75d8f652c327d6573d2268b"
+        },
+        {
+          "path": "b12x/moe/_shared/routing.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9c0a9068e7e8b460d8d722a4e0e86fcfd1b8b74c",
+          "size": 8806,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9c0a9068e7e8b460d8d722a4e0e86fcfd1b8b74c"
+        },
+        {
+          "path": "b12x/moe/_shared/trellis_codebooks.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7603ea9b677480ce8c7a1af417afc871435f4bb5",
+          "size": 2299,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7603ea9b677480ce8c7a1af417afc871435f4bb5"
+        },
+        {
+          "path": "b12x/moe/calibration.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "54dce813acf3137ec30c5dae7cf1d37cc4fe17a5",
+          "size": 21331,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/54dce813acf3137ec30c5dae7cf1d37cc4fe17a5"
+        },
+        {
+          "path": "b12x/moe/checkpoints/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "600101df9db33e4bb16430500742a121c460ec37",
+          "size": 76,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/600101df9db33e4bb16430500742a121c460ec37"
+        },
+        {
+          "path": "b12x/moe/checkpoints/exl3.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "db38fcd5a9b84cb6b0f13d8b1c599dfe2c244b8f",
+          "size": 13323,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/db38fcd5a9b84cb6b0f13d8b1c599dfe2c244b8f"
+        },
+        {
+          "path": "b12x/moe/ep_moe/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "92a81dccd44d2302d7ecfb33c85b526d505754cf",
+          "size": 1720,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/92a81dccd44d2302d7ecfb33c85b526d505754cf"
+        },
+        {
+          "path": "b12x/moe/ep_moe/_impl.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3c22226e2fca5880b2905aace35aad609b3cc22e",
+          "size": 20948,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/3c22226e2fca5880b2905aace35aad609b3cc22e"
+        },
+        {
+          "path": "b12x/moe/ep_moe/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "708e7892d121332a2301f2e5e05a380af22a3c48",
+          "size": 13377,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/708e7892d121332a2301f2e5e05a380af22a3c48"
+        },
+        {
+          "path": "b12x/moe/ep_moe/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "da1f857f4cb3e39c95e8344f793398f3a7da5114",
+          "size": 825,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/da1f857f4cb3e39c95e8344f793398f3a7da5114"
+        },
+        {
+          "path": "b12x/moe/ep_moe/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "01b7b3039a6e2665a5ea6f2434e822f2312558fc",
+          "size": 1255,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/01b7b3039a6e2665a5ea6f2434e822f2312558fc"
+        },
+        {
+          "path": "b12x/moe/fused_moe/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9f77ab5d1b787f621b4560cae50cf8e3d8cae29c",
+          "size": 5184,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9f77ab5d1b787f621b4560cae50cf8e3d8cae29c"
+        },
+        {
+          "path": "b12x/moe/fused_moe/_compat.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "05e6c5d26af3217bbcebd5b19d2b9cef6615d4d7",
+          "size": 3608,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/05e6c5d26af3217bbcebd5b19d2b9cef6615d4d7"
+        },
+        {
+          "path": "b12x/moe/fused_moe/_impl.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8055c1140d89986e42715509816928398f9bdaba",
+          "size": 545228,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8055c1140d89986e42715509816928398f9bdaba"
+        },
+        {
+          "path": "b12x/moe/fused_moe/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "49f8140c5eeccb106a1b8ac1d533f73ea15e2656",
+          "size": 60210,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/49f8140c5eeccb106a1b8ac1d533f73ea15e2656"
+        },
+        {
+          "path": "b12x/moe/fused_moe/_route_pack_cache.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8e02d46618b9d81df78e6249d60509b6d105f283",
+          "size": 1650,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8e02d46618b9d81df78e6249d60509b6d105f283"
+        },
+        {
+          "path": "b12x/moe/fused_moe/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6c24e5a0dd59ba28c6eb2399dbdfc6102d4d07cf",
+          "size": 33505,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6c24e5a0dd59ba28c6eb2399dbdfc6102d4d07cf"
+        },
+        {
+          "path": "b12x/moe/fused_moe/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8527f6c39dc066e83506260a352db485386f1964",
+          "size": 10124,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8527f6c39dc066e83506260a352db485386f1964"
+        },
+        {
+          "path": "b12x/moe/fused_moe/config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "594905e8349dec36533425037e5b30ea70cdf9cc",
+          "size": 13633,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/594905e8349dec36533425037e5b30ea70cdf9cc"
+        },
+        {
+          "path": "b12x/moe/fused_moe/execution.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c11903329b847888d894cb2ba5ce27e558fe46dc",
+          "size": 2354,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c11903329b847888d894cb2ba5ce27e558fe46dc"
+        },
+        {
+          "path": "b12x/moe/fused_moe/planning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "19bc5062e6fee50cb6840678c3b3c03d0742411d",
+          "size": 34766,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/19bc5062e6fee50cb6840678c3b3c03d0742411d"
+        },
+        {
+          "path": "b12x/moe/fused_moe/source.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "de4c3002a63effa282f257d943fe74668b769484",
+          "size": 4182,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/de4c3002a63effa282f257d943fe74668b769484"
+        },
+        {
+          "path": "b12x/moe/fused_moe/trellis.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "713acc0be59d7c861e178f0735dc734a9d776bbd",
+          "size": 29046,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/713acc0be59d7c861e178f0735dc734a9d776bbd"
+        },
+        {
+          "path": "b12x/moe/fused_moe/trellis_layout.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "373f5498021cef301e9092ab2ea2d3597a90c285",
+          "size": 6778,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/373f5498021cef301e9092ab2ea2d3597a90c285"
+        },
+        {
+          "path": "b12x/moe/fused_moe/weights.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0aef6a492fbc96ae25c1b89de726233254d28e51",
+          "size": 10744,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0aef6a492fbc96ae25c1b89de726233254d28e51"
+        },
+        {
+          "path": "b12x/moe/fused_moe/workloads.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c7b5dace8c1dd1acbd710aecaf67bd6797aae87a",
+          "size": 3604,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c7b5dace8c1dd1acbd710aecaf67bd6797aae87a"
+        },
+        {
+          "path": "b12x/quantization/mxfp6/fp6_moe_weights.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3eff6964889110e893b04025914764cc2036278b",
+          "size": 10850,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/3eff6964889110e893b04025914764cc2036278b"
+        },
+        {
+          "path": "b12x/quantization/nvfp4/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "43987126136ad8e265e722a1d893e89925878fbb",
+          "size": 1914,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/43987126136ad8e265e722a1d893e89925878fbb"
+        },
+        {
+          "path": "b12x/quantization/nvfp4/_impl.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4a640f5d23fda6e0755ae430d5a98c5d1aaa8b78",
+          "size": 7080,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4a640f5d23fda6e0755ae430d5a98c5d1aaa8b78"
+        },
+        {
+          "path": "b12x/quantization/nvfp4/_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "be366dd237b941b6fc8237d7e7dfcf898b528834",
+          "size": 19327,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/be366dd237b941b6fc8237d7e7dfcf898b528834"
+        },
+        {
+          "path": "b12x/quantization/nvfp4/_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "fc8d133b63d9ad43e95c3052e668705c54071d9c",
+          "size": 2157,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/fc8d133b63d9ad43e95c3052e668705c54071d9c"
+        },
+        {
+          "path": "b12x/quantization/nvfp4/_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9549ac1d499d64d9755b359519f005b72e2d7bbb",
+          "size": 3419,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9549ac1d499d64d9755b359519f005b72e2d7bbb"
+        },
+        {
+          "path": "b12x/quantization/nvfp4/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "11c176c9938efc69619931f48a91caad29cf9ac6",
+          "size": 1565,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/11c176c9938efc69619931f48a91caad29cf9ac6"
+        },
+        {
+          "path": "b12x/testing/moe_corpus.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ad2cfbb7bd99005daf6fbac62890f1cc4b977a51",
+          "size": 25611,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ad2cfbb7bd99005daf6fbac62890f1cc4b977a51"
+        },
+        {
+          "path": "b12x/testing/startup/moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "62a6eacf1b466975cff04488ede8ae64d5435a91",
+          "size": 13048,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/62a6eacf1b466975cff04488ede8ae64d5435a91"
+        },
+        {
+          "path": "benchmarks/benchmark_block_fp8_gemv.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ef844f50ae4271f12b43f6aa6b94ccb9651db048",
+          "size": 5630,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ef844f50ae4271f12b43f6aa6b94ccb9651db048"
+        },
+        {
+          "path": "benchmarks/benchmark_dense_fp8_vs_deepgemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1245c970b19c73c33bcea319791c58aff230557b",
+          "size": 5567,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1245c970b19c73c33bcea319791c58aff230557b"
+        },
+        {
+          "path": "benchmarks/benchmark_dense_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5d2657b8fcac1e555c3fbc4e0cbbea940ffc6163",
+          "size": 38640,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5d2657b8fcac1e555c3fbc4e0cbbea940ffc6163"
+        },
+        {
+          "path": "benchmarks/benchmark_dense_gemm_fp6.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d5a5c7ae44be385d0889c0ddcba564bb893467ac",
+          "size": 4624,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d5a5c7ae44be385d0889c0ddcba564bb893467ac"
+        },
+        {
+          "path": "benchmarks/benchmark_ds4_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ada3e43d6865ddd2a79d7438d218212cbe859b57",
+          "size": 10847,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ada3e43d6865ddd2a79d7438d218212cbe859b57"
+        },
+        {
+          "path": "benchmarks/benchmark_iq2_xs_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "91024a4ef99b811f5bde13a5ca2184f66832f30f",
+          "size": 19769,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/91024a4ef99b811f5bde13a5ca2184f66832f30f"
+        },
+        {
+          "path": "benchmarks/benchmark_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2f5dd93c49d85e8c3a8d1fd3b23c787e518990a8",
+          "size": 179322,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2f5dd93c49d85e8c3a8d1fd3b23c787e518990a8"
+        },
+        {
+          "path": "benchmarks/benchmark_moe_fp6.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "962773a750cc0c9576e5ad992b322be9ea4913e4",
+          "size": 7003,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/962773a750cc0c9576e5ad992b322be9ea4913e4"
+        },
+        {
+          "path": "benchmarks/benchmark_nvfp4_decode_precisions.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "183480b7066c01de1d99d407ca039d5b46edd866",
+          "size": 18985,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/183480b7066c01de1d99d407ca039d5b46edd866"
+        },
+        {
+          "path": "benchmarks/benchmark_nvfp4_split_materialized.py",
+          "mode": "100755",
+          "type": "blob",
+          "sha": "7af17dfb6ccc349b64f80cef09a4aa1501acd837",
+          "size": 26347,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7af17dfb6ccc349b64f80cef09a4aa1501acd837"
+        },
+        {
+          "path": "benchmarks/benchmark_sparse_moe_api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e07954fd8c06c7619bbac91e04a05df39ca25996",
+          "size": 12682,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e07954fd8c06c7619bbac91e04a05df39ca25996"
+        },
+        {
+          "path": "benchmarks/benchmark_w4a16_nvfp4_layouts.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2256fb82c0d3be9d0f6f2860fc1149b6808e251a",
+          "size": 18629,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2256fb82c0d3be9d0f6f2860fc1149b6808e251a"
+        },
+        {
+          "path": "benchmarks/benchmark_x4t_w4a16_moe_tp12.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e27a039af8c64e7ceb52ddb62519bf8c8c5d71d8",
+          "size": 19568,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e27a039af8c64e7ceb52ddb62519bf8c8c5d71d8"
+        },
+        {
+          "path": "benchmarks/gen_nvfp4_split_readme.py",
+          "mode": "100755",
+          "type": "blob",
+          "sha": "e558cbbe955d90b6a8ba3623c516a49bc491bbc6",
+          "size": 11700,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e558cbbe955d90b6a8ba3623c516a49bc491bbc6"
+        },
+        {
+          "path": "benchmarks/moe_checkpoint_snapshot.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4bfcb0023c9483d246d85b27cf50d1e04d646ae4",
+          "size": 2574,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4bfcb0023c9483d246d85b27cf50d1e04d646ae4"
+        },
+        {
+          "path": "benchmarks/moe_preparation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c04b53b480f6bb9177d89e919555d0ae30e8df33",
+          "size": 1977,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c04b53b480f6bb9177d89e919555d0ae30e8df33"
+        },
+        {
+          "path": "benchmarks/probe_quant_parity_deepgemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1deaeb7f7673633be22fa527d3b680d0bae3b02b",
+          "size": 4803,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1deaeb7f7673633be22fa527d3b680d0bae3b02b"
+        },
+        {
+          "path": "benchmarks/verify_moe_perf.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b22c6acbbd2bbd0a13d703482de6d74ade10a538",
+          "size": 5545,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b22c6acbbd2bbd0a13d703482de6d74ade10a538"
+        },
+        {
+          "path": "docs/dense-gemm-precision.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2f25143e31c0022b1011df41095489b14cff7b38",
+          "size": 9515,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2f25143e31c0022b1011df41095489b14cff7b38"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/conditions.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3767c0e580466f347e71b27cc934084f38685a71",
+          "size": 3088,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/3767c0e580466f347e71b27cc934084f38685a71"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/launch_glm_nvfp4_split_local.sh",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "52a73b360e8c5b3d7bf416d9460bb811ace84a58",
+          "size": 2994,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/52a73b360e8c5b3d7bf416d9460bb811ace84a58"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/measure_exact_cold_prefill.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f800d9faea382e2ecd8c4904318a0a4407ebec67",
+          "size": 4181,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f800d9faea382e2ecd8c4904318a0a4407ebec67"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/measure_token_id_prefill.py",
+          "mode": "100755",
+          "type": "blob",
+          "sha": "030cc0b2724d476911307afe11f79643fd2b7568",
+          "size": 8564,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/030cc0b2724d476911307afe11f79643fd2b7568"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/prompt_source_metrics.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "de1843d537eafa0b42c805cf3f695ce56b56584f",
+          "size": 865,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/de1843d537eafa0b42c805cf3f695ce56b56584f"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/qwen-reference-decode.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "28bb214b5ab0ba5ee7e575633e1e36ee191c962d",
+          "size": 27492,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/28bb214b5ab0ba5ee7e575633e1e36ee191c962d"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/qwen-reference-prefill32k.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8806c498908dafe10cea9bc944ee548ee15c1805",
+          "size": 4331,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8806c498908dafe10cea9bc944ee548ee15c1805"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/qwen-split-decode.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "22a4efadca22313bd6def65e724feee05b7349f5",
+          "size": 27448,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/22a4efadca22313bd6def65e724feee05b7349f5"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/qwen-split-prefill32k.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5e5cd4d6e697ff01899ecefdee9320e65a94bcbc",
+          "size": 4345,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5e5cd4d6e697ff01899ecefdee9320e65a94bcbc"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/qwen_sampling.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "617813320dd528722d2f5ee31b6aee5837511626",
+          "size": 378,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/617813320dd528722d2f5ee31b6aee5837511626"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/reference-a1-prefill32k.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9a4e0cf3cbd0a66d7bafd9fb5d341ec5b5b6c14f",
+          "size": 4925,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9a4e0cf3cbd0a66d7bafd9fb5d341ec5b5b6c14f"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/reference-a2-prefill32k.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "144b3af43a914c85e623f6af140bcb7f38129daf",
+          "size": 4918,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/144b3af43a914c85e623f6af140bcb7f38129daf"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/run_qwen_cookbook_source_qualification.sh",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "48e28efe240a62be739787043929b039380c91c6",
+          "size": 8203,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/48e28efe240a62be739787043929b039380c91c6"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/serving-summary.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7f7e41f2300ee0514e0e93d1fd7618eb91a23fd4",
+          "size": 6678,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7f7e41f2300ee0514e0e93d1fd7618eb91a23fd4"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/shared-b1-prefill32k.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d250a46af7fd00c24d7d200532c936b42dcf05af",
+          "size": 4916,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d250a46af7fd00c24d7d200532c936b42dcf05af"
+        },
+        {
+          "path": "docs/evidence/nvfp4-immutable-input/split-c1-prefill32k.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a529a4ee7ab7c8d70dafe59411402901f2580305",
+          "size": 5211,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/a529a4ee7ab7c8d70dafe59411402901f2580305"
+        },
+        {
+          "path": "docs/evidence/nvfp4_split/20260910-rtx5090-nvfp4-split-prefill.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0e5eb683a7994239c40b5fef6b1ab1c18d1d7f9c",
+          "size": 205215,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0e5eb683a7994239c40b5fef6b1ab1c18d1d7f9c"
+        },
+        {
+          "path": "docs/evidence/nvfp4_split/20260910-rtxpro6000-maxq-production-graphs.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8f757e2f662ada4029ac3b50d096e68de8dd9d45",
+          "size": 359071,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8f757e2f662ada4029ac3b50d096e68de8dd9d45"
+        },
+        {
+          "path": "docs/evidence/nvfp4_split/README.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5386942a133378efbbb1bcba5cda23e1644284ee",
+          "size": 82705,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5386942a133378efbbb1bcba5cda23e1644284ee"
+        },
+        {
+          "path": "docs/moe-execution-model.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "eb41e859396a1edf2121720cd38e5efd6200424e",
+          "size": 18688,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/eb41e859396a1edf2121720cd38e5efd6200424e"
+        },
+        {
+          "path": "docs/nvfp4-immutable-input-serving.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7449d4704fb7bf2d2f3fdd49899351bb0413bd26",
+          "size": 8625,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7449d4704fb7bf2d2f3fdd49899351bb0413bd26"
+        },
+        {
+          "path": "docs/sm120_dense_fp8_deepgemm_port.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2218d71318994966b3a75c19ebba94d582ffec24",
+          "size": 14781,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2218d71318994966b3a75c19ebba94d582ffec24"
+        },
+        {
+          "path": "scripts/ablate_moe_act_quant.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "87733f098e45db0c08b3764d9fc607eb52572a81",
+          "size": 11115,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/87733f098e45db0c08b3764d9fc607eb52572a81"
+        },
+        {
+          "path": "scripts/bench_bf16_gemv.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "86e39445d9b9a08a79708f21f3675c1a21dbf7dd",
+          "size": 4469,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/86e39445d9b9a08a79708f21f3675c1a21dbf7dd"
+        },
+        {
+          "path": "scripts/bench_fp6_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "63385b8b820d94c151965e81830590771f2e6dfd",
+          "size": 7262,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/63385b8b820d94c151965e81830590771f2e6dfd"
+        },
+        {
+          "path": "scripts/quantize_moe_fp6.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "71d40dd16a83ebc940f914f7c9a610b463b52b04",
+          "size": 3812,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/71d40dd16a83ebc940f914f7c9a610b463b52b04"
+        },
+        {
+          "path": "scripts/smoke_bf16_gemv.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "01bd0a9a7d48e8b59aede54e47727dfb4a72752e",
+          "size": 2855,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/01bd0a9a7d48e8b59aede54e47727dfb4a72752e"
+        },
+        {
+          "path": "scripts/sweep_moe_decode_max_active_clusters.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ffb2021aab45bbbc4434d82035b3896ec45875dd",
+          "size": 30167,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ffb2021aab45bbbc4434d82035b3896ec45875dd"
+        },
+        {
+          "path": "scripts/validate_fp6_moe_artifact.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "be2ae7abe313a7a56d095a1e0c134162391e8192",
+          "size": 11613,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/be2ae7abe313a7a56d095a1e0c134162391e8192"
+        },
+        {
+          "path": "tests/_reference/trellis_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e72a76f138940cf3fd53b9d8f2d6f146d4278dfe",
+          "size": 8694,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e72a76f138940cf3fd53b9d8f2d6f146d4278dfe"
+        },
+        {
+          "path": "tests/attention/test_attention_mla_nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ebe2f5a93ce45988ec6f30c667c49a5d07332eb4",
+          "size": 3084,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ebe2f5a93ce45988ec6f30c667c49a5d07332eb4"
+        },
+        {
+          "path": "tests/attention/test_mla_nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "23ed3061b66f8aeaea920c01eac7be874ed44532",
+          "size": 3119,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/23ed3061b66f8aeaea920c01eac7be874ed44532"
+        },
+        {
+          "path": "tests/gemm/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "tests/gemm/_blockscaled.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c930f124bea19ecdaf1dd3f1cc85b31843381a3d",
+          "size": 2242,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c930f124bea19ecdaf1dd3f1cc85b31843381a3d"
+        },
+        {
+          "path": "tests/gemm/test_autotune_dense_block_fp8_plan.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aa7a4af259971dca700a1582ea4f19fb798589d0",
+          "size": 685,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/aa7a4af259971dca700a1582ea4f19fb798589d0"
+        },
+        {
+          "path": "tests/gemm/test_autotune_dense_fp4_tile_k.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "55c483479d69bc51d3409b0946f729bac959acb8",
+          "size": 2183,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/55c483479d69bc51d3409b0946f729bac959acb8"
+        },
+        {
+          "path": "tests/gemm/test_autotune_dense_mxfp8_plan.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4a94e515824c687519ad29c5ddd5e1aebb6856b8",
+          "size": 1490,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4a94e515824c687519ad29c5ddd5e1aebb6856b8"
+        },
+        {
+          "path": "tests/gemm/test_autotune_dense_mxfp8_split_k.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bc261e6209b2f5b6af566be8d86bd507aa032e1b",
+          "size": 410,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/bc261e6209b2f5b6af566be8d86bd507aa032e1b"
+        },
+        {
+          "path": "tests/gemm/test_benchmark_dense_gemm_profiles.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "36ca8633ff7d45ab76217af386bff219557bc79f",
+          "size": 1176,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/36ca8633ff7d45ab76217af386bff219557bc79f"
+        },
+        {
+          "path": "tests/gemm/test_bf16_gemv.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8e06a1c4202374f8dbb64da69da99d1dd90c631d",
+          "size": 24488,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8e06a1c4202374f8dbb64da69da99d1dd90c631d"
+        },
+        {
+          "path": "tests/gemm/test_bf16_vocab_projection.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f7a8e26d3fbc6f28a0aec433c6f31b792b4fc2eb",
+          "size": 2181,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f7a8e26d3fbc6f28a0aec433c6f31b792b4fc2eb"
+        },
+        {
+          "path": "tests/gemm/test_block_fp8_dense_search.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8149e7058b186aa808fc42a0017cfeaf12462bc4",
+          "size": 6291,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8149e7058b186aa808fc42a0017cfeaf12462bc4"
+        },
+        {
+          "path": "tests/gemm/test_block_fp8_gemv.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a1ca0084ad41c5d7a47e5532aff13c548f775635",
+          "size": 5634,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/a1ca0084ad41c5d7a47e5532aff13c548f775635"
+        },
+        {
+          "path": "tests/gemm/test_block_fp8_linear.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "22900b827d0c20a8ef88088697ba94c452dbc5c8",
+          "size": 3414,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/22900b827d0c20a8ef88088697ba94c452dbc5c8"
+        },
+        {
+          "path": "tests/gemm/test_block_fp8_linear_capacity.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "237a5f0f8467640d3c23dba9e7007520c262a958",
+          "size": 889,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/237a5f0f8467640d3c23dba9e7007520c262a958"
+        },
+        {
+          "path": "tests/gemm/test_block_fp8_linear_scratch_bindings.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "02678b07ae138ffb670f7f2a75c3d510544e06f5",
+          "size": 821,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/02678b07ae138ffb670f7f2a75c3d510544e06f5"
+        },
+        {
+          "path": "tests/gemm/test_blockscaled.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "63e218326c429d32d8126469dc4e9f3a3775fa12",
+          "size": 24379,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/63e218326c429d32d8126469dc4e9f3a3775fa12"
+        },
+        {
+          "path": "tests/gemm/test_blockscaled_a16.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6e12c17eb46c140fca44e842447bc19c42595608",
+          "size": 30612,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6e12c17eb46c140fca44e842447bc19c42595608"
+        },
+        {
+          "path": "tests/gemm/test_bmm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "83725c457d5eeb86ecd6267ac7613d5f30b3f4f6",
+          "size": 5042,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/83725c457d5eeb86ecd6267ac7613d5f30b3f4f6"
+        },
+        {
+          "path": "tests/gemm/test_checkpoint_dense_benchmark.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2bfb49c2d17ee365a0c18500f5ccf73a51b18189",
+          "size": 2598,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2bfb49c2d17ee365a0c18500f5ccf73a51b18189"
+        },
+        {
+          "path": "tests/gemm/test_cute_migration_gemm_corpus.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4a4a570682a2fb894dadee77806b8832b6ea5bc4",
+          "size": 16369,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4a4a570682a2fb894dadee77806b8832b6ea5bc4"
+        },
+        {
+          "path": "tests/gemm/test_dense_gemm_expected_m.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7d4afd8f624190e80163e75e5d7981c4f4d27d5d",
+          "size": 44733,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7d4afd8f624190e80163e75e5d7981c4f4d27d5d"
+        },
+        {
+          "path": "tests/gemm/test_dense_gemm_fp6.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "601fa2e88167eb5ed8188819739bee5ccea326d1",
+          "size": 1793,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/601fa2e88167eb5ed8188819739bee5ccea326d1"
+        },
+        {
+          "path": "tests/gemm/test_fp6_dense_op.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bf92855ef9a247bc6eccfcbf038881f9e45aebae",
+          "size": 6355,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/bf92855ef9a247bc6eccfcbf038881f9e45aebae"
+        },
+        {
+          "path": "tests/gemm/test_fp6_dense_w6a8.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "65c9312646dafdea8b118a02da2fc805bb0b612b",
+          "size": 8538,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/65c9312646dafdea8b118a02da2fc805bb0b612b"
+        },
+        {
+          "path": "tests/gemm/test_fp6_guards.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "64f1ab008df74e008ed35b8505150e67272dccef",
+          "size": 3009,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/64f1ab008df74e008ed35b8505150e67272dccef"
+        },
+        {
+          "path": "tests/gemm/test_fp6_large_m_tile.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "dbbc49d32557a41af77940b85b63c07441e30fc9",
+          "size": 6243,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/dbbc49d32557a41af77940b85b63c07441e30fc9"
+        },
+        {
+          "path": "tests/gemm/test_fp6_packed_b.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "466efd0c6ab52869b1f530defde2742d1c4aa801",
+          "size": 8690,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/466efd0c6ab52869b1f530defde2742d1c4aa801"
+        },
+        {
+          "path": "tests/gemm/test_fp8_quant_deepgemm_parity.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c3d14eb38f29b05336a274c247636acdf42b217f",
+          "size": 8047,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c3d14eb38f29b05336a274c247636acdf42b217f"
+        },
+        {
+          "path": "tests/gemm/test_gemm_block_fp8_linear.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "fec7a61b4740233b9ecece1c8b9bcf895988618a",
+          "size": 16436,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/fec7a61b4740233b9ecece1c8b9bcf895988618a"
+        },
+        {
+          "path": "tests/gemm/test_gemm_mxfp8_linear.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "38f93d551d8fbe0fe88439f28f5c381eee078f14",
+          "size": 5394,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/38f93d551d8fbe0fe88439f28f5c381eee078f14"
+        },
+        {
+          "path": "tests/gemm/test_gemm_stack.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1bf14d35f54362f904b83d22210ef465814a3409",
+          "size": 18024,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1bf14d35f54362f904b83d22210ef465814a3409"
+        },
+        {
+          "path": "tests/gemm/test_gemm_wo_projection.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9b952f43c1eb48494fda7d0e54199500751a0957",
+          "size": 47601,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/9b952f43c1eb48494fda7d0e54199500751a0957"
+        },
+        {
+          "path": "tests/gemm/test_iq2_xs.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "64f444e205cf1dd73682c93d585bc6680a118106",
+          "size": 9859,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/64f444e205cf1dd73682c93d585bc6680a118106"
+        },
+        {
+          "path": "tests/gemm/test_launch_custom_ops.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "45d12a0cabc89c2b11d870c936e6243e693ae40b",
+          "size": 3711,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/45d12a0cabc89c2b11d870c936e6243e693ae40b"
+        },
+        {
+          "path": "tests/gemm/test_mla_query_projection.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aab76c340599c9534e80d22df90a2762d1ce036d",
+          "size": 4625,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/aab76c340599c9534e80d22df90a2762d1ce036d"
+        },
+        {
+          "path": "tests/gemm/test_mxfp8_linear.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e25eb93491418bc0aed1364b245b512f2e33badc",
+          "size": 16034,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e25eb93491418bc0aed1364b245b512f2e33badc"
+        },
+        {
+          "path": "tests/gemm/test_nvfp4_precision_race.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7d11396343193765e2f552255316c911791d8fd2",
+          "size": 4727,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7d11396343193765e2f552255316c911791d8fd2"
+        },
+        {
+          "path": "tests/gemm/test_tensor_fp8_linear.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e6dadfadcc7bfaf55ed014e39545be95a3286a8c",
+          "size": 9409,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e6dadfadcc7bfaf55ed014e39545be95a3286a8c"
+        },
+        {
+          "path": "tests/gemm/test_trellis_linear.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4c1185d37fdb15fd25eba61127f13804d58f0a3b",
+          "size": 20741,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4c1185d37fdb15fd25eba61127f13804d58f0a3b"
+        },
+        {
+          "path": "tests/gemm/test_wo_projection.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1bf584364e9a37c42aa57bd567e1a5f0d3065491",
+          "size": 23878,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1bf584364e9a37c42aa57bd567e1a5f0d3065491"
+        },
+        {
+          "path": "tests/moe/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "tests/moe/test_benchmark_iq2_xs.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "19c9e6e7cd8d6bb251f4a152b8a1684134f74044",
+          "size": 6834,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/19c9e6e7cd8d6bb251f4a152b8a1684134f74044"
+        },
+        {
+          "path": "tests/moe/test_benchmark_mixed_trellis.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "72f56c4809e0d79082e3e19caa2917dd1e49df34",
+          "size": 2086,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/72f56c4809e0d79082e3e19caa2917dd1e49df34"
+        },
+        {
+          "path": "tests/moe/test_benchmark_moe_flashinfer.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "81123a1e4084f17cfa4aa1e1fbd095039db0f504",
+          "size": 2642,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/81123a1e4084f17cfa4aa1e1fbd095039db0f504"
+        },
+        {
+          "path": "tests/moe/test_benchmark_moe_v41.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8afb719195a47a9a58727967a4f5c311efb118cf",
+          "size": 5400,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8afb719195a47a9a58727967a4f5c311efb118cf"
+        },
+        {
+          "path": "tests/moe/test_calibration.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2169a05087a604d0e3135535add0eedf7d961e78",
+          "size": 11475,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/2169a05087a604d0e3135535add0eedf7d961e78"
+        },
+        {
+          "path": "tests/moe/test_cute_migration_moe_standard_corpus.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0c1b8c5077de9aa6cf0e962ce3d2a5eb4578b73f",
+          "size": 53803,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0c1b8c5077de9aa6cf0e962ce3d2a5eb4578b73f"
+        },
+        {
+          "path": "tests/moe/test_dynamic_kernel_fc1_shape.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "dd7d7d348c245ea16fbee35568a497993740bc52",
+          "size": 2030,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/dd7d7d348c245ea16fbee35568a497993740bc52"
+        },
+        {
+          "path": "tests/moe/test_dynamic_w4a8_trellis.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d3ca290a96d04a1762f9497b9751aceeea199526",
+          "size": 19449,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d3ca290a96d04a1762f9497b9751aceeea199526"
+        },
+        {
+          "path": "tests/moe/test_ep_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c43980d56e1b790a0855bb421f3bea4290999143",
+          "size": 6053,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c43980d56e1b790a0855bb421f3bea4290999143"
+        },
+        {
+          "path": "tests/moe/test_ep_moe_api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6b621f64a9becd7e95ea1803d5292188a1551c8d",
+          "size": 12588,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6b621f64a9becd7e95ea1803d5292188a1551c8d"
+        },
+        {
+          "path": "tests/moe/test_exl3_prepare.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a312efc9e24b4e1a8a206818ea8df36c022e5784",
+          "size": 19274,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/a312efc9e24b4e1a8a206818ea8df36c022e5784"
+        },
+        {
+          "path": "tests/moe/test_exl3_schema.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "43e8816d08fc95a77f38548a0d3100c8beb7c5cb",
+          "size": 12782,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/43e8816d08fc95a77f38548a0d3100c8beb7c5cb"
+        },
+        {
+          "path": "tests/moe/test_fp6_micro.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "df2dfa6857f2990fc14e6889e195b35e3a390d2a",
+          "size": 43186,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/df2dfa6857f2990fc14e6889e195b35e3a390d2a"
+        },
+        {
+          "path": "tests/moe/test_fused_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f3bbce9c2887527e0f975e5478de7a9254428dd6",
+          "size": 7020,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f3bbce9c2887527e0f975e5478de7a9254428dd6"
+        },
+        {
+          "path": "tests/moe/test_fused_moe_variant_selection.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "91dd074fb5732319bf4355c5dc49a2aa53d31817",
+          "size": 13242,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/91dd074fb5732319bf4355c5dc49a2aa53d31817"
+        },
+        {
+          "path": "tests/moe/test_iq2_xs.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "05b671da0e47538f5202490e976ae22f62ff06d8",
+          "size": 13393,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/05b671da0e47538f5202490e976ae22f62ff06d8"
+        },
+        {
+          "path": "tests/moe/test_iq2_xs_checkpoint.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ba91fbf2ba7eb1ffdf29bb73e373f304db86c472",
+          "size": 5612,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ba91fbf2ba7eb1ffdf29bb73e373f304db86c472"
+        },
+        {
+          "path": "tests/moe/test_iq2_xs_decode.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "241100a02b51a7c699e77f4e7c00550676249723",
+          "size": 6558,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/241100a02b51a7c699e77f4e7c00550676249723"
+        },
+        {
+          "path": "tests/moe/test_iq2_xs_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f257a07f7733d5011769cdca67a7080380eb822b",
+          "size": 5688,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f257a07f7733d5011769cdca67a7080380eb822b"
+        },
+        {
+          "path": "tests/moe/test_iq2_xs_route_sum.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0f421063789c48f7af8af622dc780e9fdafb91a5",
+          "size": 3620,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0f421063789c48f7af8af622dc780e9fdafb91a5"
+        },
+        {
+          "path": "tests/moe/test_iq2_xs_staging.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "20da15463d2ca1205fa60a72810482e471d10ae5",
+          "size": 4160,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/20da15463d2ca1205fa60a72810482e471d10ae5"
+        },
+        {
+          "path": "tests/moe/test_micro_trellis.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b81e186d847a021c478a5d74796b921e32bd3b1e",
+          "size": 4768,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b81e186d847a021c478a5d74796b921e32bd3b1e"
+        },
+        {
+          "path": "tests/moe/test_moe_eager_prefill.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4acd3c2a2c4a0e2eb91d9b2fee6c788a6655319a",
+          "size": 3563,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4acd3c2a2c4a0e2eb91d9b2fee6c788a6655319a"
+        },
+        {
+          "path": "tests/moe/test_moe_equivalence.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "13416ac77d643bb698792eece471099e3a466d0a",
+          "size": 10733,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/13416ac77d643bb698792eece471099e3a466d0a"
+        },
+        {
+          "path": "tests/moe/test_moe_execution_model.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "032a4863d97c78198d6f1cae609ab2f21672c223",
+          "size": 11351,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/032a4863d97c78198d6f1cae609ab2f21672c223"
+        },
+        {
+          "path": "tests/moe/test_moe_fp6_setup.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "063b029d107e39a77f796024f6980ab412a5bbbe",
+          "size": 3834,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/063b029d107e39a77f796024f6980ab412a5bbbe"
+        },
+        {
+          "path": "tests/moe/test_moe_launch_param_regression.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f427ef7b0eecb0e209cac4b3df0d85bbe798e107",
+          "size": 5589,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f427ef7b0eecb0e209cac4b3df0d85bbe798e107"
+        },
+        {
+          "path": "tests/moe/test_mxfp4_csf.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3fc9df6a078e33868f9733678d1d2119030bc6c2",
+          "size": 22072,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/3fc9df6a078e33868f9733678d1d2119030bc6c2"
+        },
+        {
+          "path": "tests/moe/test_mxfp8_w8a8.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5ff2e2327c01e2bfe03563c6969b393e2d3d6bc0",
+          "size": 38764,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5ff2e2327c01e2bfe03563c6969b393e2d3d6bc0"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_auto.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "67c68699f5e2947e9ebd36175ea87a1097d382e8",
+          "size": 13656,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/67c68699f5e2947e9ebd36175ea87a1097d382e8"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_csf.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8c176b875f42a988ce806f727e495f0afa8d140e",
+          "size": 20110,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/8c176b875f42a988ce806f727e495f0afa8d140e"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_csf_dispatch.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "416ca89bf7da43f6a9f3ddadb22109959b4f3fa0",
+          "size": 1923,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/416ca89bf7da43f6a9f3ddadb22109959b4f3fa0"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_phase_kernels.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "908f84841a6df3324aeb3a23e734948c1f8981a8",
+          "size": 30562,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/908f84841a6df3324aeb3a23e734948c1f8981a8"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_shared_input_scales.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "35f0e4a8e2f97aaf8d8452e8869d47ec2288f2ec",
+          "size": 5531,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/35f0e4a8e2f97aaf8d8452e8869d47ec2288f2ec"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_split_backend.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7b9f8810f852aa45864fa057891079ecfba5218c",
+          "size": 18340,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7b9f8810f852aa45864fa057891079ecfba5218c"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_split_dispatch_policy.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6fb1ff1a7537237d20f1f71917cbe87a02a5361b",
+          "size": 3380,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6fb1ff1a7537237d20f1f71917cbe87a02a5361b"
+        },
+        {
+          "path": "tests/moe/test_nvfp4_swapped_token_tiles.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1257f8f75364e6530c44baa528e71c4a49ec27d2",
+          "size": 6207,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1257f8f75364e6530c44baa528e71c4a49ec27d2"
+        },
+        {
+          "path": "tests/moe/test_prepared_nvfp4_split.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "452e546b6c7abfa06766236d336ff32ca3aaee47",
+          "size": 13064,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/452e546b6c7abfa06766236d336ff32ca3aaee47"
+        },
+        {
+          "path": "tests/moe/test_reference_metrics.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d05fa0a486dbf9433186f33b87bd5a4ba52f4516",
+          "size": 597,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d05fa0a486dbf9433186f33b87bd5a4ba52f4516"
+        },
+        {
+          "path": "tests/moe/test_route_pack_cache.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "501b6a8736826adcb4f881fff5009e8344d80bd6",
+          "size": 1625,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/501b6a8736826adcb4f881fff5009e8344d80bd6"
+        },
+        {
+          "path": "tests/moe/test_situ_activation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "91c8590153810d1e47c6f45d308fea7ba26320f0",
+          "size": 2092,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/91c8590153810d1e47c6f45d308fea7ba26320f0"
+        },
+        {
+          "path": "tests/moe/test_sparse_moe_api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ec214c45d0ed1e139cb5b8085b96bf02feb107f2",
+          "size": 22227,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ec214c45d0ed1e139cb5b8085b96bf02feb107f2"
+        },
+        {
+          "path": "tests/moe/test_sparse_moe_qwen_shapes.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0a44a1b3358c6e5c1ecd3befb0808bb8c3c4edbf",
+          "size": 8813,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0a44a1b3358c6e5c1ecd3befb0808bb8c3c4edbf"
+        },
+        {
+          "path": "tests/moe/test_tp_moe_prequant_parity.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "74533c98f1141e6440d90c2eada4fc51cdfd9789",
+          "size": 5060,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/74533c98f1141e6440d90c2eada4fc51cdfd9789"
+        },
+        {
+          "path": "tests/moe/test_tp_moe_reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b1632c969c9c9ea5550a9eac07a4d7cf4f852861",
+          "size": 19631,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/b1632c969c9c9ea5550a9eac07a4d7cf4f852861"
+        },
+        {
+          "path": "tests/moe/test_tp_moe_relu2_reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1c82913ede52bfcfb892fc5552a69d58a5dc2f99",
+          "size": 13347,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/1c82913ede52bfcfb892fc5552a69d58a5dc2f99"
+        },
+        {
+          "path": "tests/moe/test_tp_moe_scratch_bindings.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d0e9c9e0599314c57b5fdc4d2a0869c76d474044",
+          "size": 48339,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d0e9c9e0599314c57b5fdc4d2a0869c76d474044"
+        },
+        {
+          "path": "tests/moe/test_tp_moe_swigluoai_reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "94360bb1af83fe43ed340c0f145cdcbfe2920447",
+          "size": 8357,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/94360bb1af83fe43ed340c0f145cdcbfe2920447"
+        },
+        {
+          "path": "tests/moe/test_tp_moe_w13_layout.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "505894d74ed1c15b203fe9a8d0333253df15874a",
+          "size": 6555,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/505894d74ed1c15b203fe9a8d0333253df15874a"
+        },
+        {
+          "path": "tests/moe/test_tp_moe_w6a6_setup.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "64c537ebfd1df22acb24dccb50572ac033913867",
+          "size": 3565,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/64c537ebfd1df22acb24dccb50572ac033913867"
+        },
+        {
+          "path": "tests/moe/test_trellis_adapter.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "84c0eb30d961c97a61e9a93ab6065af45b1f122a",
+          "size": 12272,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/84c0eb30d961c97a61e9a93ab6065af45b1f122a"
+        },
+        {
+          "path": "tests/moe/test_trellis_config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5ada2c23a54bee9af43ea25ca0aaa629d19d806f",
+          "size": 6775,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5ada2c23a54bee9af43ea25ca0aaa629d19d806f"
+        },
+        {
+          "path": "tests/moe/test_trellis_direct_lut_decode.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "443e4a091a35bf8f5afd946982faf6f4e4dd7dd1",
+          "size": 5378,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/443e4a091a35bf8f5afd946982faf6f4e4dd7dd1"
+        },
+        {
+          "path": "tests/moe/test_w4a16_csf_residency.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6023b5e5bc5795bbb6cebc07c2889adb3b4364be",
+          "size": 7292,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6023b5e5bc5795bbb6cebc07c2889adb3b4364be"
+        },
+        {
+          "path": "tests/moe/test_w4a16_csf_tp6.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "da8e2e88854b2a38e2c004ef2e7365882b0b130a",
+          "size": 9207,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/da8e2e88854b2a38e2c004ef2e7365882b0b130a"
+        },
+        {
+          "path": "tests/moe/test_w4a16_e2e.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0601b0b184aa9cc76aadeabf8a6df311c1d9c075",
+          "size": 138861,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0601b0b184aa9cc76aadeabf8a6df311c1d9c075"
+        },
+        {
+          "path": "tests/moe/test_w4a16_mixed_trellis.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4d8cc0915a2efdce74820a43cb6eeba7d082f673",
+          "size": 62384,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4d8cc0915a2efdce74820a43cb6eeba7d082f673"
+        },
+        {
+          "path": "tests/moe/test_w4a16_nvfp4_loader.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "780da47c8e29254ff9d79a7cc58f2f6eb98c0db2",
+          "size": 6262,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/780da47c8e29254ff9d79a7cc58f2f6eb98c0db2"
+        },
+        {
+          "path": "tests/moe/test_w4a16_packed_format.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f6fa6961b037b8fdb999e2f75aea4642d525a671",
+          "size": 27714,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f6fa6961b037b8fdb999e2f75aea4642d525a671"
+        },
+        {
+          "path": "tests/moe/test_w4a16_reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "173cd22056db04a5f2f97a3be198bac671c4d5c3",
+          "size": 15262,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/173cd22056db04a5f2f97a3be198bac671c4d5c3"
+        },
+        {
+          "path": "tests/moe/test_w4a16_route_pack.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7151578bc6272eca28308eab0f4663aa0974778f",
+          "size": 22569,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7151578bc6272eca28308eab0f4663aa0974778f"
+        },
+        {
+          "path": "tests/moe/test_w4a16_route_pack_warmup.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6c7288b314ebc2785418085ce323881960fe192e",
+          "size": 1212,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6c7288b314ebc2785418085ce323881960fe192e"
+        },
+        {
+          "path": "tests/moe/test_w4a16_serving_corpus.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "00cceaedf6597e15c2d70074e58ccb9d460d0a50",
+          "size": 16924,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/00cceaedf6597e15c2d70074e58ccb9d460d0a50"
+        },
+        {
+          "path": "tests/moe/test_w4a16_tile_selection.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5c9eb942fb220bc7ab311e7c7b374a10b4af5dba",
+          "size": 6157,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5c9eb942fb220bc7ab311e7c7b374a10b4af5dba"
+        },
+        {
+          "path": "tests/moe/test_w4a8_dynamic_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "65e48035c1b97bd17c4d715814b102af7cb3fcfe",
+          "size": 46886,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/65e48035c1b97bd17c4d715814b102af7cb3fcfe"
+        },
+        {
+          "path": "tests/moe/test_w4a8_fragment_probe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "11f1ec1a9be5e28326562e864f8fef5aa7693a7d",
+          "size": 27598,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/11f1ec1a9be5e28326562e864f8fef5aa7693a7d"
+        },
+        {
+          "path": "tests/moe/test_w4a8_migration_corpus.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e1da34b0af801f50994ebab550ccea76e46ed233",
+          "size": 14755,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e1da34b0af801f50994ebab550ccea76e46ed233"
+        },
+        {
+          "path": "tests/moe/test_w4a8_mx_tp_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7d879073768740e816ef531ea3c6acd7c31e3f03",
+          "size": 49096,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/7d879073768740e816ef531ea3c6acd7c31e3f03"
+        },
+        {
+          "path": "tests/moe/test_w4a8_primitives.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f6dde5fdebf3122df6aecab91bc6acf3ede530db",
+          "size": 17318,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/f6dde5fdebf3122df6aecab91bc6acf3ede530db"
+        },
+        {
+          "path": "tests/moe/test_w4a8_reference.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ce851a9b92aab3d57be77e227aaecff147c0cdd1",
+          "size": 12822,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/ce851a9b92aab3d57be77e227aaecff147c0cdd1"
+        },
+        {
+          "path": "tests/moe/test_w4a8_rp_inverse_mapping.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e1db9aab13c569bb04d522772687b3946b1c1bce",
+          "size": 5699,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/e1db9aab13c569bb04d522772687b3946b1c1bce"
+        },
+        {
+          "path": "tests/moe/test_w4a8_tma_probe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c3295e26bc0d2366e2a4707033c2cc72609d0fa3",
+          "size": 15427,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c3295e26bc0d2366e2a4707033c2cc72609d0fa3"
+        },
+        {
+          "path": "tests/moe/test_w4a8_tp_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d5e8bc6560b2549a56490a7a26e696f8e077e396",
+          "size": 8789,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/d5e8bc6560b2549a56490a7a26e696f8e077e396"
+        },
+        {
+          "path": "tests/preparation/test_block_moe_tuning.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c99e444f0c528957cb8a513c46d26002a0a5fc5c",
+          "size": 4811,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c99e444f0c528957cb8a513c46d26002a0a5fc5c"
+        },
+        {
+          "path": "tests/preparation/test_moe_corpus.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "cef6e88f37f9c65d292bcad2f3ff689988380ed5",
+          "size": 3836,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/cef6e88f37f9c65d292bcad2f3ff689988380ed5"
+        },
+        {
+          "path": "tests/preparation/test_x4t_moe_programs.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "91e62051dd8156a6d8de707a3ee6bcd71f52920b",
+          "size": 2614,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/91e62051dd8156a6d8de707a3ee6bcd71f52920b"
+        },
+        {
+          "path": "tests/quantization/test_fp6_moe_weights_pipeline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "644d6314c4b2010246df1331092cdb6b03e825c3",
+          "size": 5929,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/644d6314c4b2010246df1331092cdb6b03e825c3"
+        },
+        {
+          "path": "tests/quantization/test_nvfp4.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0c207f36a14ccd588c5874433f232ce673d73738",
+          "size": 2422,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/0c207f36a14ccd588c5874433f232ce673d73738"
+        },
+        {
+          "path": "tests/quantization/test_nvfp4_csf.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c1673f2ef24492ec58ee5f770007fea73706c8c0",
+          "size": 7236,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c1673f2ef24492ec58ee5f770007fea73706c8c0"
+        },
+        {
+          "path": "tests/quantization/test_nvfp4_csf_inline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "db68a880905d7de2b3549f8da2e1b39ca1d8efaf",
+          "size": 17956,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/db68a880905d7de2b3549f8da2e1b39ca1d8efaf"
+        },
+        {
+          "path": "tests/quantization/test_nvfp4_csf_packed.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "62fe92fce29f08da5c7ac12e818b23c14d456c7c",
+          "size": 11808,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/62fe92fce29f08da5c7ac12e818b23c14d456c7c"
+        },
+        {
+          "path": "tests/test_nvfp4_serving_evidence_clients.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3f5187e9ef91a79e4dc037601092f5890f5e848c",
+          "size": 2960,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/3f5187e9ef91a79e4dc037601092f5890f5e848c"
+        },
+        {
+          "path": "validation/csf/dynamic-moe-correctness.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "63d3619b38f29345e672bab9d42ed3729e1e11cc",
+          "size": 5562,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/63d3619b38f29345e672bab9d42ed3729e1e11cc"
+        },
+        {
+          "path": "validation/csf/nvfp4-scale-operands.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4baad794b72edf82d94cd768d6be6333fd4a4e65",
+          "size": 7770,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4baad794b72edf82d94cd768d6be6333fd4a4e65"
+        },
+        {
+          "path": "validation/csf/nvfp4-serving-evidence.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5518b240762b70e0f365b59ba45338e6ae69674f",
+          "size": 36452,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5518b240762b70e0f365b59ba45338e6ae69674f"
+        },
+        {
+          "path": "validation/csf/nvfp4-serving.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c6bebe768534cedd72ea272fe90802b3b2823b36",
+          "size": 10261,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/c6bebe768534cedd72ea272fe90802b3b2823b36"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/README.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4dcd3122eb93a50d5756a88b61a1054e8fdfd6e2",
+          "size": 6417,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/4dcd3122eb93a50d5756a88b61a1054e8fdfd6e2"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/audit_evidence.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "78dc9a33d9099646e7e4868ecf41a6d3c746f418",
+          "size": 5436,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/78dc9a33d9099646e7e4868ecf41a6d3c746f418"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/extract_intervals.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "be4f6d26606fdadc9fa999356a0b3df2d4b125c6",
+          "size": 7579,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/be4f6d26606fdadc9fa999356a0b3df2d4b125c6"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/extract_startup_costs.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5784542942c4af9ca9006137637607deec2586e9",
+          "size": 4447,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/5784542942c4af9ca9006137637607deec2586e9"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/intervals.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "308dc2273e8093831b81d930f91190db5f628578",
+          "size": 190470,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/308dc2273e8093831b81d930f91190db5f628578"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/results.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6eb242b363168e9226b8aa8b1a0ab782f5eae589",
+          "size": 79270,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/6eb242b363168e9226b8aa8b1a0ab782f5eae589"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/startup-cost.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "fdfde3613bbd9f82b5dcaa9ce02018aad53dade4",
+          "size": 7677,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/fdfde3613bbd9f82b5dcaa9ce02018aad53dade4"
+        },
+        {
+          "path": "validation/serving/moe_overlap_tuning/test_evidence_validation.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "834de0ec28bdb1e73390aa3a8c54f3395fe535cb",
+          "size": 2725,
+          "url": "https://api.github.com/repos/local-inference-lab/b12x/git/blobs/834de0ec28bdb1e73390aa3a8c54f3395fe535cb"
+        }
+      ]
+    },
+    {
+      "full_name": "meta-pytorch/dist_moe",
+      "default_branch": "main",
+      "pushed_at": "2026-10-29T23:29:50Z",
+      "private": false,
+      "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      },
+      "head": "285763b5a0e01059a62c96b0990754a60a6ed94a",
+      "tree_truncated": false,
+      "candidate_paths": [
+        {
+          "path": "LICENSE",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e363d54353cd474365ab81ce55c662c1df2ffbf3",
+          "size": 1502,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/e363d54353cd474365ab81ce55c662c1df2ffbf3"
+        },
+        {
+          "path": "LICENSES/Apache-2.0.txt",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "size": 11357,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+        },
+        {
+          "path": "dist_moe/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "80b8a5c3e6b47b02435ee1ebcb498aeeb2818417",
+          "size": 1044,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/80b8a5c3e6b47b02435ee1ebcb498aeeb2818417"
+        },
+        {
+          "path": "dist_moe/_activation_buffer.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "18de06d87237396adee9ac866073ec77c7e0d31f",
+          "size": 106410,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/18de06d87237396adee9ac866073ec77c7e0d31f"
+        },
+        {
+          "path": "dist_moe/_activation_buffer_offsets.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "50967fee9df9592627468ad446604432db6faf51",
+          "size": 11006,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/50967fee9df9592627468ad446604432db6faf51"
+        },
+        {
+          "path": "dist_moe/_activation_buffer_planner_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "338596d1d85252a39ef1f66870f7f503361212a4",
+          "size": 60227,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/338596d1d85252a39ef1f66870f7f503361212a4"
+        },
+        {
+          "path": "dist_moe/_blockscaled.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5566afd1e5a25b88e806012054850b726220114b",
+          "size": 179942,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5566afd1e5a25b88e806012054850b726220114b"
+        },
+        {
+          "path": "dist_moe/_blockscaled_ops.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5923b9c73f26689e530dc81d9af972d7c33d7769",
+          "size": 40044,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5923b9c73f26689e530dc81d9af972d7c33d7769"
+        },
+        {
+          "path": "dist_moe/_blockscaled_weight.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "097049e98742bb3a2be9edc1bc0289a91a7b7711",
+          "size": 2552,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/097049e98742bb3a2be9edc1bc0289a91a7b7711"
+        },
+        {
+          "path": "dist_moe/_buffers.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "42c39a9277d2c40e38701a64e91bbf8382355105",
+          "size": 22580,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/42c39a9277d2c40e38701a64e91bbf8382355105"
+        },
+        {
+          "path": "dist_moe/_context.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d0c7ba09bb40ec9f456db9705f45f2b8a3c6275c",
+          "size": 2910,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/d0c7ba09bb40ec9f456db9705f45f2b8a3c6275c"
+        },
+        {
+          "path": "dist_moe/_execution.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4ebd2f5588685660da6c79cfda1d5563c167ac19",
+          "size": 31028,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/4ebd2f5588685660da6c79cfda1d5563c167ac19"
+        },
+        {
+          "path": "dist_moe/_inference_memory.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4c507f2671270f266a7422ba3acd3b36b5d93e2e",
+          "size": 4222,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/4c507f2671270f266a7422ba3acd3b36b5d93e2e"
+        },
+        {
+          "path": "dist_moe/_postprocess.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "cb3a180b7ab3f88552aefb0cd9b5839832d07289",
+          "size": 53408,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/cb3a180b7ab3f88552aefb0cd9b5839832d07289"
+        },
+        {
+          "path": "dist_moe/_quantization.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8cda5530f575391ea0a7cb90322bf77a4542daf1",
+          "size": 7666,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/8cda5530f575391ea0a7cb90322bf77a4542daf1"
+        },
+        {
+          "path": "dist_moe/_routing_metadata.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7c3e1b0bf8888109270f5d84283ea209198c3062",
+          "size": 43334,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/7c3e1b0bf8888109270f5d84283ea209198c3062"
+        },
+        {
+          "path": "dist_moe/_triton_ops.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9e5fa3bfe9d61e322f97fb4e67e6ffdcdb9fb47e",
+          "size": 2931,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/9e5fa3bfe9d61e322f97fb4e67e6ffdcdb9fb47e"
+        },
+        {
+          "path": "dist_moe/_vmm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "324a13f1a30190bf0fc93bc9f1387c6e9a9a29f4",
+          "size": 40595,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/324a13f1a30190bf0fc93bc9f1387c6e9a9a29f4"
+        },
+        {
+          "path": "dist_moe/api.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "fe5caabaf437550d934533d335858177619e253e",
+          "size": 166325,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/fe5caabaf437550d934533d335858177619e253e"
+        },
+        {
+          "path": "dist_moe/formats.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c8968d6ce124bdcaf7dee8f89f17f39f60f2fd24",
+          "size": 14818,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/c8968d6ce124bdcaf7dee8f89f17f39f60f2fd24"
+        },
+        {
+          "path": "dist_moe/kernels/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5b247ee1f391db1b313d369f8cc53a95c6e1fd66",
+          "size": 301,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5b247ee1f391db1b313d369f8cc53a95c6e1fd66"
+        },
+        {
+          "path": "dist_moe/kernels/_cuda_context.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b025e393d4ad0be465038d98c350193a42713d5c",
+          "size": 1727,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b025e393d4ad0be465038d98c350193a42713d5c"
+        },
+        {
+          "path": "dist_moe/kernels/_dsl_compat.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0b37c90b703f965b7527bd9b0868acce355c858b",
+          "size": 3089,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/0b37c90b703f965b7527bd9b0868acce355c858b"
+        },
+        {
+          "path": "dist_moe/kernels/_environment.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1894edbb4c1a05d4922e2c5472fb96f3f1612867",
+          "size": 2038,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/1894edbb4c1a05d4922e2c5472fb96f3f1612867"
+        },
+        {
+          "path": "dist_moe/kernels/_grouped_gemm_config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e07fad84cca7ad9c72659b83a831a18aa28d337d",
+          "size": 1099,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/e07fad84cca7ad9c72659b83a831a18aa28d337d"
+        },
+        {
+          "path": "dist_moe/kernels/_iket_noop.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8686034d04ffe8fd1f3e679cdd6a5c342e2caa9b",
+          "size": 706,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/8686034d04ffe8fd1f3e679cdd6a5c342e2caa9b"
+        },
+        {
+          "path": "dist_moe/kernels/_iket_shim.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "62f301cee8b6bc1f93c3ebc6f710907ab0d4b179",
+          "size": 1410,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/62f301cee8b6bc1f93c3ebc6f710907ab0d4b179"
+        },
+        {
+          "path": "dist_moe/kernels/_jit_cache.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a7d75e5ca8dd3931816669d53525fc281fb2fe6f",
+          "size": 351,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/a7d75e5ca8dd3931816669d53525fc281fb2fe6f"
+        },
+        {
+          "path": "dist_moe/kernels/_kernel_name_prefix.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4dadb4746987b115e03686627e27a9a2539b36d9",
+          "size": 5185,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/4dadb4746987b115e03686627e27a9a2539b36d9"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d0243f31a6747fccb997d0233f9bd5f139da4314",
+          "size": 539,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/d0243f31a6747fccb997d0233f9bd5f139da4314"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/copy_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "014964a9942a3af85d00992f8ac79b26de10c923",
+          "size": 4575,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/014964a9942a3af85d00992f8ac79b26de10c923"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/cute_dsl_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9f25cbcf2ebc308ab1bcfb4c71370640b43bc0f0",
+          "size": 2304,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/9f25cbcf2ebc308ab1bcfb4c71370640b43bc0f0"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/cute_tensor.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "83be830b5789c0dfdb69f7cd1446c662d489e331",
+          "size": 6417,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/83be830b5789c0dfdb69f7cd1446c662d489e331"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/layout_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f5f7c8b752ed38f4941870a16363c279f80266ae",
+          "size": 466,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/f5f7c8b752ed38f4941870a16363c279f80266ae"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/pipeline.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "003fd529ba91c114348ba93d021f5333bb7f66cd",
+          "size": 7808,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/003fd529ba91c114348ba93d021f5333bb7f66cd"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/reduce.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b30a76864bd729adb12febaa439006edd8929f60",
+          "size": 10671,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b30a76864bd729adb12febaa439006edd8929f60"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/reduction_base.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f9c8b61f3274295fd3bc75fac7f4157b796560c9",
+          "size": 4305,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/f9c8b61f3274295fd3bc75fac7f4157b796560c9"
+        },
+        {
+          "path": "dist_moe/kernels/_quack/rmsnorm_config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "31b752cb88e3965db21dda63cac97e77f1bbe688",
+          "size": 4589,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/31b752cb88e3965db21dda63cac97e77f1bbe688"
+        },
+        {
+          "path": "dist_moe/kernels/_quack_compile_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f968ed8a4859dfdde1321e77889ecffba7b8153e",
+          "size": 1835,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/f968ed8a4859dfdde1321e77889ecffba7b8153e"
+        },
+        {
+          "path": "dist_moe/kernels/_quack_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5212bb93afb3e91a2eef4d0656639a0350abd2de",
+          "size": 3384,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5212bb93afb3e91a2eef4d0656639a0350abd2de"
+        },
+        {
+          "path": "dist_moe/kernels/_quant_conversion.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "174f999cb13b659bdd2237c23acfb155d6938749",
+          "size": 16817,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/174f999cb13b659bdd2237c23acfb155d6938749"
+        },
+        {
+          "path": "dist_moe/kernels/_quant_packing.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8e1960e91bbc54f2dc98a2cba3830c710c064d24",
+          "size": 5621,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/8e1960e91bbc54f2dc98a2cba3830c710c064d24"
+        },
+        {
+          "path": "dist_moe/kernels/_swiglu_quant.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3a0734da470a3e9006c85893d4a02236d7865722",
+          "size": 30057,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3a0734da470a3e9006c85893d4a02236d7865722"
+        },
+        {
+          "path": "dist_moe/kernels/_tensor_views.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "01ef315973e207f15e02f8f7ccf61a0f2d2d66fb",
+          "size": 1495,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/01ef315973e207f15e02f8f7ccf61a0f2d2d66fb"
+        },
+        {
+          "path": "dist_moe/kernels/activation_buffer.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3ce98b18375e23852523dfec3d7ef2e0f448448f",
+          "size": 9262,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3ce98b18375e23852523dfec3d7ef2e0f448448f"
+        },
+        {
+          "path": "dist_moe/kernels/activation_buffer_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3ae08550593631bb1f834cc10082a84dbb35e108",
+          "size": 10595,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3ae08550593631bb1f834cc10082a84dbb35e108"
+        },
+        {
+          "path": "dist_moe/kernels/blockscaled_config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e0fc3eed9ff3cb16a0fd6a439ac87ba6e09bf9a1",
+          "size": 32341,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/e0fc3eed9ff3cb16a0fd6a439ac87ba6e09bf9a1"
+        },
+        {
+          "path": "dist_moe/kernels/blockscaled_entrypoints.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3caa0ab4263a0d421a00e5ad127d3122e7359b9e",
+          "size": 23274,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3caa0ab4263a0d421a00e5ad127d3122e7359b9e"
+        },
+        {
+          "path": "dist_moe/kernels/blockscaled_gemm_tiles.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c84906963c74d43e5e7b3685213b7ad062a37e63",
+          "size": 57084,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/c84906963c74d43e5e7b3685213b7ad062a37e63"
+        },
+        {
+          "path": "dist_moe/kernels/blockscaled_grouped_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b273ba8209a6d962065f62c4464b91b2d5b22b44",
+          "size": 40658,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b273ba8209a6d962065f62c4464b91b2d5b22b44"
+        },
+        {
+          "path": "dist_moe/kernels/blockscaled_grouped_gemm_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4523c570d160427bb73b43e2c144ade784fb1dbc",
+          "size": 102790,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/4523c570d160427bb73b43e2c144ade784fb1dbc"
+        },
+        {
+          "path": "dist_moe/kernels/blockscaled_quantization_common.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e766c9a954889ee16f86e1916764ae97c8b86f64",
+          "size": 74632,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/e766c9a954889ee16f86e1916764ae97c8b86f64"
+        },
+        {
+          "path": "dist_moe/kernels/blockscaled_quantize.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "248317decb1119f12c33e6a86eef2a6b9acbb41e",
+          "size": 203156,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/248317decb1119f12c33e6a86eef2a6b9acbb41e"
+        },
+        {
+          "path": "dist_moe/kernels/chunked_mega_blockscaled_grouped_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "376d9a5659e8039d5f0177dd846b0d676fb237f2",
+          "size": 107723,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/376d9a5659e8039d5f0177dd846b0d676fb237f2"
+        },
+        {
+          "path": "dist_moe/kernels/chunked_mega_blockscaled_grouped_gemm_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "55e8e9599cced286e2225dd0c2c4a166f133ab11",
+          "size": 106488,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/55e8e9599cced286e2225dd0c2c4a166f133ab11"
+        },
+        {
+          "path": "dist_moe/kernels/chunked_mega_blockscaled_policy.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5ba04c63a1e1d48006a8d0f38193ef9c3efe88eb",
+          "size": 10951,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5ba04c63a1e1d48006a8d0f38193ef9c3efe88eb"
+        },
+        {
+          "path": "dist_moe/kernels/combine_scatter.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5b66715e8b6212e3d2bc6ccd77ffb3171fd25b83",
+          "size": 6826,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5b66715e8b6212e3d2bc6ccd77ffb3171fd25b83"
+        },
+        {
+          "path": "dist_moe/kernels/combine_swiglu_quant.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d7b1fa9c8aec9e807005ecd64d14e72a494275ec",
+          "size": 41095,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/d7b1fa9c8aec9e807005ecd64d14e72a494275ec"
+        },
+        {
+          "path": "dist_moe/kernels/config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7745fa861f3f86afe936daf8dafd70fdf130d6ab",
+          "size": 84947,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/7745fa861f3f86afe936daf8dafd70fdf130d6ab"
+        },
+        {
+          "path": "dist_moe/kernels/dispatch_quant.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "59d398ec135174ea9803a38526dae4a7aeab806a",
+          "size": 71294,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/59d398ec135174ea9803a38526dae4a7aeab806a"
+        },
+        {
+          "path": "dist_moe/kernels/dist_blockscaled_config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b8ad9b9c20ede3f904d37b7000a8dfc8bb8736d8",
+          "size": 21766,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b8ad9b9c20ede3f904d37b7000a8dfc8bb8736d8"
+        },
+        {
+          "path": "dist_moe/kernels/dist_blockscaled_entrypoints.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e3d7d6717c3f058205c400a3ae621ed3bbc80fcc",
+          "size": 47868,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/e3d7d6717c3f058205c400a3ae621ed3bbc80fcc"
+        },
+        {
+          "path": "dist_moe/kernels/dist_blockscaled_grouped_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3a8fc01e7dc57b46bc75b9ab8b799f84c61577a3",
+          "size": 85222,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3a8fc01e7dc57b46bc75b9ab8b799f84c61577a3"
+        },
+        {
+          "path": "dist_moe/kernels/dist_blockscaled_grouped_gemm_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2a22e8fa3cdee2c81c49110d0b71cafcd128db8d",
+          "size": 103107,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/2a22e8fa3cdee2c81c49110d0b71cafcd128db8d"
+        },
+        {
+          "path": "dist_moe/kernels/dist_grouped_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "75d7a20f89f221f09747aa1cf0c0fb873d065e80",
+          "size": 69017,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/75d7a20f89f221f09747aa1cf0c0fb873d065e80"
+        },
+        {
+          "path": "dist_moe/kernels/dist_grouped_gemm_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "78f0430085beb0a68afc183d26049cf4cb000a0e",
+          "size": 105703,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/78f0430085beb0a68afc183d26049cf4cb000a0e"
+        },
+        {
+          "path": "dist_moe/kernels/gemm_warp_roles.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "21f7fade341879baf84a8c3777701b28691bbd34",
+          "size": 59590,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/21f7fade341879baf84a8c3777701b28691bbd34"
+        },
+        {
+          "path": "dist_moe/kernels/grouped_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b6fc301fe66f9b46232e19e632d216b2d06b9cd6",
+          "size": 30817,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b6fc301fe66f9b46232e19e632d216b2d06b9cd6"
+        },
+        {
+          "path": "dist_moe/kernels/grouped_gemm_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "78a37a5d63c1c59143c55789511f9ffd202b2663",
+          "size": 127595,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/78a37a5d63c1c59143c55789511f9ffd202b2663"
+        },
+        {
+          "path": "dist_moe/kernels/grouped_gemm_tiles.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9a7f0b79bf7051327ee477c7a0738223ed7c5886",
+          "size": 13351,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/9a7f0b79bf7051327ee477c7a0738223ed7c5886"
+        },
+        {
+          "path": "dist_moe/kernels/grouped_problem_visitor.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7dc32ad0a351fd621e75e67e9841518fd3307f08",
+          "size": 18422,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/7dc32ad0a351fd621e75e67e9841518fd3307f08"
+        },
+        {
+          "path": "dist_moe/kernels/inference_config.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2114b832a6a32846f623dfe8ee645eb4af77fd98",
+          "size": 9050,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/2114b832a6a32846f623dfe8ee645eb4af77fd98"
+        },
+        {
+          "path": "dist_moe/kernels/mega_blockscaled_entrypoints.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0cebecf41b14ad1ed88a77d64db846cc5510347d",
+          "size": 47721,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/0cebecf41b14ad1ed88a77d64db846cc5510347d"
+        },
+        {
+          "path": "dist_moe/kernels/mega_blockscaled_grouped_gemm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3dfcb51b811741b2f9794638b111d6b54c90b659",
+          "size": 60330,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3dfcb51b811741b2f9794638b111d6b54c90b659"
+        },
+        {
+          "path": "dist_moe/kernels/mega_blockscaled_grouped_gemm_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4c964323c124afd644656abc6d057871b7059948",
+          "size": 97167,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/4c964323c124afd644656abc6d057871b7059948"
+        },
+        {
+          "path": "dist_moe/kernels/native_combine_swiglu.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3c420a93cbba25f36c9edf019fdf92f0c4400a78",
+          "size": 12046,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3c420a93cbba25f36c9edf019fdf92f0c4400a78"
+        },
+        {
+          "path": "dist_moe/kernels/norm/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "eb4fe031ce1f4787620c8b28abb57a42e440b6a3",
+          "size": 261,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/eb4fe031ce1f4787620c8b28abb57a42e440b6a3"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_fused_dw_reduce_and_quant_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d51fe6b97ab8d9c690c12a020fcda107918f0fe7",
+          "size": 5752,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/d51fe6b97ab8d9c690c12a020fcda107918f0fe7"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_fused_rmsnorm_combine_base.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9a272fa6bd082d473b23d1064fb0c3c48a8cfe61",
+          "size": 4017,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/9a272fa6bd082d473b23d1064fb0c3c48a8cfe61"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_fused_rmsnorm_combine_bwd_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9b414afe20d01a0f408060af5b468b814cd47412",
+          "size": 39725,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/9b414afe20d01a0f408060af5b468b814cd47412"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_fused_rmsnorm_combine_fwd_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a3f330963111caaa5aa7e1fe51cc8fc2aac84738",
+          "size": 53629,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/a3f330963111caaa5aa7e1fe51cc8fc2aac84738"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_rmsnorm_bwd_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "19f1a980592103b1ea754fb1741da36be887a9ca",
+          "size": 60358,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/19f1a980592103b1ea754fb1741da36be887a9ca"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_rmsnorm_common.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b9f8e566fa9d164b03c68e6d5195a549fe9bf395",
+          "size": 11609,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b9f8e566fa9d164b03c68e6d5195a549fe9bf395"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_rmsnorm_fwd_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "49c918b8c17da720bb7c7d56aaf5d6f56623f16f",
+          "size": 18673,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/49c918b8c17da720bb7c7d56aaf5d6f56623f16f"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_rmsnorm_small_d_bwd_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6a176733abf838cff6015a0cce003d5136335591",
+          "size": 26600,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/6a176733abf838cff6015a0cce003d5136335591"
+        },
+        {
+          "path": "dist_moe/kernels/norm/_rmsnorm_small_d_fwd_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a1366f5ccec2dca18dd12448bd2ba89e492762f0",
+          "size": 26304,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/a1366f5ccec2dca18dd12448bd2ba89e492762f0"
+        },
+        {
+          "path": "dist_moe/kernels/norm/fused_rmsnorm_combine.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0ba6fc02a8216e262b4986dc73a9e5e30dff54df",
+          "size": 42237,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/0ba6fc02a8216e262b4986dc73a9e5e30dff54df"
+        },
+        {
+          "path": "dist_moe/kernels/norm/rmsnorm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b890aca8556bdd63270fe179d3bfb54c778072ff",
+          "size": 32736,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b890aca8556bdd63270fe179d3bfb54c778072ff"
+        },
+        {
+          "path": "dist_moe/kernels/params.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ee6de93ebb285caefb83747f2011d484e6257ad9",
+          "size": 27381,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/ee6de93ebb285caefb83747f2011d484e6257ad9"
+        },
+        {
+          "path": "dist_moe/kernels/scale_factor_layout.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d53c1ed89bc7e249b921df934ad3277174b55227",
+          "size": 17609,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/d53c1ed89bc7e249b921df934ad3277174b55227"
+        },
+        {
+          "path": "dist_moe/kernels/sm103_blockscaled_helpers.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1fb88e696a76481c31f2e3bb19d38eea10f691f3",
+          "size": 9123,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/1fb88e696a76481c31f2e3bb19d38eea10f691f3"
+        },
+        {
+          "path": "dist_moe/kernels/swiglu_epilogue.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4c6cca0719f7cbbb6dd000a8bcc4f9ec722211ae",
+          "size": 32472,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/4c6cca0719f7cbbb6dd000a8bcc4f9ec722211ae"
+        },
+        {
+          "path": "dist_moe/kernels/swiglu_fragment.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2f2be774884daa2a78b55d283454b52810c368f9",
+          "size": 15648,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/2f2be774884daa2a78b55d283454b52810c368f9"
+        },
+        {
+          "path": "dist_moe/kernels/tensormap_fold.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d48fb9c7edb9e672c0ed9d04992d1fa09a6c8cea",
+          "size": 4323,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/d48fb9c7edb9e672c0ed9d04992d1fa09a6c8cea"
+        },
+        {
+          "path": "dist_moe/kernels/tile_scheduler.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "08f702617599b871e9c01274b6b6f5aa93b966d0",
+          "size": 82320,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/08f702617599b871e9c01274b6b6f5aa93b966d0"
+        },
+        {
+          "path": "dist_moe/kernels/triton/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "da906bf462372513a73e52dc8e14121cef36a662",
+          "size": 255,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/da906bf462372513a73e52dc8e14121cef36a662"
+        },
+        {
+          "path": "dist_moe/kernels/triton/_thread_id.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3710e5c5367c998935fa441e88f831cb19be50c7",
+          "size": 695,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3710e5c5367c998935fa441e88f831cb19be50c7"
+        },
+        {
+          "path": "dist_moe/kernels/triton/annotations.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bdcc5bb302d5fb20dc5ec7e946b7d7182d0e778e",
+          "size": 1414,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/bdcc5bb302d5fb20dc5ec7e946b7d7182d0e778e"
+        },
+        {
+          "path": "dist_moe/kernels/triton/barrier.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5d3dd4ca209b1a66a4df6799a1dbf54ee34412ed",
+          "size": 8489,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5d3dd4ca209b1a66a4df6799a1dbf54ee34412ed"
+        },
+        {
+          "path": "dist_moe/kernels/triton/broadcast_n_reduction.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4ff5f44a47e8bf3a0785b1da1945d83f7b5f8cb5",
+          "size": 28416,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/4ff5f44a47e8bf3a0785b1da1945d83f7b5f8cb5"
+        },
+        {
+          "path": "dist_moe/kernels/triton/comm_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "67cd62f68b5fe72e194d232fb37edfd79f7bda48",
+          "size": 9064,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/67cd62f68b5fe72e194d232fb37edfd79f7bda48"
+        },
+        {
+          "path": "dist_moe/kernels/triton/conditional_copy.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "aad42acf863b68cf958c91b8ce5fad030ee3c62c",
+          "size": 23694,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/aad42acf863b68cf958c91b8ce5fad030ee3c62c"
+        },
+        {
+          "path": "dist_moe/kernels/triton/device_trap.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2690c175dca17fc1a2e1c3818dc335e7c0af41df",
+          "size": 697,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/2690c175dca17fc1a2e1c3818dc335e7c0af41df"
+        },
+        {
+          "path": "dist_moe/kernels/triton/dist_dispatch_routing_kernel.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "79e7648b44523241c07f0793a99e46949f28ff11",
+          "size": 36749,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/79e7648b44523241c07f0793a99e46949f28ff11"
+        },
+        {
+          "path": "dist_moe/kernels/triton/fp_math.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f832e6e019b9285879e5cba9ce0449a38dacfca9",
+          "size": 27043,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/f832e6e019b9285879e5cba9ce0449a38dacfca9"
+        },
+        {
+          "path": "dist_moe/kernels/triton/repr_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f772a64eba3a917364ddd3abc956eb2f0ca62c07",
+          "size": 3556,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/f772a64eba3a917364ddd3abc956eb2f0ca62c07"
+        },
+        {
+          "path": "dist_moe/kernels/triton/situ_glu.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "44f90a8e668355a29254375dd4b5b2e1568ab06d",
+          "size": 2568,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/44f90a8e668355a29254375dd4b5b2e1568ab06d"
+        },
+        {
+          "path": "dist_moe/kernels/triton/swiglu.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8063cad56602621685cdf772713cfd50d9dd1b6e",
+          "size": 40760,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/8063cad56602621685cdf772713cfd50d9dd1b6e"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c7cbe77fee3043531c6b4ff2dc8592f5b0700ce0",
+          "size": 261,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/c7cbe77fee3043531c6b4ff2dc8592f5b0700ce0"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/blockscaled_quantize.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3b6786dd0a157da2cbf86384edb80b42a91b8d76",
+          "size": 151219,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/3b6786dd0a157da2cbf86384edb80b42a91b8d76"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/env.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "69af28f646b1562565b8620057fe68cf3bfff768",
+          "size": 742,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/69af28f646b1562565b8620057fe68cf3bfff768"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/formats.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c4c91dace790a4c4d13779e25c8ff46c2b6db446",
+          "size": 20361,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/c4c91dace790a4c4d13779e25c8ff46c2b6db446"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/fp_math.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f832e6e019b9285879e5cba9ce0449a38dacfca9",
+          "size": 27043,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/f832e6e019b9285879e5cba9ce0449a38dacfca9"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/global_scale.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2650850c82d592605236b527bff386d1bf5e3acc",
+          "size": 7305,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/2650850c82d592605236b527bff386d1bf5e3acc"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/repr_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f772a64eba3a917364ddd3abc956eb2f0ca62c07",
+          "size": 3556,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/f772a64eba3a917364ddd3abc956eb2f0ca62c07"
+        },
+        {
+          "path": "dist_moe/kernels/triton_quantization/tma_utils.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b46f8bf2ecb40838310db8e1e9253e7a054613d9",
+          "size": 3265,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/b46f8bf2ecb40838310db8e1e9253e7a054613d9"
+        },
+        {
+          "path": "dist_moe/kernels/weight_borrow.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "bdeb8dd57d75521f2f21ea98cf8c75c42a6d0ce1",
+          "size": 17637,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/bdeb8dd57d75521f2f21ea98cf8c75c42a6d0ce1"
+        },
+        {
+          "path": "docs/nvfp4_execution.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "5dbd373f9f8285e75a78cd12263cc623c4808b33",
+          "size": 13749,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/5dbd373f9f8285e75a78cd12263cc623c4808b33"
+        },
+        {
+          "path": "docs/nvfp4_kernel_design.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8be9ad4b7d83fa71713a041aedfcbd90ddb35fec",
+          "size": 11871,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/8be9ad4b7d83fa71713a041aedfcbd90ddb35fec"
+        },
+        {
+          "path": "tests/test_dist_moe.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8df875ad10984cb6042e61286bb2396e3b2249b4",
+          "size": 235527,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/8df875ad10984cb6042e61286bb2396e3b2249b4"
+        },
+        {
+          "path": "tests/test_dist_moe_vmm.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "823ac3accf5ab5e6742bd49c90b9f098ab84d455",
+          "size": 53115,
+          "url": "https://api.github.com/repos/meta-pytorch/dist_moe/git/blobs/823ac3accf5ab5e6742bd49c90b9f098ab84d455"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "job": "f8208a2105ab4940",
+  "board": "muse_moe_w4a16",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 122.92,
+      "power.limit": 700,
+      "temperature.gpu": 36
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 130.34,
+      "power.limit": 700,
+      "temperature.gpu": 32
+    },
+    "node": "n-djsogg5ih26gwdcnhyhbnqzfkb"
+  },
+  "created_at": 1793432721.1017866,
+  "source": "muse_moe_w4a16/submission_v28_lazy_phase_trace_probe.py",
+  "source_sha256": "678ec161b8552570fad648d04ad1af4addfa4d4b73fc73afa74aac51ca8aff91",
+  "profile_capture": "local CLI profile JSON",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "error": null,
+    "passed": true,
+    "score_us": 5694.844174268333,
+    "speedup": 2.3615220343983947,
+    "speedup_ci": [
+      2.3260992038824186,
+      2.3969448649143703
+    ],
+    "status": "ok",
+    "tests": 5,
+    "tests_passed": 5
+  },
+  "setup": [
+    {
+      "baseline_copies": 4,
+      "baseline_prepare_pad": 12700160,
+      "copies": 1,
+      "error": null,
+      "event": "setup",
+      "first": "submission",
+      "prepare_pad": 5097984,
+      "prepare_s": 187.262736261,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "bs": 1,
+        "load": "decode 1",
+        "seed": 1033356500182484682,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 25442.690913968447,
+      "baseline_ns": 76911.99705004692,
+      "paired_ratio": 3.022950571938953,
+      "speedup": 3.022950571938953,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 16,
+        "load": "decode 16",
+        "seed": 1033426735683281218,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 95355.94191383521,
+      "baseline_ns": 191727.998200804,
+      "paired_ratio": 2.0106560152701523,
+      "speedup": 2.0106560152701523,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 32,
+        "load": "decode 32",
+        "seed": 1033496971184077755,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 126997.70533983565,
+      "baseline_ns": 210703.99833843112,
+      "paired_ratio": 1.659116578324027,
+      "speedup": 1.659116578324027,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 8,
+        "load": "verify 1",
+        "seed": 1033567206684874293,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 63847.925025718985,
+      "baseline_ns": 142223.9989042282,
+      "paired_ratio": 2.227543007027058,
+      "speedup": 2.227543007027058,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 128,
+        "load": "verify 16",
+        "seed": 1033637442185670832,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 175058.9839618009,
+      "baseline_ns": 460703.99787276983,
+      "paired_ratio": 2.63170725344378,
+      "speedup": 2.63170725344378,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "bs": 256,
+        "load": "verify 32",
+        "seed": 1033707677686467372,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "median_ns": 209693.52036929008,
+      "baseline_ns": 615216.0004712641,
+      "paired_ratio": 2.9338817879914014,
+      "speedup": 2.9338817879914014,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "bs": 1,
+        "load": "decode 1",
+        "seed": 1033356500182484682,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           29.3 \u00b5s 100.0%      1\ntotal                                                             29.3 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 16,
+        "load": "decode 16",
+        "seed": 1033426735683281218,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           83.4 \u00b5s 100.0%      1\ntotal                                                             83.4 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 32,
+        "load": "decode 32",
+        "seed": 1033496971184077755,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                          130.8 \u00b5s 100.0%      1\ntotal                                                            130.8 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 8,
+        "load": "verify 1",
+        "seed": 1033567206684874293,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<false>(okc::Params)                           84.5 \u00b5s 100.0%      1\ntotal                                                             84.5 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 128,
+        "load": "verify 16",
+        "seed": 1033637442185670832,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           179.9 \u00b5s 100.0%      1\ntotal                                                            179.9 \u00b5s"
+    },
+    {
+      "case": {
+        "bs": 256,
+        "load": "verify 32",
+        "seed": 1033707677686467372,
+        "sharding": "ep8",
+        "weight": 60
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid okc::moe_fused<true>(okc::Params)                           206.9 \u00b5s 100.0%      1\ntotal                                                            206.9 \u00b5s"
+    }
+  ],
+  "log_tail": "MOE_PHASE_TRACE_Z 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\nMOE_PHASE_TRACE_SUMMARY {\"status\":\"complete\",\"stage\":\"complete\",\"rows\":24,\"traces\":2,\"chars\":9080,\"seconds\":44.29491591104306}\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 07:49:12 75:75 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

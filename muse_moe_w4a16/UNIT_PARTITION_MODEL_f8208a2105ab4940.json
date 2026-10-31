@@ -1,0 +1,257 @@
+{
+  "job": "f8208a2105ab4940",
+  "scope": "Exact integer scheduling model for two captured synthetic route rosters. No GPU timing estimates; timestamps are intentionally unused. Source cost coefficients are not a proven hardware-time model.",
+  "cases": [
+    {
+      "m": 32,
+      "seed": 3101,
+      "phase": 0,
+      "parent": {
+        "total_cost": 1032192,
+        "max_cost": 7840,
+        "mean_cost": 7819.636363636364,
+        "max_over_mean": 1.0026041666666665,
+        "max_stages": 70,
+        "split_cuts": 120,
+        "empty_ctas": 0
+      },
+      "alignments": [
+        {
+          "total_cost": 1032192,
+          "max_cost": 8064,
+          "mean_cost": 7819.636363636364,
+          "max_over_mean": 1.03125,
+          "max_stages": 72,
+          "split_cuts": 84,
+          "empty_ctas": 0,
+          "tolerance": 2,
+          "max_cost_over_parent": 1.0285714285714285,
+          "max_stage_shift": 2
+        },
+        {
+          "total_cost": 1032192,
+          "max_cost": 8288,
+          "mean_cost": 7819.636363636364,
+          "max_over_mean": 1.0598958333333333,
+          "max_stages": 74,
+          "split_cuts": 60,
+          "empty_ctas": 0,
+          "tolerance": 4,
+          "max_cost_over_parent": 1.0571428571428572,
+          "max_stage_shift": 4
+        },
+        {
+          "total_cost": 1032192,
+          "max_cost": 8960,
+          "mean_cost": 7819.636363636364,
+          "max_over_mean": 1.1458333333333333,
+          "max_stages": 80,
+          "split_cuts": 0,
+          "empty_ctas": 0,
+          "tolerance": 8,
+          "max_cost_over_parent": 1.1428571428571428,
+          "max_stage_shift": 8
+        }
+      ],
+      "whole_unit": {
+        "algorithm": "offline longest-processing-time-first whole-unit assignment; device planner unimplemented",
+        "max_cost": 8960,
+        "mean_cost": 7819.636363636364,
+        "max_over_mean": 1.1458333333333333,
+        "max_cost_over_parent": 1.1428571428571428,
+        "units": 576,
+        "homogeneous_exact_minimax_max_cost": 8960,
+        "proof": "Identical indivisible units imply some CTA owns at least ceil(units/CTAs); LPT reaches that bound in this scalar cost model."
+      }
+    },
+    {
+      "m": 32,
+      "seed": 3101,
+      "phase": 1,
+      "parent": {
+        "total_cost": 460800,
+        "max_cost": 3500,
+        "mean_cost": 3490.909090909091,
+        "max_over_mean": 1.0026041666666667,
+        "max_stages": 35,
+        "split_cuts": 120,
+        "empty_ctas": 0
+      },
+      "alignments": [
+        {
+          "total_cost": 460800,
+          "max_cost": 3700,
+          "mean_cost": 3490.909090909091,
+          "max_over_mean": 1.0598958333333333,
+          "max_stages": 37,
+          "split_cuts": 84,
+          "empty_ctas": 0,
+          "tolerance": 2,
+          "max_cost_over_parent": 1.0571428571428572,
+          "max_stage_shift": 2
+        },
+        {
+          "total_cost": 460800,
+          "max_cost": 3900,
+          "mean_cost": 3490.909090909091,
+          "max_over_mean": 1.1171875,
+          "max_stages": 39,
+          "split_cuts": 60,
+          "empty_ctas": 0,
+          "tolerance": 4,
+          "max_cost_over_parent": 1.1142857142857143,
+          "max_stage_shift": 4
+        },
+        {
+          "total_cost": 460800,
+          "max_cost": 4800,
+          "mean_cost": 3490.909090909091,
+          "max_over_mean": 1.375,
+          "max_stages": 48,
+          "split_cuts": 0,
+          "empty_ctas": 0,
+          "tolerance": 8,
+          "max_cost_over_parent": 1.3714285714285714,
+          "max_stage_shift": 8
+        }
+      ],
+      "whole_unit": {
+        "algorithm": "offline longest-processing-time-first whole-unit assignment; device planner unimplemented",
+        "max_cost": 4800,
+        "mean_cost": 3490.909090909091,
+        "max_over_mean": 1.375,
+        "max_cost_over_parent": 1.3714285714285714,
+        "units": 288,
+        "homogeneous_exact_minimax_max_cost": 4800,
+        "proof": "Identical indivisible units imply some CTA owns at least ceil(units/CTAs); LPT reaches that bound in this scalar cost model."
+      }
+    },
+    {
+      "m": 256,
+      "seed": 3101,
+      "phase": 0,
+      "parent": {
+        "total_cost": 1711616,
+        "max_cost": 13114,
+        "mean_cost": 12966.787878787878,
+        "max_over_mean": 1.0113530137600957,
+        "max_stages": 116,
+        "split_cuts": 115,
+        "empty_ctas": 0
+      },
+      "alignments": [
+        {
+          "total_cost": 1711616,
+          "max_cost": 13440,
+          "mean_cost": 12966.787878787878,
+          "max_over_mean": 1.0364941669159438,
+          "max_stages": 118,
+          "split_cuts": 83,
+          "empty_ctas": 0,
+          "tolerance": 2,
+          "max_cost_over_parent": 1.0248589293884398,
+          "max_stage_shift": 2
+        },
+        {
+          "total_cost": 1711616,
+          "max_cost": 13840,
+          "mean_cost": 12966.787878787878,
+          "max_over_mean": 1.067342207597966,
+          "max_stages": 120,
+          "split_cuts": 54,
+          "empty_ctas": 0,
+          "tolerance": 4,
+          "max_cost_over_parent": 1.0553606832392863,
+          "max_stage_shift": 4
+        },
+        {
+          "total_cost": 1711616,
+          "max_cost": 15168,
+          "mean_cost": 12966.787878787878,
+          "max_over_mean": 1.1697577026622794,
+          "max_stages": 128,
+          "split_cuts": 0,
+          "empty_ctas": 0,
+          "tolerance": 8,
+          "max_cost_over_parent": 1.1566265060240963,
+          "max_stage_shift": 8
+        }
+      ],
+      "whole_unit": {
+        "algorithm": "offline longest-processing-time-first whole-unit assignment; device planner unimplemented",
+        "max_cost": 14016,
+        "mean_cost": 12966.787878787878,
+        "max_over_mean": 1.0809153454980558,
+        "max_cost_over_parent": 1.0687814549336587,
+        "units": 832
+      }
+    },
+    {
+      "m": 256,
+      "seed": 3101,
+      "phase": 1,
+      "parent": {
+        "total_cost": 716288,
+        "max_cost": 5544,
+        "mean_cost": 5426.424242424242,
+        "max_over_mean": 1.0216672623302359,
+        "max_stages": 55,
+        "split_cuts": 123,
+        "empty_ctas": 0
+      },
+      "alignments": [
+        {
+          "total_cost": 716288,
+          "max_cost": 5904,
+          "mean_cost": 5426.424242424242,
+          "max_over_mean": 1.0880092923516798,
+          "max_stages": 56,
+          "split_cuts": 94,
+          "empty_ctas": 0,
+          "tolerance": 2,
+          "max_cost_over_parent": 1.0649350649350648,
+          "max_stage_shift": 2
+        },
+        {
+          "total_cost": 716288,
+          "max_cost": 6336,
+          "mean_cost": 5426.424242424242,
+          "max_over_mean": 1.1676197283774126,
+          "max_stages": 59,
+          "split_cuts": 60,
+          "empty_ctas": 0,
+          "tolerance": 4,
+          "max_cost_over_parent": 1.1428571428571428,
+          "max_stage_shift": 4
+        },
+        {
+          "total_cost": 716288,
+          "max_cost": 6768,
+          "mean_cost": 5426.424242424242,
+          "max_over_mean": 1.2472301644031452,
+          "max_stages": 64,
+          "split_cuts": 0,
+          "empty_ctas": 0,
+          "tolerance": 8,
+          "max_cost_over_parent": 1.2207792207792207,
+          "max_stage_shift": 8
+        }
+      ],
+      "whole_unit": {
+        "algorithm": "offline longest-processing-time-first whole-unit assignment; device planner unimplemented",
+        "max_cost": 6704,
+        "mean_cost": 5426.424242424242,
+        "max_over_mean": 1.2354360257326662,
+        "max_cost_over_parent": 1.2092352092352092,
+        "units": 416
+      }
+    }
+  ],
+  "limits": [
+    "No input precision or route is changed; all arithmetic totals are conserved.",
+    "Cut alignment changes stage owners; native inverse-owner mapping and producer/consumer order would also need a coherent implementation.",
+    "Fixed work coefficients omit reduction costs, memory locality, readiness stalls, clock/power variation and input-dependent interphase progress.",
+    "Whole-unit lower bounds do not prove a runtime regression; they disprove assuming that eliminating splits is free.",
+    "No model here is a measured speedup or a qualified candidate."
+  ]
+}

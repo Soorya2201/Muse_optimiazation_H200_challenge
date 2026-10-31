@@ -37,6 +37,12 @@ to private/unpublished winners. Latest detailed reviews:
   [attention](muse_attention_decode/PK2_HYBRID_2026-10-30.md), and
   [BF16](muse_bf16_proj/TMA_PUBLIC_FOLLOWUP_2026-10-30.md) preserve the other
   recent source audits and measured negative controls.
+- [Oct31 MoE follow-up](muse_moe_w4a16/PHASE_AND_LIBRARY_FOLLOWUP_2026-10-31.md):
+  refreshed public search217paths/13repos; eight new Kushagra MoE variants
+  screened with URLs/hashes, no stronger replacement or additive gain
+  established. b12x/DistMoE components and Stream-K hybrid scheduling added
+  to the library. Two H200 checks repair/validate a zero-local phase trace;
+  split counts and integer partition models now constrain scheduling ideas.
 
 These additions supersede older "unreviewed" labels below within the
 documented scope, without changing the historical capture-time ranks.

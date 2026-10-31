@@ -67,6 +67,66 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 MoE current-base trace and broader-source cycle
+
+Previous decoder turn made progress:complete register/GS4 negative controls.
+This MoE turn adds217indexedpublicpaths/13repos (was203/12),eight new
+Kushagra MoEvariants+benchmark hash-matched at0778ecd. Owner#703 vsour157
+atcapture;no stronger replacement/additive gain established. License not
+established,no implementationported. Five newly indexed decoder paths are
+left for that track. Two library components pinned:b12x2cc7f66(sevenfiles,
+Apache2) andDistMoE285763b(fourfiles,BSDroot/bundledApache). b12xA16 contract
+is meaningful,butnativeSM120scaleconversionisnotdirectHoppercode;DistMoE
+NVFP4 quantizesactivations/tcgen05,noteligibleBF16-H200path. StreamKhybrid
+paper/readings and applicability limits added. Details:
+`muse_moe_w4a16/PHASE_AND_LIBRARY_FOLLOWUP_2026-10-31.md`.
+
+V27/f48193f0c16044b9(sfo3)passes5tests/6timings2.372580x,parent timedpath,
+prepare216.580s. Complete51.597s independentprobe,24groups/2fulltraces,
+9660char report. Timing attribution FAILS:296localbytes,ratios.8815–.9317.
+Metadata valid;do not treat those clocks/endspreads as exact parent data.
+Four reducedCEdiagnostics preserveoriginal296frame/spills,failedWSfield
+alias,sharedpointer-only288frame,andfinalzero-frame repair. Real issue:
+metadata's outlinedhelperusedParamsbyreference,forcingthewholebyvalue
+kernelargumentontolocalstack. Sharedpointer keepshelperParamsunused and
+volatiletimestamp-localreloads preventlonglivepointer. No productiongain:
+canonical alreadyzero-local. SASS5000lineclipping remainsexplicit.
+
+V28/f8208a2105ab4940(sfo3)passes5/6,2.361522x,parent timedpath,
+prepare187.263s. Complete44.295s independentprobe,24groups/2traces,
+9080chars. Fullnative96regs/0local/576threads/231168dynamicshared bothBIG
+modes. Perturbation gatePASS:32 .993303–1.003081,128 .992691–1.001808,
+256 .993068–1.002879;AAoffset<=1.1405%,initial/fresherrors0. Two individual
+seed3101/pad0traces only:meanA/B32=79.703/42.368us,256=120.024/60.107us;
+Bendmax−mean2.816/4.352us. M128untraced. All12profiles/fullavailablelogs/
+48rawgroups/fourrawtracerecords decoded/read and archived. No job live.
+
+Integerpartitionmodels from exactmetadata:±4stagealignment roughlyhalves
+splitcuts butraisesworstCTAwork5.54–14.29%;fullwhole-unit M32 lowerbounds
+are14.29%/37.14% aboveparentA/Bwork. Not hardware-time proofs. No native
+rounding/LPT candidatequalified. Two-observed-fixture planningproxy with
+otherfourloadsunchanged:zeroBendgap1.006944x;zeroallnonstreammean1.019103x;
+20%meanAcut1.041475x. Theseareinstrumented/syntheticplanningproxies,
+not official-input boardbounds or measured critical-path removals.
+
+Next useful work remains MoE:bounded sampled per-segment/unit-end clocks
+on a few CTAs,with zero-local/perturbation controls,can separate whole-unit
+epilogues,splitfixups and deferredflush costs on KPERM3. UsevalidatedV28
+diagnostic design;do not rereadp.dbg in an outlinedParams helper. Candidate
+dispatch needsdistinctmechanism/practical>=3%model plus fresh/nearby/full
+checks and independentrepeats. Prior ring/tail/fence/register/decode losers
+remainclosed;do not duplicate them merely to consume checks.
+
+Allfivecanonicalhashes unchanged,no scoredsubmit/no rank1. Oct31budgets:
+MoE2/8checks,decoder1/8,prefill4/8,othertracks0;zero submitsalltracks.
+Snapshot `research/leaderboards/snapshot_20261031075648.json`:
+overall122/1740,decoder122/1090,MoE157/1225,attention172/1169,
+BF16222/1520,prefill163/732. PrivateGitHubverified.
+Externalvolume remounted duringthisturn;itsoldcheckoutwas4ff92f withan
+untrackedresearch/public/madhavan_721c627 folder. Internal continuation
+holds thiswork; synchronize committedwork back safely, preserveuntracked
+files,andverifybothheads before switching the authoritativeworkpath.
+
 #### Oct31 decoder register/GS4 cycle complete; no eligible gain
 
 Read `muse_decode_layer/WGS_REGISTER_SPLIT_2026-10-31.md`. Standalone CE

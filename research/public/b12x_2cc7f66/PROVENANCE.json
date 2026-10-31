@@ -1,0 +1,49 @@
+{
+  "repository": "local-inference-lab/b12x",
+  "commit": "2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88",
+  "scope": "Primary component/source inspection only; not executed or imported into submission",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/local-inference-lab/b12x/2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "docs/moe-execution-model.md",
+      "url": "https://raw.githubusercontent.com/local-inference-lab/b12x/2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88/docs/moe-execution-model.md",
+      "sha256": "0351d6e560406d404e0f5283e1ad1f03779e4d54b75b83e82896e16558ec2760",
+      "bytes": 18688
+    },
+    {
+      "path": "docs/w4a16-prefill-reduction.md",
+      "url": "https://raw.githubusercontent.com/local-inference-lab/b12x/2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88/docs/w4a16-prefill-reduction.md",
+      "sha256": "68638136c6af2a1d8a1be897dafd09b1f12bf59d9e70f7a139f330518fbc43bb",
+      "bytes": 2157
+    },
+    {
+      "path": "b12x/moe/_shared/kernels/w4a16/kernel.py",
+      "url": "https://raw.githubusercontent.com/local-inference-lab/b12x/2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88/b12x/moe/_shared/kernels/w4a16/kernel.py",
+      "sha256": "a98e6648b3e93d1c50b913a7130ec73b7bca9ae72aee9df18ff7fe51cc05e2a3",
+      "bytes": 587034
+    },
+    {
+      "path": "b12x/moe/_shared/kernels/w4a16/host.py",
+      "url": "https://raw.githubusercontent.com/local-inference-lab/b12x/2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88/b12x/moe/_shared/kernels/w4a16/host.py",
+      "sha256": "0286f7c7d5f2da511de40ad7aa6b3f0f38f091a2b79f31c93200ed06b99ff555",
+      "bytes": 18184
+    },
+    {
+      "path": "b12x/gemm/blockscaled/_a16.py",
+      "url": "https://raw.githubusercontent.com/local-inference-lab/b12x/2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88/b12x/gemm/blockscaled/_a16.py",
+      "sha256": "8e967040e241ff7e5f34a30d2a2ca10952b07cf49df89bf31203d9171cb46a36",
+      "bytes": 7934
+    },
+    {
+      "path": "b12x/_lib/intrinsics.py",
+      "url": "https://raw.githubusercontent.com/local-inference-lab/b12x/2cc7f66aaef76a9c7cbb660a1efb865cf3f26c88/b12x/_lib/intrinsics.py",
+      "sha256": "c1d4afefb5948e3d738b004a403bc51f3c527095fd718174c50cce1ea2ace13e",
+      "bytes": 249652
+    }
+  ]
+}

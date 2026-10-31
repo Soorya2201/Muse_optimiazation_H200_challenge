@@ -1,0 +1,310 @@
+{
+  "repository": "Kushagrabainsla/muse-spark-open",
+  "head": "0778ecd8293e375ffe33faa466db0231929aaac3",
+  "pushed_at": "2026-10-31T01:41:12Z",
+  "license_metadata": null,
+  "tree_truncated": false,
+  "files": [
+    {
+      "path": "muse_moe_w4a16/bench.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/bench.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/bench.py",
+      "blob_sha": "fcc8d2cb9342419dcce0ee9c65f6ec1044cb5d6d",
+      "search_blob_sha": "fcc8d2cb9342419dcce0ee9c65f6ec1044cb5d6d",
+      "matches_index": true,
+      "sha256": "8c8fdef857be39fde0af4fafc553b514fe54f0175da8008a1766645a76d4c6c5",
+      "bytes": 2717
+    },
+    {
+      "path": "muse_moe_w4a16/submission.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission.py",
+      "blob_sha": "35787110815cd1c927fb11a42c146d8012105d1d",
+      "search_blob_sha": "35787110815cd1c927fb11a42c146d8012105d1d",
+      "matches_index": true,
+      "sha256": "2c25f515716849a5d159ce8179293bc0f40df148fe4cd10a427d0db38245b396",
+      "bytes": 39149,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f6ed150dffe8c50b29cbcb56039447d8e09d5f9045a0deffbf59787396a9978c",
+          "first_line": 756
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 800
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 807
+        },
+        "kernel_fn": {
+          "sha256": "35013bb0be3347738ee64ac68ee0d17f8f6abfe28be5b8f9c18401174b794acc",
+          "first_line": 835
+        }
+      }
+    },
+    {
+      "path": "muse_moe_w4a16/submission_r.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission_r.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_r.py",
+      "blob_sha": "229e2ca4890788f7619a7e32b27c8c7f99040c28",
+      "search_blob_sha": "229e2ca4890788f7619a7e32b27c8c7f99040c28",
+      "matches_index": true,
+      "sha256": "9d0b0dee741b22472c632efc422620c4c6f4ad72f2198480324a576b64a4199a",
+      "bytes": 37667,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f6ed150dffe8c50b29cbcb56039447d8e09d5f9045a0deffbf59787396a9978c",
+          "first_line": 731
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 775
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 782
+        },
+        "kernel_fn": {
+          "sha256": "429dc86c67730b2a0b3471c729b3f4db0efc7f9c0357f5359ccd12239dff01bf",
+          "first_line": 810
+        }
+      }
+    },
+    {
+      "path": "muse_moe_w4a16/submission_r2.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission_r2.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_r2.py",
+      "blob_sha": "117c76b0238e70d521bd5791ee968abb17415535",
+      "search_blob_sha": "117c76b0238e70d521bd5791ee968abb17415535",
+      "matches_index": true,
+      "sha256": "73fe6d0d26f348eed6caa6df68ed46071748e4a9213794d423a1b61ff62e721c",
+      "bytes": 38947,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f6ed150dffe8c50b29cbcb56039447d8e09d5f9045a0deffbf59787396a9978c",
+          "first_line": 751
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 795
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 802
+        },
+        "kernel_fn": {
+          "sha256": "35013bb0be3347738ee64ac68ee0d17f8f6abfe28be5b8f9c18401174b794acc",
+          "first_line": 830
+        }
+      }
+    },
+    {
+      "path": "muse_moe_w4a16/submission_r3.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission_r3.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_r3.py",
+      "blob_sha": "64f335c69fd71713a35bbc681b1ee05a6fbd2588",
+      "search_blob_sha": "64f335c69fd71713a35bbc681b1ee05a6fbd2588",
+      "matches_index": true,
+      "sha256": "a61bd40441de64b902c4061d797268a21386d04cf2c544b6d806fe9f7b59b541",
+      "bytes": 39152,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f6ed150dffe8c50b29cbcb56039447d8e09d5f9045a0deffbf59787396a9978c",
+          "first_line": 756
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 800
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 807
+        },
+        "kernel_fn": {
+          "sha256": "35013bb0be3347738ee64ac68ee0d17f8f6abfe28be5b8f9c18401174b794acc",
+          "first_line": 835
+        }
+      }
+    },
+    {
+      "path": "muse_moe_w4a16/submission_m11.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission_m11.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_m11.py",
+      "blob_sha": "c825ab2c71b6a2c217fd050a41dc6d401e404ce3",
+      "search_blob_sha": "c825ab2c71b6a2c217fd050a41dc6d401e404ce3",
+      "matches_index": true,
+      "sha256": "a796e146db0d88e3b99ec08e468ef63154eed9b694efdcd853ee04168611f37c",
+      "bytes": 33046,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f9b2dd74c858d7609ce13b99bdf25df73954877f7ff2ddcc33c1dca78e6e259a",
+          "first_line": 615
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 659
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 666
+        },
+        "kernel_fn": {
+          "sha256": "e50d19572827e4f12e0e700318a416222bb0eb3c61e7e9a979591824f4ea3e14",
+          "first_line": 694
+        }
+      }
+    },
+    {
+      "path": "muse_moe_w4a16/submission_m14.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission_m14.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_m14.py",
+      "blob_sha": "2c01142534d6e0077a5425307bba33bc7b174974",
+      "search_blob_sha": "2c01142534d6e0077a5425307bba33bc7b174974",
+      "matches_index": true,
+      "sha256": "fcbb7eba97a568b570dc0afd2ab8a4473fdea755ab2b9a73d137dd01e5e91848",
+      "bytes": 35007,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f6ed150dffe8c50b29cbcb56039447d8e09d5f9045a0deffbf59787396a9978c",
+          "first_line": 644
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 688
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 695
+        },
+        "kernel_fn": {
+          "sha256": "e50d19572827e4f12e0e700318a416222bb0eb3c61e7e9a979591824f4ea3e14",
+          "first_line": 723
+        }
+      }
+    },
+    {
+      "path": "muse_moe_w4a16/submission_m16.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission_m16.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_m16.py",
+      "blob_sha": "8d0ee66b6afaf949c9c44a1132cb5772965c41de",
+      "search_blob_sha": "8d0ee66b6afaf949c9c44a1132cb5772965c41de",
+      "matches_index": true,
+      "sha256": "fe2bd5ecf26afc96ad2edb6bfa706c6e3c00dba8dea999d718a6474cc060331c",
+      "bytes": 35366,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f6ed150dffe8c50b29cbcb56039447d8e09d5f9045a0deffbf59787396a9978c",
+          "first_line": 648
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 692
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 699
+        },
+        "kernel_fn": {
+          "sha256": "e50d19572827e4f12e0e700318a416222bb0eb3c61e7e9a979591824f4ea3e14",
+          "first_line": 727
+        }
+      }
+    },
+    {
+      "path": "muse_moe_w4a16/submission_wgmma.py",
+      "local_temporary": "/tmp/muse_kushagra_0778ecd/submission_wgmma.py",
+      "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/submission_wgmma.py",
+      "blob_sha": "4d27e1685915ba914a531954de7785cf6d48f0c1",
+      "search_blob_sha": "4d27e1685915ba914a531954de7785cf6d48f0c1",
+      "matches_index": true,
+      "sha256": "bc4ecc0fca6a327bdda6a2bda917e4311ea2605fdd15f3e30c42edb2e8c9318a",
+      "bytes": 38654,
+      "reviewed_components": {
+        "_bit_map": {
+          "sha256": "f6ed150dffe8c50b29cbcb56039447d8e09d5f9045a0deffbf59787396a9978c",
+          "first_line": 708
+        },
+        "_config": {
+          "sha256": "064e0111862146afdbf5ebc7ce1458e8ffeebfcdfa472d088369aba5353634a2",
+          "first_line": 754
+        },
+        "prepare": {
+          "sha256": "70d5c450fa7ada94a888c30f3947b4ee4d36099767280f80e6082d08faea55ca",
+          "first_line": 761
+        },
+        "kernel_fn": {
+          "sha256": "e50d19572827e4f12e0e700318a416222bb0eb3c61e7e9a979591824f4ea3e14",
+          "first_line": 789
+        }
+      }
+    }
+  ],
+  "scope": "Fresh public MoE source inspection; temporary local reads only until license/attribution review; no code executed or ported",
+  "experiment_document": {
+    "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_moe_w4a16/EXPERIMENTS.md",
+    "sha256": "4ac56e82eda9f135fad0dbc695ce7cb2daf6926e1836fbfd6628eb786e7204d4",
+    "bytes": 18380
+  },
+  "leaderboard_observation": {
+    "captured_utc": "2026-10-31T07:48:45+00:00",
+    "rank": 703,
+    "ranked": 1225,
+    "speedup": 1.7036,
+    "job": "069f543bb3604714",
+    "our_rank": 157,
+    "our_speedup": 2.3723
+  },
+  "component_findings": {
+    "submission.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    },
+    "submission_r.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    },
+    "submission_r2.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    },
+    "submission_r3.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    },
+    "submission_m11.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    },
+    "submission_m14.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    },
+    "submission_m16.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    },
+    "submission_wgmma.py": {
+      "numerics": "BF16 activations with NVFP4 codes/E4M3 scales in inspected dispatch; full independent correctness untested",
+      "architecture": "Separate persistent split-K GEMM1/GEMM2 and final norm; PDL; some variants use per-CTA routing, vector atomics or WGMMA",
+      "adoption": "No code ported; current fused RS-WGMMA/KPERM3 already removes the major listed intermediate/atomic costs; license not established"
+    }
+  },
+  "review_scope": "Eight MoE variants: headers,config/prepare/dispatch,bit-map and selected native scheduling/reduction branches; benchmark harness read only and never imported. Not a claim of independent testing or reading all decoder sources."
+}

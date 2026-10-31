@@ -1,14 +1,14 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 07:17:09 UTC** from the live OKC boards. Overall **#121/1740**.
+Captured **2026-10-31 07:56:48 UTC** from the live OKC boards. Overall **#122/1740**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|220/1520|1.535843x|1.6523x|7.05%|
-|Routed experts|155/1224|2.372309x|2.7578x|13.98%|
-|Attention decode|169/1169|2.603505x|3.2221x|19.20%|
-|Whole decoder|121/1090|2.211495x|2.4178x|8.53%|
+|BF16 projections|222/1520|1.535843x|1.6523x|7.05%|
+|Routed experts|157/1225|2.372309x|2.7578x|13.98%|
+|Attention decode|172/1169|2.603505x|3.2221x|19.20%|
+|Whole decoder|122/1090|2.211495x|2.4178x|8.53%|
 |Prefill|163/732|1.784958x|2.0325x|12.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
@@ -70,3 +70,10 @@ its independent register/GS4 comparisons found no eligible gain. All16
 groups and8changed policies fail gates;GS4 full build has32localbytes.
 Canonical scores/ranks unchanged. See
 muse_decode_layer/WGS_REGISTER_SPLIT_2026-10-31.md.
+
+Oct31 MoE V27/V28 passed5tests/6timings each with parent timed dispatch.
+The first trace perturbed performance;the repaired diagnostic haszero
+localallocation andnear-parenttiming across24groups. Exactroute/cutdata
+andtwoindividualCTAclockcaptures narrow scheduling hypotheses;no new
+candidate score or rankgain. See
+muse_moe_w4a16/PHASE_AND_LIBRARY_FOLLOWUP_2026-10-31.md.

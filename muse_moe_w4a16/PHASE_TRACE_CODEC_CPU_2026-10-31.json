@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "scope": "CPU generated stress fixtures, not H200 performance",
+  "rows": 24,
+  "traces": 2,
+  "ctas_per_trace": 132,
+  "clock_values": 2112,
+  "payload_chars": 10768,
+  "payload_plus_1000_tail_chars": 11768,
+  "exact_integer_times": true,
+  "exact_fp32_error_metrics": true,
+  "exact_fp64_ratios": true,
+  "exact_u64_clock_roundtrip": true,
+  "exact_metadata_roundtrip": true,
+  "source_sha256": "1bd537e503233b5ba994fc96b28ca9d904e245ee2008a1c7c463fa300f733042"
+}

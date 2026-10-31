@@ -20,3 +20,15 @@ for H200 evidence or claim a solver-derived performance gain.
 
 Status: no Twill implementation downloaded/executed, no GPU run allocated
 solely on the paper, no canonical or scoring change.
+
+# Stream-K hybrid decomposition follow-up
+
+[Stream-K, Osama et al., 2023](https://arxiv.org/html/2301.03598v1),
+CC-BY4.0, section5.2 and appendixA.1. Hybrid whole-tile and split work
+limits cache skew while distributing residual work and hiding partial-sum
+handling. These dense-GEMM results are not routed-MoE measurements.
+Our kernel already uses cost-weighted Stream-K and phase-A partial
+reordering. Current route metadata shows that eliminating splits can
+increase worst-CTA weighted work substantially; a device planner and
+readiness costs must be included before claiming a gain. See the
+[dated MoE evidence](../muse_moe_w4a16/PHASE_AND_LIBRARY_FOLLOWUP_2026-10-31.md).

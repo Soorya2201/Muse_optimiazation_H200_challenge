@@ -1,0 +1,45 @@
+{
+  "source_job": "f8208a2105ab4940",
+  "scope": "Hypothetical two-observed-fixture planning models. Other four loads held unchanged; M128 untraced. Uses same fixture parent event times including graph overhead and instrumented clocks. Not official benchmark inputs, measured critical-path removals, or board-gain proofs.",
+  "rows": [
+    {
+      "m": 32,
+      "seed": 3101,
+      "parent_graph_us": 141.58334094094545,
+      "phase_b_end_gap_us": 2.816,
+      "phase_a_mean_us": 79.7030303030303,
+      "non_stream_mean_us": 6.428848484848485
+    },
+    {
+      "m": 256,
+      "seed": 3101,
+      "parent_graph_us": 205.24751106895303,
+      "phase_b_end_gap_us": 4.352,
+      "phase_a_mean_us": 120.024,
+      "non_stream_mean_us": 13.314424242424243
+    }
+  ],
+  "models": {
+    "remove_observed_b_end_gap": {
+      "cell_factors": [
+        1.0202929592864245,
+        1.0216630027064482
+      ],
+      "six_load_proxy": 1.0069442495055188
+    },
+    "remove_all_non_stream_mean": {
+      "cell_factors": [
+        1.0475666651401676,
+        1.069370135512164
+      ],
+      "six_load_proxy": 1.0191034854229384
+    },
+    "reduce_phase_a_mean_by_20pct": {
+      "cell_factors": [
+        1.1268724855105048,
+        1.1324456021344078
+      ],
+      "six_load_proxy": 1.0414746115012727
+    }
+  }
+}

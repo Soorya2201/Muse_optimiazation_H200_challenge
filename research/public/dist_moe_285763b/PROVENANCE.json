@@ -1,0 +1,31 @@
+{
+  "repository": "meta-pytorch/dist_moe",
+  "commit": "285763b5a0e01059a62c96b0990754a60a6ed94a",
+  "scope": "Primary component/source inspection only; not executed or imported into submission",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/meta-pytorch/dist_moe/285763b5a0e01059a62c96b0990754a60a6ed94a/LICENSE",
+      "sha256": "b16d3bc8eacb01e782c0ff2ac3c0fd568039189167481a68a4d98a874bfebc51",
+      "bytes": 1502
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "url": "https://raw.githubusercontent.com/meta-pytorch/dist_moe/285763b5a0e01059a62c96b0990754a60a6ed94a/LICENSES/Apache-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "docs/nvfp4_kernel_design.md",
+      "url": "https://raw.githubusercontent.com/meta-pytorch/dist_moe/285763b5a0e01059a62c96b0990754a60a6ed94a/docs/nvfp4_kernel_design.md",
+      "sha256": "cbb2ddec45cb74160ff682e101a590fc0161007b7cea30d6930a2854fdd55a18",
+      "bytes": 11871
+    },
+    {
+      "path": "dist_moe/kernels/tile_scheduler.py",
+      "url": "https://raw.githubusercontent.com/meta-pytorch/dist_moe/285763b5a0e01059a62c96b0990754a60a6ed94a/dist_moe/kernels/tile_scheduler.py",
+      "sha256": "7c8238bb0b120eb0ddf6aa96bd933e661246be72bdf0e8ea2a4ccd6b29b11324",
+      "bytes": 82320
+    }
+  ]
+}
