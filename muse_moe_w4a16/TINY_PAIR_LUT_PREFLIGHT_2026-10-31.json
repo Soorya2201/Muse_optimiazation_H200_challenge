@@ -1,0 +1,86 @@
+{
+  "captured_utc": "2026-10-31T21:37:29.426085+00:00",
+  "scope": "Standalone decoder cores and initialized diagnostic kernels, not full fused MoE resources, a GPU correctness test, timing result or complete weight-repack integration.",
+  "parent_sha256": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",
+  "source_sha256": "1dfee5415497ed2d06c5e38060e4180b72306261bb4da5ad832dc5fa9b975fbd",
+  "cpu_word_cases": 101024,
+  "exhaustive_pair_table_entries": 256,
+  "all_unscaled_bf16_operand_bits_equal": true,
+  "capacity": [
+    {
+      "copies": 1,
+      "table_bytes": 1024,
+      "tiny_sum": 215808,
+      "tiny_fits": true,
+      "main_sum": 232192,
+      "main_fits": true
+    },
+    {
+      "copies": 8,
+      "table_bytes": 8192,
+      "tiny_sum": 222976,
+      "tiny_fits": true,
+      "main_sum": 239360,
+      "main_fits": false
+    },
+    {
+      "copies": 16,
+      "table_bytes": 16384,
+      "tiny_sum": 231168,
+      "tiny_fits": true,
+      "main_sum": 247552,
+      "main_fits": false
+    },
+    {
+      "copies": 32,
+      "table_bytes": 32768,
+      "tiny_sum": 247552,
+      "tiny_fits": false,
+      "main_sum": 263936,
+      "main_fits": false
+    }
+  ],
+  "bank_model": [
+    {
+      "copies": 1,
+      "bytes": 1024,
+      "modeled_uniform_warp_word_waves": {
+        "2": 2172,
+        "3": 13224,
+        "4": 4132,
+        "5": 440,
+        "6": 31,
+        "7": 1
+      },
+      "maximum_word_waves": 32
+    },
+    {
+      "copies": 8,
+      "bytes": 8192,
+      "modeled_uniform_warp_word_waves": {
+        "2": 3631,
+        "3": 14193,
+        "4": 2176
+      },
+      "maximum_word_waves": 4
+    },
+    {
+      "copies": 16,
+      "bytes": 16384,
+      "modeled_uniform_warp_word_waves": {
+        "2": 20000
+      },
+      "maximum_word_waves": 2
+    },
+    {
+      "copies": 32,
+      "bytes": 32768,
+      "modeled_uniform_warp_word_waves": {
+        "1": 20000
+      },
+      "maximum_word_waves": 1
+    }
+  ],
+  "bank_model_limit": "32 four-byte banks, unique words per bank (same word broadcasts); uniform independent pair indices are synthetic, not actual weight statistics or observed device cycles.",
+  "tiny_resource_provenance": "V34 linked tiny control/trace reports214784dynamic bytes; attribution failure does not invalidate resource attributes. Only that tiny build is covered."
+}

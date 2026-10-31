@@ -211,3 +211,16 @@ tail is still running. The benchmark flushes L2 only before the whole timed call
 inside that call is legitimate. Estimated gain: **5-15% of MoE latency** if overlap survives L2
 pressure. Risk: medium-high; prefetch must not evict activations or duplicate more traffic than it
 hides. Measure with and without the pooler stream and cap prefetched bytes per hot expert.
+
+## Oct31 tiny pair-table capacity/compiler result
+
+The main-WGS 1280-byte free-space limit does not apply to the measured
+tiny build:214784dynamic bytes leaves17664 under our232448 cap. An
+independently adapted16-copy BF16 pair lookup fits at231168 total. CPU
+101024word cases preserve parent operand bits; complete sm90a standalone
+cores grow16->26static sites and add4dependentLDS, including3hoistable
+origin operations. No practical4.174518us one-token recovery argument
+for3%board gain is established. Defer exactform beforeH200;not a measured
+runtime loser or universal rejection of lookup methods. See
+[TINY_PAIR_LUT_RESEARCH_2026-10-31.md](TINY_PAIR_LUT_RESEARCH_2026-10-31.md)
+for scope, raw evidence, primary sources and reproduction.

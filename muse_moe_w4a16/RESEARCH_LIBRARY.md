@@ -15,7 +15,7 @@ BF16 activations, fresh-input CUDA graphs and per-route output norm.
 | REG112/GS4, fourth slots/deeper rings, early W2 prefetch | Measured negative or insufficient; do not repeat parameter affixes. |
 | Uniform stage body with zero-MMA or scalar initialization | Full local-memory controls/numerics pass, runtime loses3–10%; both tested forms closed. |
 | Publication/fixup elimination | Accepted sampled phase models do not establish practical>=3% opportunity; no blind fence/tail rewrite. |
-| FLUTE pair LUT | BF16 compatible in principle; duplication needs8–32KiB vs1280bytes free. Single-table gain unestablished. |
+| FLUTE pair LUT | Main WGS has1280B free, but measured tiny has17664B free and fits16copies. New exact CPU/sm90a fragment screen finds more address/LDS work than DQ7; defer this form before H200. See TINY_PAIR_LUT_RESEARCH_2026-10-31.md. |
 | qgemm-mx | Inspected Hopper performance kernel not implemented at pin. |
 | b12x | BF16 path exists; inspected native scale conversion targets SM120. No faster SM90 port established. |
 | Humming/vLLM native E2M1 paths | Reviewed native conversion requires newer architecture; generic alternatives not shown faster. |

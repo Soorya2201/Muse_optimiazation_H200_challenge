@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 21:27:52 UTC** from six live OKC boards. Overall **#151/1768**.
+Captured **2026-10-31 21:40:46 UTC** from six live OKC boards. Overall **#152/1768**.
 No track has reached rank1. Positions change as others submit. Compact evidence:
-[rank_summary_20261031212752.json](research/leaderboards/rank_summary_20261031212752.json).
+[rank_summary_20261031214046.json](research/leaderboards/rank_summary_20261031214046.json).
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
 |BF16 projections|249/1549|1.535843x|1.6523x|7.05%|
-|Routed experts|181/1255|2.372309x|2.7578x|13.98%|
+|Routed experts|181/1256|2.372309x|2.7578x|13.98%|
 |Attention decode|194/1198|2.603505x|3.2221x|19.20%|
-|Whole decoder|151/1114|2.211495x|2.4592x|10.07%|
+|Whole decoder|152/1115|2.211495x|2.4592x|10.07%|
 |Prefill|182/756|1.784958x|2.1551x|17.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;

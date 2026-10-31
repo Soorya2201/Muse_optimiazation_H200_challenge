@@ -6,6 +6,18 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Oct31 late tiny MoE follow-up:
+[pair-table screen](muse_moe_w4a16/TINY_PAIR_LUT_RESEARCH_2026-10-31.md).
+217indexedpaths/13repos,zero new blobs. FLUTEhead9eb83a1unchanged;
+currentleaderdolanzhao ownerquery15publicrepos/latestFeb2025, metadataonly,
+no identified challenge submission and no private-source inference.
+Corrected capacity scope:16KiB tablefits measuredtiny214784-byte allocation,
+not mainWGS231168-byte allocation. Own lossless CPUcodec/bankmodel and
+complete sm90a fragment comparison addressthe mechanism; more static
+address/LDS work and no practical4.17us M1recovery argument defer this
+exactform beforeH200. Apache2parent helper attribution retained in adjacent
+notice;no FLUTEsourcecopied. No GPUjob or new score.
+
 
 Oct31 late prefill SS follow-up:
 [H200 report](muse_prefill_layer/SS_PIPELINE_H200_2026-10-31.md),

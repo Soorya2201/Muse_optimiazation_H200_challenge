@@ -67,6 +67,34 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Oct31 tiny MoE pair-table screen complete; next sequential track attention
+
+Previous goal turn only refreshed ranks (no optimization progress). This
+cycle completes the unfinished FLUTE-inspired tiny pair-LUT CPU/compiler
+screen; no OKC job, submission or canonical change. Read
+muse_moe_w4a16/TINY_PAIR_LUT_RESEARCH_2026-10-31.md. Exact101024word checks
+preserve DQ7 BF16 operand bits;80000synthetic bank warps and adversarial
+witnesses verify interleaved tables. Tight bank maxima D1/8/16/32=8/4/2/1;
+archived preflight32/D bound is loose atD1, explicitly corrected in analysis.
+MainWGS231168shared has1280free; measuredtiny214784has17664free and fits
+16KiB table at231168total. This corrects scope, not a speedup claim.
+NVCC13sm90a complete standalonePTX453/SASS147 rows,zero stack/spills,
+parent/tableentry14/17regs,table16384staticbytes. Core16->26static sites:
+DQinteger9 vsaddress15+4LDS,scaling4unchanged,ABI3each;3originops may
+hoist but no instruction saving. Not integrated or GPUtested. Required
+M1cut4.174518us/16.2516% for3%board lacks validated causal budget; defer
+exactform beforeGPU, no automatic reset retry. Notice/completearchive kept.
+New publiccode217paths/13repos/0newblobs; FLUTEheadunchanged9eb83a1.
+MoEleaderdolanzhao ownerquery15publicrepos/latestFeb2025, metadataonly,
+no identified challenge source; not exhaustive/private-code access.
+Latest21:40:46UTCranks overall152/1768,BF16249/1549,MoE181/1256,
+attention194/1198,decoder152/1115,prefill182/756. Scoresunchanged.
+Freshbudgets MoE8/8,attention1/8,BF164/8,decoder1/8,prefill7/8routine;
+allsubmits0,reserveintact. RepoPRIVATEverified. NoGPUjoblive.
+Nextattention:readAGENTS/TASK/latestclosedfamilies and pursue a distinct
+plausible>=3% mechanism. Noagents. Preserve untracked
+research/public/madhavan_721c627/ untouched. Goalactive/incomplete.
+
 
 #### Oct31 prefill SS pipeline cycle TERMINAL; next sequential track MoE
 
