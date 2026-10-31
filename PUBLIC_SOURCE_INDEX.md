@@ -7,6 +7,20 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 ## Coverage status (2026-10-30)
 
 
+Oct31 late attention follow-up:
+[direct FP8 research](muse_attention_decode/DIRECT_FP8_RESEARCH_2026-10-31.md).
+Challenge index225paths/13repos,zero new blobs. Two new general primary
+repositories pinned with verified Git blobs/SHA-256 and Apache-2.0 notices:
+SageAttention-int4 7df231a (six files87,548bytes), FastPolynomialTranscendentals
+e022698 (six files53,698bytes). Source review finds the Sage LUT cutoff and
+QK quantization unsuitable for a direct compliant port; author RTX4090
+negative timing retained. GB200 exp2 data distinguish core/integrated cost;
+E2M1/A5 EFQ paper informs shared numerator/denominator operands but cannot
+be ported unchanged. No downloaded module imported/executed. Independently
+implemented directE4M3 CPU/CUDA candidates remain research-only after
+numerical/compiler screens;no H200 check, score gain or production change.
+
+
 Oct31 late prefill follow-up:
 [components](muse_prefill_layer/PUBLIC_COMPONENT_FOLLOWUP_2026-10-31.md),
 [research library](muse_prefill_layer/RESEARCH_LIBRARY.md),

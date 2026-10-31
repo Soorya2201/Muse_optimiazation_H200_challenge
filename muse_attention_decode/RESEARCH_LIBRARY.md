@@ -1,8 +1,19 @@
 # Attention research mapped to the current implementation
 
-Updated October 29, 2026. This records mechanisms and transfer limits, rather than importing
+Updated October 31, 2026. This records mechanisms and transfer limits, rather than importing
 published speedup numbers into our score. The verified parent remains vjeux f35a41e,
 scored **2.603505x**. Source reviews and experiments are in PUBLIC_RESEARCH.md and root RESULTS.md.
+
+Latest cycle: [direct FP8 quantizer and primary-source review](DIRECT_FP8_RESEARCH_2026-10-31.md).
+Two actual CPU/CUDA mappings pass1.11million distinct CPU inputs; standalone
+sm90a costs remain too high to justify H200 use (not a measured GPU slowdown).
+The branchless implementation removes reconvergence and reduces32-value
+register use48->32, but retains760staticinstructions vsnative112.
+New pinned Apache-2.0 sources:
+[SageAttention direct E4M3 LUT](https://github.com/zihaomu/SageAttention-int4/tree/7df231aa5c6c1e9972e69d2d6288269b31ce59cf)
+and [Fast Polynomial Transcendentals](https://github.com/MrHuff/fast-polynomial-transcendentals/tree/e022698f44c0e5816ca0cdb4d41bb64a1753c86e).
+The dated report distinguishes their hardware/format/cutoff limits and
+retains all evidence. No source port, score change or new GPU check.
 
 |Primary source|Relevant mechanism|Current-source finding and next action|
 |---|---|---|

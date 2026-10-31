@@ -1,0 +1,51 @@
+{
+  "captured_utc": "2026-10-31T20:08:32.874494+00:00",
+  "repository": "MrHuff/fast-polynomial-transcendentals",
+  "commit": "e022698f44c0e5816ca0cdb4d41bb64a1753c86e",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/MrHuff/fast-polynomial-transcendentals/e022698f44c0e5816ca0cdb4d41bb64a1753c86e/LICENSE",
+      "bytes": 11357,
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/MrHuff/fast-polynomial-transcendentals/e022698f44c0e5816ca0cdb4d41bb64a1753c86e/README.md",
+      "bytes": 13130,
+      "git_blob": "8cde5351f2d7bda8abe3f36d5ecd6b708ac880f8",
+      "sha256": "c940eb3433e2bc112cd9e0b42bd25e6c287f61365ec0b9a0316e02d101dcbf88"
+    },
+    {
+      "path": "autonumerics_zero/LICENSE",
+      "url": "https://raw.githubusercontent.com/MrHuff/fast-polynomial-transcendentals/e022698f44c0e5816ca0cdb4d41bb64a1753c86e/autonumerics_zero/LICENSE",
+      "bytes": 11358,
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "autonumerics_zero/evolution/fit_exp2_softmax.py",
+      "url": "https://raw.githubusercontent.com/MrHuff/fast-polynomial-transcendentals/e022698f44c0e5816ca0cdb4d41bb64a1753c86e/autonumerics_zero/evolution/fit_exp2_softmax.py",
+      "bytes": 4464,
+      "git_blob": "4426487bd57f48076c5d0a6e30ab933503eced2d",
+      "sha256": "15a4bcc2b1aa08191849a1affdb97ae1f2b8740a6779f1a76b1f461eec3448d7"
+    },
+    {
+      "path": "evidence/report-data/b5_exp2_apples_to_apples_d3_pwl2_d2_gb200.json",
+      "url": "https://raw.githubusercontent.com/MrHuff/fast-polynomial-transcendentals/e022698f44c0e5816ca0cdb4d41bb64a1753c86e/evidence/report-data/b5_exp2_apples_to_apples_d3_pwl2_d2_gb200.json",
+      "bytes": 12041,
+      "git_blob": "85d37e83807d63bc61e481c2b893b544b0c99dae",
+      "sha256": "828072e505947d6b735f13e08d96270c96306c8df1e92d1b8f2423db4d27ecf1"
+    },
+    {
+      "path": "evidence/report-data/b5_exp2_softmax_constrained_fits.json",
+      "url": "https://raw.githubusercontent.com/MrHuff/fast-polynomial-transcendentals/e022698f44c0e5816ca0cdb4d41bb64a1753c86e/evidence/report-data/b5_exp2_softmax_constrained_fits.json",
+      "bytes": 1348,
+      "git_blob": "a289c981105c99b4ede0219169041d3d495cd5f3",
+      "sha256": "b6daa6c957496555c0baac619343a75c6cbcac934af20fdc6333ef3c8e80a92c"
+    }
+  ],
+  "scope": "Public primary source/data, static research only; no downloaded modules imported or executed. GB200 evidence is not H200 evidence. Only the attention exp2 applicability is reviewed this cycle."
+}

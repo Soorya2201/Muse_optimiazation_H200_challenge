@@ -68,6 +68,48 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 attention direct-FP8 CPU/compiler cycle complete; next track BF16
+
+Read `muse_attention_decode/DIRECT_FP8_RESEARCH_2026-10-31.md`. The previous
+invocation only refreshed ranks (no optimization progress); this continuation
+adds actual direct log2-to-E4M3 CPU/CUDA implementations and evidence.
+Parent PK2 uses the same packed probabilities for PV and denominator WGMMA,
+so fused code generation can remove exp+CVT together without key skipping.
+Branching and branchless models both pass1,113,894distinct FP32 inputs
+against80digit ideal-exp2 rounding thresholds plus10,000byte-pack/overflow
+cases. Negative-infinity masks/zero tie/subnormals/saturation covered.
+Not exhaustive FP32 proof or native ex2.approx bit-equivalence/GPU validation.
+
+Two complete NVCC13/sm90a CE responses have no truncation. Nativepack32:
+29regs/112staticinstructions;branchingdirect48/848,32BSSY/BSYNCpairs;
+branchless32/760,0reconvergencepairs;all0stack/spills,32shuffles/directarm.
+Pack4alsoarchived. Counts include prologue/padding and do not prove runtime.
+Both exact mapping forms deferred before H200 due unconvincing cost case;
+no fullattention candidate/check/submit. Separatecurvature CPU65,537samples
+maxerror.002701730546,endpoint1/2/monotonicpasses;threeFMAformdeferred.
+Equivalentknownquadratic family found in FastPolynomialTranscendentals,
+not claimed novel;Apache2authorrepoe022698sixfiles53,698bytespinned.
+
+New Apache2SageAttention-int4fork7df231a:sixfiles87,548byteshashverified.
+Author's direct64entryE4M3LUT reportedly.873–.926x onRTX4090;notH200proof.
+Staticcode's delta>=8.807zero cutoff removes still-representableprobabilities,
+andINT4/INT8QKdoesnotmatchourallowedquerycontract;noport. EFQSoftmaxE2M1/A5
+format/hardwareexclude directport. Primarysources/provenance/completefailed
+selectionevidencearchived;no downloadedmoduleimported/executed.
+Lateattentionindexedsearch225paths/13repos,0newblobs. HistoricalIMPROVISATIONS
+FP8QK/one-read/producerideas explicitlymarkedalreadyimplementedintheparent.
+
+NoOKCjobs/productionchanges:thisUTCdayMoE8/8,attention1/8,BF163/8,
+decoder1/8,prefill5/8routinechecks;allsubmits0,reserveuntouched.
+Fresh20:00:53UTCrank_summary_20261031200053.json:overall149/1764,
+decoder149/1107,MoE180/1252,attention193/1195,BF16246/1546,prefill181/754;
+allscoredspeedupsunchanged. RepoPRIVATEreverified. NoGPUjoblive.
+Goalactive/incomplete;no rank1. Workstaysinexternalworkspace,internalbackup
+preserved. Untrackedresearch/public/madhavan_721c627/mustneverbestaged.
+NextsequentialtrackBF16:readitsAGENTS/TASK/latestDEVICE_EVENT/TMAreports,
+finddistinctplausible>=3%leadbeforeusingacheck. Noagents. Pushfollows.
+
+
 #### Oct31 MoE source/tiny-phase cycle complete; next sequential track attention
 
 Previous goal turn made progress: prefill K64 implementation/H200 evidence

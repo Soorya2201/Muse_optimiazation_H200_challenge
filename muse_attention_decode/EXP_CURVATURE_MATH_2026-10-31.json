@@ -1,0 +1,18 @@
+{
+  "scope": "CPU one-period FP32/libc-fmaf exploratory check only; no GPU test.",
+  "status": "pass",
+  "samples": 65537,
+  "coefficient": 0.3397660255432129,
+  "worst_relative_error": [
+    0.0027017305459990926,
+    0.1880035400390625
+  ],
+  "script_sha256": "0bbd0e48c8b052316b31c2812a7c43c21c07082fccbe61fbaba73cdfe4bff002",
+  "endpoints": [
+    1.0,
+    2.0
+  ],
+  "ideal_equivalent": "1 + (1-A)*f + A*f*f, f in [0,1]; not a novel polynomial family.",
+  "prior_art": "https://arxiv.org/html/2610.00049v1#A2.SS1",
+  "disposition": "Deferred without GPU use: accuracy improves on linear interpolation, but extra mantissa extraction/three FMAs supplies no credible cost advantage over the already losing bias-range family."
+}

@@ -1,0 +1,51 @@
+{
+  "captured_utc": "2026-10-31T20:06:39.705232+00:00",
+  "repository": "zihaomu/SageAttention-int4",
+  "commit": "7df231aa5c6c1e9972e69d2d6288269b31ce59cf",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/zihaomu/SageAttention-int4/7df231aa5c6c1e9972e69d2d6288269b31ce59cf/LICENSE",
+      "bytes": 11357,
+      "git_blob": "927221d60ead6d111f4083b06c39a1be702dbb08",
+      "sha256": "178f46f58127373d449565589a32c2b5b60c082934618c17b7ce6890c61ef394"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/zihaomu/SageAttention-int4/7df231aa5c6c1e9972e69d2d6288269b31ce59cf/README.md",
+      "bytes": 20915,
+      "git_blob": "24da264fefe2da56cd0e7c7b4233c5d53518b473",
+      "sha256": "31af76e54d1a2c87e32b9e5700d1dd1d854365331b3ffa55eced27fb0e31c17b"
+    },
+    {
+      "path": "csrc/math.cuh",
+      "url": "https://raw.githubusercontent.com/zihaomu/SageAttention-int4/7df231aa5c6c1e9972e69d2d6288269b31ce59cf/csrc/math.cuh",
+      "bytes": 6705,
+      "git_blob": "635f34eb730d2236b13f44f9b29e8147339da853",
+      "sha256": "b9c64b5eba12897a3e967f7a262c3c8ddc6e61890541f685d034d49bae2acd39"
+    },
+    {
+      "path": "csrc/qattn/attn_utils.cuh",
+      "url": "https://raw.githubusercontent.com/zihaomu/SageAttention-int4/7df231aa5c6c1e9972e69d2d6288269b31ce59cf/csrc/qattn/attn_utils.cuh",
+      "bytes": 39835,
+      "git_blob": "bc923cb0e1e243e2c4550d29ab2eaabac8f919b1",
+      "sha256": "dd52783c3503c8e3e3fe1aed1ea687811c7303f963369311e196b04b19bd8f33"
+    },
+    {
+      "path": "sageattention/lut_softmax.py",
+      "url": "https://raw.githubusercontent.com/zihaomu/SageAttention-int4/7df231aa5c6c1e9972e69d2d6288269b31ce59cf/sageattention/lut_softmax.py",
+      "bytes": 4656,
+      "git_blob": "0fe9b81cb983e931e4a52bea87df13c471df140f",
+      "sha256": "6acbf7e45498e760ac9b452092084ce800c9a82d930a1802b3ceb78f54baa318"
+    },
+    {
+      "path": "bench/bench_qk_int8_pv_fp8_cuda_lut.py",
+      "url": "https://raw.githubusercontent.com/zihaomu/SageAttention-int4/7df231aa5c6c1e9972e69d2d6288269b31ce59cf/bench/bench_qk_int8_pv_fp8_cuda_lut.py",
+      "bytes": 4080,
+      "git_blob": "b2532385dd85ac6a85cf91bda6426799adc05175",
+      "sha256": "3227526d41a2c3b5f47c4e94843748feb2f01131d036e3962b5b8f6ed87ea52f"
+    }
+  ],
+  "scope": "Public primary source static research only. No downloaded modules imported or executed; no attention implementation ported. Ada INT4/INT8 QK paths are ineligible here; isolated LUT idea studied."
+}

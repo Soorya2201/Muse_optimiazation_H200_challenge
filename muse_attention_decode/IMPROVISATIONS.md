@@ -2,6 +2,16 @@
 
 The current verified local submission is `submission.py` = `submission_v15_vjeux_f35a41e.py`.
 
+Oct31 latest: [direct FP8 generation](DIRECT_FP8_RESEARCH_2026-10-31.md)
+implements branching/branchless mappings, validates1.11million distinct CPU
+inputs, and archives complete sm90a codegen. Both forms deferred before GPU
+use because generated cost offers no credible gain yet. Two new licensed
+public sources and the prior-art quadratic family are recorded. No scored
+source change or new check. The older optimization matrix and "Novel next
+ideas" below describe pre-v15 work: current v15 already has one-read64-row
+verify tiles, FP8 QK WGMMA and specialized page-index producers. Treat those
+as implemented mechanisms, not outstanding novel opportunities.
+
 ## Oct29 public-source reproduction
 
 Exact Apache-2.0 vjeux attention source, identical to ruwwww's public file, passed
