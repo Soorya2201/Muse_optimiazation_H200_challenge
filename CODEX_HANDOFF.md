@@ -122,10 +122,14 @@ MoE2/8checks,decoder1/8,prefill4/8,othertracks0;zero submitsalltracks.
 Snapshot `research/leaderboards/snapshot_20261031075648.json`:
 overall122/1740,decoder122/1090,MoE157/1225,attention172/1169,
 BF16222/1520,prefill163/732. PrivateGitHubverified.
-Externalvolume remounted duringthisturn;itsoldcheckoutwas4ff92f withan
-untrackedresearch/public/madhavan_721c627 folder. Internal continuation
-holds thiswork; synchronize committedwork back safely, preserveuntracked
-files,andverifybothheads before switching the authoritativeworkpath.
+Externalvolume remounted duringthisturn. Itsoldcheckout4ff92f was safely
+fast-forwarded to56a11c4;the untrackedresearch/public/madhavan_721c627
+folder remains untouched and was not published. Forty-six ignoredprofile
+artifacts were copied frominternalcontinuation withoutoverwriting any
+existingfile;zero conflicts. **Use the original external project path as
+the authoritative workspace again.** Internal continuation is a backup;
+keepitshead synchronized afterthishandoffcommit. All committedreceipts,
+sources,research and profiles are now available at the original path.
 
 #### Oct31 decoder register/GS4 cycle complete; no eligible gain
 
