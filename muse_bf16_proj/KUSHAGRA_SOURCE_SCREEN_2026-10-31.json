@@ -1,0 +1,306 @@
+{
+  "captured_utc": "2026-10-31T10:29:30.771279+00:00",
+  "repository": "Kushagrabainsla/muse-spark-open",
+  "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+  "owner_rank": {
+    "rank": 1025,
+    "speedup": 1.1903,
+    "job": "fef2017d39ec4cc2"
+  },
+  "our_rank": {
+    "rank": 229,
+    "team": "Soorya2201",
+    "speedup": 1.5358,
+    "first": false,
+    "ahead": 228,
+    "to_first": 1.0759
+  },
+  "files": [
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_bf16_proj/submission_triton.py",
+      "blob_sha": "58b48fe82020be7947a04ae8d70f9e25a38eefa9",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_bf16_proj/submission_triton.py",
+      "sha256": "01906a97e1f28a1b68aa7ddfd7c0e76a5bb278de542b3f02dcf09e56ee1eb4c6",
+      "bytes": 6273,
+      "functions": [
+        {
+          "name": "_skinny_kernel",
+          "line": 47,
+          "end": 97
+        },
+        {
+          "name": "_config",
+          "line": 100,
+          "end": 114
+        },
+        {
+          "name": "_launch",
+          "line": 117,
+          "end": 125
+        },
+        {
+          "name": "prepare",
+          "line": 128,
+          "end": 148
+        },
+        {
+          "name": "kernel_fn",
+          "line": 151,
+          "end": 165
+        }
+      ],
+      "interpretation": "Triton split-K GEMM and last-CTA global fix-up, BF16 hi+lo router; historical1.058x check. Adds no new component beyond current fusion/streaming."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_bf16_proj/submission.py",
+      "blob_sha": "26dc10ae5234f56dce8f9f9ab7415d025108ee99",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_bf16_proj/submission.py",
+      "sha256": "22a3d68eb99b3f96037d7b86ba63587d2004528f5fb9c615338c3c57615e2001",
+      "bytes": 17349,
+      "functions": [
+        {
+          "name": "_router_gemm",
+          "line": 50,
+          "end": 86
+        },
+        {
+          "name": "_router_gemm_launch",
+          "line": 89,
+          "end": 97
+        },
+        {
+          "name": "_module",
+          "line": 297,
+          "end": 305
+        },
+        {
+          "name": "_mt",
+          "line": 308,
+          "end": 309
+        },
+        {
+          "name": "_config",
+          "line": 323,
+          "end": 327
+        },
+        {
+          "name": "_pack",
+          "line": 330,
+          "end": 335
+        },
+        {
+          "name": "_packed",
+          "line": 338,
+          "end": 342
+        },
+        {
+          "name": "_launch",
+          "line": 345,
+          "end": 350
+        },
+        {
+          "name": "prepare",
+          "line": 353,
+          "end": 375
+        },
+        {
+          "name": "kernel_fn",
+          "line": 378,
+          "end": 394
+        }
+      ],
+      "interpretation": "Same bytes as E14:small-m cluster-pushed partials with one cluster barrier; fused hi+lo router at larger M. Current parent already has compressed streaming and selected faster router paths."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_bf16_proj/submission_cuda.py",
+      "blob_sha": "6a33c3e4a656588a7a6365d1ad484f386f007557",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_bf16_proj/submission_cuda.py",
+      "sha256": "5403ffc7b8966dae4049dd4e84a1695baa8b082b815b13db77dfe9633cde5c9e",
+      "bytes": 12207,
+      "functions": [
+        {
+          "name": "_module",
+          "line": 213,
+          "end": 218
+        },
+        {
+          "name": "_config",
+          "line": 221,
+          "end": 231
+        },
+        {
+          "name": "_pack",
+          "line": 234,
+          "end": 239
+        },
+        {
+          "name": "_packed",
+          "line": 242,
+          "end": 246
+        },
+        {
+          "name": "_launch",
+          "line": 249,
+          "end": 255
+        },
+        {
+          "name": "prepare",
+          "line": 258,
+          "end": 279
+        },
+        {
+          "name": "kernel_fn",
+          "line": 282,
+          "end": 295
+        }
+      ],
+      "interpretation": "CUDA direct BF16 loads, lossless K permutation, cluster DSMEM split-K reduction; earlier family, no improvement over current C12/SK2/WGMMA portfolio established."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_bf16_proj/submission_e14.py",
+      "blob_sha": "26dc10ae5234f56dce8f9f9ab7415d025108ee99",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_bf16_proj/submission_e14.py",
+      "sha256": "22a3d68eb99b3f96037d7b86ba63587d2004528f5fb9c615338c3c57615e2001",
+      "bytes": 17349,
+      "functions": [
+        {
+          "name": "_router_gemm",
+          "line": 50,
+          "end": 86
+        },
+        {
+          "name": "_router_gemm_launch",
+          "line": 89,
+          "end": 97
+        },
+        {
+          "name": "_module",
+          "line": 297,
+          "end": 305
+        },
+        {
+          "name": "_mt",
+          "line": 308,
+          "end": 309
+        },
+        {
+          "name": "_config",
+          "line": 323,
+          "end": 327
+        },
+        {
+          "name": "_pack",
+          "line": 330,
+          "end": 335
+        },
+        {
+          "name": "_packed",
+          "line": 338,
+          "end": 342
+        },
+        {
+          "name": "_launch",
+          "line": 345,
+          "end": 350
+        },
+        {
+          "name": "prepare",
+          "line": 353,
+          "end": 375
+        },
+        {
+          "name": "kernel_fn",
+          "line": 378,
+          "end": 394
+        }
+      ],
+      "interpretation": "Exact default bytes, author scored1.1903x; no new replacement candidate."
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "path": "muse_bf16_proj/submission_c12.py",
+      "blob_sha": "75a40d10597d716189dd8b270ca6bded0dfb7298",
+      "html_url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_bf16_proj/submission_c12.py",
+      "sha256": "16a771201cb229c6024cfa47fbf9ee48ff871e9f8c9d0480e556e24b63fb18c8",
+      "bytes": 25878,
+      "functions": [
+        {
+          "name": "_router_gemm",
+          "line": 52,
+          "end": 88
+        },
+        {
+          "name": "_router_gemm_launch",
+          "line": 91,
+          "end": 99
+        },
+        {
+          "name": "_module",
+          "line": 352,
+          "end": 361
+        },
+        {
+          "name": "_mt",
+          "line": 364,
+          "end": 365
+        },
+        {
+          "name": "_config",
+          "line": 382,
+          "end": 386
+        },
+        {
+          "name": "_pack",
+          "line": 389,
+          "end": 394
+        },
+        {
+          "name": "_compress12",
+          "line": 397,
+          "end": 428
+        },
+        {
+          "name": "_packed",
+          "line": 431,
+          "end": 435
+        },
+        {
+          "name": "_launch",
+          "line": 438,
+          "end": 456
+        },
+        {
+          "name": "prepare",
+          "line": 459,
+          "end": 507
+        },
+        {
+          "name": "kernel_fn",
+          "line": 510,
+          "end": 526
+        }
+      ],
+      "interpretation": "Optional lossless12-bit layout with per-CTA exception lists; author notes sparse-correction tails consume saving and M16/32 decoder is slower. Not shipped; current parent already uses newer compressed paths."
+    }
+  ],
+  "notes": {
+    "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/0778ecd8293e375ffe33faa466db0231929aaac3/muse_bf16_proj/EXPERIMENTS.md",
+    "sha256": "4620940433ba4b33dc9d23f849313a7ab18b3867454ddaaf8f96e20913003037",
+    "bytes": 10690
+  },
+  "license": "Not established; no permissive license inferred.",
+  "scope": "Static architecture/dispatch review plus full primary experiment-note read; not exhaustive per-line conformance or our GPU validation.",
+  "adoption": "No source executed,ported,or whole-source mirrored; links,hashes,and interpretations archived.",
+  "reported_negatives": [
+    "E6 split-K dense GEMM",
+    "E9 cuBLASLt heuristics little improvement",
+    "E10 occupancy1/cluster synchronization and X/partial traffic",
+    "E11 global atomic reduction slower",
+    "E12 sparse-correction tail and M16/32 decode overhead",
+    "E13 thirteen-bit codec still not lossless,slower"
+  ]
+}

@@ -1,5 +1,21 @@
 # BF16 projection optimization research library
 
+Oct31 continuation overrides historical score/queue labels below: canonical
+is exact alygg77 v34,1.535843x. Read
+[C12 layout transfer](C12_PERMUTE_RESEARCH_2026-10-31.md) for the current
+bounded experiment and its terminal outcome. It transfers an already
+embedded MIT decoder's sign permutation to nine older SK2 routes,retaining
+precision and pipelines. CPU223904cases prove identical fragments;
+standalone sm90a decode12to9instructions is not a runtime gain claim.
+The old/new synthetic comparison shares one weight pointer and uses
+actual/matched/duplicate controls,nearby shapes and FP64 references. No
+canonical promotion is implied by the diagnostic parent's point score.
+The exact Chen/Ali controls are complete. TMA v38's configurations and the
+cluster/compression negatives remain closed. Fresh public code index244
+paths/13repos,including five new BF16 files atKushagrabainsla0778ecd,
+does not identify a stronger replacement;links/hashes and static review
+are in`KUSHAGRA_SOURCE_SCREEN_2026-10-31.json`.
+
 Last updated: 2026-10-29. This is a living, evidence-ranked library for the
 `muse_bf16_proj` track. It covers legitimate, CUDA-graph-capturable methods that preserve BF16
 weights exactly (or use the task's allowed FP32-router hi+lo representation). It is not a claim

@@ -3,7 +3,14 @@
 The broader, source-indexed catalog of published and challenge-specific techniques is maintained
 in `RESEARCH_LIBRARY.md`. This file remains the chronological implementation and measurement log.
 
-The current scored and verified submission is `submission.py` = exact public Nathen v18.
+The current scored submission is exact alygg77 v34,1.535843x;the Nathen-v18
+score/queue labels below are historical. Oct31's distinct experiment
+transfers the embedded MIT nine-instruction C12 sign layout to nine older
+SK2 routes without changing pipeline/geometry/precision. CPU223904cases
+and standalone sm90a12to9SASS instruction comparison pass. H200 evidence,
+failure details and adoption decision are recorded in
+`C12_PERMUTE_RESEARCH_2026-10-31.md`. The timed diagnostic dispatch remains
+the unchanged parent,so its point score cannot establish a gain.
 
 ## Current result and profile
 

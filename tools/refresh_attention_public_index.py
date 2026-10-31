@@ -3,6 +3,7 @@ import datetime
 import json
 from pathlib import Path
 import subprocess
+import sys
 import urllib.parse
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,7 +14,9 @@ def command(args):
     return json.loads(r.stdout)
 
 
-track = 'muse_attention_decode'
+track = sys.argv[1] if len(sys.argv) > 1 else 'muse_attention_decode'
+assert track in {'muse_attention_decode', 'muse_bf16_proj', 'muse_decode_layer',
+                 'muse_moe_w4a16', 'muse_prefill_layer'}
 old = json.loads((ROOT / track / 'GLOBAL_CODE_SEARCH_2026-10-30.json').read_text())
 old_items = {(r['repo'], r['path'], r['blob_sha']) for r in old['items']}
 target = ROOT / track / 'GLOBAL_CODE_SEARCH_2026-10-31.json'

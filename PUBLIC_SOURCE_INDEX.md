@@ -6,6 +6,16 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Oct31 BF16 follow-up:
+[C12 layout-transfer research](muse_bf16_proj/C12_PERMUTE_RESEARCH_2026-10-31.md)
+adapts an embedded,pinned MIT Nathen decoder to nine older SK2 routes.
+It is a component transfer,not an original codec claim. Exact bit-equivalence
+and standalone sm90a instruction counts precede independent H200 controls;
+the dated report records terminal status. Public-code search now244paths/
+13repos,ten newentries:five BF16 files atKushagrabainsla0778ecd statically
+screened and hash-verified,five decoder references left for that track.
+No new unlicensed source executed,ported or whole-source mirrored.
+
 Oct31 attention delta:
 [public source follow-up](muse_attention_decode/PUBLIC_SOURCE_FOLLOWUP_2026-10-31.md)
 refreshes its code index to225paths/13repositories, adding18entries.

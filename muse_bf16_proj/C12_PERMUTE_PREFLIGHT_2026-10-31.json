@@ -1,0 +1,221 @@
+{
+  "scope": "Offline AST codegen validation and load-weight planning, not a measured gain.",
+  "source_sha256": "99f9deba704a7bf85e46dfe0e162e2feff49db8a18902f8bf565251ff3ea0a38",
+  "native_sha256": "77b422c29d857ed0da926dda66098faf7bd35da0ae4e1948cfa64a1bbede9765",
+  "native_bytes": 125854,
+  "specs": [
+    {
+      "id": 0,
+      "layer": "qkv_gate",
+      "m": 8,
+      "cfg": [
+        "qkv8t_r144",
+        "qkv_gate",
+        2304,
+        24,
+        3,
+        1,
+        4,
+        2,
+        2,
+        1
+      ],
+      "args": "1,8,3,1,4,2,5,true,false,2,1,__nv_bfloat16",
+      "family": 1,
+      "pk": true,
+      "n": 2304
+    },
+    {
+      "id": 1,
+      "layer": "unpooler",
+      "m": 8,
+      "cfg": [
+        "slice8_r192",
+        "unpooler",
+        1024,
+        8,
+        1,
+        1,
+        8,
+        2,
+        2,
+        1
+      ],
+      "args": "1,8,1,1,8,2,4,true,false,2,1,__nv_bfloat16",
+      "family": 1,
+      "pk": true,
+      "n": 1024
+    },
+    {
+      "id": 2,
+      "layer": "qkv_gate",
+      "m": 16,
+      "cfg": [
+        "qkv16t_r200",
+        "qkv_gate",
+        2304,
+        24,
+        3,
+        1,
+        4,
+        2,
+        2,
+        1
+      ],
+      "args": "1,16,3,1,4,2,5,true,false,2,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 2304
+    },
+    {
+      "id": 3,
+      "layer": "o",
+      "m": 16,
+      "cfg": [
+        "o16t_r68",
+        "o",
+        8192,
+        32,
+        2,
+        2,
+        1,
+        4,
+        2,
+        1
+      ],
+      "args": "1,16,2,2,1,4,3,true,false,2,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    },
+    {
+      "id": 4,
+      "layer": "unpooler",
+      "m": 16,
+      "cfg": [
+        "unpooler16t_r72",
+        "unpooler",
+        8192,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "1,16,2,2,2,2,3,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    },
+    {
+      "id": 5,
+      "layer": "qkv_gate",
+      "m": 32,
+      "cfg": [
+        "qkv32_r208",
+        "qkv_gate",
+        2304,
+        24,
+        3,
+        1,
+        4,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,3,1,4,2,4,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 2304
+    },
+    {
+      "id": 6,
+      "layer": "o",
+      "m": 32,
+      "cfg": [
+        "o32h_r100",
+        "o",
+        8192,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,2,2,2,2,3,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    },
+    {
+      "id": 7,
+      "layer": "pooler",
+      "m": 32,
+      "cfg": [
+        "pooler32_r144",
+        "pooler",
+        4096,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,2,2,2,2,5,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 4096
+    },
+    {
+      "id": 8,
+      "layer": "unpooler",
+      "m": 32,
+      "cfg": [
+        "u32_r96",
+        "unpooler",
+        8192,
+        32,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "args": "2,32,2,2,2,2,3,true,false,1,1,__nv_bfloat16",
+      "family": 0,
+      "pk": false,
+      "n": 8192
+    }
+  ],
+  "models": [
+    {
+      "assumed_target_time_cut": 0.05,
+      "board_proxy": 1.016023125114081
+    },
+    {
+      "assumed_target_time_cut": 0.1,
+      "board_proxy": 1.03291161336767
+    },
+    {
+      "assumed_target_time_cut": 0.15,
+      "board_proxy": 1.0507524264180756
+    },
+    {
+      "assumed_target_time_cut": 0.25,
+      "board_proxy": 1.0897095737485467
+    },
+    {
+      "assumed_target_time_cut": 1.0,
+      "board_proxy": 1.836549522066978
+    }
+  ],
+  "parent_job": "a3d4758c1e174aba",
+  "method": "All nine targeted cells changed by each assumed fraction; all other cells unchanged. No phase cost measured;12-to9 static decoder count is not a whole-kernel time-cut prediction."
+}
