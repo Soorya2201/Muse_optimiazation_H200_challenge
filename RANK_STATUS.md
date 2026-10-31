@@ -1,15 +1,15 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 16:54:11 UTC** from the live OKC boards. Overall **#142/1757**.
+Captured **2026-10-31 18:09:50 UTC** from the live OKC boards. Overall **#145/1760**.
 No track has reached rank1. Positions change as others submit.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|241/1537|1.535843x|1.6523x|7.05%|
-|Routed experts|176/1243|2.372309x|2.7578x|13.98%|
-|Attention decode|186/1185|2.603505x|3.2221x|19.20%|
-|Whole decoder|142/1100|2.211495x|2.4178x|8.53%|
-|Prefill|175/746|1.784958x|2.1220x|15.88%|
+|BF16 projections|243/1542|1.535843x|1.6523x|7.05%|
+|Routed experts|178/1245|2.372309x|2.7578x|13.98%|
+|Attention decode|190/1189|2.603505x|3.2221x|19.20%|
+|Whole decoder|145/1106|2.211495x|2.4178x|8.53%|
+|Prefill|178/750|1.784958x|2.1551x|17.18%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -109,3 +109,12 @@ reject all fixed policies; the final read-flush best worst-group proxy is
 muse_bf16_proj/DEVICE_EVENT_METHOD_2026-10-31.md. The external workspace
 volume is unavailable; the current pushed work and recovered V41 evidence
 are maintained in /Users/soorya/muse_work/continuation_20261030.
+
+Oct31 decoder fresh-source/compiler cycle: no H200 check or scored change.
+New licensed trxphxle measurement data and18verified route tuples narrow
+arithmetic/reread-only leads. A delayed-activation-wait source transform
+compiles in a reduced sm90a build but has no practical>=3%runtime case yet.
+See muse_decode_layer/PUBLIC_DELTA_AND_OPERAND_SCREEN_2026-10-31.md. The
+peer precision note distinguishes policy-unconfirmed higher-FP32 fusion
+from the small-T FP32-to-BF16 router reduction already corrected here.
+Passing tests are not an organizer ruling on every fused intermediate.

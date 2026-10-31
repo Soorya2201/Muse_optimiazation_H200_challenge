@@ -1,0 +1,152 @@
+{
+  "repo": "trxphxle/okc-2026-muse-kernels",
+  "commit": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+  "license": "Apache-2.0",
+  "temporary_root": "/tmp/muse_decoder_trxphxle_72db638",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "dc6b2c88416d6700fa3fb2ff308a278517df2f0d",
+      "sha256": "2cb0f0ee6c546f260f4184c607983d0603da7714b6a4a2d0ece6b2eb5261c284",
+      "bytes": 9826,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/README.md"
+    },
+    {
+      "path": "licenses/NOTICE.alygg77",
+      "git_blob": "8d1069372b982b1f4fc7bcf263635ba56594a73c",
+      "sha256": "3ff2a7331b3ee752377c9147edb3fd986e78d78a448ad487850e15a38bf833d5",
+      "bytes": 1547,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/licenses/NOTICE.alygg77"
+    },
+    {
+      "path": "kernels/BEST.json",
+      "git_blob": "1a33cd84824410838845db310fdcfed5eeb50b0d",
+      "sha256": "97367602eaaee8dc84410f82b2dee74c13e54d862359ff4118b47341f18d176a",
+      "bytes": 3312,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/kernels/BEST.json"
+    },
+    {
+      "path": "kernels/decode_layer.py",
+      "git_blob": "7b2e3a17f1dce47130b1a7cfe9318dfc99e0bd5a",
+      "sha256": "053dbacc8f0de4e6111ccb89cb91f629840852cf482a6ca423fe0eaff419c086",
+      "bytes": 825707,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/kernels/decode_layer.py"
+    },
+    {
+      "path": "results/MODAL-COUNTERS.md",
+      "git_blob": "59b2df79fa77119a436d2f63890ddd150764d833",
+      "sha256": "1ec11ad23bc1c284b4aafc5fc9e6d9bb5ae323dc32924cf64deb193d064774b2",
+      "bytes": 2689,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/results/MODAL-COUNTERS.md"
+    },
+    {
+      "path": "results/MODAL-LAB.md",
+      "git_blob": "8a153580d3b21a418608a3fc4cc2b69b065a5410",
+      "sha256": "96aac96be814c86be3f6fdabf398ad11e27171f9064a0320b745cfea3824fd86",
+      "bytes": 9028,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/results/MODAL-LAB.md"
+    },
+    {
+      "path": "experiments/research/FINDINGS.md",
+      "git_blob": "b7385b1d3b2ffd7fffe334c9d5a7d4efdf5c1c5c",
+      "sha256": "d3ecfbb590332df05deee4d9557b0907c323450e6dd2237c912509c0b8ae549d",
+      "bytes": 55988,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/research/FINDINGS.md"
+    },
+    {
+      "path": "experiments/research/PRECISION.md",
+      "git_blob": "cb8f1522ccfefd1f1b98d83e32c17e38e0dd1924",
+      "sha256": "53cb0d4e96077c18b0dd9b6933e41f96dcb3260c1e0bd453e3efd224df7197a9",
+      "bytes": 18214,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/research/PRECISION.md"
+    },
+    {
+      "path": "experiments/experts-sched/LOG.md",
+      "git_blob": "bc8ee9aa9c7f7bdd5d911678b516c3266ac7b0f6",
+      "sha256": "f7f5a3d3c732a8fb7801880f4955a30d9435b11a3953b3a3b7a7cfe70a62965e",
+      "bytes": 50834,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-sched/LOG.md"
+    },
+    {
+      "path": "experiments/experts-v32/LOG.md",
+      "git_blob": "3fe6a18c095cbfa92854032b02ccebdcce8f1c16",
+      "sha256": "4b6cdab8e5e2f7e61966eb3ec4f77bac2cb27cebde02ee6bead4c7df9853e5b1",
+      "bytes": 43058,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-v32/LOG.md"
+    },
+    {
+      "path": "experiments/experts-v32/attribution-summary.json",
+      "git_blob": "b690ea81d659810de9231412229ed2094f1463d6",
+      "sha256": "4eb6e36df5a3a55e90c4d74836cd41636b50688d1a3616bbb868197f13b76f67",
+      "bytes": 15300,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-v32/attribution-summary.json"
+    },
+    {
+      "path": "experiments/experts-v32/ceiling-verification.json",
+      "git_blob": "7b618daf9c1da47efc8b2dcb19d6afb7e7945f41",
+      "sha256": "7f1f23513e0fd662b4330971b6a831ad4adc7b64c1988ca625a676503a6a1e83",
+      "bytes": 8414,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-v32/ceiling-verification.json"
+    },
+    {
+      "path": "experiments/experts-sched/round4-tuples.csv",
+      "git_blob": "e9311eb438a6f85d4aba1c53555af374d97123d7",
+      "sha256": "fbf87257ffa4e8029e240db7ea670595f6f81cf662759994ada390c488bdf4f3",
+      "bytes": 10685,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-sched/round4-tuples.csv"
+    },
+    {
+      "path": "experiments/experts-sched/round4_hol_analysis.py",
+      "git_blob": "03cbfbcfa4f32a64ce3882a5edc688e174f7ca88",
+      "sha256": "4727c9b530d0dca264f561cc0545ee041cbb22c6bd4c0a120504390745ef4b16",
+      "bytes": 24957,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-sched/round4_hol_analysis.py"
+    }
+  ],
+  "publisher_manifest_matches_source": true,
+  "decoder_manifest": {
+    "file": "best/decode_layer.py",
+    "problem": "muse_decode_layer",
+    "ranked_speedup": 2.175617759631188,
+    "job": "e332b777510d4174",
+    "run_record": "outputs/openkernel-challenge/runs/decode-alygg77-bf16-ranked.json",
+    "original": "work/candidates/decode_alygg77_bf16.py",
+    "sha256": "053dbacc8f0de4e6111ccb89cb91f629840852cf482a6ca423fe0eaff419c086",
+    "source_status": "ranked",
+    "checked_speedup": 2.1916170775831167,
+    "checked_speedup_ci": [
+      2.15874282141937,
+      2.2244913337468635
+    ],
+    "ranked_speedup_ci": [
+      2.1429834932367204,
+      2.2082520260256557
+    ],
+    "check_job": "48e6172916524da7",
+    "check_record": "outputs/openkernel-challenge/runs/decode-alygg77-bf16-check.json",
+    "previous_ranked_best": {
+      "speedup": 2.0355718095234185,
+      "job": "f2bca5e0fa9c474f",
+      "run_record": "outputs/openkernel-challenge/runs/layer-unpooler-pdl-ranked.json",
+      "original": "outputs/openkernel-challenge/decode-layer/submission_two_layout_unpooler_pdl.py",
+      "sha256": "559e797fed0fe0037518ff3cf7d34957078f8767c6f434ab0147b4ba81017bab"
+    },
+    "counts_toward_overall": true,
+    "first_line": "# okc: problem=muse_decode_layer"
+  },
+  "review_scope": "README, BEST, full PRECISION note, counters summary, selected expert schedule/research sections, attribution/ceiling JSONs, all18route tuples; source AST parsed, header and source differences screened. Native per-line or full repository audit not claimed. No GPU reproduction or port.",
+  "observations": [
+    "New repo is below us at rank211/1106 capture (ours145). Latest ranked decoder2.17561776x is lower than current2.21149478x; external score is not a paired causal comparison.",
+    "Counter attribution identifies same canonical standaloneMoE SHA b3307089; can guide current-family screening, not directly identify whole-decoder critical-path stalls.",
+    "Deletion runs remove much FP4 unpack and half HMUL2; expert-board proxies1.00554/1.00930, controls.99721/.99795. Not rigorous upper bounds on every scheduling redesign.",
+    "Higher FP32 retention between baseline BF16 intermediates is policy-unconfirmed per author; not proven lower-precision violation and no organizer ruling. Keep separate from genuinely lower-precision FP32->BF16 router input.",
+    "Selected unmodified Apache2 documents/data pinned under research/public/trxphxle_72db638; full temporary source not copied into submissions."
+  ]
+}

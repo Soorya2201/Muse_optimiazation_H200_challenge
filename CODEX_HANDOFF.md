@@ -68,6 +68,51 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
+#### Oct31 decoder source/operand screen complete; no GPU run allocated
+
+Read `muse_decode_layer/PUBLIC_DELTA_AND_OPERAND_SCREEN_2026-10-31.md`.
+Previous goal turn made progress: BF16 terminal rejection/evidence recovered
+and pushed6e4d467. This cycle also makes progress: fresh1106account metadata
+(144above/961below+self,5unresolved),94publiccodepaths/10repos and19newrepo
+matches. Eight SGLang default forks0ahead/no changedfiles. DeferredKushagra
+32selectedfiles andScrashOff15hash-verified;180external timingcells parsed.
+No stronger replacement;ScrashOff loses small-TFP32router precision.
+
+New Apache2 source trxphxle/okc-2026-muse-kernels at72db638fa2718bc0ea5645fdd5c52a5511594579:
+15files verified,9unmodified docs/data/license pinned under
+`research/public/trxphxle_72db638/`; no full source copied into submissions.
+Publisheddecoder2.175618x sourcehash matches publisher BEST manifest;notour
+reproduction. SamecanonicalMoE attribution/deletion counters narrow
+arithmetic-only leads. All18actualroute histograms/byte pools independently
+verify. Conditional all-reread-removal decoderproxies1.000968/1.014151/
+1.024388x;J1281.000968/1.012974/1.018300x. Cross-input phase-duration models,
+notcritical-path bounds or predictions. No>=3%case established for byte
+reread removal alone; zero-duplication fixtures cannot benefit that way.
+
+Implemented delayed-activation-wait source transform in tools:decode first
+GS2Aoperands after BW_F but before BX_F;wait still guardsfirstMMA, fence/
+precision/geometry/release/order retained. ReducedBIGtrueNTT8sm90a96regs/
+0frame/0spills,PTXorderingverified;complete-switch GPUstatus UNKNOWN,
+SASSclipped. Archive WGS_CODEGEN_delayed_x_wait...json.gz and PREFLIGHT.
+No practical>=3%exposure evidence,so DEFER beforeallocatingGPU;not a
+measuredloss or winningcandidate. Do not promote or blindly extend it.
+
+Peer PRECISION note raises higher-FP32 fusion across baselineBF16 rounds;
+organizerpolicyunconfirmed,notproven lower-precision violation/approval.
+Keep separatefromactualsmall-TFP32router reduction alreadyfixed here.
+Passingchecks/routerauditdo not establish a general organizer ruling.
+No new precision change or withdrawal from this unresolved interpretation.
+
+Live18:09:50UTC snapshot:overall145/1760,decoder145/1106,MoE178/1245,
+attention190/1189,BF16243/1542,prefill178/750. Allscoredsources/speedups
+unchanged;no rank1. No live GPUjob. Budgetsunchanged:decoder1/8,MoE6/8,
+attention1/8,BF163/8,prefill4/8,allsubmits0. Activeworkspace remains
+`/Users/soorya/muse_work/continuation_20261030`;externalvolume absent.
+**Next sequential track: prefill.** Read its AGENTS/TASK and latest closed
+pipeline/Lt reports; screen newly found licensed relevant components first.
+No parallel agents. Goalactive/incomplete;cycleevidencepushfollows.
+
+
 #### Oct31 BF16 C12 cycle complete; internal workspace is active
 
 **Workspace override:** the external volume/root disappeared around

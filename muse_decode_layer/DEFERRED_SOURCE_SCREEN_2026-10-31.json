@@ -1,0 +1,2254 @@
+[
+  {
+    "repo": "Kushagrabainsla/muse-spark-open",
+    "commit": "0778ecd8293e375ffe33faa466db0231929aaac3",
+    "license": "unestablished; research only; no port or tracked source mirror",
+    "files": [
+      {
+        "path": "README.md",
+        "git_blob": "c04a463d9ab4b3df511f7b6b48302bf273c0d3df",
+        "sha256": "d97df738185d68363c9fca03a8d0e99bdc0d96f6b74233e6cb78ae52acea96bb",
+        "bytes": 6928,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/README.md",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/README.md"
+      },
+      {
+        "path": "muse_decode_layer/AGENTS.md",
+        "git_blob": "4d69f6867322a260a2784096ab38d3219139c5d4",
+        "sha256": "cd0a128be02be76956ac4b1e49ebea3dc287f1c9e6d3256e659b0b7772465fa8",
+        "bytes": 2712,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/AGENTS.md",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/AGENTS.md"
+      },
+      {
+        "path": "muse_decode_layer/EXPERIMENTS.md",
+        "git_blob": "0128dac48ffc068f5f1c1f24c31cc821922eca1e",
+        "sha256": "8d0feb28564bbb3c1981084ca6acdfe0a9701e5f16f128158152d36f150b2dda",
+        "bytes": 4123,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/EXPERIMENTS.md",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/EXPERIMENTS.md"
+      },
+      {
+        "path": "muse_decode_layer/TASK.md",
+        "git_blob": "fcf3c2e9c317578fe1b9edee0489d73e9aa85bfe",
+        "sha256": "22cae4f18fe204ab9d5a4aa34dae4e839363beb1f5967f33668a39d173507c46",
+        "bytes": 9853,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/TASK.md",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/TASK.md"
+      },
+      {
+        "path": "muse_decode_layer/baseline.py",
+        "git_blob": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+        "sha256": "87d95a0c4b78f0fd6c772436b959330ca45652b10e82dfc8add9acf0549227d4",
+        "bytes": 18993,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/baseline.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/baseline.py"
+      },
+      {
+        "path": "muse_decode_layer/bench.py",
+        "git_blob": "855b4ad3630f8fc29f4688c0282ae7493a17b7a6",
+        "sha256": "9204c97235d5c94af11b13ac55ee91c89b8d2781152c774e472db93dce6ee34e",
+        "bytes": 4406,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/bench.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/bench.py"
+      },
+      {
+        "path": "muse_decode_layer/build_layer.py",
+        "git_blob": "86a9b97d35d239220b6bed44f483f7dbacf5fe76",
+        "sha256": "edf76f849bd5335153bab3de8fddb5fe70dd3a856fa224fc0593615364bab4d0",
+        "bytes": 9305,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/build_layer.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/build_layer.py"
+      },
+      {
+        "path": "muse_decode_layer/checks.py",
+        "git_blob": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+        "sha256": "9a046c3c38db28b325dcd1557baecdf6bc9ef941d2175f9a900ba4c230bb8055",
+        "bytes": 2484,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/checks.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/checks.py"
+      },
+      {
+        "path": "muse_decode_layer/nvfp4.py",
+        "git_blob": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+        "sha256": "cfdf37c7bc14b10f7353aba7d4632f4767401b92b4b073941a8030d9a961aaaf",
+        "bytes": 5929,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/nvfp4.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/nvfp4.py"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.0455a1d7708c4763.json",
+        "git_blob": "db692195aeec1f030a2c1bba031765dff767e6be",
+        "sha256": "fe1169cb015097a3f7d34b0c9d6d15ec4c4a066ad5b48e8995f3c48c760c135e",
+        "bytes": 64483,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.0455a1d7708c4763.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.0455a1d7708c4763.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.0455a1d7708c4763.txt",
+        "git_blob": "f50063cafa48e7664511b8df126df99db8a04509",
+        "sha256": "e6eb4bd0c230b5736a5468b3a15909fc424e23e14d3eff86110fa1d84fe74586",
+        "bytes": 19965,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.0455a1d7708c4763.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.0455a1d7708c4763.txt"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.06c56c4c479c4f04.json",
+        "git_blob": "37bc337aafc323a38579b92c845074365af26fe3",
+        "sha256": "a83bd1e3e512112e35eb87390769191fcc58026d0804bf1742da72db33d688aa",
+        "bytes": 64431,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.06c56c4c479c4f04.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.06c56c4c479c4f04.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.06c56c4c479c4f04.txt",
+        "git_blob": "ec553f2d0666f1d90d624bf5bae83a05533aa613",
+        "sha256": "f2c4ac7a64469fc95cf2f7753f2230c360e84d7dee255a920385d20fc07fa8a6",
+        "bytes": 19966,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.06c56c4c479c4f04.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.06c56c4c479c4f04.txt"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.0f44b63689ef41c9.json",
+        "git_blob": "56b5719598bea40146284438498ab7d6d7be167c",
+        "sha256": "7954435e20b46f698383161e73268b2854afbd6e0a3e17df7d797a510dd5ad72",
+        "bytes": 64462,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.0f44b63689ef41c9.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.0f44b63689ef41c9.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.0f44b63689ef41c9.txt",
+        "git_blob": "e93c562d18cc732eb377771d664519ebfa43021b",
+        "sha256": "3753c9c274f0365f5c1d7e112af9c14995f1316e759a70cab007ab362aea76b2",
+        "bytes": 19968,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.0f44b63689ef41c9.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.0f44b63689ef41c9.txt"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.140d56f1376b4b19.json",
+        "git_blob": "df1f0030baba4f29f034dd6702a092052ade8551",
+        "sha256": "e19d4f2799dc5f72960765c6857242049bf20eb36c3f05ff45eb4c539f6e3202",
+        "bytes": 64474,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.140d56f1376b4b19.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.140d56f1376b4b19.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.140d56f1376b4b19.txt",
+        "git_blob": "ef90fa5cd8e4031f6778392fb38276cd36c472cc",
+        "sha256": "98ea6c1daffe5b77c351b306405be736c08024aa735963ab740ee2b8e24b8b09",
+        "bytes": 19967,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.140d56f1376b4b19.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.140d56f1376b4b19.txt"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.255ea7b35a2241e6.json",
+        "git_blob": "74e29ad3d8ef00eef404aba04da778c89c68c22f",
+        "sha256": "7a6099cb6d2056e9b210c7077cfd5863afa537ca940f2c3a8a782562e59ebda2",
+        "bytes": 64512,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.255ea7b35a2241e6.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.255ea7b35a2241e6.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.255ea7b35a2241e6.txt",
+        "git_blob": "ac95b06a06cd84e106db43bbd10ee6d0f7751732",
+        "sha256": "b26698472d9a19c06be7295d0408fc5cc22dad0c52718e12ee905dd4924c9497",
+        "bytes": 19976,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.255ea7b35a2241e6.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.255ea7b35a2241e6.txt"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.272b1ed874e74d9d.json",
+        "git_blob": "c6eb2fd96b8ba196c4eef885b36ffafbd66f09df",
+        "sha256": "a4f34f2020a34e54d2d42942c17575181c429e3423bfad50c1e1dfb485152cd9",
+        "bytes": 64479,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.272b1ed874e74d9d.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.272b1ed874e74d9d.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.272b1ed874e74d9d.txt",
+        "git_blob": "89bd23ea01bf6b4389164d64886c0bd1a3ab5e09",
+        "sha256": "624747216e18099637efa8c5118d7054a64883a3134f807bbeb07c7c2330af6f",
+        "bytes": 19975,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.272b1ed874e74d9d.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.272b1ed874e74d9d.txt"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.66246e98c53c47a8.json",
+        "git_blob": "b3fff18499445dee85db483f75b68c44d513b198",
+        "sha256": "cf9a71fe98ee4c045383dd0f3c5a36265cb1b79cde8996e9854d81a60cfb98a9",
+        "bytes": 64495,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.66246e98c53c47a8.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.66246e98c53c47a8.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.66246e98c53c47a8.txt",
+        "git_blob": "3a8d19cd56c4b0d3a19941dbb56b514f08335846",
+        "sha256": "361e4308aa3f684ea390f3aca1a12d42bdb177cd188b5a24fce7f4c6b19aac86",
+        "bytes": 19966,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.66246e98c53c47a8.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.66246e98c53c47a8.txt"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.83992dc182754f7e.json",
+        "git_blob": "c2331b4d7b3ab6d3de7b77b5f481b2ef8f89380d",
+        "sha256": "beb5b9f0e50f518bcf3d7f2266606a2b622f315d78499ecd20d4d227618d6ef6",
+        "bytes": 64417,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.83992dc182754f7e.json",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.83992dc182754f7e.json"
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.83992dc182754f7e.txt",
+        "git_blob": "b14b41f4f7fb40ea6523a891b79d2f818f43cc44",
+        "sha256": "115a15f9e98f5c331598549267c6626cb6c642341b7b0f42f501e9a6de7c7607",
+        "bytes": 19966,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/profiles/submission.83992dc182754f7e.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/profiles/submission.83992dc182754f7e.txt"
+      },
+      {
+        "path": "muse_decode_layer/reference.py",
+        "git_blob": "f92aa2db6ba064bc686ed5369f979cfe00d4ff44",
+        "sha256": "23e177b87aee70c0d4990515989b95bff2972270cdac8ab967445b21fa2f5163",
+        "bytes": 35035,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/reference.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/reference.py"
+      },
+      {
+        "path": "muse_decode_layer/submission.py",
+        "git_blob": "3f87e2be2ee5d09affd2d9ddd70bf8e085862d2d",
+        "sha256": "f4f62ab937955befee0e1043f571ae38067c928a709dc03571d9c1d0d2e4bb63",
+        "bytes": 189943,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_attn_chunk",
+          "_attn_rms_rope",
+          "_attn_prep",
+          "_attn_attn_combine",
+          "_attn_qkv_prep",
+          "_attn_kernel_fa3",
+          "_attn_wgmma_fn",
+          "_attn_module",
+          "_attn_kernel_fn",
+          "_attn_kernel_fn_cuda",
+          "_attn_pt_span",
+          "_attn_kernel_cluster",
+          "_attn_vchunk",
+          "_attn_kernel_verify_cluster",
+          "_attn_kernel_cuda8",
+          "_proj_router_gemm",
+          "_proj_router_gemm_launch",
+          "_proj_module",
+          "_proj_mt",
+          "_proj_config",
+          "_proj_pack",
+          "_proj_packed",
+          "_proj_launch",
+          "_proj_prepare",
+          "_proj_kernel_fn",
+          "_moe_module",
+          "_moe_unpack_codes",
+          "_moe_bit_map",
+          "_moe_scales_simple",
+          "_moe_pack_expert",
+          "_moe_config",
+          "_moe_prepare",
+          "_moe_kernel_fn",
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "prepare",
+          "_experts",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "muse_decode_layer/submission_l5.py",
+        "git_blob": "77e68d2be552d4403c78d286139e1274e0d802ff",
+        "sha256": "14620c5327c496f95fefb3ae1ebb5e34f967f0740c4691189839f5bd3f23da2c",
+        "bytes": 140792,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission_l5.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/submission_l5.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_attn_chunk",
+          "_attn_rms_rope",
+          "_attn_prep",
+          "_attn_attn_combine",
+          "_attn_qkv_prep",
+          "_attn_kernel_fa3",
+          "_attn_wgmma_fn",
+          "_attn_module",
+          "_attn_kernel_fn",
+          "_attn_kernel_fn_cuda",
+          "_attn_kernel_cuda8",
+          "_proj_router_gemm",
+          "_proj_router_gemm_launch",
+          "_proj_module",
+          "_proj_mt",
+          "_proj_config",
+          "_proj_pack",
+          "_proj_packed",
+          "_proj_launch",
+          "_proj_prepare",
+          "_proj_kernel_fn",
+          "_moe_module",
+          "_moe_unpack_codes",
+          "_moe_bit_map",
+          "_moe_scales_simple",
+          "_moe_pack_expert",
+          "_moe_config",
+          "_moe_prepare",
+          "_moe_kernel_fn",
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "prepare",
+          "_experts",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "muse_decode_layer/submission_l6.py",
+        "git_blob": "58755ca4689080a2b2edc3828ca0a2eeb05d9166",
+        "sha256": "feacd99c9105f475b4f6a7dc49d59c2582d5373e05c5e40a4ade17c3751d01cc",
+        "bytes": 144639,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission_l6.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/submission_l6.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_attn_chunk",
+          "_attn_rms_rope",
+          "_attn_prep",
+          "_attn_attn_combine",
+          "_attn_qkv_prep",
+          "_attn_kernel_fa3",
+          "_attn_wgmma_fn",
+          "_attn_module",
+          "_attn_kernel_fn",
+          "_attn_kernel_fn_cuda",
+          "_attn_kernel_cuda8",
+          "_proj_router_gemm",
+          "_proj_router_gemm_launch",
+          "_proj_module",
+          "_proj_mt",
+          "_proj_config",
+          "_proj_pack",
+          "_proj_packed",
+          "_proj_launch",
+          "_proj_prepare",
+          "_proj_kernel_fn",
+          "_moe_module",
+          "_moe_unpack_codes",
+          "_moe_bit_map",
+          "_moe_scales_simple",
+          "_moe_pack_expert",
+          "_moe_config",
+          "_moe_prepare",
+          "_moe_kernel_fn",
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "prepare",
+          "_experts",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "muse_decode_layer/submission_l7.py",
+        "git_blob": "1c7f00963e64702ecd387d8836bb98f7c6a15a96",
+        "sha256": "2077dff2727ec09af2824b6299fb5670f296df2a2f5d220a16fff1bf2c564958",
+        "bytes": 183815,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission_l7.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/submission_l7.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_attn_chunk",
+          "_attn_rms_rope",
+          "_attn_prep",
+          "_attn_attn_combine",
+          "_attn_qkv_prep",
+          "_attn_kernel_fa3",
+          "_attn_wgmma_fn",
+          "_attn_counters",
+          "_attn_module",
+          "_attn_kernel_fn",
+          "_attn_kernel_fn_cuda",
+          "_attn_kernel_fused",
+          "_attn_pt_span",
+          "_attn_kernel_cluster",
+          "_attn_kernel_cuda8",
+          "_proj_router_gemm",
+          "_proj_router_gemm_launch",
+          "_proj_module",
+          "_proj_mt",
+          "_proj_config",
+          "_proj_pack",
+          "_proj_packed",
+          "_proj_launch",
+          "_proj_prepare",
+          "_proj_kernel_fn",
+          "_moe_module",
+          "_moe_unpack_codes",
+          "_moe_bit_map",
+          "_moe_scales_simple",
+          "_moe_pack_expert",
+          "_moe_config",
+          "_moe_prepare",
+          "_moe_kernel_fn",
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "prepare",
+          "_experts",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "muse_decode_layer/submission_starter.py",
+        "git_blob": "0a0fc36b7854c07f5047c1df4e08ee984a830651",
+        "sha256": "c90d9dafdefac27d37232f22d6cbdae6fe0d50b3f098f1644d847801f3bf0a92",
+        "bytes": 10691,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/submission_starter.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/submission_starter.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "prepare",
+          "rms",
+          "gain",
+          "rope",
+          "residual_coefficients",
+          "post_expert_norm",
+          "round_queries",
+          "unpool",
+          "gather_unpooled",
+          "attention",
+          "route",
+          "experts",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "muse_decode_layer/timing.py",
+        "git_blob": "8d9b99e56edf3027713616cca3e74d3b9af64ff0",
+        "sha256": "f77b75cac8151ff461124d5f50d5c08b01c3a7d10e70c76d09184f5d87ad1843",
+        "bytes": 1719,
+        "url": "https://raw.githubusercontent.com/Kushagrabainsla/muse-spark-open/0778ecd8293e375ffe33faa466db0231929aaac3/muse_decode_layer/timing.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/Kushagrabainsla/muse_decode_layer/timing.py"
+      }
+    ],
+    "profiles_parsed": [
+      {
+        "path": "muse_decode_layer/profiles/submission.0455a1d7708c4763.txt",
+        "reported_speedup": 1.4184931865401775,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.24,
+            "candidate_us": 107.01,
+            "displayed_speedup": 1.61,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 182.58,
+            "candidate_us": 123.93,
+            "displayed_speedup": 1.473,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 259.46,
+            "candidate_us": 176.62,
+            "displayed_speedup": 1.469,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 441.49,
+            "candidate_us": 282.16,
+            "displayed_speedup": 1.565,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 264.21,
+            "candidate_us": 214.25,
+            "displayed_speedup": 1.233,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 618.13,
+            "candidate_us": 403.11,
+            "displayed_speedup": 1.533,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 268.06,
+            "candidate_us": 187.12,
+            "displayed_speedup": 1.433,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 273.55,
+            "candidate_us": 200.81,
+            "displayed_speedup": 1.362,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 530.14,
+            "candidate_us": 374.64,
+            "displayed_speedup": 1.415,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 703.7,
+            "candidate_us": 544.21,
+            "displayed_speedup": 1.293,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 737.41,
+            "candidate_us": 539.76,
+            "displayed_speedup": 1.366,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1087.71,
+            "candidate_us": 888.89,
+            "displayed_speedup": 1.224,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.06c56c4c479c4f04.txt",
+        "reported_speedup": 1.390853083226505,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.19,
+            "candidate_us": 112.88,
+            "displayed_speedup": 1.525,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 181.57,
+            "candidate_us": 125.81,
+            "displayed_speedup": 1.443,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 263.18,
+            "candidate_us": 184.45,
+            "displayed_speedup": 1.427,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 436.21,
+            "candidate_us": 283.37,
+            "displayed_speedup": 1.539,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 259.26,
+            "candidate_us": 215.21,
+            "displayed_speedup": 1.205,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 637.42,
+            "candidate_us": 406.97,
+            "displayed_speedup": 1.566,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 261.15,
+            "candidate_us": 183.95,
+            "displayed_speedup": 1.42,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 270.67,
+            "candidate_us": 199.14,
+            "displayed_speedup": 1.359,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 513.5,
+            "candidate_us": 373.13,
+            "displayed_speedup": 1.376,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 707.76,
+            "candidate_us": 557.89,
+            "displayed_speedup": 1.269,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 725.15,
+            "candidate_us": 538.31,
+            "displayed_speedup": 1.347,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1078.75,
+            "candidate_us": 891.26,
+            "displayed_speedup": 1.21,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.0f44b63689ef41c9.txt",
+        "reported_speedup": 1.272685799366595,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.22,
+            "candidate_us": 116.63,
+            "displayed_speedup": 1.477,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 181.78,
+            "candidate_us": 125.78,
+            "displayed_speedup": 1.445,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 266.08,
+            "candidate_us": 193.86,
+            "displayed_speedup": 1.373,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 442.32,
+            "candidate_us": 366.37,
+            "displayed_speedup": 1.207,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 261.81,
+            "candidate_us": 231.56,
+            "displayed_speedup": 1.131,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 618.88,
+            "candidate_us": 587.79,
+            "displayed_speedup": 1.053,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 268.43,
+            "candidate_us": 196.31,
+            "displayed_speedup": 1.367,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 276.99,
+            "candidate_us": 205.2,
+            "displayed_speedup": 1.35,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 512.78,
+            "candidate_us": 398.73,
+            "displayed_speedup": 1.286,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 679.84,
+            "candidate_us": 575.82,
+            "displayed_speedup": 1.181,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 698.11,
+            "candidate_us": 573.56,
+            "displayed_speedup": 1.217,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1067.18,
+            "candidate_us": 939.93,
+            "displayed_speedup": 1.135,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.140d56f1376b4b19.txt",
+        "reported_speedup": 1.4042600105158225,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 171.01,
+            "candidate_us": 110.61,
+            "displayed_speedup": 1.546,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 182.27,
+            "candidate_us": 124.58,
+            "displayed_speedup": 1.463,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 263.95,
+            "candidate_us": 185.44,
+            "displayed_speedup": 1.423,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 434.86,
+            "candidate_us": 281.39,
+            "displayed_speedup": 1.545,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 272.19,
+            "candidate_us": 223.6,
+            "displayed_speedup": 1.217,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 617.63,
+            "candidate_us": 410.16,
+            "displayed_speedup": 1.506,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 264.66,
+            "candidate_us": 183.7,
+            "displayed_speedup": 1.441,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 281.42,
+            "candidate_us": 209.52,
+            "displayed_speedup": 1.343,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 537.31,
+            "candidate_us": 377.45,
+            "displayed_speedup": 1.424,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 696.21,
+            "candidate_us": 547.04,
+            "displayed_speedup": 1.273,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 722.48,
+            "candidate_us": 519.39,
+            "displayed_speedup": 1.391,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1065.18,
+            "candidate_us": 865.91,
+            "displayed_speedup": 1.23,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.255ea7b35a2241e6.txt",
+        "reported_speedup": 1.2725365097104666,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.5,
+            "candidate_us": 120.63,
+            "displayed_speedup": 1.43,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 182.82,
+            "candidate_us": 131.58,
+            "displayed_speedup": 1.389,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 250.74,
+            "candidate_us": 185.75,
+            "displayed_speedup": 1.35,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 431.14,
+            "candidate_us": 362.62,
+            "displayed_speedup": 1.189,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 255.89,
+            "candidate_us": 232.25,
+            "displayed_speedup": 1.102,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 620.18,
+            "candidate_us": 595.87,
+            "displayed_speedup": 1.041,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 259.82,
+            "candidate_us": 193.95,
+            "displayed_speedup": 1.34,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 280.5,
+            "candidate_us": 212.92,
+            "displayed_speedup": 1.317,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 549.47,
+            "candidate_us": 416.81,
+            "displayed_speedup": 1.318,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 722.21,
+            "candidate_us": 587.58,
+            "displayed_speedup": 1.229,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 765.25,
+            "candidate_us": 581.64,
+            "displayed_speedup": 1.316,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1092.32,
+            "candidate_us": 934.33,
+            "displayed_speedup": 1.169,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.272b1ed874e74d9d.txt",
+        "reported_speedup": 1.2581034169999872,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 171.98,
+            "candidate_us": 119.59,
+            "displayed_speedup": 1.438,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 183.65,
+            "candidate_us": 131.1,
+            "displayed_speedup": 1.401,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 256.75,
+            "candidate_us": 191.02,
+            "displayed_speedup": 1.344,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 429.52,
+            "candidate_us": 362.46,
+            "displayed_speedup": 1.185,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 257.73,
+            "candidate_us": 233.09,
+            "displayed_speedup": 1.106,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 617.42,
+            "candidate_us": 593.18,
+            "displayed_speedup": 1.041,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 264.14,
+            "candidate_us": 198.79,
+            "displayed_speedup": 1.329,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 287.44,
+            "candidate_us": 220.2,
+            "displayed_speedup": 1.305,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 533.07,
+            "candidate_us": 410.73,
+            "displayed_speedup": 1.298,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 693.82,
+            "candidate_us": 583.94,
+            "displayed_speedup": 1.188,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 713.78,
+            "candidate_us": 572.95,
+            "displayed_speedup": 1.246,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1070.03,
+            "candidate_us": 935.41,
+            "displayed_speedup": 1.144,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.66246e98c53c47a8.txt",
+        "reported_speedup": 1.424701146670442,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.48,
+            "candidate_us": 106.7,
+            "displayed_speedup": 1.616,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 181.87,
+            "candidate_us": 122.92,
+            "displayed_speedup": 1.48,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 267.26,
+            "candidate_us": 181.17,
+            "displayed_speedup": 1.475,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 434.94,
+            "candidate_us": 283.15,
+            "displayed_speedup": 1.536,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 268.19,
+            "candidate_us": 218.09,
+            "displayed_speedup": 1.23,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 623.74,
+            "candidate_us": 417.75,
+            "displayed_speedup": 1.493,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 258.72,
+            "candidate_us": 176.93,
+            "displayed_speedup": 1.462,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 271.89,
+            "candidate_us": 198.86,
+            "displayed_speedup": 1.367,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 538.59,
+            "candidate_us": 372.62,
+            "displayed_speedup": 1.445,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 715.81,
+            "candidate_us": 551.53,
+            "displayed_speedup": 1.298,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 709.44,
+            "candidate_us": 512.76,
+            "displayed_speedup": 1.384,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1054.11,
+            "candidate_us": 861.2,
+            "displayed_speedup": 1.224,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "muse_decode_layer/profiles/submission.83992dc182754f7e.txt",
+        "reported_speedup": 1.3333954816630453,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 171.65,
+            "candidate_us": 113.93,
+            "displayed_speedup": 1.507,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 181.34,
+            "candidate_us": 126.27,
+            "displayed_speedup": 1.436,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 252.61,
+            "candidate_us": 180.12,
+            "displayed_speedup": 1.402,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 429.2,
+            "candidate_us": 279.73,
+            "displayed_speedup": 1.534,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 261.02,
+            "candidate_us": 226.25,
+            "displayed_speedup": 1.154,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 615.98,
+            "candidate_us": 419.69,
+            "displayed_speedup": 1.468,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 264.86,
+            "candidate_us": 192.25,
+            "displayed_speedup": 1.378,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 281.18,
+            "candidate_us": 212.79,
+            "displayed_speedup": 1.321,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 492.4,
+            "candidate_us": 382.54,
+            "displayed_speedup": 1.287,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 699.41,
+            "candidate_us": 581.69,
+            "displayed_speedup": 1.202,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 715.62,
+            "candidate_us": 587.09,
+            "displayed_speedup": 1.219,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1071.49,
+            "candidate_us": 935.73,
+            "displayed_speedup": 1.145,
+            "floor_us": 267.18
+          }
+        ]
+      }
+    ],
+    "static_review_scope": "All submission ASTs parsed; default timed dispatch, prepare integration, license/header and experiment history inspected. Not exhaustive native per-line conformance audit; no source execution/port.",
+    "observations": [
+      "Default is L9/E14 integration; benchmark notes report 1.410x check vs L8 1.424701x board. Eight external profile tables parsed, 96 cells.",
+      "Standalone CUDA projections/experts, cluster/warp-specialized attention; full verify still FA3. Current parent already has stronger integrated components.",
+      "Default preserves FP32 router_input for tokens<=8 and dense F.linear; normal BF16 hi+lo above8. Does not certify every path/contract."
+    ]
+  },
+  {
+    "repo": "ScrashOff/okc-muse-kernels",
+    "commit": "d870912e7c5a030c52050bb2445418224c28d9de",
+    "license": "unestablished; research only; no port or tracked source mirror",
+    "files": [
+      {
+        "path": "README.md",
+        "git_blob": "d3cc4bd2de9b0519b03413fefe1c9825112646c8",
+        "sha256": "565b33f256c91826aaab6f016ed230cb34e321f11f72677809c886a411ebc7ff",
+        "bytes": 5684,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/README.md",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/README.md"
+      },
+      {
+        "path": "history/muse_decode_layer/v1/judge-profile.txt",
+        "git_blob": "1dd0b2ed8fbe9ee116dda893ee8db45af00bc487",
+        "sha256": "864d2be7a1bd68e8334c8729e3ed112e7f0ed527b1484ea2306b7d9a88e45464",
+        "bytes": 18356,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v1/judge-profile.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v1/judge-profile.txt"
+      },
+      {
+        "path": "history/muse_decode_layer/v1/submission.py",
+        "git_blob": "d91b40bd1eac58538e9de23f20bceb25240fb5a7",
+        "sha256": "0bd6d5aae6eece332bdaa120a2c54f275723426ef36b54c97055db8104dbaafc",
+        "bytes": 35212,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v1/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v1/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "_experts",
+          "_dq_dot",
+          "_moe_gemm_kernel",
+          "_moe_route_kernel",
+          "_moe_prenorm_kernel",
+          "_moe_combine_kernel",
+          "_dequant_rows",
+          "_custom_bank",
+          "_moe_prenorm",
+          "_moe_run",
+          "_bucket",
+          "_candidates",
+          "_synthetic",
+          "_moe_marlin",
+          "_moe_custom",
+          "_rel",
+          "start_marker_device",
+          "_graph_us",
+          "_tune",
+          "prepare",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v2/judge-profile.txt",
+        "git_blob": "8396ac677585788616abd89294ea49f4d9ceaabf",
+        "sha256": "6b83a0989210a0aaf880e84a3a7589a0c7d18d0aec0f61c1efed0ee78a1ba402",
+        "bytes": 18524,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v2/judge-profile.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v2/judge-profile.txt"
+      },
+      {
+        "path": "history/muse_decode_layer/v2/submission.py",
+        "git_blob": "a4f055db44d4ebaf1a594fdba06d56ba481952dc",
+        "sha256": "84c7b2f0b606773040469e6094e54117d3d7eaedbc8a3b6682122edba440e19d",
+        "bytes": 40813,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v2/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v2/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "_experts",
+          "_dq_dot",
+          "_moe_gemm_kernel",
+          "_moe_route_kernel",
+          "_moe_prenorm_kernel",
+          "_local_ids_kernel",
+          "_moe_combine_kernel",
+          "_dequant_rows",
+          "_custom_bank",
+          "_moe_prenorm",
+          "_moe_run",
+          "_experts_fast",
+          "_bucket",
+          "_candidates",
+          "_synthetic",
+          "_moe_marlin",
+          "_moe_mfast",
+          "_moe_custom",
+          "_moe_apply",
+          "_rel",
+          "_err_text",
+          "start_marker_device",
+          "_graph_us",
+          "_tune",
+          "prepare",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v3/judge-profile.txt",
+        "git_blob": "babb86383c1a5ffb07d36730bc0ee4448a61b794",
+        "sha256": "0a42e93686aba4152c320c4d78a28ff5cca8523f833d209414f93eb8e825e6ee",
+        "bytes": 18356,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v3/judge-profile.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v3/judge-profile.txt"
+      },
+      {
+        "path": "history/muse_decode_layer/v3/submission.py",
+        "git_blob": "16ffa87b66644b195e9c04ac4ddd7e668649765d",
+        "sha256": "ec7f2cd0a3440f4714fdf9f56da7a31c829b87fa42e77609754c55afa4faf61c",
+        "bytes": 53759,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v3/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v3/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "_experts",
+          "_dq_dot",
+          "_moe_gemm_kernel",
+          "_moe_route_kernel",
+          "_moe_prenorm_kernel",
+          "_local_ids_kernel",
+          "_moe_combine_kernel",
+          "_dequant_rows",
+          "_custom_bank",
+          "_moe_prenorm",
+          "_moe_run",
+          "_experts_fast",
+          "_bucket",
+          "_candidates",
+          "_synthetic",
+          "_moe_marlin",
+          "_moe_mfast",
+          "_moe_custom",
+          "_moe_apply",
+          "_rel",
+          "_err_text",
+          "start_marker_device",
+          "_graph_us",
+          "_tune",
+          "_attn_split_kernel",
+          "_attn_combine_kernel",
+          "_attn_custom",
+          "_attn_fa3",
+          "_attn_default",
+          "_attn_candidates",
+          "_syn_attn",
+          "_attn_ref",
+          "_tune_attn",
+          "prepare",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v4/judge-profile.txt",
+        "git_blob": "722718b08bd21a7c84d0ed8fce04c195c5bb7237",
+        "sha256": "e798183e49e15775dd37bf448fdb7808040498c524249a5185375e366e27446d",
+        "bytes": 18179,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v4/judge-profile.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v4/judge-profile.txt"
+      },
+      {
+        "path": "history/muse_decode_layer/v4/submission.py",
+        "git_blob": "b25e5022aa1af9372ff5a2b5b7830b4e92a78917",
+        "sha256": "0eb661f0ee6e63b990ec823b52d270a581f5bf95ecf608986eb32a80ab7e19fc",
+        "bytes": 56749,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v4/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v4/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "_experts",
+          "_dq_dot",
+          "_moe_gemm_kernel",
+          "_moe_route_kernel",
+          "_moe_prenorm_kernel",
+          "_local_ids_kernel",
+          "_moe_combine_kernel",
+          "_dequant_rows",
+          "_custom_bank",
+          "_moe_prenorm",
+          "_moe_run",
+          "_experts_fast",
+          "_bucket",
+          "_candidates",
+          "_synthetic",
+          "_moe_marlin",
+          "_moe_mfast",
+          "_moe_custom",
+          "_moe_apply",
+          "_rel",
+          "_err_text",
+          "start_marker_device",
+          "_graph_us",
+          "_tune",
+          "_attn_split_kernel",
+          "_attn_combine_kernel",
+          "_kv_store_kernel",
+          "_kv_store_fused",
+          "_kv_store_ref",
+          "_check_kv_store",
+          "_attn_custom",
+          "_attn_fa3",
+          "_attn_default",
+          "_attn_candidates",
+          "_syn_attn",
+          "_attn_ref",
+          "_tune_attn",
+          "prepare",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v5/judge-profile.txt",
+        "git_blob": "483619b6046e6ccadc5fd607bb9f83d1fd02a2e4",
+        "sha256": "ad4922632ce175831da5c2167e7bad7e1507ee4bf5db28cdf3462ee888320542",
+        "bytes": 18177,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v5/judge-profile.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v5/judge-profile.txt"
+      },
+      {
+        "path": "history/muse_decode_layer/v5/submission.py",
+        "git_blob": "e194d760d25203fdf790d1fd54f417ed26ac1929",
+        "sha256": "ada31d069041bc4c10ba79ea7f70df62ca822669ae11261ad8797471a443f4f2",
+        "bytes": 60174,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v5/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v5/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "_experts",
+          "_dq_dot",
+          "_moe_gemm_kernel",
+          "_moe_route_kernel",
+          "_moe_prenorm_kernel",
+          "_local_ids_kernel",
+          "_moe_combine_kernel",
+          "_dequant_rows",
+          "_custom_bank",
+          "_moe_prenorm",
+          "_moe_run",
+          "_experts_fast",
+          "_bucket",
+          "_candidates",
+          "_synthetic",
+          "_moe_marlin",
+          "_moe_mfast",
+          "_moe_custom",
+          "_moe_apply",
+          "_rel",
+          "_err_text",
+          "start_marker_device",
+          "_graph_us",
+          "_tune",
+          "_attn_split_kernel",
+          "_attn_combine_kernel",
+          "_kv_store_kernel",
+          "_kv_store_fused",
+          "_kv_store_ref",
+          "_check_kv_store",
+          "_attn_custom",
+          "_attn_fa3",
+          "_attn_default",
+          "_attn_candidates",
+          "_syn_attn",
+          "_attn_ref",
+          "_tune_attn",
+          "_gemv_kernel",
+          "_gemv",
+          "_proj",
+          "_tune_gemv",
+          "prepare",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v6/judge-profile.txt",
+        "git_blob": "36a95b87ddb2ce2fc1c5d3c920de5a4fe277e48c",
+        "sha256": "0225319424f27e3ba876b5b058949f1b5d79701537290fe67dc8e9cdf28ae1d7",
+        "bytes": 18176,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v6/judge-profile.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v6/judge-profile.txt"
+      },
+      {
+        "path": "history/muse_decode_layer/v6/submission.py",
+        "git_blob": "8acf4969bd5f9a73b3027a3948e8d27a51fa6edd",
+        "sha256": "279a4297a3d5c1e18ec0c0061c623612b8e70fc1a1f44ac8bbad77968ba01f18",
+        "bytes": 63753,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/history/muse_decode_layer/v6/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/history/muse_decode_layer/v6/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "_experts",
+          "_dq_dot",
+          "_moe_gemm_kernel",
+          "_moe_route_kernel",
+          "_moe_prenorm_kernel",
+          "_local_ids_kernel",
+          "_moe_combine_kernel",
+          "_dequant_rows",
+          "_custom_bank",
+          "_moe_prenorm",
+          "_moe_run",
+          "_experts_fast",
+          "_bucket",
+          "_candidates",
+          "_synthetic",
+          "_moe_marlin",
+          "_moe_mfast",
+          "_moe_custom",
+          "_moe_apply",
+          "_rel",
+          "_err_text",
+          "start_marker_device",
+          "_graph_us",
+          "_tune",
+          "_attn_split_kernel",
+          "_attn_combine_kernel",
+          "_kv_store_kernel",
+          "_kv_store_fused",
+          "_kv_store_ref",
+          "_check_kv_store",
+          "_attn_custom",
+          "_attn_fa3",
+          "_attn_default",
+          "_attn_candidates",
+          "_syn_attn",
+          "_attn_ref",
+          "_tune_attn",
+          "_gemv_kernel",
+          "_gemv",
+          "_skinny_kernel",
+          "_skinny",
+          "_proj",
+          "_tune_skinny",
+          "_tune_gemv",
+          "prepare",
+          "kernel_fn"
+        ]
+      },
+      {
+        "path": "kernels/muse_decode_layer/judge-profile.txt",
+        "git_blob": "36a95b87ddb2ce2fc1c5d3c920de5a4fe277e48c",
+        "sha256": "0225319424f27e3ba876b5b058949f1b5d79701537290fe67dc8e9cdf28ae1d7",
+        "bytes": 18176,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/kernels/muse_decode_layer/judge-profile.txt",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/kernels/muse_decode_layer/judge-profile.txt"
+      },
+      {
+        "path": "kernels/muse_decode_layer/submission.py",
+        "git_blob": "8acf4969bd5f9a73b3027a3948e8d27a51fa6edd",
+        "sha256": "279a4297a3d5c1e18ec0c0061c623612b8e70fc1a1f44ac8bbad77968ba01f18",
+        "bytes": 63753,
+        "url": "https://raw.githubusercontent.com/ScrashOff/okc-muse-kernels/d870912e7c5a030c52050bb2445418224c28d9de/kernels/muse_decode_layer/submission.py",
+        "local_temporary_path": "/tmp/muse_decoder_screen/ScrashOff/kernels/muse_decode_layer/submission.py",
+        "syntax": "AST parsed without execution",
+        "top_level_functions": [
+          "_gemm",
+          "_param",
+          "_norm",
+          "_residual",
+          "_marlin_bank",
+          "_experts",
+          "_dq_dot",
+          "_moe_gemm_kernel",
+          "_moe_route_kernel",
+          "_moe_prenorm_kernel",
+          "_local_ids_kernel",
+          "_moe_combine_kernel",
+          "_dequant_rows",
+          "_custom_bank",
+          "_moe_prenorm",
+          "_moe_run",
+          "_experts_fast",
+          "_bucket",
+          "_candidates",
+          "_synthetic",
+          "_moe_marlin",
+          "_moe_mfast",
+          "_moe_custom",
+          "_moe_apply",
+          "_rel",
+          "_err_text",
+          "start_marker_device",
+          "_graph_us",
+          "_tune",
+          "_attn_split_kernel",
+          "_attn_combine_kernel",
+          "_kv_store_kernel",
+          "_kv_store_fused",
+          "_kv_store_ref",
+          "_check_kv_store",
+          "_attn_custom",
+          "_attn_fa3",
+          "_attn_default",
+          "_attn_candidates",
+          "_syn_attn",
+          "_attn_ref",
+          "_tune_attn",
+          "_gemv_kernel",
+          "_gemv",
+          "_skinny_kernel",
+          "_skinny",
+          "_proj",
+          "_tune_skinny",
+          "_tune_gemv",
+          "prepare",
+          "kernel_fn"
+        ]
+      }
+    ],
+    "profiles_parsed": [
+      {
+        "path": "history/muse_decode_layer/v1/judge-profile.txt",
+        "reported_speedup": 1.0254940833454524,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 171.9,
+            "candidate_us": 171.65,
+            "displayed_speedup": 1.001,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 181.78,
+            "candidate_us": 181.07,
+            "displayed_speedup": 1.004,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 262.83,
+            "candidate_us": 262.68,
+            "displayed_speedup": 1.001,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 430.98,
+            "candidate_us": 429.15,
+            "displayed_speedup": 1.004,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 265.31,
+            "candidate_us": 259.27,
+            "displayed_speedup": 1.023,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 619.2,
+            "candidate_us": 612.97,
+            "displayed_speedup": 1.01,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 258.59,
+            "candidate_us": 230.07,
+            "displayed_speedup": 1.124,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 276.43,
+            "candidate_us": 247.55,
+            "displayed_speedup": 1.117,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 524.05,
+            "candidate_us": 518.78,
+            "displayed_speedup": 1.01,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 697.9,
+            "candidate_us": 693.1,
+            "displayed_speedup": 1.007,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 707.5,
+            "candidate_us": 703.19,
+            "displayed_speedup": 1.006,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1096.08,
+            "candidate_us": 1090.92,
+            "displayed_speedup": 1.005,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v2/judge-profile.txt",
+        "reported_speedup": 1.152171635175306,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.27,
+            "candidate_us": 136.78,
+            "displayed_speedup": 1.259,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 183.3,
+            "candidate_us": 147.81,
+            "displayed_speedup": 1.24,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 259.28,
+            "candidate_us": 213.51,
+            "displayed_speedup": 1.214,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 436.26,
+            "candidate_us": 388.56,
+            "displayed_speedup": 1.123,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 252.91,
+            "candidate_us": 237.58,
+            "displayed_speedup": 1.065,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 619.92,
+            "candidate_us": 602.98,
+            "displayed_speedup": 1.028,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 260.11,
+            "candidate_us": 189.56,
+            "displayed_speedup": 1.372,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 280.9,
+            "candidate_us": 208.65,
+            "displayed_speedup": 1.346,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 529.15,
+            "candidate_us": 510.31,
+            "displayed_speedup": 1.037,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 712.94,
+            "candidate_us": 692.53,
+            "displayed_speedup": 1.029,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 712.3,
+            "candidate_us": 660.11,
+            "displayed_speedup": 1.079,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1079.73,
+            "candidate_us": 1025.99,
+            "displayed_speedup": 1.052,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v3/judge-profile.txt",
+        "reported_speedup": 1.2013084696165128,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.22,
+            "candidate_us": 137.59,
+            "displayed_speedup": 1.252,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 183.12,
+            "candidate_us": 148.67,
+            "displayed_speedup": 1.232,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 258.35,
+            "candidate_us": 213.03,
+            "displayed_speedup": 1.213,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 440.03,
+            "candidate_us": 395.38,
+            "displayed_speedup": 1.113,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 272.85,
+            "candidate_us": 256.26,
+            "displayed_speedup": 1.065,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 621.92,
+            "candidate_us": 604.47,
+            "displayed_speedup": 1.029,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 263.6,
+            "candidate_us": 193.05,
+            "displayed_speedup": 1.365,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 290.42,
+            "candidate_us": 219.14,
+            "displayed_speedup": 1.325,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 533.33,
+            "candidate_us": 432.1,
+            "displayed_speedup": 1.234,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 729.09,
+            "candidate_us": 611.85,
+            "displayed_speedup": 1.192,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 722.19,
+            "candidate_us": 595.98,
+            "displayed_speedup": 1.212,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1099.7,
+            "candidate_us": 964.2,
+            "displayed_speedup": 1.141,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v4/judge-profile.txt",
+        "reported_speedup": 1.2683718895501526,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 172.9,
+            "candidate_us": 126.61,
+            "displayed_speedup": 1.366,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 183.52,
+            "candidate_us": 138.11,
+            "displayed_speedup": 1.329,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 261.1,
+            "candidate_us": 202.62,
+            "displayed_speedup": 1.289,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 446.35,
+            "candidate_us": 353.62,
+            "displayed_speedup": 1.262,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 274.98,
+            "candidate_us": 243.05,
+            "displayed_speedup": 1.131,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 630.34,
+            "candidate_us": 530.64,
+            "displayed_speedup": 1.188,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 264.35,
+            "candidate_us": 185.59,
+            "displayed_speedup": 1.424,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 279.79,
+            "candidate_us": 202.95,
+            "displayed_speedup": 1.379,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 547.46,
+            "candidate_us": 436.42,
+            "displayed_speedup": 1.254,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 720.78,
+            "candidate_us": 605.4,
+            "displayed_speedup": 1.191,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 737.94,
+            "candidate_us": 603.71,
+            "displayed_speedup": 1.222,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1087.95,
+            "candidate_us": 953.49,
+            "displayed_speedup": 1.141,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v5/judge-profile.txt",
+        "reported_speedup": 1.2787534237229254,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 169.1,
+            "candidate_us": 116.8,
+            "displayed_speedup": 1.448,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 179.65,
+            "candidate_us": 127.73,
+            "displayed_speedup": 1.406,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 255.33,
+            "candidate_us": 201.78,
+            "displayed_speedup": 1.265,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 432.7,
+            "candidate_us": 342.8,
+            "displayed_speedup": 1.262,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 255.38,
+            "candidate_us": 226.51,
+            "displayed_speedup": 1.127,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 606.45,
+            "candidate_us": 508.31,
+            "displayed_speedup": 1.193,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 272.91,
+            "candidate_us": 192.44,
+            "displayed_speedup": 1.418,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 263.14,
+            "candidate_us": 185.27,
+            "displayed_speedup": 1.42,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 547.98,
+            "candidate_us": 433.99,
+            "displayed_speedup": 1.263,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 732.64,
+            "candidate_us": 622.44,
+            "displayed_speedup": 1.177,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 751.71,
+            "candidate_us": 617.72,
+            "displayed_speedup": 1.217,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1113.44,
+            "candidate_us": 977.39,
+            "displayed_speedup": 1.139,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "history/muse_decode_layer/v6/judge-profile.txt",
+        "reported_speedup": 1.2804991737349787,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 171.92,
+            "candidate_us": 118.6,
+            "displayed_speedup": 1.45,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 182.85,
+            "candidate_us": 130.11,
+            "displayed_speedup": 1.405,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 258.88,
+            "candidate_us": 202.54,
+            "displayed_speedup": 1.278,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 431.22,
+            "candidate_us": 339.07,
+            "displayed_speedup": 1.272,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 261.65,
+            "candidate_us": 229.83,
+            "displayed_speedup": 1.138,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 604.51,
+            "candidate_us": 497.36,
+            "displayed_speedup": 1.215,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 264.8,
+            "candidate_us": 184.9,
+            "displayed_speedup": 1.432,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 282.69,
+            "candidate_us": 202.56,
+            "displayed_speedup": 1.396,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 504.83,
+            "candidate_us": 412.3,
+            "displayed_speedup": 1.224,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 694.35,
+            "candidate_us": 597.41,
+            "displayed_speedup": 1.162,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 720.85,
+            "candidate_us": 588.21,
+            "displayed_speedup": 1.225,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1074.94,
+            "candidate_us": 934.11,
+            "displayed_speedup": 1.151,
+            "floor_us": 267.18
+          }
+        ]
+      },
+      {
+        "path": "kernels/muse_decode_layer/judge-profile.txt",
+        "reported_speedup": 1.2804991737349787,
+        "cells": [
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=decode 1 page=1",
+            "reference_us": 171.92,
+            "candidate_us": 118.6,
+            "displayed_speedup": 1.45,
+            "floor_us": 40.02
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=decode 1 page=1",
+            "reference_us": 182.85,
+            "candidate_us": 130.11,
+            "displayed_speedup": 1.405,
+            "floor_us": 44.18
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=decode 16 page=1 spread=agentic",
+            "reference_us": 258.88,
+            "candidate_us": 202.54,
+            "displayed_speedup": 1.278,
+            "floor_us": 76.72
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=decode 16 page=1 spread=agentic",
+            "reference_us": 431.22,
+            "candidate_us": 339.07,
+            "displayed_speedup": 1.272,
+            "floor_us": 137.46
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=decode 32 page=1 spread=agentic",
+            "reference_us": 261.65,
+            "candidate_us": 229.83,
+            "displayed_speedup": 1.138,
+            "floor_us": 84.51
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=decode 32 page=1 spread=agentic",
+            "reference_us": 604.51,
+            "candidate_us": 497.36,
+            "displayed_speedup": 1.215,
+            "floor_us": 208.1
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=sliding load=verify 1 page=1 q_len=8",
+            "reference_us": 264.8,
+            "candidate_us": 184.9,
+            "displayed_speedup": 1.432,
+            "floor_us": 62.29
+          },
+          {
+            "case": "batch=1 ctx=80000 dist=soft layer=full load=verify 1 page=1 q_len=8",
+            "reference_us": 282.69,
+            "candidate_us": 202.56,
+            "displayed_speedup": 1.396,
+            "floor_us": 66.44
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=sliding load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 504.83,
+            "candidate_us": 412.3,
+            "displayed_speedup": 1.224,
+            "floor_us": 126.61
+          },
+          {
+            "case": "batch=16 ctx=80000 dist=soft layer=full load=verify 16 page=1 q_len=8 spread=agentic",
+            "reference_us": 694.35,
+            "candidate_us": 597.41,
+            "displayed_speedup": 1.162,
+            "floor_us": 188.68
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=sliding load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 720.85,
+            "candidate_us": 588.21,
+            "displayed_speedup": 1.225,
+            "floor_us": 143.81
+          },
+          {
+            "case": "batch=32 ctx=80000 dist=soft layer=full load=verify 32 page=1 q_len=8 spread=agentic",
+            "reference_us": 1074.94,
+            "candidate_us": 934.11,
+            "displayed_speedup": 1.151,
+            "floor_us": 267.18
+          }
+        ]
+      }
+    ],
+    "static_review_scope": "All submission ASTs parsed; default timed dispatch, prepare integration, license/header and experiment history inspected. Not exhaustive native per-line conformance audit; no source execution/port.",
+    "observations": [
+      "Default exactly equals v6; 1.280499x check, README 1.300x scored; seven tables parsed, 84 cells (includes duplicated default/v6 receipt).",
+      "Triton GEMV, splitKV attention, Marlin expert block tuning and combined hi+lo router. No stronger persistent expert component.",
+      "Default attn_boundary uses router_dtype=None then routes from BF16 ffn_input even at T<=8. Small-T FP32 activation is not preserved; do not adopt unchanged."
+    ]
+  }
+]

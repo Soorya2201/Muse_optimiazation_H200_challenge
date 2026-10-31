@@ -39,3 +39,23 @@ def register_split(source: str, group_steps: int) -> str:
         replace("#define OKC_WGSFCI 3", "#define OKC_WGSFCI 1")
         replace("#define OKC_WGSGS 2  //", "#define OKC_WGSGS 4  //")
     return source
+
+
+def delayed_activation_wait(source: str) -> str:
+    """Decode the first independent A fragments before waiting for X.
+
+    All generic weight loads remain after BW_F. The BX_F wait still precedes
+    the first WGMMA access to X, and the operand fence/commit/release sequence
+    is unchanged. This changes scheduling only, not precisions or work.
+    """
+    before = "    wgs_wait(S.bars + BX_F + xs, (uint32_t)(seq / WGS_NX) & 1u, 4000000 + seq);\n"
+    assert source.count(before) == 1
+    source = source.replace(before, "")
+    anchor = """        wg_fence();
+#pragma unroll
+        for (int jj = 0; jj < GS; ++jj) {"""
+    assert source.count(anchor) == 1
+    after = """        if (ci == 0)
+          wgs_wait(S.bars + BX_F + xs, (uint32_t)(seq / WGS_NX) & 1u, 4000000 + seq);
+""" + anchor
+    return source.replace(anchor, after)

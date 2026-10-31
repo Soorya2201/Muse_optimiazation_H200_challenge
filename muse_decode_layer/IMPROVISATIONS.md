@@ -1,5 +1,21 @@
 # muse_decode_layer: optimizations, measurements, and new ideas
 
+## Oct31 fresh-source and operand scheduling screen
+
+Canonical score remains2.211495x; no new GPU check or scored submit.
+The public index grows87->94paths/9->10repos; all1106ranked account metadata
+screened,5unresolved. Deferred Kushagra/ScrashOff sources and180external
+cells supply no stronger replacement; ScrashOff loses required small-T
+router precision. Newly discovered Apache2 trxphxle72db638 measurements and
+nine unmodified docs/data are pinned. All18route histograms/byte pools
+independently verify; conditional decoder reread-removal proxies1.00097–
+1.02439x do not establish a>=3%gain. These are not critical-path bounds.
+A new delayed-X-wait native transformation compiles reduced sm90a with
+96regs/zero spills; no GPU validation or practical>=3%case yet. Do not
+promote or spend a check on compiler success alone. Full sources, models,
+status, higher-precision fusion policy uncertainty and next action are in
+[the dated review](PUBLIC_DELTA_AND_OPERAND_SCREEN_2026-10-31.md).
+
 ## Oct30 precision correction
 
 The Oct29 public decoder result below is historical and was withdrawn.

@@ -1,0 +1,72 @@
+{
+  "captured_utc": "2026-10-31T18:08:32.345352+00:00",
+  "repository": "trxphxle/okc-2026-muse-kernels",
+  "commit": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+  "license": "Apache-2.0; unmodified selected documents/data. Original author attribution and upstream NOTICE retained.",
+  "scope": "Selected decoder-method/measurement data only, not a full repo mirror or reproduced GPU results. Source code reviewed temporarily; not executed/ported.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "dc6b2c88416d6700fa3fb2ff308a278517df2f0d",
+      "sha256": "2cb0f0ee6c546f260f4184c607983d0603da7714b6a4a2d0ece6b2eb5261c284",
+      "bytes": 9826,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/README.md"
+    },
+    {
+      "path": "licenses/NOTICE.alygg77",
+      "git_blob": "8d1069372b982b1f4fc7bcf263635ba56594a73c",
+      "sha256": "3ff2a7331b3ee752377c9147edb3fd986e78d78a448ad487850e15a38bf833d5",
+      "bytes": 1547,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/licenses/NOTICE.alygg77"
+    },
+    {
+      "path": "kernels/BEST.json",
+      "git_blob": "1a33cd84824410838845db310fdcfed5eeb50b0d",
+      "sha256": "97367602eaaee8dc84410f82b2dee74c13e54d862359ff4118b47341f18d176a",
+      "bytes": 3312,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/kernels/BEST.json"
+    },
+    {
+      "path": "results/MODAL-COUNTERS.md",
+      "git_blob": "59b2df79fa77119a436d2f63890ddd150764d833",
+      "sha256": "1ec11ad23bc1c284b4aafc5fc9e6d9bb5ae323dc32924cf64deb193d064774b2",
+      "bytes": 2689,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/results/MODAL-COUNTERS.md"
+    },
+    {
+      "path": "experiments/research/PRECISION.md",
+      "git_blob": "cb8f1522ccfefd1f1b98d83e32c17e38e0dd1924",
+      "sha256": "53cb0d4e96077c18b0dd9b6933e41f96dcb3260c1e0bd453e3efd224df7197a9",
+      "bytes": 18214,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/research/PRECISION.md"
+    },
+    {
+      "path": "experiments/experts-v32/attribution-summary.json",
+      "git_blob": "b690ea81d659810de9231412229ed2094f1463d6",
+      "sha256": "4eb6e36df5a3a55e90c4d74836cd41636b50688d1a3616bbb868197f13b76f67",
+      "bytes": 15300,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-v32/attribution-summary.json"
+    },
+    {
+      "path": "experiments/experts-v32/ceiling-verification.json",
+      "git_blob": "7b618daf9c1da47efc8b2dcb19d6afb7e7945f41",
+      "sha256": "7f1f23513e0fd662b4330971b6a831ad4adc7b64c1988ca625a676503a6a1e83",
+      "bytes": 8414,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-v32/ceiling-verification.json"
+    },
+    {
+      "path": "experiments/experts-sched/round4-tuples.csv",
+      "git_blob": "e9311eb438a6f85d4aba1c53555af374d97123d7",
+      "sha256": "fbf87257ffa4e8029e240db7ea670595f6f81cf662759994ada390c488bdf4f3",
+      "bytes": 10685,
+      "url": "https://raw.githubusercontent.com/trxphxle/okc-2026-muse-kernels/72db638fa2718bc0ea5645fdd5c52a5511594579/experiments/experts-sched/round4-tuples.csv"
+    }
+  ]
+}

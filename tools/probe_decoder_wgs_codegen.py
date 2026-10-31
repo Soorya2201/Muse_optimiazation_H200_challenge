@@ -15,11 +15,11 @@ from pathlib import Path
 import re
 import urllib.error
 import urllib.request
-from decoder_wgs_variants import register_split
+from decoder_wgs_variants import register_split, delayed_activation_wait
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
-parser.add_argument("arm", choices=["base", "explicit_scale_reuse", "regsplit_gs2", "regsplit_gs4"])
+parser.add_argument("arm", choices=["base", "explicit_scale_reuse", "regsplit_gs2", "regsplit_gs4", "delayed_x_wait"])
 parser.add_argument("--instantiation", choices=["both", "true", "false"], default="both")
 parser.add_argument("--binary-host", action="store_true",
                     help="Avoid host fatbinary assembly; request object disassembly plus device views")
@@ -39,6 +39,8 @@ node = next(n for n in tree.body if isinstance(n, ast.Assign)
             and any(isinstance(t, ast.Name) and t.id == "MOE_CUDA_SRC" for t in n.targets))
 native = ast.literal_eval(node.value)
 source = native.split("#include <torch/extension.h>")[0]
+if args.arm == 'delayed_x_wait':
+    source = delayed_activation_wait(source)
 if args.arm.startswith('regsplit_gs'):
     source = register_split(source, int(args.arm[-1]))
 if args.arm == "explicit_scale_reuse":

@@ -6,6 +6,20 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+
+Oct31 decoder follow-up:
+[public delta and operand screen](muse_decode_layer/PUBLIC_DELTA_AND_OPERAND_SCREEN_2026-10-31.md).
+Fresh94indexedpaths/10repos;1106rankedowner metadata,144above/961below+self,
+5unresolved. Nineteen new repository matches; eight SGLang default branches
+have0ahead/0changed files. Kushagra32selectedfiles/ScrashOff15hash-verified,
+180external cells parsed; no implementation ported or unlicensed mirror.
+Newly discovered Apache2 trxphxle72db638:15selected files verified,9unaltered
+license/docs/data pinned; published2.175618x decoder,not our paired result.
+Exact18route/byte-pool recomputation and conditional decoder proxy recorded.
+Compiler-only delayed-X-wait candidate has no established>=3%runtime case;
+no GPU check or scored change. Higher FP32 fused intermediates remain a
+separate policy-unconfirmed question; no categorical organizer ruling.
+
 Oct31 BF16 follow-up:
 [C12 layout-transfer research](muse_bf16_proj/C12_PERMUTE_RESEARCH_2026-10-31.md)
 adapts an embedded,pinned MIT Nathen decoder to nine older SK2 routes.

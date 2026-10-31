@@ -1,0 +1,325 @@
+{
+  "captured_utc": "2026-10-31T18:07:57.080973+00:00",
+  "scope": "New metadata matches vs prior decoder screen; source scope explicitly per row; no private/all-branch claim.",
+  "rows": [
+    {
+      "rank": 166,
+      "team": "alygg77",
+      "repo": "alygg77/okc-muse-spark-kernels",
+      "url": "https://github.com/alygg77/okc-muse-spark-kernels",
+      "default_branch": "main",
+      "head": "6cae49a639ee6d14b929a5fd4a63c627f96d7dc0",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": false,
+      "decision": "Already exact adopted parent; compare pinned head6cae49a"
+    },
+    {
+      "rank": 187,
+      "team": "adityuhkapoor",
+      "repo": "adityuhkapoor/sglang",
+      "url": "https://github.com/adityuhkapoor/sglang",
+      "default_branch": "main",
+      "head": "fbc90a860ec0ae4cd7a458d679bc68eefbbbcdc6",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 166,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    },
+    {
+      "rank": 207,
+      "team": "islamborghini",
+      "repo": "islamborghini/sglang",
+      "url": "https://github.com/islamborghini/sglang",
+      "default_branch": "main",
+      "head": "163b739b34023c30231062a46caecd62fc4aff83",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 5204,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    },
+    {
+      "rank": 211,
+      "team": "trxphxle",
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "url": "https://github.com/trxphxle/okc-2026-muse-kernels",
+      "default_branch": "main",
+      "head": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": false,
+      "decision": "New exact-source/measurement audit in TRXPHXLE_SOURCE_SCREEN_2026-10-31.json"
+    },
+    {
+      "rank": 294,
+      "team": "1sgtpepper",
+      "repo": "1sgtpepper/sglang",
+      "url": "https://github.com/1sgtpepper/sglang",
+      "default_branch": "main",
+      "head": "bd16c22a04b0eb9bc2e775795bda6b11727a5d38",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 3591,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    },
+    {
+      "rank": 307,
+      "team": "gaidar0yegor",
+      "repo": "gaidar0yegor/w4a16-dequant-gemm",
+      "url": "https://github.com/gaidar0yegor/w4a16-dequant-gemm",
+      "default_branch": "main",
+      "head": "c7af21a9606b386fa8b87816a5880fa571e79557",
+      "license": null,
+      "fork": false,
+      "decision": "Metadata-only; NVFP4 component deferred to MoE, unrelated utilities/models not decoder source"
+    },
+    {
+      "rank": 349,
+      "team": "vladnosiv",
+      "repo": "vladnosiv/sglang",
+      "url": "https://github.com/vladnosiv/sglang",
+      "default_branch": "main",
+      "head": "7f8f030000b628ea2cb033e7457a13dd0ac80f99",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 4486,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    },
+    {
+      "rank": 361,
+      "team": "maxwbuckley",
+      "repo": "maxwbuckley/sglang",
+      "url": "https://github.com/maxwbuckley/sglang",
+      "default_branch": "main",
+      "head": "3a3a8611a45f5a81fd07ffa6b0ed3ba33e7a4db9",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 173,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    },
+    {
+      "rank": 489,
+      "team": "MrNirmata",
+      "repo": "MrNirmata/h200-decode-notes",
+      "url": "https://github.com/MrNirmata/h200-decode-notes",
+      "default_branch": "main",
+      "head": "4f195ed71190f5556d48adbf23a0e1a9db5412b1",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "fork": false,
+      "decision": "Licensed selected sources pinned; decoder method review; no faster whole-layer component established"
+    },
+    {
+      "rank": 489,
+      "team": "MrNirmata",
+      "repo": "MrNirmata/lossless-bf16",
+      "url": "https://github.com/MrNirmata/lossless-bf16",
+      "default_branch": "main",
+      "head": "4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": false,
+      "decision": "Licensed selected sources pinned; decoder method review; no faster whole-layer component established"
+    },
+    {
+      "rank": 538,
+      "team": "oniisanlabs",
+      "repo": "oniisanlabs/sglang",
+      "url": "https://github.com/oniisanlabs/sglang",
+      "default_branch": "main",
+      "head": "5d8e90a0f96e6ba35603f9b27f2f1039268c810e",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 265,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    },
+    {
+      "rank": 590,
+      "team": "goldbar123467",
+      "repo": "goldbar123467/NVFP4-Group-Gemm",
+      "url": "https://github.com/goldbar123467/NVFP4-Group-Gemm",
+      "default_branch": "main",
+      "head": "39fd1d746615bfbebbd71e18ce0d7bd952b1a6c5",
+      "license": null,
+      "fork": false,
+      "decision": "Metadata-only; NVFP4 component deferred to MoE, unrelated utilities/models not decoder source"
+    },
+    {
+      "rank": 590,
+      "team": "goldbar123467",
+      "repo": "goldbar123467/nvfp4_group_gemm",
+      "url": "https://github.com/goldbar123467/nvfp4_group_gemm",
+      "default_branch": "main",
+      "head": "21e86b69bbba4f924cf1b2dc514fd47f8d5282cf",
+      "license": null,
+      "fork": false,
+      "decision": "Metadata-only; NVFP4 component deferred to MoE, unrelated utilities/models not decoder source"
+    },
+    {
+      "rank": 615,
+      "team": "baobabtr33",
+      "repo": "baobabtr33/pocket-muse",
+      "url": "https://github.com/baobabtr33/pocket-muse",
+      "default_branch": "main",
+      "head": "1252382545c605c382710db2c10b8d5bb449a3e9",
+      "license": null,
+      "fork": false,
+      "decision": "Metadata-only; NVFP4 component deferred to MoE, unrelated utilities/models not decoder source"
+    },
+    {
+      "rank": 615,
+      "team": "baobabtr33",
+      "repo": "baobabtr33/sglang",
+      "url": "https://github.com/baobabtr33/sglang",
+      "default_branch": "main",
+      "head": "8ecabd3c1e1227ca91b0bbb48d75cf33b4626a73",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 92,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    },
+    {
+      "rank": 731,
+      "team": "Kushagrabainsla",
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open",
+      "default_branch": "main",
+      "head": "0778ecd8293e375ffe33faa466db0231929aaac3",
+      "license": null,
+      "fork": false,
+      "decision": "Decoder sources read in DEFERRED_SOURCE_SCREEN_2026-10-31.json"
+    },
+    {
+      "rank": 848,
+      "team": "ScrashOff",
+      "repo": "ScrashOff/okc-muse-kernels",
+      "url": "https://github.com/ScrashOff/okc-muse-kernels",
+      "default_branch": "main",
+      "head": "d870912e7c5a030c52050bb2445418224c28d9de",
+      "license": null,
+      "fork": false,
+      "decision": "Decoder sources read in DEFERRED_SOURCE_SCREEN_2026-10-31.json"
+    },
+    {
+      "rank": 964,
+      "team": "oswalpalash",
+      "repo": "oswalpalash/lysithea",
+      "url": "https://github.com/oswalpalash/lysithea",
+      "default_branch": "master",
+      "head": "1e731f9eb2861f2d341dd1ddabd37ee82339e5e4",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "fork": true,
+      "decision": "Metadata-only; NVFP4 component deferred to MoE, unrelated utilities/models not decoder source"
+    },
+    {
+      "rank": 1090,
+      "team": "anencore94",
+      "repo": "anencore94/sglang",
+      "url": "https://github.com/anencore94/sglang",
+      "default_branch": "main",
+      "head": "97adf8a2909dc642ddf58e98cdd607aa5e76046c",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "fork": true,
+      "scope": "Default branch compare only; not all branches.",
+      "ahead_by": 0,
+      "behind_by": 10159,
+      "changed_files": [],
+      "decision": "No changed default-branch component"
+    }
+  ]
+}
