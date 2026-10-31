@@ -58,7 +58,8 @@ template <> DEVI void ss_mma<{n}>(float (&acc)[128], uint64_t ad, uint64_t bd) {
 '''
 
 
-def shared_weight_native(source: str, consumer_regs: int = 184, all_widths: bool = False) -> str:
+def shared_weight_native(source: str, consumer_regs: int = 184, all_widths: bool = False,
+                         strict_roles: bool = True) -> str:
     assert consumer_regs in (184, 216)
     producer_regs = 120 if consumer_regs == 184 else 72
     def replace(before, after):
@@ -171,6 +172,12 @@ DEVI void consumer_item_ss(const Args& p, uint8_t* ring, uint8_t* stg, uint32_t 
       }
     }
   } else {''')
+    if strict_roles:
+        before='''    } else {
+      static_assert(!MOE_CONS_FIRST && MOE_ALLLANE_RELEASE,'''
+        assert body.count(before)==1
+        body=body.replace(before, '''    } else if (threadIdx.x >= 64 && threadIdx.x < 128) {
+      static_assert(!MOE_CONS_FIRST && MOE_ALLLANE_RELEASE,''')
     # Inline full SS bodies for wide arms only. Preserve old narrow paths.
     body = body.replace('if constexpr (MOE_FINE_NOINLINE) consumer_item_ni<160>',
                         'if constexpr (false) consumer_item_ni<160>')

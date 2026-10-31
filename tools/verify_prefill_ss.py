@@ -122,7 +122,7 @@ for _ in range(1000):
 
 artifacts=[]
 for regs in (184,216):
-    changed=shared_weight_native(native,regs)
+    changed=shared_weight_native(native,regs,strict_roles=False)
     # Parent conversion and the complete direct epilogue are reused verbatim.
     conversion=native[native.index('DEVI void convert8('):native.index('\n\nstruct Args')]
     assert conversion in changed
@@ -134,7 +134,7 @@ for regs in (184,216):
     pr=120 if regs==184 else 72
     artifacts.append(dict(consumer_regs=regs,producer_regs=pr,role_register_request=128*pr+256*regs,
                           native_sha256=hashlib.sha256(changed.encode()).hexdigest(),path=str(path.relative_to(ROOT))))
-changed=shared_weight_native(native,184,True)
+changed=shared_weight_native(native,184,True,strict_roles=False)
 path=TRACK/'SS_NATIVE_ALL_R184_2026-10-31.cu.gz'
 if not path.exists() or gzip.open(path,'rt').read()!=changed:
     with gzip.open(path,'wt') as f:f.write(changed)
@@ -143,11 +143,26 @@ if not path.exists() or gzip.open(path,'rt').read()!=changed:
 artifacts.append(dict(mode='all widths SS, KPS1',consumer_regs=184,producer_regs=120,
                       role_register_request=62464,native_sha256=hashlib.sha256(changed.encode()).hexdigest(),
                       path=str(path.relative_to(ROOT))))
+changed=shared_weight_native(native,184,True,strict_roles=True)
+path=TRACK/'SS_NATIVE_ALL_R184_ROLEFIX_2026-10-31.cu.gz'
+if not path.exists() or gzip.open(path,'rt').read()!=changed:
+    with gzip.open(path,'wt') as f:f.write(changed)
+(TRACK/'SS_NATIVE_ALL_R184_ROLEFIX_2026-10-31.diff').write_text(''.join(difflib.unified_diff(
+    native.splitlines(True),changed.splitlines(True),fromfile='parent.cu',tofile='ss_all_rolefix.cu',n=0)))
+artifacts.append(dict(mode='all widths SS, KPS1, explicit worker bounds',consumer_regs=184,
+                      producer_regs=120,role_register_request=62464,
+                      native_sha256=hashlib.sha256(changed.encode()).hexdigest(),path=str(path.relative_to(ROOT))))
+legacy=[t for t in range(128) if t!=0 and not 32<=t<64]
+workers=[t for t in legacy if 64<=t<128]
+assert len(legacy)==95 and len([t for t in legacy if t-64<0])==31
+assert workers==list(range(64,128)) and [t-64 for t in workers]==list(range(64))
+assert 'else if (threadIdx.x >= 64 && threadIdx.x < 128)' in changed
 out=dict(scope=__doc__,parent_sha256=hashlib.sha256(parent.encode()).hexdigest(),
          blocks=blocks,raw_e2m1_patterns=16,scale_raw_byte_patterns=256,
          observed_code_scale_pairs=len(seen),symbolic_fragment_pairs=vector_pairs,
          symbolic_bf16_destinations=blocks*8192,staging=staging,
          metadata_readers=320,phase_sequences=1000,items_per_sequence=20,
+         legacy_worker_count=95,legacy_negative_indices=31,corrected_worker_count=64,
          all_ss_stages_per_item=64,all_ss_decoded_barrier_cycles_per_item=16,
          dynamic_shared_bytes=232448,extra_global_activation_bytes=0,
          raw_load_before_overwrite='CPU all-worker capture then randomized stores; native named barrier requires independent GPU validation',

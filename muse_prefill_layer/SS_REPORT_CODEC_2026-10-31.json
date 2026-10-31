@@ -1,0 +1,9 @@
+{
+  "scope": "CPU exact serialization roundtrip using previous K64 fixture records only; not new SS GPU evidence or a worst-case compression guarantee.",
+  "source_sha256": "82683481123affacafaecfb8fe70cd4c96ac898df5714353f6c7c0d1c7df9c2c",
+  "fixture_sha256": "46411841acc3d12f379427d1024024b0665b62d762cfef40d3cc6eb0b14e2c95",
+  "rows": 24,
+  "exact_timestamps": 768,
+  "payload_chars": 4036,
+  "below_12000": true
+}

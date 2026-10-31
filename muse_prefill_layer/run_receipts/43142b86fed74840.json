@@ -1,0 +1,64 @@
+{
+  "job": "43142b86fed74840",
+  "board": "muse_prefill_layer",
+  "mode": "check",
+  "cluster": "sfo3",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 122.28,
+      "power.limit": 700,
+      "temperature.gpu": 34
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.159.03",
+      "name": "NVIDIA H200",
+      "power.draw": 126.42,
+      "power.limit": 700,
+      "temperature.gpu": 32
+    },
+    "node": "n-hbquzsoc2fbla3mk4cpu32bkrb"
+  },
+  "created_at": 1793481009.4086068,
+  "source": "muse_prefill_layer/submission_v28_ss_pipeline_probe.py",
+  "source_sha256": "82683481123affacafaecfb8fe70cd4c96ac898df5714353f6c7c0d1c7df9c2c",
+  "profile_capture": "remote structured records; local CLI profile unavailable",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "passed": false,
+    "status": "ok",
+    "error": null,
+    "speedup": null,
+    "speedup_ci": null,
+    "score_us": null,
+    "returncode": 112
+  },
+  "setup": [
+    {
+      "baseline_copies": 2,
+      "baseline_prepare_pad": 2832896,
+      "copies": null,
+      "error": "AcceleratorError: CUDA error: unspecified launch failure\nSearch for `cudaErrorLaunchFailure' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nThe CUDA driver logged these messages, which may provide useful details:\nSticky error detected\nReturning 719 (CUDA_ERROR_LAUNCH_FAILED) from cuCtxSynchronize_v2\n\n",
+      "event": "setup",
+      "first": "baseline",
+      "prepare_pad": null,
+      "prepare_s": null,
+      "status": "fail"
+    }
+  ],
+  "benchmarks": [],
+  "profiles": [],
+  "log_tail": "LT tune T=753 qkv: torch.mm 41.7us, best 41.7us algo None of 8\nLT tune T=753 o: torch.mm 24.2us, best 24.2us algo None of 8\nLT T=753 router: pinned (33, 4, 2, 3) -> algo 6\nLT tune T=753 pooler: torch.mm 68.8us, best 68.8us algo None of 8\nLT tune T=753 unpooler: torch.mm 69.7us, best 69.7us algo None of 8\nLT tune T=3012 qkv: torch.mm 146.9us, best 146.9us algo None of 8\nLT tune T=3012 o: torch.mm 74.9us, best 74.9us algo None of 8\nLT tune T=3012 router: torch.mm 40.4us, best 40.4us algo None of 8\nLT tune T=3012 pooler: torch.mm 254.2us, best 254.2us algo None of 8\nLT tune T=3012 unpooler: torch.mm 254.1us, best 254.1us algo None of 8\nLT tune T=16384 qkv: torch.mm 766.7us, best 766.7us algo None of 8\nLT T=16384 o: pinned (201, 1, 0, 2) -> algo 6\nLT tune T=16384 router: torch.mm 201.4us, best 201.4us algo None of 8\nLT T=16384 pooler: pinned (29, 1, 0, 1) -> algo 5\nLT T=16384 unpooler: pinned (201, 1, 0, 2) -> algo 6\nATTN own kernel validation (worst rel err): {0: 0.0151, 1: 0.0151, 8: 0.0151, 9: 0.0151, 16: 0.0151, 24: 0.0151, 43: 0.0151} -> [0, 1, 8, 9, 16, 24, 43]\n[pfctx] fresh-thread bind passed: initial_context=False, Lt=(753, 'router'), relerr=3.0739327030460117e-06\nTraceback (most recent call last):\n  File \"/tmp/muse_prefill_layer-as1896jg/run/worker.py\", line 423, in child_main\n    send(_setup_op(msg, module, state, sync, perf))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/muse_prefill_layer-as1896jg/run/worker.py\", line 322, in _setup_op\n    state[\"prep\"] = prepare(weights)\n                    ^^^^^^^^^^^^^^^^\n  File \"/tmp/muse_prefill_layer-as1896jg/run/submission.py\", line 5924, in prepare\n    _ss_probe(st,weights)\n  File \"/tmp/muse_prefill_layer-as1896jg/run/submission.py\", line 5905, in _ss_probe\n    torch.cuda.synchronize()\n  File \"/opt/sglang/lib/python3.12/site-packages/torch/cuda/__init__.py\", line 1281, in synchronize\n    return torch._C._cuda_synchronize()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch.AcceleratorError: CUDA error: unspecified launch failure\nSearch for `cudaErrorLaunchFailure' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nThe CUDA driver logged these messages, which may provide useful details:\nSticky error detected\nReturning 719 (CUDA_ERROR_LAUNCH_FAILED) from cuCtxSynchronize_v2\n\n\n[W1031 21:12:37.777335130 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n[W1031 21:12:37.777351581 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n[W1031 21:12:37.777439361 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n[W1031 21:12:37.777444002 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n[W1031 21:12:37.777474538 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n[W1031 21:12:37.777478886 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n[W1031 21:12:37.777506233 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n[W1031 21:12:37.777510551 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)\n"
+}

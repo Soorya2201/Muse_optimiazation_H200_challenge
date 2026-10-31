@@ -10,10 +10,11 @@ import statistics as stats
 import struct
 import zlib
 
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('job');args=p.parse_args()
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('job');p.add_argument('--kind',choices=['scale','ss'],default='scale');args=p.parse_args()
 root=Path(__file__).resolve().parents[1];folder=root/'muse_prefill_layer'
 r=json.loads((folder/'run_receipts'/f'{args.job}.json').read_text())
-matches=re.findall(r'^PREFILL_SCALE_SHARE_Z (\S+)$',r['log_tail'],re.M)
+marker='PREFILL_SS_PIPE_Z' if args.kind=='ss' else 'PREFILL_SCALE_SHARE_Z'
+matches=re.findall(r'^'+marker+r' (\S+)$',r['log_tail'],re.M)
 assert len(matches)==1,'Require one intact report; never infer success from missing diagnostics'
 wire=zlib.decompress(base64.b64decode(matches[0]));size=struct.unpack_from('<I',wire)[0]
 d=json.loads(wire[4:4+size]);buf=wire[4+size:]
@@ -35,7 +36,10 @@ out=dict(job=args.job,cluster=r['cluster'],source_sha256=r['source_sha256'],
 if d['status']=='complete':
     assert r['summary']['passed'] and len(d['nearby'])==5
     assert {(x['m'],x['seed'],x['pad_mib']) for x in d['rows']}==set(itertools.product((753,3012,16384),(3208,7911),(0,1,3,7)))
-    assert d['movement_widths']==[32,64,96,128,160,192,224,256]
+    if args.kind=='ss':
+        assert d['movement_cases']==[[key,ks] for key in ('w13','w2') for ks in (0,1,17,63)]
+    else:
+        assert d['movement_widths']==[32,64,96,128,160,192,224,256]
     for row in d['rows']+d['nearby']:
         assert row['change']>.001
         for field in ('error','fresh'):
@@ -87,7 +91,8 @@ if d['status']=='complete':
         out['policies'].append(dict(token_sizes=sorted(chosen),worst=min(factors),
             median=stats.median(factors),best=max(factors),component_gates=chosen<=eligible,
             qualifies=chosen<=eligible and min(factors)>=1.03))
-path=folder/f'SCALE_SHARE_REPORT_{args.job}.json';assert not path.exists()
+label='SS_PIPELINE' if args.kind=='ss' else 'SCALE_SHARE'
+path=folder/f'{label}_REPORT_{args.job}.json';assert not path.exists()
 path.write_text(json.dumps(out,indent=2)+'\n')
 print('DIAGNOSTIC',d['status'],d.get('stage'),d.get('seconds'),'payload',out['payload_chars'])
 print('RESOURCES',d.get('resources'))

@@ -1,0 +1,52 @@
+{
+  "scope": "CPU role-count/source-identity/finally-error reporting checks; not new GPU evidence",
+  "source_sha256": "a1cb7606de19c6cf61a004ce76e77b76ec5817726f2e3a94ba0591dd7670ad58",
+  "role_counts": {
+    "dma": 1,
+    "publisher": 32,
+    "dequant": 64,
+    "idle": 31,
+    "consumer": 256
+  },
+  "metadata_reader_count": 320,
+  "dequant_indices": [
+    0,
+    63
+  ],
+  "legacy_invalid_lanes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "error_report_retains_first_and_secondary_errors": true,
+  "synthetic_failure_payload_chars": 244,
+  "native_sha256": "188dafea9b4892f9b1fba1241808c6a5318e40777321cd1dacdbcf304ad39483"
+}

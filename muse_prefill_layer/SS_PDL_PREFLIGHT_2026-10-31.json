@@ -1,0 +1,23 @@
+{
+  "scope": "Complete returned PTX and available SASS prologue order only; not runtime correctness or exhaustive compiler-hoisting proof.",
+  "rows": [
+    {
+      "fine": 0,
+      "ptx_entry_row": 62,
+      "ptx_pdl_wait_row": 83,
+      "ptx_first_global_load_row": 166,
+      "sass_pdl_acquire_row": 13,
+      "sass_first_global_load_row": 82,
+      "source_native_sha256": "0eac5c66937852c111783af4f7eb9d69b3cd9a324fdfc57037e36cc7b541a228"
+    },
+    {
+      "fine": 1,
+      "ptx_entry_row": 62,
+      "ptx_pdl_wait_row": 83,
+      "ptx_first_global_load_row": 166,
+      "sass_pdl_acquire_row": 13,
+      "sass_first_global_load_row": 82,
+      "source_native_sha256": "0eac5c66937852c111783af4f7eb9d69b3cd9a324fdfc57037e36cc7b541a228"
+    }
+  ]
+}

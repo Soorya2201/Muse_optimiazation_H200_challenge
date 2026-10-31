@@ -68,7 +68,20 @@ okc withdraw <job>            # take a run off the board
 ### Continuation update (supersedes the older table below)
 
 
-#### Oct31 prefill SS pipeline implementation; H200 diagnostic next
+#### Oct31 prefill SS V28 terminal failure; corrected V29 ready
+
+Check43142b86fed74840 is TERMINAL failed setup on sfo3,CUDA719/return112,
+no tests/timing/score. Originalstage masked by finallysync; availablelogs read.
+Concrete sourcebug: finalproducerelse includedidleDMA lanes1..31, giving
+95dequantworkers/31negativeindices. CorrectV29boundsworkers64..127explicitly.
+CPUall384roles verified; metadatareaders320. Modelpreviouslyassumed64worker
+population,nowrecordslegacycounterexample. Rawmappingproofstillpasses.
+V29SHAa1cb7606de19c6cf61a004ce76e77b76ec5817726f2e3a94ba0591dd7670ad58, retainsparentprefixandallgates. Newstage/arm prints
+andfinallysyncguard preservefirst/secondaryerrors; CPUinjectederrorcheckpass.
+FINE1rolefixcompile168regs/8ABI/zero spills/noC751x; FINE0follows. Native
+source/diff/roleproofarchived. Prefill6/8,allsubmits0. V29notlaunched at
+thiswriting; seeRESULTS.md/receiptsbeforefurtherchecks. Sourcespushed6c0a0aa/
+d5d99a9; terminalfailureandcorrectionscheckpointfollows. NoGPUjoblive.
 
 Previous decoder cycle made progress and pusheda6f428d. This cycle stays
 onprefill, implementing producer-owned NVFP4 dequantization and shared/shared

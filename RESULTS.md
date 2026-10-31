@@ -208,3 +208,7 @@ New7-file Apache2FlashInfer source pin/primary transfer review and current
 leader metadata archived. See muse_decode_layer/ROUNDED_WIDTHS_RESEARCH_2026-10-31.md.
 Budget unchanged:MoE8/8,attention1/8,BF164/8,decoder1/8,prefill5/8routine;
 all submits0,reserve untouched. No live GPU job. Next sequential trackprefill.
+
+2026-10-31 | muse_prefill_layer | submission_v28_ss_pipeline_probe.py | 43142b86fed74840 | check | PENDING | Producer dequant/shared-shared WGMMA, timed parent unchanged; cluster sfo3, last verified running. Sixth of8routine prefill checks,zero submits,reserve intact. Predeclared SS_PIPELINE_H200_2026-10-31.md. Poll this same job; do not restart due observation timeout.
+
+2026-10-31 | muse_prefill_layer | submission_v28_ss_pipeline_probe.py | 43142b86fed74840 | check | FAIL | sfo3,returncode112; setup CUDA_ERROR_LAUNCH_FAILED719, no tests/timings/score. Final synchronization in diagnostic masked the original stage/error and prevented report emission. Full remote log/receipt archived. Sixth of8routine checks; do not infer numerical/performance result or launch an unchanged retry. Canonical untouched.

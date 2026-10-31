@@ -48,6 +48,9 @@
   "metadata_readers": 320,
   "phase_sequences": 1000,
   "items_per_sequence": 20,
+  "legacy_worker_count": 95,
+  "legacy_negative_indices": 31,
+  "corrected_worker_count": 64,
   "all_ss_stages_per_item": 64,
   "all_ss_decoded_barrier_cycles_per_item": 16,
   "dynamic_shared_bytes": 232448,
@@ -75,6 +78,14 @@
       "role_register_request": 62464,
       "native_sha256": "0eac5c66937852c111783af4f7eb9d69b3cd9a324fdfc57037e36cc7b541a228",
       "path": "muse_prefill_layer/SS_NATIVE_ALL_R184_2026-10-31.cu.gz"
+    },
+    {
+      "mode": "all widths SS, KPS1, explicit worker bounds",
+      "consumer_regs": 184,
+      "producer_regs": 120,
+      "role_register_request": 62464,
+      "native_sha256": "188dafea9b4892f9b1fba1241808c6a5318e40777321cd1dacdbcf304ad39483",
+      "path": "muse_prefill_layer/SS_NATIVE_ALL_R184_ROLEFIX_2026-10-31.cu.gz"
     }
   ]
 }

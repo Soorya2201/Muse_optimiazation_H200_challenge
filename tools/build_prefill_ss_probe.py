@@ -1,9 +1,11 @@
 """Build an isolated same-job diagnostic; canonical timed dispatch is unchanged."""
 import ast
+import argparse
 import hashlib
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser();parser.add_argument('--version',type=int,choices=[28,29],default=29);args=parser.parse_args()
 parent=(ROOT/'muse_prefill_layer/submission.py').read_text()
 assert hashlib.sha256(parent.encode()).hexdigest()=='8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5'
 prior=(ROOT/'muse_prefill_layer/submission_v27_scale_share_probe.py').read_text()
@@ -114,6 +116,17 @@ probe=probe[:a]+'''        report['stage']='raw weight movement'
 a=probe.index('        def set_arm(name):');b=probe.index('        def captures(data):',a)
 probe=probe[:a]+'        def set_arm(name): pass\n'+probe[b:]
 probe=probe.replace('PREFILL_SCALE_SHARE_Z','PREFILL_SS_PIPE_Z').replace('PREFILL_SCALE_SHARE_SUMMARY','PREFILL_SS_PIPE_SUMMARY')
+probe=probe.replace('            data=_ks_fixture(m,seed,dev,mode)',
+                    "            report['stage']=f'nearby/{m}/{mode}'\n            data=_ks_fixture(m,seed,dev,mode)")
+probe=probe.replace('            for k,state in arms.items():set_arm(k);graphs[k]=_ks_capture(state,data)',
+                    "            for k,state in arms.items():\n                report['active_arm']=k\n                print('PREFILL_SS_STAGE '+report['stage']+' arm='+k,flush=True)\n                set_arm(k);graphs[k]=_ks_capture(state,data)")
+probe=probe.replace("    finally:\n        torch.cuda.synchronize()\n        report['seconds']", """    finally:
+        try:
+            torch.cuda.synchronize()
+        except Exception as sync_error:
+            report['status']='failed'
+            report['secondary_sync_error']=repr(sync_error)[:1000]
+        report['seconds']""")
 append+=probe+'\n'
 append+='''
 def prepare(weights):
@@ -125,7 +138,7 @@ def prepare(weights):
 result=parent+'\n'+append
 ast.parse(result)
 assert result.startswith(parent)
-target=ROOT/'muse_prefill_layer/submission_v28_ss_pipeline_probe.py'
+target=ROOT/f'muse_prefill_layer/submission_v{args.version}_ss_pipeline_probe.py'
 assert not target.exists()
 target.write_text(result)
 print(target.relative_to(ROOT),hashlib.sha256(result.encode()).hexdigest())
