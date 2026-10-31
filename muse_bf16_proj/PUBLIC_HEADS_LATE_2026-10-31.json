@@ -1,0 +1,33 @@
+{
+  "captured_utc": "2026-10-31T22:13:10.580780+00:00",
+  "heads": [
+    {
+      "repo": "NathenFernandes/muse-bf16-proj",
+      "sha": "86aff75e6aca72511bf9b41b6dc190bf1e763373",
+      "html_url": "https://github.com/NathenFernandes/muse-bf16-proj/commit/86aff75e6aca72511bf9b41b6dc190bf1e763373",
+      "committed_at": "2026-10-24T20:30:27Z",
+      "message": "docs(kernels): restore README license section"
+    },
+    {
+      "repo": "alygg77/okc-muse-spark-kernels",
+      "sha": "6cae49a639ee6d14b929a5fd4a63c627f96d7dc0",
+      "html_url": "https://github.com/alygg77/okc-muse-spark-kernels/commit/6cae49a639ee6d14b929a5fd4a63c627f96d7dc0",
+      "committed_at": "2026-10-29T21:11:39Z",
+      "message": "README, llms.txt: ask readers (and agents' users) to star the repo\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "repo": "vjeux/okc-2026",
+      "sha": "f35a41ee1c13e316dabbf772830d47b23b453393",
+      "html_url": "https://github.com/vjeux/okc-2026/commit/f35a41ee1c13e316dabbf772830d47b23b453393",
+      "committed_at": "2026-10-28T02:03:32Z",
+      "message": "v2: dead-code removal \u2014 switches, arch guards, dead branches gone; oracle + GPU gated"
+    },
+    {
+      "repo": "MrNirmata/lossless-bf16",
+      "sha": "4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2",
+      "html_url": "https://github.com/MrNirmata/lossless-bf16/commit/4429b1d036a77b8ac8b7d63682ef7dceb32a0ac2",
+      "committed_at": "2026-10-30T17:29:35Z",
+      "message": "Add README and format/kernel documentation"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scope": "Conditional uniform target-cell time cuts, not hardware compression ratios, physical DRAM traffic or a speed prediction.",
+  "source_receipt": "a3d4758c1e174aba",
+  "target_cells": 8,
+  "phase_zero_proxy": 2.228828273784732,
+  "required_uniform_target_cut_for3pct": 0.0932844604288053,
+  "scenarios": {
+    "0.05": 1.015637843185628,
+    "0.1": 1.0323021431616481,
+    "0.15": 1.0501169315357792,
+    "0.25": 1.0898126733043434,
+    "0.5": 1.2241213936698427
+  }
+}

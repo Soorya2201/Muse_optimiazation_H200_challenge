@@ -1,0 +1,72 @@
+{
+  "repo": "HPMLL/ZipServ_ASPLOS26",
+  "commit": "6f8a209bfe46b0905f90d61b0796e352147ff041",
+  "license": "Apache-2.0",
+  "captured_utc": "2026-10-31T22:15:27.855968+00:00",
+  "scope": "Selected source/docs/license; static study only, no downloaded code executed.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/LICENSE",
+      "bytes": 11357,
+      "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/README.md",
+      "bytes": 3941,
+      "git_blob_sha1": "5623f795e93e3c0a812e1b4ef91259dce2673134",
+      "sha256": "bbea6a7eea2ca1cd34b423225fb093fb4ec8969f7205f3be627fea96e6e98fc7"
+    },
+    {
+      "path": "csrc/L_API.cu",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/csrc/L_API.cu",
+      "bytes": 27924,
+      "git_blob_sha1": "25dfeec22bd42a1f5d31d2df4a2cbe943b4aaf0f",
+      "sha256": "03b24f17ece73bb2869c50284462902f606c9f008a81f2bf6ea7ac497865ced0"
+    },
+    {
+      "path": "csrc/L_Kernel.cuh",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/csrc/L_Kernel.cuh",
+      "bytes": 59033,
+      "git_blob_sha1": "eae0170699e8cb6fb52c06bd8ad2bf59ba3f9133",
+      "sha256": "449212daaaa3f5353cec93e5e2340686858971f48c124a3949019b1598ba3a4b"
+    },
+    {
+      "path": "csrc/MMA_PTX.cuh",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/csrc/MMA_PTX.cuh",
+      "bytes": 2885,
+      "git_blob_sha1": "6a6a7c8c45fbf3093cd7f96e7f98729da8c57dcc",
+      "sha256": "d6ee74bbb9c32877c137cd6095838f491835752bd0243b96148dedfe7d743f09"
+    },
+    {
+      "path": "csrc/AsyncCopy_PTX.cuh",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/csrc/AsyncCopy_PTX.cuh",
+      "bytes": 5244,
+      "git_blob_sha1": "ffe5981884595424d14d1ca523838bbd248626fe",
+      "sha256": "95368da758164a56c120946297d6174eb7b8c1f63dcfda8b55df85beb469f32a"
+    },
+    {
+      "path": "csrc/MatMulUtilities.cuh",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/csrc/MatMulUtilities.cuh",
+      "bytes": 14125,
+      "git_blob_sha1": "f51ca9099756b55b61f9abd80ee4c3136e8d5b2f",
+      "sha256": "e0372bdbbc1738d1f3550e0c843500479c365881f4b0cd3a10dc7755bd69ae01"
+    },
+    {
+      "path": "csrc/TilingConfig.h",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/csrc/TilingConfig.h",
+      "bytes": 2745,
+      "git_blob_sha1": "0ca559a855ca5e7ee2759e232d3c4377d48b9fe7",
+      "sha256": "86e327e10f1ca4afd0911e3c7dedde7eaafd9a004673fc438937b2099143b264"
+    },
+    {
+      "path": "build/L_API.cuh",
+      "url": "https://raw.githubusercontent.com/HPMLL/ZipServ_ASPLOS26/6f8a209bfe46b0905f90d61b0796e352147ff041/build/L_API.cuh",
+      "bytes": 3498,
+      "git_blob_sha1": "0fce8dad9623b7c77c4f9296396b7e56373e8c34",
+      "sha256": "95ce14e54beb86297b52b4c01562498c55e352534e5a2a3fde3daecfd4d838e7"
+    }
+  ]
+}

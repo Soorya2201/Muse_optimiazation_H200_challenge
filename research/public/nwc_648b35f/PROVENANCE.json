@@ -1,0 +1,65 @@
+{
+  "repo": "parda21/NWC",
+  "commit": "648b35ff74f1456e9c7912aac4c044ce8cdc47d3",
+  "license": "Apache-2.0",
+  "captured_utc": "2026-10-31T22:13:45.363221+00:00",
+  "scope": "Selected primary source/docs/license and CPU reference; statically inspected, no downloaded module executed.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/LICENSE",
+      "bytes": 11339,
+      "git_blob_sha1": "682b3b4dfbd4683bc96c6af83f72c3f51c77692c",
+      "sha256": "e3218f4943302a31814fee7d96b32751507add98e7c85726a66c57cc2427d8a3"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/README.md",
+      "bytes": 17109,
+      "git_blob_sha1": "7bbc808b4654c2c41bef95f2ff2226c8c5f7e530",
+      "sha256": "c4d19903cf2ae1cdf7bc0469dafbc7442671e25685b1698622e8ca38325918fb"
+    },
+    {
+      "path": "docs/format.md",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/docs/format.md",
+      "bytes": 14036,
+      "git_blob_sha1": "1c04137bf7db715b229c55f8e62b21c5ebb2f277",
+      "sha256": "ea381e311dcf2700d8df1ab7f84f95081bb988ff55745937e6196fe4c18fb3e1"
+    },
+    {
+      "path": "docs/results.md",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/docs/results.md",
+      "bytes": 21213,
+      "git_blob_sha1": "6fb9ebf8940bded3bed12ff87644f5ac783df956",
+      "sha256": "a128b2ee373c899fb65306d2bfa3989f8f1e9d56db11e76ff812a14f44608698"
+    },
+    {
+      "path": "csrc/nwc_ops.cu",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/csrc/nwc_ops.cu",
+      "bytes": 75963,
+      "git_blob_sha1": "4f193d47eb4ca470ca2e7a7dcc294e0280100fef",
+      "sha256": "163f27d4dfb1943931523ff47715ae864dda8c60ad3038dd64a7dfef1aa174a7"
+    },
+    {
+      "path": "nwc/nwc_torch.py",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/nwc/nwc_torch.py",
+      "bytes": 27377,
+      "git_blob_sha1": "07e5f7fefcc9e311fc882dfbf52e55424da341ff",
+      "sha256": "5907e4d7ce86194fda594d12b19c6a71e140998f3c18e607ceef7ba5f2e1d13d"
+    },
+    {
+      "path": "tests/test_format_cpu.py",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/tests/test_format_cpu.py",
+      "bytes": 7341,
+      "git_blob_sha1": "861429c529f5a7c6d9b2e47ef8f8c7db6cb80fd3",
+      "sha256": "1b1773795a2359ee2cf6f863dd1ff72c51eb47c907fc327fe533d1a408de0a5e"
+    },
+    {
+      "path": "scripts/kernbench.py",
+      "url": "https://raw.githubusercontent.com/parda21/NWC/648b35ff74f1456e9c7912aac4c044ce8cdc47d3/scripts/kernbench.py",
+      "bytes": 5137,
+      "git_blob_sha1": "6ec9660510a27e02715454d7ff5d069954c00d12",
+      "sha256": "47eecf7833412287d211eb87a2084e00e6fe212f24bd9244ccd3a70bed225fdf"
+    }
+  ]
+}

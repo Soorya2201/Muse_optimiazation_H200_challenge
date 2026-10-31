@@ -1,0 +1,51 @@
+{
+  "repo": "NVIDIA/cuda-samples",
+  "commit": "5443602d89ed99aede2e4b7bf329daddeadb320e",
+  "license": "BSD-3-Clause",
+  "captured_utc": "2026-10-31T22:18:04.998436+00:00",
+  "scope": "Selected official sample source/docs/license, not executed.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuda-samples/5443602d89ed99aede2e4b7bf329daddeadb320e/LICENSE",
+      "bytes": 1601,
+      "git_blob_sha1": "1e58bd5df0dd619135c58af0428c0f73c62921d7",
+      "sha256": "b3e40c5bfed1fca5c62d2c1f2208bf51f8d2c910219f94c443f657ace9001be3"
+    },
+    {
+      "path": "cpp/3_CUDA_Features/cudaCompressibleMemory/README.md",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuda-samples/5443602d89ed99aede2e4b7bf329daddeadb320e/cpp/3_CUDA_Features/cudaCompressibleMemory/README.md",
+      "bytes": 1683,
+      "git_blob_sha1": "11c85a4b8defd94481eb00fbf9bab0e4773b187b",
+      "sha256": "cf808d8133b308ed3f1711e06cefff5a3c6ecd9ffa3c9c2804f4f00b987e52ae"
+    },
+    {
+      "path": "cpp/3_CUDA_Features/cudaCompressibleMemory/compMalloc.cpp",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuda-samples/5443602d89ed99aede2e4b7bf329daddeadb320e/cpp/3_CUDA_Features/cudaCompressibleMemory/compMalloc.cpp",
+      "bytes": 4770,
+      "git_blob_sha1": "ac81f77b9bac42161647533b1045e34ad2b7d029",
+      "sha256": "d0e357aea0317771b64f5f5ee3e313c88ebcd83c406dbae724803fbfae81bd7b"
+    },
+    {
+      "path": "cpp/3_CUDA_Features/cudaCompressibleMemory/compMalloc.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuda-samples/5443602d89ed99aede2e4b7bf329daddeadb320e/cpp/3_CUDA_Features/cudaCompressibleMemory/compMalloc.h",
+      "bytes": 1785,
+      "git_blob_sha1": "8de3a6ea2004250cc4fca2d3cec7e2dd2767461d",
+      "sha256": "dcab4824a59672c46824e55e06dff0b1ba6c35f5e190b85c59729dfa5b765494"
+    },
+    {
+      "path": "cpp/3_CUDA_Features/cudaCompressibleMemory/saxpy.cu",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuda-samples/5443602d89ed99aede2e4b7bf329daddeadb320e/cpp/3_CUDA_Features/cudaCompressibleMemory/saxpy.cu",
+      "bytes": 8035,
+      "git_blob_sha1": "0113e913c2eddcd62a58808025d99de8349c6288",
+      "sha256": "3db9c6024336fb21a4b55ceba53487209dbd11aca360d6702fea72ee23be4cd6"
+    },
+    {
+      "path": "cpp/3_CUDA_Features/cudaCompressibleMemory/CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuda-samples/5443602d89ed99aede2e4b7bf329daddeadb320e/cpp/3_CUDA_Features/cudaCompressibleMemory/CMakeLists.txt",
+      "bytes": 830,
+      "git_blob_sha1": "704d07e4d8d1577abcc24cacd716ca944877b715",
+      "sha256": "d4d3b1c47a522c82ce1e9238f7f52b2b00c85962ce2db3daddbcaba826a4c956"
+    }
+  ]
+}
