@@ -67,6 +67,29 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Nov1 prefill wide RS batch V33 ready for first H200 check
+
+Previousgoalturnmadeprogress(BF16ILCnegative+decodercpuscreen). Onlyprefill
+active. Read WIDE_BATCH_RESEARCH_2026-11-01.md forpredeclaredprotocol.
+Newwide160/192/256RSbatch4MMAs/group,KPS1A banksalternatebystage,
+wideoneFP32accumulator;weight/layout/sharedring/producer/epilogueunchanged.
+CPU1515schedules+naivebankoverwritecounterexample;fullFINE0/1NVCC13
+parent/newall168regs/8ABI/0spills/2bars/noC751x. FINE0SASScomplete4944
+rows,ARRIVE12→9/DEPBAR16→13;FINE1SASSclipped,PTXcomplete. Notruntimegain.
+V33SHAced5301e48c264788e1751450740a23086249262ca62dbb45c8bc462ae31b1fb.
+V30orders/warmupfixedbeforeGPU,V31stress10468>10000,V32failure12640>
+12000rejectedlocally,V33binary32I13fcomplete7220/failure11228passes.
+All768eventfloatbitsandFP32error/changevaluesretained. Originalnumerical/
+resource/control2%/board3%gatesunchanged.5nearby/24groupsplanned.
+TimedoKClayerunchangedparent,no newscoredclaim. Source/protocolcommit
+beforelaunch;firstprefillNov1routinecheck,allsubmits0. Workinginternal
+backupwhileexternaldriveabsent. Noagents,noGPUlivebeforelaunch.
+Fresh118publicpaths/13reposonlychangedKushagradecoderalreadyreviewed.
+GodlyDonutscuda-pythondefault0ahead/117behindNVIDIA,nochangedfiles;
+branchcontentsnotexhaustivelyaudited. Known3HEADsunchanged.
+Userrankrefresh19:03:07UTC:overall215/1823,BF16289/1606,MoE221/1297,
+attention236/1241,decoder215/1168,prefill213/792. Scoresunchanged,None1.
+
 #### Nov1 decoder source/router screen complete; next sequential track prefill
 
 BF16cyclepushed054a85e. FollowedsequentiallywithdecoderAGENTS/TASK/latest

@@ -1,0 +1,66 @@
+{
+  "scope": "CPU source/ownership model, not actual compiler register allocation, concurrency proof or measured speedup.",
+  "parent_sha256": "8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5",
+  "native_sha256": "e5b575b5edbaf30e1f88c925c2b0b0ee83579303b45c22f6334177bc16903208",
+  "source_edits": 4,
+  "epilogue_unchanged": true,
+  "producer_publisher_gather_plan_attention_unchanged": true,
+  "weight_layout_and_precision_unchanged": true,
+  "widths": [
+    {
+      "n": 32,
+      "kps": 4,
+      "nacc": 4,
+      "afrag_bank_rule": "kk parity",
+      "commits_per_k64_old": 1,
+      "commits_per_k64_new": 1
+    },
+    {
+      "n": 64,
+      "kps": 2,
+      "nacc": 2,
+      "afrag_bank_rule": "kk parity",
+      "commits_per_k64_old": 1,
+      "commits_per_k64_new": 1
+    },
+    {
+      "n": 128,
+      "kps": 2,
+      "nacc": 2,
+      "afrag_bank_rule": "kk parity",
+      "commits_per_k64_old": 1,
+      "commits_per_k64_new": 1
+    },
+    {
+      "n": 160,
+      "kps": 1,
+      "nacc": 1,
+      "afrag_bank_rule": "it parity",
+      "commits_per_k64_old": 4,
+      "commits_per_k64_new": 1
+    },
+    {
+      "n": 192,
+      "kps": 1,
+      "nacc": 1,
+      "afrag_bank_rule": "it parity",
+      "commits_per_k64_old": 4,
+      "commits_per_k64_new": 1
+    },
+    {
+      "n": 256,
+      "kps": 1,
+      "nacc": 1,
+      "afrag_bank_rule": "it parity",
+      "commits_per_k64_old": 4,
+      "commits_per_k64_new": 1
+    }
+  ],
+  "schedule_cases": 1515,
+  "naive_kps1_counterexample": "('overwritten A bank', 1, 0, 0, {0: 0})",
+  "limitations": [
+    "The real GPU allocator must retain distinct register banks without WGMMA serialization.",
+    "Grouped completion can delay ring-slot release and reduce TMA overlap; no timing inference from fewer commits.",
+    "Full FINE0/FINE1 compiler resources and H200 initial/fresh/nearby outputs remain unproven."
+  ]
+}

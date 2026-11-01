@@ -5,6 +5,13 @@ Use this as an applicability index, not a list of promised speedups. Every
 new implementation needs matching BF16/NVFP4 precision, complete attention,
 fresh-input graph behavior and independent H200 measurements.
 
+Nov1 active: [wide RS-WGMMA commit batching](WIDE_BATCH_RESEARCH_2026-11-01.md).
+Distinct from failed SS: original packed/shared layout and narrow paths stay;
+wide stages batch four MMAs with two stage-parity A banks and one accumulator.
+CPU1,515schedules and full FINE0/1compiler builds pass without new spills.
+Only V33 eligible for first H200 check; no performance gain yet. Original
+768event bits/metrics retained with preflighted failure-safe binary report.
+
 | Mechanism | Evidence and current decision |
 |---|---|
 | Producer dequantization plus shared/shared WGMMA | Implemented and corrected role bounds after setup failure. Full H200 raw/numeric/resource tests pass; every timing group loses, all7policies reject. Close tested ordinary SS/KPS1 form. See SS_PIPELINE_H200_2026-10-31.md. |

@@ -1,0 +1,33 @@
+{
+  "scope": "Local prelaunch failures/corrections only; V30\u2013V32 were never submitted to OKC.",
+  "drafts": [
+    {
+      "version": 30,
+      "decision": "Changed to exact four-order Williams rounds and equal per-arm untimed warm-up; native math unchanged."
+    },
+    {
+      "version": 31,
+      "complete_stress_chars": 10468,
+      "gate": 10000,
+      "decision": "Rejected wire size locally; event bits retained, row error/change metrics moved losslessly into binary FP32 frames."
+    },
+    {
+      "version": 32,
+      "complete_stress_chars": 7220,
+      "failure_stress_chars": 12640,
+      "gate": 12000,
+      "decision": "Rejected failure size locally; bounded primary message head2500/tail1000+original char count, separate traceback frames without duplicating exception message."
+    },
+    {
+      "version": 33,
+      "complete_stress_chars": 7220,
+      "failure_stress_chars": 11228,
+      "gate": 12000,
+      "decision": "Preflight passes; only this source eligible for first GPU check."
+    }
+  ],
+  "validator_corrections": [
+    "Source-edit count metadata5\u21924 corrected; native source unchanged.",
+    "A syntax typo with one extra closing parenthesis in the host-only failure stress generator was corrected; submitted source unchanged."
+  ]
+}

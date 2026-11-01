@@ -1,0 +1,307 @@
+{
+  "captured_utc": "2026-11-01T18:51:19.320034+00:00",
+  "heads": [
+    {
+      "repo": "vjeux/okc-2026",
+      "sha": "f35a41ee1c13e316dabbf772830d47b23b453393",
+      "message": "v2: dead-code removal \u2014 switches, arch guards, dead branches gone; oracle + GPU gated"
+    },
+    {
+      "repo": "alygg77/okc-muse-spark-kernels",
+      "sha": "6cae49a639ee6d14b929a5fd4a63c627f96d7dc0",
+      "message": "README, llms.txt: ask readers (and agents' users) to star the repo\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "sha": "018b7a102348ea3b73701e8be52d24f82d8c91ee",
+      "message": "Add Claude Opus/Sonnet/Haiku 5.5 benchmark cohort (integer + kernels) (#17)\n\nNew trials under harness claude-cli-broker-linux-v1 (Claude CLI, tool-free structured actions;\nLinux namespace broker). Same snapshots, prompts, GPU dispatcher, judge and scoring policy.\nAdds sealed sources and two-bank evaluations, results rows, exclusions, and regenerates all three\ncharts and the tables alongside the merged GPT and Gemini 3.8 Flash results.\n\n\nClaude-Se"
+    },
+    {
+      "repo": "MrNirmata/okc-muse-spark",
+      "error": "Command '['gh', 'api', 'repos/MrNirmata/okc-muse-spark/commits/HEAD']' returned non-zero exit status 1."
+    }
+  ],
+  "leader_public_repos": [
+    {
+      "full_name": "GodlyDonuts/aeroForge",
+      "pushed_at": "2026-08-20T22:31:48Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/aip-crisis-averted",
+      "pushed_at": "2026-07-31T07:01:25Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/cf_ai_soc_agent",
+      "pushed_at": "2026-04-03T12:24:33Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/consensus",
+      "pushed_at": "2025-12-31T22:04:37Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/cuda-python",
+      "pushed_at": "2026-11-01T18:37:41Z",
+      "description": "CUDA Python: Performance meets Productivity"
+    },
+    {
+      "full_name": "GodlyDonuts/dacdaq",
+      "pushed_at": "2025-11-03T07:46:04Z",
+      "description": "Data acquisition using python"
+    },
+    {
+      "full_name": "GodlyDonuts/devpost-project-gallery",
+      "pushed_at": "2026-07-25T09:12:55Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/erga-mcp",
+      "pushed_at": "2026-08-13T02:39:17Z",
+      "description": "Organize and track job applications and tailor LaTeX resumes from the CLI or an MCP client."
+    },
+    {
+      "full_name": "GodlyDonuts/finis-oculus-client",
+      "pushed_at": "2025-11-16T19:29:57Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/forge",
+      "pushed_at": "2026-09-14T03:20:33Z",
+      "description": "\u2694\ufe0f Knight Hacks' official monorepo \u2694\ufe0f"
+    },
+    {
+      "full_name": "GodlyDonuts/Godlydonuts",
+      "pushed_at": "2026-10-10T21:48:04Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/Hacklytics-GoldenByte",
+      "pushed_at": "2026-02-22T13:37:33Z",
+      "description": "A 3D geospatial intelligence platform that identifies overlooked healthcare crises using vector-embedded humanitarian data."
+    },
+    {
+      "full_name": "GodlyDonuts/IB_ComputerScience_IA",
+      "pushed_at": "2025-10-30T02:13:12Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/jax",
+      "pushed_at": "2026-09-17T08:39:09Z",
+      "description": "Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more"
+    },
+    {
+      "full_name": "GodlyDonuts/keras",
+      "pushed_at": "2026-10-12T05:48:55Z",
+      "description": "Deep Learning for humans"
+    },
+    {
+      "full_name": "GodlyDonuts/keryx",
+      "pushed_at": "2026-11-01T15:00:36Z",
+      "description": "A continuously updated database of US internships and new-graduate roles."
+    },
+    {
+      "full_name": "GodlyDonuts/litellm",
+      "pushed_at": "2026-06-22T03:58:01Z",
+      "description": "Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging. [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, VLLM, NVIDIA NIM]"
+    },
+    {
+      "full_name": "GodlyDonuts/Mycelia",
+      "pushed_at": "2026-06-29T23:00:10Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/ollama",
+      "pushed_at": "2026-06-27T20:00:12Z",
+      "description": "Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models."
+    },
+    {
+      "full_name": "GodlyDonuts/osprey",
+      "pushed_at": "2026-08-08T03:05:53Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/parameter-golf",
+      "pushed_at": "2026-04-28T19:56:34Z",
+      "description": "Train the smallest LM you can that fits in 16MB. Best model wins!"
+    },
+    {
+      "full_name": "GodlyDonuts/pingpong",
+      "pushed_at": "2026-10-10T02:51:57Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/porter",
+      "pushed_at": "2026-07-21T13:35:23Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/porter-demo-fixture",
+      "pushed_at": "2026-07-15T20:26:49Z",
+      "description": "Inert same-origin research fixture for the Porter Build Week live-navigation proof"
+    },
+    {
+      "full_name": "GodlyDonuts/portfolio-v0",
+      "pushed_at": "2026-03-02T07:58:52Z",
+      "description": "My first portfolio, plain html, css, and javascript"
+    },
+    {
+      "full_name": "GodlyDonuts/portfolio-v1",
+      "pushed_at": "2026-03-02T07:52:20Z",
+      "description": "Backup of v1 of my Next.js portfolio"
+    },
+    {
+      "full_name": "GodlyDonuts/predictions-cup-2026",
+      "pushed_at": "2026-10-23T02:05:51Z",
+      "description": "Private research, simulated trade ledger, and agent coordination for the 2026 Susquehanna Predictions Cup."
+    },
+    {
+      "full_name": "GodlyDonuts/project-sentinel",
+      "pushed_at": "2025-12-12T07:42:18Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/psi",
+      "pushed_at": "2026-08-20T22:31:55Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/pytorch",
+      "pushed_at": "2026-09-30T03:22:14Z",
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
+    },
+    {
+      "full_name": "GodlyDonuts/ray",
+      "pushed_at": "2026-07-29T03:23:22Z",
+      "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads."
+    },
+    {
+      "full_name": "GodlyDonuts/Reddit-Discourse-Analyzer",
+      "pushed_at": "2026-03-19T23:02:05Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/RSNA-Knee-Abnormality-Detection",
+      "pushed_at": "2026-10-21T20:03:50Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/sai",
+      "pushed_at": "2026-08-20T22:32:04Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/sai-initiative",
+      "pushed_at": "2026-08-26T15:55:37Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/sglang",
+      "pushed_at": "2026-06-30T01:10:12Z",
+      "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+    },
+    {
+      "full_name": "GodlyDonuts/shohin",
+      "pushed_at": "2026-08-13T07:38:50Z",
+      "description": "From-scratch 125M LLM: 300K steps, 57.8B-token corpus, 282K tok/s on 2x H100"
+    },
+    {
+      "full_name": "GodlyDonuts/shohin-ettr",
+      "pushed_at": "2026-08-21T07:11:19Z",
+      "description": "Private Shohin ETTR architecture, experiments, evidence, and research history"
+    },
+    {
+      "full_name": "GodlyDonuts/stablehlo",
+      "pushed_at": "2026-09-10T18:42:00Z",
+      "description": "Backward compatible ML compute opset inspired by HLO/MHLO"
+    },
+    {
+      "full_name": "GodlyDonuts/stentor",
+      "pushed_at": "2026-10-10T09:14:32Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/Super-Artificial-Intelligence-SAI-",
+      "pushed_at": "2025-11-02T05:57:39Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/tensorflow",
+      "pushed_at": "2026-10-23T20:18:32Z",
+      "description": "An Open Source Machine Learning Framework for Everyone"
+    },
+    {
+      "full_name": "GodlyDonuts/TensorRT-LLM",
+      "pushed_at": "2026-06-29T05:00:22Z",
+      "description": "TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT LLM also contains components to create Python and C++ runtimes that orchestrate the inference execution in a performant way."
+    },
+    {
+      "full_name": "GodlyDonuts/ThreeJSBlackHoleSimulation",
+      "pushed_at": "2025-10-31T04:16:05Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/tock",
+      "pushed_at": "2026-08-13T00:16:37Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/torchtitan",
+      "pushed_at": "2026-10-07T19:32:25Z",
+      "description": "A PyTorch native platform for training generative AI models"
+    },
+    {
+      "full_name": "GodlyDonuts/triton",
+      "pushed_at": "2026-07-26T01:03:53Z",
+      "description": "Development repository for the Triton language and compiler"
+    },
+    {
+      "full_name": "GodlyDonuts/unsloth",
+      "pushed_at": "2026-06-26T15:42:47Z",
+      "description": "Unsloth Studio is a web UI for training and running open models like Gemma 4, Qwen3.6, DeepSeek, gpt-oss locally."
+    },
+    {
+      "full_name": "GodlyDonuts/unsloth-zoo",
+      "pushed_at": "2026-06-18T00:24:03Z",
+      "description": "Utils for Unsloth https://github.com/unslothai/unsloth"
+    },
+    {
+      "full_name": "GodlyDonuts/vectorized-2048",
+      "pushed_at": "2026-05-18T22:53:45Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/vllm",
+      "pushed_at": "2026-08-06T19:54:39Z",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs"
+    },
+    {
+      "full_name": "GodlyDonuts/wasmtime",
+      "pushed_at": "2026-07-08T14:10:23Z",
+      "description": "A lightweight WebAssembly runtime that is fast, secure, and standards-compliant"
+    },
+    {
+      "full_name": "GodlyDonuts/WeatherReactApp",
+      "pushed_at": "2025-07-17T22:44:42Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/web-ocean",
+      "pushed_at": "2026-10-22T01:20:15Z",
+      "description": null
+    },
+    {
+      "full_name": "GodlyDonuts/wit-bindgen",
+      "pushed_at": "2026-06-22T18:49:56Z",
+      "description": "A language binding generator for WebAssembly interface types"
+    },
+    {
+      "full_name": "GodlyDonuts/xla",
+      "pushed_at": "2026-09-08T09:22:40Z",
+      "description": "A machine learning compiler for GPUs, CPUs, and ML accelerators"
+    }
+  ],
+  "scope": "Default HEADs and first public owner repo page; no private/all-branch access."
+}

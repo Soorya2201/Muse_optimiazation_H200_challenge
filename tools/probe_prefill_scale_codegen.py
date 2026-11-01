@@ -12,14 +12,17 @@ import urllib.request
 from prefill_scale_native import scale_shared_native
 from prefill_ss_native import shared_weight_native
 from prefill_ss_k64_native import scale_reused_shared_native
+from prefill_wide_batch_native import wide_batch_native
 
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('arm',choices=['parent','shared','ss','ss_all','ss_k64']);p.add_argument('--width',type=int,choices=[32,64,128,160,192,256],default=256)
+p=argparse.ArgumentParser();p.add_argument('arm',choices=['parent','shared','ss','ss_all','ss_k64','wide_batch']);p.add_argument('--width',type=int,choices=[32,64,128,160,192,256],default=256)
 p.add_argument('--full-switch',action='store_true');p.add_argument('--fine',type=int,choices=[0,1],default=0)
 p.add_argument('--ss-consumer-regs',type=int,choices=[184,216],default=184)
-p.add_argument('--label',default='');args=p.parse_args();assert re.fullmatch('[a-z0-9_]*',args.label)
+p.add_argument('--label',default='');p.add_argument('--date',default='2026-10-31');args=p.parse_args();assert re.fullmatch('[a-z0-9_]*',args.label)
+assert re.fullmatch(r'\d{4}-\d{2}-\d{2}',args.date)
 parent=(ROOT/'muse_prefill_layer/submission.py').read_text();t=ast.parse(parent)
 native=next(ast.literal_eval(n.value) for n in t.body if isinstance(n,ast.Assign) and any(isinstance(x,ast.Name) and x.id=='_CUDA_SRC' for x in n.targets))
+if args.arm=='wide_batch':native=wide_batch_native(native)
 if args.arm=='shared':native=scale_shared_native(native)
 if args.arm in ('ss','ss_all'):native=shared_weight_native(native,args.ss_consumer_regs,args.arm=='ss_all')
 if args.arm=='ss_k64':native=scale_reused_shared_native(native)
@@ -39,7 +42,7 @@ width_label='all' if args.full_switch else str(args.width)
 label=f'_FINE{args.fine}' if args.fine or args.full_switch else ''
 if args.arm in ('ss','ss_all') and args.ss_consumer_regs!=184:label+=f'_R{args.ss_consumer_regs}'
 if args.label:label+='_'+args.label
-path=ROOT/f'muse_prefill_layer/SCALE_CODEGEN_{args.arm}_N{width_label}{label}_2026-10-31.json.gz';assert not path.exists()
+path=ROOT/f'muse_prefill_layer/SCALE_CODEGEN_{args.arm}_N{width_label}{label}_{args.date}.json.gz';assert not path.exists()
 req=urllib.request.Request('https://godbolt.org/api/compiler/nvcc130/compile',data=json.dumps(request).encode(),headers={'Content-Type':'application/json','Accept':'application/json'})
 try:
  with urllib.request.urlopen(req,timeout=180) as r:result=json.load(r)

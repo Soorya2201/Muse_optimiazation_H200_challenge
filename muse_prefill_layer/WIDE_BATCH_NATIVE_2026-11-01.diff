@@ -1,0 +1,14 @@
+--- parent
++++ wide_batch
+@@ -440 +440 @@
+-#define MOE_GROUP4_MAX 128  // token tiles up to this size commit one wgmma group per stage (see GROUP4)
++#define MOE_GROUP4_MAX 256  // token tiles up to this size commit one wgmma group per stage (see GROUP4)
+@@ -521 +521 @@
+-  constexpr int NACC = TRI ? 3 : ((GROUP4 && MOE_NACC2) ? ((MOE_NACC4 && N <= MOE_NACC4_MAXN) ? 4 : 2) : 1);
++  constexpr int NACC = TRI ? 3 : ((GROUP4 && MOE_NACC2 && N <= 128) ? ((MOE_NACC4 && N <= MOE_NACC4_MAXN) ? 4 : 2) : 1);
+@@ -636 +636 @@
+-          convert8(q, scale_pair_sel(sw, j & 1, m16), afrag[(DEEP ? kk : (kk & 1)) * 4 + j], m16, m64);
++          convert8(q, scale_pair_sel(sw, j & 1, m16), afrag[(DEEP ? kk : ((KPS == 1 ? it : kk) & 1)) * 4 + j], m16, m64);
+@@ -664 +664 @@
+-                      afrag[(DEEP ? kk : (kk & 1)) * 4 + j], desc + 2 * j, 1);
++                      afrag[(DEEP ? kk : ((KPS == 1 ? it : kk) & 1)) * 4 + j], desc + 2 * j, 1);

@@ -10,20 +10,33 @@ import statistics as stats
 import struct
 import zlib
 
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('job');p.add_argument('--kind',choices=['scale','ss'],default='scale');args=p.parse_args()
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('job');p.add_argument('--kind',choices=['scale','ss','batch'],default='scale');args=p.parse_args()
 root=Path(__file__).resolve().parents[1];folder=root/'muse_prefill_layer'
 r=json.loads((folder/'run_receipts'/f'{args.job}.json').read_text())
-marker='PREFILL_SS_PIPE_Z' if args.kind=='ss' else 'PREFILL_SCALE_SHARE_Z'
+marker={'scale':'PREFILL_SCALE_SHARE_Z','ss':'PREFILL_SS_PIPE_Z','batch':'PREFILL_WIDE_BATCH_Z'}[args.kind]
 matches=re.findall(r'^'+marker+r' (\S+)$',r['log_tail'],re.M)
 assert len(matches)==1,'Require one intact report; never infer success from missing diagnostics'
 wire=zlib.decompress(base64.b64decode(matches[0]));size=struct.unpack_from('<I',wire)[0]
 d=json.loads(wire[4:4+size]);buf=wire[4+size:]
-assert d['timing_codec']=='u32_ns_rows_a0_old_new_a1_8rounds'
-count=len(d['rows'])*4*8;assert len(buf)==count*4
-times=iter(struct.unpack('<'+str(count)+'I',buf))
+if args.kind=='batch':
+    assert d['timing_codec']=='u32_ms_bits_32_then_f32_error_fresh_change_13_per_row'
+    assert len(buf)==len(d['rows'])*180
+    for i,row in enumerate(d['rows']):
+        frame=struct.unpack_from('<32I13f',buf,i*180)
+        row['event_ms_bits']={k:list(frame[j*8:(j+1)*8]) for j,k in enumerate(('a0','old','new','a1'))}
+        metrics=frame[32:]
+        row['error']={k:list(metrics[j*2:(j+1)*2]) for j,k in enumerate(('old','new','a1'))}
+        row['fresh']={k:list(metrics[6+j*2:8+j*2]) for j,k in enumerate(('old','new','a1'))}
+        row['change']=metrics[12]
+        row['ns']={k:[struct.unpack('<f',struct.pack('<I',v))[0]*1e6 for v in values] for k,values in row['event_ms_bits'].items()}
+else:
+    assert d['timing_codec']=='u32_ns_rows_a0_old_new_a1_8rounds'
+    count=len(d['rows'])*4*8;assert len(buf)==count*4
+    times=iter(struct.unpack('<'+str(count)+'I',buf))
+    for row in d['rows']:
+        row['ns']={k:[next(times) for _ in range(8)] for k in ('a0','old','new','a1')}
 for row in d['rows']:
-    row['ns']={k:[next(times) for _ in range(8)] for k in ('a0','old','new','a1')}
-    assert all(v>0 for a in row['ns'].values() for v in a)
+    assert all(math.isfinite(v) and v>0 for a in row['ns'].values() for v in a)
     t=row['ns'];z=list(zip(t['a0'],t['old'],t['new'],t['a1']))
     row['ratios']=dict(old_new=stats.median(b/c for a,b,c,e in z),
         parent_new=stats.median(math.sqrt(a*e)/c for a,b,c,e in z),
@@ -38,6 +51,8 @@ if d['status']=='complete':
     assert {(x['m'],x['seed'],x['pad_mib']) for x in d['rows']}==set(itertools.product((753,3012,16384),(3208,7911),(0,1,3,7)))
     if args.kind=='ss':
         assert d['movement_cases']==[[key,ks] for key in ('w13','w2') for ks in (0,1,17,63)]
+    elif args.kind=='batch':
+        assert d['weight_layout_unchanged'] is True
     else:
         assert d['movement_widths']==[32,64,96,128,160,192,224,256]
     for row in d['rows']+d['nearby']:
@@ -60,6 +75,7 @@ if d['status']=='complete':
             s[key+'_max_offset']=max(max(x['ratios'][key],1/x['ratios'][key])-1 for x in rows)
         s['qualifies']=(no_new_local and s['old_new']['min']>1.02
             and s['aa_max_offset']<.02 and s['parent_old_max_offset']<.03)
+        if args.kind=='batch':s['qualifies'] &= s['parent_new']['min']>1.02
         out['summaries'].append(s)
     profiles={x['index']:x for x in r['profiles']}
     for i,b in enumerate(r['benchmarks']):
@@ -91,7 +107,7 @@ if d['status']=='complete':
         out['policies'].append(dict(token_sizes=sorted(chosen),worst=min(factors),
             median=stats.median(factors),best=max(factors),component_gates=chosen<=eligible,
             qualifies=chosen<=eligible and min(factors)>=1.03))
-label='SS_PIPELINE' if args.kind=='ss' else 'SCALE_SHARE'
+label={'scale':'SCALE_SHARE','ss':'SS_PIPELINE','batch':'WIDE_BATCH'}[args.kind]
 path=folder/f'{label}_REPORT_{args.job}.json';assert not path.exists()
 path.write_text(json.dumps(out,indent=2)+'\n')
 print('DIAGNOSTIC',d['status'],d.get('stage'),d.get('seconds'),'payload',out['payload_chars'])

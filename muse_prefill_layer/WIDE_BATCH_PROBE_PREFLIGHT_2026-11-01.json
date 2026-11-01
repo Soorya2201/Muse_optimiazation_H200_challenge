@@ -1,0 +1,14 @@
+{
+  "source_sha256": "ced5301e48c264788e1751450740a23086249262ca62dbb45c8bc462ae31b1fb",
+  "canonical_prefix_unchanged": true,
+  "no_new_timed_kernel": true,
+  "balanced_order_shifts": 8,
+  "stress_groups": 24,
+  "exact_float32_event_values": 768,
+  "event_bits_roundtrip_exact": true,
+  "all_error_and_fresh_metrics_roundtrip_exact": true,
+  "payload_chars": 7220,
+  "failure_payload_chars": 11228,
+  "preserves_primary_and_secondary_exception": true,
+  "scope": "Pure host/source/codec checks only; no proof of native binding, GPU arithmetic, allocation or speed."
+}

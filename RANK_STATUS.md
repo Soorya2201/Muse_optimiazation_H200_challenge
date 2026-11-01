@@ -1,16 +1,16 @@
 # Verified leaderboard snapshot
 
-Captured **2026-11-01 11:41:09 UTC** from six live OKC boards. Overall **#186/1810**.
+Captured **2026-11-01 19:03:07 UTC** from six live OKC boards. Overall **#215/1823**.
 No track has reached rank1. Positions change as others submit. Compact evidence:
-[rank_summary_20261101114109.json](research/leaderboards/rank_summary_20261101114109.json).
+[rank_summary_20261101190307.json](research/leaderboards/rank_summary_20261101190307.json).
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|275/1595|1.535843x|1.6523x|7.05%|
-|Routed experts|202/1286|2.372309x|2.7642x|14.18%|
-|Attention decode|221/1232|2.603505x|3.3389x|22.03%|
-|Whole decoder|186/1159|2.211495x|2.4844x|10.98%|
-|Prefill|196/784|1.784958x|2.2815x|21.76%|
+|BF16 projections|289/1606|1.535843x|1.6523x|7.05%|
+|Routed experts|221/1297|2.372309x|2.7642x|14.18%|
+|Attention decode|236/1241|2.603505x|3.3389x|22.03%|
+|Whole decoder|215/1168|2.211495x|2.4844x|10.98%|
+|Prefill|213/792|1.784958x|2.2815x|21.76%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does

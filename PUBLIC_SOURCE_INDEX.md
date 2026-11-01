@@ -6,6 +6,14 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Nov1 prefill: [new wide-RS batching protocol and bounded public follow-up](muse_prefill_layer/WIDE_BATCH_RESEARCH_2026-11-01.md).
+118indexedpaths/13repos,onlychangedKushagradecoderentryalreadyreviewed.
+Leadercuda-pythondefault0ahead/117behindNVIDIA,nochangeddefaultfiles;
+branchcontentsnotexhaustivelyaudited,no identifiedchallengeimplementation.
+Knownvjeux/alygg77/RohanHEADsunchanged. NewownRSbatchinghasCPU/full
+compilerproofbutnoH200gainyet;nativeweight/layout/precisionretained.
+
+
 Nov1 decoder: [fresh updates, source links and transfer screen](muse_decode_layer/ROUTER_SOURCE_SCREEN_2026-11-01.md).
 Indexed94paths/10repos/twochangedKushagrablobs;completeL10–L13notes and
 36externaltimingcellsreviewed. Currenthigher-ranked Rohan defaultHEAD
