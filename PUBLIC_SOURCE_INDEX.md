@@ -6,6 +6,14 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Nov1 expanded leader research: [GodlyDonuts related GPU work](muse_prefill_layer/LEADER_RELATED_WORK_2026-11-01.md).
+Four public project repos, thirteen exact-commit source/doc hashes, public
+professional project pages and authored PyTorch scratch-change summary
+reviewed. Psi CUDA uses ordinary FP32 SGEMM/host copies; Metal lessons and
+Shohin training mechanisms are not measured H200 Muse improvements.
+Public author-attributed PR metadata searched; no winning-source association
+established. No unlicensed code imported, executed or ported.
+
 Nov1 prefill: [new wide-RS batching protocol and bounded public follow-up](muse_prefill_layer/WIDE_BATCH_RESEARCH_2026-11-01.md).
 118indexedpaths/13repos,onlychangedKushagradecoderentryalreadyreviewed.
 Leadercuda-pythondefault0ahead/117behindNVIDIA,nochangeddefaultfiles;

@@ -1,5 +1,12 @@
 # Prefill optimization research library
 
+Nov1 owner-requested follow-up: [related GPU work from the prefill leader](LEADER_RELATED_WORK_2026-11-01.md).
+Psi CUDA/Metal, Shohin H100 baseline, public Shohin-ettr README and authored
+PyTorch TMA scratch work reviewed with exact source hashes and transfer limits.
+No winning submission association found; no unlicensed code port or speedup
+inferred from the author’s rank. Thirteen selected files verified, not an
+exhaustive all-branch/source audit.
+
 Current verified local source is context-safe v20; best board1.784958x.
 Use this as an applicability index, not a list of promised speedups. Every
 new implementation needs matching BF16/NVFP4 precision, complete attention,

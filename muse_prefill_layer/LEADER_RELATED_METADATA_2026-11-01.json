@@ -1,0 +1,184 @@
+{
+  "captured_utc": "2026-11-01T19:06:45.080237+00:00",
+  "profile": {
+    "login": "GodlyDonuts",
+    "bio": "I had strings, but now I'm free... There are no strings on me.",
+    "blog": "https://saicharanramineni.com/",
+    "html_url": "https://github.com/GodlyDonuts"
+  },
+  "repos": [
+    {
+      "repo": "GodlyDonuts/shohin",
+      "sha": "dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f",
+      "description": "From-scratch 125M LLM: 300K steps, 57.8B-token corpus, 282K tok/s on 2x H100",
+      "license": null,
+      "homepage": null,
+      "message": "Mark scratch-model repository as historical (#1)"
+    },
+    {
+      "repo": "GodlyDonuts/shohin-ettr",
+      "sha": "a7e18807ce78c419917858845add62bdf987c380",
+      "description": "Private Shohin ETTR architecture, experiments, evidence, and research history",
+      "license": null,
+      "homepage": null,
+      "message": "Merge pull request #8 from GodlyDonuts/codex/public-benchmark-campaign\n\nCodex/public benchmark campaign"
+    },
+    {
+      "repo": "GodlyDonuts/Godlydonuts",
+      "sha": "9efc286bcd3de58adee53d1b9c033ee399bdfc85",
+      "description": null,
+      "license": null,
+      "homepage": null,
+      "message": "chore: refresh profile state"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "sha": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "pushed_at": "2026-08-20T22:31:55Z",
+      "license": null,
+      "message": "Sharpen Psi's recruiter-facing first read\n\nMake the C++17, custom autograd, Metal, CUDA, and evaluation work legible immediately while preserving the project's understated voice."
+    }
+  ],
+  "scope": "Public technical identity/self-listed links and three public default trees; no private source or personal-identity inference.",
+  "selected_sources": [
+    {
+      "repo": "GodlyDonuts/shohin",
+      "ref": "dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f",
+      "path": "README.md",
+      "bytes": 7150,
+      "blob": "c7360700c62de30ae2e2be8c36f53b0a3a5b157b",
+      "sha256": "1d0e191d58d3cd6679a513977cd02c7bbe7abf7203e187a3a3e28337ab9e8b57",
+      "url": "https://github.com/GodlyDonuts/shohin/blob/dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f/README.md"
+    },
+    {
+      "repo": "GodlyDonuts/shohin",
+      "ref": "dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f",
+      "path": "ARCHITECTURE.md",
+      "bytes": 3547,
+      "blob": "4693d0f1a465951a37f946cc6210285e0b284261",
+      "sha256": "e6de04f5fd832ba271d16fb35990e109b5e45cc07b2e6236bc71b17dbd749ecf",
+      "url": "https://github.com/GodlyDonuts/shohin/blob/dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f/ARCHITECTURE.md"
+    },
+    {
+      "repo": "GodlyDonuts/shohin",
+      "ref": "dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f",
+      "path": "train/model.py",
+      "bytes": 7246,
+      "blob": "7720aef79349e44fbee2d16fa8926e9d9bd9e1ff",
+      "sha256": "925fd06cfb5383e960ddbca324ca7da4426765a95eec47882e2b6a998e015c34",
+      "url": "https://github.com/GodlyDonuts/shohin/blob/dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f/train/model.py",
+      "ast_parse_without_execution": true
+    },
+    {
+      "repo": "GodlyDonuts/shohin",
+      "ref": "dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f",
+      "path": "train/train.py",
+      "bytes": 14757,
+      "blob": "c617492bb7ea046038215e2a2cac1b9fc8fb0046",
+      "sha256": "5e0ecf23a8cc79bb8706b83640785b616a11a0dddafe7d5728709d70b922dcfa",
+      "url": "https://github.com/GodlyDonuts/shohin/blob/dc0cd269e7384cbf03c894996a6c3dbcb5b10d1f/train/train.py",
+      "ast_parse_without_execution": true
+    },
+    {
+      "repo": "GodlyDonuts/shohin-ettr",
+      "ref": "a7e18807ce78c419917858845add62bdf987c380",
+      "path": "README.md",
+      "bytes": 4877,
+      "blob": "d2976413f3af49fd9a96848db04018126f4b18bc",
+      "sha256": "c157d8a680fe9f8b2b1da20ca098e14513f96d24e45a0601587d209df3be7992",
+      "url": "https://github.com/GodlyDonuts/shohin-ettr/blob/a7e18807ce78c419917858845add62bdf987c380/README.md"
+    },
+    {
+      "repo": "GodlyDonuts/Godlydonuts",
+      "ref": "9efc286bcd3de58adee53d1b9c033ee399bdfc85",
+      "path": "README.md",
+      "bytes": 5916,
+      "blob": "7907f54fa3f3cc11e60752805dbebc64f92ca7c4",
+      "sha256": "da68e140a844be5a7766777a752ca58e624eb6abb39f36947874296f2296f9a1",
+      "url": "https://github.com/GodlyDonuts/Godlydonuts/blob/9efc286bcd3de58adee53d1b9c033ee399bdfc85/README.md"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "ref": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "path": "README.md",
+      "blob": "25933a4594c829e9d34f029a0df214a02e269025",
+      "sha256": "0f208e257eb4fdd8e598810bb25a8b808bdcc32ea4f4d028fb6809934fc0ef3e",
+      "bytes": 4310,
+      "url": "https://github.com/GodlyDonuts/psi/blob/777422135fc6d8a0e500261ff6ed8d6208608a63/README.md"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "ref": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "path": "data/README.md",
+      "blob": "1c6a9d9e235b144f69beceee982c642802a434a5",
+      "sha256": "bb23f4a1da5dc627c18c1894f860b7c591ff05874047b054bd4b8512cd85c39c",
+      "bytes": 1411,
+      "url": "https://github.com/GodlyDonuts/psi/blob/777422135fc6d8a0e500261ff6ed8d6208608a63/data/README.md"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "ref": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "path": "models/README.md",
+      "blob": "eb9851d616663f54d53d6a379eade3757289b800",
+      "sha256": "0a5e0a740708c2b82750665f8bb6b7a26873d8eb52cbbbd359c7b1a674fa70f3",
+      "bytes": 2058,
+      "url": "https://github.com/GodlyDonuts/psi/blob/777422135fc6d8a0e500261ff6ed8d6208608a63/models/README.md"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "ref": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "path": "src/step4_cuda/cuda_backend.cu",
+      "blob": "da646f64ce3f02291a908f16e19d31f34f992a50",
+      "sha256": "7c03cd380d353fb856689ec76cfdacf8926d479b3dd3d21fdfb9602008f9ef5f",
+      "bytes": 8862,
+      "url": "https://github.com/GodlyDonuts/psi/blob/777422135fc6d8a0e500261ff6ed8d6208608a63/src/step4_cuda/cuda_backend.cu"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "ref": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "path": "src/step4_cuda/cuda_backend_test.cu",
+      "blob": "f4e95f62298ad6e968677230909afcd0bb4f50d1",
+      "sha256": "6f2600b6f7d0ff0489efc2421b2c7e63f598cea80792c948f6f1fa5b2b63ba0b",
+      "bytes": 5204,
+      "url": "https://github.com/GodlyDonuts/psi/blob/777422135fc6d8a0e500261ff6ed8d6208608a63/src/step4_cuda/cuda_backend_test.cu"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "ref": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "path": "docs/CUDA_BACKEND.md",
+      "blob": "bcc56c84443cbc43e7a5f7bec7c3cd76935764d6",
+      "sha256": "e114f345194f9b626c9aa4f0f853056b35906ff35b73b202d3737732a5ac81f0",
+      "bytes": 4049,
+      "url": "https://github.com/GodlyDonuts/psi/blob/777422135fc6d8a0e500261ff6ed8d6208608a63/docs/CUDA_BACKEND.md"
+    },
+    {
+      "repo": "GodlyDonuts/psi",
+      "ref": "777422135fc6d8a0e500261ff6ed8d6208608a63",
+      "path": "docs/GPU_KERNELS.md",
+      "blob": "65d51717f708ff7925aabca13174040014e5c224",
+      "sha256": "9336cfcd4cacffc34c54d1085db69e5d51f890ae12194ab7fee00595add70ee3",
+      "bytes": 10119,
+      "url": "https://github.com/GodlyDonuts/psi/blob/777422135fc6d8a0e500261ff6ed8d6208608a63/docs/GPU_KERNELS.md"
+    }
+  ],
+  "license_scope": "No root license established for these four personal repos; only metadata/hashes/own summaries retained in Git. Source stays in temporary storage, never imported/executed/copied into candidates.",
+  "primary_professional_links": [
+    "https://saicharanramineni.com/",
+    "https://saicharanramineni.com/projects",
+    "https://github.com/pytorch/pytorch/commit/42a70784390a343ebd90e9e84b1bf5a5df4901f3"
+  ],
+  "bounded_read_scope": [
+    "Complete selected Psi CUDA backend, selected CUDA/Metal design documentation sections, root README.",
+    "Shohin model attention call/compile dispatch and trainer precision/compile setup; not entire trainer line-by-line.",
+    "Shohin-ettr README only plus tree metadata; no full research archive audit.",
+    "Public professional portfolio/project pages and the author-linked PyTorch scratch-change summary; no personal-contact collection."
+  ],
+  "observations": [
+    "Psi CUDA uses a16x16 shared-memory FP32 SGEMM or cuBLAS SGEMM and host copies each call; no Hopper WGMMA/NVFP4 expert kernel in reviewed backend.",
+    "Psi Metal notes describe vectorization, register tiles and padding; vendor/shape/precision differ from H200. Ternary-weight conversion is incompatible with task weight precision.",
+    "Shohin uses PyTorch SDPA, BF16 autocast, torch.compile and DDP; its reported training throughput does not identify a Muse kernel submission.",
+    "Shohin-ettr concerns learned model revision/accuracy and sparse-model transfer; changing model semantics is not a compliant kernel optimization.",
+    "Author-linked PyTorch commit42a7078 fixes static Triton scratch ABI/allocator handling. It is runtime correctness and cache restoration work, not measured speedup of our native expert loop. No module patch port.",
+    "No public winning-prefill-source association established by this bounded review."
+  ]
+}

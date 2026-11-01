@@ -1,0 +1,377 @@
+{
+  "captured_at": "2026-11-01T19:08:59.970943+00:00",
+  "searches": [
+    {
+      "query": "author:GodlyDonuts is:pr (CUDA OR Triton OR kernel OR TMA)",
+      "total_count": 50,
+      "incomplete_results": false,
+      "items": [
+        {
+          "title": "[inductor] Report skipped CUDA graph partitions consistently",
+          "html_url": "https://github.com/pytorch/pytorch/pull/199103",
+          "state": "open",
+          "created_at": "2026-09-30T03:22:27Z",
+          "closed_at": null
+        },
+        {
+          "title": "[Bugfix] Fix structured outputs on the V2 CPU model runner",
+          "html_url": "https://github.com/vllm-project/vllm/pull/51306",
+          "state": "open",
+          "created_at": "2026-08-06T19:56:36Z",
+          "closed_at": null
+        },
+        {
+          "title": "Preserve float64 dense xent tail gradients",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126813",
+          "state": "open",
+          "created_at": "2026-09-04T15:53:18Z",
+          "closed_at": null
+        },
+        {
+          "title": "Avoid nvJitLink cache crashes during incremental LTO",
+          "html_url": "https://github.com/NVIDIA/cuda-python/pull/3040",
+          "state": "open",
+          "created_at": "2026-10-07T08:53:40Z",
+          "closed_at": null
+        },
+        {
+          "title": "[inductor] Support global scratch in static Triton launcher",
+          "html_url": "https://github.com/pytorch/pytorch/pull/191133",
+          "state": "closed",
+          "created_at": "2026-07-26T10:40:57Z",
+          "closed_at": "2026-08-14T17:34:53Z"
+        },
+        {
+          "title": "Add second-order gradient for nearest-neighbor resize",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/128337",
+          "state": "closed",
+          "created_at": "2026-09-30T17:06:39Z",
+          "closed_at": "2026-10-26T08:20:03Z"
+        },
+        {
+          "title": "Guard fixed-record reads against oversized buffers",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126869",
+          "state": "open",
+          "created_at": "2026-09-05T17:45:44Z",
+          "closed_at": null
+        },
+        {
+          "title": "[MPS] Build only the reduced Q in linalg.qr (fix tall-skinny perf cliff)",
+          "html_url": "https://github.com/pytorch/pytorch/pull/187748",
+          "state": "open",
+          "created_at": "2026-06-20T00:22:33Z",
+          "closed_at": null
+        },
+        {
+          "title": "splat-turbo: fast, high-quality splat pipeline (Rust, Brush fork) for the M5 Pro",
+          "html_url": "https://github.com/azizu06/farsight/pull/239",
+          "state": "open",
+          "created_at": "2026-10-11T12:48:37Z",
+          "closed_at": null
+        },
+        {
+          "title": "Reject negative integer exponents in GPU Pow",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/127873",
+          "state": "closed",
+          "created_at": "2026-09-22T20:58:16Z",
+          "closed_at": "2026-09-28T14:51:59Z"
+        },
+        {
+          "title": "[Pallas:TPU] Constrain HBM inputs at the custom call boundary",
+          "html_url": "https://github.com/jax-ml/jax/pull/39838",
+          "state": "open",
+          "created_at": "2026-08-08T22:18:04Z",
+          "closed_at": null
+        },
+        {
+          "title": "Reject out-of-range targets in XLA InTopK",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/127942",
+          "state": "closed",
+          "created_at": "2026-09-23T14:55:46Z",
+          "closed_at": "2026-09-29T11:34:59Z"
+        },
+        {
+          "title": "farsight-compiler: Mac-side point cloud \u2192 hole-filled, textured 3D environment",
+          "html_url": "https://github.com/azizu06/farsight/pull/218",
+          "state": "open",
+          "created_at": "2026-10-11T09:43:24Z",
+          "closed_at": null
+        },
+        {
+          "title": "Preserve float32 subnormals in Sign kernels",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/127954",
+          "state": "closed",
+          "created_at": "2026-09-23T19:10:31Z",
+          "closed_at": "2026-09-24T15:34:41Z"
+        },
+        {
+          "title": "Fix Gaussian blur spatial kernel ordering across backends",
+          "html_url": "https://github.com/keras-team/keras/pull/23723",
+          "state": "closed",
+          "created_at": "2026-09-22T23:54:14Z",
+          "closed_at": "2026-10-16T17:58:17Z"
+        },
+        {
+          "title": "Preserve float64 sparse xent tail gradients",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126804",
+          "state": "closed",
+          "created_at": "2026-09-04T13:13:55Z",
+          "closed_at": "2026-10-12T21:34:21Z"
+        },
+        {
+          "title": "Reject scalar gradients in UnbatchGrad",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/128345",
+          "state": "closed",
+          "created_at": "2026-09-30T21:15:07Z",
+          "closed_at": "2026-10-30T18:13:40Z"
+        },
+        {
+          "title": "Validate unigram sampler ranges before construction",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/128356",
+          "state": "closed",
+          "created_at": "2026-10-01T01:26:41Z",
+          "closed_at": "2026-10-14T19:06:52Z"
+        },
+        {
+          "title": "Validate Unbatch split sizes before slicing",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/128355",
+          "state": "closed",
+          "created_at": "2026-10-01T01:04:33Z",
+          "closed_at": "2026-10-02T17:09:49Z"
+        },
+        {
+          "title": "Check sparse tensor map allocations",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/128348",
+          "state": "closed",
+          "created_at": "2026-09-30T22:59:06Z",
+          "closed_at": "2026-10-07T08:05:53Z"
+        },
+        {
+          "title": "Fix sqrt gradient for float64 subnormals",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/125178",
+          "state": "closed",
+          "created_at": "2026-08-12T19:21:29Z",
+          "closed_at": "2026-09-10T08:21:18Z"
+        },
+        {
+          "title": "Skip dense suffix expansion for empty ragged values",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126868",
+          "state": "closed",
+          "created_at": "2026-09-05T17:39:27Z",
+          "closed_at": "2026-10-10T09:11:19Z"
+        },
+        {
+          "title": "Infer zero-sized VALID AvgPool outputs",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/127941",
+          "state": "closed",
+          "created_at": "2026-09-23T14:55:46Z",
+          "closed_at": "2026-10-06T00:29:22Z"
+        },
+        {
+          "title": "Newton-Muon \u00d7 PR #1874's document-packed loader: a controlled negative result",
+          "html_url": "https://github.com/openai/parameter-golf/pull/1907",
+          "state": "open",
+          "created_at": "2026-04-28T19:43:11Z",
+          "closed_at": null
+        },
+        {
+          "title": "Validate FusedPadConv2D input rank before dimension access",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126867",
+          "state": "closed",
+          "created_at": "2026-09-05T13:46:18Z",
+          "closed_at": "2026-09-28T08:20:17Z"
+        },
+        {
+          "title": "Fix complex powers with zero exponent",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126876",
+          "state": "closed",
+          "created_at": "2026-09-05T23:48:01Z",
+          "closed_at": "2026-10-01T17:01:02Z"
+        },
+        {
+          "title": "Raise a clear error for torch dtypes with no Triton element type",
+          "html_url": "https://github.com/triton-lang/triton/pull/10696",
+          "state": "closed",
+          "created_at": "2026-06-22T18:00:37Z",
+          "closed_at": "2026-07-26T01:03:48Z"
+        },
+        {
+          "title": "Avoid eager shape ops in tf.boolean_mask with static shapes",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/123993",
+          "state": "closed",
+          "created_at": "2026-07-26T00:29:44Z",
+          "closed_at": "2026-08-13T08:27:21Z"
+        },
+        {
+          "title": "Validate RandomIndexShuffle round count",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/125220",
+          "state": "closed",
+          "created_at": "2026-08-13T09:28:22Z",
+          "closed_at": "2026-09-25T04:55:46Z"
+        },
+        {
+          "title": "Use safe shape validation for TensorScatter ops",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/125219",
+          "state": "closed",
+          "created_at": "2026-08-13T09:28:19Z",
+          "closed_at": "2026-10-14T07:12:04Z"
+        },
+        {
+          "title": "Reject negative GPU NMS output sizes",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126872",
+          "state": "closed",
+          "created_at": "2026-09-05T20:48:20Z",
+          "closed_at": "2026-09-25T06:24:40Z"
+        },
+        {
+          "title": "Support int32 argmax in CPU MaxPool gradients",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/123156",
+          "state": "closed",
+          "created_at": "2026-07-14T00:17:13Z",
+          "closed_at": "2026-09-25T02:37:40Z"
+        },
+        {
+          "title": "Rewrite README around the working engineering loop",
+          "html_url": "https://github.com/GodlyDonuts/aeroForge/pull/2",
+          "state": "closed",
+          "created_at": "2026-08-20T22:30:10Z",
+          "closed_at": "2026-08-20T22:31:48Z"
+        },
+        {
+          "title": "Sharpen Psi's recruiter-facing first read",
+          "html_url": "https://github.com/GodlyDonuts/psi/pull/1",
+          "state": "closed",
+          "created_at": "2026-08-20T22:30:24Z",
+          "closed_at": "2026-08-20T22:31:56Z"
+        },
+        {
+          "title": "Add regression coverage for float64 softmax tail gradients",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126823",
+          "state": "closed",
+          "created_at": "2026-09-04T18:53:34Z",
+          "closed_at": "2026-09-15T17:56:46Z"
+        },
+        {
+          "title": "Preserve float64 log-softmax tail gradients",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126814",
+          "state": "closed",
+          "created_at": "2026-09-04T15:53:29Z",
+          "closed_at": "2026-09-11T05:29:19Z"
+        },
+        {
+          "title": "Use SoftplusGrad for stable higher derivatives",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/126805",
+          "state": "closed",
+          "created_at": "2026-09-04T13:14:04Z",
+          "closed_at": "2026-09-10T13:35:15Z"
+        },
+        {
+          "title": "Reject unrepresentable TensorList scatter index",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/125218",
+          "state": "closed",
+          "created_at": "2026-08-13T09:28:16Z",
+          "closed_at": "2026-08-26T08:15:05Z"
+        },
+        {
+          "title": "[XLA] Enable complex cumsum and cumprod",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/125286",
+          "state": "closed",
+          "created_at": "2026-08-13T22:08:19Z",
+          "closed_at": "2026-08-24T10:29:32Z"
+        },
+        {
+          "title": "Prepare Sai token, tokenizer, and adaptive-compute mechanics",
+          "html_url": "https://github.com/GodlyDonuts/sai-initiative/pull/3",
+          "state": "closed",
+          "created_at": "2026-08-21T07:03:05Z",
+          "closed_at": "2026-08-21T08:07:42Z"
+        },
+        {
+          "title": "Fix NaN/inf propagation in scipy.linalg.toeplitz and hankel",
+          "html_url": "https://github.com/jax-ml/jax/pull/38662",
+          "state": "closed",
+          "created_at": "2026-06-22T16:55:58Z",
+          "closed_at": "2026-10-22T19:51:47Z"
+        },
+        {
+          "title": "Fix crash in SparseApplyMomentum with a grad of mismatched rank",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/121730",
+          "state": "closed",
+          "created_at": "2026-06-22T03:47:03Z",
+          "closed_at": "2026-07-22T14:17:58Z"
+        },
+        {
+          "title": "Validate oneDNN quantized depthwise input ranges before scalar access",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/124051",
+          "state": "closed",
+          "created_at": "2026-07-27T06:42:48Z",
+          "closed_at": "2026-08-03T11:41:15Z"
+        },
+        {
+          "title": "Fix SELU gradient precision for negative inputs",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/125171",
+          "state": "closed",
+          "created_at": "2026-08-12T17:56:17Z",
+          "closed_at": "2026-09-03T05:58:16Z"
+        },
+        {
+          "title": "Validate oneDNN quantized depthwise input ranges before scalar access",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/123149",
+          "state": "closed",
+          "created_at": "2026-07-13T22:17:36Z",
+          "closed_at": "2026-07-27T06:37:36Z"
+        },
+        {
+          "title": "Fix missing f-prefix in dataloader resume warning",
+          "html_url": "https://github.com/pytorch/torchtitan/pull/3733",
+          "state": "closed",
+          "created_at": "2026-06-22T03:56:20Z",
+          "closed_at": "2026-06-22T06:57:05Z"
+        },
+        {
+          "title": "Fix float32 tf.math.erfinv precision loss near \u00b11 in eager path",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/121644",
+          "state": "closed",
+          "created_at": "2026-06-20T02:22:23Z",
+          "closed_at": "2026-06-30T17:25:40Z"
+        },
+        {
+          "title": "[#553] Add Saicharan Ramineni developer application",
+          "html_url": "https://github.com/KnightHacks/forge/pull/554",
+          "state": "closed",
+          "created_at": "2026-09-09T01:57:26Z",
+          "closed_at": "2026-10-05T18:27:49Z"
+        },
+        {
+          "title": "Validate the index in TensorListSetItem to prevent a segfault",
+          "html_url": "https://github.com/tensorflow/tensorflow/pull/121708",
+          "state": "closed",
+          "created_at": "2026-06-21T07:04:43Z",
+          "closed_at": "2026-06-30T17:51:05Z"
+        },
+        {
+          "title": "Mycelia MVP: live coordinator, escrow ledger, real distributed render, browser worker, NL submission + MCP",
+          "html_url": "https://github.com/GodlyDonuts/Mycelia/pull/145",
+          "state": "closed",
+          "created_at": "2026-06-21T08:36:10Z",
+          "closed_at": "2026-06-21T15:28:58Z"
+        }
+      ]
+    },
+    {
+      "query": "author:GodlyDonuts (muse OR openkernel OR H200)",
+      "total_count": 1,
+      "incomplete_results": false,
+      "items": [
+        {
+          "title": "Fix FFN depth-scaled initialization target",
+          "html_url": "https://github.com/pytorch/torchtitan/pull/5111",
+          "state": "closed",
+          "created_at": "2026-10-07T06:38:26Z",
+          "closed_at": "2026-10-08T01:29:16Z"
+        }
+      ]
+    }
+  ],
+  "scope": "Public author-attributed issue/PR metadata; no exhaustive private source access."
+}
