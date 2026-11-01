@@ -6,6 +6,16 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (2026-10-30)
 
+Nov1 decoder: [fresh updates, source links and transfer screen](muse_decode_layer/ROUTER_SOURCE_SCREEN_2026-11-01.md).
+Indexed94paths/10repos/twochangedKushagrablobs;completeL10–L13notes and
+36externaltimingcellsreviewed. Currenthigher-ranked Rohan defaultHEAD
+unchanged;no publicsourceassociationwithnewboardjob established. Four
+Apache2vLLMrouter36ed432files42,990bytespinned/hashverified;independent
+CPU4,142casespass,not nativevalidation. Selector-onlysame-jobwhole-route
+planningproxy<=1.016827x evenat100%durationremoval;no credible3%case,
+so no decoderGPUcheck/promotion. GB300PRmetadataisnotH200evidence.
+
+
 Oct31 latest BF16 follow-up:
 [new lossless source review](muse_bf16_proj/LOSSLESS_SOURCE_REVIEW_LATE_2026-10-31.md),
 [inline-compression protocol](muse_bf16_proj/ILC_RESEARCH_2026-10-31.md).

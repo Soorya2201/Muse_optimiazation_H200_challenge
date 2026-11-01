@@ -1,0 +1,269 @@
+[
+  {
+    "url": "https://github.com/vllm-project/vllm/pull/64553",
+    "number": 64553,
+    "title": "[Kernel] Add CUDA routing kernel for Muse Spark Open",
+    "head": "81c5853efac95e30161b9156b631088a03e94026",
+    "merge_commit_sha": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+    "merged": true,
+    "merged_at": "2026-10-30T01:18:45Z",
+    "files": [
+      {
+        "filename": "CMakeLists.txt",
+        "additions": 13,
+        "deletions": 0
+      },
+      {
+        "filename": "csrc/moe/moe_ops.h",
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "filename": "csrc/moe/muse_spark_routing.cu",
+        "additions": 341,
+        "deletions": 0
+      },
+      {
+        "filename": "csrc/moe/torch_bindings.cpp",
+        "additions": 10,
+        "deletions": 0
+      },
+      {
+        "filename": "tests/kernels/moe/test_muse_spark_router.py",
+        "additions": 131,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/_custom_ops.py",
+        "additions": 22,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/common/ops/fused_routing.py",
+        "additions": 20,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "url": "https://github.com/vllm-project/vllm/pull/64077",
+    "number": 64077,
+    "title": "[Perf] Muse Spark Open Specialized Decode: Optimized GB300 Decode (1.5x)",
+    "head": "35c6b718a0dfe255d5bb2e8d47781048b49e6653",
+    "merge_commit_sha": null,
+    "merged": false,
+    "merged_at": null,
+    "files": [
+      {
+        "filename": "vllm/models/muse_spark/common/dspark.py",
+        "additions": 205,
+        "deletions": 14
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/model.py",
+        "additions": 48,
+        "deletions": 1
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/model_state.py",
+        "additions": 26,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/attention/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/attention/attn2.py",
+        "additions": 1704,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/attention/qkv_front.py",
+        "additions": 880,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/boundary/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/boundary/all_gather_dual_norm.py",
+        "additions": 717,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/boundary/layer_front.py",
+        "additions": 101,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/draft_boundary.py",
+        "additions": 591,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/dual_norm.py",
+        "additions": 497,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/host.py",
+        "additions": 168,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/mailbox.py",
+        "additions": 474,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/policy.py",
+        "additions": 71,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/primitives.py",
+        "additions": 1792,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/common/row_norm.py",
+        "additions": 483,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/draft/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/draft/context.py",
+        "additions": 646,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/draft/input_norm.py",
+        "additions": 47,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/draft/markov.py",
+        "additions": 1818,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/gemm/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/gemm/unpooler.py",
+        "additions": 557,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/moe/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/moe/expert_norm.py",
+        "additions": 49,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/moe/pooler_gather.py",
+        "additions": 804,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/moe/routing.py",
+        "additions": 508,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/moe/tail.py",
+        "additions": 1172,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/oproj/__init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/oproj/all_reduce_dual_norm.py",
+        "additions": 550,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/oproj/batt.py",
+        "additions": 240,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/cutedsl/oproj/draft_all_reduce_boundary.py",
+        "additions": 670,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/__init__.py",
+        "additions": 163,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/cute_ops.py",
+        "additions": 354,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/decode.py",
+        "additions": 383,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/draft.py",
+        "additions": 1150,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/expert_tp.py",
+        "additions": 280,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/flashinfer_ops.py",
+        "additions": 1116,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/markov.py",
+        "additions": 662,
+        "deletions": 0
+      },
+      {
+        "filename": "vllm/models/muse_spark/nvidia/specialized_decode/runtime/providers.py",
+        "additions": 570,
+        "deletions": 0
+      }
+    ]
+  }
+]

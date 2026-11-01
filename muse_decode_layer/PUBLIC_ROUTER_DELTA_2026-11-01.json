@@ -1,0 +1,881 @@
+{
+  "captured_at": "2026-11-01T18:48:00.824135+00:00",
+  "method": "Fresh paginated code-index delta plus exact default HEAD comparison and Git-blob-verified selected-file reads.",
+  "limitations": "Not exhaustive branches/private source coverage; foreign scores not own paired measurements; unlicensed sources retained only in temporary research storage.",
+  "repositories": [
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "sha": "ca71144194e993c9769f20654fade8008c6868c7",
+      "message": "Log L13: own boundary kernels not kept (exacter routing raises MoE work); measurement-noise note",
+      "license": null
+    },
+    {
+      "repo": "rohanarun/Auto-research-agent",
+      "sha": "018b7a102348ea3b73701e8be52d24f82d8c91ee",
+      "message": "Add Claude Opus/Sonnet/Haiku 5.5 benchmark cohort (integer + kernels) (#17)\n\nNew trials under harness claude-cli-broker-linux-v1 (Claude CLI, tool-free structured actions;\nLinux namespace broker). Same snapshots, prompts, GPU dispatcher, judge and scoring policy.\nAdds sealed sources and two-bank evaluations, results rows, exclusions, and regenerates all three\ncharts and the tables alongside the merged GPT and Gemini 3.8 Flash results.\n\n\nClaude-Session: https://claude.ai/code/session_01GicaNFLbvRHJRb51K2Suc1\n\nCo-authored-by: Claude <noreply@anthropic.com>",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "repo": "trxphxle/okc-2026-muse-kernels",
+      "sha": "72db638fa2718bc0ea5645fdd5c52a5511594579",
+      "message": "Muse Spark Open Kernel Challenge 2026: H200 decode-layer kernels, results and measurements\n\nDecode layer 2.1756x ranked (2.1916x check); overall #191 of 1,743 (peak #185).\nBuilds on vjeux/okc-2026 and alygg77/okc-muse-spark-kernels (Apache-2.0),\nwith required BF16 precision boundaries restored.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    }
+  ],
+  "sources": [
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "ref": "ca71144194e993c9769f20654fade8008c6868c7",
+      "path": "muse_decode_layer/build_layer.py",
+      "sha": "d363e22f09d13fa79f43abc1b7945a931a76e392",
+      "sha256": "0a27e31a9503cb4e69ca13e4574bde166bb6f1927f409a5020b97fc6cb93e14f",
+      "bytes": 11295,
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/build_layer.py",
+      "ast_parse_pass": true,
+      "top_level_functions": [
+        "body",
+        "prefix",
+        "top_names",
+        "proj_call"
+      ]
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "ref": "ca71144194e993c9769f20654fade8008c6868c7",
+      "path": "muse_decode_layer/submission.py",
+      "sha": "c003855fb057136ee06f38b4419f4812f92efa73",
+      "sha256": "c646055275705583d9d03e501ee2ba74ece30191933c16a0b84b05f2e4b38921",
+      "bytes": 199347,
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/submission.py",
+      "ast_parse_pass": true,
+      "top_level_functions": [
+        "_attn_chunk",
+        "_attn_rms_rope",
+        "_attn_prep",
+        "_attn_attn_combine",
+        "_attn_qkv_prep",
+        "_attn_kernel_fa3",
+        "_attn_wgmma_fn",
+        "_attn_module",
+        "_attn_kernel_fn",
+        "_attn_kernel_fn_cuda",
+        "_attn_pt_span",
+        "_attn_kernel_cluster",
+        "_attn_vchunk",
+        "_attn_kernel_verify_cluster",
+        "_attn_kernel_cuda8",
+        "_proj_router_gemm",
+        "_proj_router_gemm_launch",
+        "_proj_module",
+        "_proj_mt",
+        "_proj_config",
+        "_proj_pack",
+        "_proj_packed",
+        "_proj_launch",
+        "_proj_prepare",
+        "_proj_kernel_fn",
+        "_moe_module",
+        "_moe_unpack_codes",
+        "_moe_bit_map",
+        "_moe_scales_simple",
+        "_moe_pack_expert",
+        "_moe_config",
+        "_moe_prepare",
+        "_moe_kernel_fn",
+        "_gemm",
+        "_param",
+        "_norm",
+        "_residual",
+        "_marlin_bank",
+        "prepare",
+        "_experts",
+        "kernel_fn"
+      ]
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "ref": "ca71144194e993c9769f20654fade8008c6868c7",
+      "path": "muse_decode_layer/EXPERIMENTS.md",
+      "sha": "1a9ced14cebdcf7eb4f20711acaf0728309e6392",
+      "sha256": "9212501c68e168a1ce63b03aa2d11cb81291b5145106c4b0a1a149a1951f61d0",
+      "bytes": 8113,
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/EXPERIMENTS.md"
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "ref": "ca71144194e993c9769f20654fade8008c6868c7",
+      "path": "muse_decode_layer/profiles/submission.2ef27c0f07a84d2d.json",
+      "sha": "59f7e646cd38312836979e74d35c8ccc2a471920",
+      "sha256": "827553b64603ba84b1543dfe77f17e5236230df26a34c2d684c3bb3df6beed06",
+      "bytes": 64530,
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/profiles/submission.2ef27c0f07a84d2d.json",
+      "summary": {
+        "error": null,
+        "passed": true,
+        "score_us": 15719.192979807232,
+        "speedup": 1.439024257101359,
+        "speedup_ci": [
+          1.4174388932448385,
+          1.4606096209578792
+        ],
+        "status": "ok",
+        "tests": 13,
+        "tests_passed": 13
+      },
+      "benchmarks": [
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 1",
+            "page": 1,
+            "repeats": 60,
+            "seed": 9199417393277375071,
+            "weight": 46
+          },
+          "median_ns": 100993.17029554928,
+          "baseline_ns": 171951.99662819505,
+          "speedup": 1.702610148042584,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 1",
+            "page": 1,
+            "repeats": 60,
+            "seed": 9199658594905536230,
+            "weight": 16
+          },
+          "median_ns": 119115.20821925806,
+          "baseline_ns": 183008.00304859877,
+          "speedup": 1.5363949388539186,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 16",
+            "page": 1,
+            "seed": 9199899796533697390,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 172433.55530003775,
+          "baseline_ns": 258735.99154874682,
+          "speedup": 1.500496762933068,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 16",
+            "page": 1,
+            "seed": 9200140998161858551,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 268116.5762259511,
+          "baseline_ns": 424320.0058117509,
+          "speedup": 1.5825951971509653,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 32",
+            "page": 1,
+            "seed": 9200382199790019713,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 208600.87548657687,
+          "baseline_ns": 259407.9915434122,
+          "speedup": 1.243561374986198,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 32",
+            "page": 1,
+            "seed": 9200623401418180876,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 416283.2023042234,
+          "baseline_ns": 624544.0100319684,
+          "speedup": 1.5002863593221476,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 1",
+            "page": 1,
+            "q_len": 8,
+            "seed": 9200864603046342040,
+            "weight": 46
+          },
+          "median_ns": 180518.8751892311,
+          "baseline_ns": 269631.9976821542,
+          "speedup": 1.4936498878552682,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 1",
+            "page": 1,
+            "q_len": 8,
+            "seed": 9201105804674503205,
+            "weight": 16
+          },
+          "median_ns": 195467.165159272,
+          "baseline_ns": 273791.9930368662,
+          "speedup": 1.4007058055698152,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 16",
+            "page": 1,
+            "q_len": 8,
+            "seed": 9201347006302664371,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 368883.1382906391,
+          "baseline_ns": 516495.98916992545,
+          "speedup": 1.4001615567556351,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 16",
+            "page": 1,
+            "q_len": 8,
+            "seed": 9201588207930825538,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 557593.3875043595,
+          "baseline_ns": 692063.9812014997,
+          "speedup": 1.2411624612318217,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 32",
+            "page": 1,
+            "q_len": 8,
+            "seed": 9201829409558986706,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 534303.348876733,
+          "baseline_ns": 730896.0044756532,
+          "speedup": 1.3679420239686264,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 32",
+            "page": 1,
+            "q_len": 8,
+            "seed": 9202070611187147875,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 887216.3108851147,
+          "baseline_ns": 1091375.9702816606,
+          "speedup": 1.2301126082689686,
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "ref": "ca71144194e993c9769f20654fade8008c6868c7",
+      "path": "muse_decode_layer/profiles/submission.6dd511ae799741ff.json",
+      "sha": "891deeeaf9fc66fd04c55749adf53bcbf4a4bf1d",
+      "sha256": "f08c33b85b224d8883b25f57d2877e1cae707cd75157b88447e677a31e3b9679",
+      "bytes": 64466,
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/profiles/submission.6dd511ae799741ff.json",
+      "summary": {
+        "error": null,
+        "passed": true,
+        "score_us": 15300.941953329451,
+        "speedup": 1.47835996430781,
+        "speedup_ci": [
+          1.4561845648431928,
+          1.500535363772427
+        ],
+        "status": "ok",
+        "tests": 13,
+        "tests_passed": 13
+      },
+      "benchmarks": [
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 1",
+            "page": 1,
+            "repeats": 60,
+            "seed": 3147709913630448445,
+            "weight": 46
+          },
+          "median_ns": 95625.18257194338,
+          "baseline_ns": 171167.99484938383,
+          "speedup": 1.7899886854658393,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 1",
+            "page": 1,
+            "repeats": 60,
+            "seed": 3147933544809082468,
+            "weight": 16
+          },
+          "median_ns": 113707.50601118704,
+          "baseline_ns": 180112.00288310647,
+          "speedup": 1.5839939613607061,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 16",
+            "page": 1,
+            "seed": 3148157175987716492,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 171156.64628619974,
+          "baseline_ns": 261359.99988764524,
+          "speedup": 1.5270222077769149,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 16",
+            "page": 1,
+            "seed": 3148380807166350517,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 272777.87074619246,
+          "baseline_ns": 434640.00103995204,
+          "speedup": 1.5933843894703799,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 32",
+            "page": 1,
+            "seed": 3148604438344984543,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 207091.46882496096,
+          "baseline_ns": 256255.9866346419,
+          "speedup": 1.237404843804725,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 32",
+            "page": 1,
+            "seed": 3148828069523618570,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 408638.1187203417,
+          "baseline_ns": 620192.0234598219,
+          "speedup": 1.5177047736074292,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 1",
+            "page": 1,
+            "q_len": 8,
+            "seed": 3149051700702252598,
+            "weight": 46
+          },
+          "median_ns": 153495.59186036084,
+          "baseline_ns": 258336.0024727881,
+          "speedup": 1.683019032284676,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 1",
+            "page": 1,
+            "q_len": 8,
+            "seed": 3149275331880886627,
+            "weight": 16
+          },
+          "median_ns": 182967.29749004336,
+          "baseline_ns": 281375.98978355527,
+          "speedup": 1.5378485316419295,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 16",
+            "page": 1,
+            "q_len": 8,
+            "seed": 3149498963059520657,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 373898.8968344054,
+          "baseline_ns": 530736.0156439245,
+          "speedup": 1.4194639784641572,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 16",
+            "page": 1,
+            "q_len": 8,
+            "seed": 3149722594238154688,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 554180.3642155258,
+          "baseline_ns": 705791.9963262975,
+          "speedup": 1.2735781379143354,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 32",
+            "page": 1,
+            "q_len": 8,
+            "seed": 3149946225416788720,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 528669.3346284326,
+          "baseline_ns": 699520.010035485,
+          "speedup": 1.3231711472864833,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 32",
+            "page": 1,
+            "q_len": 8,
+            "seed": 3150169856595422753,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 890279.9948387274,
+          "baseline_ns": 1077647.9770429432,
+          "speedup": 1.2104596119091244,
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "repo": "Kushagrabainsla/muse-spark-open",
+      "ref": "ca71144194e993c9769f20654fade8008c6868c7",
+      "path": "muse_decode_layer/profiles/submission.7a0ba34ed4ee4181.json",
+      "sha": "d9cc86d4465cf63dc1f0bf4af32202bced1c1cc1",
+      "sha256": "774fd920d193eefa5b684c5e10f129b715e67cf8346b87e4bea8fbb6f142feb9",
+      "bytes": 64247,
+      "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/profiles/submission.7a0ba34ed4ee4181.json",
+      "summary": {
+        "error": null,
+        "passed": true,
+        "score_us": 15121.163752315644,
+        "speedup": 1.4959364484453745,
+        "speedup_ci": [
+          1.473497401718694,
+          1.518375495172055
+        ],
+        "status": "ok",
+        "tests": 13,
+        "tests_passed": 13
+      },
+      "benchmarks": [
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 1",
+            "page": 1,
+            "repeats": 60,
+            "seed": 5963125231184507724,
+            "weight": 46
+          },
+          "median_ns": 92037.90500086351,
+          "baseline_ns": 171903.99998798966,
+          "speedup": 1.8677522047723363,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 1",
+            "page": 1,
+            "repeats": 60,
+            "seed": 5963263661344606743,
+            "weight": 16
+          },
+          "median_ns": 110342.2803401864,
+          "baseline_ns": 181520.0005657971,
+          "speedup": 1.6450629804474681,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 16",
+            "page": 1,
+            "seed": 5963402091504705763,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 173095.02832134193,
+          "baseline_ns": 267712.0054140687,
+          "speedup": 1.546618686916156,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 16",
+            "page": 1,
+            "seed": 5963540521664804784,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 270629.48677943804,
+          "baseline_ns": 431935.99907681346,
+          "speedup": 1.5960418955708238,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "decode 32",
+            "page": 1,
+            "seed": 5963678951824903806,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 211120.6460732587,
+          "baseline_ns": 267503.9996393025,
+          "speedup": 1.2670669809644237,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "decode 32",
+            "page": 1,
+            "seed": 5963817381985002829,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 408295.31659562566,
+          "baseline_ns": 619024.018291384,
+          "speedup": 1.5161183416278647,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 1",
+            "page": 1,
+            "q_len": 8,
+            "seed": 5963955812145101853,
+            "weight": 46
+          },
+          "median_ns": 151335.8879598836,
+          "baseline_ns": 258815.9991428256,
+          "speedup": 1.7102090101155187,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 1,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 1",
+            "page": 1,
+            "q_len": 8,
+            "seed": 5964094242305200878,
+            "weight": 16
+          },
+          "median_ns": 172211.42349956304,
+          "baseline_ns": 271711.99675649405,
+          "speedup": 1.5777814922782023,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 16",
+            "page": 1,
+            "q_len": 8,
+            "seed": 5964232672465299904,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 368658.47490499215,
+          "baseline_ns": 511152.0071513951,
+          "speedup": 1.3865190737392523,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 16,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 16",
+            "page": 1,
+            "q_len": 8,
+            "seed": 5964371102625398931,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 548391.9769186521,
+          "baseline_ns": 697375.9811371565,
+          "speedup": 1.2716742959217373,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "sliding",
+            "load": "verify 32",
+            "page": 1,
+            "q_len": 8,
+            "seed": 5964509532785497959,
+            "spread": "agentic",
+            "weight": 46
+          },
+          "median_ns": 522829.4180038455,
+          "baseline_ns": 698912.0016805828,
+          "speedup": 1.3367878271827507,
+          "status": "pass"
+        },
+        {
+          "case": {
+            "batch": 32,
+            "ctx": 80000,
+            "dist": "soft",
+            "layer": "full",
+            "load": "verify 32",
+            "page": 1,
+            "q_len": 8,
+            "seed": 5964647962945596988,
+            "spread": "agentic",
+            "weight": 16
+          },
+          "median_ns": 884093.7236738288,
+          "baseline_ns": 1070911.9900129735,
+          "speedup": 1.211310476860786,
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "LICENSE",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "url": "https://github.com/vllm-project/vllm/blob/36ed4327d2caeb38543b75b80db2a291e88883bc/LICENSE"
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "csrc/moe/muse_spark_routing.cu",
+      "sha": "22d2bde87095110c1afeec3daa8fe86d8b05b625",
+      "sha256": "2f40209a7e02acf6e84688a0216c8483f70f51966f21b9801deb1a992d1e82eb",
+      "bytes": 12390,
+      "url": "https://github.com/vllm-project/vllm/blob/36ed4327d2caeb38543b75b80db2a291e88883bc/csrc/moe/muse_spark_routing.cu"
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "tests/kernels/moe/test_muse_spark_router.py",
+      "sha": "ee31304dad7b46bea36dba9b1b9333fd146a0a59",
+      "sha256": "2c0510a5df9d58e88852bc5b7c7dadc141ed7da5d139a1555354949f4eb77e40",
+      "bytes": 11248,
+      "url": "https://github.com/vllm-project/vllm/blob/36ed4327d2caeb38543b75b80db2a291e88883bc/tests/kernels/moe/test_muse_spark_router.py",
+      "ast_parse_pass": true,
+      "top_level_functions": [
+        "_expected",
+        "_route",
+        "test_bias_affects_selection_but_not_gathered_weights",
+        "test_softmax_branch_without_division_eps",
+        "test_output_multiplier_applied_before_sigmoid",
+        "test_output_dtypes",
+        "test_invalid_normalization_rejected",
+        "test_fused_routing_matches_reference",
+        "test_fused_routing_writes_into_preallocated_buffers",
+        "_triton_routing_reference",
+        "test_cuda_muse_routing_matches_triton",
+        "test_cuda_muse_routing_graph_replay"
+      ]
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "vllm/models/muse_spark/common/ops/fused_routing.py",
+      "sha": "39c4be8f13cdf0d48785e22541357b216e19b80b",
+      "sha256": "06312ed25db049e30875b4083df404c3f7ef6df451bcca321594575b2d51f804",
+      "bytes": 7995,
+      "url": "https://github.com/vllm-project/vllm/blob/36ed4327d2caeb38543b75b80db2a291e88883bc/vllm/models/muse_spark/common/ops/fused_routing.py",
+      "ast_parse_pass": true,
+      "top_level_functions": [
+        "_normalized_scores",
+        "_select_one",
+        "_routing_kernel",
+        "_padded_num_experts",
+        "fused_musespark1x_routing"
+      ]
+    }
+  ],
+  "observations": [
+    "Only two indexed path/blob changes, both Kushagrabainsla at ca711441; author default now L12, 1.495936448x from published receipt.",
+    "Read complete L10-L13 notes and builder hooks, parsed current submission without execution; no complete native concurrency/compliance audit.",
+    "Kushagrabainsla L10 retains BF16 rounding in pre-expert stage by author description; our incumbent already combines pre-expert norm, local route mapping and PDL in routing kernels. This is not a standalone 6.2us norm saving for our parent.",
+    "Rohanarun is now above us at rank84/2.2547x, but default HEAD018b7a1 and indexed candidate blobs unchanged from prior review; no public source-to-new-board-job association established.",
+    "trxphxle default HEAD72db638 unchanged; measurements already reviewed.",
+    "vLLM CUDA router is merged36ed4327; stable per-lane sort, heads-only warp selection and tapered pops. Hopper path retains five shuffle steps, SM100-only FP32 redux must not be attributed to H200.",
+    "vLLM GB300 specialized-decode PR64077 remains unmerged in retrieved metadata; 1.5x author claim is for Blackwell and full serving, not our single-H200 task. Only metadata reviewed, no source port."
+  ]
+}

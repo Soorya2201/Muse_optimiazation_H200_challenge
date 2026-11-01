@@ -4,8 +4,21 @@ This index supplements the historical reports; it does not claim exhaustive
 coverage of public work or access to higher-ranked private implementations.
 Every new idea must retain the TASK precision and full-attention contracts.
 
+Nov1: [new public updates and official CUDA router screen](ROUTER_SOURCE_SCREEN_2026-11-01.md).
+Two indexed code changes, updated lower-ranked L10–L13 notes/36 timing cells
+and unchanged higher-ranked Rohan default HEAD reviewed. No stronger public
+replacement linked to the latter's current board job. vLLM's merged stable
+head-selection/tapered-pop router is newly pinned (four Apache-2.0 files);
+independent CPU ordering model passes4,142cases. Same-job whole-route
+25/50/100% duration subtraction models0.415/0.833/1.683%decoder gain,
+so selector-only port deferred beforeGPU. Native numerics/resources and
+performance untested; parent already fuses norm/local-map and PDL.
+No decoder check/submit or canonical change. Next sequentialtrackprefill.
+
+
 | Technique / evidence | Current disposition | Requirement before another GPU check |
 |---|---|---|
+| vLLM stable per-lane sort and tapered top8 pop | CPU finite-key model passes; selector-only gain case below3% | Additional critical-path mechanism and full BF16/FP32/PDL adapter |
 | Four-width WGS specialization, own implementation | Compiler success with spills; extra arithmetic; deferred | Distinct spill remedy plus evidence that reduced code footprint can recover enough exposed time |
 | Register redistribution GS2/GS4 | H200 negative | New resource mechanism; no repeat of the same sweep |
 | Decode first A fragments before waiting for X | Reduced compile only | Exposed X-wait measurement sufficient for whole-decoder gain |

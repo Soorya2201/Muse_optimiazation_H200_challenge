@@ -1,0 +1,41 @@
+{
+  "repo": "https://github.com/vllm-project/vllm",
+  "commit": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+  "license": "Apache-2.0",
+  "root_notice": "No NOTICE entry at pinned root tree; file SPDX copyright and license headers retained verbatim.",
+  "purpose": "Static source review and independent finite-key CPU model; downloaded modules never imported or executed, no GPU port.",
+  "files": [
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "LICENSE",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "csrc/moe/muse_spark_routing.cu",
+      "sha": "22d2bde87095110c1afeec3daa8fe86d8b05b625",
+      "sha256": "2f40209a7e02acf6e84688a0216c8483f70f51966f21b9801deb1a992d1e82eb",
+      "bytes": 12390
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "tests/kernels/moe/test_muse_spark_router.py",
+      "sha": "ee31304dad7b46bea36dba9b1b9333fd146a0a59",
+      "sha256": "2c0510a5df9d58e88852bc5b7c7dadc141ed7da5d139a1555354949f4eb77e40",
+      "bytes": 11248
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "ref": "36ed4327d2caeb38543b75b80db2a291e88883bc",
+      "path": "vllm/models/muse_spark/common/ops/fused_routing.py",
+      "sha": "39c4be8f13cdf0d48785e22541357b216e19b80b",
+      "sha256": "06312ed25db049e30875b4083df404c3f7ef6df451bcca321594575b2d51f804",
+      "bytes": 7995
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "scope": "Independent CPU check of 32-lane stable-head routing and decoder time scenarios.\n\nSelection layout/finite-key semantics only. Does not execute downloaded code,\nmodel CUDA ex2/div rounding, prove GPU correctness, or predict runtime.\nPrimary implementation: vLLM PR64553, merge36ed4327 (Apache-2.0).\n",
+  "selection_cases": 4142,
+  "case_kinds": {
+    "all_tied": 6,
+    "all_eight_from_one_lane": 32,
+    "tie_groups": 8,
+    "three_levels": 1046,
+    "adjacent_fp32": 996,
+    "random": 995,
+    "eight_levels": 1059
+  },
+  "exact_key_comparisons": true,
+  "score_associations_preserved": true,
+  "primary_url": "https://github.com/vllm-project/vllm/blob/36ed4327d2caeb38543b75b80db2a291e88883bc/csrc/moe/muse_spark_routing.cu",
+  "profile_job": "eff0b59dc26c4c74",
+  "source_sha256": "8f17613bafb2369152f2739638bf8f6dfb193f6a79dbad3e6d25795cf1ebaf4a",
+  "router_profile_us": [
+    {
+      "load": "decode 1",
+      "layer": "sliding",
+      "us": 2.5
+    },
+    {
+      "load": "decode 1",
+      "layer": "full",
+      "us": 2.5
+    },
+    {
+      "load": "decode 16",
+      "layer": "sliding",
+      "us": 2.0
+    },
+    {
+      "load": "decode 16",
+      "layer": "full",
+      "us": 2.0
+    },
+    {
+      "load": "decode 32",
+      "layer": "sliding",
+      "us": 2.2
+    },
+    {
+      "load": "decode 32",
+      "layer": "full",
+      "us": 2.4
+    },
+    {
+      "load": "verify 1",
+      "layer": "sliding",
+      "us": 1.8
+    },
+    {
+      "load": "verify 1",
+      "layer": "full",
+      "us": 1.9
+    },
+    {
+      "load": "verify 16",
+      "layer": "sliding",
+      "us": 2.7
+    },
+    {
+      "load": "verify 16",
+      "layer": "full",
+      "us": 2.7
+    },
+    {
+      "load": "verify 32",
+      "layer": "sliding",
+      "us": 3.5
+    },
+    {
+      "load": "verify 32",
+      "layer": "full",
+      "us": 3.4
+    }
+  ],
+  "conditional_board_proxy_for_route_profile_duration_cut": {
+    "0.25": 1.0041460478187307,
+    "0.5": 1.0083321503851963,
+    "1.0": 1.0168272719465385
+  },
+  "limitations": [
+    "Profile duration includes waits and work other than top8; subtraction is optimistic planning, not a rigorous critical-path bound.",
+    "Synthetic event time, full device numerical behavior, and adapted warp resources remain unmeasured.",
+    "Current routing also normalizes expert inputs, maps device-local IDs and sometimes carries residuals; standalone selector cannot replace these.",
+    "Hopper uses five shuffle steps for FP32 warp max; SM100 family redux instruction is not an H200 optimization."
+  ]
+}

@@ -67,6 +67,29 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Nov1 decoder source/router screen complete; next sequential track prefill
+
+BF16cyclepushed054a85e. FollowedsequentiallywithdecoderAGENTS/TASK/latest
+closedfamilies. Fresh15:31:50UTCindexed94paths/10repos/twochangedblobsat
+Kushagraca711441. ReadcompleteL10–L13notes,builderhooks,parsedcurrent
+submissionAST/all36newexternaltimingcells;metadata+hashesretained,no
+unlicensedcodeport/mirror. Rohan#84/2.2547xhasunchangedpublicdefault
+HEAD018b7a1andcandidateblobs;no associationwithnewboardjob established.
+trxphxle72db638unchanged. Ownrank200/1164atthatcapture,scoresunchanged.
+PinnedfourApache2vLLMrouter36ed432files42,990bytes/originalheaders/license/
+Gitblob+SHAverified. ReadcompleteCUDA/hostandselectedtests/dispatch.
+IndependentCPUstable-head/taperedpopmodel4,142finitekeycasespass,not
+CUDArounding/resource/runtimeproof. Same-own-job12routeprofiledurations
+25/50/100%cutsconditionaldecoderproxy1.004146048/1.008332150/1.016827272;
+notcriticalpathbounds. Parentalreadyfusesnorm/localmapping+PDL,so no
+credible3%selector-onlycase;deferbeforeGPU. Hopperfive-shufflemax,
+SM100FP32reduxnotapplicable. GB300PR64077unmergedmetadataonly,noport.
+Read muse_decode_layer/ROUTER_SOURCE_SCREEN_2026-11-01.md,model/JSONpins.
+No decoderjob/submit/canonicalchange. Nov1BF16routine1/8,allothers0/8,
+allsubmits0. NoGPUjoblive. Currentworkingtreeinternalbackupwhileexternal
+volumeabsent. Nextprefill:readAGENTS/TASK/SS+K64+Ltnegatives,finddistinct
+criticalpathmechanismbeforeGPU. Noagents. Goalactive/incomplete,none1.
+
 #### Nov1 BF16 ILC terminal; next sequential track decoder
 
 Previousgoalturnrankrefreshwasnooptimizationprogress. Thiscycle recovers
