@@ -171,3 +171,46 @@ The unchanged parent remains the official timed layer. A component proxy
 must pass all original gates before any whole-layer promotion attempt.
 Second routine prefill check of Nov1 is authorized only after source,
 preflight, compiler evidence and this protocol are pushed. No scored submit.
+
+## V34 terminal H200 result: c1b897ca7efb4292
+
+The corrected full-draining form passes all five nearby initial/fresh
+comparisons, including 2048/spectrum, with exactly zero agreement error.
+All24 timing groups complete in76.566076 seconds and retain768 original
+CUDA-event float32 bit patterns and312 row metrics. Full old/new FINE0/1
+attributes are identical:168 registers,8 existing ABI local bytes,0 static
+shared,max384 threads. Finite counts are zero NaN/Inf. This establishes
+that the corrected diagnostic works; it does not retrospectively identify
+V33's failing arm or prove one unique cause for that earlier failure.
+
+| Tokens | Matched old/new ratio, min–max across8groups | Decision |
+|---|---|---|
+| 753 | 0.997413–1.002351 | No recurring2% component gain |
+| 3012 | 0.993910–1.005330 | No recurring2% component gain |
+| 16384 | 0.976793–0.978724 | Approximately2.3% slower |
+
+A/A variation is at most0.392510%; actual/matched-parent offset at
+most0.207370%, both pass the original gates. All seven changed fixed
+policies reject. Best changed worst conditional whole-board proxy is
+0.999580169x. No official candidate-layer gain was measured: the judge
+still times the unchanged parent, which passed5tests/8timings at
+1.767936714x on sfo3, CI1.741417663–1.794455765,219127.696692us,
+prepare131.717544s. The previous V33 parent ran on sfo3c; cross-job point
+scores must not be used to infer the batching effect.
+
+All eight available profile tables,161 CLI text lines,135 CLI log lines,
+full available remote tail and24 decoded raw groups were inspected. Profile
+tables omit two tiny kernels per cell; unavailable full traces are not
+claimed. Three original CLI files are backed up internally and hash-verified.
+Receipt, complete report and manifest are in Git. Second of eight routine
+prefill checks on Nov1; no scored submit. All five canonical files remain
+unchanged. Close the full-draining wide-four-MMA schedule; do not retry it
+unchanged or promote from a parent score. Dynamic lifetime-fence and static
+bank-stage compiler failures remain archived alongside the measured result.
+
+A narrower two-MMA grouping with preserved overlap is only an unimplemented
+possibility: it needs a resource/lifetime check and a practical3% whole-board
+case before using GPU time. Fewer static fences alone is insufficient.
+A separately discovered public [H200 grouped-MoE repository](https://github.com/harshithkantamneni/moe-kernels)
+is queued for a future source/license/precision review; it has not been
+identified as a competitor's winning source or tested as a replacement.

@@ -277,3 +277,27 @@ Prepare-only H200 diagnostic0ad97c9c2d0b4170 on sfo3 is complete; all
 numerics/resources pass but no fixed policy meets3% whole-board gate.
 Canonical whole-layer timed path unchanged. The fixed numerical/control/
 policy gates and all protocol details are in SCALE_SHARE_H200_2026-10-31.md.
+
+## Nov1 public related-work review and wide commit batching
+
+See LEADER_RELATED_WORK_2026-11-01.md for bounded selected-source reviews,
+exact links/hashes, useful mechanisms and missing evidence. Matching names
+and public project claims do not establish a winning submission.
+
+Wide four-MMA batching was implemented independently with unchanged NVFP4
+layout. V33cfc76057d5d641b7 failed spectrum numerics before timing. Native
+assembly showed logical A-bank parity was eliminated. Compiler lifetime
+fences made a144-byte local frame; static bank stages triggered C7512.
+Corrected V34 drains each wide group before reuse. Checkc1b897ca7efb4292
+passes all5nearby/24timinggroups, all initial/fresh errors0, resources
+168regs/8ABIbytes unchanged. Matched ratios are near parity for753/3012
+and.976793–.978724 for16384; all7fixed policies reject. Close this form.
+The parent official1.767936714x is not an optimization result.
+
+The expert kernel remains a large phase (roughly22–44% of displayed
+per-cell kernel sums), alongside dense GEMMs and long-context attention.
+Overlapping profile rows are durations, not independently removable
+critical-path costs. No achieved-bandwidth or exact stall attribution is
+claimed. A narrower overlapping grouping remains unimplemented and needs
+a credible3% board case before GPU time. New public H200 grouped-MoE source
+is only a queued discovery lead, not an adopted improvement.

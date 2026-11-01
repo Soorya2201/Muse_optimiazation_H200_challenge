@@ -20,8 +20,11 @@ Nov1 prefill: [new wide-RS batching protocol and bounded public follow-up](muse_
 118indexedpaths/13repos,onlychangedKushagradecoderentryalreadyreviewed.
 Leadercuda-pythondefault0ahead/117behindNVIDIA,nochangeddefaultfiles;
 branchcontentsnotexhaustivelyaudited,no identifiedchallengeimplementation.
-Knownvjeux/alygg77/RohanHEADsunchanged. NewownRSbatchinghasCPU/full
-compilerproofbutnoH200gainyet;nativeweight/layout/precisionretained.
+Knownvjeux/alygg77/RohanHEADsunchanged. V33ownRSbatchingfailedanearbynumericfixturebeforetiming. Nativephysical
+A-lifetimecounterexamplewasfound;tworesource-heavycompilerrepairsrejected.
+V34drainingrepaircheckc1b897ca7efb4292 passesallnumerics/24groupsbut
+all7policiesreject;largefixtureloses~2.3%,no newgain. Testedformclosed.
+Nativeweight/layout/precisionretained.
 
 
 Nov1 decoder: [fresh updates, source links and transfer screen](muse_decode_layer/ROUTER_SOURCE_SCREEN_2026-11-01.md).

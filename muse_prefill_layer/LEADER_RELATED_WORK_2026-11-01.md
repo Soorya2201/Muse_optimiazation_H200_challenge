@@ -83,3 +83,10 @@ reliability do not constitute measurements of this parent. Our assessment:
 The saved prefill leader/current ratio is1.2782x: matching it would require
 about27.8% more throughput, or21.8% less whole-layer time on the scored mix.
 A repeated one-percent component change cannot close that gap by itself.
+
+The corrected V34 H200 experiment is now terminal. All five nearby fixtures
+and24 groups pass with exact initial/fresh agreement, but no component or
+fixed composition meets the performance gates. The largest fixture is
+about2.3% slower. The tested form is rejected; scored source and scores are
+unchanged. `WIDE_BATCH_RESEARCH_2026-11-01.md` preserves the failure, repairs,
+raw results, limits and next unimplemented possibilities.

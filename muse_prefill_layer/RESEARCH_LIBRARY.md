@@ -12,12 +12,13 @@ Use this as an applicability index, not a list of promised speedups. Every
 new implementation needs matching BF16/NVFP4 precision, complete attention,
 fresh-input graph behavior and independent H200 measurements.
 
-Nov1 active: [wide RS-WGMMA commit batching](WIDE_BATCH_RESEARCH_2026-11-01.md).
+Nov1 completed: [wide RS-WGMMA commit batching](WIDE_BATCH_RESEARCH_2026-11-01.md).
 V33 failed the spectrum nearby fixture before timing; failing arm unknown.
 Native lowering exposed a physical A-register lifetime counterexample.
 Two compiler-only repairs reject (144-byte local frame / C7512). V34 instead
-drains wide batches with wait0 and is live as c1b897ca7efb4292; no candidate
-gain yet. Same original fixtures/gates, improved failing-arm attribution.
+drains wide batches with wait0. Checkc1b897ca7efb4292 passes all5nearby/24groups
+with exact agreement, but753/3012 are near parity and16384 loses~2.3%.
+All7fixedpolicies reject. Close tested form; no candidate gain or promotion.
 
 Related source expansion also inspected six non-default CUDA-Python branch
 inventories and the complete relevant LTO diff, plus former leader mpeng19's

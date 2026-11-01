@@ -67,12 +67,40 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### LIVE Nov1 prefill V34 check c1b897ca7efb4292
+#### Nov1 prefill cycle complete: V34 terminal, no eligible gain; next MoE
 
-Recorded2026-11-01T19:20:23.041682+00:00. Secondof8routineprefillNov1checks,submits0.
-Source/protocolpushed5896212. Pollsamehandleuntilterminal,neverrestart
-fromobservationtimeout. Allparentprofiles/logsANDindependentreportmustbe
-read. WIDE_BATCH_RESEARCH_2026-11-01.md repairprotocol. Onlyprefillactive.
+Owner requested broader competitor GPU repos/blogs. Expanded report
+muse_prefill_layer/LEADER_RELATED_WORK_2026-11-01.md covers four selected
+leaderprojects,professionalpages,authoredPyTorchscratchchange,sixnondefault
+CUDA-Pythonbranchinventories/fullLTOfixdiff,formerleadermpeng19inference
+README+27ideasummaries/fivefullrelevantrecords. No winning-sourceassociation.
+Coverage by all five leader handles and limits:
+research/LEADER_PUBLIC_COVERAGE_2026-11-01.md. Reports/source pushedb4d5dd8.
+
+V33cfc76057d5d641b7numericfailurebeforetimingretained,failingarmunknown.
+NativephysicalAloopreusesR200..R215afteronlyDEPBAR1;sourceparitynotproof.
+Dynamiclifetimefence144localbytesreject;staticbankstagesC7512reject.
+V34SHAf31d8d9e9fcbe245cd80611e240114809fecbfe7c5cfd2c5784c8420991038b0
+wide4MMAwait0repairc1b897ca7efb4292TERMINALsfo3. Parent5/8passes
+1.767936714x,CI1.741417663–1.794455765,prepare131.717544s;NOTcandidategain.
+Independent76.566076scomplete5nearby/24groups/768exacteventbits/312metrics,
+allinitial/freshagreement0including2048spectrum. AllfullmodulesFINE0/1
+168regs/8ABIlocal/0static/max384. Matchedratios753=.997413–1.002351,
+3012=.993910–1.005330,16384=.976793–.978724. AAmax.392510%andmatched
+controlmax.207370%passgates,butno2%componentgain/all7policiesreject;
+bestchangedworstconditionalboardproxy.999580169x. No promotion/submit.
+All8profiles/161CLItxtlines/135CLIloglines/fullavailabletail/24rawgroups
+read;3originalCLIfilesinternallybackedup/hashverified. Closefull-drain
+wide4MMAform,noblindretry;two-MMAoverlapunimplemented/unbounded,notgain.
+
+Nov1budgetBF161/8,prefill2/8,othertracks0,allsubmits0/reserveintact.
+No GPU job live. Allfivecanonicalhashesunchanged;privateGitHubverified.
+Internalcontinuationauthoritativewhileexternalvolumeabsent. Goalactive,
+incomplete,none1. NextsequentialtrackMoE:readAGENTS/TASK/latesttrace+LUT
+negativesbeforework. New https://github.com/harshithkantamneni/moe-kernels
+is discovery-only H200groupedlead;source/license/precisionnotyetreviewed,
+no winning-submissionassociation. Don'treopenclosedmicrosweepswithout
+new mechanism and practical3% whole-board case. Noagents.
 
 #### Nov1 prefill V34 drained repair ready; no GPU job live yet
 
