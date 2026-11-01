@@ -16,8 +16,9 @@ leader arashattar publicownerquery0repos. New Apache2NWC648b35f8files/
 blobs/SHA256. Static source review only; trained/GDDR/A16 projections are
 not H200 gains. The selected new mechanism is optional hardware inline
 compression, independently implemented with VMM properties/owner guards
-and fixed-VA controls. V48checkb7b14f03bf854aa4 pending sfo3c; no score
-claim or promotion before terminal evidence and required repeats.
+and fixed-VA controls. V48checkb7b14f03bf854aa4 terminal sfo3c,parent9/30pass but independent
+buildfailed beforecapabilities. V49 repairs explicitC++17flags to20; no
+support/performance/score claim orpromotion.
 
 Oct31 attention integer-exp follow-up:
 [research and terminal H200 result](muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md).

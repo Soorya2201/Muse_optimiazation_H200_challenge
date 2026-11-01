@@ -1,0 +1,851 @@
+{
+  "job": "b7b14f03bf854aa4",
+  "board": "muse_bf16_proj",
+  "mode": "check",
+  "cluster": "sfo3c",
+  "machine": {
+    "gpu_after": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 1980,
+      "driver_version": "580.178.04",
+      "name": "NVIDIA H200",
+      "power.draw": 124.5,
+      "power.limit": 700,
+      "temperature.gpu": 35
+    },
+    "gpu_before": {
+      "clocks.max.sm": 1980,
+      "clocks.mem": 3201,
+      "clocks.sm": 375,
+      "driver_version": "580.178.04",
+      "name": "NVIDIA H200",
+      "power.draw": 106.14,
+      "power.limit": 700,
+      "temperature.gpu": 30
+    },
+    "node": "n-pdvovmvyiyrqmsczyisltml3mn"
+  },
+  "created_at": 1793488381.0076377,
+  "source": "muse_bf16_proj/submission_v48_ilc_probe.py",
+  "source_sha256": "ac071fac6362f2d4c93e176a93550fc7e592a09e863d50a8fc05dc150e35544b",
+  "profile_capture": "remote structured records; local CLI profile unavailable",
+  "duplicate_of": null,
+  "checks": {
+    "flagged": [],
+    "ok": true,
+    "rejected": []
+  },
+  "summary": {
+    "passed": true,
+    "status": "ok",
+    "error": null,
+    "speedup": 1.5684963208254974,
+    "speedup_ci": [
+      1.5449688760131148,
+      1.5920237656378797
+    ],
+    "score_us": 3079.8924650697027,
+    "returncode": 0,
+    "tests": 9,
+    "tests_passed": 9
+  },
+  "setup": [
+    {
+      "baseline_copies": 16,
+      "baseline_prepare_pad": 32382976,
+      "copies": 4,
+      "error": null,
+      "event": "setup",
+      "first": "submission",
+      "prepare_pad": 19686400,
+      "prepare_s": 174.52177633,
+      "status": "pass"
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023176884889126638,
+        "weight": 62
+      },
+      "median_ns": 8608.858878788338,
+      "baseline_ns": 13967.999257147312,
+      "paired_ratio": 1.6225146042948322,
+      "speedup": 1.622514604294832,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023420789889210008,
+        "weight": 62
+      },
+      "median_ns": 5052.872841586726,
+      "baseline_ns": 6944.000255316496,
+      "paired_ratio": 1.3742677627200903,
+      "speedup": 1.3742677627200903,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023664694889293379,
+        "weight": 62
+      },
+      "median_ns": 13090.91917072723,
+      "baseline_ns": 21375.998854637146,
+      "paired_ratio": 1.6328875440951685,
+      "speedup": 1.6328875440951685,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023908599889376751,
+        "weight": 62
+      },
+      "median_ns": 3225.705680844682,
+      "baseline_ns": 6816.000211983919,
+      "paired_ratio": 2.1130260744058598,
+      "speedup": 2.1130260744058598,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8024152504889460124,
+        "weight": 62
+      },
+      "median_ns": 3584.9234815012505,
+      "baseline_ns": 10416.0001501441,
+      "paired_ratio": 2.905501387656457,
+      "speedup": 2.905501387656457,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8024396409889543498,
+        "weight": 62
+      },
+      "median_ns": 9812.89608673384,
+      "baseline_ns": 14303.999952971935,
+      "paired_ratio": 1.4576736395190883,
+      "speedup": 1.4576736395190883,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8024640314889626873,
+        "weight": 62
+      },
+      "median_ns": 5631.55415318505,
+      "baseline_ns": 7008.000276982784,
+      "paired_ratio": 1.2444167429375166,
+      "speedup": 1.2444167429375166,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8024884219889710249,
+        "weight": 62
+      },
+      "median_ns": 13738.011823604875,
+      "baseline_ns": 21535.99914163351,
+      "paired_ratio": 1.5676212408428714,
+      "speedup": 1.5676212408428714,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8025128124889793626,
+        "weight": 62
+      },
+      "median_ns": 13592.854924361505,
+      "baseline_ns": 18303.999677300453,
+      "paired_ratio": 1.346589791412803,
+      "speedup": 1.346589791412803,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8025372029889877004,
+        "weight": 62
+      },
+      "median_ns": 4627.940260378,
+      "baseline_ns": 14800.000470131636,
+      "paired_ratio": 3.1979670517447008,
+      "speedup": 3.1979670517447008,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8025615934889960383,
+        "weight": 62
+      },
+      "median_ns": 10392.582430714072,
+      "baseline_ns": 14048.000331968069,
+      "paired_ratio": 1.3517333565188603,
+      "speedup": 1.3517333565188603,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8025859839890043763,
+        "weight": 62
+      },
+      "median_ns": 5693.454773156602,
+      "baseline_ns": 6655.999459326267,
+      "paired_ratio": 1.169061619793285,
+      "speedup": 1.169061619793285,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8026103744890127144,
+        "weight": 62
+      },
+      "median_ns": 14800.508244379924,
+      "baseline_ns": 21823.99993762374,
+      "paired_ratio": 1.4745439533071973,
+      "speedup": 1.4745439533071973,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8026347649890210526,
+        "weight": 62
+      },
+      "median_ns": 14075.36620594122,
+      "baseline_ns": 18271.999433636665,
+      "paired_ratio": 1.298154461226312,
+      "speedup": 1.298154461226312,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8026591554890293909,
+        "weight": 62
+      },
+      "median_ns": 5266.502689886906,
+      "baseline_ns": 15280.000399798155,
+      "paired_ratio": 2.901356231933545,
+      "speedup": 2.901356231933545,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8026835459890377293,
+        "weight": 62
+      },
+      "median_ns": 8896.90983389639,
+      "baseline_ns": 13952.000066637993,
+      "paired_ratio": 1.5681849459103412,
+      "speedup": 1.5681849459103412,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027079364890460678,
+        "weight": 62
+      },
+      "median_ns": 5096.879723592954,
+      "baseline_ns": 6655.999459326267,
+      "paired_ratio": 1.3058969056138996,
+      "speedup": 1.3058969056138996,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027323269890544064,
+        "weight": 62
+      },
+      "median_ns": 13318.618442470937,
+      "baseline_ns": 21184.00065228343,
+      "paired_ratio": 1.5905554126193038,
+      "speedup": 1.5905554126193038,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027567174890627451,
+        "weight": 62
+      },
+      "median_ns": 4074.383842636849,
+      "baseline_ns": 7104.000076651573,
+      "paired_ratio": 1.7435765384475963,
+      "speedup": 1.7435765384475963,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027811079890710839,
+        "weight": 62
+      },
+      "median_ns": 4145.369401270941,
+      "baseline_ns": 26064.000092446804,
+      "paired_ratio": 6.287497583316885,
+      "speedup": 6.287497583316885,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028054984890794228,
+        "weight": 62
+      },
+      "median_ns": 13463.821632361796,
+      "baseline_ns": 16623.99899214506,
+      "paired_ratio": 1.2347162229323825,
+      "speedup": 1.2347162229323825,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028298889890877618,
+        "weight": 62
+      },
+      "median_ns": 6579.415418044677,
+      "baseline_ns": 7183.999288827181,
+      "paired_ratio": 1.091890210963785,
+      "speedup": 1.091890210963785,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028542794890961009,
+        "weight": 62
+      },
+      "median_ns": 19668.323517408226,
+      "baseline_ns": 24352.000560611486,
+      "paired_ratio": 1.2381330080857063,
+      "speedup": 1.2381330080857063,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028786699891044401,
+        "weight": 62
+      },
+      "median_ns": 19211.389699120715,
+      "baseline_ns": 19871.9990439713,
+      "paired_ratio": 1.034386338271032,
+      "speedup": 1.034386338271032,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8029030604891127794,
+        "weight": 62
+      },
+      "median_ns": 5853.170457741061,
+      "baseline_ns": 16303.999815136194,
+      "paired_ratio": 2.7854988903618,
+      "speedup": 2.7854988903618,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8029274509891211188,
+        "weight": 62
+      },
+      "median_ns": 17677.91408367608,
+      "baseline_ns": 19679.99991029501,
+      "paired_ratio": 1.1132535104052614,
+      "speedup": 1.1132535104052614,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8029518414891294583,
+        "weight": 62
+      },
+      "median_ns": 8315.534186452232,
+      "baseline_ns": 8975.999895483255,
+      "paired_ratio": 1.0794255298844253,
+      "speedup": 1.0794255298844253,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8029762319891377979,
+        "weight": 62
+      },
+      "median_ns": 24256.35046130046,
+      "baseline_ns": 30943.999998271465,
+      "paired_ratio": 1.275707161621067,
+      "speedup": 1.275707161621067,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8030006224891461376,
+        "weight": 62
+      },
+      "median_ns": 23093.886120555904,
+      "baseline_ns": 24048.00010845065,
+      "paired_ratio": 1.0413145705713638,
+      "speedup": 1.0413145705713638,
+      "status": "pass"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8030250129891544774,
+        "weight": 62
+      },
+      "median_ns": 6730.356067398432,
+      "baseline_ns": 17216.000240296125,
+      "paired_ratio": 2.5579627686698068,
+      "speedup": 2.5579627686698068,
+      "status": "pass"
+    }
+  ],
+  "profiles": [
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023176884889126638,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 0,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 512, 8192, 2>(unsigned char const*, ...       6.9 \u00b5s 100.0%      1\ntotal                                                              6.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023420789889210008,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 1,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 64, 1024>(unsigned char const*, unsi...       4.2 \u00b5s 100.0%      1\ntotal                                                              4.2 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023664694889293379,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 2,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 512, 8192>(unsigned char const*, uns...      12.9 \u00b5s 100.0%      1\ntotal                                                             12.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8023908599889376751,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 3,
+      "report": "kernel                                                           GPU time  share  calls\nvoid cgemv_kernel<2, 128, 4096>(unsigned char const*, uns...       2.6 \u00b5s 100.0%      1\ntotal                                                              2.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 1",
+        "m": 1,
+        "seed": 8024152504889460124,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 4,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rgemv_kernel<1, 1>(float const*, __nv_bfloat16 const...       2.5 \u00b5s 100.0%      1\ntotal                                                              2.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8024396409889543498,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 5,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 16, 3, 1, 4, 2, 5, true, false, 2, 1, ...       8.5 \u00b5s 100.0%      1\ntotal                                                              8.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8024640314889626873,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 6,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 16, 2, 2, 1, 4, 3, true, false, 2, 1, ...       4.5 \u00b5s 100.0%      1\ntotal                                                              4.5 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8024884219889710249,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 7,
+      "report": "kernel                                                           GPU time  share  calls\nvoid dd_cap2_b_cpssm_gemv<1, 2, 1, 2, 0, 0, 256, 0, 4096,...      13.4 \u00b5s 100.0%      1\ntotal                                                             13.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8025128124889793626,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 8,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 16, 2, 2, 2, 2, 3, true, false, 1, 1, ...      13.4 \u00b5s 100.0%      1\ntotal                                                             13.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 16",
+        "m": 16,
+        "seed": 8025372029889877004,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 9,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rr_small_kernel<2, 16, 8>(int4 const*, __nv_bfloat16...       4.1 \u00b5s 100.0%      1\ntotal                                                              4.1 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8025615934889960383,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 10,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 3, 1, 4, 2, 4, true, false, 1, 1, ...       9.7 \u00b5s 100.0%      1\ntotal                                                              9.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8025859839890043763,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 11,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 3, true, false, 1, 1, ...       5.0 \u00b5s 100.0%      1\ntotal                                                              5.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8026103744890127144,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 12,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 5, true, false, 1, 1, ...      15.6 \u00b5s 100.0%      1\ntotal                                                             15.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8026347649890210526,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 13,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 2, 2, 2, 2, 3, true, false, 1, 1, ...      14.9 \u00b5s 100.0%      1\ntotal                                                             14.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "decode 32",
+        "m": 32,
+        "seed": 8026591554890293909,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 14,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<2, 32, 1, 1, 8, 1, 4, false, true, 4, 3, ...       4.7 \u00b5s 100.0%      1\ntotal                                                              4.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8026835459890377293,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 15,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 8, 3, 1, 4, 2, 5, true, false, 2, 1, _...       7.6 \u00b5s 100.0%      1\ntotal                                                              7.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027079364890460678,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 16,
+      "report": "kernel                                                           GPU time  share  calls\nvoid v18s_gemv<1, 1, 1, 2, 0, 0, 256, 0, 8192, 1024, 1, 8...       4.9 \u00b5s 100.0%      1\ntotal                                                              4.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027323269890544064,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 17,
+      "report": "kernel                                                           GPU time  share  calls\nvoid smallm2_gemv<1, 1, 1, 1, 0, 0, 1024, 0, 4096, 8192, ...      13.6 \u00b5s 100.0%      1\ntotal                                                             13.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027567174890627451,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 18,
+      "report": "kernel                                                           GPU time  share  calls\nvoid sk2_kernel<1, 8, 1, 1, 8, 2, 4, true, false, 2, 1, _...       3.4 \u00b5s 100.0%      1\ntotal                                                              3.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 1",
+        "m": 8,
+        "seed": 8027811079890710839,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 19,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rr_small_kernel<1, 16, 8>(int4 const*, __nv_bfloat16...       3.6 \u00b5s 100.0%      1\ntotal                                                              3.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028054984890794228,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 20,
+      "report": "kernel                                                           GPU time  share  calls\nvoid qb_e12dcf82a592343f::qb_kernel<64, 36, 128, 3, 8, 53...      13.0 \u00b5s 100.0%      1\ntotal                                                             13.0 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028298889890877618,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 21,
+      "report": "kernel                                                           GPU time  share  calls\nvoid ol_projection<128, 128, 4, 3, 1, 1, 1>(CUtensorMap_s...       6.6 \u00b5s 100.0%      1\ntotal                                                              6.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028542794890961009,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 22,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_64x64_64x13_1x1_v_bz_coopB_NNN                     19.9 \u00b5s 100.0%      1\ntotal                                                             19.9 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8028786699891044401,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 23,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x64_64x8_1x2_h_bz_NNT                           18.7 \u00b5s 100.0%      1\ntotal                                                             18.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 16",
+        "m": 128,
+        "seed": 8029030604891127794,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 24,
+      "report": "kernel                                                           GPU time  share  calls\nrk_kernel(CUtensorMap_st, CUtensorMap_st, float*, int, in...       4.6 \u00b5s 100.0%      1\ntotal                                                              4.6 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "qkv_gate",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8029274509891211188,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 25,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_72x64_64x12_1x1_v_bz_TNN                           19.8 \u00b5s 100.0%      1\ntotal                                                             19.8 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "o",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8029518414891294583,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 26,
+      "report": "kernel                                                           GPU time  share  calls\nvoid rl_early_projection<256, 64, 5, 3, 1, 1, 1>(CUtensor...       8.4 \u00b5s 100.0%      1\ntotal                                                              8.4 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "pooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8029762319891377979,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 27,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x64_64x8_1x1_v_bz_NNN                           24.7 \u00b5s 100.0%      1\ntotal                                                             24.7 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "unpooler",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8030006224891461376,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 28,
+      "report": "kernel                                                           GPU time  share  calls\nnvjet_sm90_tst_128x128_64x6_1x1_v_bz_coopA_NNN                    23.3 \u00b5s 100.0%      1\ntotal                                                             23.3 \u00b5s"
+    },
+    {
+      "case": {
+        "layer": "router",
+        "load": "verify 32",
+        "m": 256,
+        "seed": 8030250129891544774,
+        "weight": 62
+      },
+      "event": "profile",
+      "index": 29,
+      "report": "kernel                                                           GPU time  share  calls\nrk_kernel(CUtensorMap_st, CUtensorMap_st, float*, int, in...       5.9 \u00b5s 100.0%      1\ntotal                                                              5.9 \u00b5s"
+    }
+  ],
+  "log_tail": "[proj] pinned choices: {('qkv_gate', 1): ('cgemv',), ('o', 1): ('cgemv',), ('pooler', 1): ('cgemv',), ('unpooler', 1): ('cgemv',), ('router', 1): ('rgemv',), ('qkv_gate', 16): ('sk2',), ('o', 16): ('sk2',), ('pooler', 16): ('sk2',), ('unpooler', 16): ('sk2',), ('router', 16): ('rsmall',), ('qkv_gate', 32): ('sk2',), ('o', 32): ('sk2',), ('pooler', 32): ('sk2',), ('unpooler', 32): ('sk2',), ('router', 32): ('sk2',), ('qkv_gate', 8): ('sk2',), ('o', 8): ('sk2',), ('pooler', 8): ('sk2',), ('unpooler', 8): ('sk2',), ('router', 8): ('rsmall',), ('qkv_gate', 128): ('gqx',), ('o', 128): ('torchT',), ('pooler', 128): ('gq',), ('unpooler', 128): ('torchT',), ('router', 128): ('rk',), ('qkv_gate', 256): ('torch',), ('o', 256): ('torchT',), ('pooler', 256): ('cutlass',), ('unpooler', 256): ('torchT',), ('router', 256): ('rk',)}\nBF16_ILC_STAGE build\nBF16_ILC_Z eNrtWEtz2zYQzp/oHeWhY80wpkhRjowmmfFMc+ihnU7qTg+xzQHBFYWaBFAAtK066W/vgg/rYbtNUj8u4kV47C7wffgWD/3+zYsX14F1zDU2oEEhWCmVdYJncyYqKILQd5aAfXkjKl/nTLNcVMIJQBfZVFUYQFH6yofTMDDqsi9ZDdwXPwR/nl9kJXMQhHEyC7GeixIjXYIoFy44PQ3XTZLpAdYNu0SLm9bWRg3+imeq2gqgBk/sNNudWqkKzOB+XjFTQoZDHKNd37dh10W6366RmxF7k5vmLaO7wq3ZIlceJHJ1HWhmQLqsrFTOqoCO98fjcRIOzUhu14ZNc32QrtvFfdNgMw0DJWGhXOeB3Yy1RfStmeMLXF1fneCSqlqjLQ6AawZFowMat3a5YqbYaJx8wtU2RhlUxPtGOlHDO1+lJDqqKsWZU2Z/QePplMYTSqRyQAlnshAF88WTJhnHsxyhEx6PKVUajPf59s2edQVt9aSdyVxIuJLWkR+YY784892o9Tw8kYRgcPKRCFkJCaQN9dlRSKFHOCm44qAdufbR/PeRrH9nf3ffiYyUdpEtKybLqBJ5pJduoeRkP04iKxy81IyfY3bYCMfmi0hIXjUFRIgs4srALUqSdKCE4C85l+pS+hlegLFCSTJXhqBImhrXgsRkblTdM9bBaCkT0pnGigvIEOLrdmRKWeNUaRhi/1kV8LYjizjVu2+y8nRU3sHqwO2PCBe3GNKTVnRov5Lxrsat4dHABPbpxmU1OIbSY7gCaThMcu176FEl0o9jzZ5irAtmBMsrP14c06+W69ExyOjdlcYs/c2JymI44lenkdx5VXYSYo5SNLReoljMbFNnTu11TWEnzSNj2PI9zF8fvw1bOfVZ+6BzS1+NaTKjBLp9pxe4+Atsr3phfZIRRmqoczBEzdcg2GWNCbTKAIzWataTStoo5A1ZGeKvb0NAe65FOvr+P5V+o/aHRj2Z3qCGKzxdHWaNNqJmZvkSGwzYdhfJAfcR6DGvtoJzkI8IeMB9IqWQfzBK2vsCsU5pDQUltsnxmKkREemuFvsnEo9BZxiHHFnA8+RYHS81/ARtsk47uM+yW7aOv3KGB7af0UosZDq+f7tcORC/WbL5HBJMmR4SqUefsUmu7ZBn///4Wc1ok9r0i8/mbTQhWcUerfOT3s/PbUbWoxA3evzz+H5C0vi5tLbFymOTebfYHkxymzee5MuFtnHHCMnmHWTjEpj8CzvbN5VbgZ7tEpjQyeFzSW3lPlDzdHzer7uzR7ho794eu7fH7u2xe3vs3h67t8fdb4/29QEV0xaKzAY0Hu+n0wRPwcPpweGr6UGShgHmrxE845hWHN8nUpmaVUnm/y5LsjlCXqSZgZrpWTafJJlbgMza/+AmRfDpHzO0BF8=\nBF16_ILC_SUMMARY {\"status\":\"diagnostic_failed\",\"stage\":\"build\",\"rows\":0,\"chars\":1408,\"capabilities\":null}\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:39] profiler_start\nUSDT:2026-10-31 23:16:39 77:77 SyncActivityProfilerHandler.cpp:46] profiler_stop\n"
+}

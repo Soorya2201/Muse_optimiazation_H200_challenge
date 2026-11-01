@@ -1,0 +1,24 @@
+{
+  "scope": "CPU source/geometry/state/codec proofs only; native allocator/driver support/lifetime and GPU correctness/performance unproven.",
+  "source_sha256": "16986615008b886d9863d163dc9416d6a9178bc68a8f47549860bc71aa2ddd3e",
+  "canonical_prefix_unchanged": true,
+  "no_new_timed_kernel_definition": true,
+  "new_state_dictionary_isolated": true,
+  "copy_geometry_cases": 520,
+  "allocation_rounding_cases": 72,
+  "balanced_order_shifts": 13,
+  "full_stress_groups": 32,
+  "exact_event_float32_values": 1024,
+  "exact_metric_values": 608,
+  "payload_chars": 6108,
+  "fallback_payload_chars": 536,
+  "event_and_metric_roundtrip_exact": true,
+  "source_lifetime_invariants": [
+    "all VMM owners created as shared_ptr before driver mutation",
+    "tensor from_blob deleter retains arena owner",
+    "context synchronized before every unmap",
+    "native destructor restores stored CUDA context and synchronizes before releasing handles",
+    "weight copies and VMM remaps only in independent prepare diagnostic",
+    "returned state is unchanged original prepare result; no experimental allocations retained"
+  ]
+}

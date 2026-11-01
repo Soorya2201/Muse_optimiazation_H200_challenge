@@ -127,3 +127,33 @@ promotion additionally needs the broader repeat/ownership checks noted above.
 
 Not launched when this protocol was written. Append terminal evidence,
 every available profile/log, capability/allocation status and decision.
+
+### V48 terminal build failure and V49 repair
+
+Check `b7b14f03bf854aa4` completed on sfo3c. All9challenge tests/30timings
+pass with the unchanged parent:1.568496321x,CI1.544968876–1.592023766,
+3079.892465us,prepare174.521776s. This is not a new implementation score.
+The independent diagnostic fails in10.452153s at build; capabilities are
+null, no byte checks or timing rows exist. Support and benefit remain unknown.
+The complete available error tail/trace and30profile tables are archived
+in `run_receipts/b7b14f03bf854aa4.json` and the decoded report
+`ILC_V48_H200_2026-10-31.json`. The original error capture retained only
+the last1500error/3000trace chars; the first compiler error cannot be recovered
+from that payload. We do not claim to have read unavailable compiler output.
+
+Both extra compiler flag lists explicitly forcedC++17. The current primary
+[PyTorch build requirements](https://github.com/pytorch/pytorch#prerequisites)
+require C++20, and our other successful PyTorch-header extensions use20.
+This is a concrete repair supported by the source and ATen tail errors,
+although the lost first error limits exact root-cause attribution.
+V49 changes both flags toC++20, uses a new extension name, and retains the
+first6000+last1500error characters on failure. No gate or math changes.
+Its canonical prefix is identical, and all520copy/72rounding/13order/
+1024event/608metric CPU checks still pass with6108char stress payload.
+V49 SHA16986615008b886d9863d163dc9416d6a9178bc68a8f47549860bc71aa2ddd3e.
+If launched, this uses the sixth of8routine BF16checks Oct31; no scored
+submission. The external drive disappeared during analysis. The clean
+internal backup was fast-forwarded fromeedd990 to3e4ad7b and the same
+terminal job re-fetched; the job was not restarted. Original local CLI
+files on the disconnected volume are unavailable at this moment; all
+remote structured profiles and complete available log_tail were read.

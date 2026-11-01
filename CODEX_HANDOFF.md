@@ -67,32 +67,24 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### LIVE Oct31 BF16 ILC V48 check b7b14f03bf854aa4
+#### Oct31 BF16 ILC V48 terminal; V49 concrete build repair ready
 
-Only BF16 active. Previousattentioncycle terminal pushed eedd990. New
-allocation-only Hopper inline compression source/protocol pushed55bfdf9.
-Read muse_bf16_proj/ILC_RESEARCH_2026-10-31.md and
-LOSSLESS_SOURCE_REVIEW_LATE_2026-10-31.md. Checkb7b14f03bf854aa4 submitted;
-pollsamehandleuntilterminal,neverrestartfromobservationtimeout. V48SHA
-ac071fac6362f2d4c93e176a93550fc7e592a09e863d50a8fc05dc150e35544b.
-Fifthof8routineBF16checks,allsubmits0,reserveintact. Canonicalprefix and
-timedkernel unchanged,prepare-onlydiag. GPUcapability/allocatorbinding
-unknown. CUDA VMM twophysicalhandles ordinary/compressible atsameVA;
-verify actualflags,storedcontext/sharedviewownership/syncbeforeremap;
-no experimentalallocation retained inreturnedstate. Ifsupported6byte
-checks,32groups8largecells/2seeds/2pads0+7MiB planned. SameVMMgraph and
-VA forN/C; actualA0/A1 control,8Williamsrounds,read256MiBflush. FP64/hot/
-parent agreement/alternatingpayload checks;1024exacteventfloatbits+608
-metric values preserved. CPU520copy/72round/13orders andfull6108char
-stress pass. V44-.75freshfactorviolatedextraonehotproperty,corrected-.5
-beforeGPU. V46full64group11860charstress rejected locally;32groups
-predeclaredbeforeGPU,no sampleddata discarded. OnlyV48submitted.
-GPUoutcomeunknown;no new scoredgain. Hardwaregrantdoesnot prove actual
-compression. Uniform8targetcellcut9.328446%neededfor3%boardproxy.
-NewNWC648b35f/ZipServ6f8a209/NVIDIA5443602:23licensedfiles328971bytes,
-allGitblobs/SHAverified,staticreviewonly. Indexed244paths/13repos/0new
-blobs;fourpublicheadsunchanged,leaderarashattarpublicownerquery0repos.
-Noagents. Preserve untrackedresearch/public/madhavan_721c627/ untouched.
+Only BF16active. Previousgoalturnrankrefresh is nooptimizationprogress;
+thisturn retrieves authoritative terminalb7b14f03bf854aa4(sfo3c): parent
+9tests/30timings pass1.568496321x,CI1.544969–1.592024,prepare174.522s.
+Independent10.452s fails build before queryingcapability,zeroedges/rows.
+SourceforcedC++17whileprimaryPyTorchrequires20;lostfirstcompilererror
+limitsattribution. Preserveoriginaltail/trace andall30remoteprofiles.
+V49 fixesbothcompilerflags20 andcapturesfirst6000+last1500errorchars.
+SHA16986615008b886d9863d163dc9416d6a9178bc68a8f47549860bc71aa2ddd3e.
+Canonicalprefix/kernel/gatesunchanged;CPU520copy/72round/13orders/1024
+event/608metricsstillpass. Thisisno newscoredgain. V48fifthof8routine
+checks;nextV49sixth,submits0. See ILC_RESEARCH_2026-10-31.md.
+ExternalvolumeDISCONNECTED duringanalysis;workingfromcleaninternalbackup
+/Users/soorya/muse_work/continuation_20261030 fastforwardeedd990→3e4ad7b.
+Re-fetchedsamejob,noGPUrestart. Remoteevidencerecovered;externalCLI files
+not currentlyavailable. PreserveexternaluntrackedMadhavan untouched.
+Noagents. NextafterBF16stopconditiondecoder. Goalactive/incomplete.
 
 
 #### Oct31 attention integer-exp V28 TERMINAL; next sequential track BF16

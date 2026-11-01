@@ -1,5 +1,6 @@
 """Offline ILC source, state isolation, copy ownership, schedule and lossless codec."""
 import ast
+import argparse
 import base64
 import collections
 import hashlib
@@ -14,7 +15,11 @@ import zlib
 from bf16_ilc_allocator import CPP,CUDA
 
 ROOT=Path(__file__).resolve().parents[1];TRACK=ROOT/'muse_bf16_proj'
-p=TRACK/'submission_v48_ilc_probe.py';s=p.read_text();parent=(TRACK/'submission.py').read_text()
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--source',default='submission_v48_ilc_probe.py')
+parser.add_argument('--output',default='ILC_PREFLIGHT_2026-10-31.json')
+args=parser.parse_args()
+p=TRACK/args.source;s=p.read_text();parent=(TRACK/'submission.py').read_text()
 assert s.startswith(parent)
 nodes=ast.parse(s).body
 names={'_ILC_CPP','_ILC_CUDA','_ILC_SPECS','_ILC_ORDERS'}
@@ -105,5 +110,5 @@ out=dict(scope='CPU source/geometry/state/codec proofs only; native allocator/dr
       'native destructor restores stored CUDA context and synchronizes before releasing handles',
       'weight copies and VMM remaps only in independent prepare diagnostic',
       'returned state is unchanged original prepare result; no experimental allocations retained'])
-(TRACK/'ILC_PREFLIGHT_2026-10-31.json').write_text(json.dumps(out,indent=2)+'\n')
+(TRACK/args.output).write_text(json.dumps(out,indent=2)+'\n')
 print('PASS',out)

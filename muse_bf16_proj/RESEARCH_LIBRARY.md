@@ -1,7 +1,9 @@
 # BF16 projection optimization research library
 
 Oct31 latest: [Hopper inline-compression allocation experiment](ILC_RESEARCH_2026-10-31.md),
-checkb7b14f03bf854aa4 pending on sfo3c, routineBF165/8. No mathematical
+V48checkb7b14f03bf854aa4 terminal on sfo3c: parent9/30pass, independent
+buildfailure/0timinggroups. V49 fixes explicitC++17→20flags; routineBF165/8
+used before a possible sixth check. No mathematical
 kernel or scored source changed. The new twin-allocation wrapper compares
 normal/compressible physical handles at one VA with the same graph; it must
 verify support/actual flags and exact bytes before timing eight large cells.

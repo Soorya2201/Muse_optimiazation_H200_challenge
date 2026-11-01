@@ -8,7 +8,7 @@ from bf16_ilc_allocator import CPP, CUDA
 ROOT=Path(__file__).resolve().parents[1];TRACK=ROOT/'muse_bf16_proj'
 parent=(TRACK/'submission.py').read_text()
 assert hashlib.sha256(parent.encode()).hexdigest()=='290a86ab852c851ad0307002a55a432a1ffce44d7ef51d529e19284193647b90'
-target=TRACK/'submission_v48_ilc_probe.py';assert not target.exists()
+target=TRACK/'submission_v49_ilc_probe.py';assert not target.exists()
 suffix='\n\n# Independent NVIDIA Hopper inline-compression allocation experiment.\n'
 suffix+='# Primary docs: https://docs.nvidia.com/cuda/hopper-tuning-guide/index.html#inline-compression\n'
 suffix+='_ILC_CPP = '+repr(CPP)+'\n_ILC_CUDA = '+repr(CUDA)+'\n'
@@ -42,11 +42,11 @@ _ilc_parent_kernel=kernel_fn
 def _ilc_build():
     global _ilc_ext
     if _ilc_ext is None:
-        _ilc_ext=load_inline(name='okc_bf16_inline_compression_v48',cpp_sources=_ILC_CPP,
+        _ilc_ext=load_inline(name='okc_bf16_inline_compression_v49',cpp_sources=_ILC_CPP,
             cuda_sources=_ILC_CUDA,
             functions=['ilc_capabilities','ilc_create','ilc_map','ilc_view','ilc_info','ilc_copy'],
-            extra_cflags=['-O2','-std=c++17'],
-            extra_cuda_cflags=['-O3','-std=c++17','-gencode=arch=compute_90a,code=sm_90a'],
+            extra_cflags=['-O2','-std=c++20'],
+            extra_cuda_cflags=['-O3','-std=c++20','-gencode=arch=compute_90a,code=sm_90a'],
             extra_ldflags=['-l:libcuda.so.1'],no_implicit_headers=True,verbose=False)
     return _ilc_ext
 
@@ -230,7 +230,10 @@ def _ilc_probe(weights,state):
         report['status']='complete';report['stage']='complete'
     except Exception as error:
         report['status']='diagnostic_failed'
-        report['error']=type(error).__name__+': '+str(error)[-1500:]
+        message=str(error)
+        report['error']=type(error).__name__+': '+message[:6000]
+        report['error_tail']=message[-1500:] if len(message)>6000 else ''
+        report['error_chars']=len(message)
         report['traceback']=_ILCTraceback.format_exc()[-3000:]
     finally:
         try:torch.cuda.synchronize()
