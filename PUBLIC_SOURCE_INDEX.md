@@ -4,7 +4,9 @@ The owner's scope includes useful public implementations from teams ranked both 
 our entry. Review happens one track at a time. Rankings are discovery context; actual per-shape
 latencies, numerical correctness, compliance, and source provenance determine adoption.
 
-## Coverage status (2026-10-30)
+## Coverage status (updated 2026-11-01)
+
+Nov1 [leader-by-track coverage and limits](research/LEADER_PUBLIC_COVERAGE_2026-11-01.md).
 
 Nov1 expanded leader research: [GodlyDonuts related GPU work](muse_prefill_layer/LEADER_RELATED_WORK_2026-11-01.md).
 Four public project repos, thirteen exact-commit source/doc hashes, public

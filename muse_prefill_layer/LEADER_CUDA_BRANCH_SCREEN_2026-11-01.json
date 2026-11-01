@@ -1,0 +1,544 @@
+{
+  "captured_utc": "2026-11-01T19:23:57.423473+00:00",
+  "scope": "Six named non-default codex branches in public GodlyDonuts/cuda-python; comparison file inventories only except complete displayed incremental-LTO diff. Branch authorship not inferred from fork ownership. Other branches not exhaustively audited.",
+  "branches": [
+    {
+      "branch": "codex/docs-pyobj-reference-fixes",
+      "url": "https://github.com/GodlyDonuts/cuda-python/tree/codex/docs-pyobj-reference-fixes",
+      "comparison_url": "https://github.com/NVIDIA/cuda-python/compare/main...GodlyDonuts:codex/docs-pyobj-reference-fixes",
+      "base_sha": "01037b16dd0848b0628b6f0500d029b13265bc62",
+      "merge_base_sha": "6b81b504f77465bacbb9f954bfd0e090fca53b61",
+      "head_sha": "c2bad6365294b6953f852660ef48de8e52d20b67",
+      "status": "diverged",
+      "ahead_by": 6,
+      "behind_by": 568,
+      "comparison_response_sha256": "a5662b47c7b4b4cee16828438a436a5b92f36d79850adb3e42ff027b3a469d8b",
+      "files": [
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cydriver.pxd.in",
+          "sha": "0d213878e062871590ff2aa0bdb23558cf4a0547",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 2,
+          "patch_sha256": "e797b3a27f2e0ac8ad228aca92dc1915d5f3a22d8b197b5739065c8646002b46"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cydriver.pyx.in",
+          "sha": "786e81b3d5c5ec12ec8ae648c81243a7310069d5",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "7b70c7b351d90a2305d996fd5ef00493bc29ae071436ea18201b53c4707367f9"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime.pxd.in",
+          "sha": "b3eb3d2e6b381ada0cbffac1d4ff69da950542bb",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "ad11335269e47999851e72503fbc4a306c4669ef0ccf099f21954d7a224c4e23"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime.pyx.in",
+          "sha": "77c29eea322adbbe98cfb28bd31e2f3761868042",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "72a9e13aae795155f66364bd2b18d59505c473379bfe7b78324e63770621bb26"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime_ptds.pxd.in",
+          "sha": "2172e481d6de5ac4726aef6b97b333950cf50aae",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "d85bd0e41ec67c80e1bed537e4bb187f965f4b5d10420d76382b5b10413941df"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime_ptds.pyx.in",
+          "sha": "c247fbd10a1489ea5a0c1b9afe5d17b9a3f3b8a2",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "d85bd0e41ec67c80e1bed537e4bb187f965f4b5d10420d76382b5b10413941df"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_internal/nvrtc.pxd",
+          "sha": "ca16b32f573cc94d72eef4d915455f27afee9996",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "7022cbdeb1788662b36b188affa5010d55d6876f4418f4d7b419130aa3b04e05"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_internal/nvrtc_linux.pyx",
+          "sha": "ff25c6d2ec7e03fffb6aa2865d1247da91943b25",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "9f1a43633e17d17c0538c4e156193994b547ec3f3b543c7cc508578d7c730d30"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_internal/nvrtc_windows.pyx",
+          "sha": "bd4e5a0e6a129793201b8d8b56cee8d4f699a1cc",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "7230f78af393ef76ca25472867e79f584891c557bb2e04605d962f4fced47174"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cydriver.pxd.in",
+          "sha": "6d11208548fde32f8221b13fcae8d728ad1558a4",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "patch_sha256": "4e8ee51b0507252ffb7b040ac7d51772e8b0a0b4ef4fb47cb568da2444859f58"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cydriver.pyx.in",
+          "sha": "1cbe83eaddb169eb072f1f7eac9397b3cae71f36",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "6329d00e81852dc474de0c870dfb44c33728f026b54c60d0b8f4c43980a361c8"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cynvrtc.pxd",
+          "sha": "cc7d92ff0cf3e73fd53e36443d9c6a3bb6e1dd36",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "23ccc6a65ac9729af521b60838b962ff9a0208acff2a82c90f89d359cfb25e76"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cynvrtc.pyx",
+          "sha": "283321850ef472c6b62ea6a273c9c929acead0fe",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "b2188ed49c9580fbfeca38309b3816e8facb6905f29a9b1a6f01481260237fc0"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime.pxd.in",
+          "sha": "c28e4fe763859f6ba969bd5b03ecf703c34557cf",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "patch_sha256": "5f27a2e83c27eb05d81ff884e715ddc393ee66b2bfa508685be2b07bf9d921f7"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime.pyx.in",
+          "sha": "af7ca89debd95352dc3c7a6ee3c5570e986e9d95",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "fb80df3f4821ccc8a6b498146460d6631bdaf99d97f64e88f6967d3815420438"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime_functions.pxi.in",
+          "sha": "4ba9abef5542418941dca1d466d5d000afc746a3",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 2,
+          "patch_sha256": "a7fa6518d8c677a9b3d24d81372281334d35a39c51ca1073db4629b3e4216eae"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime_types.pxi.in",
+          "sha": "d279dfa9e86dacdfc924273df7d497a12170c745",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "98419139a9c19579cd29cffbf00bde98a8fca09c18c6d01d1664154e9e24e695"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/driver.pxd.in",
+          "sha": "a53fc223837657b3c0fc1eac21a9f4c2cf2643e0",
+          "status": "modified",
+          "additions": 1218,
+          "deletions": 1076,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/driver.pyx.in",
+          "sha": "c5be5e1af4fd57d382fe7b1a55b2e1c265169f98",
+          "status": "modified",
+          "additions": 4922,
+          "deletions": 4820,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/nvrtc.pxd",
+          "sha": "5e46a783424e5593f607a09366ce59e63c9d170b",
+          "status": "modified",
+          "additions": 3,
+          "deletions": 3,
+          "patch_sha256": "38ed2474c4edef8c3b9454a0c776b6675980af923e883d23b549a28ee6f128b1"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/nvrtc.pyx",
+          "sha": "fd9906cd026e45838181c38c3c3184bf1588269d",
+          "status": "modified",
+          "additions": 107,
+          "deletions": 105,
+          "patch_sha256": "8795bb3f53b57f1220ebaf246fd0746fbe17fe97a9e72d96e11c16ccd22b677d"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/runtime.pxd.in",
+          "sha": "60484c79bc61d3eddeea857a69c2d8ff7009b901",
+          "status": "modified",
+          "additions": 574,
+          "deletions": 503,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/runtime.pyx.in",
+          "sha": "80aed12b5d1e60c8e87b4e9179b1c248d2fdfdf9",
+          "status": "modified",
+          "additions": 3340,
+          "deletions": 3235,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "cuda_bindings/docs/source/module/driver.rst",
+          "sha": "c36ab2513cb1422f2b05830ded2c5a56e5518024",
+          "status": "modified",
+          "additions": 239,
+          "deletions": 131,
+          "patch_sha256": "11d73f069ed600cfc911a74c489319329d65f4583a75c2a409bd05b57b5c47e0"
+        },
+        {
+          "path": "cuda_bindings/docs/source/module/nvrtc.rst",
+          "sha": "4c9977817f3b96487d07ba2c51b997a5088c2854",
+          "status": "modified",
+          "additions": 29,
+          "deletions": 12,
+          "patch_sha256": "2a91fccf3b31affb008c461c1619d871304cf97ff1ddd80328213bd7d61a2987"
+        },
+        {
+          "path": "cuda_bindings/docs/source/module/runtime.rst",
+          "sha": "bc66b21701be9332119043d37ba70903902fd63e",
+          "status": "modified",
+          "additions": 263,
+          "deletions": 173,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "branch": "codex/fix-build-docs-pixi",
+      "url": "https://github.com/GodlyDonuts/cuda-python/tree/codex/fix-build-docs-pixi",
+      "comparison_url": "https://github.com/NVIDIA/cuda-python/compare/main...GodlyDonuts:codex/fix-build-docs-pixi",
+      "base_sha": "01037b16dd0848b0628b6f0500d029b13265bc62",
+      "merge_base_sha": "8869a26b0ade73991b5ce36e9f11ecd9d9153d96",
+      "head_sha": "9bb02ed444be68856756a09620660d5a45f55629",
+      "status": "diverged",
+      "ahead_by": 1,
+      "behind_by": 605,
+      "comparison_response_sha256": "26b5c3b5f7182cade090accede4f8e8d31c1932edcabf2757ee9cf4b36b41801",
+      "files": [
+        {
+          "path": "cuda_core/docs/build_docs.sh",
+          "sha": "d5028eb94f822569370ba989df751fa4c7714d5f",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 1,
+          "patch_sha256": "2d103e987485b636c9768eea7138c54ec43a614124bfc60e8f011284768a1f47"
+        },
+        {
+          "path": "cuda_core/pixi.lock",
+          "sha": "0422371476819ee24ac88219afd5b9c2e2978736",
+          "status": "modified",
+          "additions": 11936,
+          "deletions": 9941,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "cuda_core/pixi.toml",
+          "sha": "3ec828bbb94c91f9728f1f8ccf2e54bb16a7c8e0",
+          "status": "modified",
+          "additions": 34,
+          "deletions": 1,
+          "patch_sha256": "2335aca9f19d083ca8b6f3b943a05154fd16fed65bc4c7c2a1260f6821e20c87"
+        }
+      ]
+    },
+    {
+      "branch": "codex/fix-cuda-bindings-problematic-doc-anchors",
+      "url": "https://github.com/GodlyDonuts/cuda-python/tree/codex/fix-cuda-bindings-problematic-doc-anchors",
+      "comparison_url": "https://github.com/NVIDIA/cuda-python/compare/main...GodlyDonuts:codex/fix-cuda-bindings-problematic-doc-anchors",
+      "base_sha": "01037b16dd0848b0628b6f0500d029b13265bc62",
+      "merge_base_sha": "ece27e44d4aa36a48ce3626bbcf592a8afc8614a",
+      "head_sha": "3694e06171e9b2316396377103e31ba605eaef6e",
+      "status": "diverged",
+      "ahead_by": 1,
+      "behind_by": 547,
+      "comparison_response_sha256": "372d809149760b21ff50a3fd283b2b2bf58d521c9c9acf1d2a0a1374e4b2c884",
+      "files": [
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cydriver.pxd.in",
+          "sha": "e8115cf2a3424537cf271e3823c05d3941d40017",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "39aca9908126b333cf823d78115b12f00ef06e3bb8a7de7d3a46c87d0b1c7d0f"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cydriver.pyx.in",
+          "sha": "3d8bbb07241975e0b2311eeca8f1cceddd62077f",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "5304e0b1d9e9bf5a9bdff483a019036086565eeb64b646acbe7cb25d66bb4d1b"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime.pxd.in",
+          "sha": "a0e0e8eb2356de81e086d2a65cf72790c6cbfab6",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "34e9e5774d39e5c48d3ad23d9f4c5d1732c7cf6f2a618bc912a923bb20118a7a"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime.pyx.in",
+          "sha": "e508ed1443f8be21e298a61d6814d5379cc1957a",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "ba8221647741a73b508d77f7b8ece898d3077938134a7588c1336e22910b71f0"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime_ptds.pxd.in",
+          "sha": "65b23e5e7fed3622af40da3ffd46959bb30ba425",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "0637db6de0b35b4b6f236fa7a5f7b5de80d55704a453e095ab4a7127d0526c90"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/_bindings/cyruntime_ptds.pyx.in",
+          "sha": "798f53f8d7f4cef77636e4bfd118bf569db7eb6e",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "0637db6de0b35b4b6f236fa7a5f7b5de80d55704a453e095ab4a7127d0526c90"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cydriver.pxd.in",
+          "sha": "48b18aa48e62493efe5de3dfa789e78e75cec2f2",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "5574030a7bc9401aaf86e2e2c64581e308efffbb136b86f47bb32a4983cdab7f"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cydriver.pyx.in",
+          "sha": "86b3b60ae292c5463b768a289d57711b23e8ae5e",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "c30fed9784379f9f1b21a6309fb57500abec529125045f18c7f4c8d437568730"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime.pxd.in",
+          "sha": "8e7d85ddeaf942e9e02b2a82a02197ee4047fab5",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "934cd9c4c3a85b8fbbc5998aee1f0319a10e1e1298ff059232b2ff10d174a943"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime.pyx.in",
+          "sha": "982f45c185b8bcc538899efbc500fcb4b693becf",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "ca20e3058f37bcf6813f6793109277d61e9353372f9cc6d2ecbb9ac5921af17d"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime_functions.pxi.in",
+          "sha": "05a5f27f59ccc9cedf11832d2e7ed49615c9b921",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "4f84ba34f1abe1cd194f4f66ee8e4f91732b3b4423d11397c8b9a8ea85aa8242"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/cyruntime_types.pxi.in",
+          "sha": "e33ed606c96853660394b13bff53fee8db1deac2",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1,
+          "patch_sha256": "78f3cecbfceb1cf42d283ede41741f66b101a69715ba854e9450fdf5ec706513"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/driver.pxd.in",
+          "sha": "4999986973f02981263bf26caf5ae22c272a3e57",
+          "status": "modified",
+          "additions": 37,
+          "deletions": 37,
+          "patch_sha256": "cabfa515e78d7ad2c724ca3f59279778f989482c0721b76ce0f818fba411d954"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/driver.pyx.in",
+          "sha": "0c1ce25f719aae2ce8fdc8f52a46157885648f21",
+          "status": "modified",
+          "additions": 132,
+          "deletions": 128,
+          "patch_sha256": "bef91c6bd9787345f660aed91a0a5d4fde798a2bf403b6156557dda300ce3a90"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/runtime.pxd.in",
+          "sha": "4aa61e200cd7d9d9773fb6e97f8c07e6847986bb",
+          "status": "modified",
+          "additions": 42,
+          "deletions": 37,
+          "patch_sha256": "b6106b4b5cc52c01551b633ff9685757a104a091f827856d5866e12ca686712c"
+        },
+        {
+          "path": "cuda_bindings/cuda/bindings/runtime.pyx.in",
+          "sha": "5bb20a6642cd3c951b0ff0f0a84bc8cb3af8c303",
+          "status": "modified",
+          "additions": 303,
+          "deletions": 292,
+          "patch_sha256": "8931b2512163fd8e99a512291fdd6b450a89b4d3631b147a5e39e276e3451ec8"
+        },
+        {
+          "path": "cuda_bindings/docs/source/module/driver.rst",
+          "sha": "89994ff4cb046e07cf3d02005c52bd38eeb62bbd",
+          "status": "modified",
+          "additions": 219,
+          "deletions": 95,
+          "patch_sha256": "0ee10a07d316721c8c6db7233c9e5e752f6339dcc66b455f697e44286994803e"
+        },
+        {
+          "path": "cuda_bindings/docs/source/module/runtime.rst",
+          "sha": "dcfd5eaac5fad23992b780cf6543c6e9042fdf78",
+          "status": "modified",
+          "additions": 199,
+          "deletions": 125,
+          "patch_sha256": "d86089c6cbf92608d134f05c76cd22bc348f753d41a0d2a65216401356cec6cd"
+        }
+      ]
+    },
+    {
+      "branch": "codex/mitigate-incremental-lto-cache-crash",
+      "url": "https://github.com/GodlyDonuts/cuda-python/tree/codex/mitigate-incremental-lto-cache-crash",
+      "comparison_url": "https://github.com/NVIDIA/cuda-python/compare/main...GodlyDonuts:codex/mitigate-incremental-lto-cache-crash",
+      "base_sha": "01037b16dd0848b0628b6f0500d029b13265bc62",
+      "merge_base_sha": "01037b16dd0848b0628b6f0500d029b13265bc62",
+      "head_sha": "16f89fac4202a5e7ba438877178c66742c438fd3",
+      "status": "ahead",
+      "ahead_by": 3,
+      "behind_by": 0,
+      "comparison_response_sha256": "bea31e2c8576e51fb21831e569f80d2608e62b2b2450001e59e4c043e3b31e46",
+      "files": [
+        {
+          "path": "cuda_core/cuda/core/_linker.pyi",
+          "sha": "61465612a2f697b3dd2209b14d6889f057e6f696",
+          "status": "modified",
+          "additions": 6,
+          "deletions": 1,
+          "patch_sha256": "5d0986077c35c91a5b33b1c0c054d67ec8e38bf1600998414a2a488619333d66"
+        },
+        {
+          "path": "cuda_core/cuda/core/_linker.pyx",
+          "sha": "e278f0842f23037799a6b9b997f963b8e6cc6df3",
+          "status": "modified",
+          "additions": 10,
+          "deletions": 4,
+          "patch_sha256": "b85b20ecab244db4892da22ea9514fed3ac68eff793f5886a6c1e66ec6f7b77a"
+        },
+        {
+          "path": "cuda_core/tests/test_linker.py",
+          "sha": "5b0bc0a9cbca5ecea714d558eb3b677f5d390d0d",
+          "status": "modified",
+          "additions": 20,
+          "deletions": 0,
+          "patch_sha256": "6f47459e8d13a7fea0e8c173b1d5cf56e3c4f43e6c4fbffa71ccf1684dc6d38a"
+        }
+      ]
+    },
+    {
+      "branch": "codex/woa-xrepo-public-automation",
+      "url": "https://github.com/GodlyDonuts/cuda-python/tree/codex/woa-xrepo-public-automation",
+      "comparison_url": "https://github.com/NVIDIA/cuda-python/compare/main...GodlyDonuts:codex/woa-xrepo-public-automation",
+      "base_sha": "01037b16dd0848b0628b6f0500d029b13265bc62",
+      "merge_base_sha": "608a37ddc71a37235f2476e57e15a2b3cd7259a9",
+      "head_sha": "9cd019a72c4f18230f28a46680296d9927ee5ae7",
+      "status": "diverged",
+      "ahead_by": 6,
+      "behind_by": 126,
+      "comparison_response_sha256": "ddca7c1c0de941abe9b2e2143c42f7154a1d3e6aca08bc3fc832a0f2682c2ebe",
+      "files": [
+        {
+          "path": ".github/workflows/woa-crossrepo-smoke.yml",
+          "sha": "4f2fd49f9136a7f78a40bd4e3e9bc5a4758e7eeb",
+          "status": "added",
+          "additions": 106,
+          "deletions": 0,
+          "patch_sha256": "096bc8d83f9b6fc984a036dbfdf14254c6b3e713a627bd00afbfa14c09b18b2a"
+        },
+        {
+          "path": ".github/workflows/woa-main-automation.yml",
+          "sha": "4ce1ecd46cb788290758452f241949b14598745e",
+          "status": "added",
+          "additions": 262,
+          "deletions": 0,
+          "patch_sha256": "03e672fc6e193ba7a9849bd521da191464f93d1fbd52bb6c97ad809ee02105b9"
+        },
+        {
+          "path": ".github/workflows/woa-private-dispatch.yml",
+          "sha": "e01fd107243a194cb28d711e8e74a0c11b69519a",
+          "status": "added",
+          "additions": 192,
+          "deletions": 0,
+          "patch_sha256": "5627d44c522cc3585dd94b97680a77c5f7e24f71166e07346d96524cccc566fc"
+        },
+        {
+          "path": "ci/tools/woa_xrepo_select.py",
+          "sha": "7263d8525840f5d9f7e70f6f1a6003cbb924665b",
+          "status": "added",
+          "additions": 278,
+          "deletions": 0,
+          "patch_sha256": "abdb83cad232a1af4512f78895b795ece05aecfab8ed8a6954bf9c6766109844"
+        }
+      ]
+    },
+    {
+      "branch": "codex/woa-xrepo-public-manual-broker",
+      "url": "https://github.com/GodlyDonuts/cuda-python/tree/codex/woa-xrepo-public-manual-broker",
+      "comparison_url": "https://github.com/NVIDIA/cuda-python/compare/main...GodlyDonuts:codex/woa-xrepo-public-manual-broker",
+      "base_sha": "01037b16dd0848b0628b6f0500d029b13265bc62",
+      "merge_base_sha": "608a37ddc71a37235f2476e57e15a2b3cd7259a9",
+      "head_sha": "eb4adeaee6abcfc4e80e39925dfc471903bcd64b",
+      "status": "diverged",
+      "ahead_by": 2,
+      "behind_by": 126,
+      "comparison_response_sha256": "ad1d9d4eb3ed0a6fbaee9ace5764e11557681d07d45f1c7d04ff43258b3b884f",
+      "files": [
+        {
+          "path": ".github/workflows/woa-crossrepo-smoke.yml",
+          "sha": "4f2fd49f9136a7f78a40bd4e3e9bc5a4758e7eeb",
+          "status": "added",
+          "additions": 106,
+          "deletions": 0,
+          "patch_sha256": "096bc8d83f9b6fc984a036dbfdf14254c6b3e713a627bd00afbfa14c09b18b2a"
+        },
+        {
+          "path": ".github/workflows/woa-private-dispatch.yml",
+          "sha": "e01fd107243a194cb28d711e8e74a0c11b69519a",
+          "status": "added",
+          "additions": 192,
+          "deletions": 0,
+          "patch_sha256": "5627d44c522cc3585dd94b97680a77c5f7e24f71166e07346d96524cccc566fc"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    "Three branches affect documentation/generated binding references and documentation environments; inventories reviewed, not all generated text.",
+    "Two branches affect Windows-on-Arm CI/workflow automation; inventories only.",
+    "Incremental-LTO branch 16f89fac has three changed files. Its displayed diff disables linker intermediate caching for incremental LTO below nvJitLink13.6 and tests the option matrix. Our native load_inline path does not use this Python linker; no steady-state expert gain follows.",
+    "No challenge kernel in these compared file inventories; no claim about every branch, private submission, or identity linkage."
+  ]
+}

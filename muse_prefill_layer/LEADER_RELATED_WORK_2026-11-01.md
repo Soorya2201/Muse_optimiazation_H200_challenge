@@ -41,3 +41,45 @@ per commit group, distinct stage-parity register banks, original data layout.
 Its protocol and results belong in WIDE_BATCH_RESEARCH_2026-11-01.md.
 It failed a nearby numeric fixture before timing; the result and concrete
 compiler-lifetime repair follow-up are recorded there. No speed gain is claimed.
+
+Additional branch inspection: six named `codex/` branches of the CUDA-Python
+fork were compared against NVIDIA/main, rather than stopping at the default
+branch. Three concern documentation/binding references, two concern CI,
+and the incremental-LTO branch changes linker-cache handling. Its three-file
+displayed diff was read: it disables intermediate caching for certain old
+incremental-LTO versions. Our compiled kernel does not use that Python linker.
+The other branch file inventories were screened, not all source lines.
+This is not an audit of the remaining fork branches. Exact heads, comparison
+URLs, paths and hashes are in `LEADER_CUDA_BRANCH_SCREEN_2026-11-01.json`.
+
+A related inference project from former decoder/overall leader `mpeng19`
+was also screened: [auto-inference at f28ff938](https://github.com/mpeng19/auto-inference/tree/f28ff938446fe214e7e44452a6008314e9db0589).
+Its complete README and tree, plus titles/first280 mechanism characters of
+27 idea records, were inspected. Our initial scope classification finds five
+kernel implementation ideas, eight serving/workload controls, and fourteen
+ideas that change the fixed precision, attention/cache semantics, workload
+or input reuse when applied as described. The five kernel records concern
+query-group reuse, cache layout, asynchronous movement, shape tuning and
+attention/projection fusion; several already exist in our implementation.
+The reported H100 serving-price improvement is not a Muse H200 result.
+Its full methodology, complete idea entries and generated implementation
+runs have not been audited. No harness was run or source ported.
+`RELATED_INFERENCE_IDEA_SCREEN_2026-11-01.json` stores exact provenance,
+record-index classifications, read scope and limits.
+
+The five potentially applicable idea records were subsequently read in full,
+including prerequisites and risks. Their benefit claims are hypotheses:
+uncited bandwidth percentages, generic tuning multipliers and claimed
+reliability do not constitute measurements of this parent. Our assessment:
+
+| Idea family | What still needs to be established here |
+|---|---|
+| Reuse KV across grouped query heads | Already present in our grouped tensor-core attention; a new tile must outperform the current grouping |
+| Wider/coalesced KV movement | Existing vectorized/swizzled accesses and fixed external cache format constrain changes; need measured wasted transactions |
+| Async movement/cache residency | Existing staged TMA already overlaps loads; judge flushes L2 before replay, so retained-cache assumptions do not transfer |
+| Shape tuning | Existing fixed dispatch and prior sweeps cover many cases; only a new configuration with a causal mechanism warrants another sweep |
+| Fuse attention with output projection | Cross-head dependencies, mandatory BF16 rounding and loss of tuned dense GEMM can outweigh saved traffic; no matched implementation or credible measured gain yet |
+
+The saved prefill leader/current ratio is1.2782x: matching it would require
+about27.8% more throughput, or21.8% less whole-layer time on the scored mix.
+A repeated one-percent component change cannot close that gap by itself.

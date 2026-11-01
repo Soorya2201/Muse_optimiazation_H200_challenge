@@ -1,0 +1,64 @@
+{
+  "captured_utc": "2026-11-01T19:23:57.423473+00:00",
+  "repo": "mpeng19/auto-inference",
+  "sha": "f28ff938446fe214e7e44452a6008314e9db0589",
+  "url": "https://github.com/mpeng19/auto-inference/tree/f28ff938446fe214e7e44452a6008314e9db0589",
+  "license_unestablished": true,
+  "review_scope": "Complete README and tree inventory; titles/first280 mechanism characters for all27 idea records; subsequently complete records6,7,8,13,14 including mechanism/hypothesis/risks/prerequisites. Not complete other entries, methodology, implementation or measurements audit. No source imported/executed/ported.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9236,
+      "blob": "90b8b1f9fb1739bf42e3354ff70b265720cfa83c",
+      "sha256": "1652a47020cebd6985816b567835abd38f25c3f4869baec75e8d55762e0ed3e8"
+    },
+    {
+      "path": "src/harness/ideas/seeds/book.jsonl",
+      "bytes": 66351,
+      "blob": "53ad5c5a1efcf46fdfa1b0230a5d6691b8f0346c",
+      "sha256": "f624ccaa0734945496622487daaaf2587c1ddaf6cbb5083c5f31260d725cb736"
+    }
+  ],
+  "idea_record_count": 27,
+  "our_scope_categories_by_zero_based_record_index": {
+    "kernel_implementation": [
+      6,
+      7,
+      8,
+      13,
+      14
+    ],
+    "serving_or_workload_control": [
+      0,
+      12,
+      15,
+      16,
+      23,
+      24,
+      25,
+      26
+    ],
+    "changes_fixed_semantics_precision_or_reuse": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  },
+  "findings": [
+    "Kernel-level records cover query-group reuse, coalesced cache layout, asynchronous data movement, shape tuning and attention/projection fusion. Several are already in our implementation.",
+    "Eight records primarily control request scheduling, prefix admission, device memory hierarchy or mixed-request execution; not directly applicable to a fixed standalone layer call.",
+    "Fourteen require changes to fixed semantics, precision/cache representation, selected keys, architecture, speculative workload or input-derived cross-call reuse; not portable as described.",
+    "README reports H100 end-to-end SLO/serving economics, not a Muse H200 single-layer result. No score or identity/source association inferred."
+  ]
+}
