@@ -67,6 +67,27 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Nov1 OKC maintenance: MoE experiment ready, no GPU job submitted
+
+At20:03:58UTC the read-only jobs command announced the Open Kernel Challenge
+is paused for maintenance while moving to new GPU nodes; boards remain up,
+submissions/logins resume later. The preceding problems request returned502.
+A read-only jobs retry around20:05UTC returnedAPI530. These are service
+availability failures, not failed kernels. No check POST was attempted and
+no job handle exists. V41/source/protocol are already pushed in e323392.
+Keep canonical files and budgets unchanged; when service resumes verify the
+budget before the first MoE check. Do not relogin or invent a running job.
+The internal checkout remains authoritative while the external drive is absent.
+Follow-up report muse_moe_w4a16/LEADER_RELATED_WORK_2026-11-01.md refreshes
+dolanzhao's15publicrepos,sevenselectedtechnicalprojects/19hashverifiedfiles
+andcompleteauthoredCUDA-loaderpatch;no winningkernelassociation. Broader
+research/LEADER_PUBLIC_COVERAGE_2026-11-01.md updated. No externalcodeport.
+Extractor now explicitly gates empty-route success, exact required case/arm
+sets and complete resource/FP64 vectors;22CPU synthetic parser cases pass.
+V41hash/gatesunchanged. RepeatedAPI530readsfail;noPOST/job/creditsconsumed.
+Latestread-onlyproblemsretry20:12:10UTCstill530;exactreceiptpreservedin
+research/service/OKC_AVAILABILITY_2026-11-01.json. NoGPUjoblive.
+
 #### Nov1 MoE two-resident-CTA experiment ready; no GPU job live yet
 
 PreviousgoalturnprefillV34rejectedandpushed7add65d. ThiscycleonlyMoE.

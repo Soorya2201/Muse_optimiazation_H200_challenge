@@ -142,3 +142,24 @@ First of eight routine MoE checks on Nov1, all scored submits0; owner reserve
 remains intact. Push source/protocol before launch, log the handle immediately,
 and poll the same handle through terminal state. Read every available profile,
 log and complete decoded result. No job is live before this planned launch.
+
+### Availability and offline validation follow-up
+
+Source/protocol pushed e323392. The first check has **not** been submitted:
+at20:03:58UTC the read-only jobs command announced GPU-node maintenance;
+later jobs/problems reads returned API530. No check POST, credit use or
+GPU handle exists. Recheck service/budget before launching immutable V41.
+
+The extractor now requires both complete resource vectors, all four FP64
+comparisons, the exact nearby/empty/timing case sets and all comparison arms.
+Empty-zero/fresh-nonzero success is an explicit gate; nonfinite fresh-change
+metrics reject. This enforces the original protocol, without changing source
+V41 or its performance/numeric thresholds. Twenty-two synthetic CPU cases
+validate qualification, missing/duplicate data, resource/numeric/control
+failures and retention of a partial failure. Temporary synthetic receipts
+are removed and are never recorded as OKC runs. Results:
+`TWO_CTA_EXTRACTOR_PREFLIGHT_2026-11-01.json`.
+
+The matching leader's broader public technical work is now screened in
+`LEADER_RELATED_WORK_2026-11-01.md`; no winning-source association or faster
+NVFP4 kernel was established. It does not alter the planned experiment.

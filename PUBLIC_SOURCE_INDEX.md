@@ -362,3 +362,12 @@ unchanged-parent OKC result; compare all relevant shapes; port only justified me
 check the resulting source on current inputs; submit only after the project's improvement gate.
 Preserve losing runs and partial/invalid evidence with their actual status. All judge invocations
 go into root RESULTS.md. No unmeasured gain or paper's unrelated benchmark becomes a claimed score.
+
+Nov1 related-work expansion for the matching MoE leader `dolanzhao`: refreshed
+15-owner-repository inventory and screened seven technical projects. Nineteen
+exact-commit files (99,967 bytes) fetched/hash-verified; bounded benchmark,
+profile-conversion/instrumentation source and complete authored CUDA-loader
+patch read. No winning-source association or additive NVFP4 replacement found.
+No third-party code port/execution; raw selected sources stay temporary. Exact
+links, hashes, comparison bases and limits in
+`muse_moe_w4a16/LEADER_RELATED_WORK_2026-11-01.md` and adjacent metadata.

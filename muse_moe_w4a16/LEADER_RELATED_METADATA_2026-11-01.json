@@ -1,0 +1,360 @@
+{
+  "captured_utc": "2026-11-01T20:07:35.596859+00:00",
+  "leader_rank_source": "research/leaderboards/rank_summary_20261101190307.json",
+  "leader_handle": "dolanzhao",
+  "identity_limit": "Matching public handle only; no independent identity or winning-submission association established.",
+  "public_owner_repository_count": 15,
+  "selected_repositories": [
+    {
+      "repository": "dolanzhao/fmwork",
+      "url": "https://github.com/dolanzhao/fmwork",
+      "head_commit": "5a005f09d8c2a546b3dd9394535ea02b76821434",
+      "tree_sha": "5a005f09d8c2a546b3dd9394535ea02b76821434",
+      "tree_truncated": false,
+      "blob_paths_in_tree": 5,
+      "root_license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "read_scope": "Complete README, fmwork.py and driver; LICENSE fetched as context. No module executed.",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/dolanzhao/fmwork/5a005f09d8c2a546b3dd9394535ea02b76821434/README.md",
+          "blob": "83a742a403a38db018e54454b287f0b5be9717a0",
+          "sha256": "6c9ca9265e8afef21706285cae92394b7cc9d0e5c286305b812dc4df4c359a42",
+          "bytes": 2368,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "fmwork.py",
+          "url": "https://raw.githubusercontent.com/dolanzhao/fmwork/5a005f09d8c2a546b3dd9394535ea02b76821434/fmwork.py",
+          "blob": "7ef65e4c58a47da38f64d33f56c66fb3efa35f60",
+          "sha256": "a9f526a0568e36a702ec12c478057764343cd789cd88b0d8b91ff8de84d482df",
+          "bytes": 3398,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "driver",
+          "url": "https://raw.githubusercontent.com/dolanzhao/fmwork/5a005f09d8c2a546b3dd9394535ea02b76821434/driver",
+          "blob": "a360245ee89269671cd14f6404b81004f4a7f09b",
+          "sha256": "363fbb323b4eefba5cb575df8093ca9e4c738de1f5f6179998b94e53e048766a",
+          "bytes": 3603,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/dolanzhao/fmwork/5a005f09d8c2a546b3dd9394535ea02b76821434/LICENSE",
+          "blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "status": "fetched_not_executed"
+        }
+      ],
+      "comparison": {
+        "html_url": "https://github.com/WarningRan/fmwork/compare/main...dolanzhao:5a005f09d8c2a546b3dd9394535ea02b76821434",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 98,
+        "total_commits": 0,
+        "error": null
+      },
+      "comparison_base_is_immediate_parent": {
+        "full_name": "WarningRan/fmwork",
+        "default_branch": "main"
+      },
+      "changed_paths": []
+    },
+    {
+      "repository": "dolanzhao/ezconv",
+      "url": "https://github.com/dolanzhao/ezconv",
+      "head_commit": "cd5e5fe41962b40877465e44657eb41473300d95",
+      "tree_sha": "cd5e5fe41962b40877465e44657eb41473300d95",
+      "tree_truncated": false,
+      "blob_paths_in_tree": 23,
+      "root_license": null,
+      "read_scope": "Complete main/default reader; first190 profile-reader lines and selected metric/CCT matches in meta reader. CCT reader fetched as context, not fully audited. Not a convolution kernel.",
+      "files": [
+        {
+          "path": "src/ezconv/main.cc",
+          "url": "https://raw.githubusercontent.com/dolanzhao/ezconv/cd5e5fe41962b40877465e44657eb41473300d95/src/ezconv/main.cc",
+          "blob": "5cd2a7ec88c7a123034fe389dffee6c6c2372ebd",
+          "sha256": "b3e22c4f3db632d22280b1a757d0db06ce2333d6f00f61d8afbdd7be86981b80",
+          "bytes": 1323,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/ezconv/default_reader.cc",
+          "url": "https://raw.githubusercontent.com/dolanzhao/ezconv/cd5e5fe41962b40877465e44657eb41473300d95/src/ezconv/default_reader.cc",
+          "blob": "fc44a987d9cdd8fd34f845e56bf76b7c6237f42c",
+          "sha256": "32ef90b1241ae2593fbc749e3b1a77f65750a3a17a0269a7a2a23ba457254fab",
+          "bytes": 2495,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/ezconv/meta_reader.cc",
+          "url": "https://raw.githubusercontent.com/dolanzhao/ezconv/cd5e5fe41962b40877465e44657eb41473300d95/src/ezconv/meta_reader.cc",
+          "blob": "58c3c25eadc6fbdccc7dccddb0529b0d06bb6a0a",
+          "sha256": "e90ed292e3eafa445a42a4166fe4e1deafc229989f8bc954c4f40a2ca707a1a6",
+          "bytes": 38668,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/ezconv/profile_reader.cc",
+          "url": "https://raw.githubusercontent.com/dolanzhao/ezconv/cd5e5fe41962b40877465e44657eb41473300d95/src/ezconv/profile_reader.cc",
+          "blob": "5ed3a77bde6824a4e67b23a5f7e96c49c12a663e",
+          "sha256": "5e909ead447ed1223e68d4742747eb3eb2a2b0a988eaae27135612e730cf4a14",
+          "bytes": 7072,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/ezconv/cct_reader.cc",
+          "url": "https://raw.githubusercontent.com/dolanzhao/ezconv/cd5e5fe41962b40877465e44657eb41473300d95/src/ezconv/cct_reader.cc",
+          "blob": "07fe96c0cb7b9dff1cdc14782693fc7c5a3e0ebe",
+          "sha256": "e49737173a15cb894de2af90078aac631f17f5eb159ab889f8e96c92ee8fcda9",
+          "bytes": 10726,
+          "status": "fetched_not_executed"
+        }
+      ]
+    },
+    {
+      "repository": "dolanzhao/easyview-artifact",
+      "url": "https://github.com/dolanzhao/easyview-artifact",
+      "head_commit": "3a9e329831e6bafbb9e3fc80dfb60496ff9db696",
+      "tree_sha": "3a9e329831e6bafbb9e3fc80dfb60496ff9db696",
+      "tree_truncated": false,
+      "blob_paths_in_tree": 17,
+      "root_license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "read_scope": "Tree inventory and README fetched. Large profile archives and binary extension not opened or executed.",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/dolanzhao/easyview-artifact/3a9e329831e6bafbb9e3fc80dfb60496ff9db696/README.md",
+          "blob": "e0855ee9ff74f9261ff38004d75874bbe47f1f0f",
+          "sha256": "51638cef2723443efa62ed1793b435cc753bfa0a78ca1cf9b739b674aa4e2db9",
+          "bytes": 19,
+          "status": "fetched_not_executed"
+        }
+      ]
+    },
+    {
+      "repository": "dolanzhao/dead_code",
+      "url": "https://github.com/dolanzhao/dead_code",
+      "head_commit": "bf97d1668bf081ed2a7d778a050418654c9b35bf",
+      "tree_sha": "bf97d1668bf081ed2a7d778a050418654c9b35bf",
+      "tree_truncated": false,
+      "blob_paths_in_tree": 46,
+      "root_license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "read_scope": "Complete main.cpp and dead_code_analysis.cpp; tree inventory, minimal README fetched.",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/dolanzhao/dead_code/bf97d1668bf081ed2a7d778a050418654c9b35bf/README.md",
+          "blob": "7656bcc86abae197ace9b7f26aa209a21e71fab2",
+          "sha256": "a63e888c152f3aa4ab4c70cf4958f615f373516dc57f951ec467cb68475d6091",
+          "bytes": 11,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/main.cpp",
+          "url": "https://raw.githubusercontent.com/dolanzhao/dead_code/bf97d1668bf081ed2a7d778a050418654c9b35bf/src/main.cpp",
+          "blob": "b7006a885187e3b07a60c6a7939570c147024182",
+          "sha256": "240985aa86a7958b0bb46faccf02932fc1b31fdea0deb707ae67e75fd65c7c51",
+          "bytes": 1432,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/dead_code_analysis.cpp",
+          "url": "https://raw.githubusercontent.com/dolanzhao/dead_code/bf97d1668bf081ed2a7d778a050418654c9b35bf/src/dead_code_analysis.cpp",
+          "blob": "d6e12d3a0651fd5f33b024d07b8e7f5adc3b20e8",
+          "sha256": "9699f48d84425ae6239d4a096d21826fd0f4bacb51b90b7e9a2b6be83321e37d",
+          "bytes": 775,
+          "status": "fetched_not_executed"
+        }
+      ]
+    },
+    {
+      "repository": "dolanzhao/DrCCTProf_SC20",
+      "url": "https://github.com/dolanzhao/DrCCTProf_SC20",
+      "head_commit": "31fb67512bfb8951bfe8f535b3cf12e2bdb366f7",
+      "tree_sha": "31fb67512bfb8951bfe8f535b3cf12e2bdb366f7",
+      "tree_truncated": false,
+      "blob_paths_in_tree": 83,
+      "root_license": null,
+      "read_scope": "Complete README and three selected instrumentation clients; core library and remaining clients not fully audited.",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/dolanzhao/DrCCTProf_SC20/31fb67512bfb8951bfe8f535b3cf12e2bdb366f7/README.md",
+          "blob": "ce144eb4405ebcde179bb42ffde7cbe0f9ea42e4",
+          "sha256": "6482f2195ca6e4d25c6ff9185a9ee8ea0a7033bf4664af897da6c380e05a76ee",
+          "bytes": 601,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/clients/drcctlib_memory_only/drcctlib_memory_only.cpp",
+          "url": "https://raw.githubusercontent.com/dolanzhao/DrCCTProf_SC20/31fb67512bfb8951bfe8f535b3cf12e2bdb366f7/src/clients/drcctlib_memory_only/drcctlib_memory_only.cpp",
+          "blob": "2f9ce570ed5e51d0c2b1a2ada5f7d9a79cead8c7",
+          "sha256": "e054a55efdce8cc33f069911defd0249f14e5b574469f985d49861f9359bc7f2",
+          "bytes": 3416,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/clients/drcctlib_memory_only_clean_call/drcctlib_memory_only_clean_call.cpp",
+          "url": "https://raw.githubusercontent.com/dolanzhao/DrCCTProf_SC20/31fb67512bfb8951bfe8f535b3cf12e2bdb366f7/src/clients/drcctlib_memory_only_clean_call/drcctlib_memory_only_clean_call.cpp",
+          "blob": "d3571daaa27ffc1a717117640f35beb7674a518f",
+          "sha256": "fed090e1247fcabbd351d5fcc71d896feb87253930384ba6dd768fa3fd3c9291",
+          "bytes": 6688,
+          "status": "fetched_not_executed"
+        },
+        {
+          "path": "src/clients/drcctlib_all_instr_cct_with_data_centric/drcctlib_all_instr_cct_with_data_centric.cpp",
+          "url": "https://raw.githubusercontent.com/dolanzhao/DrCCTProf_SC20/31fb67512bfb8951bfe8f535b3cf12e2bdb366f7/src/clients/drcctlib_all_instr_cct_with_data_centric/drcctlib_all_instr_cct_with_data_centric.cpp",
+          "blob": "11e49d84d5253678b8c5c30762d3aefcda05e673",
+          "sha256": "e6a82746d9cca4c925643d6660eb2623f7d5761de5c9ca8a7d984fec69d89aa5",
+          "bytes": 2527,
+          "status": "fetched_not_executed"
+        }
+      ]
+    },
+    {
+      "repository": "dolanzhao/hpctoolkit",
+      "url": "https://github.com/dolanzhao/hpctoolkit",
+      "head_commit": "05e92b18c80dbcbb5843eef436a063de8c04e55a",
+      "tree_sha": "05e92b18c80dbcbb5843eef436a063de8c04e55a",
+      "tree_truncated": false,
+      "blob_paths_in_tree": 1471,
+      "root_license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      },
+      "read_scope": "Complete README and complete five-file displayed authored loader-path commit patch; default comparison metadata. No full profiler audit.",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/dolanzhao/hpctoolkit/05e92b18c80dbcbb5843eef436a063de8c04e55a/README.md",
+          "blob": "0c840c568dd7ccd195def7c13dcdd7a360b1aeb6",
+          "sha256": "13383843e5f91468f7614f15c574ccd12b200eeeab8146c11ee1bbac84065f26",
+          "bytes": 2041,
+          "status": "fetched_not_executed"
+        }
+      ],
+      "comparison": {
+        "html_url": "https://github.com/Deep-Learning-Profiling-Tools/hpctoolkit/compare/develop...dolanzhao:05e92b18c80dbcbb5843eef436a063de8c04e55a",
+        "status": "diverged",
+        "ahead_by": 2,
+        "behind_by": 567,
+        "total_commits": 2,
+        "error": null
+      },
+      "comparison_base_is_immediate_parent": {
+        "full_name": "Deep-Learning-Profiling-Tools/hpctoolkit",
+        "default_branch": "develop"
+      },
+      "changed_paths": []
+    },
+    {
+      "repository": "dolanzhao/xla",
+      "url": "https://github.com/dolanzhao/xla",
+      "head_commit": "dff319a8505125bb9b2bd7bd44729527fb4a349e",
+      "tree_sha": "dff319a8505125bb9b2bd7bd44729527fb4a349e",
+      "tree_truncated": false,
+      "blob_paths_in_tree": 4770,
+      "root_license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "read_scope": "Complete README and default comparison metadata only; no full compiler/source audit.",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/dolanzhao/xla/dff319a8505125bb9b2bd7bd44729527fb4a349e/README.md",
+          "blob": "65e8b8f2211c46a3147dee6fc0e2bf9678634557",
+          "sha256": "2f454f952e0aa11dbbe449b1fae38b61ed9d454361dea112681242692e282a9c",
+          "bytes": 1447,
+          "status": "fetched_not_executed"
+        }
+      ],
+      "comparison": {
+        "html_url": "https://github.com/mark14wu/xla/compare/main...dolanzhao:dff319a8505125bb9b2bd7bd44729527fb4a349e",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 1,
+        "total_commits": 0,
+        "error": null
+      },
+      "comparison_base_is_immediate_parent": {
+        "full_name": "mark14wu/xla",
+        "default_branch": "main"
+      },
+      "changed_paths": []
+    }
+  ],
+  "authored_commit": {
+    "sha": "3ea475dd3f84b557a41f4a0b0e5ebaa0c0931989",
+    "url": "https://github.com/dolanzhao/hpctoolkit/commit/3ea475dd3f84b557a41f4a0b0e5ebaa0c0931989",
+    "message": "add manual spec options for libcuda, libcupti, and CUDA path",
+    "files": [
+      {
+        "path": "src/tool/hpcrun/gpu/nvidia/cuda-api.c",
+        "changes": 58,
+        "patch_sha256": "64107a06d6b5cfea9a373eba2eedaefae1f6d7d6dabd40a43a99d70b3bbf35de",
+        "displayed_patch_read": true
+      },
+      {
+        "path": "src/tool/hpcrun/gpu/nvidia/cuda-api.h",
+        "changes": 3,
+        "patch_sha256": "efb5baa3d3c017fbf2a06a171ba4727aec412a50239e9d497e82b14b24a65691",
+        "displayed_patch_read": true
+      },
+      {
+        "path": "src/tool/hpcrun/gpu/nvidia/cupti-api.c",
+        "changes": 99,
+        "patch_sha256": "aaf950db5ddbc4d40f9573be8f20157787791019759f0a603232184c5e1d4935",
+        "displayed_patch_read": true
+      },
+      {
+        "path": "src/tool/hpcrun/gpu/nvidia/cupti-api.h",
+        "changes": 3,
+        "patch_sha256": "9f0f1df5812938fd3d9cdf24d06889160d1dea9a6bf2fb2bc0255bae42244bed",
+        "displayed_patch_read": true
+      },
+      {
+        "path": "src/tool/hpcrun/sample-sources/nvidia.c",
+        "changes": 35,
+        "patch_sha256": "bc6ec39e8c5f8bff01d4e97374688ec164a2a51313b8eb0feae08a14817228a3",
+        "displayed_patch_read": true
+      }
+    ]
+  },
+  "fetched_files": 19,
+  "fetched_bytes": 99967,
+  "source_storage": "Exact selected files in temporary local research directory only; Git retains our summary, URLs and hashes. No code port or downloaded module execution.",
+  "web_queries": [
+    "\"dolanzhao\" kernel github profiling",
+    "\"dolanzhao\" GPU blog",
+    "\"dolanzhao\" MoE"
+  ],
+  "web_limit": "Search returned public community-board references, but no verified leader-authored GPU optimization blog or winning source. Not exhaustive and not absence proof."
+}

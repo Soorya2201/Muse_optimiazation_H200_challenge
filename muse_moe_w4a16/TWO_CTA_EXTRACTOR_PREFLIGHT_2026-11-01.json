@@ -1,0 +1,116 @@
+{
+  "scope": "CPU synthetic parser validation only; no GPU receipt, timing or performance evidence.",
+  "cases": [
+    {
+      "case": "complete_synthetic_positive_control",
+      "expected": "qualifies",
+      "passed": true
+    },
+    {
+      "case": "missing_resources",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "missing_fp64",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "duplicate_nearby",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "duplicate_empty",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "missing_arm",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "short_resources",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "empty_nonzero",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "empty_stale_replay",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "insufficient_residency",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "spill",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "occupancy_api_error",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "numeric_error",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "nonfinite_error",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "nonfinite_change",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "unchanged_input_output",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "fp64_error",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "aa_drift",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "matched_control_drift",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "case": "zero_event",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "duplicate_timing_group",
+      "expected": "malformed",
+      "passed": true
+    },
+    {
+      "case": "partial_failure",
+      "expected": "partial",
+      "passed": true
+    }
+  ],
+  "passed": 22
+}
