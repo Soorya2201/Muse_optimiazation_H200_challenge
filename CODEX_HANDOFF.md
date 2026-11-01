@@ -67,6 +67,11 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### LIVE Nov1 prefill wide RS batch V33 check cfc76057d5d641b7
+
+Submitted2026-11-01T19:05:37.528498+00:00,firstprefillroutinecheckNov1. Pollsamehandle
+untilterminal,noobservationtimeoutrestart. Source/protocolpushed688d729.
+
 #### Nov1 prefill wide RS batch V33 ready for first H200 check
 
 Previousgoalturnmadeprogress(BF16ILCnegative+decodercpuscreen). Onlyprefill
