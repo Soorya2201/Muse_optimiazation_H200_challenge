@@ -5,6 +5,13 @@ applicability and measured failures; it is not a promise that every idea
 will improve H200 performance. Every port must preserve exact NVFP4 weights,
 BF16 activations, fresh-input CUDA graphs and per-route output norm.
 
+Nov1 active: [two resident WGS blocks](TWO_CTA_RESEARCH_2026-11-01.md).
+A new128-output-row/two-WG topology targets two independent CTA pipelines/SM.
+CPU mappings and full internal-linkage compiler resources pass after concrete
+spill repairs. Actual linked H200 occupancy, numerics and runtime remain unknown.
+Fresh public M22 and MIT H200 study source review/limits are recorded there.
+No candidate gain or promotion; all previous measured micro-families stay closed.
+
 | Mechanism | Current evidence and decision |
 |---|---|
 | Persistent route/GEMM1/SwiGLU/GEMM2/norm/sum, RS-WGMMA and TMA | Already in parent; no new adoption claim. |

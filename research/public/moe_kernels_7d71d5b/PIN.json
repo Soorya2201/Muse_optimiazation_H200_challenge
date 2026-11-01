@@ -1,0 +1,93 @@
+{
+  "repo": "harshithkantamneni/moe-kernels",
+  "commit": "7d71d5bbafae8cebf737c06f7198ccb80c608ef2",
+  "captured_utc": "2026-11-01T19:32:07.280993+00:00",
+  "license": "MIT, LICENSE retained",
+  "scope": "Selected original source/docs retained unchanged for static review; no imported/executed third-party code, no winning-challenge association.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1076,
+      "blob": "7358859767a8906f55597f5133208f5e14562edc",
+      "sha256": "c64d86a3da99033cf6d783e3426ee25fc1c1a09f11e337beb2ad7e5f199691ee",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7951,
+      "blob": "bffc345251889f11dd8e277f07f0a4aff9dee144",
+      "sha256": "1146b3416ffee60b5e905955ea820892a066db23bcdcac813d5d6044c6020462",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/README.md"
+    },
+    {
+      "path": "docs/STUDY.md",
+      "bytes": 28239,
+      "blob": "9c2e5fe1ab124557d17d1a788c316c3bfa2b1ebb",
+      "sha256": "a45c3102a3641459e453a3188ec66c431f0a547f4a3653191d5d71cc87e3eb2b",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/docs/STUDY.md"
+    },
+    {
+      "path": "docs/KERNEL_INTEGRATION.md",
+      "bytes": 15186,
+      "blob": "b1baa9401f002ac0c0406e6f686e0d7ec339c04d",
+      "sha256": "6e28dbde9ffb0a0bc1f004ca5cdbbb06efa9da0a9563f64da3318a2e358def76",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/docs/KERNEL_INTEGRATION.md"
+    },
+    {
+      "path": "moe/kernels/TEMPLATE.md",
+      "bytes": 2926,
+      "blob": "75ece6fd76bf7c000678c83830e0eafbbca66f6c",
+      "sha256": "8380f31e7969a0b3c0ea7b6ae4bc76b8a656b152f0eceb956d0c499cde2ad9a3",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/moe/kernels/TEMPLATE.md"
+    },
+    {
+      "path": "moe/kernels/__init__.py",
+      "bytes": 1676,
+      "blob": "0e6d7be90c2603796f685d2b204738afbc3009fc",
+      "sha256": "cdaeb445485a2bc08964c860b29956c02f8566a5c4ab48192bb47ebd462e2a42",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/moe/kernels/__init__.py"
+    },
+    {
+      "path": "moe/baselines/torch_grouped_mm.py",
+      "bytes": 14750,
+      "blob": "784ef9c242d3e6434fb0c035c99c0dd38d490084",
+      "sha256": "9cd3d064504c08af1a4c3ffb31783e371b82814588114ca7a4d57a827e5c7f7b",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/moe/baselines/torch_grouped_mm.py"
+    },
+    {
+      "path": "moe/baselines/_framework_config.py",
+      "bytes": 6540,
+      "blob": "ec3b92a07f5261e66aea5b31c518e80601cb63e7",
+      "sha256": "b912cdf503a0871ab01ad418edb273118b7b7b685e2e67c2c040c98f4deab3d7",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/moe/baselines/_framework_config.py"
+    },
+    {
+      "path": "moe/bench/ridge.py",
+      "bytes": 8674,
+      "blob": "e3dec9b0772e18a147027de213c1b9ccc802fb82",
+      "sha256": "c43be354653d7a2f731b69990fd4f34eba824a9809fd1aeab5a10e3da6dd6dd6",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/moe/bench/ridge.py"
+    },
+    {
+      "path": "moe/bench/published.py",
+      "bytes": 3035,
+      "blob": "23fe15fa223b87a93867ef3ff38b9a4034bf19dc",
+      "sha256": "9ab8ba1a5961640af85fdc604d6d136b0f8516873556f3b7e4389d6becb6c25e",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/moe/bench/published.py"
+    },
+    {
+      "path": "results/published/2026-08-28-nvidia_h200-h200-fp8-refixed/SUMMARY.md",
+      "bytes": 5872,
+      "blob": "75ca4973a0c36af0929edbd2892f84cef7fb2969",
+      "sha256": "4b28cd37b8b3bf31c93b79187dd37f265f0fbd2fd838af276f7a4a7c683f1bee",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/results/published/2026-08-28-nvidia_h200-h200-fp8-refixed/SUMMARY.md"
+    },
+    {
+      "path": "results/published/2026-08-28-nvidia_h200-h200-fp8-three-kernel/SUPERSEDED",
+      "bytes": 901,
+      "blob": "f2ba8601f98fbb9dc5e33e1a392ee6a1a16ed265",
+      "sha256": "7035b69b24d77b0c074d1636ede31cfbba78b890c344d126ce2c192ef28a1483",
+      "url": "https://github.com/harshithkantamneni/moe-kernels/blob/7d71d5bbafae8cebf737c06f7198ccb80c608ef2/results/published/2026-08-28-nvidia_h200-h200-fp8-three-kernel/SUPERSEDED"
+    }
+  ]
+}

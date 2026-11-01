@@ -1,0 +1,15 @@
+{
+  "scope": "CPU-only exact builder/codec/oracle validation; no CUDA arithmetic, residency or runtime proof.",
+  "source_sha256": "867444e3f7292f79368556a39ab66c49e7819eabd689d2efae0cd339493055cc",
+  "canonical_prefix_unchanged": true,
+  "exact_host_build_calls": 2,
+  "event_bits": 768,
+  "exact_metric_frames": 312,
+  "wire_chars": 7760,
+  "failure_wire_chars": 11776,
+  "cpu_fp64_oracle_cases": 6,
+  "valid_unique_route_fixtures": 9,
+  "max_cpu_oracle_absolute_error": 8.881784197001252e-16,
+  "pre_gpu_rejected_v37": "Exact wire CPU execution raises KeyError from popping the event field inside a four-arm comprehension; V38 pops once before iteration. No native change.",
+  "pre_gpu_rejected_v36": "Float8 advanced indexing precedes conversion; CPU reproduces NotImplementedError. V37 converts the scale tensor before indexing; native unchanged. CUDA support was not assumed from CPU failure."
+}

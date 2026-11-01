@@ -1,0 +1,211 @@
+"""Where a model crosses from memory-bound to compute-bound, predicted.
+
+This exists so a new device or a new dtype is a TEST rather than another data
+dump. The number is produced before the sweep runs, and the sweep can falsify it.
+
+The derivation, which is claim C2 of the study (see docs/STUDY.md). Every weight
+element is used exactly once per row, contributing 2 FLOPs, and costs `b` bytes
+read once. For an expert holding `N` weight elements across any number of layers
+and receiving `R` rows:
+
+    FLOPs = 2 N R        weight bytes = N b        AI = 2NR / Nb = 2R / b
+
+`N` is a SUM over layers and cancels, so layer count and matrix shapes are
+irrelevant: only rows-per-expert and bytes-per-element matter. Once routing has
+saturated and every expert is active, `R = T k / E`, giving
+
+    AI = 2 T k / (E b)          AI = ridge  at  T = ridge b E / (2k)
+
+Two predictions fall straight out, and both are cheap to falsify:
+
+  * halving `b` (bf16 -> fp8) must HALVE the crossing
+  * a card with a lower ridge must have a LOWER crossing, proportionally
+
+Agrees with Yun et al., arXiv:2507.15465, whose `B_MoE = RP_acc * (n_e/n_k)` is
+this relation for bf16. Their H200 SXM5 ridge is 206.15 Op/B, datasheet-derived;
+this repo measures 160.4 on the actual card, because achieved bandwidth reaches
+91.1% of spec while achieved bf16 reaches only 70.9%.
+"""
+from __future__ import annotations
+
+import math
+
+from ..spec import MODEL_CONFIGS, dtype_bytes
+
+#: Fraction of experts that must be active before `R = T k / E` is a fair
+#: description. Below saturation some experts are untouched and the active ones
+#: hold more rows than the ratio suggests.
+SATURATION_FRACTION = 0.99
+
+
+def _cfg(model: str):
+    """KeyError for an unknown model, rather than a plausible number."""
+    return MODEL_CONFIGS[model]
+
+
+def rows_per_expert(model: str, num_tokens: int) -> float:
+    """`T k / E`, the saturated ratio. Valid above `saturation_batch`."""
+    cfg = _cfg(model)
+    return num_tokens * cfg.top_k / cfg.num_experts
+
+
+def saturation_batch(model: str, fraction: float = SATURATION_FRACTION) -> float:
+    """Tokens needed before `fraction` of experts are active.
+
+    Coupon collector: with `k` of `E` experts drawn per token, an expert is
+    missed by one token with probability `1 - k/E`, so the expected active count
+    is `E (1 - (1 - k/E)^T)`. Solving for the fraction gives the T below which
+    the saturated ratio overstates how spread out the rows are.
+    """
+    if not 0.0 < fraction < 1.0:
+        raise ValueError("fraction must be in (0, 1)")
+    cfg = _cfg(model)
+    miss = 1.0 - cfg.top_k / cfg.num_experts
+    if miss <= 0.0:          # every token touches every expert
+        return 1.0
+    return math.log(1.0 - fraction) / math.log(miss)
+
+
+#: FLOP rate relative to bf16 on the same silicon. Hopper and Blackwell run fp8
+#: tensor cores at twice the bf16 rate and fp32 at half, so a format changes
+#: BOTH sides of the roofline: the bytes it moves and the peak it can reach.
+_FLOP_RATE_VS_BF16 = {
+    "fp32": 0.5,
+    "fp16": 1.0,
+    "bf16": 1.0,
+    "fp8_e4m3": 2.0,
+    "fp8_e5m2": 2.0,
+}
+
+
+def ridge_for_dtype(ridge_bf16: float, dtype: str) -> float:
+    """The ridge a given format sees, from the measured bf16 one.
+
+    THE CORRECTION THIS FUNCTION EXISTS FOR. The fp8 sweep was launched to test
+    a "2x crossing shift": halve the weight bytes, halve the crossing batch.
+    That came from holding the ridge at its bf16 value while changing the
+    format, which is not what C2 says.
+
+        crossing where AI = ridge,  AI = 2R/b,  ridge = peak_FLOPS / bandwidth
+        fp8 halves b AND doubles peak_FLOPS
+        fp8:   2R/1 = 2*ridge_bf16  ->  R = ridge_bf16
+        bf16:  2R/2 =   ridge_bf16  ->  R = ridge_bf16
+
+    The same rows per expert, so the same crossing. Both sides of the roofline
+    scale together and the intersection does not move. The H200 sweep of
+    2026-08-28 agrees: deepseek-v2-lite crossed at 922 tokens in bf16 and 976 in
+    fp8, against the naive prediction of 1710 and 855.
+    """
+    try:
+        return ridge_bf16 * _FLOP_RATE_VS_BF16[dtype]
+    except KeyError:
+        raise ValueError(
+            f"no FLOP rate known for {dtype!r}; known: "
+            f"{sorted(_FLOP_RATE_VS_BF16)}. Defaulting to bf16 would silently "
+            "predict the wrong crossing.") from None
+
+
+def crossing_batch(model: str, ridge: float, dtype: str = "bf16") -> float:
+    """Batch size at which this model reaches `ridge` FLOP/byte.
+
+    `ridge` is the device's compute-over-bandwidth crossover, in FLOP/byte.
+    Prefer a MEASURED ridge over a datasheet one: on the H200 the datasheet says
+    206.15 and the card measures 160.4, which moves this answer by 25%.
+    """
+    if ridge <= 0:
+        raise ValueError("ridge must be positive FLOP/byte")
+    cfg = _cfg(model)
+    b = dtype_bytes(dtype)          # ValueError for an unknown dtype
+    return ridge * b * cfg.num_experts / (2.0 * cfg.top_k)
+
+
+def is_compute_bound(model: str, num_tokens: int, ridge: float,
+                     dtype: str = "bf16") -> bool:
+    """Which side of the ridge a batch sits on, by the saturated model."""
+    return num_tokens > crossing_batch(model, ridge, dtype)
+
+
+def arithmetic_intensity(model: str, num_tokens: int, dtype: str = "bf16") -> float:
+    """`2R/b`. Compare against a measured `arith_intensity_compulsory` column.
+
+    Expect the measured value to fall BELOW this at large batch: activations
+    enter the denominator once weights stop dominating, which is why mixtral
+    (F/H = 3.50, very wide intermediates) deviates most and deepseek-v3
+    (F/H = 0.29) least.
+    """
+    return 2.0 * rows_per_expert(model, num_tokens) / dtype_bytes(dtype)
+
+
+#: Widest batch the solver will consider. Beyond this a "crossing" is not a
+#: statement about any MoE deployment.
+_MAX_SEARCH_TOKENS = 1 << 22
+
+
+def crossing_batch_full(model: str, ridge: float, dtype: str = "bf16"
+                        ) -> float | None:
+    """The crossing solved from the FULL byte model, not from `2R/b`.
+
+    THE INCONSISTENCY THIS CLOSES. Every CSV row scores itself with
+    `arith_intensity_compulsory`, which `bytes_model` computes from weights AND
+    activations. Every prediction came from `crossing_batch`, which solves the
+    weight-dominated limit. Two different models on the two sides of the same
+    comparison.
+
+    `2R/b` is a limit rather than an error: for `C[M,N] = A[M,K] B[K,N]`,
+
+        AI = 2MNK / ((MK + KN + MN) b)   ->   2M/b   when KN dominates
+
+    which is exact to under 2% at decode and drifts as the batch grows. Measured
+    against the byte model it overstates AI by ~4% for mixtral at its crossing
+    and ~7% for deepseek-v3, and overstating AI understates the batch needed to
+    reach the ridge. So every predicted crossing was systematically low, and the
+    error is larger for wide experts, whose activations are a bigger share.
+
+    Bisection rather than algebra: AI is monotonic in T but the byte model is
+    not a closed form worth inverting, and a solver cannot drift out of step
+    with it the way a second expression would.
+
+    None when no batch under `_MAX_SEARCH_TOKENS` reaches the ridge, rather than
+    a number off the end of any real deployment.
+    """
+    if ridge <= 0:
+        raise ValueError("ridge must be positive FLOP/byte")
+    cfg = _cfg(model)
+
+    def ai(tokens: int) -> float:
+        from ..spec import BenchSpec, RoutingSpec
+        from .bytes_model import grouped_gemm_only_cost
+        spec = BenchSpec(cfg, num_tokens=max(1, tokens), dtype=dtype,
+                         routing=RoutingSpec("uniform"), seed=0)
+        return grouped_gemm_only_cost(spec, cfg.num_experts).arithmetic_intensity
+
+    if ai(_MAX_SEARCH_TOKENS) < ridge:
+        return None
+    lo, hi = 1, _MAX_SEARCH_TOKENS
+    for _ in range(60):
+        mid = (lo + hi) / 2.0
+        if ai(int(mid)) < ridge:
+            lo = mid
+        else:
+            hi = mid
+        if hi - lo < 0.5:
+            break
+    return (lo + hi) / 2.0
+
+
+def predict_table(ridge: float, dtype: str = "bf16",
+                  models: tuple[str, ...] | None = None) -> list[dict]:
+    """One row per model: what to expect from a sweep on this device."""
+    names = models or tuple(m for m in MODEL_CONFIGS if m != "toy")
+    out = []
+    for name in names:
+        cfg = MODEL_CONFIGS[name]
+        out.append({
+            "model": name,
+            "experts": cfg.num_experts,
+            "top_k": cfg.top_k,
+            "dilution_E_over_k": cfg.num_experts / cfg.top_k,
+            "saturates_at": saturation_batch(name),
+            "crossing": crossing_batch(name, ridge, dtype),
+        })
+    return out

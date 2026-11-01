@@ -1,0 +1,54 @@
+{
+  "scope": "CPU indexing/coverage/partition/resource arithmetic only; not GPU concurrency, numerical validation or performance.",
+  "parent_sha256": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",
+  "native_sha256": "5090fcdc7944f1d4067ac35232e6c874454b0adf408f9f964a260f59a403502d",
+  "weight_half_payload_cases": 98304,
+  "gather_exact_row_maps": 528,
+  "partition_cases": 884,
+  "maximum_sampled_prefix_product": 2455461888,
+  "routing_independent_u32_product_bound": 2733637632,
+  "readiness_credits_per_b_stage": 8,
+  "all4096_output_columns_covered": true,
+  "weight_pointers_layout_precision_unchanged": true,
+  "scratch_sizes_and_x_b_fixup_offsets_unchanged": true,
+  "scratch_limits": {
+    "max_jobs": 136,
+    "max_padded_rows": 3296,
+    "parent_xrows_offset": 3776,
+    "fixup_slots": 320,
+    "grid": 264
+  },
+  "topology": {
+    "parent_consumer_warpgroups": 4,
+    "new_consumer_warpgroups": 2,
+    "consumer_threads": 256,
+    "producer_threads": 64,
+    "threads": 320,
+    "weight_stage_bytes": 18432,
+    "weight_slots": 3,
+    "activation_slots": 2,
+    "max_tokens_per_job": 32,
+    "desired_resident_blocks": 2
+  },
+  "conditional_board_models": [
+    {
+      "assumed_time_cut_on_m32_128_256": 0.05,
+      "other_three_loads_unchanged_proxy": 1.0259783520851542
+    },
+    {
+      "assumed_time_cut_on_m32_128_256": 0.1,
+      "other_three_loads_unchanged_proxy": 1.0540925533894598
+    },
+    {
+      "assumed_time_cut_on_m32_128_256": 0.15,
+      "other_three_loads_unchanged_proxy": 1.0846522890932808
+    }
+  ],
+  "limitations": [
+    "FT32 may reread weights for experts with>32tokens; logical traffic increases are not measured HBM traffic because concurrent chunks can share L2.",
+    "Both linked BIG variants must report at least2active blocks/SM, no increased local allocation and sufficient static/register/shared resources before any264-block launch.",
+    "Initial/fresh/empty/nearby/FP32 numeric tests and matched cold graph timings remain required.",
+    "Two initial string-anchor expected-count assertions were wrong(9vs7,5vs4), then a third(2vs3); repaired before any compiler or GPU execution.",
+    "Draft0/out8/lutguard/lazygen still spill; shared counter reload removes stack/spills in complete BIG0/1 internal-linkage builds. H200 occupancy remains unknown."
+  ]
+}

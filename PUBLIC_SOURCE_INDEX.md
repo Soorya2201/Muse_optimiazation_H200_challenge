@@ -6,6 +6,12 @@ latencies, numerical correctness, compliance, and source provenance determine ad
 
 ## Coverage status (updated 2026-11-01)
 
+Nov1 MoE: [new source review and two-resident-CTA protocol](muse_moe_w4a16/TWO_CTA_RESEARCH_2026-11-01.md).
+218indexedpaths/13repos,fournewentries;KushagraM22fusionsalreadypresent.
+MIT H200groupedstudy7d71d5b12filespinned,notNVFP4kernelreplacement;
+FP8activationcachecannottransfer. OwnnewtopologyCPU/fullcompilerresource
+screenpassesafterspillrepairs,notyetH200validated. No scoregain.
+
 Nov1 [leader-by-track coverage and limits](research/LEADER_PUBLIC_COVERAGE_2026-11-01.md).
 
 Nov1 expanded leader research: [GodlyDonuts related GPU work](muse_prefill_layer/LEADER_RELATED_WORK_2026-11-01.md).

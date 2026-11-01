@@ -67,6 +67,31 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Nov1 MoE two-resident-CTA experiment ready; no GPU job live yet
+
+PreviousgoalturnprefillV34rejectedandpushed7add65d. ThiscycleonlyMoE.
+Read muse_moe_w4a16/TWO_CTA_RESEARCH_2026-11-01.md predeclaredprotocol.
+Fresh218publicpaths/13repos,fournewentries(twoalreadydecoderreviewed).
+KushagraM22/currentca711441staticreviewnoadditivegain;licenseunestablished,
+noport/mirror. NewMIT H200study7d71d5b12files96826bytespinned/hashverified,
+notNVFP4winningkernel;activationquantizationcachecannottransfer.
+OwnnewtopologytwoWG320threads/128outputrows/FT32/NX2/weight3slots,
+264blockstarget2CTA/SM;originalweightpointers/global scratchoffsetsheld.
+CPU98304weightmaps/528gathers/884partitions/u32bound2733637632,allpass.
+Initialfullspills16/20/16;out8/lutguard/lazygenstillspill. Sharedcounter
+reloadfullBIG0/1NVCC13sm90a96regs/16bars/0stack/spill/noC751x;PTXcomplete,
+SASSclipped. ParentCE2RangeErrorsinconclusive. Actual2residentblocksand
+zero-localbothBIGmodesmustbequeriedbeforeany264blocklaunch.
+V36float8indexandV37popcomprehensionfailurescaughtonCPU;V38wirefix,
+V39carveout100,V40failureframebounds,V41uniqueemptyIDs. Allunsubmitted.
+OnlyV41SHA867444e3f7292f79368556a39ab66c49e7819eabd689d2efae0cd339493055cc
+eligible. Native5090fcdc7944f1d4067ac35232e6c874454b0adf408f9f964a260f59a403502d.
+Exacthostbuildstubs/768eventbits312metrics/6FP64oracle/9uniqueroutefixtures
+pass,wire7760/11776chars<12800. Planned3empty(newonly)/6nearby/24timinggroups,
+alloriginalnumeric/resource/control/3%policygatespredeclared. Timedparent
+unchanged. Pushsource/protocolbeforefirstNov1MoEcheck;allsubmits0.
+Noagents,internalbackupauthoritativewhileexternalabsent. Goalactive.
+
 #### Nov1 prefill cycle complete: V34 terminal, no eligible gain; next MoE
 
 Owner requested broader competitor GPU repos/blogs. Expanded report
