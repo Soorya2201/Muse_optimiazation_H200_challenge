@@ -121,3 +121,53 @@ PUBLIC_HEADS/LEADER_CUDA_FORK files. No downloaded module executed or ported.
 ## H200 outcome
 
 Pending. No measured batching gain is established before the terminal audit.
+
+## H200 terminal result: V33 / cfc76057d5d641b7
+
+The unchanged parent passed five tests and eight timed cells (1.794179238x). This is not a batching gain. The independent experiment failed after 69.297693 seconds on the fifth nearby fixture, 2048/spectrum, with a nonfinite output before any timing rows. The four earlier fixtures had exact initial/fresh agreement. The failing comparison arm was not recorded; `active_arm=a1` only identifies the last graph captured. Both full modules report 168 registers and 8 existing ABI local bytes in both FINE modes.
+
+All available eight profile tables, CLI text/log and remote tail were inspected. Receipt and complete decoded report are retained. Compiler lowering of logical alternating A banks needs inspection: source-level ownership schedules alone do not prove distinct physical register lifetimes. No promotion, submit or measured candidate speedup.
+
+## Lowered-lifetime repair and predeclared V34 follow-up
+
+The complete FINE0 SASS contains a bounded N256 loop counterexample: its
+four HGMMA operations read R200–R215, the backedge contains only DEPBAR1,
+and the next iteration writes these registers again. The logical parity
+array was optimized away. This is a compiler-level lifetime defect, not
+proof of which arm caused the unattributed V33 nonfinite result.
+`WIDE_BATCH_LIFETIME_2026-11-01.json` retains exact instruction rows and
+archive hashes. NVIDIA's [PTX wait-group specification](https://docs.nvidia.com/cuda/parallel-thread-execution/#asynchronous-warpgroup-level-matrix-instructions-wgmma-wait-group)
+requires completion before accessing pending input A registers.
+
+Two compiler-only repairs were rejected before spending a GPU check:
+
+- A post-wait compiler operand fence extends the completed previous bank's
+  lifetime, but dynamic indexing creates a 144-byte local stack frame.
+- Compile-time alternating stage helpers restore the 8-byte ABI frame,
+  but ptxas emits C7512 and serializes WGMMA from register pressure.
+
+V34 instead drains each **wide** four-MMA group with wait0. Narrow tile
+schedules remain unchanged. This loses inter-group overlap but retains
+four MMAs per commit, reducing fence/commit/wait issue frequency. That is
+an explicit tradeoff, not a predicted speedup. The reduced ownership model
+permits a single physical bank because every wide stage completes before
+reuse. Both full-switch FINE0/1 NVCC13/sm90a builds have 168 registers,
+8 existing ABI local bytes, zero spills and no C751x; complete PTX confirms
+all 16 static wide MMA sites reach wait0 without a branch bypass. FINE0
+SASS is complete; FINE1 SASS is clipped and is not used for whole-kernel
+counts.
+
+Immutable source `submission_v34_wide_batch_drained_probe.py`, SHA-256
+`f31d8d9e9fcbe245cd80611e240114809fecbfe7c5cfd2c5784c8420991038b0`;
+native SHA-256
+`404fcd2ed37689dd1c68caef845a2011268921fb37e2b2de86eeb32c852eb0ee`.
+The same five nearby fixtures (including the failing spectrum), 24 groups,
+2 seeds, 4 pads, 8 balanced cold rounds, raw event/metric codec and original
+numeric/control/resource/whole-board gates apply. No fixture is dropped.
+The comparison now records finite counts for all four arms, validates the
+unchanged-parent reference, and identifies the failing comparison arm and
+initial/fresh phase. Complete/failure wire stress is 7220/11332 characters.
+The unchanged parent remains the official timed layer. A component proxy
+must pass all original gates before any whole-layer promotion attempt.
+Second routine prefill check of Nov1 is authorized only after source,
+preflight, compiler evidence and this protocol are pushed. No scored submit.

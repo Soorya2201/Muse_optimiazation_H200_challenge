@@ -35,8 +35,9 @@ bounded read scope are in LEADER_RELATED_METADATA_2026-11-01.json.
 The actionable distinction is between a technique and an additive gain:
 GPU residency, vector loads, shared padding and precision checks already
 exist in our current code. Applying the same named technique again does
-not establish a faster implementation. The live H200 checkcfc76057d5d641b7
-instead tests a specific unresolved dependency schedule: four wide RS-MMAs
+not establish a faster implementation. H200 checkcfc76057d5d641b7
+tested a specific unresolved dependency schedule: four wide RS-MMAs
 per commit group, distinct stage-parity register banks, original data layout.
 Its protocol and results belong in WIDE_BATCH_RESEARCH_2026-11-01.md.
-We will accept or reject it from same-GPU correctness and paired timing.
+It failed a nearby numeric fixture before timing; the result and concrete
+compiler-lifetime repair follow-up are recorded there. No speed gain is claimed.

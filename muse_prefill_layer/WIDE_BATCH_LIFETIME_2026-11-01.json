@@ -1,0 +1,243 @@
+{
+  "scope": "Exact archived compiler/source checks plus abstract ownership schedule; no H200 speed or numeric guarantee.",
+  "native_sha256": "404fcd2ed37689dd1c68caef845a2011268921fb37e2b2de86eeb32c852eb0ee",
+  "canonical_prefix_sha256": "8b52dedda281b2e642bda1d9333bcf2d002fc8611e25caa10e90ed2a849021a5",
+  "drained_bank_schedule_cases": 128,
+  "records": [
+    {
+      "arm": "wide_batch",
+      "fine": 0,
+      "archive": "muse_prefill_layer/SCALE_CODEGEN_wide_batch_Nall_FINE0_2026-11-01.json.gz",
+      "archive_sha256": "f6bffeba88ba1556900ed0a21ae57719938119397e84d5efb80f38faa4546e25",
+      "diagnostics": "<source>(54): warning #550-D: variable \"state\" was set but never used\n    uint64_t state;\n             ^\n\nRemark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n<source>(29): warning #177-D: variable \"okc_moe::MAX_STAGES\" was declared but never referenced\n  constexpr int MAX_STAGES = 24;\n                ^\n\n<source>(36): warning #177-D: function \"okc_moe::mbar_inval\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mbar_inval(uint32_t bar) { asm volatile(\"mbarrier.inval.shared.b64 [%0];\" ::\"r\"(bar) : \"memory\"); }\n                                                                                ^\n\n<source>(163): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=224]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<224>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(156): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=192]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<192>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(149): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=160]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<160>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(142): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=96]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<96>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(176): warning #177-D: function \"okc_moe::mma16816\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mma16816(float* c, const uint32_t (&a)[4], uint32_t b0, uint32_t b1) {\n                                                                                ^\n\n<source>(182): warning #177-D: function \"okc_moe::ldsm_x4\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void ldsm_x4(uint32_t (&r)[4], uint32_t addr) {\n                                                                                ^\n\n<source>(195): warning #177-D: function \"okc_moe::scale_pair\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) uint32_t scale_pair(uint32_t s2) {\n                                                                                    ^\n\n<source>(434): warning #177-D: variable \"okc_moe::STG_BYTES\" was declared but never referenced\n  constexpr int STG_BYTES = 45056;\n                ^\n\nptxas info    : 0 bytes gmem\nptxas info    : Compiling entry function '_ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE' for 'sm_90a'\nptxas info    : Function properties for _ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE\n    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 168 registers, used 2 barriers, 8 bytes cumulative stack size\nptxas info    : Compile time = 783.915 ms",
+      "ptx_rows": 11226,
+      "ptx_clipped": false,
+      "sass_rows": 4944,
+      "sass_clipped": false,
+      "bounded_loop_witness": {
+        "start_row": 2933,
+        "backedge_row": 3052,
+        "instructions": [
+          {
+            "row": 2933,
+            "text": ".L_x_66:"
+          },
+          {
+            "row": 2967,
+            "text": "SHF.L.W.U32.HI R200, R14, 0xe, R14"
+          },
+          {
+            "row": 2979,
+            "text": "LOP3.LUT R200, R200, 0x1000100, RZ, 0xc0, !PT"
+          },
+          {
+            "row": 2987,
+            "text": "LOP3.LUT R211, R200, 0x80c080c0, R211, 0xf8, !PT"
+          },
+          {
+            "row": 2992,
+            "text": "SHF.L.U32 R200, R13.reuse, 0x4, RZ"
+          },
+          {
+            "row": 2998,
+            "text": "HMUL2.BF16_V2 R204, R207, R22.reuse.H0_H0"
+          },
+          {
+            "row": 3003,
+            "text": "LOP3.LUT R205, R200, 0x81c081c0, RZ, 0xc0, !PT"
+          },
+          {
+            "row": 3008,
+            "text": "HMUL2.BF16_V2 R200, R21, R4.H0_H0"
+          },
+          {
+            "row": 3014,
+            "text": "SHF.L.U32 R208, R15.reuse, 0x4, RZ"
+          },
+          {
+            "row": 3024,
+            "text": "LOP3.LUT R213, R208, 0x81c081c0, RZ, 0xc0, !PT"
+          },
+          {
+            "row": 3025,
+            "text": "HMUL2.BF16_V2 R208, R21, R4.reuse.H0_H0"
+          },
+          {
+            "row": 3031,
+            "text": "HMUL2.BF16_V2 R212, R217, R22.reuse.H0_H0"
+          },
+          {
+            "row": 3034,
+            "text": "HGMMA.64x256x16.F32.BF16 R24, R200, gdesc[UR12], R24"
+          },
+          {
+            "row": 3036,
+            "text": "HGMMA.64x256x16.F32.BF16 R24, R204, gdesc[UR16], R24"
+          },
+          {
+            "row": 3040,
+            "text": "HGMMA.64x256x16.F32.BF16 R24, R208, gdesc[UR16], R24"
+          },
+          {
+            "row": 3042,
+            "text": "HGMMA.64x256x16.F32.BF16 R24, R212, gdesc[UR12], R24, gsb0"
+          },
+          {
+            "row": 3047,
+            "text": "WARPGROUP.DEPBAR.LE gsb0, 0x1"
+          },
+          {
+            "row": 3052,
+            "text": "@P1 BRA `(.L_x_66)"
+          }
+        ],
+        "interpretation": "Physical A operands R200..R215 are overwritten on the next loop iteration with only wait1 on the backedge path; this is a lifetime counterexample, not attribution of the H200 failing arm."
+      }
+    },
+    {
+      "arm": "wide_batch_fenced",
+      "fine": 0,
+      "archive": "muse_prefill_layer/SCALE_CODEGEN_wide_batch_fenced_Nall_FINE0_2026-11-01.json.gz",
+      "archive_sha256": "522a46fd8fc07f22c3809ee10d99ad37875f11f6b7d90810707db5cc192480c0",
+      "diagnostics": "<source>(54): warning #550-D: variable \"state\" was set but never used\n    uint64_t state;\n             ^\n\nRemark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n<source>(29): warning #177-D: variable \"okc_moe::MAX_STAGES\" was declared but never referenced\n  constexpr int MAX_STAGES = 24;\n                ^\n\n<source>(36): warning #177-D: function \"okc_moe::mbar_inval\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mbar_inval(uint32_t bar) { asm volatile(\"mbarrier.inval.shared.b64 [%0];\" ::\"r\"(bar) : \"memory\"); }\n                                                                                ^\n\n<source>(163): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=224]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<224>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(156): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=192]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<192>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(149): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=160]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<160>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(142): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=96]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<96>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(176): warning #177-D: function \"okc_moe::mma16816\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mma16816(float* c, const uint32_t (&a)[4], uint32_t b0, uint32_t b1) {\n                                                                                ^\n\n<source>(182): warning #177-D: function \"okc_moe::ldsm_x4\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void ldsm_x4(uint32_t (&r)[4], uint32_t addr) {\n                                                                                ^\n\n<source>(195): warning #177-D: function \"okc_moe::scale_pair\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) uint32_t scale_pair(uint32_t s2) {\n                                                                                    ^\n\n<source>(434): warning #177-D: variable \"okc_moe::STG_BYTES\" was declared but never referenced\n  constexpr int STG_BYTES = 45056;\n                ^\n\nptxas info    : 0 bytes gmem\nptxas info    : Compiling entry function '_ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE' for 'sm_90a'\nptxas info    : Function properties for _ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE\n    144 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 168 registers, used 2 barriers, 144 bytes cumulative stack size\nptxas info    : Compile time = 681.616 ms",
+      "ptx_rows": 11395,
+      "ptx_clipped": false,
+      "sass_rows": 5001,
+      "sass_clipped": true
+    },
+    {
+      "arm": "wide_batch_staged",
+      "fine": 0,
+      "archive": "muse_prefill_layer/SCALE_CODEGEN_wide_batch_staged_Nall_FINE0_2026-11-01.json.gz",
+      "archive_sha256": "51a3147ef4e6657f52a16b279bdd7ff8f3fb2c0874e289bf318af13c095b0313",
+      "diagnostics": "<source>(54): warning #550-D: variable \"state\" was set but never used\n    uint64_t state;\n             ^\n\nRemark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n<source>(29): warning #177-D: variable \"okc_moe::MAX_STAGES\" was declared but never referenced\n  constexpr int MAX_STAGES = 24;\n                ^\n\n<source>(36): warning #177-D: function \"okc_moe::mbar_inval\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mbar_inval(uint32_t bar) { asm volatile(\"mbarrier.inval.shared.b64 [%0];\" ::\"r\"(bar) : \"memory\"); }\n                                                                                ^\n\n<source>(163): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=224]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<224>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(156): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=192]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<192>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(149): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=160]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<160>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(142): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=96]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<96>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(176): warning #177-D: function \"okc_moe::mma16816\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mma16816(float* c, const uint32_t (&a)[4], uint32_t b0, uint32_t b1) {\n                                                                                ^\n\n<source>(182): warning #177-D: function \"okc_moe::ldsm_x4\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void ldsm_x4(uint32_t (&r)[4], uint32_t addr) {\n                                                                                ^\n\n<source>(195): warning #177-D: function \"okc_moe::scale_pair\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) uint32_t scale_pair(uint32_t s2) {\n                                                                                    ^\n\n<source>(434): warning #177-D: variable \"okc_moe::STG_BYTES\" was declared but never referenced\n  constexpr int STG_BYTES = 45056;\n                ^\n\nptxas info    : (C7512) Potential Performance Loss: wgmma.mma_async instructions are serialized due to insufficient register resources for the function '_ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE'\nptxas info    : 0 bytes gmem\nptxas info    : Compiling entry function '_ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE' for 'sm_90a'\nptxas info    : Function properties for _ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE\n    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 168 registers, used 2 barriers, 8 bytes cumulative stack size\nptxas info    : Compile time = 983.501 ms",
+      "ptx_rows": 14488,
+      "ptx_clipped": false,
+      "sass_rows": 5001,
+      "sass_clipped": true
+    },
+    {
+      "arm": "wide_batch_drained",
+      "fine": 0,
+      "archive": "muse_prefill_layer/SCALE_CODEGEN_wide_batch_drained_Nall_FINE0_2026-11-01.json.gz",
+      "archive_sha256": "3273141776234ec628d11d9a81ae7761e95feb7305ec66e09348a6a402e1227c",
+      "diagnostics": "<source>(54): warning #550-D: variable \"state\" was set but never used\n    uint64_t state;\n             ^\n\nRemark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n<source>(29): warning #177-D: variable \"okc_moe::MAX_STAGES\" was declared but never referenced\n  constexpr int MAX_STAGES = 24;\n                ^\n\n<source>(36): warning #177-D: function \"okc_moe::mbar_inval\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mbar_inval(uint32_t bar) { asm volatile(\"mbarrier.inval.shared.b64 [%0];\" ::\"r\"(bar) : \"memory\"); }\n                                                                                ^\n\n<source>(163): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=224]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<224>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(156): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=192]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<192>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(149): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=160]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<160>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(142): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=96]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<96>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(176): warning #177-D: function \"okc_moe::mma16816\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mma16816(float* c, const uint32_t (&a)[4], uint32_t b0, uint32_t b1) {\n                                                                                ^\n\n<source>(182): warning #177-D: function \"okc_moe::ldsm_x4\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void ldsm_x4(uint32_t (&r)[4], uint32_t addr) {\n                                                                                ^\n\n<source>(195): warning #177-D: function \"okc_moe::scale_pair\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) uint32_t scale_pair(uint32_t s2) {\n                                                                                    ^\n\n<source>(434): warning #177-D: variable \"okc_moe::STG_BYTES\" was declared but never referenced\n  constexpr int STG_BYTES = 45056;\n                ^\n\nptxas info    : 0 bytes gmem\nptxas info    : Compiling entry function '_ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE' for 'sm_90a'\nptxas info    : Function properties for _ZN7okc_moe20moe_fused_persistentILi0EEEvNS_9FusedArgsE\n    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 168 registers, used 2 barriers, 8 bytes cumulative stack size\nptxas info    : Compile time = 603.138 ms",
+      "ptx_rows": 11226,
+      "ptx_clipped": false,
+      "sass_rows": 4944,
+      "sass_clipped": false,
+      "wide_wait0_sites": [
+        {
+          "width": 256,
+          "mma_ptx_row": 3101,
+          "wait_ptx_row": 3132,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 256,
+          "mma_ptx_row": 3109,
+          "wait_ptx_row": 3132,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 256,
+          "mma_ptx_row": 3117,
+          "wait_ptx_row": 3132,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 256,
+          "mma_ptx_row": 3125,
+          "wait_ptx_row": 3132,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        }
+      ]
+    },
+    {
+      "arm": "wide_batch_drained",
+      "fine": 1,
+      "archive": "muse_prefill_layer/SCALE_CODEGEN_wide_batch_drained_Nall_FINE1_2026-11-01.json.gz",
+      "archive_sha256": "9833e603beedd82b5fea1591f00a1867757aa12acb86dfff9c2f31dceeaccf75",
+      "diagnostics": "<source>(54): warning #550-D: variable \"state\" was set but never used\n    uint64_t state;\n             ^\n\nRemark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n<source>(29): warning #177-D: variable \"okc_moe::MAX_STAGES\" was declared but never referenced\n  constexpr int MAX_STAGES = 24;\n                ^\n\n<source>(36): warning #177-D: function \"okc_moe::mbar_inval\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mbar_inval(uint32_t bar) { asm volatile(\"mbarrier.inval.shared.b64 [%0];\" ::\"r\"(bar) : \"memory\"); }\n                                                                                ^\n\n<source>(163): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=224]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<224>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(142): warning #177-D: function \"okc_moe::wgmma_rs<N>(float (&)[128], const uint32_t (&)[4], uint64_t, int) [with N=96]\" was declared but never referenced\n  template <> __attribute__((device)) __inline__ __attribute__((always_inline)) void wgmma_rs<96>(float (&d)[128], const uint32_t (&a)[4], uint64_t desc, int scale_d) {\n                                                                                     ^\n\n<source>(176): warning #177-D: function \"okc_moe::mma16816\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void mma16816(float* c, const uint32_t (&a)[4], uint32_t b0, uint32_t b1) {\n                                                                                ^\n\n<source>(182): warning #177-D: function \"okc_moe::ldsm_x4\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) void ldsm_x4(uint32_t (&r)[4], uint32_t addr) {\n                                                                                ^\n\n<source>(195): warning #177-D: function \"okc_moe::scale_pair\" was declared but never referenced\n  static __attribute__((device)) __inline__ __attribute__((always_inline)) uint32_t scale_pair(uint32_t s2) {\n                                                                                    ^\n\n<source>(434): warning #177-D: variable \"okc_moe::STG_BYTES\" was declared but never referenced\n  constexpr int STG_BYTES = 45056;\n                ^\n\nptxas info    : 0 bytes gmem\nptxas info    : Compiling entry function '_ZN7okc_moe20moe_fused_persistentILi1EEEvNS_9FusedArgsE' for 'sm_90a'\nptxas info    : Function properties for _ZN7okc_moe20moe_fused_persistentILi1EEEvNS_9FusedArgsE\n    8 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 168 registers, used 2 barriers, 8 bytes cumulative stack size\nptxas info    : Compile time = 1019.939 ms",
+      "ptx_rows": 17226,
+      "ptx_clipped": false,
+      "sass_rows": 5001,
+      "sass_clipped": true,
+      "wide_wait0_sites": [
+        {
+          "width": 192,
+          "mma_ptx_row": 906,
+          "wait_ptx_row": 937,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 192,
+          "mma_ptx_row": 914,
+          "wait_ptx_row": 937,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 192,
+          "mma_ptx_row": 922,
+          "wait_ptx_row": 937,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 192,
+          "mma_ptx_row": 930,
+          "wait_ptx_row": 937,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 160,
+          "mma_ptx_row": 4388,
+          "wait_ptx_row": 4419,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 160,
+          "mma_ptx_row": 4396,
+          "wait_ptx_row": 4419,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 160,
+          "mma_ptx_row": 4404,
+          "wait_ptx_row": 4419,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 160,
+          "mma_ptx_row": 4412,
+          "wait_ptx_row": 4419,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 256,
+          "mma_ptx_row": 6789,
+          "wait_ptx_row": 6820,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 256,
+          "mma_ptx_row": 6797,
+          "wait_ptx_row": 6820,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 256,
+          "mma_ptx_row": 6805,
+          "wait_ptx_row": 6820,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        },
+        {
+          "width": 256,
+          "mma_ptx_row": 6813,
+          "wait_ptx_row": 6820,
+          "wait": "wgmma.wait_group.sync.aligned 0;"
+        }
+      ]
+    }
+  ],
+  "conclusion": "Unfenced logical bank parity was insufficient; dynamic lifetime fence introduces 144-byte local frame, static stages cause C7512. Drained form restores 8-byte ABI frame/no spills/no C751x in both FINE modes and every wide PTX MMA is followed by wait0 without a branch bypass. H200 is still required."
+}

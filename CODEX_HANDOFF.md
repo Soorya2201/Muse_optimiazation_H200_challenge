@@ -67,15 +67,30 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### LIVE Nov1 prefill wide RS batch V33 check cfc76057d5d641b7
+#### Nov1 prefill V34 drained repair ready; no GPU job live yet
 
-Submitted2026-11-01T19:05:37.528498+00:00,firstprefillroutinecheckNov1. Pollsamehandle
-untilterminal,noobservationtimeoutrestart. Source/protocolpushed688d729.
-Ownersteeredtorelatedleaderprojects/blogs;read
-muse_prefill_layer/LEADER_RELATED_WORK_2026-11-01.md. Fourpublicprojects/
-13verifiedselectedfiles/PyTorchTMAauthoredchange+professionalpages reviewed;
-no winning-sourceassociation,nounlicensedport. PublictechnicalPRqueries
-preserved. Onlyprefillactive;GPUcfc76057d5d641b7stillmustbeaudited.
+V33terminalreceipt/reportlogged. NativeFINE0physicalAloopoverwrites
+R200..R215withonlyDEPBAR1; symbolicparitydoesnotpreservelifetime.
+Dynamicpostwaitcompilerfence144localbytesreject;staticbankstagesC7512reject.
+V34wide4MMAgroupwait0repairtakesoverlaptradeoff, narrowunchanged.
+FullFINE0/1NVCC13all168regs/8ABI/0spills/noC751x;16widePTXsitesreachwait0.
+Read WIDE_BATCH_RESEARCH_2026-11-01.md followup;originalgates/fixtures
+unchanged,failingarm+initial/fresh+finitecountsnowattributed.
+SHAf31d8d9e9fcbe245cd80611e240114809fecbfe7c5cfd2c5784c8420991038b0.
+Source/protocolmustpushbeforesecondNov1prefillcheck. Noagents/submits.
+
+#### TERMINAL Nov1 prefill V33: numeric failure; no GPU job live
+
+cfc76057d5d641b7 terminal sfo3c. Parent5tests/8timings pass1.794179238x;
+NOT batching gain. Independent69.297693s: first4nearbyexactagreement,
+2048/spectrum nonfinite before timing, failing arm not attributed.
+Old/new fullFINE0/1 all168regs/8ABIlocal. Native physical A lifetime
+under investigation; symbolic CPU banks insufficient. Firstof8prefill
+Nov1checks,submits0. Read WIDE_BATCH_REPORT_cfc76057d5d641b7.json.
+Owner related-GPU-work audit pushed4356cf9; read
+muse_prefill_layer/LEADER_RELATED_WORK_2026-11-01.md for reviewed public
+projects/blogs/author-linked work, limits and applicability. No winning
+source association established. Onlyprefillactive; nojoblive.
 
 #### Nov1 prefill wide RS batch V33 ready for first H200 check
 

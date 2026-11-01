@@ -1,0 +1,183 @@
+{
+  "job": "cfc76057d5d641b7",
+  "cluster": "sfo3c",
+  "source_sha256": "ced5301e48c264788e1751450740a23086249262ca62dbb45c8bc462ae31b1fb",
+  "scope": "Independent synthetic expert-chain fixtures. Timed whole layer is unchanged parent. Phase-duration proxy is not an observed board gain or critical-path bound.",
+  "payload_chars": 832,
+  "diagnostic": {
+    "status": "failed",
+    "stage": "nearby/2048/spectrum",
+    "rows": [],
+    "nearby": [
+      {
+        "m": 31,
+        "mode": "empty",
+        "error": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "fresh": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "change": 1.0968670014848174e+22
+      },
+      {
+        "m": 33,
+        "mode": "onehot",
+        "error": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "fresh": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "change": 2.1046693325042725
+      },
+      {
+        "m": 65,
+        "mode": "single",
+        "error": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "fresh": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "change": 1.7802711725234985
+      },
+      {
+        "m": 257,
+        "mode": "mixed",
+        "error": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "fresh": {
+          "old": [
+            0.0,
+            0.0
+          ],
+          "new": [
+            0.0,
+            0.0
+          ],
+          "a1": [
+            0.0,
+            0.0
+          ]
+        },
+        "change": 1.4311643838882446
+      }
+    ],
+    "resources": {
+      "old": [
+        0,
+        168,
+        8,
+        0,
+        384,
+        0,
+        168,
+        8,
+        0,
+        384
+      ],
+      "new": [
+        0,
+        168,
+        8,
+        0,
+        384,
+        0,
+        168,
+        8,
+        0,
+        384
+      ]
+    },
+    "weight_layout_unchanged": true,
+    "active_arm": "a1",
+    "error": "AssertionError('nonfinite output')",
+    "error_tail": "",
+    "error_chars": 34,
+    "trace": "  File \"/tmp/muse_prefill_layer-6odsxtt_/run/submission.py\", line 5678, in _wb_probe\n    graphs=captures(data);initial=agreement(graphs)\n                                  ^^^^^^^^^^^^^^^^^\n  File \"/tmp/muse_prefill_layer-6odsxtt_/run/submission.py\", line 5672, in agreement\n    return {k:_ks_error(g[1],graphs['a0'][1]) for k,g in graphs.items() if k!='a0'}\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/muse_prefill_layer-6odsxtt_/run/submission.py\", line 5625, in _ks_error\n    assert bool(torch.isfinite(a).all()),'nonfinite output'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "seconds": 69.29769279807806,
+    "timing_codec": "u32_ms_bits_32_then_f32_error_fresh_change_13_per_row"
+  },
+  "summaries": [],
+  "cells": [],
+  "policies": []
+}

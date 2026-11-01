@@ -1,0 +1,39 @@
+--- parent
++++ wide_batch_drained
+@@ -438,5 +438,5 @@
+ #define MOE_KPS64 2
+ #define MOE_KPS128 2
+-#define MOE_GROUP4_MAX 128  // token tiles up to this size commit one wgmma group per stage (see GROUP4)
++#define MOE_GROUP4_MAX 256  // token tiles up to this size commit one wgmma group per stage (see GROUP4)
+ // tile widths: 32, 64 (small: weight-conversion-bound), 96, 128 (two k-blocks a stage), 160..256 in steps of 32 (one
+ // k-block a stage; an expert's last tile is its remaining rows rounded up to 32, not to 128/256)
+@@ -519,5 +519,5 @@
+ #define MOE_TRI_ARCH 1
+   constexpr bool TRI = MOE_TRI && MOE_TRI_ARCH && MOE_NACC2 && GROUP4 && N == 32 && KPS == 4;
+-  constexpr int NACC = TRI ? 3 : ((GROUP4 && MOE_NACC2) ? ((MOE_NACC4 && N <= MOE_NACC4_MAXN) ? 4 : 2) : 1);
++  constexpr int NACC = TRI ? 3 : ((GROUP4 && MOE_NACC2 && N <= 128) ? ((MOE_NACC4 && N <= MOE_NACC4_MAXN) ? 4 : 2) : 1);
+   float acc[128];
+   float acc2[128];  // only the first N/2 are live (and only when NACC > 1)
+@@ -634,5 +634,5 @@
+           const uint32_t q = j == 0 ? wq.x : j == 1 ? wq.y : j == 2 ? wq.z : wq.w;
+           const uint32_t sw = j < 2 ? sc.x : sc.y;  // scales of k16 steps (j & ~1, j | 1): bytes 0,1 and 2,3
+-          convert8(q, scale_pair_sel(sw, j & 1, m16), afrag[(DEEP ? kk : (kk & 1)) * 4 + j], m16, m64);
++          convert8(q, scale_pair_sel(sw, j & 1, m16), afrag[(DEEP ? kk : ((KPS == 1 ? it : kk) & 1)) * 4 + j], m16, m64);
+         }
+         if constexpr (MMA32) {
+@@ -662,5 +662,5 @@
+           wgmma_rs<N>(NACC > 2 ? ((kk & 1) ? ((j & 1) ? acc4 : acc2) : ((j & 1) ? acc3 : acc))
+                                : ((NACC > 1 && (kk & 1)) ? acc2 : acc),
+-                      afrag[(DEEP ? kk : (kk & 1)) * 4 + j], desc + 2 * j, 1);
++                      afrag[(DEEP ? kk : ((KPS == 1 ? it : kk) & 1)) * 4 + j], desc + 2 * j, 1);
+         wg_commit();
+         if constexpr (DEEP) {
+@@ -669,5 +669,7 @@
+           if (kk == MOE_SMALL_WAIT - 1 && prev >= 0) { rel_sync(); if (MOE_ALLLANE_RELEASE || lane == 0) mbar_arrive(bars + 8 * NSLOT + 8 * prev); }
+         } else {
+-          wg_wait<1>();
++          if constexpr (KPS == 1 && N > 128) wg_wait<0>();
++          else wg_wait<1>();
++          // Wide batches drain before A-register reuse; narrow overlap is unchanged.
+           // the previous stage's MMAs are complete after the first wait of this stage: hand its slot back early
+           if (kk == 0 && prev >= 0) { rel_sync(); if (MOE_ALLLANE_RELEASE || lane == 0) mbar_arrive(bars + 8 * NSLOT + 8 * prev); }
