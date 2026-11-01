@@ -67,6 +67,13 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### LIVE Nov1 prefill V34 check c1b897ca7efb4292
+
+Recorded2026-11-01T19:20:23.041682+00:00. Secondof8routineprefillNov1checks,submits0.
+Source/protocolpushed5896212. Pollsamehandleuntilterminal,neverrestart
+fromobservationtimeout. Allparentprofiles/logsANDindependentreportmustbe
+read. WIDE_BATCH_RESEARCH_2026-11-01.md repairprotocol. Onlyprefillactive.
+
 #### Nov1 prefill V34 drained repair ready; no GPU job live yet
 
 V33terminalreceipt/reportlogged. NativeFINE0physicalAloopoverwrites
