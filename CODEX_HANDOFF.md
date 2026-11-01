@@ -67,6 +67,34 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Nov1 maintenance follow-up: traffic quantified, FT64 overlay retained offline
+
+Previousgoalturn7bb2767wasprogress(research+parserchecks),notverifiedwait.
+SecondconsecutivegoalturnseesOKCAPI530;noPOST/job/quotaused. Meaningful
+offlineprogresscontinues,so goalremainsactive/notblocked. Read
+muse_moe_w4a16/TWO_CTA_TRAFFIC_AND_OVERLAY_2026-11-01.md.
+SavedtwoGPUdiagnosticshavematchingM32/256routingmetadata. Exactlogical
+counts:parent→FT32jobs18→18/26→28,weight486→486/702→756MiB,
+X54→108/159→318MiB. TheseareTMApayloads,notHBMtrafficorlatencyfloors.
+LocalX-ringdependencygraphs792CTAcasesacyclic;oneslot/twostagecycle
+reproduced. Notglobalconcurrency/operandlifetimeproof. M128/seed7907unknown.
+
+NewofflineFT64twoCTAfollow-upkeepsoriginaljobs/NTT1..8andpackedpointers,
+usesweight2/X2slots,andaliasesdeadrouteID3KB+entry6KBintofutureweight
+ring. AllconsumerproxyfencesthenfulljoinbeforeTMAoverwrite. CPU132valid
+routefixtures/threeexpert-shardoffsets/stableoracle+NW8/16agreementpass.
+Layout-onlyNVCC13sm90aconfirmsSmem10976/aligned11008/dynamic113408.
+NativeSHA c2880c4f24a8d1437a9513fe35852598fd43aab76f8c31978bd1e733f1c2f999.
+Fivefull-bodyCErequestsallinternalcachePutRangeError(normal,skipAsm,
+compact,hostasm,intentionallyfailedhostlink);nofullresourceevidencereturned.
+Rawrequests/responsesretained;stopoutput-formatretries. Do notuse the
+layout-onlykernel'sregistercountasMoEresourceevidence. FT64stillunsubmitted,
+fullregisters/local/occupancy/numerics/performanceUNKNOWN,notGPUeligible.
+OnlyoriginalimmutableV41 remainsfirsteligiblewhenOKCbudgetreadresumes;
+hash867444e3andalloriginalgates/canonicalfilesunchanged. Noagents.
+Latestread-onlybudgetretry20:28:44UTCstill530;exactreceiptin
+research/service/OKC_AVAILABILITY_2026-11-01_FOLLOWUP.json. NoGPUjob.
+
 #### Nov1 OKC maintenance: MoE experiment ready, no GPU job submitted
 
 At20:03:58UTC the read-only jobs command announced the Open Kernel Challenge

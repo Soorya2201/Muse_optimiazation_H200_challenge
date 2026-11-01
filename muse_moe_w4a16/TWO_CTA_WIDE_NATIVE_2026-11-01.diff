@@ -1,0 +1,498 @@
+--- parent
++++ two_cta_wide
+@@ -177,5 +177,8 @@
+ 
+ struct Smem {
++  unsigned long long ctr_reload;
++#if !OKC_PRMTSC
+   uint32_t lut[256];
++#endif
+ #if !OKC_WGS
+   float red[NRB][NW][32][RED_W];  // per-unit cross-warp partial sums
+@@ -212,6 +215,6 @@
+   int uslot[8];    // unit id per skinny ring slot (-1: none; BFLAG | v: phase-B unit prefetched in phase A)
+   int dync[JMAX];  // phase A: pool units this CTA processed, per job (credited to doneA at the end of phase A)
+-  signed char eid[EMAX];
+-  short ent[EMAX];   // sorted entries (token*8+slot) by expert
++  // Route IDs occupy the future weight ring until gather completes.
++  // Sorted route entries use the following disjoint ring bytes.   // sorted entries (token*8+slot) by expert
+   short pos[EMAX];   // entry -> pair position, -1 if not local
+ };
+@@ -262,4 +265,15 @@
+ #define DBG(k) do { if (OKC_DEBUG && threadIdx.x == 0 && p.dbg) p.dbg[blockIdx.x * 8 + (k)] = gtimer(); } while (0)
+ extern __shared__ __align__(16) unsigned char smem_raw[];
++
++// IDs and entries coexist during routing, then both become dead after gather.
++// The first weight stage overwrites their storage only after the full join.
++static_assert(OKC_WGS && OKC_PRMTSC, "independent fast-scale WGS module only");
++__device__ __forceinline__ signed char* two_cta_route_ids() {
++  return reinterpret_cast<signed char*>(smem_raw + ((sizeof(Smem)+127)/128)*128);
++}
++__device__ __forceinline__ short* two_cta_route_entries() {
++  return reinterpret_cast<short*>(smem_raw + ((sizeof(Smem)+127)/128)*128 + EMAX);
++}
++
+ __device__ __forceinline__ float* ss_cur();  // this launch's ss copy (defined after Smem users)
+ __device__ __forceinline__ int ld_acquire(const int* p) {
+@@ -317,5 +331,5 @@
+         c.z = (signed char)((v[2] >= 0 && v[2] < p.nloc) ? v[2] : -1);
+         c.w = (signed char)((v[3] >= 0 && v[3] < p.nloc) ? v[3] : -1);
+-        *reinterpret_cast<char4*>(&S.eid[i4 * 4]) = c;
++        *reinterpret_cast<char4*>(&two_cta_route_ids()[i4 * 4]) = c;
+       }
+     }
+@@ -325,5 +339,5 @@
+   for (int i = tid; i < E; i += NT) {
+     int e = __ldg(p.topk_ids + i) - p.lo;
+-    S.eid[i] = (signed char)((e >= 0 && e < p.nloc) ? e : -1);
++    two_cta_route_ids()[i] = (signed char)((e >= 0 && e < p.nloc) ? e : -1);
+   }
+ #endif
+@@ -331,5 +345,5 @@
+   for (int base = i0; base < i1; base += 32) {
+     const int i = base + lane;
+-    const int e = (i < i1) ? (int)S.eid[i] : -1;
++    const int e = (i < i1) ? (int)two_cta_route_ids()[i] : -1;
+     const unsigned peers = __match_any_sync(0xffffffffu, e);
+     if (e >= 0 && lane == __ffs(peers) - 1) S.wc[warp][e] += __popc(peers);
+@@ -395,9 +409,9 @@
+   for (int base = i0; base < i1; base += 32) {
+     const int i = base + lane;
+-    const int e = (i < i1) ? (int)S.eid[i] : -1;
++    const int e = (i < i1) ? (int)two_cta_route_ids()[i] : -1;
+     const unsigned peers = __match_any_sync(0xffffffffu, e);
+     if (e >= 0) {
+       const int q = S.wc[warp][e] + __popc(peers & ((1u << lane) - 1u));
+-      S.ent[q] = (short)i;
++      two_cta_route_entries()[q] = (short)i;
+       S.pos[i] = (short)q;
+     } else if (i < i1) {
+@@ -462,5 +476,5 @@
+ // Units of the CTA's range stream through OKC_NS smem slots (TMA bulk copies on sm_90).
+ // All 8 warps work on the same unit, each on its own 512-K range, with x for that K range held in registers.
+-constexpr int UNIT_CODES = 32768, UNIT_SC = 4096, UNIT_BYTES = UNIT_CODES + UNIT_SC;
++constexpr int UNIT_CODES = 16384, UNIT_SC = 2048, UNIT_BYTES = UNIT_CODES + UNIT_SC;
+ 
+ 
+@@ -514,5 +528,5 @@
+       const __nv_bfloat16* row;
+       if (PB) row = p.inter + (size_t)(st + r) * ID;
+-      else row = p.x + (size_t)(S.ent[st + r] >> 3) * HD;
++      else row = p.x + (size_t)(two_cta_route_entries()[st + r] >> 3) * HD;
+       const uint4* src = reinterpret_cast<const uint4*>(row + warp * (64 * NCH) + 16 * t);
+ #pragma unroll
+@@ -538,5 +552,5 @@
+     uint4 v = make_uint4(0, 0, 0, 0);
+     if (8 + r < cnt) {
+-      const __nv_bfloat16* row = PB ? p.inter + (size_t)(st + 8 + r) * ID : p.x + (size_t)(S.ent[st + 8 + r] >> 3) * HD;
++      const __nv_bfloat16* row = PB ? p.inter + (size_t)(st + 8 + r) * ID : p.x + (size_t)(two_cta_route_entries()[st + 8 + r] >> 3) * HD;
+       const uint4* src = reinterpret_cast<const uint4*>(row + warp * 512) + c;
+       v = PB ? __ldcg(src) : __ldg(src);
+@@ -1208,5 +1222,5 @@
+         const __nv_bfloat16* src;
+         if (PB) src = p.inter + (size_t)(st + (v ? r : 0)) * ID + ks * KS + ch * 8;
+-        else src = p.x + (size_t)(v ? (S.ent[st + r] >> 3) : 0) * HD + ks * KS + ch * 8;
++        else src = p.x + (size_t)(v ? (two_cta_route_entries()[st + r] >> 3) : 0) * HD + ks * KS + ch * 8;
+         cp_async16(reinterpret_cast<__nv_bfloat16*>(xsb + (ch >> 3) * 8192 + r * 128 + (((ch & 7) ^ (r & 7)) << 4)), src, v);
+       }
+@@ -1217,5 +1231,5 @@
+         const __nv_bfloat16* src;
+         if (PB) src = p.inter + (size_t)(st + (v ? r : 0)) * ID + ks * KS + c * 8;
+-        else src = p.x + (size_t)(v ? (S.ent[st + r] >> 3) : 0) * HD + ks * KS + c * 8;
++        else src = p.x + (size_t)(v ? (two_cta_route_entries()[st + r] >> 3) : 0) * HD + ks * KS + c * 8;
+         cp_async16(xs + r * XP_FT + c * 8, src, v);
+       }
+@@ -1239,5 +1253,5 @@
+       const bool v = i < per && r < cnt;
+       if (PB) xsrc[k] = p.inter + (size_t)(st + (v ? r : 0)) * ID + c * 8;
+-      else xsrc[k] = p.x + (size_t)(v ? (S.ent[st + r] >> 3) : 0) * HD + c * 8;
++      else xsrc[k] = p.x + (size_t)(v ? (two_cta_route_entries()[st + r] >> 3) : 0) * HD + c * 8;
+       xdst[k] = r * XP_FT + c * 8;
+       if (v) xval |= 1u << k;
+@@ -1624,6 +1638,6 @@
+ // Work is split by cost-weighted stage ranges (stream-K): a unit cut between two CTAs adds its partial sums into a
+ // global buffer (indexed by the CTA boundary) and the second contributor runs the epilogue.
+-#define OKC_WGSNX 3                             // x ring slots
+-constexpr int WGS_NS = 3;                       // weight ring slots (36 KB; freed as soon as the codes are in registers)
++#define OKC_WGSNX 2                             // x ring slots
++constexpr int WGS_NS = 2;                       // weight ring slots (36 KB; freed as soon as the codes are in registers)
+ constexpr int WGS_NX = OKC_WGSNX;               // x ring slots (freed when the stage's last wgmma retired)
+ constexpr int WGS_NT = FT_T / 8;                // max n-tiles of a job
+@@ -1632,12 +1646,12 @@
+ constexpr int BW_F = 0, BW_E = 3, BX_F = 6, BX_E = 6 + WGS_NX;  // barrier indices
+ static_assert(BX_E + WGS_NX <= 24, "WGS barriers");
+-constexpr int WGS_SLOTS = 160;                  // fixup slots per phase (>= grid + 1)
+-constexpr int WGS_FIXW = WGS_NT * 512;          // floats per (slot, warpgroup): [n-tile][128 threads][4]
+-constexpr size_t WGS_FIXF = (size_t)2 * WGS_SLOTS * 4 * WGS_FIXW + 2 * WGS_SLOTS * 4 + 136 * 16;  // + doneAs
++constexpr int WGS_SLOTS = 320;                  // fixup slots per phase (>= grid + 1)
++constexpr int WGS_FIXW = 8 * 512;          // floats per (slot, warpgroup): [n-tile][128 threads][4]
++constexpr size_t WGS_FIXF = (size_t)2 * WGS_SLOTS * 2 * WGS_FIXW + 2 * WGS_SLOTS * 2 + 136 * 16;  // + doneAs
+ __device__ __forceinline__ float* wgs_fix(const Params& p, int pb) {
+-  return p.ybuf + (size_t)EMAX * HD + (size_t)pb * WGS_SLOTS * 4 * WGS_FIXW;
++  return p.ybuf + (size_t)EMAX * HD + (size_t)pb * WGS_SLOTS * 2 * WGS_FIXW;
+ }
+ __device__ __forceinline__ int* wgs_cnt(const Params& p, int pb) {
+-  return reinterpret_cast<int*>(p.ybuf + (size_t)EMAX * HD + (size_t)2 * WGS_SLOTS * 4 * WGS_FIXW) + pb * WGS_SLOTS * 4;
++  return reinterpret_cast<int*>(p.ybuf + (size_t)EMAX * HD + (size_t)2 * WGS_SLOTS * 2 * WGS_FIXW) + pb * WGS_SLOTS * 2;
+ }
+ // per-stage cost by n-tiles (1..8), phase A and phase B (relative units, <= 255; fit on per-CTA phase times at
+@@ -1768,5 +1782,5 @@
+   for (int pb = 0; pb < 2; ++pb) {
+     const int g0 = S.wgr[2 * pb], g1 = S.wgr[2 * pb + 1], sp = wgs_split(pb, g0, g1);
+-    const int ubl = pb ? 4 : 5;  // log2 of 256-row units per job
++    const int ubl = pb ? 5 : 6;  // log2 of 256-row units per job
+     const unsigned char* base = pb ? p.wBs : p.wAs;
+ #pragma unroll 1
+@@ -1777,5 +1791,5 @@
+       if (n >= WGS_NS) wgs_wait(S.bars + BW_E + ws, wph ^ 1, 1000 + gs);
+       uint64_t* bar = S.bars + BW_F + ws;
+-      const unsigned char* src = base + ((size_t)(((S.jE[j] << ubl) + ub) * 16 + st)) * (size_t)UNIT_BYTES;
++      const unsigned char* src = base + ((size_t)(((S.jE[j] << (ubl - 1)) + (ub >> 1)) * 16 + st)) * (size_t)(2 * UNIT_BYTES) + (size_t)(ub & 1) * UNIT_BYTES;
+       asm volatile("mbarrier.arrive.expect_tx.shared::cta.b64 _, [%0], %1;\n" ::"r"(smem_u32(bar)), "r"(UNIT_BYTES) : "memory");
+       asm volatile("cp.async.bulk.shared::cluster.global.mbarrier::complete_tx::bytes" L2H_SUFFIX " [%0], [%1], %2, [%3]" L2H_OPERAND ";\n"
+@@ -1787,5 +1801,5 @@
+ // x producer: one bulk copy per stage (lane 0): the job's x slice for the stage is contiguous in xA (phase A, written
+ // by every CTA's gather pass at the start) or xB (phase B, written by the phase-A epilogues), N_pad x 512 B
+-constexpr int WGS_XROWS = EMAX + 8 * JMAX;  // padded rows of all jobs, upper bound
++constexpr int WGS_XROWS = EMAX + 8 * (32 + EMAX / 64 + 8);  // padded rows of all jobs, upper bound
+ __device__ void wgs_xproducer(const Params& p, Smem& S, unsigned char* ring) {
+   // the routing tables are ready (the consumers arrive on barrier 7 right after routing): this idle warp computes the
+@@ -1802,5 +1816,5 @@
+   for (int pb = 0; pb < 2; ++pb) {
+     const int g0 = S.wgr[2 * pb], g1 = S.wgr[2 * pb + 1], sp = wgs_split(pb, g0, g1);
+-    const int ubl = pb ? 4 : 5;
++    const int ubl = pb ? 5 : 6;
+     const __nv_bfloat16* xsrc = pb ? p.xB : p.xA;
+     int curj = -1, npad = 8;
+@@ -1839,25 +1853,22 @@
+   // all of a batch's row loads first, then the stores: one x row at a time was one dependent HBM round trip per row
+   // (the next row's load could not move above the previous row's store: they may alias), 1.3-7 us at bs256
+-  static_assert(NT * 8 == HD, "one 16 B chunk per thread per row");
+-  constexpr int GB = OKC_GATHB;
++  static_assert(NT * 16 == HD, "two 16B chunks per thread per row");
++  constexpr int GB = 4;
+   for (int qb = q0; qb < q1; qb += GB) {
+-    uint4 v[GB];
+-    uint4* d[GB];
+-#pragma unroll
+-    for (int k = 0; k < GB; ++k) {
+-      const int q = qb + k;
+-      d[k] = nullptr;
+-      if (q < q1) {
+-        while (S.jrow[j + 1] <= q) ++j;
+-        const int r = q - S.jrow[j], cnt = S.jC[j];
+-        if (r < cnt) {
+-          const int ntt = (cnt + 7) >> 3;
+-          d[k] = reinterpret_cast<uint4*>(p.xA + (size_t)S.jrow[j] * HD) + ((((tid >> 5) * ntt + (r >> 3)) * 32 + (tid & 31)) * 8 + (r & 7));
+-          {  // KPERM3: k8 group G = tid & 31 of stage tid >> 5 holds the bf16 pairs at stage offsets 2 B(G) + 64 t,
+-             // B(G) = 8 ((G >> 1) & 3) + 2 (G >> 3) + (G & 1)
+-            const int G = tid & 31;
+-            const unsigned* xs32 = reinterpret_cast<const unsigned*>(p.x + (size_t)(S.ent[S.jS[j] + r] >> 3) * HD + (tid >> 5) * 256)
+-                                   + (8 * ((G >> 1) & 3) + 2 * (G >> 3) + (G & 1));
+-            v[k] = make_uint4(__ldg(xs32), __ldg(xs32 + 32), __ldg(xs32 + 64), __ldg(xs32 + 96));
++    uint4 v[2][GB]; uint4* d[2][GB];
++#pragma unroll
++    for (int part=0;part<2;++part) {
++      const int ftid=tid+part*NT;
++#pragma unroll
++      for (int k=0;k<GB;++k) {
++        const int q=qb+k; d[part][k]=nullptr;
++        if (q<q1) {
++          int jj=0; while (S.jrow[jj+1]<=q) ++jj;
++          const int r=q-S.jrow[jj],cnt=S.jC[jj];
++          if (r<cnt) {
++            const int ntt=(cnt+7)>>3,G=ftid&31;
++            d[part][k]=reinterpret_cast<uint4*>(p.xA+(size_t)S.jrow[jj]*HD)+((((ftid>>5)*ntt+(r>>3))*32+(ftid&31))*8+(r&7));
++            const unsigned* xs32=reinterpret_cast<const unsigned*>(p.x+(size_t)(two_cta_route_entries()[S.jS[jj]+r]>>3)*HD+(ftid>>5)*256)+(8*((G>>1)&3)+2*(G>>3)+(G&1));
++            v[part][k]=make_uint4(__ldg(xs32),__ldg(xs32+32),__ldg(xs32+64),__ldg(xs32+96));
+           }
+         }
+@@ -1865,6 +1876,7 @@
+     }
+ #pragma unroll
+-    for (int k = 0; k < GB; ++k)
+-      if (d[k]) *d[k] = v[k];
++    for (int part=0;part<2;++part)
++#pragma unroll
++      for (int k=0;k<GB;++k) if (d[part][k]) *d[part][k]=v[part][k];
+   }
+   CTA_SYNC();
+@@ -1921,5 +1933,5 @@
+   if (pd.kind == 0) return;
+   const int tid = threadIdx.x, warp = WARP_IDX(tid), wg = warp >> 2, wp = warp & 3, wt = tid & 127;
+-  constexpr int UBL = PB ? 4 : 5;
++  constexpr int UBL = PB ? 5 : 6;
+   const int j = pd.u >> UBL, ub = pd.u & ((1 << UBL) - 1);
+   asm volatile("bar.sync %0, 128;\n" ::"r"(3 + wg) : "memory");
+@@ -1927,9 +1939,9 @@
+     // release (cumulative over the warpgroup's epilogue stores ordered by the barrier); pairs with the producer's
+     // acquire. Unit ub wrote inter columns ub*128 .. +127: half of phase B stage ub / 2
+-    if (wt == 0) asm volatile("red.release.gpu.global.add.s32 [%0], %1;\n" ::"l"(p.doneAs + j * 16 + (ub >> 1)), "r"(1) : "memory");
++    if (wt == 0) asm volatile("red.release.gpu.global.add.s32 [%0], %1;\n" ::"l"(p.doneAs + j * 16 + (ub >> 2)), "r"(1) : "memory");
+     pd.kind = 0;
+     return;
+   }
+-  int* fc = wgs_cnt(p, PB) + pd.slot * 4 + wg;
++  int* fc = wgs_cnt(p, PB) + pd.slot * 2 + wg;
+   constexpr bool DF = (OKC_WGSDFIN >> (PB ? 1 : 0)) & 1;  // designated finisher in this phase
+   if constexpr (DF) {
+@@ -1957,6 +1969,6 @@
+   }
+   asm volatile("fence.acq_rel.gpu;\n" ::: "memory");
+-  float* fb = wgs_fix(p, PB) + (size_t)(pd.slot * 4 + wg) * WGS_FIXW + wt * 4;
+-  const int ntt = (S.jC[j] + 7) >> 3, r16 = ub * 16 + wg * 4 + wp;
++  float* fb = wgs_fix(p, PB) + (size_t)(pd.slot * 2 + wg) * WGS_FIXW + wt * 4;
++  const int ntt = (S.jC[j] + 7) >> 3, r16 = ub * 8 + wg * 4 + wp;
+   // two n-tiles' loads in flight before their zeroing stores and epilogues (the scout): one at a time, each load
+   // waits behind the previous tile's stores (they may alias), ntt serialized L2 round trips under full HBM load
+@@ -1977,5 +1989,5 @@
+   if (!PB) {
+     asm volatile("bar.sync %0, 128;\n" ::"r"(3 + wg) : "memory");
+-    if (wt == 0) asm volatile("red.release.gpu.global.add.s32 [%0], %1;\n" ::"l"(p.doneAs + j * 16 + (ub >> 1)), "r"(1) : "memory");
++    if (wt == 0) asm volatile("red.release.gpu.global.add.s32 [%0], %1;\n" ::"l"(p.doneAs + j * 16 + (ub >> 2)), "r"(1) : "memory");
+   }
+ }
+@@ -1987,5 +1999,5 @@
+   const int warp = WARP_IDX(tid);
+   const int wg = warp >> 2, wp = warp & 3, g = lane >> 2, wt = tid & 127;
+-  constexpr int UBL = PB ? 4 : 5;
++  constexpr int UBL = PB ? 5 : 6;
+   const uint32_t k16c = 16u + p.zero;  // opaque 16: the scale decode's multiply stays an IMAD (FMA pipe)
+   const uint32_t xring_s = smem_u32(ring + WGS_NS * UNIT_BYTES);
+@@ -2069,5 +2081,5 @@
+   if (OKC_WGSX & 8) { if (d[0][0] == 1234.5f) S.wglast[0] = 7; return; }
+   if (slot >= 0) {  // a share of a unit split between CTAs: add it now, count it later (deferred)
+-    float* fb = wgs_fix(p, PB) + (size_t)(slot * 4 + wg) * WGS_FIXW + wt * 4;
++    float* fb = wgs_fix(p, PB) + (size_t)(slot * 2 + wg) * WGS_FIXW + wt * 4;
+ #pragma unroll
+     for (int nt = 0; nt < NTT; ++nt)
+@@ -2079,5 +2091,5 @@
+     return;
+   }
+-  const int j = u >> UBL, r16 = (u & ((1 << UBL) - 1)) * 16 + wg * 4 + wp;
++  const int j = u >> UBL, r16 = (u & ((1 << UBL) - 1)) * 8 + wg * 4 + wp;
+ #pragma unroll
+   for (int nt = 0; nt < NTT; ++nt) wgs_epi_tile<PB>(p, S, j, r16, nt, d[nt]);
+@@ -2087,5 +2099,5 @@
+ __device__ __forceinline__ void wgs_phase(const Params& p, Smem& S, unsigned char* ring, int g0, int g1, int& seq) {
+   // (__forceinline__: outlined by NVVM when it grows, a CALL that makes ptxas serialize every wgmma, C7510)
+-  constexpr int UBL = PB ? 4 : 5;
++  constexpr int UBL = PB ? 5 : 6;
+   WgsPend pd{0, 0, 0, 0};
+ #pragma unroll 1
+@@ -2132,14 +2144,16 @@
+   while (hi - lo > 1) { const int mid = (lo + hi) >> 1; if ((uint32_t)pre[mid] <= x) lo = mid; else hi = mid; }
+   const uint32_t cs = (uint32_t)wgs_cost(pb, S.jC[lo]);
+-  return (lo << (9 - pb)) + (int)((x - (uint32_t)pre[lo]) / cs);
++  return (lo << (10 - pb)) + 2 * (int)((x - (uint32_t)pre[lo]) / cs);
+ }
+ __device__ __forceinline__ void wgs_range(const Smem& S, int nj, int pb, int c, int G, int& g0, int& g1) {
+   const uint32_t tot = pb ? S.wtotB : S.wtot;
+   g0 = wgs_stage_at(S, nj, pb, tot * (uint32_t)c / (uint32_t)G);
+-  g1 = c == G - 1 ? (nj << (9 - pb)) : wgs_stage_at(S, nj, pb, tot * (uint32_t)(c + 1) / (uint32_t)G);
++  g1 = c == G - 1 ? (nj << (10 - pb)) : wgs_stage_at(S, nj, pb, tot * (uint32_t)(c + 1) / (uint32_t)G);
+ }
+ // this CTA's stage ranges (stream-K over 256-row units x 16 stages), one thread: the producers stream the same
+ __device__ __noinline__ void wgs_ranges(const Params& p, Smem& S) {
+   const int nj = S.njF + S.njS;
++  // trxphxle/okc-2026-muse-kernels@72db638, Apache-2.0 empty-job guard.
++  if (!nj) { S.wtot=S.wtotB=0; S.wgr[0]=S.wgr[1]=S.wgr[2]=S.wgr[3]=0; return; }
+   wgs_prefix(S, nj);
+   wgs_range(S, nj, 0, blockIdx.x, gridDim.x, S.wgr[0], S.wgr[1]);
+@@ -2149,6 +2163,6 @@
+ __device__ __forceinline__ int wgs_cta_of(const Smem& S, int pb, int s, int G) {
+   const uint32_t tot = pb ? S.wtotB : S.wtot;
+-  const int j = s >> (9 - pb);
+-  const uint32_t xe = (uint32_t)(pb ? S.wcpB : S.wcp)[j] + (uint32_t)((s & ((1 << (9 - pb)) - 1)) + 1) * (uint32_t)wgs_cost(pb, S.jC[j]);
++  const int j = s >> (10 - pb);
++  const uint32_t xe = (uint32_t)(pb ? S.wcpB : S.wcp)[j] + (uint32_t)(((s & ((1 << (10 - pb)) - 1)) >> 1) + 1) * (uint32_t)wgs_cost(pb, S.jC[j]);
+   // largest c with floor(tot * c / G) < xe
+   int c = (int)(((xe - 1) * (unsigned long long)G) / tot);
+@@ -2208,9 +2222,15 @@
+ #endif
+ }
++__device__ __forceinline__ int* two_cta_counter() {
++  unsigned long long ptr;
++  asm volatile("ld.volatile.shared.u64 %0, [%1];" : "=l"(ptr) : "r"(smem_u32(&reinterpret_cast<const Smem*>(smem_raw)->ctr_reload)) : "memory");
++  return reinterpret_cast<int*>(ptr);
++}
+ template <bool BIG>
+-__global__ void __launch_bounds__(NTL, 1) moe_fused(Params p) {
++__global__ void __launch_bounds__(NTL, 2) moe_fused(Params p) {
+   Smem& S = *reinterpret_cast<Smem*>(smem_raw);
+   __nv_bfloat16* xbuf = reinterpret_cast<__nv_bfloat16*>(smem_raw + ((sizeof(Smem) + 127) / 128) * 128);
+   const int tid = threadIdx.x;
++  if (tid==0) S.ctr_reload=(unsigned long long)p.ctr;
+   DBG(0);
+   // programmatic dependent launch: everything below reads the previous kernel's outputs (routing, x) or writes
+@@ -2318,4 +2338,5 @@
+   for (int li = blockIdx.x * NT + tid; li < p.M * (HD * 2 / 128); li += gridDim.x * NT)
+     asm volatile("prefetch.global.L2 [%0];\n" ::"l"(reinterpret_cast<const char*>(p.x) + (size_t)li * 128));
++#if !OKC_PRMTSC
+   for (int i = tid; i < (OKC_PRMTSC ? 0 : 256); i += NT) {  // fp8 e4m3 code -> bf16x2(value * 2^64), computed (no global load)
+     const int sgn = i >> 7, ex = (i >> 3) & 15, mt = i & 7;
+@@ -2330,4 +2351,5 @@
+     S.lut[i] = b | (b << 16);
+   }
++#endif
+   if (tid == 0) {
+ #if !FAST1_ON
+@@ -2347,5 +2369,5 @@
+     S.xbuf_ptr = xbuf;
+     // the generation can only change at this launch's grid barrier, which every CTA reaches after this point
+-    const int gen = *reinterpret_cast<volatile const int*>(p.ctr + 3);  // launch generation (bumped at the barrier)
++    const int gen = *reinterpret_cast<volatile const int*>(two_cta_counter() + 3);  // launch generation (bumped at the barrier)
+     S.gen = gen;
+     S.ssp = (gen & 1) ? p.ss1 : p.ss;
+@@ -2363,5 +2385,5 @@
+     float* other = (S.gen & 1) ? p.ss : p.ss1;
+     for (int i = blockIdx.x * NT + tid; i < EMAX; i += gridDim.x * NT) other[i] = 0.f;
+-    if (blockIdx.x == 0 && tid == 0) p.ctr[4 + ((S.gen + 1) & 1)] = 0;
++    if (blockIdx.x == 0 && tid == 0) two_cta_counter()[4 + ((S.gen + 1) & 1)] = 0;
+   }
+ #if OKC_WS
+@@ -2394,4 +2416,5 @@
+   // every CTA's first weight stages
+   wgs_gather(p, S);
++  asm volatile("fence.proxy.async.shared::cta;\n" ::: "memory");
+   DBG(7);
+   WS_JOIN();
+@@ -2435,8 +2458,14 @@
+   CTA_SYNC();
+   if (tid == 0) {
+-    int* bc = p.ctr + 4 + (S.gen & 1);
++    int generation;
++    asm volatile("ld.volatile.shared.u32 %0, [%1];" : "=r"(generation) : "r"(smem_u32(&S.gen)) : "memory");
++    int* bc = two_cta_counter() + 4 + (generation & 1);
+     __threadfence();
+     const int old = atomicAdd(bc, 1);
+-    if (old == (int)gridDim.x - 1) atomicAdd(p.ctr + 3, 1);
++    if (old == (int)gridDim.x - 1) {
++      int* fresh_ctr=two_cta_counter();
++      asm volatile("" : "+l"(fresh_ctr) :: "memory");
++      atomicAdd(fresh_ctr + 3, 1);
++    }
+     while (ld_acquire(bc) < (int)gridDim.x) __nanosleep(64);
+   }
+@@ -2446,5 +2475,5 @@
+   {
+     const int G = gridDim.x, i0 = blockIdx.x * NT + tid;
+-    if (i0 < 2) p.ctr[i0] = 0;  // dynamic pool counters
++    if (i0 < 2) two_cta_counter()[i0] = 0;  // dynamic pool counters
+     for (int i = i0; i < JMAX; i += G * NT) p.doneA[i] = 0;
+ #if OKC_WGS
+@@ -2458,59 +2487,52 @@
+   // shuffles, then the 16 warps' partials through smem: the ring is free now), pass 2 re-reads the rows (L2 hits)
+   {
+-    static_assert(HD == NT * 8, "8 columns per thread");
+-    float* red = reinterpret_cast<float*>(xbuf);
+-    const int lane = tid & 31, warp = WARP_IDX(tid);
+-    for (int tk = blockIdx.x; tk < p.M; tk += gridDim.x) {
+-      int qv[8];
+-#pragma unroll
+-      for (int sl = 0; sl < 8; ++sl) qv[sl] = S.pos[tk * 8 + sl];
+-      float ps[8];
+-#pragma unroll
+-      for (int sl = 0; sl < 8; ++sl) {
+-        ps[sl] = 0.f;
+-        if (qv[sl] >= 0) {
+-          const float4* src = reinterpret_cast<const float4*>(p.ybuf + (size_t)qv[sl] * HD) + tid * 2;
+-          const float4 a = __ldcg(src), b = __ldcg(src + 1);
+-          ps[sl] = a.x * a.x + a.y * a.y + a.z * a.z + a.w * a.w + b.x * b.x + b.y * b.y + b.z * b.z + b.w * b.w;
++    static_assert(HD == NT * 16, "16 columns per thread");
++    float* red=reinterpret_cast<float*>(xbuf);
++    const int lane=tid&31,warp=WARP_IDX(tid);
++    for(int tk=blockIdx.x;tk<p.M;tk+=gridDim.x) {
++      int qv[8]; float ps[8];
++#pragma unroll
++      for(int sl=0;sl<8;++sl) {
++        qv[sl]=S.pos[tk*8+sl];ps[sl]=0.f;
++        if(qv[sl]>=0) {
++          const float4* src=reinterpret_cast<const float4*>(p.ybuf+(size_t)qv[sl]*HD)+tid*4;
++#pragma unroll
++          for(int chunk=0;chunk<4;++chunk) {
++            const float4 v=__ldcg(src+chunk);
++            ps[sl]+=v.x*v.x+v.y*v.y+v.z*v.z+v.w*v.w;
++          }
+         }
+       }
+ #pragma unroll
+-      for (int sl = 0; sl < 8; ++sl)
+-        if (qv[sl] >= 0) {  // uniform over the CTA (one token)
+-#pragma unroll
+-          for (int o = 16; o > 0; o >>= 1) ps[sl] += __shfl_xor_sync(0xffffffffu, ps[sl], o);
++      for(int sl=0;sl<8;++sl) if(qv[sl]>=0) {
++#pragma unroll
++        for(int o=16;o>0;o>>=1) ps[sl]+=__shfl_xor_sync(0xffffffffu,ps[sl],o);
++      }
++      if(lane==0) {
++#pragma unroll
++        for(int sl=0;sl<8;++sl) red[warp*8+sl]=ps[sl];
++      }
++      CTA_SYNC();
++      if(tid<8) {float sum=0.f;for(int w=0;w<NW;++w) sum+=red[w*8+tid];red[NW*8+tid]=sum;}
++      CTA_SYNC();
++      // Two8-column output passes keep eight accumulators live, matching
++      // the parent. One16-column pass spilled four registers in full codegen.
++#pragma unroll
++      for(int part=0;part<2;++part) {
++        float acc[8]={};
++#pragma unroll
++        for(int sl=0;sl<8;++sl) if(qv[sl]>=0) {
++          const float r=p.topk_w[tk*8+sl]*rsqrtf(red[NW*8+sl]*(1.f/HD)+1e-8f);
++          const float4* src=reinterpret_cast<const float4*>(p.ybuf+(size_t)qv[sl]*HD)+(tid+part*NT)*2;
++          const float4 a=__ldcg(src),b=__ldcg(src+1);
++          acc[0]+=r*a.x;acc[1]+=r*a.y;acc[2]+=r*a.z;acc[3]+=r*a.w;
++          acc[4]+=r*b.x;acc[5]+=r*b.y;acc[6]+=r*b.z;acc[7]+=r*b.w;
+         }
+-      if (lane == 0) {
+-#pragma unroll
+-        for (int sl = 0; sl < 8; ++sl) red[warp * 8 + sl] = ps[sl];
++        uint4 o;uint32_t* ow=reinterpret_cast<uint32_t*>(&o);
++#pragma unroll
++        for(int i=0;i<4;++i) {__nv_bfloat162 v=__floats2bfloat162_rn(acc[2*i],acc[2*i+1]);ow[i]=*reinterpret_cast<uint32_t*>(&v);}
++        *reinterpret_cast<uint4*>(p.out+(size_t)tk*HD+(tid+part*NT)*8)=o;
+       }
+       CTA_SYNC();
+-      if (tid < 8) {
+-        float tsum = 0.f;
+-        for (int w = 0; w < NW; ++w) tsum += red[w * 8 + tid];
+-        red[NW * 8 + tid] = tsum;
+-      }
+-      CTA_SYNC();
+-      float acc[8];
+-#pragma unroll
+-      for (int i = 0; i < 8; ++i) acc[i] = 0.f;
+-#pragma unroll
+-      for (int sl = 0; sl < 8; ++sl)
+-        if (qv[sl] >= 0) {
+-          const float r = p.topk_w[tk * 8 + sl] * rsqrtf(red[NW * 8 + sl] * (1.f / HD) + 1e-8f);
+-          const float4* src = reinterpret_cast<const float4*>(p.ybuf + (size_t)qv[sl] * HD) + tid * 2;
+-          const float4 a = __ldcg(src), b = __ldcg(src + 1);
+-          acc[0] += r * a.x; acc[1] += r * a.y; acc[2] += r * a.z; acc[3] += r * a.w;
+-          acc[4] += r * b.x; acc[5] += r * b.y; acc[6] += r * b.z; acc[7] += r * b.w;
+-        }
+-      uint4 o;
+-      uint32_t* ow = reinterpret_cast<uint32_t*>(&o);
+-#pragma unroll
+-      for (int i = 0; i < 4; ++i) {
+-        __nv_bfloat162 v = __floats2bfloat162_rn(acc[2 * i], acc[2 * i + 1]);
+-        ow[i] = *reinterpret_cast<uint32_t*>(&v);
+-      }
+-      *reinterpret_cast<uint4*>(p.out + (size_t)tk * HD + tid * 8) = o;
+-      CTA_SYNC();  // red is reused by the next token
+     }
+   }
+@@ -2614,4 +2636,5 @@
+ void okc_run(std::vector<torch::Tensor> w, std::vector<torch::Tensor> scratch, torch::Tensor x, torch::Tensor ids,
+              torch::Tensor tw, torch::Tensor out, int64_t lo, int64_t nloc, int64_t grid) {
++  grid *= 2;
+   okc::Params p;
+   p.wA = (const uint4*)w[0].data_ptr(); p.sA = (const uint4*)w[1].data_ptr(); p.gsA = (const float*)w[2].data_ptr();
+@@ -2649,5 +2672,5 @@
+   p.xB = p.xA + (size_t)okc::WGS_XROWS * okc::HD;
+   p.xready = ib + 8 + 512;
+-  p.doneAs = reinterpret_cast<int*>(p.ybuf + (size_t)okc::EMAX * okc::HD + (size_t)2 * okc::WGS_SLOTS * 4 * okc::WGS_FIXW) + 2 * okc::WGS_SLOTS * 4;
++  p.doneAs = reinterpret_cast<int*>(p.ybuf + (size_t)okc::EMAX * okc::HD + (size_t)2 * okc::WGS_SLOTS * 2 * okc::WGS_FIXW) + 2 * okc::WGS_SLOTS * 2;
+ #else
+   p.xA = p.xB = nullptr;

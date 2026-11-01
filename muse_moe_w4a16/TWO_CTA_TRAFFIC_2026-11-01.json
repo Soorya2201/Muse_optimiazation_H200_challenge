@@ -1,0 +1,206 @@
+{
+  "scope": "Offline exact logical traffic/partition arithmetic from two saved synthetic GPU routing fixtures. No new CUDA job, timings, cache counters, HBM measurements or concurrency proof.",
+  "source_jobs": [
+    "f8208a2105ab4940",
+    "b22622ebb61946df"
+  ],
+  "canonical_sha256": "b33070898927b7b92df6c7a2515f9c02dd12723c43ca63682fa164e915dd4281",
+  "rows": [
+    {
+      "m": 32,
+      "seed": 3101,
+      "pad_mib": 0,
+      "local_expert_counts": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        1,
+        1,
+        0,
+        2,
+        2,
+        4,
+        1,
+        0,
+        0,
+        1,
+        0,
+        6,
+        1,
+        2,
+        0,
+        5,
+        0,
+        0,
+        2,
+        0,
+        3
+      ],
+      "local_routes": 42,
+      "arms": {
+        "parent": {
+          "jobs": 18,
+          "padded_rows": 144,
+          "weight_tma_bytes": 509607936,
+          "unique_weight_payload_bytes": 509607936,
+          "x_tma_bytes": 56623104,
+          "phases": [
+            {
+              "phase": 0,
+              "total_units": 576,
+              "split_units": 120,
+              "split_segments": 240,
+              "consumer_warpgroup_publications_or_finishes": 2304,
+              "empty_cta_ranges": 0
+            },
+            {
+              "phase": 1,
+              "total_units": 288,
+              "split_units": 120,
+              "split_segments": 240,
+              "consumer_warpgroup_publications_or_finishes": 1152,
+              "empty_cta_ranges": 0
+            }
+          ]
+        },
+        "two_cta": {
+          "jobs": 18,
+          "padded_rows": 144,
+          "weight_tma_bytes": 509607936,
+          "unique_weight_payload_bytes": 509607936,
+          "x_tma_bytes": 113246208,
+          "phases": [
+            {
+              "phase": 0,
+              "total_units": 1152,
+              "split_units": 216,
+              "split_segments": 432,
+              "consumer_warpgroup_publications_or_finishes": 2304,
+              "empty_cta_ranges": 0
+            },
+            {
+              "phase": 1,
+              "total_units": 576,
+              "split_units": 216,
+              "split_segments": 432,
+              "consumer_warpgroup_publications_or_finishes": 1152,
+              "empty_cta_ranges": 0
+            }
+          ]
+        }
+      },
+      "logical_weight_read_ratio": 1.0,
+      "logical_x_read_ratio": 2.0
+    },
+    {
+      "m": 256,
+      "seed": 3101,
+      "pad_mib": 0,
+      "local_expert_counts": [
+        9,
+        12,
+        4,
+        0,
+        28,
+        7,
+        1,
+        29,
+        21,
+        1,
+        0,
+        6,
+        6,
+        8,
+        20,
+        8,
+        40,
+        6,
+        2,
+        0,
+        3,
+        4,
+        32,
+        1,
+        9,
+        0,
+        35,
+        4,
+        0,
+        2,
+        0,
+        26
+      ],
+      "local_routes": 324,
+      "arms": {
+        "parent": {
+          "jobs": 26,
+          "padded_rows": 424,
+          "weight_tma_bytes": 736100352,
+          "unique_weight_payload_bytes": 736100352,
+          "x_tma_bytes": 166723584,
+          "phases": [
+            {
+              "phase": 0,
+              "total_units": 832,
+              "split_units": 115,
+              "split_segments": 230,
+              "consumer_warpgroup_publications_or_finishes": 3328,
+              "empty_cta_ranges": 0
+            },
+            {
+              "phase": 1,
+              "total_units": 416,
+              "split_units": 123,
+              "split_segments": 246,
+              "consumer_warpgroup_publications_or_finishes": 1664,
+              "empty_cta_ranges": 0
+            }
+          ]
+        },
+        "two_cta": {
+          "jobs": 28,
+          "padded_rows": 424,
+          "weight_tma_bytes": 792723456,
+          "unique_weight_payload_bytes": 736100352,
+          "x_tma_bytes": 333447168,
+          "phases": [
+            {
+              "phase": 0,
+              "total_units": 1792,
+              "split_units": 230,
+              "split_segments": 460,
+              "consumer_warpgroup_publications_or_finishes": 3584,
+              "empty_cta_ranges": 0
+            },
+            {
+              "phase": 1,
+              "total_units": 896,
+              "split_units": 231,
+              "split_segments": 462,
+              "consumer_warpgroup_publications_or_finishes": 1792,
+              "empty_cta_ranges": 0
+            }
+          ]
+        }
+      },
+      "logical_weight_read_ratio": 1.0769230769230769,
+      "logical_x_read_ratio": 2.0
+    }
+  ],
+  "local_xring_dependency_graphs": 792,
+  "one_slot_intra_segment_cycle_reproduced": true,
+  "limitations": [
+    "M128 and seed7907 routing metadata are not present in these saved traces.",
+    "Logical repeated loads may hit L2 or share in-flight requests; do not convert these bytes into an HBM latency floor.",
+    "Local graph excludes WGMMA register lifetimes, weight ring, split-finisher waits, global readiness and memory ordering.",
+    "Acyclic local dependencies do not prove actual kernel safety or speed. Original H200 gates remain mandatory."
+  ]
+}

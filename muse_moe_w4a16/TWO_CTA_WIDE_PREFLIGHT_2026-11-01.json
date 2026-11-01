@@ -1,0 +1,19 @@
+{
+  "scope": "CPU alias extent, routing scatter/order, host LP64 layout and source-handoff checks only. Not CUDA execution, actual linked occupancy, synchronization proof or performance.",
+  "native_sha256": "c2880c4f24a8d1437a9513fe35852598fd43aab76f8c31978bd1e733f1c2f999",
+  "fixtures": 132,
+  "route_working_storage_bytes": 9216,
+  "estimated_metadata_bytes": 11008,
+  "estimated_dynamic_shared_bytes": 113408,
+  "estimated_struct_bytes": 10976,
+  "original_FT64_job_partition_retained": true,
+  "original_weight_pointers_and_global_scratch_offsets_retained": true,
+  "original_NTT5_through8_restored": true,
+  "generic_async_fence_then_full_join": true,
+  "limits": [
+    "NVCC static assertions and complete full-body resource reports still required.",
+    "No increased logical weight-job reads versus parent; logical X-copy bytes still double.",
+    "Two weight slots may expose copy latency; no timing evidence yet.",
+    "Actual residency/zero-local/numeric/fresh/empty/FP64/nearby/control gates remain mandatory."
+  ]
+}

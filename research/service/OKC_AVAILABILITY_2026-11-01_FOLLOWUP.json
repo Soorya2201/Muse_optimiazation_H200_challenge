@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-11-01T20:28:44.168409+00:00",
+  "command": "okc problems --json",
+  "read_only": true,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "\u2717 the API answered 530 ; try again in a minute\n",
+  "own_check_posts_this_turn": 0,
+  "existing_gpu_handle": null,
+  "previous_goal_turn_classification": "progress",
+  "maintenance_consecutive_goal_turns": 2
+}

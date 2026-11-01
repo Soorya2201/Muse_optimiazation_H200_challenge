@@ -1,0 +1,137 @@
+{
+  "scope": "Full FT64 two-CTA device-resource queries remain inconclusive; only exact structure layout is NVCC-verified. No GPU execution, score gain or actual occupancy claim.",
+  "native_sha256": "c2880c4f24a8d1437a9513fe35852598fd43aab76f8c31978bd1e733f1c2f999",
+  "full_body_attempts": [
+    {
+      "archive": "muse_moe_w4a16/TWO_CTA_CODEGEN_two_cta_wide_BIG0_2026-11-01_overlay0.json.gz",
+      "sha256": "6f243e3e3f5a60285fec8477c45b5bc407c46545df04618c88bc38edc4ee95b7",
+      "big": 0,
+      "code": -1,
+      "outcome": "Compiler Explorer serialization failure, not CUDA compile failure; full resource result unknown",
+      "diagnostics": "Internal Compiler Explorer error: RangeError: Invalid string length\n    at JSON.stringify (<anonymous>)\n    at CompilationEnvironment.cachePut (file:///infra/.deploy/lib/compilation-env.js:118:41)\n    at NvccCompiler.afterCompilation (file:///infra/.deploy/lib/base-compiler.js:2743:28)\n    at async file:///infra/.deploy/lib/base-compiler.js:2670:24\n    at async env.enqueue.abandonIfStale (file:///infra/.deploy/lib/base-compiler.js:2646:25)",
+      "request_filters": {
+        "binary": true,
+        "execute": false,
+        "intel": true,
+        "demangle": false,
+        "directives": false,
+        "labels": true,
+        "commentOnly": true,
+        "libraryCode": false,
+        "trim": false
+      },
+      "compiler_options": {
+        "executorRequest": false,
+        "skipAsm": true
+      },
+      "intentional_host_link_failure": false
+    },
+    {
+      "archive": "muse_moe_w4a16/TWO_CTA_CODEGEN_two_cta_wide_BIG1_2026-11-01_compact.json.gz",
+      "sha256": "cada6975e99b2bacacb23746f858488f0f0cefee12e37dd18ddb6559006f137d",
+      "big": 1,
+      "code": -1,
+      "outcome": "Compiler Explorer serialization failure, not CUDA compile failure; full resource result unknown",
+      "diagnostics": "Internal Compiler Explorer error: RangeError: Invalid string length\n    at JSON.stringify (<anonymous>)\n    at CompilationEnvironment.cachePut (file:///infra/.deploy/lib/compilation-env.js:118:41)\n    at NvccCompiler.afterCompilation (file:///infra/.deploy/lib/base-compiler.js:2743:28)\n    at async file:///infra/.deploy/lib/base-compiler.js:2670:24\n    at async env.enqueue.abandonIfStale (file:///infra/.deploy/lib/base-compiler.js:2646:25)",
+      "request_filters": {
+        "binary": true,
+        "execute": false,
+        "intel": true,
+        "demangle": false,
+        "directives": true,
+        "labels": true,
+        "commentOnly": true,
+        "libraryCode": false,
+        "trim": true
+      },
+      "compiler_options": {
+        "executorRequest": false
+      },
+      "intentional_host_link_failure": false
+    },
+    {
+      "archive": "muse_moe_w4a16/TWO_CTA_CODEGEN_two_cta_wide_BIG1_2026-11-01_hostasm.json.gz",
+      "sha256": "a99e447418f032ea5764bf78058f3511b1615ee9c30eeb2e578166ea59da8e65",
+      "big": 1,
+      "code": -1,
+      "outcome": "Compiler Explorer serialization failure, not CUDA compile failure; full resource result unknown",
+      "diagnostics": "Internal Compiler Explorer error: RangeError: Invalid string length\n    at JSON.stringify (<anonymous>)\n    at CompilationEnvironment.cachePut (file:///infra/.deploy/lib/compilation-env.js:118:41)\n    at NvccCompiler.afterCompilation (file:///infra/.deploy/lib/base-compiler.js:2743:28)\n    at async file:///infra/.deploy/lib/base-compiler.js:2670:24\n    at async env.enqueue.abandonIfStale (file:///infra/.deploy/lib/base-compiler.js:2646:25)",
+      "request_filters": {
+        "binary": false,
+        "execute": false,
+        "intel": true,
+        "demangle": false,
+        "directives": true,
+        "labels": true,
+        "commentOnly": true,
+        "libraryCode": false,
+        "trim": true
+      },
+      "compiler_options": {
+        "executorRequest": false
+      },
+      "intentional_host_link_failure": false
+    },
+    {
+      "archive": "muse_moe_w4a16/TWO_CTA_CODEGEN_two_cta_wide_BIG1_2026-11-01_overlay0.json.gz",
+      "sha256": "5763128168722e78032cabe152903c27b9e3eb546d72565ea9050bfa622921f1",
+      "big": 1,
+      "code": -1,
+      "outcome": "Compiler Explorer serialization failure, not CUDA compile failure; full resource result unknown",
+      "diagnostics": "Internal Compiler Explorer error: RangeError: Invalid string length\n    at JSON.stringify (<anonymous>)\n    at CompilationEnvironment.cachePut (file:///infra/.deploy/lib/compilation-env.js:118:41)\n    at NvccCompiler.afterCompilation (file:///infra/.deploy/lib/base-compiler.js:2743:28)\n    at async file:///infra/.deploy/lib/base-compiler.js:2670:24\n    at async env.enqueue.abandonIfStale (file:///infra/.deploy/lib/base-compiler.js:2646:25)",
+      "request_filters": {
+        "binary": true,
+        "execute": false,
+        "intel": true,
+        "demangle": false,
+        "directives": false,
+        "labels": true,
+        "commentOnly": true,
+        "libraryCode": false,
+        "trim": false
+      },
+      "compiler_options": {
+        "executorRequest": false
+      },
+      "intentional_host_link_failure": false
+    },
+    {
+      "archive": "muse_moe_w4a16/TWO_CTA_CODEGEN_two_cta_wide_BIG1_2026-11-01_resource_linkfail.json.gz",
+      "sha256": "401660a6b4bad66481410c253c38059703c447986a8e8380646e4a0ecb179b9a",
+      "big": 1,
+      "code": -1,
+      "outcome": "Compiler Explorer serialization failure, not CUDA compile failure; full resource result unknown",
+      "diagnostics": "Internal Compiler Explorer error: RangeError: Invalid string length\n    at JSON.stringify (<anonymous>)\n    at CompilationEnvironment.cachePut (file:///infra/.deploy/lib/compilation-env.js:118:41)\n    at NvccCompiler.afterCompilation (file:///infra/.deploy/lib/base-compiler.js:2743:28)\n    at async file:///infra/.deploy/lib/base-compiler.js:2670:24\n    at async env.enqueue.abandonIfStale (file:///infra/.deploy/lib/base-compiler.js:2646:25)",
+      "request_filters": {
+        "binary": true,
+        "execute": true,
+        "intel": true,
+        "demangle": false,
+        "directives": true,
+        "labels": true,
+        "commentOnly": true,
+        "libraryCode": false,
+        "trim": true
+      },
+      "compiler_options": {
+        "executorRequest": false
+      },
+      "intentional_host_link_failure": true
+    }
+  ],
+  "layout": {
+    "archive": "muse_moe_w4a16/TWO_CTA_WIDE_LAYOUT_CODEGEN_2026-11-01.json.gz",
+    "sha256": "86c2034cf0213ee97dd6a5177eaa114e25e0e13f97d39c65fd9f345def1072f2",
+    "code": 0,
+    "verified_struct_bytes": 10976,
+    "verified_metadata_bytes": 11008,
+    "verified_dynamic_shared_bytes": 113408,
+    "not_full_expert_body": true
+  },
+  "primary_tooling_sources": [
+    "https://github.com/compiler-explorer/compiler-explorer/blob/main/lib/compilers/nvcc.ts",
+    "https://github.com/compiler-explorer/compiler-explorer/blob/main/lib/base-compiler.ts"
+  ],
+  "tooling_scope": "Selected current upstream source read to understand output parsing and skipAsm. Deployed server revision not verified. Output filters, skipAsm, host-assembly and intentionally failed host-link request all remain inconclusive. Stop output-format retries.",
+  "next_action": "Keep original immutable V41 as first eligible experiment. FT64 overlay is an offline follow-up; actual full linked resource/numerical/performance validation is still required."
+}

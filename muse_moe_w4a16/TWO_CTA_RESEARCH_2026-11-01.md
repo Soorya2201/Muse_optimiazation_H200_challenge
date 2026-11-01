@@ -163,3 +163,16 @@ are removed and are never recorded as OKC runs. Results:
 The matching leader's broader public technical work is now screened in
 `LEADER_RELATED_WORK_2026-11-01.md`; no winning-source association or faster
 NVFP4 kernel was established. It does not alter the planned experiment.
+
+### Traffic and FT64 follow-up during maintenance
+
+`TWO_CTA_TRAFFIC_AND_OVERLAY_2026-11-01.md` quantifies logical TMA traffic
+from the two saved M32/M256 routing fixtures and records an independent FT64
+scratch-overlay alternative. FT32 adds0%/7.69% logical weight bytes and2x X
+bytes in those two cases; this is not measured HBM traffic or a slowdown.
+The FT64 alternative preserves original jobs but uses two weight slots and
+aliases dead route scratch into the later ring. CPU132routingfixtures and
+NVCC layout-only assertions pass113408dynamicbytes. Fivefull-body compiler
+service responses are inconclusive serialization errors. No GPU job, timing,
+new score or actual FT64 resource claim. Stop output-format retries; original
+immutable V41 remains first eligible once OKC service/budget checks succeed.
