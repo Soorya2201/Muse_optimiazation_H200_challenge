@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-11-01T20:31:19.620074+00:00",
+  "scope": "Service-availability observations from this goal turn, not GPU jobs or benchmark results.",
+  "commands": [
+    {
+      "command": "okc problems --json",
+      "exit_code": 1,
+      "stderr": "\u2717 the API answered 530 ; try again in a minute\n"
+    },
+    {
+      "command": "okc jobs --json",
+      "exit_code": 1,
+      "stderr": "\u2717 the API answered 530 ; try again in a minute\n"
+    }
+  ],
+  "maintenance_consecutive_goal_turns": 3,
+  "previous_goal_turn_classification": "progress: c5b94e2 added traffic analysis and FT64 scratch-overlay implementation/CPU/layout evidence",
+  "own_check_posts_this_turn": 0,
+  "own_gpu_job_handle": null,
+  "quota_consumption_claimed": false,
+  "blocking_condition": "Configured OKC H200 validation backend unavailable after announced GPU-node maintenance.",
+  "next_action": "Once OKC resumes: read live budgets, then check immutable submission_v41_two_cta_probe.py and log/poll that exact returned handle.",
+  "completion": false,
+  "prepared_source_sha256": "867444e3f7292f79368556a39ab66c49e7819eabd689d2efae0cd339493055cc"
+}

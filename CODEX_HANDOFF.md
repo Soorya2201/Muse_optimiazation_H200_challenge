@@ -67,6 +67,33 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Nov1 blocked audit: OKC unavailable across three consecutive goal turns
+
+Around20:30UTC fresh read-only problems/jobs queries both returnAPI530.
+This is the same GPU-node-maintenance blocker first announced20:03:58UTC.
+Previous turn c5b94e2 was concrete offline progress; no GPU handle exists
+for the prepared experiment, so this is not a verified wait on a live job.
+Three-turn blocked threshold is now satisfied. The full five-track rank1
+goal is incomplete and awaits external OKC recovery; no score gain claimed.
+Exact observations/readiness audit:
+research/service/OKC_BLOCKED_AUDIT_2026-11-01.json.
+
+V41 immutable SHA867444e3 and canonical prefix were reverified. Research,
+CPU/preflight and compiler-failure evidence are pushed; c5b94e2 local=origin.
+There is no local NVIDIA GPU. Next required evidence is actual linked H200
+resources, residency, nearby/fresh/empty/FP64 correctness and paired timings.
+Further CPU/layout evidence cannot establish those requirements. FT64 overlay
+full-body resource queries remain inconclusive; do not retry closed CE output
+formats or treat layout-only success as full-kernel validation.
+
+On resumption: first read live OKC budgets. If available, run the unchanged
+muse_moe_w4a16/submission_v41_two_cta_probe.py with check --json --no-wait;
+log the returned handle immediately, poll only that handle to terminal,
+archive/read all profiles/logs and extract with tools/extract_moe_two_cta_probe.py.
+Do not submit a score until original adoption/independent validation gates pass.
+No check POST, new GPU job, submit or canonical change in this blocked audit.
+No agents. Internal checkout authoritative while external volume is absent.
+
 #### Nov1 maintenance follow-up: traffic quantified, FT64 overlay retained offline
 
 Previousgoalturn7bb2767wasprogress(research+parserchecks),notverifiedwait.
