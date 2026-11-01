@@ -1,0 +1,23 @@
+{
+  "scope": "V49 original CLI files preserved on internal working backup; V48 external original CLI files unavailable while drive disconnected. Both full available remote receipts retained.",
+  "artifacts": [
+    {
+      "path": "muse_bf16_proj/profiles/submission_v49_ilc_probe.bd4aecd37f164283.json",
+      "bytes": 176552,
+      "sha256": "be457ee469b32b7d3dfdacc46916c6646941377be850471a7ab210d07d74628d",
+      "lines": 9352
+    },
+    {
+      "path": "muse_bf16_proj/profiles/submission_v49_ilc_probe.bd4aecd37f164283.log",
+      "bytes": 4308,
+      "sha256": "13512e24997d7c9c49a78fb68caf8ea0dde91d49bd7fb9cf2f712f574542dfed",
+      "lines": 6
+    },
+    {
+      "path": "muse_bf16_proj/profiles/submission_v49_ilc_probe.bd4aecd37f164283.txt",
+      "bytes": 12419,
+      "sha256": "5558e071be6ea6f867f46f35ef2470a7978b3af59ab7f2c2d825384af1e59b97",
+      "lines": 191
+    }
+  ]
+}

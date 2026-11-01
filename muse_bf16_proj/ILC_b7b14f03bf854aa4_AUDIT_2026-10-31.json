@@ -1,0 +1,11 @@
+{
+  "job": "b7b14f03bf854aa4",
+  "source_sha256": "ac071fac6362f2d4c93e176a93550fc7e592a09e863d50a8fc05dc150e35544b",
+  "status": "diagnostic_failed",
+  "exact_event_values": 0,
+  "exact_metric_values": 0,
+  "payload_chars": 1408,
+  "all_frames_consumed": true,
+  "rows": [],
+  "policies": []
+}

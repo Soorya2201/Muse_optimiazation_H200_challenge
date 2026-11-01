@@ -1,0 +1,88 @@
+{
+  "status": "diagnostic_failed",
+  "stage": "build",
+  "capabilities": null,
+  "edges": [],
+  "rows": [],
+  "specs": [
+    [
+      "qkv_gate",
+      128,
+      [
+        "qbig",
+        "weight"
+      ]
+    ],
+    [
+      "qkv_gate",
+      256,
+      [
+        "raw",
+        "qkv_gate"
+      ]
+    ],
+    [
+      "o",
+      128,
+      [
+        "oc_ol",
+        "weight"
+      ]
+    ],
+    [
+      "o",
+      256,
+      [
+        "oc_rl",
+        "weight"
+      ]
+    ],
+    [
+      "pooler",
+      128,
+      [
+        "klarge_rawT",
+        "pooler"
+      ]
+    ],
+    [
+      "pooler",
+      256,
+      [
+        "klarge_rawT",
+        "pooler"
+      ]
+    ],
+    [
+      "unpooler",
+      128,
+      [
+        "rawT",
+        "unpooler"
+      ]
+    ],
+    [
+      "unpooler",
+      256,
+      [
+        "klarge_rawT",
+        "unpooler"
+      ]
+    ]
+  ],
+  "gates": {
+    "parent_global": 0.0002,
+    "parent_row": 0.002,
+    "fp64_global": 0.01,
+    "fp64_row": 0.05,
+    "onehot": 0.001,
+    "aa": 0.02,
+    "matched": 0.03,
+    "component_speedup": 1.02,
+    "board_speedup": 1.03
+  },
+  "error": "RuntimeError: /Allocator.h:155:13: note: candidate: \u2018bool c10::operator!=(std::nullptr_t, const DataPtr&)\u2019\n  155 | inline bool operator!=(std::nullptr_t, const DataPtr& dp) noexcept {\n      |             ^~~~~~~~\n/opt/sglang/lib/python3.12/site-packages/torch/include/c10/core/Allocator.h:155:24: note:   no known conversion for argument 1 from \u2018const c10::intrusive_ptr<torch::autograd::Node>\u2019 to \u2018std::nullptr_t\u2019\n  155 | inline bool operator!=(std::nullptr_t, const DataPtr& dp) noexcept {\n      |                        ^~~~~~~~~~~~~~\nIn file included from /opt/sglang/lib/python3.12/site-packages/torch/include/torch/csrc/autograd/input_metadata.h:4,\n                 from /opt/sglang/lib/python3.12/site-packages/torch/include/torch/csrc/autograd/node.h:8,\n                 from /opt/sglang/lib/python3.12/site-packages/torch/include/torch/csrc/autograd/variable.h:11:\n/opt/sglang/lib/python3.12/site-packages/torch/include/ATen/ExpandUtils.h: In function \u2018at::Tensor at::_sum_to(Tensor, c10::ArrayRef<T>, bool)\u2019:\n/opt/sglang/lib/python3.12/site-packages/torch/include/ATen/ExpandUtils.h:470:28: error: \u2018sizes\u2019 is not a member of \u2018at::symint\u2019\n  470 |   auto sizes = at::symint::sizes<T>(tensor);\n      |                            ^~~~~\n/opt/sglang/lib/python3.12/site-packages/torch/include/ATen/ExpandUtils.h:470:35: error: expected primary-expression before \u2018>\u2019 token\n  470 |   auto sizes = at::symint::sizes<T>(tensor);\n      |                                   ^\nninja: build stopped: subcommand failed.\n",
+  "traceback": "ToTypeMeta.h:50:35: note:   no known conversion for argument 1 from \u2018const c10::intrusive_ptr<torch::autograd::Node>\u2019 to \u2018c10::ScalarType\u2019\n   50 | inline bool operator!=(ScalarType t, caffe2::TypeMeta m) {\n      |                        ~~~~~~~~~~~^\n/opt/sglang/lib/python3.12/site-packages/torch/include/c10/core/ScalarTypeToTypeMeta.h:54:13: note: candidate: \u2018bool c10::operator!=(caffe2::TypeMeta, ScalarType)\u2019\n   54 | inline bool operator!=(caffe2::TypeMeta m, ScalarType t) {\n      |             ^~~~~~~~\n/opt/sglang/lib/python3.12/site-packages/torch/include/c10/core/ScalarTypeToTypeMeta.h:54:41: note:   no known conversion for argument 1 from \u2018const c10::intrusive_ptr<torch::autograd::Node>\u2019 to \u2018caffe2::TypeMeta\u2019\n   54 | inline bool operator!=(caffe2::TypeMeta m, ScalarType t) {\n      |                        ~~~~~~~~~~~~~~~~~^\n/opt/sglang/lib/python3.12/site-packages/torch/include/c10/core/Allocator.h:152:13: note: candidate: \u2018bool c10::operator!=(const DataPtr&, std::nullptr_t)\u2019\n  152 | inline bool operator!=(const DataPtr& dp, std::nullptr_t) noexcept {\n      |             ^~~~~~~~\n/opt/sglang/lib/python3.12/site-packages/torch/include/c10/core/Allocator.h:152:39: note:   no known conversion for argument 1 from \u2018const c10::intrusive_ptr<torch::autograd::Node>\u2019 to \u2018const c10::DataPtr&\u2019\n  152 | inline bool operator!=(const DataPtr& dp, std::nullptr_t) noexcept {\n      |                        ~~~~~~~~~~~~~~~^~\n/opt/sglang/lib/python3.12/site-packages/torch/include/c10/core/Allocator.h:155:13: note: candidate: \u2018bool c10::operator!=(std::nullptr_t, const DataPtr&)\u2019\n  155 | inline bool operator!=(std::nullptr_t, const DataPtr& dp) noexcept {\n      |             ^~~~~~~~\n/opt/sglang/lib/python3.12/site-packages/torch/include/c10/core/Allocator.h:155:24: note:   no known conversion for argument 1 from \u2018const c10::intrusive_ptr<torch::autograd::Node>\u2019 to \u2018std::nullptr_t\u2019\n  155 | inline bool operator!=(std::nullptr_t, const DataPtr& dp) noexcept {\n      |                        ^~~~~~~~~~~~~~\nIn file included from /opt/sglang/lib/python3.12/site-packages/torch/include/torch/csrc/autograd/input_metadata.h:4,\n                 from /opt/sglang/lib/python3.12/site-packages/torch/include/torch/csrc/autograd/node.h:8,\n                 from /opt/sglang/lib/python3.12/site-packages/torch/include/torch/csrc/autograd/variable.h:11:\n/opt/sglang/lib/python3.12/site-packages/torch/include/ATen/ExpandUtils.h: In function \u2018at::Tensor at::_sum_to(Tensor, c10::ArrayRef<T>, bool)\u2019:\n/opt/sglang/lib/python3.12/site-packages/torch/include/ATen/ExpandUtils.h:470:28: error: \u2018sizes\u2019 is not a member of \u2018at::symint\u2019\n  470 |   auto sizes = at::symint::sizes<T>(tensor);\n      |                            ^~~~~\n/opt/sglang/lib/python3.12/site-packages/torch/include/ATen/ExpandUtils.h:470:35: error: expected primary-expression before \u2018>\u2019 token\n  470 |   auto sizes = at::symint::sizes<T>(tensor);\n      |                                   ^\nninja: build stopped: subcommand failed.\n\n",
+  "elapsed_s": 10.452152956975624,
+  "metric_codec": "normal2_comp2_fresh4_remap8_f32_then_fp64_3d"
+}

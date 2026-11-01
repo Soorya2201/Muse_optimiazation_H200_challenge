@@ -67,24 +67,42 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
-#### Oct31 BF16 ILC V48 terminal; V49 concrete build repair ready
+#### Nov1 BF16 ILC terminal; next sequential track decoder
 
-Only BF16active. Previousgoalturnrankrefresh is nooptimizationprogress;
-thisturn retrieves authoritative terminalb7b14f03bf854aa4(sfo3c): parent
-9tests/30timings pass1.568496321x,CI1.544969–1.592024,prepare174.522s.
-Independent10.452s fails build before queryingcapability,zeroedges/rows.
-SourceforcedC++17whileprimaryPyTorchrequires20;lostfirstcompilererror
-limitsattribution. Preserveoriginaltail/trace andall30remoteprofiles.
-V49 fixesbothcompilerflags20 andcapturesfirst6000+last1500errorchars.
-SHA16986615008b886d9863d163dc9416d6a9178bc68a8f47549860bc71aa2ddd3e.
-Canonicalprefix/kernel/gatesunchanged;CPU520copy/72round/13orders/1024
-event/608metricsstillpass. Thisisno newscoredgain. V48fifthof8routine
-checks;nextV49sixth,submits0. See ILC_RESEARCH_2026-10-31.md.
-ExternalvolumeDISCONNECTED duringanalysis;workingfromcleaninternalbackup
-/Users/soorya/muse_work/continuation_20261030 fastforwardeedd990→3e4ad7b.
-Re-fetchedsamejob,noGPUrestart. Remoteevidencerecovered;externalCLI files
-not currentlyavailable. PreserveexternaluntrackedMadhavan untouched.
-Noagents. NextafterBF16stopconditiondecoder. Goalactive/incomplete.
+Previousgoalturnrankrefreshwasnooptimizationprogress. Thiscycle recovers
+V48terminal,fixesactualC++17→20buildmismatchandcompletesH200experiment.
+V48b7b14f03bf854aa4sfo3c parent9/30passes1.568496321x;independent
+buildfailurebeforecapabilities/rows. Originaltail/trace/30profilesarchived.
+V49SHA16986615008b886d9863d163dc9416d6a9178bc68a8f47549860bc71aa2ddd3e
+checkbd4aecd37f164283TERMINALsfo3,parent9/30pass1.566228442x,
+CI1.542735016–1.589721869,prepare185.679274s. NOTcandidate gain.
+Independent19.325135s complete6bytechecks/32groups/1024eventfloatbits/
+608exactmetrics;capability[0,1,1,9,0],actualflags0/1,2MiBgranularity.
+Allnormal/compressed/fresh/remappayloadagreements0;FP64maxglobal
+.0016639371,row.0017481605,hot0. No matchedgroupreaches2%gain.
+AAmax2.105920493%fails2%,matchedmax2.310690255%passes3%. All8cells/
+255fixedpoliciesreject,bestchangedworstconditionalproxy1.000598461x.
+No physicaltraffic/compressionratioclaim;flaggrantdoesnotprovethese
+weightscompressed. CloseeightlargeBF16cellallocationform,noblindretry.
+Fresh-thread/deepcopy/postprepareownershipnotexercised,nopromotion.
+All30profiles/191CLItextlines/6CLIloglines/availablefulllogtail/32rawgroups
+andratiosinspected. ThreeV49originalCLI filespreservedinternallywith
+hashmanifest. tools/analyze_bf16_ilc.py losslesslydecodesandmodelsall255.
+Read muse_bf16_proj/ILC_RESEARCH_2026-10-31.md terminalsection.
+
+ActualV49submissionNov1 03:33:24UTCafterreset,FIRSTof8routineBF16Nov1
+checks,allothertracks0;submits0. PrelaunchanticipatedsixthOct31iswrong,
+correctedbyactualclockandbudget;Oct31BF16ended5,MoE8,attention2,decoder1,
+prefill7. NoGPUjoblive,nocanonical/scoredchange,goalactive/incomplete.
+ExternalvolumeDISCONNECTED duringanalysis;currentauthoritativeworkingtree
+/Users/soorya/muse_work/continuation_20261030,fastforwardeedd990→3e4ad7b
+thenowncommits2dc7c47onmain. V48originalexternalCLI filesunavailable;
+samejobremotere-fetched,norestart. Ifexternalreturns,checkstatus/FFonly,
+preserveuntrackedresearch/public/madhavan_721c627/untouched/unpublished.
+PrivateGitHubverified. LatestNov1 11:41:09UTC rankssaved:overall186/1810,
+BF16275/1595,MoE202/1286,attention221/1232,decoder186/1159,prefill196/784.
+Scoresunchanged,None1. Nextdecoder:readAGENTS/TASK/latestWGSoperand/
+rounded-widthnegativeevidence;chooseadistinctmechanismbeforeGPU. Noagents.
 
 
 #### Oct31 attention integer-exp V28 TERMINAL; next sequential track BF16

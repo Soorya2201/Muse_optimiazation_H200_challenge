@@ -1,17 +1,16 @@
 # BF16 projection optimization research library
 
-Oct31 latest: [Hopper inline-compression allocation experiment](ILC_RESEARCH_2026-10-31.md),
-V48checkb7b14f03bf854aa4 terminal on sfo3c: parent9/30pass, independent
-buildfailure/0timinggroups. V49 fixes explicitC++17→20flags; routineBF165/8
-used before a possible sixth check. No mathematical
-kernel or scored source changed. The new twin-allocation wrapper compares
-normal/compressible physical handles at one VA with the same graph; it must
-verify support/actual flags and exact bytes before timing eight large cells.
-CPU copy/state/order/lossless-wire preflight passes; native binding/support
-and performance remain unproven. The32group protocol retains both seeds,
-two layouts and all1024event values. A gain needs broader ownership/repeat
-and changed-dispatch checks before promotion. New source reviews/pins:
-[NWC, ZipServ and NVIDIA](LOSSLESS_SOURCE_REVIEW_LATE_2026-10-31.md).
+Nov1 latest: [Hopper inline-compression experiment and full result](ILC_RESEARCH_2026-10-31.md).
+V48failedbuild usingC++17; repairedV49/checkbd4aecd37f164283 compiles20,
+passesparent9tests/30timings andindependent6bytechecks/32groups/1024exact
+event values/608metrics. HardwareVMM+compression support/actualflags pass,
+all outputagreements0. No matchedcomponentgroup gains2%;all8cells and255
+fixedpoliciesreject. AAmax2.1059%alsofails2%,bestchangedworstconditional
+proxy1.000598461x. No causaltraffic/compressionratio ornewscoredclaim.
+CloseeightlargeBF16cellallocationform;canonicalunchanged,no submit.
+Nov1BF16routine1/8afterreset,others0;Oct31BF16ended5/8. Allprofiles/logs/
+rawevidencearchived;externaldriveabsent,internalbackupauthoritative.
+Nextdecoder. Newsourcepins/limits: [NWC,ZipServ,NVIDIA](LOSSLESS_SOURCE_REVIEW_LATE_2026-10-31.md).
 
 Oct31 late [global exponent normalization](GLOBAL_NORMALIZATION_2026-10-31.md)
 is now terminal. V43/check3aa502d1eb8f4854 passes9tests/30timings with the

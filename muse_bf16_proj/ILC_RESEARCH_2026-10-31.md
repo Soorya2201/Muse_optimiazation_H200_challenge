@@ -157,3 +157,66 @@ internal backup was fast-forwarded fromeedd990 to3e4ad7b and the same
 terminal job re-fetched; the job was not restarted. Original local CLI
 files on the disconnected volume are unavailable at this moment; all
 remote structured profiles and complete available log_tail were read.
+
+### V49 terminal H200 result: supported, exact, no qualifying gain
+
+The corrected C++20 helper compiled and completed on H200/sfo3 in check
+`bd4aecd37f164283`. Actual submission was **Nov1 03:33:24UTC**, after
+the daily reset: this is **Nov1 BF16 routine check1/8**, not the sixth
+Oct31 check anticipated above. Oct31 remains5. All scored submits0.
+The parent timed path passes9tests/30timings at1.566228442x,
+CI1.542735016–1.589721869,3084.352110us,prepare185.679274s.
+That official check score is not an ILC candidate score.
+
+Independent19.325135s completes all32groups,1024exact event float32
+values and608exact error metrics, in3284wire characters. Device response
+`[0,1,1,9,0]` confirms VMM and generic compression support on SM90.
+All allocations report requested/actual ordinary0 and compressible1;
+minimum common granularity2MiB. Every all-BF16-bit-pattern and tail byte
+check passes. All normal/compressed, fresh-input and four alternating
+weight/mapping comparisons have **zero** output difference. FP64 maximum
+global0.0016639371,row0.0017481605,onehot0: original gates pass. This
+validates the tested live-owner/remapping path; fresh-thread/deepcopy and
+post-prepare ownership were not exercised and remain unproven for a port.
+
+Each table value is a range across all four pad/seed groups of that
+cell's median paired ratio; greater than1means compressible is faster.
+The original8-round Williams schedule and all samples are retained.
+
+|Cell|Actual / compressible|Matched ordinary / compressible|Eligible|
+|---|---:|---:|---|
+|qkv_gate M128|1.009751–1.020313|0.986303–1.006419|No|
+|qkv_gate M256|0.988383–1.005315|1.003029–1.018349|No|
+|o M128|0.987940–1.024710|0.989512–1.009317|No|
+|o M256|0.968198–1.005804|0.982232–1.003866|No|
+|pooler M128|0.995896–1.011871|0.997319–1.004119|No|
+|pooler M256|0.971157–1.000599|0.982580–1.004104|No|
+|unpooler M128|0.996387–1.009968|1.000003–1.005844|No|
+|unpooler M256|0.999985–1.004973|0.988945–1.004705|No|
+
+No single group even reaches the matched2%gain threshold. One A/A group
+also fails its2%gate (max2.105920493%); matched/actual offsets stay within
+3%(max2.310690255%). These results do not support attributing a measured
+causal stall or compression ratio. A granted flag alone cannot establish
+that the pattern actually compressed; no physical-traffic counters exist.
+
+All255nonempty fixed policies fail eligibility. The best changed policy
+by worst-group conditional board proxy selects QKV128,pooler128,unpooler
+128/256, giving **1.000598461x**, below1.03 and with failing component gates.
+This is a conditional model applying synthetic event ratios to same-job
+scored cell times; it is not a new leaderboard result. Even ignoring the
+A/A failure would not create a qualifying policy. No group was dropped
+or threshold relaxed. Close this allocation-only form for these eight
+large dense cells; no blind repeat, promotion, scored submit or canonical
+change. Do not extrapolate it to unrelated data layouts or all GPUs.
+
+`tools/analyze_bf16_ilc.py` reconstructs every float32 event bit and every
+metric, checks full frame consumption, group coverage and gates, and
+recomputes all255policies. The decoded report and complete audit are
+`ILC_bd4aecd37f164283_DECODED_2026-11-01.json` and the companion `AUDIT`.
+All30profile tables,191CLI text lines,6CLI log lines, complete available
+remote log_tail and all32raw rows/ratios were inspected. Three original
+V49CLI files are preserved on the internal backup; their hashes/size/line
+counts are in `ILC_CLI_ARTIFACTS_2026-11-01.json`. V48remote evidence is
+retained; its external-volume original CLI files remain unavailable.
+The private repository was reverified. Next sequential track: decoder.

@@ -17,8 +17,10 @@ blobs/SHA256. Static source review only; trained/GDDR/A16 projections are
 not H200 gains. The selected new mechanism is optional hardware inline
 compression, independently implemented with VMM properties/owner guards
 and fixed-VA controls. V48checkb7b14f03bf854aa4 terminal sfo3c,parent9/30pass but independent
-buildfailed beforecapabilities. V49 repairs explicitC++17flags to20; no
-support/performance/score claim orpromotion.
+buildfailed beforecapabilities. V49repair/checkbd4aecd37f164283 compiles20 andconfirmsdevice
+support,actual0/1flags/exactbytes andall32numericalgroups. No matchedgroup
+gains2%;all255policiesreject,bestworstconditionalproxy1.000598461x.
+No promotion/newscoredgain;fullterminalreport/rawevidence retained.
 
 Oct31 attention integer-exp follow-up:
 [research and terminal H200 result](muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md).

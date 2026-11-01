@@ -1,16 +1,16 @@
 # Verified leaderboard snapshot
 
-Captured **2026-10-31 23:16:42 UTC** from six live OKC boards. Overall **#156/1774**.
+Captured **2026-11-01 11:41:09 UTC** from six live OKC boards. Overall **#186/1810**.
 No track has reached rank1. Positions change as others submit. Compact evidence:
-[rank_summary_20261031231642.json](research/leaderboards/rank_summary_20261031231642.json).
+[rank_summary_20261101114109.json](research/leaderboards/rank_summary_20261101114109.json).
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|253/1554|1.535843x|1.6523x|7.05%|
-|Routed experts|184/1258|2.372309x|2.7642x|14.18%|
-|Attention decode|196/1201|2.603505x|3.3389x|22.03%|
-|Whole decoder|156/1119|2.211495x|2.4690x|10.43%|
-|Prefill|183/760|1.784958x|2.1551x|17.18%|
+|BF16 projections|275/1595|1.535843x|1.6523x|7.05%|
+|Routed experts|202/1286|2.372309x|2.7642x|14.18%|
+|Attention decode|221/1232|2.603505x|3.3389x|22.03%|
+|Whole decoder|186/1159|2.211495x|2.4844x|10.98%|
+|Prefill|196/784|1.784958x|2.2815x|21.76%|
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
@@ -165,3 +165,9 @@ with unchangedparent2.597584427x. Independent6nearby/16groups/576exact
 event values pass accuracy but every group is slower;oneAAgroupalso
 fails1% and all8changed fixed policiesreject. No promotion/scoredchange.
 Complete evidence in muse_attention_decode/INTEGER_EXP_RESEARCH_2026-10-31.md.
+
+Nov1 BF16 hardware-compression checkbd4aecd37f164283 passesparent9/30
+andall32independentnumericgroups,butno matchedgroup reaches2%gain.
+All255policiesreject;bestworstconditionalproxy1.000598461x. Device
+support/flaggrantconfirmed,actualcompressionratioruntimebenefitunproven.
+No promotion/scoredchange. Fulloutcomeinmuse_bf16_proj/ILC_RESEARCH_2026-10-31.md.
