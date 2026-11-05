@@ -1,0 +1,235 @@
+{
+  "captured_utc": "2026-11-05T05:27:38.924852+00:00",
+  "observations": {
+    "overall": {
+      "exit_code": 0,
+      "you": {
+        "rank": 372,
+        "team": "Soorya2201",
+        "first": false,
+        "ahead": 371
+      },
+      "ranked": 2008,
+      "leader": {
+        "rank": 1,
+        "solved": 4,
+        "team": "gogowhy"
+      }
+    },
+    "muse_bf16_proj": {
+      "exit_code": 0,
+      "you": {
+        "rank": 1561,
+        "team": "Soorya2201",
+        "speedup": 1.1158,
+        "first": false,
+        "ahead": 1560,
+        "to_first": 1.5484
+      },
+      "ranked": 1739,
+      "leader": {
+        "attempts": 42,
+        "job": "2447400a2dca4443",
+        "rank": 1,
+        "screened_speedup": 1.6940318467969206,
+        "speedup": 1.7277,
+        "submitted_at": 1793848195.2660983,
+        "team": "gogowhy",
+        "value": 2796.1532849797154
+      }
+    },
+    "muse_moe_w4a16": {
+      "exit_code": 0,
+      "you": {
+        "rank": 330,
+        "team": "Soorya2201",
+        "speedup": 2.3723,
+        "first": false,
+        "ahead": 329,
+        "to_first": 1.1751
+      },
+      "ranked": 1421,
+      "leader": {
+        "attempts": 84,
+        "job": "65e3570702a842d9",
+        "rank": 1,
+        "screened_speedup": 2.737275512046385,
+        "speedup": 2.7877,
+        "submitted_at": 1793832083.409093,
+        "team": "pjmullin3",
+        "value": 4824.227155814675
+      }
+    },
+    "muse_attention_decode": {
+      "exit_code": 0,
+      "you": {
+        "rank": 338,
+        "team": "Soorya2201",
+        "speedup": 2.6035,
+        "first": false,
+        "ahead": 337,
+        "to_first": 1.2825
+      },
+      "ranked": 1369,
+      "leader": {
+        "attempts": 19,
+        "job": "d64f5ae375bd434d",
+        "rank": 1,
+        "screened_speedup": 3.2155119721141996,
+        "screening": "pending",
+        "speedup": 3.3389,
+        "submitted_at": 1793484333.7628322,
+        "team": "pjmullin3",
+        "value": 1127.9992224649493
+      }
+    },
+    "muse_decode_layer": {
+      "exit_code": 0,
+      "you": {
+        "rank": 372,
+        "team": "Soorya2201",
+        "speedup": 2.2115,
+        "first": false,
+        "ahead": 371,
+        "to_first": 1.1654
+      },
+      "ranked": 1294,
+      "leader": {
+        "attempts": 57,
+        "job": "ccb29590d8284d39",
+        "rank": 1,
+        "speedup": 2.5772,
+        "submitted_at": 1793852047.1458988,
+        "team": "gogowhy",
+        "value": 8776.930424985127
+      }
+    },
+    "muse_prefill_layer": {
+      "exit_code": 0,
+      "you": {
+        "rank": 312,
+        "team": "Soorya2201",
+        "speedup": 1.785,
+        "first": false,
+        "ahead": 311,
+        "to_first": 1.2029
+      },
+      "ranked": 891,
+      "leader": {
+        "attempts": 6,
+        "job": "221df99535a54620",
+        "rank": 1,
+        "speedup": 2.1471,
+        "submitted_at": 1793786666.6405509,
+        "team": "LeshengJin",
+        "value": 180434.2727484636
+      }
+    },
+    "problems": {
+      "exit_code": 0,
+      "data": {
+        "problems": [
+          {
+            "name": "muse_bf16_proj",
+            "title": "Dense projections",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_attention_decode",
+            "title": "Gated attention decode",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_moe_w4a16",
+            "title": "Routed experts",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_decode_layer",
+            "title": "Whole decoder layer",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_prefill_layer",
+            "title": "Prefill layer",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "bf16_review": {
+    "id": "a3d4758c1e174aba",
+    "board": "muse_bf16_proj",
+    "status": "done",
+    "disqualified": true,
+    "disqualified_reason": "Contains compressed or encoded source that's decoded at run time. Violates the rules.",
+    "original_speedup": 1.535843058914656,
+    "currently_ranked_row": {
+      "attempts": 3,
+      "job": "167d6e5c85f74682",
+      "rank": 1561,
+      "speedup": 1.1158,
+      "submitted_at": 1793137696.4804363,
+      "team": "Soorya2201",
+      "value": 4329.581111223786
+    }
+  },
+  "previous_snapshot": "research/leaderboards/rank_summary_20261101190307.json",
+  "new_gpu_jobs_submitted": 0
+}

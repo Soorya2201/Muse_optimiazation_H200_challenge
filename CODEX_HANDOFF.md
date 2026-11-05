@@ -67,6 +67,31 @@ okc withdraw <job>            # take a run off the board
 
 ### Continuation update (supersedes the older table below)
 
+#### Nov4 21:27 PST status: service responds; BF16 best disqualified
+
+Live six-board/budget read succeeds Nov5 05:27:38UTC. Overall372/2008;
+BF161561/1739at1.1158x,MoE330/1421at2.3723x,attention338/1369at2.6035x,
+decoder372/1294at2.2115x,prefill312/891at1.7850x. No rank1. Other four
+points match the Nov1 snapshot; BF16 is an eligibility loss, not judge noise.
+Read-only status a3d4758c1e174aba has disqualified=true and official reason:
+"Contains compressed or encoded source that's decoded at run time. Violates the rules."
+Live BF16 board instead ranks167d6e5c85f74682. Evidence and fresh tables:
+research/leaderboards/status_20261105052738.json and RANK_STATUS.md.
+
+The prior external service blocker has cleared. Before further MoE testing,
+priority is to audit current BF16 TASK/rules and replace runtime-encoded source
+with readable source, validate numerical equivalence, then run official checks
+before any scored submission. Do not claim the former1.535843x as eligible.
+Other four best receipts' review status was not fetched during this refresh.
+No new GPU/check/submit job during status request. Live service limits now
+40checks/20scored each with0used; project reserved budgets still apply.
+
+External volume is back but its checkout is stale3e4ad7b with untracked
+research/public/madhavan_721c627/,run_receipts/,and BF16 receipt. Preserve all.
+Internal continuation has latest work throughdd46f7b and remains the source
+for this status update. Do not reset/publish/read the excluded research folder.
+GitHub freshly verified PRIVATE. New MoE V41 and FT64 overlay still unsubmitted.
+
 #### Nov1 blocked audit: OKC unavailable across three consecutive goal turns
 
 Around20:30UTC fresh read-only problems/jobs queries both returnAPI530.

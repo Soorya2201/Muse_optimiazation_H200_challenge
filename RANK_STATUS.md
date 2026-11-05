@@ -1,16 +1,19 @@
 # Verified leaderboard snapshot
 
-Captured **2026-11-01 19:03:07 UTC** from six live OKC boards. Overall **#215/1823**.
-No track has reached rank1. Positions change as others submit. Compact evidence:
-[rank_summary_20261101190307.json](research/leaderboards/rank_summary_20261101190307.json).
+Captured **2026-11-04 21:27:38 PST** from six live OKC boards. Overall **#372/2008**. OKC boards and budgets are responding again. No track has reached rank1.
+Evidence: [status_20261105052738.json](research/leaderboards/status_20261105052738.json).
+
+**BF16 eligibility changed:** former best job `a3d4758c1e174aba` (1.535843x) is now explicitly disqualified. Official reason: "Contains compressed or encoded source that's decoded at run time. Violates the rules." The live board selects the older `167d6e5c85f74682` at1.1158x. Restore compliant readable source and validate before another scored submission.
 
 |Track|Our rank|Scored speedup|Leader speedup|Time cut to match leader|
 |---|---:|---:|---:|---:|
-|BF16 projections|289/1606|1.535843x|1.6523x|7.05%|
-|Routed experts|221/1297|2.372309x|2.7642x|14.18%|
-|Attention decode|236/1241|2.603505x|3.3389x|22.03%|
-|Whole decoder|215/1168|2.211495x|2.4844x|10.98%|
-|Prefill|213/792|1.784958x|2.2815x|21.76%|
+|BF16 projections|1561/1739|1.1158x|1.7277x|35.42%|
+|Routed experts|330/1421|2.3723x|2.7877x|14.90%|
+|Attention decode|338/1369|2.6035x|3.3389x|22.03%|
+|Whole decoder|372/1294|2.2115x|2.5772x|14.19%|
+|Prefill|312/891|1.7850x|2.1471x|16.86%|
+
+The MoE/attention/decoder/prefill scores match the previous snapshot. Ranks have fallen as the boards changed. New MoE designs remain unsubmitted; CPU/compiler layout evidence is not GPU validation. Latest prefill batching and BF16 compression experiments found no eligible gain. Repository visibility was freshly verified PRIVATE. No new GPU job or scored submission during this status refresh.
 
 The final column is 1−our_score/leader_score at a fixed leaderboard baseline;
 it is a planning gap, not a prediction. Prefill has a separate board and does
