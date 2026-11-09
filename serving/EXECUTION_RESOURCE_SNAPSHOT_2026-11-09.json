@@ -1,0 +1,144 @@
+{
+  "captured_utc": "2026-11-09T23:49:44.331883+00:00",
+  "machine": "arm64",
+  "system": "Darwin",
+  "observations": {
+    "serving_status": {
+      "command": [
+        "/Users/soorya/.okc/bin/okc",
+        "serve",
+        "status",
+        "--json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"priority\": null,\n  \"serving_priority\": null\n}\n",
+      "stderr": "",
+      "parsed": {
+        "priority": null,
+        "serving_priority": null
+      }
+    },
+    "serving_jobs": {
+      "command": [
+        "/Users/soorya/.okc/bin/okc",
+        "serve",
+        "jobs",
+        "--json"
+      ],
+      "returncode": 0,
+      "stdout": "[]\n",
+      "stderr": "",
+      "parsed": []
+    },
+    "listed_kernel_limits": {
+      "command": [
+        "/Users/soorya/.okc/bin/okc",
+        "problems",
+        "--json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"problems\": [\n    {\n      \"name\": \"muse_bf16_proj\",\n      \"title\": \"Dense projections\",\n      \"limits\": {\n        \"scored\": {\n          \"per_day\": 20,\n          \"used\": 0,\n          \"left\": 20\n        },\n        \"checks\": {\n          \"per_day\": 40,\n          \"used\": 0,\n          \"left\": 40\n        }\n      }\n    },\n    {\n      \"name\": \"muse_attention_decode\",\n      \"title\": \"Gated attention decode\",\n      \"limits\": {\n        \"scored\": {\n          \"per_day\": 20,\n          \"used\": 0,\n          \"left\": 20\n        },\n        \"checks\": {\n          \"per_day\": 40,\n          \"used\": 0,\n          \"left\": 40\n        }\n      }\n    },\n    {\n      \"name\": \"muse_moe_w4a16\",\n      \"title\": \"Routed experts\",\n      \"limits\": {\n        \"scored\": {\n          \"per_day\": 20,\n          \"used\": 0,\n          \"left\": 20\n        },\n        \"checks\": {\n          \"per_day\": 40,\n          \"used\": 0,\n          \"left\": 40\n        }\n      }\n    },\n    {\n      \"name\": \"muse_decode_layer\",\n      \"title\": \"Whole decoder layer\",\n      \"limits\": {\n        \"scored\": {\n          \"per_day\": 20,\n          \"used\": 0,\n          \"left\": 20\n        },\n        \"checks\": {\n          \"per_day\": 40,\n          \"used\": 0,\n          \"left\": 40\n        }\n      }\n    },\n    {\n      \"name\": \"muse_prefill_layer\",\n      \"title\": \"Prefill layer\",\n      \"limits\": {\n        \"scored\": {\n          \"per_day\": 20,\n          \"used\": 0,\n          \"left\": 20\n        },\n        \"checks\": {\n          \"per_day\": 40,\n          \"used\": 0,\n          \"left\": 40\n        }\n      }\n    }\n  ]\n}\n",
+      "stderr": "",
+      "parsed": {
+        "problems": [
+          {
+            "name": "muse_bf16_proj",
+            "title": "Dense projections",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_attention_decode",
+            "title": "Gated attention decode",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_moe_w4a16",
+            "title": "Routed experts",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_decode_layer",
+            "title": "Whole decoder layer",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          },
+          {
+            "name": "muse_prefill_layer",
+            "title": "Prefill layer",
+            "limits": {
+              "scored": {
+                "per_day": 20,
+                "used": 0,
+                "left": 20
+              },
+              "checks": {
+                "per_day": 40,
+                "used": 0,
+                "left": 40
+              }
+            }
+          }
+        ]
+      }
+    },
+    "local_cuda": {
+      "command": [
+        "/Users/soorya/muse_work/serving_cpu_env/bin/python",
+        "-c",
+        "import torch,json; print(json.dumps(dict(torch=torch.__version__,cuda_available=torch.cuda.is_available(),cuda_device_count=torch.cuda.device_count())))"
+      ],
+      "returncode": 0,
+      "stdout": "{\"torch\": \"2.15.0\", \"cuda_available\": false, \"cuda_device_count\": 0}\n",
+      "stderr": "",
+      "parsed": {
+        "torch": "2.15.0",
+        "cuda_available": false,
+        "cuda_device_count": 0
+      }
+    }
+  },
+  "interpretation": "The check endpoint rejection is in EXECUTION_GATE_RECHECK. Listed historical kernel limits do not establish serving eligibility or an available development GPU. No running serving handle; no GPU benchmark result."
+}

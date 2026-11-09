@@ -2,7 +2,11 @@
 
 The project objective is now [winning the serving challenge](OBJECTIVE.md).
 There is no official serving run, score or verified rank for this work yet.
-One check request was rejected before a job was created because serving is closed.
+Two check requests were rejected before a job was created because serving is closed.
+The latest live recheck at23:48UTC confirms November12at9amPacific. This is an
+execution blocker, not a running wait. See [the audit](EXECUTION_BLOCKER_AUDIT_2026-11-09.md)
+and resource snapshot. The prepared native experiments need official execution
+or an existing authorized Hopper node; no such node has been supplied.
 
 Private review: [draft PR1](https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/pull/1),
 branch `serving/20261109`. Initial implementation/research checkpoint46e0902.

@@ -1,5 +1,17 @@
 # Current handoff: serving challenge (November9)
 
+Execution-gate checkpoint: at 23:48 UTC candidate 01's check was again rejected
+before job creation; opens Nov 12 at 9 am PT. Fresh serving jobs are empty,
+priority null, local arm64 Darwin with zero CUDA devices. See EXECUTION_GATE_RECHECK,
+EXECUTION_RESOURCE_SNAPSHOT and EXECUTION_BLOCKER_AUDIT_2026-11-09.md. The
+same resource constraint persisted through 6640357/b7499c2/f0338b6/this turn.
+Prior turns made offline progress; now native execution is the required gate.
+No active GPU process or job handle: not a verified wait. Do not keep adding
+unmeasured variants or rerun denied requests before the condition changes.
+Goal blocked transition is requested after checkpoint push; objective not met.
+Resume on official opening or supplied existing authorized Hopper node, then
+revalidate rules/base/budgets and follow documented check/validation sequence.
+
 Latest: separate serving/prototypes/humming_moe.py now exists, SHA256
 2bbec6b86f2f7789387de8bc4155930196bf0c11ef812ed11f868c7988adff5d.
 No submission integration or native GPU run. Crucial audit: Humming 0.1.12

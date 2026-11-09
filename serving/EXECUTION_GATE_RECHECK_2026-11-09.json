@@ -1,0 +1,19 @@
+{
+  "requested_utc": "2026-11-09T23:48:02.811785+00:00",
+  "previous_checkpoint": "f0338b65fe1e7b2a896a7333084dae086acf5b81",
+  "patch": "serving/candidates/01_ep_route_density.diff",
+  "sha256": "19e7e68418c960399c9721dcf6f6e6927328414a19ae0cb67af15abc7fcd66f7",
+  "state": "response_received",
+  "handle": null,
+  "command": [
+    "/Users/soorya/.okc/bin/okc",
+    "serve",
+    "check",
+    "/Users/soorya/muse_work/serving_20261109/serving/candidates/01_ep_route_density.diff",
+    "--no-wait"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "\u2717 the serving track isn't open yet: it opens Nov 12 at 9 am PT, and `okc serve init` works already\n",
+  "completed_utc": "2026-11-09T23:48:03.844311+00:00"
+}

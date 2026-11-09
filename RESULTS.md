@@ -1,5 +1,13 @@
 # Run log
 
+Execution gate rechecked Nov9at23:48UTC: official candidate01check request
+again rejected before job creation, opening Nov12at9amPacific. Saved exact
+response and fresh resource snapshot (empty serving jobs; local CUDA devices0).
+No optimization, GPU timing, new rank or verified wait resulted. See
+serving/EXECUTION_BLOCKER_AUDIT_2026-11-09.md for the repeated constraint,
+incomplete gates and resume criteria. Existing source/candidate hashes remain
+unchanged. This is a blocked checkpoint, not a winning/completed objective.
+
 Serving Humming adapter checkpoint, Nov9: implemented a separate development
 projection adapter; no submission integration or GPU execution. Source audit
 found BF16 Stream-K partial reduction despite FP32 MMA, so the adapter excludes

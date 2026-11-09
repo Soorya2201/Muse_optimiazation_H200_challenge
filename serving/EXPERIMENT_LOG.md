@@ -155,3 +155,23 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
   No official request repeated, rented node ordered or service score obtained.
   Next gate is real native validation/timing; a no-Stream-K regression must be
   recorded/rejected rather than relaxed to lower precision for a faster score.
+
+## Nov 9 execution-blocker revalidation
+
+- Previous turn was progress (f0338b6), not a verified wait. This turn adds
+  no optimization: it revalidates the missing execution route after three
+  consecutive checkpoints with the same constraint.
+- At23:48:02UTC requested candidate01again; exit1, no handle, service opens
+  Nov12at9amPacific. Full response/SHA saved in EXECUTION_GATE_RECHECK.
+  Fresh jobs/status/resource observations saved in EXECUTION_RESOURCE_SNAPSHOT:
+  empty serving jobs, null priorities, local arm64Darwin, zero CUDA devices.
+  No live process exists to poll. Listed kernel quotas do not establish serving
+  eligibility or a development GPU, and were not used as a workaround.
+- The current CLI exposes no documented serving development-node command.
+  No existing remote GPU has been supplied/identified; no node rented.
+  Remaining performance/quality/graph/TTFT decisions require native hardware.
+  Further unmeasured source variants would not establish the next improvement.
+- Saved an explicit blocked/completion audit and resume criteria. Preserve
+  source/candidate hashes and CPU-only evidence. Goal status `blocked` is to
+  be requested after this checkpoint is pushed; neither the stale kernel
+  tracker objective nor current serving objective is complete.
