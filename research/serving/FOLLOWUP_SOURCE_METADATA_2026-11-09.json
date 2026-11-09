@@ -1,0 +1,5227 @@
+{
+  "captured_utc": "2026-11-09T23:08:09.322938+00:00",
+  "scope": "Exact public trees and selected verified downloads; no code execution; fetching is not full audit.",
+  "repositories": [
+    {
+      "repository": "lee101/openkernels",
+      "url": "https://github.com/lee101/openkernels",
+      "head": "c565e373d34575c5f7df862b05f8be7619078b0f",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": ".github/workflows/gitleaks.yml",
+          "sha": "c347ff0809ecfc01b48e90b646488645a726ffc0",
+          "bytes": 867
+        },
+        {
+          "path": ".gitignore",
+          "sha": "e5c576b59b09cf9db94d4edca9006bf999433a8b",
+          "bytes": 222
+        },
+        {
+          "path": ".gitleaks.toml",
+          "sha": "2ac889185f5ffdabd23c9f867a57bed2673853fe",
+          "bytes": 183
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "sha": "0f37bf7c9c91d89a4c255fbad964c973beaa9361",
+          "bytes": 103
+        },
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358
+        },
+        {
+          "path": "README.md",
+          "sha": "aabf485e422a458944aab28aad15df603db8e0b6",
+          "bytes": 4069
+        },
+        {
+          "path": "bench/attn_sweep.py",
+          "sha": "54e5b63ec69afbc72331ed0e2f377209674905fa",
+          "bytes": 1659
+        },
+        {
+          "path": "bench/awprof.py",
+          "sha": "06654a703d9ae9bdae7055482912fff3a751d9e1",
+          "bytes": 1096
+        },
+        {
+          "path": "bench/awt.py",
+          "sha": "624f6a55ffd6b333cd9cfcff4616afcb4ce6f6b7",
+          "bytes": 1163
+        },
+        {
+          "path": "bench/dbg_moel.py",
+          "sha": "af84d4b0fcb60a9bb78544cdf400ea8c8dd35673",
+          "bytes": 2032
+        },
+        {
+          "path": "bench/dl20_h100_run.txt",
+          "sha": "b4f3f00cbf8f2bd81b71a96c1733b078cdc9cc3e",
+          "bytes": 17328
+        },
+        {
+          "path": "bench/dl21_h100_run.txt",
+          "sha": "52a3763f55890c9a57638afcb09ae58f0798b87a",
+          "bytes": 28407
+        },
+        {
+          "path": "bench/emu_chk.py",
+          "sha": "c609f1ab20091d737f4d466ca3615e07a35bdd7d",
+          "bytes": 4219
+        },
+        {
+          "path": "bench/fa3_vs.py",
+          "sha": "c92f277fda32bc6bbfd125612262f1ed1a9498dd",
+          "bytes": 1900
+        },
+        {
+          "path": "bench/fs_t.py",
+          "sha": "db6aa313fe1ded7640f71ff2dece9f52eabafb10",
+          "bytes": 3572
+        },
+        {
+          "path": "bench/gather.cu",
+          "sha": "47f4b00453abfccb4c3a66c1b47da344f31e6386",
+          "bytes": 2402
+        },
+        {
+          "path": "bench/gbench.py",
+          "sha": "cc39d9daea683e1601d43b7fc3382834587b8d87",
+          "bytes": 6298
+        },
+        {
+          "path": "bench/gv13.py",
+          "sha": "48ae429f7c5d2f8773a5f305110e5c7f967db993",
+          "bytes": 1074
+        },
+        {
+          "path": "bench/gv13_inst.py",
+          "sha": "d9c9c447a9c24e955eecd18f84fc822ff17f5bcd",
+          "bytes": 1009
+        },
+        {
+          "path": "bench/gv13_time.py",
+          "sha": "7665a6b5952b0f7476b8f00cd220752d2624896c",
+          "bytes": 2665
+        },
+        {
+          "path": "bench/gvb.py",
+          "sha": "44bc5d225e770a8c91b0168ae46abec42261fe51",
+          "bytes": 2043
+        },
+        {
+          "path": "bench/gvt.py",
+          "sha": "79712cb56136f52f6f5bb0c2d42c88ea4b86a386",
+          "bytes": 1627
+        },
+        {
+          "path": "bench/inner.cu",
+          "sha": "83493f37cc46329be183066551bf86758d94c61f",
+          "bytes": 6383
+        },
+        {
+          "path": "bench/inner.py",
+          "sha": "3987ad63e7ba4b8bccc47357520dbea64cc467e5",
+          "bytes": 784
+        },
+        {
+          "path": "bench/lprof_moe.py",
+          "sha": "23039df266aec42a841d9a330e6507e9d2b7a8cf",
+          "bytes": 938
+        },
+        {
+          "path": "bench/mk30.py",
+          "sha": "6998f835be794b6634173e540cc56d4280b508f5",
+          "bytes": 9286
+        },
+        {
+          "path": "bench/mk31.py",
+          "sha": "32faf6f11fd10ccb648b4d2ec9e36be1ca7c8faa",
+          "bytes": 4336
+        },
+        {
+          "path": "bench/mk32.py",
+          "sha": "6b4408b69e100dc7a78b238a74dbcf8de2d65bda",
+          "bytes": 2939
+        },
+        {
+          "path": "bench/mk33.py",
+          "sha": "96889e1c477e75f77f4e9ad91017e41665edd891",
+          "bytes": 9166
+        },
+        {
+          "path": "bench/mkdiag.py",
+          "sha": "44026c33dd822075003e72752ba20f57dbb02c2f",
+          "bytes": 1313
+        },
+        {
+          "path": "bench/mkdiag_attn.py",
+          "sha": "1552195fb11dbf13113ae166e040b86847418a2b",
+          "bytes": 1189
+        },
+        {
+          "path": "bench/mkdiag_proj.py",
+          "sha": "76f8e025d2db6267a63ba5d44e3c84577b0ce105",
+          "bytes": 2828
+        },
+        {
+          "path": "bench/mkdiag_stream.py",
+          "sha": "7d675d04ecbaeb3bbe49fd8d51ead03a0ed79007",
+          "bytes": 2170
+        },
+        {
+          "path": "bench/mkdiag_sweep_proj.py",
+          "sha": "fe6977628ed0206bb5bc68e1a40e71d45ba68dc8",
+          "bytes": 2095
+        },
+        {
+          "path": "bench/moe_m.py",
+          "sha": "29a8bb785ce04da0f34003c5234e3f841c87a9bd",
+          "bytes": 1412
+        },
+        {
+          "path": "bench/ncu_proj.py",
+          "sha": "94b9896723c574ba7d55324e551f2ea5fa86748e",
+          "bytes": 331
+        },
+        {
+          "path": "bench/nvcc90.sh",
+          "sha": "3cb1cacae0162ac76c14afb0d84190fc477791bc",
+          "bytes": 922
+        },
+        {
+          "path": "bench/pf_prof.py",
+          "sha": "502f658f68fd1575901d404a2f46364a8bc2ec05",
+          "bytes": 1296
+        },
+        {
+          "path": "bench/pod_dl20.sh",
+          "sha": "058f98bb91c32a50d744ed4182ecde863e9e0a8d",
+          "bytes": 363
+        },
+        {
+          "path": "bench/pod_dl21.sh",
+          "sha": "215b2f1ee3b234a36ee03f5daf95ded73c9d6eec",
+          "bytes": 475
+        },
+        {
+          "path": "bench/pod_moe.sh",
+          "sha": "bbd351f21241fbe0cf9d06f2a393cea75f2a1439",
+          "bytes": 479
+        },
+        {
+          "path": "bench/pod_s10.sh",
+          "sha": "75cc2f2f3a360a4e7f6173c75ab00161c031e6cc",
+          "bytes": 920
+        },
+        {
+          "path": "bench/pod_s11.sh",
+          "sha": "437f1117c4d50fad4c4a6fcbbdf6661e900ee847",
+          "bytes": 771
+        },
+        {
+          "path": "bench/pod_s12.sh",
+          "sha": "2d82505b0bf1ba16db4c4f6723368de9da44d264",
+          "bytes": 726
+        },
+        {
+          "path": "bench/pod_s13.sh",
+          "sha": "10f5d87435791739c967d7de5b09d508a0426774",
+          "bytes": 844
+        },
+        {
+          "path": "bench/pod_s14.sh",
+          "sha": "e2943303c3d71720c2f33637c52b0f1d94943456",
+          "bytes": 672
+        },
+        {
+          "path": "bench/pod_s15.sh",
+          "sha": "aedb561f098fc524228b0100af231b9b8a36e57b",
+          "bytes": 565
+        },
+        {
+          "path": "bench/pod_s16.sh",
+          "sha": "00eff43d2aadce93362103e9fe83f9da3aae52da",
+          "bytes": 345
+        },
+        {
+          "path": "bench/pod_s17.sh",
+          "sha": "4b1405dd9a57c6dc13d8a335ad20b63fc7a8e915",
+          "bytes": 716
+        },
+        {
+          "path": "bench/pod_s18.sh",
+          "sha": "2c783632bb91c7b641130d47cb3c664b10b3a1fe",
+          "bytes": 731
+        },
+        {
+          "path": "bench/pod_s19.sh",
+          "sha": "4dfc07ca6a6e9e0fdf75a8bc01292c1e565bc703",
+          "bytes": 667
+        },
+        {
+          "path": "bench/pod_s20.sh",
+          "sha": "c73a144279c1885a65e14662bb757d3cb0db69c6",
+          "bytes": 691
+        },
+        {
+          "path": "bench/pod_s22.sh",
+          "sha": "ed59fb7f906c8e12a1bf8a27d12db63d0addaeea",
+          "bytes": 248
+        },
+        {
+          "path": "bench/pod_s23.sh",
+          "sha": "9f4aa15956012e0b2df9e8994c198e7ca9ef6106",
+          "bytes": 633
+        },
+        {
+          "path": "bench/pod_s24.sh",
+          "sha": "5e277006755ae779fe7664e421ffdb8c3c1aa3e2",
+          "bytes": 722
+        },
+        {
+          "path": "bench/pod_s25.sh",
+          "sha": "89a979e8fbc487c6a3485d429e3c468ae5d5c91b",
+          "bytes": 539
+        },
+        {
+          "path": "bench/pod_s26.sh",
+          "sha": "08595163257ac88ca7b445561ab05399a119c3b9",
+          "bytes": 563
+        },
+        {
+          "path": "bench/pod_s27.sh",
+          "sha": "dbea2e3c9d0d361ef8305bb99ee75a6bf0bc22d1",
+          "bytes": 569
+        },
+        {
+          "path": "bench/pod_s28.sh",
+          "sha": "0075d0bae582308271a1f9b5d982c2a3b80f8d60",
+          "bytes": 177
+        },
+        {
+          "path": "bench/pod_s29.sh",
+          "sha": "447f34154342efae2ec9db3785e50527000d9a0b",
+          "bytes": 596
+        },
+        {
+          "path": "bench/pod_s30.sh",
+          "sha": "c9c26dcad24ace2ba43b242e43a26ad23e0c9f62",
+          "bytes": 152
+        },
+        {
+          "path": "bench/pod_s31.sh",
+          "sha": "87c3633e72ee7c5054a76d48f6f2676b1aace282",
+          "bytes": 133
+        },
+        {
+          "path": "bench/pod_s32.sh",
+          "sha": "7ce29fd632b5900747df681295e19cde57827a75",
+          "bytes": 735
+        },
+        {
+          "path": "bench/pod_s4.sh",
+          "sha": "f9047b5c216ce8ac39d743bd9965b3386ea52b27",
+          "bytes": 632
+        },
+        {
+          "path": "bench/pod_s5.sh",
+          "sha": "860d214277c563bca9e7f534ce5cdceb8d651e83",
+          "bytes": 845
+        },
+        {
+          "path": "bench/pod_s6.sh",
+          "sha": "0156b1176b89b373deaf8acf0658ae4ff4c5c352",
+          "bytes": 311
+        },
+        {
+          "path": "bench/pod_s7.sh",
+          "sha": "4e95c9652acbd7a62854a330fceaeb051dd88bfd",
+          "bytes": 443
+        },
+        {
+          "path": "bench/pod_s8.sh",
+          "sha": "d6135bef61856968970a91c9b0ed0902dbdff550",
+          "bytes": 503
+        },
+        {
+          "path": "bench/pod_s9.sh",
+          "sha": "af502c86af2a138ce1b730e1249f49dcec2259fe",
+          "bytes": 494
+        },
+        {
+          "path": "bench/pod_sweep.sh",
+          "sha": "19b6d9b2b4f00296f809c1398398abe01fb74cd2",
+          "bytes": 386
+        },
+        {
+          "path": "bench/pod_v48.sh",
+          "sha": "ad21dd5270d2702ad516e3268028c4c9d3eab579",
+          "bytes": 855
+        },
+        {
+          "path": "bench/pod_v49.sh",
+          "sha": "748cf5eb14c660e3a68c45c40e168895945b5def",
+          "bytes": 815
+        },
+        {
+          "path": "bench/pod_v50.sh",
+          "sha": "e5d538d64bfeac2f3f0781bd2cac285a57b7a7a4",
+          "bytes": 1127
+        },
+        {
+          "path": "bench/pod_v51.sh",
+          "sha": "4319f724b0960f625695661599ab1f0a5695425d",
+          "bytes": 789
+        },
+        {
+          "path": "bench/pod_v52.sh",
+          "sha": "fc4bca2dee77547be97e799521927abe03bcda39",
+          "bytes": 1275
+        },
+        {
+          "path": "bench/pod_v52b.sh",
+          "sha": "bca621c6ca886fe3ac06d8f6e42e1032c7d58eaf",
+          "bytes": 592
+        },
+        {
+          "path": "bench/ringdiag.py",
+          "sha": "d5cebe73874d7339b0fb0420b3b84267a33900c3",
+          "bytes": 3953
+        },
+        {
+          "path": "bench/sassmix.py",
+          "sha": "4615a5e34c30e802ba4725612559d3584737fbd5",
+          "bytes": 1210
+        },
+        {
+          "path": "bench/sk_t.py",
+          "sha": "ecc11219586bbc2ba35f83f87055e66203802b3e",
+          "bytes": 1007
+        },
+        {
+          "path": "bench/spills.py",
+          "sha": "ada5e43d608e144be4ec48472dc9d0b47580b052",
+          "bytes": 559
+        },
+        {
+          "path": "bench/tma_stream.cu",
+          "sha": "4f5e779272f3b62ac355945a5bda7d9d07ff6e8b",
+          "bytes": 4174
+        },
+        {
+          "path": "bench/v48_pod.py",
+          "sha": "43f13fe7cc803e8f8b11bfc1eb9dac60555e1652",
+          "bytes": 5139
+        },
+        {
+          "path": "bench/w4wg.cu",
+          "sha": "cc3728da3968c8324d2f7bebb46e25892a00faf3",
+          "bytes": 16025
+        },
+        {
+          "path": "bench/w4wg.py",
+          "sha": "8acea82c94a6944ba8e61998980851dcc8095aff",
+          "bytes": 2203
+        },
+        {
+          "path": "bench/wb_compile_chk.py",
+          "sha": "cbb350af85991f8cd80b4c486a6f7d1650642052",
+          "bytes": 2131
+        },
+        {
+          "path": "bench/wgb.py",
+          "sha": "f9600dffcb10205f26569b36d258c03fdf8ca83f",
+          "bytes": 13496
+        },
+        {
+          "path": "bench/wgb_h100_run1.txt",
+          "sha": "966507bde14a8ff980de7f2ce09a9e057ee9c82e",
+          "bytes": 6288
+        },
+        {
+          "path": "bench/wgb_h100_run2.txt",
+          "sha": "cded3922722a94bd5a0e6e7d8d4be7526666acbd",
+          "bytes": 1658
+        },
+        {
+          "path": "bench/wgc.py",
+          "sha": "5176b46155e6dfd4097618ca2a2e026235c03610",
+          "bytes": 21055
+        },
+        {
+          "path": "bench/wgc1.py",
+          "sha": "a470b998b02188e5a695cfc5c84c00ded705f3b7",
+          "bytes": 17004
+        },
+        {
+          "path": "bench/wgc2.py",
+          "sha": "a906f77c5d4f40407d91b07b0e6deb0d50b01005",
+          "bytes": 17988
+        },
+        {
+          "path": "bench/wgc3.py",
+          "sha": "2e0aeceb470d77eebcd79371d146cad073e246be",
+          "bytes": 19234
+        },
+        {
+          "path": "bench/wgd_h100_run.txt",
+          "sha": "867b976dc9cfae1880737ca30227259961988884",
+          "bytes": 953
+        },
+        {
+          "path": "bench/wgg.py",
+          "sha": "e12eee2fc43c8671e18bf52a88928f879959785a",
+          "bytes": 10573
+        },
+        {
+          "path": "bench/wgr_h100_run.txt",
+          "sha": "d22fab06697cd0efb00f5b15689216fb333ae9c0",
+          "bytes": 1167
+        },
+        {
+          "path": "bench/wgt.cu",
+          "sha": "ee892023b53576eee190c781f0baa0b504d17db8",
+          "bytes": 4146
+        },
+        {
+          "path": "bench/wgt.py",
+          "sha": "e459f64bb7c8aa325e67c32b44656df4a43a90c4",
+          "bytes": 1134
+        },
+        {
+          "path": "bench/wq_esc_chk.py",
+          "sha": "366503964e1855f20dab817920a81f597716a68f",
+          "bytes": 2949
+        },
+        {
+          "path": "bench/wv_esc_chk.py",
+          "sha": "7988fa7b20cd1d5ff1739d73dba9062320990cf6",
+          "bytes": 3876
+        },
+        {
+          "path": "build/attn.cu",
+          "sha": "be70fac9eced7dffa78202a8f0bc9c2e9e36085c",
+          "bytes": 31167
+        },
+        {
+          "path": "build/moe.cu",
+          "sha": "419d2f0fc09d0509d1c496c8a6ccce4222532767",
+          "bytes": 18473
+        },
+        {
+          "path": "cu/muse_attention_decode__CUDA.cu",
+          "sha": "c3f6d75222b2b5e0eae6e701112e1eda87088988",
+          "bytes": 94250
+        },
+        {
+          "path": "cu/muse_bf16_proj__CUDA.cu",
+          "sha": "b664027bbec1d0267724b751cb9cd281bda8dd0f",
+          "bytes": 18025
+        },
+        {
+          "path": "cu/muse_decode_layer__GLUE_CUDA.cu",
+          "sha": "1b8f61e515d7516f8f7ba41fcea9206790f7dcb4",
+          "bytes": 7773
+        },
+        {
+          "path": "cu/muse_moe_w4a16__CUDA.cu",
+          "sha": "67244b2665489279736b9263859d2c2dd2abc609",
+          "bytes": 40368
+        },
+        {
+          "path": "cuda/.gitignore",
+          "sha": "7e13c3005b0b52023dce481777ee722dcbf1904d",
+          "bytes": 23
+        },
+        {
+          "path": "cuda/Makefile",
+          "sha": "e228507d5f9770d47310878a2f1a449a88682286",
+          "bytes": 176
+        },
+        {
+          "path": "cuda/README.md",
+          "sha": "5ea166cd1347bb48ad56b1862829b93d152c57e0",
+          "bytes": 3413
+        },
+        {
+          "path": "cuda/cvt.cu",
+          "sha": "2ab1c148d5e0f67c4d08103b6fdfd779e68109bc",
+          "bytes": 3721
+        },
+        {
+          "path": "cuda/gather.cu",
+          "sha": "8bb50c57acd7deb6a2742a09ffb317261fa74de4",
+          "bytes": 4260
+        },
+        {
+          "path": "cuda/results.txt",
+          "sha": "37558324a581b55bb96f60baca0532e40b065079",
+          "bytes": 2807
+        },
+        {
+          "path": "cuda/reuse.cu",
+          "sha": "6e8ae65544bee9bd6c3176ba3c9b431ef37c30e6",
+          "bytes": 3408
+        },
+        {
+          "path": "cuda/run.sh",
+          "sha": "d4467e7d2377f46793bdce35e125df74af922071",
+          "bytes": 361
+        },
+        {
+          "path": "cuda/split.cu",
+          "sha": "320119dbb2ffbdcb4556ad12765d6b66c55cbc1d",
+          "bytes": 3252
+        },
+        {
+          "path": "docs/attention_fresh_design.md",
+          "sha": "eaf296c00fd201f154ee31cd66fea143992f9aef",
+          "bytes": 4490
+        },
+        {
+          "path": "docs/attention_gap_analysis.md",
+          "sha": "4d923e951aac68066512d30740f485e7d23de5a0",
+          "bytes": 9632
+        },
+        {
+          "path": "docs/bf16_gap_analysis.md",
+          "sha": "808e6542e63f951c91d6fe56619681a4f3db8420",
+          "bytes": 19893
+        },
+        {
+          "path": "docs/fp4_dequant_survey.md",
+          "sha": "12a7d03b515edf3a49f6b7b54e15229379297b5a",
+          "bytes": 9776
+        },
+        {
+          "path": "docs/ideas.md",
+          "sha": "cc33c0c5e6c99a473572f716be60915249a0aa32",
+          "bytes": 220365
+        },
+        {
+          "path": "docs/moe_gap_analysis.md",
+          "sha": "0004b65edf0701a1748a1c6d16cb23d77a752945",
+          "bytes": 23711
+        },
+        {
+          "path": "docs/other_projects.md",
+          "sha": "8a830369b62b1411b94d1c2a79ac00bbec78d70c",
+          "bytes": 36615
+        },
+        {
+          "path": "docs/prefill_gap_analysis.md",
+          "sha": "a53d8861e9f20dad84b70cb25975ffd3bcbe69dd",
+          "bytes": 22141
+        },
+        {
+          "path": "docs/reviews/deepseek_fdec.md",
+          "sha": "c6eb0e03e5d1c8b06a9575a38235f37c77cc76de",
+          "bytes": 473
+        },
+        {
+          "path": "docs/reviews/fdec_review_prompt.txt",
+          "sha": "7a247dfea234b843495db066c4c3f61decb74f00",
+          "bytes": 15233
+        },
+        {
+          "path": "docs/reviews/kimi_fdec.md",
+          "sha": "8d610b20d218a93832fa7c599d43d4536b3b2535",
+          "bytes": 239
+        },
+        {
+          "path": "docs/reviews/kimi_fdec_short.md",
+          "sha": "5e4c025648634842ee722057e9a30c58d2fee5d8",
+          "bytes": 624
+        },
+        {
+          "path": "docs/stack_plan.md",
+          "sha": "cb95c6146b083d3def0be82be8512361c74956a4",
+          "bytes": 16212
+        },
+        {
+          "path": "docs/upstream_ideas.md",
+          "sha": "8a6753655193727934a3db4f17d15d921a9d5441",
+          "bytes": 18783
+        },
+        {
+          "path": "muse_attention_decode/AGENTS.md",
+          "sha": "022830ad5b238b619bee802f9ddb3c23f005a841",
+          "bytes": 2720
+        },
+        {
+          "path": "muse_attention_decode/TASK.md",
+          "sha": "13089e62828ceea600cf2a30bb8bad6c151d48e4",
+          "bytes": 9638
+        },
+        {
+          "path": "muse_attention_decode/baseline.py",
+          "sha": "2ac5e2e62360a28bcc03170c946b52347b021cfe",
+          "bytes": 6178
+        },
+        {
+          "path": "muse_attention_decode/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_attention_decode/diag_fused.py",
+          "sha": "4d83d4fc2d09ff5dfcb4047d5d8cf8d7893c7d7f",
+          "bytes": 53670
+        },
+        {
+          "path": "muse_attention_decode/gather_check.py",
+          "sha": "a772ceac5e7cd7fc16fb6523ca680697c6f43cc0",
+          "bytes": 22590
+        },
+        {
+          "path": "muse_attention_decode/one_attn.py",
+          "sha": "86aa9500c2f5a0a67fde7c610941c2bcd0cb7811",
+          "bytes": 464
+        },
+        {
+          "path": "muse_attention_decode/reference.py",
+          "sha": "490ef92dbfc085784802a65047f12ffbfda2ac32",
+          "bytes": 19275
+        },
+        {
+          "path": "muse_attention_decode/submission.py",
+          "sha": "118f60edd3f649c2016603143cdab0f7aa47f624",
+          "bytes": 347795
+        },
+        {
+          "path": "muse_attention_decode/submission_v10.py",
+          "sha": "929873ba661c80d5e87aef09d150319db5c65d29",
+          "bytes": 54878
+        },
+        {
+          "path": "muse_attention_decode/submission_v12.py",
+          "sha": "fcb7344230b10e5c08b7811072e5f5b4132390db",
+          "bytes": 64335
+        },
+        {
+          "path": "muse_attention_decode/submission_v16.py",
+          "sha": "fc28673755620fc08a72e76358b8dedf5c80f01d",
+          "bytes": 83147
+        },
+        {
+          "path": "muse_attention_decode/submission_v17.py",
+          "sha": "b0747f642f896c8394646d8540db5c98007cb604",
+          "bytes": 83753
+        },
+        {
+          "path": "muse_attention_decode/submission_v19.py",
+          "sha": "730087d16160573f60633ac8724560a626c33e2d",
+          "bytes": 86093
+        },
+        {
+          "path": "muse_attention_decode/submission_v21.py",
+          "sha": "f4acc82bd6388b5dd532d4adcedca8566b94295c",
+          "bytes": 92950
+        },
+        {
+          "path": "muse_attention_decode/submission_v24.py",
+          "sha": "610bbf29ec250e86634cd12bf4ab6e30e2022ae0",
+          "bytes": 95392
+        },
+        {
+          "path": "muse_attention_decode/submission_v29.py",
+          "sha": "d722e92cb40a6cf163391657087058fb5cedf442",
+          "bytes": 100330
+        },
+        {
+          "path": "muse_attention_decode/submission_v31.py",
+          "sha": "77b4365f53ab0cc663f3f90da1ccb86b22135474",
+          "bytes": 102800
+        },
+        {
+          "path": "muse_attention_decode/submission_v32.py",
+          "sha": "ef4578c9e641341391f126d6d1b59455a8928f28",
+          "bytes": 103562
+        },
+        {
+          "path": "muse_attention_decode/submission_v33.py",
+          "sha": "aac0fac6aab0e2e0e9fc6e49a5c6a1ef7786ddc0",
+          "bytes": 106099
+        },
+        {
+          "path": "muse_attention_decode/submission_v33p.py",
+          "sha": "11e38e6ad0defe86449133188e01ce1534de82a9",
+          "bytes": 107130
+        },
+        {
+          "path": "muse_attention_decode/submission_v34.py",
+          "sha": "119911e701e1fc5bdbff1553214b3724b722938f",
+          "bytes": 107103
+        },
+        {
+          "path": "muse_attention_decode/submission_v35.py",
+          "sha": "98085755cabd4f617ae7f8d67ee8de93464f44cc",
+          "bytes": 107495
+        },
+        {
+          "path": "muse_attention_decode/submission_v35p.py",
+          "sha": "c2566f70c3bc76935a3d752c1d3acea1b8501d07",
+          "bytes": 108185
+        },
+        {
+          "path": "muse_attention_decode/submission_v36.py",
+          "sha": "57785d959e065201138985ebc3a60a0d09f8ff50",
+          "bytes": 110364
+        },
+        {
+          "path": "muse_attention_decode/submission_v37.py",
+          "sha": "28b3c38a70e2923934eb62cc68e027649d6a5ff7",
+          "bytes": 110629
+        },
+        {
+          "path": "muse_attention_decode/submission_v38.py",
+          "sha": "f92f075457d31598002733c45b4fe6319a8232f8",
+          "bytes": 111966
+        },
+        {
+          "path": "muse_attention_decode/submission_v39.py",
+          "sha": "bf2237c5a6b065e118413a620cbcc2cce7e8e994",
+          "bytes": 112480
+        },
+        {
+          "path": "muse_attention_decode/submission_v40.py",
+          "sha": "e6b678b4d124848114b03b81ec775f68393520cd",
+          "bytes": 117330
+        },
+        {
+          "path": "muse_attention_decode/submission_v41.py",
+          "sha": "a6af67ded0947829b6dff11ee05d9a5b32484b68",
+          "bytes": 140215
+        },
+        {
+          "path": "muse_attention_decode/submission_v41diag.py",
+          "sha": "3c7179e709c9973474f8ee2ac27cf4f638fada70",
+          "bytes": 142123
+        },
+        {
+          "path": "muse_attention_decode/submission_v42.py",
+          "sha": "548b399b0b3e2080891c17ae8696536511a915df",
+          "bytes": 141376
+        },
+        {
+          "path": "muse_attention_decode/submission_v42diag.py",
+          "sha": "81f8f35922e7e1b9d46c2ad5009711a7376d7605",
+          "bytes": 143994
+        },
+        {
+          "path": "muse_attention_decode/submission_v42pd.py",
+          "sha": "2a4606baf7ecfe97ce18b112932e41530a5a40f2",
+          "bytes": 146740
+        },
+        {
+          "path": "muse_attention_decode/submission_v43.py",
+          "sha": "e86aebca9867d374882ab1c524db70499b079987",
+          "bytes": 150907
+        },
+        {
+          "path": "muse_attention_decode/submission_v43diag.py",
+          "sha": "63bebfd1726d28b4b85c66606e4d876556c2b6fc",
+          "bytes": 153299
+        },
+        {
+          "path": "muse_attention_decode/submission_v44.py",
+          "sha": "42da94654543f7272fabdf700de562b5aa66ffd1",
+          "bytes": 154395
+        },
+        {
+          "path": "muse_attention_decode/submission_v44diag.py",
+          "sha": "03d0c29eb31d1f1f43626f937dd6623f8f0a46ce",
+          "bytes": 157356
+        },
+        {
+          "path": "muse_attention_decode/submission_v45.py",
+          "sha": "2b29c33e5084e2a36ba10205791f91c10f69b0e0",
+          "bytes": 178424
+        },
+        {
+          "path": "muse_attention_decode/submission_v45diag.py",
+          "sha": "6ff3ac0e028643d1ef862e85edd4f68184c42407",
+          "bytes": 182393
+        },
+        {
+          "path": "muse_attention_decode/submission_v46.py",
+          "sha": "a5ece3486c4adeaf6c1ea78e4e66177317999f46",
+          "bytes": 156527
+        },
+        {
+          "path": "muse_attention_decode/submission_v46scan.py",
+          "sha": "1668172b9d0ba0209a565f1e32a4f99ae27b7000",
+          "bytes": 174345
+        },
+        {
+          "path": "muse_attention_decode/submission_v46scandiag.py",
+          "sha": "9c8bc95ef2910abe9b9a4f693de0e41158a5f7b1",
+          "bytes": 178827
+        },
+        {
+          "path": "muse_attention_decode/submission_v47.py",
+          "sha": "9c74eb7f396b2b835d8daf7f535bd4e7185781de",
+          "bytes": 157887
+        },
+        {
+          "path": "muse_attention_decode/submission_v47diag.py",
+          "sha": "6bf19b579a29314e672dec4200257ffe133af389",
+          "bytes": 159736
+        },
+        {
+          "path": "muse_attention_decode/submission_v48.py",
+          "sha": "d0d36fcd9d5dbcb83c29e7631b9ded33ffe11876",
+          "bytes": 183762
+        },
+        {
+          "path": "muse_attention_decode/submission_v48diag.py",
+          "sha": "62ef23e994d933555fe646e9732fbd641f9a51c4",
+          "bytes": 187444
+        },
+        {
+          "path": "muse_attention_decode/submission_v49.py",
+          "sha": "3567c1a76c202b0d2094f84026a16653afd00e4a",
+          "bytes": 183776
+        },
+        {
+          "path": "muse_attention_decode/submission_v49diag.py",
+          "sha": "8649c0668502537a83ff872418a7b45d8c1c6d42",
+          "bytes": 193816
+        },
+        {
+          "path": "muse_attention_decode/submission_v49ws.py",
+          "sha": "211873049399d7bcdf7cc612dc0b4d6937841b20",
+          "bytes": 186319
+        },
+        {
+          "path": "muse_attention_decode/submission_v50.py",
+          "sha": "69b8bc8077dc72c371ef96b3d5925069c0096edb",
+          "bytes": 207283
+        },
+        {
+          "path": "muse_attention_decode/submission_v50diag.py",
+          "sha": "ef79e661504b35adf80233bfda4848301bc2bf36",
+          "bytes": 211188
+        },
+        {
+          "path": "muse_attention_decode/submission_v51.py",
+          "sha": "fe5451151fa43a75705f51f5416d8fb282c1c632",
+          "bytes": 215266
+        },
+        {
+          "path": "muse_attention_decode/submission_v51diag.py",
+          "sha": "f51e4eced72b851707f1a1c527005832d7fc6f21",
+          "bytes": 219536
+        },
+        {
+          "path": "muse_attention_decode/submission_v52.py",
+          "sha": "78e48a6f76fba9d1a28318ce56f8b51c21816fd0",
+          "bytes": 240058
+        },
+        {
+          "path": "muse_attention_decode/submission_v52diag.py",
+          "sha": "81730437708c9f1090f54003ca8f9b9ee78afb7b",
+          "bytes": 244231
+        },
+        {
+          "path": "muse_attention_decode/submission_v53.py",
+          "sha": "3971b2419f773021b9bdb6a4e0ba366fbd05d2c7",
+          "bytes": 240008
+        },
+        {
+          "path": "muse_attention_decode/submission_v54.py",
+          "sha": "661c57dc9d83590d7f844cfdee07384c1de0b551",
+          "bytes": 242292
+        },
+        {
+          "path": "muse_attention_decode/submission_v54diag.py",
+          "sha": "5cb2fef03590fa353064317abe189149a84c1f08",
+          "bytes": 246572
+        },
+        {
+          "path": "muse_attention_decode/submission_v55.py",
+          "sha": "5c7505af3d53219bb99c10963e2d683cf6f3c6dc",
+          "bytes": 244278
+        },
+        {
+          "path": "muse_attention_decode/submission_v55diag.py",
+          "sha": "2d93282b3bb55be995ee5c539cdd37ce7de42b94",
+          "bytes": 248944
+        },
+        {
+          "path": "muse_attention_decode/submission_v56.py",
+          "sha": "824635ff669e31fa920d699b062be628508cf719",
+          "bytes": 245089
+        },
+        {
+          "path": "muse_attention_decode/submission_v56diag.py",
+          "sha": "c8d79d774dcb6c5ed92594c977d51e59bf5e7c7f",
+          "bytes": 249663
+        },
+        {
+          "path": "muse_attention_decode/submission_v57.py",
+          "sha": "3509bcf75a5bfe997e0caaa8b8112c503e0161bd",
+          "bytes": 246161
+        },
+        {
+          "path": "muse_attention_decode/submission_v57diag.py",
+          "sha": "101495b34d263ae534e50885d4f5b91e63550e7b",
+          "bytes": 250718
+        },
+        {
+          "path": "muse_attention_decode/submission_v58.py",
+          "sha": "d2bfe133ae60b3c9f141a0dd33c5159b6425a49b",
+          "bytes": 246523
+        },
+        {
+          "path": "muse_attention_decode/submission_v58diag.py",
+          "sha": "a8dfe31befedba2608ddd68dae489bd0c27d8ca5",
+          "bytes": 252205
+        },
+        {
+          "path": "muse_attention_decode/submission_v59.py",
+          "sha": "0a8182ea036fda1cf6ee0e1bd8da1ea6e6d06f1b",
+          "bytes": 247920
+        },
+        {
+          "path": "muse_attention_decode/submission_v59diag.py",
+          "sha": "c94fe60f62b4037df7feaf4c8ea30fb7cb21f125",
+          "bytes": 253901
+        },
+        {
+          "path": "muse_attention_decode/submission_v60.py",
+          "sha": "fd454d68f14b188600ea22fb505d1f530319b9c8",
+          "bytes": 248706
+        },
+        {
+          "path": "muse_attention_decode/submission_v61.py",
+          "sha": "d56fe925d07c7e7dc85e7f1bb3cbe578958807a8",
+          "bytes": 254765
+        },
+        {
+          "path": "muse_attention_decode/submission_v61diag.py",
+          "sha": "6cedebbe1be726011b3c6886ffe66d71d651508c",
+          "bytes": 261022
+        },
+        {
+          "path": "muse_attention_decode/submission_v62.py",
+          "sha": "488f0afe474158b0f11d16250d88a60b9d1e50ef",
+          "bytes": 259693
+        },
+        {
+          "path": "muse_attention_decode/submission_v62diag.py",
+          "sha": "6dc121bedbc20d6ddc5373f0589072f7101e9f28",
+          "bytes": 265954
+        },
+        {
+          "path": "muse_attention_decode/submission_v63.py",
+          "sha": "ee356a935a69e6be6694c80bbb8546c150fea8be",
+          "bytes": 262992
+        },
+        {
+          "path": "muse_attention_decode/submission_v63diag.py",
+          "sha": "88b12769e8fa6f86704e6e62f7e1b6c063b02d83",
+          "bytes": 268693
+        },
+        {
+          "path": "muse_attention_decode/submission_v64.py",
+          "sha": "7a41201d0d4cef97a0f14ead8942f6910b2db5dc",
+          "bytes": 265142
+        },
+        {
+          "path": "muse_attention_decode/submission_v64diag.py",
+          "sha": "bb5e0c6bcecb627355721b6cd32dd94f3ff669f6",
+          "bytes": 271284
+        },
+        {
+          "path": "muse_attention_decode/submission_v65.py",
+          "sha": "b4a2ff973916526d50c91aa69f9a8ff553e39150",
+          "bytes": 265147
+        },
+        {
+          "path": "muse_attention_decode/submission_v65b.py",
+          "sha": "6b6f0f032c173af1eae92e6df09431616df8a3b1",
+          "bytes": 265143
+        },
+        {
+          "path": "muse_attention_decode/submission_v66.py",
+          "sha": "a78d12bc36bb8079b53b6215b93ddb4a55dc7fbb",
+          "bytes": 266248
+        },
+        {
+          "path": "muse_attention_decode/submission_v66diag.py",
+          "sha": "d65c79ca86ab427428d94196c13812748920a8dd",
+          "bytes": 271755
+        },
+        {
+          "path": "muse_attention_decode/submission_v67.py",
+          "sha": "0d4271daf6708e69d1710bf11b191a84fecf3040",
+          "bytes": 273329
+        },
+        {
+          "path": "muse_attention_decode/submission_v67diag.py",
+          "sha": "a2cf30fe8a02e3a8319787744616c14445f5b550",
+          "bytes": 279094
+        },
+        {
+          "path": "muse_attention_decode/submission_v68.py",
+          "sha": "4dd3241971e18bee3e70ebbce412580bd5adab32",
+          "bytes": 273571
+        },
+        {
+          "path": "muse_attention_decode/submission_v68diag.py",
+          "sha": "ea825d9f6847e068b23504fb65dba3c29b0d89cd",
+          "bytes": 280959
+        },
+        {
+          "path": "muse_attention_decode/submission_v69.py",
+          "sha": "464c90ba0426f91f3fac58f89b76f0d0fec5fbbc",
+          "bytes": 273118
+        },
+        {
+          "path": "muse_attention_decode/submission_v69f.py",
+          "sha": "7a246407f86e64751424756ec9db0375f9729d12",
+          "bytes": 273125
+        },
+        {
+          "path": "muse_attention_decode/submission_v70.py",
+          "sha": "19b6fa89a595f26da571297eddd1483a527b51fd",
+          "bytes": 276121
+        },
+        {
+          "path": "muse_attention_decode/submission_v70diag.py",
+          "sha": "64f0bd20f34d332eee5f98efd6f7104a88796733",
+          "bytes": 282913
+        },
+        {
+          "path": "muse_attention_decode/submission_v71.py",
+          "sha": "388df7a3818b0855a08112f2aeea4f38f9a3b707",
+          "bytes": 296023
+        },
+        {
+          "path": "muse_attention_decode/submission_v71diag.py",
+          "sha": "5f341fc5cbee6d481e2c483830350e134f03b2d5",
+          "bytes": 303212
+        },
+        {
+          "path": "muse_attention_decode/submission_v72.py",
+          "sha": "82b37b5519c037209aa2619342e685a8d9a3bfcd",
+          "bytes": 296666
+        },
+        {
+          "path": "muse_attention_decode/submission_v72diag.py",
+          "sha": "fad8bd82322b024e38872ef96f77761ebe41738c",
+          "bytes": 300177
+        },
+        {
+          "path": "muse_attention_decode/submission_v73.py",
+          "sha": "a6f5483691979dbf90ae1157df098e2a76657955",
+          "bytes": 295922
+        },
+        {
+          "path": "muse_attention_decode/submission_v73diag.py",
+          "sha": "0776382f0acf0815e5fe8f47ddb9f4cccf194f5a",
+          "bytes": 299453
+        },
+        {
+          "path": "muse_attention_decode/submission_v74.py",
+          "sha": "b9760604edbad932546eb5f74c0474d8f8e909f0",
+          "bytes": 295921
+        },
+        {
+          "path": "muse_attention_decode/submission_v75.py",
+          "sha": "e824faf1213625ce4313a66cac3e561af52c96aa",
+          "bytes": 296072
+        },
+        {
+          "path": "muse_attention_decode/submission_v75diag.py",
+          "sha": "74ed747d27822099d48ed3805c0eab47487d847a",
+          "bytes": 301347
+        },
+        {
+          "path": "muse_attention_decode/submission_v76.py",
+          "sha": "bb8b4823aa2fc516d82514d2d1efa56a4e7997c6",
+          "bytes": 314943
+        },
+        {
+          "path": "muse_attention_decode/submission_v76diag.py",
+          "sha": "6355f391d83e742366fbb512935c55fc04644e50",
+          "bytes": 319840
+        },
+        {
+          "path": "muse_attention_decode/submission_v77.py",
+          "sha": "2537c75f5ea4d43b1d1fc2abfb353943c7e1efe7",
+          "bytes": 329063
+        },
+        {
+          "path": "muse_attention_decode/submission_v77diag.py",
+          "sha": "90b627c8af00bd1bc64e5bb43e065e20fffdd7a3",
+          "bytes": 333885
+        },
+        {
+          "path": "muse_attention_decode/submission_v78.py",
+          "sha": "8408f56ff160ff9ea181a48e4c197e96f857a687",
+          "bytes": 330884
+        },
+        {
+          "path": "muse_attention_decode/submission_v78diag.py",
+          "sha": "a03990c28fb9d12ee6b90903c2c87dbb5482250a",
+          "bytes": 337168
+        },
+        {
+          "path": "muse_attention_decode/submission_v79.py",
+          "sha": "de97f6d53633537fdfccf41b5f43487bd13b1bfa",
+          "bytes": 348059
+        },
+        {
+          "path": "muse_attention_decode/submission_v79diag.py",
+          "sha": "5be7c659226473b12d5a0cf986bb890decd2fc9c",
+          "bytes": 353025
+        },
+        {
+          "path": "muse_attention_decode/submission_v80diag.py",
+          "sha": "2fdf3e2de25a4c3b8209445125b1a84411cff0c8",
+          "bytes": 351975
+        },
+        {
+          "path": "muse_attention_decode/submission_v81.py",
+          "sha": "118f60edd3f649c2016603143cdab0f7aa47f624",
+          "bytes": 347795
+        },
+        {
+          "path": "muse_attention_decode/submission_v81diag.py",
+          "sha": "48b7db3aba56c3afab035618c41a20ffd47913f4",
+          "bytes": 351570
+        },
+        {
+          "path": "muse_attention_decode/submission_v82.py",
+          "sha": "d29cd85051acb9d483889217b850376dcf83c5e1",
+          "bytes": 351111
+        },
+        {
+          "path": "muse_attention_decode/submission_v82diag.py",
+          "sha": "a25dbec0d1a53774a094bf51ce39b1e1541bfc8a",
+          "bytes": 355033
+        },
+        {
+          "path": "muse_attention_decode/submission_v83.py",
+          "sha": "ef35d49940a503cc0d70b47e4d0512a60ec2055f",
+          "bytes": 350621
+        },
+        {
+          "path": "muse_attention_decode/submission_v83diag.py",
+          "sha": "fd614ff5b59eb4a0ee3f1457c04ddde6b64072b8",
+          "bytes": 355799
+        },
+        {
+          "path": "muse_attention_decode/submission_v84diag.py",
+          "sha": "58d4345abe4e299cd09ff82d123c8bf74c5715d2",
+          "bytes": 372487
+        },
+        {
+          "path": "muse_attention_decode/submission_v85diag.py",
+          "sha": "94bbe83dbd5a2c6f71ab14dfed94b99af6357076",
+          "bytes": 390797
+        },
+        {
+          "path": "muse_bf16_proj/AGENTS.md",
+          "sha": "f7ac0dfe39ab6684e8243dbada2789230fcaee10",
+          "bytes": 2706
+        },
+        {
+          "path": "muse_bf16_proj/TASK.md",
+          "sha": "da91e807376dbf0b3ffc1f0b3fa7347351817be7",
+          "bytes": 8264
+        },
+        {
+          "path": "muse_bf16_proj/baseline.py",
+          "sha": "a4cde4b06c4c75622bafbd78d19fe4e3406c7a8d",
+          "bytes": 2397
+        },
+        {
+          "path": "muse_bf16_proj/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_bf16_proj/diag_check.py",
+          "sha": "cb40168dfb4250be717f64259def3202153f8605",
+          "bytes": 11372
+        },
+        {
+          "path": "muse_bf16_proj/reference.py",
+          "sha": "ab244d54a6b77bd990fe56f8eb047658f815c3ce",
+          "bytes": 5155
+        },
+        {
+          "path": "muse_bf16_proj/starter.py",
+          "sha": "6ce773a44036578450b1489df0030d65d2c67c0e",
+          "bytes": 1299
+        },
+        {
+          "path": "muse_bf16_proj/stream_check.py",
+          "sha": "065aceec88aa0ed306d7c6d9cd778d2bbe420237",
+          "bytes": 18800
+        },
+        {
+          "path": "muse_bf16_proj/submission.py",
+          "sha": "4b13bd0d9915d449b4f64641f3e4f83e879053fc",
+          "bytes": 95566
+        },
+        {
+          "path": "muse_bf16_proj/submission_v10.py",
+          "sha": "6c7c63506f13b7e115ac34c4ec01a97a4f99fbc7",
+          "bytes": 38472
+        },
+        {
+          "path": "muse_bf16_proj/submission_v11.py",
+          "sha": "deb8cec891c24f28f9f6f0adb873511cdcb306a0",
+          "bytes": 26425
+        },
+        {
+          "path": "muse_bf16_proj/submission_v12.py",
+          "sha": "84c5a3ef88c9731178508c15ee4ac41087dd06b3",
+          "bytes": 32348
+        },
+        {
+          "path": "muse_bf16_proj/submission_v13.py",
+          "sha": "cc122aab7c2be0bc9f0afc9304110db2e94c2845",
+          "bytes": 51827
+        },
+        {
+          "path": "muse_bf16_proj/submission_v14.py",
+          "sha": "f66b6afda3ad6dd74328ef77723b260fc2777b9b",
+          "bytes": 56831
+        },
+        {
+          "path": "muse_bf16_proj/submission_v15.py",
+          "sha": "1fb94e112599fb1ba1a159244d40a1a6fac59a8b",
+          "bytes": 61691
+        },
+        {
+          "path": "muse_bf16_proj/submission_v16.py",
+          "sha": "02a420a20102f79a4ccfc834a571fe94f5139136",
+          "bytes": 62379
+        },
+        {
+          "path": "muse_bf16_proj/submission_v17.py",
+          "sha": "19d206ffcdb7b855392118dd8a881b3cbb7c95dd",
+          "bytes": 62484
+        },
+        {
+          "path": "muse_bf16_proj/submission_v18.py",
+          "sha": "fa1f4c2a13bc7e94da4115f4183f9ee816b2ca45",
+          "bytes": 71769
+        },
+        {
+          "path": "muse_bf16_proj/submission_v19.py",
+          "sha": "6dc2376d9b182752fa089696f7c1313291659f33",
+          "bytes": 72758
+        },
+        {
+          "path": "muse_bf16_proj/submission_v20.py",
+          "sha": "d53375adababa7f45e0e1baeff0a5c37743b603d",
+          "bytes": 73336
+        },
+        {
+          "path": "muse_bf16_proj/submission_v21.py",
+          "sha": "11fc777e2a57660d20a7df291b6fa96e280cf004",
+          "bytes": 85202
+        },
+        {
+          "path": "muse_bf16_proj/submission_v22.py",
+          "sha": "4b13bd0d9915d449b4f64641f3e4f83e879053fc",
+          "bytes": 95566
+        },
+        {
+          "path": "muse_bf16_proj/submission_v23.py",
+          "sha": "56a7654425a6f6c060b80a7b716b55f29f0e5f0c",
+          "bytes": 103990
+        },
+        {
+          "path": "muse_bf16_proj/submission_v24.py",
+          "sha": "ef6cabb80f30f38ac00dcfc266c2d06e50d21ee4",
+          "bytes": 114141
+        },
+        {
+          "path": "muse_bf16_proj/submission_v24diag.py",
+          "sha": "9f18fc9d7f789671d08efa14c2badba25bf96f10",
+          "bytes": 114140
+        },
+        {
+          "path": "muse_bf16_proj/submission_v25.py",
+          "sha": "da1538eefacf2879b519bd4bb0281aafa0bc8d7a",
+          "bytes": 129854
+        },
+        {
+          "path": "muse_bf16_proj/submission_v25diag.py",
+          "sha": "74d073bc8bb68929b87359ef2d8cc09dc84c1cb2",
+          "bytes": 129853
+        },
+        {
+          "path": "muse_bf16_proj/submission_v26.py",
+          "sha": "7de7b45981fcfdfba00d2931c2cda2836fbf3259",
+          "bytes": 144782
+        },
+        {
+          "path": "muse_bf16_proj/submission_v26diag.py",
+          "sha": "c4ab995f52e60507a63415a0aa5e9bd28effb00e",
+          "bytes": 144781
+        },
+        {
+          "path": "muse_bf16_proj/submission_v27.py",
+          "sha": "1c830e447cfb3355e357521f8ae8f839073ad33f",
+          "bytes": 147630
+        },
+        {
+          "path": "muse_bf16_proj/submission_v27diag.py",
+          "sha": "e6a9c51261cb472f8d0222c500ab3d4b50838901",
+          "bytes": 147629
+        },
+        {
+          "path": "muse_bf16_proj/submission_v28diag.py",
+          "sha": "b752c515963ed5689df4f34df9d9454bb7cb0c68",
+          "bytes": 152354
+        },
+        {
+          "path": "muse_bf16_proj/submission_v29diag.py",
+          "sha": "b26d3c791d8b5944cc0e06fdea1ff4190d8422ce",
+          "bytes": 153912
+        },
+        {
+          "path": "muse_bf16_proj/submission_v30diag.py",
+          "sha": "919c24898618afa00ec0a676d592e5b29fcee956",
+          "bytes": 156860
+        },
+        {
+          "path": "muse_bf16_proj/submission_v5.py",
+          "sha": "f677fc1c4e79cf23a642eedcb3b3232cd8263155",
+          "bytes": 13070
+        },
+        {
+          "path": "muse_bf16_proj/submission_v6.py",
+          "sha": "7dbdac12f2f3c9579bdc96b81482d09927d0fbb1",
+          "bytes": 21356
+        },
+        {
+          "path": "muse_bf16_proj/submission_v7.py",
+          "sha": "29991405a4ab72e665576e52538c0595b911d0c6",
+          "bytes": 22301
+        },
+        {
+          "path": "muse_bf16_proj/submission_v8.py",
+          "sha": "519dcc183144eb418478810d16fbea29405b14f4",
+          "bytes": 22420
+        },
+        {
+          "path": "muse_bf16_proj/submission_v9.py",
+          "sha": "5ac0c4d797d25fc26c0ac4b77554a24bfcd36001",
+          "bytes": 26175
+        },
+        {
+          "path": "muse_bf16_proj/submission_wip_rtr256.py",
+          "sha": "0c5a102159e71b0eb79b4e08661ba6635aea499f",
+          "bytes": 26545
+        },
+        {
+          "path": "muse_bf16_proj/sweep_check.py",
+          "sha": "e44871a78307becee00498c4f975d07e58ba905d",
+          "bytes": 14878
+        },
+        {
+          "path": "muse_bf16_proj/twok_check.py",
+          "sha": "1b5d36b2e2169964f8ad0c5b94563b86ee9007e1",
+          "bytes": 12837
+        },
+        {
+          "path": "muse_decode_layer/AGENTS.md",
+          "sha": "4d69f6867322a260a2784096ab38d3219139c5d4",
+          "bytes": 2712
+        },
+        {
+          "path": "muse_decode_layer/TASK.md",
+          "sha": "fcf3c2e9c317578fe1b9edee0489d73e9aa85bfe",
+          "bytes": 9853
+        },
+        {
+          "path": "muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "bytes": 18993
+        },
+        {
+          "path": "muse_decode_layer/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_decode_layer/emu_dl.py",
+          "sha": "d8bf4c554b63766d7cfbca6f73f4b0e12e08e255",
+          "bytes": 2903
+        },
+        {
+          "path": "muse_decode_layer/glue.py",
+          "sha": "fda881766622f9f0b1425aed4df72ad704069763",
+          "bytes": 20320
+        },
+        {
+          "path": "muse_decode_layer/glue16.py",
+          "sha": "7c7853af2bc1b8d9967e07d49267cd99ecba8342",
+          "bytes": 2420
+        },
+        {
+          "path": "muse_decode_layer/glue19.py",
+          "sha": "0b88a77c21f44015bb96af50b40f441f004ace08",
+          "bytes": 5331
+        },
+        {
+          "path": "muse_decode_layer/nvfp4.py",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "bytes": 5929
+        },
+        {
+          "path": "muse_decode_layer/reference.py",
+          "sha": "f92aa2db6ba064bc686ed5369f979cfe00d4ff44",
+          "bytes": 35035
+        },
+        {
+          "path": "muse_decode_layer/submission.py",
+          "sha": "f06a120bcad805e0d823f5d96497cf19b4d9ac0c",
+          "bytes": 735824
+        },
+        {
+          "path": "muse_decode_layer/submission_pfdiag.py",
+          "sha": "093077043557bf1f3c637e51b95c92bf6ceebe50",
+          "bytes": 120802
+        },
+        {
+          "path": "muse_decode_layer/submission_plain.py",
+          "sha": "0a0fc36b7854c07f5047c1df4e08ee984a830651",
+          "bytes": 10691
+        },
+        {
+          "path": "muse_decode_layer/submission_v0.py",
+          "sha": "6a06d41fc374f34b78af9d8bc7594050f4e5049c",
+          "bytes": 101416
+        },
+        {
+          "path": "muse_decode_layer/submission_v1.py",
+          "sha": "591552961f75383e88011a766cc48014e32c2fd6",
+          "bytes": 143872
+        },
+        {
+          "path": "muse_decode_layer/submission_v10.py",
+          "sha": "52a5f304dd5ef804069e94d341f2d2cc29d9e32e",
+          "bytes": 243025
+        },
+        {
+          "path": "muse_decode_layer/submission_v11.py",
+          "sha": "311e88aea387786a6335e0a9dea8aadf6d85cc63",
+          "bytes": 256561
+        },
+        {
+          "path": "muse_decode_layer/submission_v12.py",
+          "sha": "3f3c29284d5de13c575be83315b92bcb6dce2d1c",
+          "bytes": 295010
+        },
+        {
+          "path": "muse_decode_layer/submission_v13.py",
+          "sha": "b644371ab21f9a61820fee724bd6306b7b6a99b3",
+          "bytes": 298526
+        },
+        {
+          "path": "muse_decode_layer/submission_v14.py",
+          "sha": "f6614497a1e7994ab507df9463613038330ab0fb",
+          "bytes": 328804
+        },
+        {
+          "path": "muse_decode_layer/submission_v14n.py",
+          "sha": "68c8aea848150dd87af23afd8df1ac7f13c45f09",
+          "bytes": 328804
+        },
+        {
+          "path": "muse_decode_layer/submission_v15a.py",
+          "sha": "b07eefa45de5d7f93866042b67493be3ae5a808c",
+          "bytes": 330645
+        },
+        {
+          "path": "muse_decode_layer/submission_v15b.py",
+          "sha": "c39fb356b067b4f084293e6ffbffd73ea652315a",
+          "bytes": 330645
+        },
+        {
+          "path": "muse_decode_layer/submission_v15c.py",
+          "sha": "6cda3838791b02f4f0dfead220ee0171c24986ba",
+          "bytes": 330649
+        },
+        {
+          "path": "muse_decode_layer/submission_v16.py",
+          "sha": "36f7fd4e85adeb1d4c444ae238311eb0f66c1ecb",
+          "bytes": 357241
+        },
+        {
+          "path": "muse_decode_layer/submission_v17.py",
+          "sha": "7e69d3ac2b498b947979c15c6045906fa34278c6",
+          "bytes": 363165
+        },
+        {
+          "path": "muse_decode_layer/submission_v2.py",
+          "sha": "ff7d32a49154fa68576e8eda38602d8ef02e7f9d",
+          "bytes": 173958
+        },
+        {
+          "path": "muse_decode_layer/submission_v20.py",
+          "sha": "6f6987e7626c1930d5776232610c922d34aa8e5d",
+          "bytes": 388848
+        },
+        {
+          "path": "muse_decode_layer/submission_v21.py",
+          "sha": "c35a43d6f2e9f79fd88c4f352ecd81b039aaa472",
+          "bytes": 448379
+        },
+        {
+          "path": "muse_decode_layer/submission_v22.py",
+          "sha": "268d2832391ae539dad97230f9115173df92ad0d",
+          "bytes": 485538
+        },
+        {
+          "path": "muse_decode_layer/submission_v23.py",
+          "sha": "a69dc97308efe547303dd573c3b071a57fa345dc",
+          "bytes": 539035
+        },
+        {
+          "path": "muse_decode_layer/submission_v24.py",
+          "sha": "b2052fb67647a5930e7b642f11e31efe1fc42930",
+          "bytes": 540085
+        },
+        {
+          "path": "muse_decode_layer/submission_v24m44.py",
+          "sha": "0486f07dec7e4158fc9230d39fbb39c01d093b27",
+          "bytes": 543394
+        },
+        {
+          "path": "muse_decode_layer/submission_v25.py",
+          "sha": "c6e148b28db5c7340c89cab166601e039beef90c",
+          "bytes": 568328
+        },
+        {
+          "path": "muse_decode_layer/submission_v26.py",
+          "sha": "e544905ee2a5049b7a5c8585b7244ab8548075c3",
+          "bytes": 601770
+        },
+        {
+          "path": "muse_decode_layer/submission_v27.py",
+          "sha": "c7c5e41e1873b72080eeb54e9f3a508335f427c0",
+          "bytes": 607142
+        },
+        {
+          "path": "muse_decode_layer/submission_v28.py",
+          "sha": "f12e313192b73460a08b990932a8711536d7b8b0",
+          "bytes": 628531
+        },
+        {
+          "path": "muse_decode_layer/submission_v29.py",
+          "sha": "ae5fdd910914fe21c3288bf4aa4ef2bb5396f02e",
+          "bytes": 612050
+        },
+        {
+          "path": "muse_decode_layer/submission_v3.py",
+          "sha": "f5dc7403f4f9ef1ef3bca96cd95987279a274b8c",
+          "bytes": 216895
+        },
+        {
+          "path": "muse_decode_layer/submission_v30.py",
+          "sha": "f798192d496eba65c321dbc71702af39a7d6bb53",
+          "bytes": 636509
+        },
+        {
+          "path": "muse_decode_layer/submission_v31.py",
+          "sha": "23bf70763c1144d50c16c17185c875e407248869",
+          "bytes": 646866
+        },
+        {
+          "path": "muse_decode_layer/submission_v32.py",
+          "sha": "fa972682018861202289210981eb735080260fb4",
+          "bytes": 669713
+        },
+        {
+          "path": "muse_decode_layer/submission_v33.py",
+          "sha": "2fe57fc2880f3ac6794e7e9f457766e451a8e1df",
+          "bytes": 670009
+        },
+        {
+          "path": "muse_decode_layer/submission_v34.py",
+          "sha": "816e4a16cbd8e02bf81a8a3317ffb74011ca2a10",
+          "bytes": 721987
+        },
+        {
+          "path": "muse_decode_layer/submission_v35.py",
+          "sha": "f06a120bcad805e0d823f5d96497cf19b4d9ac0c",
+          "bytes": 735824
+        },
+        {
+          "path": "muse_decode_layer/submission_v4.py",
+          "sha": "671179b161e13533ce75b7ae71a164595a267c40",
+          "bytes": 219923
+        },
+        {
+          "path": "muse_decode_layer/submission_v5.py",
+          "sha": "cc67c399e5754f3aafdf51afa1bdcb4e15af0d01",
+          "bytes": 197603
+        },
+        {
+          "path": "muse_decode_layer/submission_v6.py",
+          "sha": "49914865273c076497787d4a1590a656c02beb3f",
+          "bytes": 201883
+        },
+        {
+          "path": "muse_decode_layer/submission_v7.py",
+          "sha": "9869b5e1f9582a33feb7548d56304619cf3606f5",
+          "bytes": 202138
+        },
+        {
+          "path": "muse_decode_layer/submission_v8.py",
+          "sha": "88c6c3045580ac38e4f9f67a1495af886fbe86d6",
+          "bytes": 202309
+        },
+        {
+          "path": "muse_decode_layer/submission_v9.py",
+          "sha": "ff016e54aed0baca812ba689826229943d13b279",
+          "bytes": 204425
+        },
+        {
+          "path": "muse_moe_w4a16/AGENTS.md",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "bytes": 2706
+        },
+        {
+          "path": "muse_moe_w4a16/TASK.md",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "bytes": 6782
+        },
+        {
+          "path": "muse_moe_w4a16/_bytes.py",
+          "sha": "a17c22872b8e34556e60170a00a6280bf3f30a36",
+          "bytes": 252
+        },
+        {
+          "path": "muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "bytes": 7086
+        },
+        {
+          "path": "muse_moe_w4a16/bench/fs_h100_r1.txt",
+          "sha": "dc95317bf6db014be307b2c239879d2198b6f980",
+          "bytes": 5950
+        },
+        {
+          "path": "muse_moe_w4a16/bench/fs_h100_r2.txt",
+          "sha": "ea949b11c23ef8d3efa1ac1e251cbea38b492cf9",
+          "bytes": 6224
+        },
+        {
+          "path": "muse_moe_w4a16/bench/fs_h100_r3.txt",
+          "sha": "02527c2a34004743bbef3c14940a6b1155c68831",
+          "bytes": 1509
+        },
+        {
+          "path": "muse_moe_w4a16/bench/fs_h100_r4.txt",
+          "sha": "73fac9a9d7770c9556f5100be1be2a883a95b207",
+          "bytes": 4250
+        },
+        {
+          "path": "muse_moe_w4a16/bench/fs_h100_r5.txt",
+          "sha": "f63c2dcfdad448cb02cc0b8d0d62d56006eef877",
+          "bytes": 1015
+        },
+        {
+          "path": "muse_moe_w4a16/bench/fs_h100_r6.txt",
+          "sha": "290621e8e125eedf7fd3cfeddaf2cbac93a53548",
+          "bytes": 7606
+        },
+        {
+          "path": "muse_moe_w4a16/bench/ring_h100_r7.txt",
+          "sha": "c01bd0d1b76b387c5565f0cce460f6a9c1aaffab",
+          "bytes": 2561
+        },
+        {
+          "path": "muse_moe_w4a16/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_moe_w4a16/diag_check.py",
+          "sha": "19aa10dcbf49b8728b6167994816280560d0a569",
+          "bytes": 32221
+        },
+        {
+          "path": "muse_moe_w4a16/nvfp4.py",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "bytes": 5929
+        },
+        {
+          "path": "muse_moe_w4a16/one.py",
+          "sha": "ed251d86933958c64f7830480c43355a695c64b9",
+          "bytes": 613
+        },
+        {
+          "path": "muse_moe_w4a16/one8.py",
+          "sha": "94e391068024bc8e3f19676a4b65bfe781434dc1",
+          "bytes": 531
+        },
+        {
+          "path": "muse_moe_w4a16/prof.py",
+          "sha": "5a7876d3193bb9bc8874111a4352031b6345a342",
+          "bytes": 2825
+        },
+        {
+          "path": "muse_moe_w4a16/reference.py",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "bytes": 6764
+        },
+        {
+          "path": "muse_moe_w4a16/submission.py",
+          "sha": "dabfae1d6c69d262f64bf6665cc3ce67177f5e98",
+          "bytes": 223566
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v10.py",
+          "sha": "8abda3bffdc3bce8e7bb30483b2daef2fbadcebc",
+          "bytes": 28377
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v11.py",
+          "sha": "9be4153b36f2a1dfc56a3e4b4c0eb46e8e0511b5",
+          "bytes": 29346
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v12.py",
+          "sha": "9475c06b82cf34e07500b3237436894d18810c56",
+          "bytes": 29657
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v13.py",
+          "sha": "ff7f711dc6f6ff9a856b3a52fbc980aeef175ce0",
+          "bytes": 28190
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v14.py",
+          "sha": "5908c8394540a5e10088b867725d4e45e6d3b83d",
+          "bytes": 27973
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v15.py",
+          "sha": "2a71c7a4d93121a2b8fd361024f52063f14fc260",
+          "bytes": 29265
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v16.py",
+          "sha": "d19509c61f4ff4cd5b86d9a814052bb8ff4137fc",
+          "bytes": 29415
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v17.py",
+          "sha": "a203e70afab01866363c5e7082e8acf43f6ede7d",
+          "bytes": 28123
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v18.py",
+          "sha": "1e0515a26d3e63df1fef6a9906e71ceb70611f6e",
+          "bytes": 41393
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v19.py",
+          "sha": "8e4175efaf9e3002cb5620d60547158ab2d84cb5",
+          "bytes": 42041
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v20.py",
+          "sha": "22f4fbfa2f0c8399408b82b7997b741a4b514c2a",
+          "bytes": 40787
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v21.py",
+          "sha": "e80caf21090f3e37f8cd02b41250e8c9e2b846c7",
+          "bytes": 27096
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v22.py",
+          "sha": "e6a604f387407045f2feb5dd7bff8f4187d1a5f8",
+          "bytes": 30022
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v23.py",
+          "sha": "6299c553a6828866b757b12ba5bf9a0aa280ff06",
+          "bytes": 25292
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v24.py",
+          "sha": "396787af661e67ca791a01c472e9c51c7385e463",
+          "bytes": 31220
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v25.py",
+          "sha": "d6f2bc5f5700e5a3df1fb9d04a2671d3312d6e8a",
+          "bytes": 36462
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v26.py",
+          "sha": "3d6637c2f4a79afcdac5984b081c98b641029fcd",
+          "bytes": 63442
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v27.py",
+          "sha": "71f6d299c1244658fe1455d87038e08dc489fdb3",
+          "bytes": 51654
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v28.py",
+          "sha": "2928821a8155cd57a0bb048ab96eaf020d33148a",
+          "bytes": 28186
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v29.py",
+          "sha": "b251405f83330ab8a6e857070a7868783806fe6e",
+          "bytes": 54340
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v30.py",
+          "sha": "b1e3e2034c2339750b8e281513b9abbc3748d3e2",
+          "bytes": 60126
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v30d.py",
+          "sha": "ae0ba36defc1667da41a347b4546743891a17356",
+          "bytes": 64277
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v31.py",
+          "sha": "8353a991ad60020969c2a81e07fdc30a550a4ba5",
+          "bytes": 61134
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v32.py",
+          "sha": "7606023cbdf7123b842c5303f408c7a674b879ac",
+          "bytes": 60234
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v33.py",
+          "sha": "96283d01e6da0fb8d62be2f126fb94fd908428bd",
+          "bytes": 65604
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v34.py",
+          "sha": "b07d0ff62b23d31b7f2b31a4497fd89f367b9cb2",
+          "bytes": 89335
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v34d.py",
+          "sha": "655361903ec3cb2418d5c0ef58b32a947f935c19",
+          "bytes": 89334
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v35.py",
+          "sha": "798b627c6ad9f12ac3c9d39a521bddc593c8799b",
+          "bytes": 95209
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v35d.py",
+          "sha": "ff406b8a5aa304d2797f0f933a2fd8e08c94edac",
+          "bytes": 95208
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v36.py",
+          "sha": "e5c24aa92cae639296c553bea18b709350c59f49",
+          "bytes": 103804
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v36d.py",
+          "sha": "e6b81314f41f1446f57f0f2225ea5def5378e544",
+          "bytes": 103803
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v37.py",
+          "sha": "abb34ad297fcb19b7bbbcfa9ca5c3c57598747ab",
+          "bytes": 104157
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v37d.py",
+          "sha": "9f80f93535d6fb58f8b862e4ed5dde8abf04399b",
+          "bytes": 104156
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v38.py",
+          "sha": "45e81b915780e1294ca431d1775e37648371a3b6",
+          "bytes": 107167
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v38d.py",
+          "sha": "07e6fa15fbf7ed41809bfa751675f3ffa51705b8",
+          "bytes": 107166
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v39.py",
+          "sha": "27f77e427c1751b8cedd5728e29c2f313ed1c612",
+          "bytes": 108270
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v39d.py",
+          "sha": "6b77901a98ddddadbfe428f2153dccd95d29f814",
+          "bytes": 108269
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v4.py",
+          "sha": "ad887dd4ccb44ba556ff4202eecc9cf5b6c85a2b",
+          "bytes": 26599
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v40.py",
+          "sha": "62978b90a63890ed488cdc53fd8585e8d043a7bd",
+          "bytes": 140650
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v40d.py",
+          "sha": "cfdbfc65e7879a26fe53a62275d9d134a5579641",
+          "bytes": 140649
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v41.py",
+          "sha": "dd88c205d802dcc7e13f855e76a1be6d71e4346f",
+          "bytes": 139664
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v41d.py",
+          "sha": "bb9a16c9ddeebf431509b0c7615ab65af95e5cce",
+          "bytes": 139663
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v42.py",
+          "sha": "c0612f656c0119b60969f901d3fae66a3043a31a",
+          "bytes": 142506
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v42d.py",
+          "sha": "219201fc55bf452e9495c7afcac3958003d92c8e",
+          "bytes": 142505
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v43.py",
+          "sha": "4f142c14c992b1b16524181db56a49a3606aeb09",
+          "bytes": 141852
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v43d.py",
+          "sha": "341c0ab5c76f6fb83d8fc41b9089b1276d932c12",
+          "bytes": 141851
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v44.py",
+          "sha": "53662eb6445f3bb0a4622f2b9b6b4e92a39cd62b",
+          "bytes": 145153
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v44d.py",
+          "sha": "f746b6ad7ba0c68261dec5ec29202265f2c9398d",
+          "bytes": 145152
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v45.py",
+          "sha": "c82e18f5d50ce12e200871761c26ba842317b356",
+          "bytes": 168638
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v45d.py",
+          "sha": "368046fcb45a245e515cec5bb24c343decd00977",
+          "bytes": 168637
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v46.py",
+          "sha": "395aac0a06c370addd8b81e134e723dc3a27648f",
+          "bytes": 195695
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v46d.py",
+          "sha": "b467ad39cc943f44947e9a49d437daacf65f1290",
+          "bytes": 195692
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v47.py",
+          "sha": "ac0aee034f781ed63edd4d64d7dd929b28dd38b1",
+          "bytes": 201052
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v47d.py",
+          "sha": "295e802b08cab669d6b762ba0cae08784ae092c8",
+          "bytes": 201050
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v48.py",
+          "sha": "c15b30b02cecda7aa5b07cd5e56930ef40301eba",
+          "bytes": 205931
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v48d.py",
+          "sha": "1818c2d284309cdcc861c40f5a3c8f126982b023",
+          "bytes": 205929
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v49.py",
+          "sha": "54dfe647545465cda320be8759237c2932afb2d9",
+          "bytes": 206555
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v49d.py",
+          "sha": "2988040af900e9c97d48e786231475d87e818e8e",
+          "bytes": 206553
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v50.py",
+          "sha": "6118f32a8935e7b74f1b480fa0f3d6c35f8ba1e9",
+          "bytes": 251749
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v50d.py",
+          "sha": "810038c0b02d7250d35213495079919a3c5d1609",
+          "bytes": 251747
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v51.py",
+          "sha": "7e82a990b94354c39a48466f86b58129f58ea9f4",
+          "bytes": 208891
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v51d.py",
+          "sha": "d7a4c742e6905480bdfb580f4ce9978f5b48f5d3",
+          "bytes": 208890
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v52.py",
+          "sha": "3d3fb660b99a067efd40b710450018a84f12aa03",
+          "bytes": 209789
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v52d.py",
+          "sha": "62c9552b841dcc42da8e862ad39750c882d99724",
+          "bytes": 209788
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v53.py",
+          "sha": "24c85c04695b3126f49d95e20458780865938e05",
+          "bytes": 210274
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v53d.py",
+          "sha": "8dcc751cf42fe90df1442b78f19bc892e4353026",
+          "bytes": 210273
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v54.py",
+          "sha": "22bbec7e2c8bdf00731b7499f3cbd6c6d010a7ec",
+          "bytes": 219990
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v54d.py",
+          "sha": "d500f05fd9a1917d204f1680c61b1f38bf56cb34",
+          "bytes": 219988
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v55.py",
+          "sha": "ab3b863e10ab39ba2d988feb5c60ff59c2e49f0d",
+          "bytes": 223127
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v55d.py",
+          "sha": "edf36a1b07f821b28fe216f6c7982ad2f21c0a32",
+          "bytes": 223125
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v56.py",
+          "sha": "dabfae1d6c69d262f64bf6665cc3ce67177f5e98",
+          "bytes": 223566
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v56d.py",
+          "sha": "c9527fe46a9401ac565b4fd5658f07642b1823ac",
+          "bytes": 223565
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v57.py",
+          "sha": "08de72dae35d696309960830e4d56632aeb31003",
+          "bytes": 233117
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v57d.py",
+          "sha": "c530fd4c2325b6f6db96ed606b37b775b8f86c03",
+          "bytes": 233116
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v58.py",
+          "sha": "34c4be1f5e854eabf70ca6cb7e0156e171fd54ea",
+          "bytes": 264354
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v58d.py",
+          "sha": "2b9e729793a1f579456df79f9fbf3a29f0e203eb",
+          "bytes": 264353
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v59.py",
+          "sha": "cd49926963fdab3306b9fb8bec958dfcc4efe2f0",
+          "bytes": 267249
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v59d.py",
+          "sha": "79c1b9d2db66e91d2a3849bd57d699625afa5a3c",
+          "bytes": 267248
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v6.py",
+          "sha": "d8121716c647787f72374b48729011274828439a",
+          "bytes": 29448
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v60.py",
+          "sha": "330e4d9fd5b30e3af14432d58177e4ecd3e71bd3",
+          "bytes": 271385
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v60d.py",
+          "sha": "ca2c86b9866027fb9685531f1ef903664d68f9e9",
+          "bytes": 271384
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v7.py",
+          "sha": "4b1399470b9781c8b6fbcffa1a4202c76aa21f52",
+          "bytes": 26777
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v8.py",
+          "sha": "82c806cf7e4850a57f8017905f792a8b8128852b",
+          "bytes": 27048
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v9.py",
+          "sha": "999d206c7e20b113e7bb6aa94535da2cdaf45f7c",
+          "bytes": 27602
+        },
+        {
+          "path": "muse_moe_w4a16/submission_v9d.py",
+          "sha": "d92729fb05bf44578bd65b9496bcdc8a5b1cf690",
+          "bytes": 27669
+        },
+        {
+          "path": "muse_moe_w4a16/submission_wip_wgl.py",
+          "sha": "d789d181ebc60e8620bae64c3b8a835e297475de",
+          "bytes": 50275
+        },
+        {
+          "path": "muse_prefill_layer/AGENTS.md",
+          "sha": "6dda036652f97fe1424f21d268687b2617438074",
+          "bytes": 2714
+        },
+        {
+          "path": "muse_prefill_layer/TASK.md",
+          "sha": "a2c3b51a981085c76b3dcf55a01b1de76f6c62d8",
+          "bytes": 8706
+        },
+        {
+          "path": "muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "bytes": 18993
+        },
+        {
+          "path": "muse_prefill_layer/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_prefill_layer/glue_pf.py",
+          "sha": "f98f4dfe84b05b567f1e05df6642b712aae27363",
+          "bytes": 12694
+        },
+        {
+          "path": "muse_prefill_layer/glue_pf2.py",
+          "sha": "a3afc891037985b9236f7fd64ae91976561499a7",
+          "bytes": 139709
+        },
+        {
+          "path": "muse_prefill_layer/glue_pf2_pf8.py",
+          "sha": "02bb1e07ea76423a62e33d0ca439a07b634185bd",
+          "bytes": 63559
+        },
+        {
+          "path": "muse_prefill_layer/nvfp4.py",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "bytes": 5929
+        },
+        {
+          "path": "muse_prefill_layer/reference.py",
+          "sha": "f92aa2db6ba064bc686ed5369f979cfe00d4ff44",
+          "bytes": 35035
+        },
+        {
+          "path": "muse_prefill_layer/submission.py",
+          "sha": "2b2e009a1555dd4648060ddaabd6d81bd3cb369f",
+          "bytes": 776362
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf10.py",
+          "sha": "33e74e3a0157b4d961a4702412ad3fd32a670c96",
+          "bytes": 249851
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf11.py",
+          "sha": "0835060f5d80a0ae8a649318b0c6c6b8d445dc09",
+          "bytes": 279763
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf12.py",
+          "sha": "7fa09ecdf42f26c32ef7ea96b024a994543ebe58",
+          "bytes": 455538
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf13.py",
+          "sha": "1450f1e17ac4c376f82ba4ca9620838534eaf32e",
+          "bytes": 459646
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf14.py",
+          "sha": "de3bc2df61659ef7a68c460ff81656f5387d35f0",
+          "bytes": 580533
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf14diag.py",
+          "sha": "9bb4edd3078c8c245aa16de8f7d0979624e88ec4",
+          "bytes": 580532
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf15.py",
+          "sha": "766581bc04c54376f5550044c423b9a4978f8612",
+          "bytes": 661886
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf15diag.py",
+          "sha": "b51f7636fe8c458f0c67b4a99137bf60417618ab",
+          "bytes": 661885
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf16.py",
+          "sha": "6f1ae34708e1c1cd59a49926a54ada9e3b90688e",
+          "bytes": 664351
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf16diag.py",
+          "sha": "07606d0a28fb63af1d9b84d5d2f59d4009bb654a",
+          "bytes": 664350
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf17.py",
+          "sha": "f309e0e4873ab62f87fe01a786336ba5db37df88",
+          "bytes": 700565
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf17diag.py",
+          "sha": "d319d5a5bdfb94f23fce5a83608133a94b0108a7",
+          "bytes": 700564
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf18.py",
+          "sha": "54e7c1edbc4a457dfb3b2ea4ea428b6591777cd4",
+          "bytes": 708582
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf18diag.py",
+          "sha": "ba16d7ce1085086c53e1feff80f6ac58f3ff15a1",
+          "bytes": 708581
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf19.py",
+          "sha": "ab21ae08a9bc7f4899dac7a0751a5bd8f21f07f8",
+          "bytes": 708740
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf19diag.py",
+          "sha": "6c221fc79bf29480918787361a9e69564f7be29f",
+          "bytes": 708739
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf20.py",
+          "sha": "d2da38f15275a1822ff7c57a3c133f682404d07f",
+          "bytes": 719832
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf20diag.py",
+          "sha": "dbc4999f08c6d0456d2a0e897c3619163fd9fa3b",
+          "bytes": 719831
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf21.py",
+          "sha": "eb0c96731594b3841770c95ddeb9fc5896e54aff",
+          "bytes": 733227
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf21diag.py",
+          "sha": "3179c68f6d5b63dc63611a5ecaaa3038d1dc586b",
+          "bytes": 733226
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf22.py",
+          "sha": "d4a909f85df8f1b40865eb9ed6ed47b4c279bfa7",
+          "bytes": 739550
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf22diag.py",
+          "sha": "8ddf4e3675b557d91eacf832a823f0a4a9653483",
+          "bytes": 739584
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf23.py",
+          "sha": "295224f97e86903f456e91188e04d3e372f9c059",
+          "bytes": 723780
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf24.py",
+          "sha": "9b3d477b445190d78b91935cbfeae4d1887a5c59",
+          "bytes": 728055
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf24diag.py",
+          "sha": "a0e8b16617c9d1c24f4d0795149150d1086c8310",
+          "bytes": 728136
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf25.py",
+          "sha": "eeb69e49ac531900428e1fce5e50b704d54c4edd",
+          "bytes": 729228
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf25diag.py",
+          "sha": "8aa5dc897cf4152ee393ce25b3b7d7b856b0dd86",
+          "bytes": 729227
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf26.py",
+          "sha": "4f0c78674617ced2282e6d2891642f72dfcfc6f7",
+          "bytes": 757017
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf26diag.py",
+          "sha": "b236a17c7ddfd46fa2ba2717fb93ad873576c0ed",
+          "bytes": 757016
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf27.py",
+          "sha": "7b11d5b503bc0faf9cdeb4684a50a36b24c6671c",
+          "bytes": 757497
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf27diag.py",
+          "sha": "9be3e6453c85ba3d7973c363cb198f168c9f3beb",
+          "bytes": 757496
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf28.py",
+          "sha": "90f0accd9e32d76c04c1db7ee44d1b2b92765dbf",
+          "bytes": 757625
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf28diag.py",
+          "sha": "b59a24b86ee85ec64a1282aa67c447cbdb25d4d1",
+          "bytes": 757624
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf29.py",
+          "sha": "fc68246e2bd7662130ac8cc81b50e8e9192280bf",
+          "bytes": 757674
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf29diag.py",
+          "sha": "56ef1a83535a2e29db7a4a85343234d13e8780ad",
+          "bytes": 757673
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf30.py",
+          "sha": "de5d6ad704ad1b4021327de64dfb79fe2d617a5a",
+          "bytes": 774234
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf30diag.py",
+          "sha": "185fed7972ba1717bac74df4d89c3701c709723e",
+          "bytes": 774302
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf31.py",
+          "sha": "1a1e05968d20e4e30e808a1bfc0d269c754c887f",
+          "bytes": 776174
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf31diag.py",
+          "sha": "1a5157b81a3b4cacba162709db8764a4a9fd1508",
+          "bytes": 776173
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf32.py",
+          "sha": "2b2e009a1555dd4648060ddaabd6d81bd3cb369f",
+          "bytes": 776362
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf33.py",
+          "sha": "c1a07f96dec198ce082519fdd8eca53da433a60d",
+          "bytes": 778037
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf33diag.py",
+          "sha": "e329743c6e28f8afdd848cdc4cc8820697879a98",
+          "bytes": 778036
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf7.py",
+          "sha": "381412c1b10f4817af3bfc5fec85617fdccbc6a7",
+          "bytes": 239247
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf8.py",
+          "sha": "e6419da77a114bdc5cc122f49081dd0378a06958",
+          "bytes": 268026
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf9.py",
+          "sha": "d853f660a638412196d17e98555a04768b0a57fb",
+          "bytes": 245420
+        },
+        {
+          "path": "muse_prefill_layer/submission_pf9b.py",
+          "sha": "fc462583d43de093359df8c663165e696128367c",
+          "bytes": 245427
+        },
+        {
+          "path": "muse_prefill_layer/submission_plain.py",
+          "sha": "15e2cafa9040cfadc7045aca96417bbeb8707aa9",
+          "bytes": 10692
+        },
+        {
+          "path": "muse_prefill_layer/submission_v0.py",
+          "sha": "8751ede38c04197bb85c670e74aa3a89512deb90",
+          "bytes": 162204
+        },
+        {
+          "path": "muse_prefill_layer/submission_v1.py",
+          "sha": "7758e4f27f60db0895f3b223d7be81a107d9c60f",
+          "bytes": 179623
+        },
+        {
+          "path": "muse_prefill_layer/submission_v2.py",
+          "sha": "424b770911c44c0acc4cfd48d938556c7c37a0dd",
+          "bytes": 216896
+        },
+        {
+          "path": "muse_prefill_layer/submission_v3.py",
+          "sha": "e2090690a55d8e2a08e680580e018d4ef5b8d84a",
+          "bytes": 219924
+        },
+        {
+          "path": "muse_prefill_layer/submission_v4.py",
+          "sha": "ccbff63d1a2bf78fd4f6fc62f9c98ec0ffb7cfee",
+          "bytes": 197604
+        },
+        {
+          "path": "muse_prefill_layer/submission_v5.py",
+          "sha": "afeae52e4746421ed89986f7e1c90570c3528de5",
+          "bytes": 201884
+        },
+        {
+          "path": "muse_prefill_layer/submission_v6.py",
+          "sha": "89394c9808dec7b7f298be5f2d007fda3517b613",
+          "bytes": 201989
+        },
+        {
+          "path": "muse_prefill_layer/submission_v7.py",
+          "sha": "bc608f88889aebde31f8c20daf7570b27385ec7a",
+          "bytes": 202139
+        },
+        {
+          "path": "muse_prefill_layer/submission_v8.py",
+          "sha": "dddb5ef82ef8ac9fb8481bea8ab58872209b707d",
+          "bytes": 202310
+        },
+        {
+          "path": "muse_prefill_layer/submission_v9.py",
+          "sha": "2ec060c8eef304178eb1e3b4122ed8bf0aad521b",
+          "bytes": 204426
+        },
+        {
+          "path": "notes/attn_check0.json",
+          "sha": "2476a6f634d862f8a2fd917c6c03ff5fa96e2044",
+          "bytes": 110192
+        },
+        {
+          "path": "notes/attn_check1.json",
+          "sha": "5d4229fdbbc4cc689a6aca1d8283db0be19d0c47",
+          "bytes": 96982
+        },
+        {
+          "path": "notes/attn_check10.json",
+          "sha": "b7285630eb225169f2dced4c9a94dbdc18abe46b",
+          "bytes": 95698
+        },
+        {
+          "path": "notes/attn_check11.json",
+          "sha": "c7fc06ffe8a0fb5725090c449536d8faca298bb1",
+          "bytes": 95573
+        },
+        {
+          "path": "notes/attn_check12.json",
+          "sha": "cbaf4660c09e55968bfea7c51defb3bdac06a9f3",
+          "bytes": 96207
+        },
+        {
+          "path": "notes/attn_check13.json",
+          "sha": "4d59599e877d0cfc466e84bd4bc1bd351e91aec3",
+          "bytes": 95004
+        },
+        {
+          "path": "notes/attn_check2.json",
+          "sha": "e4e5af221df2a6913f73e756b5c0bdbfabc411d0",
+          "bytes": 96989
+        },
+        {
+          "path": "notes/attn_check3.json",
+          "sha": "49d3e5c71989b150e4a7ff4d745dca741a35b199",
+          "bytes": 97609
+        },
+        {
+          "path": "notes/attn_check4.json",
+          "sha": "1143cf2a69a8f6254948e65e82a560e5fad9bf2f",
+          "bytes": 96919
+        },
+        {
+          "path": "notes/attn_check5.json",
+          "sha": "3f006cb4d7dbc5c15472da3e46f5767ae2a6f95d",
+          "bytes": 96715
+        },
+        {
+          "path": "notes/attn_check6.json",
+          "sha": "e71a64c58a8235d2d9b5e8d0de8cae61ab528d0b",
+          "bytes": 96721
+        },
+        {
+          "path": "notes/attn_check7.json",
+          "sha": "29ade72ecd19dede3813d26c93fc89bef5f5a916",
+          "bytes": 96871
+        },
+        {
+          "path": "notes/attn_check8.json",
+          "sha": "4b9475e90cbbe2ca23586e45ef96ee73ac85629c",
+          "bytes": 96680
+        },
+        {
+          "path": "notes/attn_check9.json",
+          "sha": "e48449a989c127192bb4253949d290b17979f31d",
+          "bytes": 96729
+        },
+        {
+          "path": "notes/h200_session1.md",
+          "sha": "cdd76dc5f17ca469dd6c54da7d49fd94c0aba64a",
+          "bytes": 4077
+        },
+        {
+          "path": "notes/llms.txt",
+          "sha": "f5d32fd298c968976791198f2fed6d194dbea7e9",
+          "bytes": 17053
+        },
+        {
+          "path": "notes/moe_check1.json",
+          "sha": "c679ee8c9ecfbb31a9e2cd409450d72cb86ad136",
+          "bytes": 63393
+        },
+        {
+          "path": "notes/moe_check10.json",
+          "sha": "dad411c1a37c71f6d98b8bf50a2c51d00a173338",
+          "bytes": 63401
+        },
+        {
+          "path": "notes/moe_check11.json",
+          "sha": "bcb08a84b5528ba7aff2570c69c92e1cf4d1acf2",
+          "bytes": 63313
+        },
+        {
+          "path": "notes/moe_check2.json",
+          "sha": "d1cc84767bf2cb98cf122610cf180692007d363c",
+          "bytes": 31997
+        },
+        {
+          "path": "notes/moe_check3.json",
+          "sha": "5b1b22faa5cd1b6dba5c9948ba2b7253fbe443b2",
+          "bytes": 63331
+        },
+        {
+          "path": "notes/moe_check4.json",
+          "sha": "1b18b418d0c5d55222a65a7bfa3a206fa85c49ea",
+          "bytes": 63345
+        },
+        {
+          "path": "notes/moe_check5.json",
+          "sha": "f1a0b2530bbc8b3d7198dafbe6a4b47a656b18bf",
+          "bytes": 63385
+        },
+        {
+          "path": "notes/moe_check6.json",
+          "sha": "409616c745e55f546342e4087f497451026aba33",
+          "bytes": 63337
+        },
+        {
+          "path": "notes/moe_check7.json",
+          "sha": "a892ca3d7a41d53ff77dc3d718b415c010bd8021",
+          "bytes": 63964
+        },
+        {
+          "path": "notes/moe_check8.json",
+          "sha": "03ff4a854917dd6f9eb240da00556187a11c9f9c",
+          "bytes": 3897
+        },
+        {
+          "path": "notes/moe_check9.json",
+          "sha": "0fdb35829ee95572a037d11c362d2726a1d719f8",
+          "bytes": 63315
+        },
+        {
+          "path": "notes/muse_attention_decode.json",
+          "sha": "cbe063cadbfe2e76d78182730e2e715ad052dc15",
+          "bytes": 55549
+        },
+        {
+          "path": "notes/muse_bf16_proj.json",
+          "sha": "590363a2623b5c6f3bd21229c8c659295eb3b35e",
+          "bytes": 29332
+        },
+        {
+          "path": "notes/muse_decode_layer.json",
+          "sha": "e467b592a8466ad28dd9b87280bb38057e8c31a4",
+          "bytes": 98969
+        },
+        {
+          "path": "notes/muse_moe_w4a16.json",
+          "sha": "4f234e6917cd5753e6d1366638738db0c3dadfdf",
+          "bytes": 40733
+        },
+        {
+          "path": "notes/muse_prefill_layer.json",
+          "sha": "7d9597dea587746f1016d0dc7ea9dd2156c812cc",
+          "bytes": 91698
+        },
+        {
+          "path": "notes/proj_check0.json",
+          "sha": "f27a3f46689e347427bf8558f7df7ff9f35e3fd9",
+          "bytes": 209905
+        },
+        {
+          "path": "notes/proj_check1.json",
+          "sha": "b92725d602dd42b6859e2305f841fb7bef4a8ae1",
+          "bytes": 208057
+        },
+        {
+          "path": "notes/proj_check10.json",
+          "sha": "1dbfa2b971b38480defd0ff412cb973e5c18813b",
+          "bytes": 209830
+        },
+        {
+          "path": "notes/proj_check11.json",
+          "sha": "dd85ee8f6bd8c1cef7bb71fc113e54b54d3d5b4e",
+          "bytes": 209251
+        },
+        {
+          "path": "notes/proj_check2.json",
+          "sha": "1b6c878e006cae93bd930d07ba9e18b1793c33d0",
+          "bytes": 208660
+        },
+        {
+          "path": "notes/proj_check3.json",
+          "sha": "bee84942249a26ae036663d844a13d5a50fd1303",
+          "bytes": 208004
+        },
+        {
+          "path": "notes/proj_check4.json",
+          "sha": "cac15dc8c50c9d1759ca78bdacb2cc9455896275",
+          "bytes": 207926
+        },
+        {
+          "path": "notes/proj_check5.json",
+          "sha": "7d5045339ccb3a287387115012955ac8f9c5870c",
+          "bytes": 208013
+        },
+        {
+          "path": "notes/proj_check6.json",
+          "sha": "dab6ed4741adf4435de75f2bbfd87235f983fbfb",
+          "bytes": 209977
+        },
+        {
+          "path": "notes/proj_check7.json",
+          "sha": "0f04b1e66ce96760d8516ec909fd416dfed80435",
+          "bytes": 208858
+        },
+        {
+          "path": "notes/proj_check8.json",
+          "sha": "0a3c34472ee9898539fdfddae901d911ca35db93",
+          "bytes": 212009
+        },
+        {
+          "path": "notes/proj_check9.json",
+          "sha": "36364d76cef0cb974f533d2ba1198d674537df52",
+          "bytes": 212572
+        },
+        {
+          "path": "okb.py",
+          "sha": "2019ef98b6be5b83de5a7eca19ba7c68130ed3d9",
+          "bytes": 7259
+        },
+        {
+          "path": "rp.py",
+          "sha": "fdc66f226bccb11340c34c8fc1f0de4fc895a65f",
+          "bytes": 4944
+        },
+        {
+          "path": "tools/build_dl.py",
+          "sha": "3d247558201dde5a2cc6f2e767f9b6e2eddf15a6",
+          "bytes": 1262
+        },
+        {
+          "path": "tools/build_dl14.py",
+          "sha": "503824b7996111ad021e25d7e379de1961c601f0",
+          "bytes": 10556
+        },
+        {
+          "path": "tools/build_dl14n.py",
+          "sha": "4a72fd781dc02107f4247e02286d0dca9c6d7551",
+          "bytes": 10556
+        },
+        {
+          "path": "tools/build_dl15.py",
+          "sha": "120959e5c2e4a942d9c27d3b57dd0ceae2f9f32c",
+          "bytes": 14522
+        },
+        {
+          "path": "tools/build_dl16.py",
+          "sha": "7eb6a87776dc612a7d771535cf94a30f5f10b421",
+          "bytes": 1614
+        },
+        {
+          "path": "tools/build_dl19.py",
+          "sha": "4b3a25f949299642864cd86479c4ba73c59a0505",
+          "bytes": 2349
+        },
+        {
+          "path": "tools/build_dl20.py",
+          "sha": "b975f4c3658c9560e215729b8c88bae2e1950b64",
+          "bytes": 20491
+        },
+        {
+          "path": "tools/build_dl21.py",
+          "sha": "d07805b168ab05b5b3d5a4f20081a30b435c3c67",
+          "bytes": 22181
+        },
+        {
+          "path": "tools/build_dl22.py",
+          "sha": "68ce5348f1345ec65c4ed6767d3ee257a43e1a27",
+          "bytes": 22965
+        },
+        {
+          "path": "tools/build_dl23.py",
+          "sha": "b1781e8c4674fc2cc5ed2ccc498c60b57f0a3ab7",
+          "bytes": 23449
+        },
+        {
+          "path": "tools/build_dl24.py",
+          "sha": "9282516c7bc88cade3f4a09947fd8623b3c8a29c",
+          "bytes": 24962
+        },
+        {
+          "path": "tools/build_dl25.py",
+          "sha": "f477236293073ca72bcb7bc1ea8ef10c4c1c06fa",
+          "bytes": 26605
+        },
+        {
+          "path": "tools/build_dl26.py",
+          "sha": "83882815e02fae816dba8f1c5ae4c8e9f83d533f",
+          "bytes": 29174
+        },
+        {
+          "path": "tools/build_dl27.py",
+          "sha": "2b424ac81d2d828f2ea67554fd8b7ea57578ed15",
+          "bytes": 29369
+        },
+        {
+          "path": "tools/build_dl28.py",
+          "sha": "f5cfa976f4a445aa0b4a48e0e890e1b3ba16798c",
+          "bytes": 29833
+        },
+        {
+          "path": "tools/build_dl31.py",
+          "sha": "6e38b24fd6239f4c941143b83926fc2c6ceb686d",
+          "bytes": 40761
+        },
+        {
+          "path": "tools/build_dl32.py",
+          "sha": "42fd1f098a56c82a21953c42d725d41f9f6f5c43",
+          "bytes": 40975
+        },
+        {
+          "path": "tools/build_dl33.py",
+          "sha": "8615cdb22ee9d8f5a4a2e1cc266e3dfafe5855ff",
+          "bytes": 42061
+        },
+        {
+          "path": "tools/build_dl34.py",
+          "sha": "61c4664327aa6afd6f385d57b923d3694b9a7d39",
+          "bytes": 42321
+        },
+        {
+          "path": "tools/build_dl35.py",
+          "sha": "876dbb81665f58f6862cdadca2bba3db3cecddc7",
+          "bytes": 42647
+        },
+        {
+          "path": "tools/build_pf.py",
+          "sha": "04ea1f1c0e1502bbb9061f3b7d5b136e7ba5f45a",
+          "bytes": 1491
+        },
+        {
+          "path": "tools/compose.py",
+          "sha": "5e0b04360ad62b607c3fe49647172da367c6ab25",
+          "bytes": 1076
+        },
+        {
+          "path": "tools/cu.py",
+          "sha": "d8f25984b820ef1f4273a592e16a12bd011e7248",
+          "bytes": 1694
+        },
+        {
+          "path": "tools/dlbudget.py",
+          "sha": "e9eed2a927d27ad35b01c3de6c2b4a3f8d539e32",
+          "bytes": 1948
+        },
+        {
+          "path": "tools/showchk.py",
+          "sha": "4cecaf2b25931220fdb739e8e9dfffce08c89880",
+          "bytes": 755
+        },
+        {
+          "path": "virtualcuda/.gitignore",
+          "sha": "aa96caf4d15f874350d91e62627e5a651edd18ee",
+          "bytes": 32
+        },
+        {
+          "path": "virtualcuda/README.md",
+          "sha": "2c9c08959159ce80a47f4d6fd99fb622b509c068",
+          "bytes": 16735
+        },
+        {
+          "path": "virtualcuda/data/accelsim_results.json",
+          "sha": "3d133e02a3a30b07ae8d77286fce76c6dedaff65",
+          "bytes": 1228
+        },
+        {
+          "path": "virtualcuda/data/calibration.json",
+          "sha": "7f52f2510c2b864033eae1f91918ab82d4426f7b",
+          "bytes": 11831
+        },
+        {
+          "path": "virtualcuda/data/h200_measured.json",
+          "sha": "88bbc9b18fd80e1b087d67b2cf90243ef80be493",
+          "bytes": 100994
+        },
+        {
+          "path": "virtualcuda/data/sass_db.json",
+          "sha": "ee1e09c53223f1637eb71ff8f7e7f8f43e5389ac",
+          "bytes": 31114
+        },
+        {
+          "path": "virtualcuda/examples/attnw_variants.py",
+          "sha": "b0976d183c332aab21ec2d4a68c37120ea72b92a",
+          "bytes": 862
+        },
+        {
+          "path": "virtualcuda/examples/gemv_stream.json",
+          "sha": "e66cae442f5de32ce1076e361cae4fa281647f44",
+          "bytes": 282
+        },
+        {
+          "path": "virtualcuda/examples/new_idea_template.py",
+          "sha": "252c6b6bcd8351111f5540657a04a95d9a223d65",
+          "bytes": 1581
+        },
+        {
+          "path": "virtualcuda/sim/build_accelsim.sh",
+          "sha": "50c431ac7d03d46509ad351a6f8d28aaa9fa6a5f",
+          "bytes": 1596
+        },
+        {
+          "path": "virtualcuda/sim/build_tracer.sh",
+          "sha": "e03d42548489014a527689b1e54ae01b2fac2f9e",
+          "bytes": 636
+        },
+        {
+          "path": "virtualcuda/sim/ncu_daisy.sh",
+          "sha": "a15f3b6fa653bafc8571135023e11f6b1300484a",
+          "bytes": 1464
+        },
+        {
+          "path": "virtualcuda/sim/ncu_daisy_py.sh",
+          "sha": "618416c667f15960f9bc020dac4540a03c41252b",
+          "bytes": 1538
+        },
+        {
+          "path": "virtualcuda/sim/okc_case.py",
+          "sha": "16eca6b939d54274c8789bd8b5823bd7ce79def4",
+          "bytes": 1508
+        },
+        {
+          "path": "virtualcuda/sim/run_sim.sh",
+          "sha": "c04a3fcf27f7412018b5a36406e658000aabfc80",
+          "bytes": 1332
+        },
+        {
+          "path": "virtualcuda/sim/trace.sh",
+          "sha": "98f396a01eacefc1fc2c818cf3305849bd44e0de",
+          "bytes": 1221
+        },
+        {
+          "path": "virtualcuda/sim/ubench.cu",
+          "sha": "020cc7b0bbc276c82ed4c33cdf471912f6a51f60",
+          "bytes": 5261
+        },
+        {
+          "path": "virtualcuda/tests/test_vc.py",
+          "sha": "06db853c4d9b36942880228175ed0ef189385bb9",
+          "bytes": 1806
+        },
+        {
+          "path": "virtualcuda/vc.py",
+          "sha": "9628f084a3cbf896416b73382b2bdc08c10df22b",
+          "bytes": 4048
+        },
+        {
+          "path": "virtualcuda/vc/__init__.py",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "bytes": 0
+        },
+        {
+          "path": "virtualcuda/vc/calib.py",
+          "sha": "38187510a0598e4bcb60a54ee96a2c01e3bfa87f",
+          "bytes": 5378
+        },
+        {
+          "path": "virtualcuda/vc/cases.py",
+          "sha": "4b73cb1f23513b82972512ac8dbc3b960fd6b44f",
+          "bytes": 13566
+        },
+        {
+          "path": "virtualcuda/vc/collect.py",
+          "sha": "c9c7a6c80003162b74ffe60c2e2409c280f5ee97",
+          "bytes": 2390
+        },
+        {
+          "path": "virtualcuda/vc/model.py",
+          "sha": "b17311e27a27b66b777be1ae5931ea03c2af6a82",
+          "bytes": 8039
+        },
+        {
+          "path": "virtualcuda/vc/params.json",
+          "sha": "5f182de2fc3603e391c798e6fd250b868822917f",
+          "bytes": 253
+        },
+        {
+          "path": "virtualcuda/vc/sass.py",
+          "sha": "3b34591d272957ae0b21a143725bbcacc7ca4537",
+          "bytes": 15883
+        },
+        {
+          "path": "virtualcuda/vc/sassdb.py",
+          "sha": "6d09b119da0103dd36b3f1e0b724cc4b440d4d30",
+          "bytes": 2854
+        }
+      ],
+      "fetched": [
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "README.md",
+          "sha": "aabf485e422a458944aab28aad15df603db8e0b6",
+          "bytes": 4069,
+          "sha256": "c740af34858ff63bce60db2dfd959e400b20d42a4dbfe9941d27453ff46e4094"
+        },
+        {
+          "path": "docs/upstream_ideas.md",
+          "sha": "8a6753655193727934a3db4f17d15d921a9d5441",
+          "bytes": 18783,
+          "sha256": "0e1472aafb6c055f35fc5124a960bd830105e05d4f1a5887832a7f0461365944"
+        },
+        {
+          "path": "notes/llms.txt",
+          "sha": "f5d32fd298c968976791198f2fed6d194dbea7e9",
+          "bytes": 17053,
+          "sha256": "dc34485bf428c836938fcfeeb008fc048a13b5177a7ae81cea545b720e689d21"
+        }
+      ]
+    },
+    {
+      "repository": "sgl-project/sgl-nvidia-mega",
+      "url": "https://github.com/sgl-project/sgl-nvidia-mega",
+      "head": "750004efd8bc0db852cdd4efbebb807c73bedd4b",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": ".codespellrc",
+          "sha": "5a72ac5fcdc7249baea3df197fec4de89acedf2b",
+          "bytes": 316
+        },
+        {
+          "path": ".github/CODEOWNERS",
+          "sha": "6384bc339613d751593849861588098572e8bd50",
+          "bytes": 286
+        },
+        {
+          "path": ".github/pull_request_template.md",
+          "sha": "4b6169a56efd5779372582b74c63b88f8631e4ba",
+          "bytes": 1493
+        },
+        {
+          "path": ".github/workflows/lint.yml",
+          "sha": "ce791060ace45be9bd77d1c22fa373d725afadb2",
+          "bytes": 989
+        },
+        {
+          "path": ".github/workflows/pr-title.yml",
+          "sha": "6fae109018c31ab1972e3ff6fbb6cf95b1e8da7b",
+          "bytes": 2817
+        },
+        {
+          "path": ".github/workflows/unit-test.yml",
+          "sha": "33c992ec657037da22117786f3122ddfddb18118",
+          "bytes": 1765
+        },
+        {
+          "path": ".gitignore",
+          "sha": "88e16289c9218c017cd7e137bafa1bb5c60fb99a",
+          "bytes": 66
+        },
+        {
+          "path": ".isort.cfg",
+          "sha": "9c14e661b3701be475f9b9a8729389fc698817b4",
+          "bytes": 59
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "sha": "6608c62f46748f32112047c181aa9589e7f9bf79",
+          "bytes": 1089
+        },
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358
+        },
+        {
+          "path": "NOTICE",
+          "sha": "617a62473939c3b0bda3495b6671829c3e3ad543",
+          "bytes": 4577
+        },
+        {
+          "path": "README.md",
+          "sha": "61d4b1b885139605e65c48646c53430950c510bb",
+          "bytes": 26847
+        },
+        {
+          "path": "benchmark/README.md",
+          "sha": "f90952a80666c97ff3c5134649e599c39b5929c7",
+          "bytes": 3449
+        },
+        {
+          "path": "benchmark/bench_deepseek_v41_markov.py",
+          "sha": "769d89913a4a24e49699f121404ce29b0366a99f",
+          "bytes": 6553
+        },
+        {
+          "path": "benchmark/static_table.py",
+          "sha": "108d55861401d711d9b916fe7ad74db079d134e1",
+          "bytes": 5589
+        },
+        {
+          "path": "pyproject.toml",
+          "sha": "b09c6de946692a4b9c07ba59ca4fc9996c9ba872",
+          "bytes": 787
+        },
+        {
+          "path": "sgl_nvidia_mega/__init__.py",
+          "sha": "22d93a1f4950515173e7b1d154ba58614a777a40",
+          "bytes": 867
+        },
+        {
+          "path": "sgl_nvidia_mega/common/__init__.py",
+          "sha": "da04890b43f2d4453f3cc4ca3f7963b4ef477933",
+          "bytes": 249
+        },
+        {
+          "path": "sgl_nvidia_mega/common/accept_tail.py",
+          "sha": "02c9d6954bf1beda0d4943c4eae820aae7173541",
+          "bytes": 12623
+        },
+        {
+          "path": "sgl_nvidia_mega/common/argmax_keys.py",
+          "sha": "b6cede74350dc1cf02c99e198e4cb0410cda2d4e",
+          "bytes": 3164
+        },
+        {
+          "path": "sgl_nvidia_mega/common/jit.py",
+          "sha": "3c9f8c92ee33c76bdebe0cc3f8c66df14029c9a7",
+          "bytes": 6682
+        },
+        {
+          "path": "sgl_nvidia_mega/common/sync.py",
+          "sha": "52876bb1468fe7dc85715196862793428a8c1055",
+          "bytes": 11737
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/__init__.py",
+          "sha": "f69ba28c7f0a9dacd7ab3ae60a19fcd7f1c1c7b3",
+          "bytes": 1057
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/attention/__init__.py",
+          "sha": "5fba3a91bad886cef170007e83ed04f046439990",
+          "bytes": 7085
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/attention/chain.py",
+          "sha": "afd1192131533b84839010720e007645dd746971",
+          "bytes": 18909
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/attention/indexer.py",
+          "sha": "fd5bb371d583c8a5af4e94f5ddfe3fc7beb5d6fe",
+          "bytes": 17807
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/attention/ops.py",
+          "sha": "439a7404b3fc97b3374cae384e2de79365b3dc53",
+          "bytes": 10207
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/attention/prepare.py",
+          "sha": "3beeba97977b0a87fae8a68abad9231bb97d6d6a",
+          "bytes": 7217
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/attention/sched_ahead.py",
+          "sha": "4fb069685cb02a4254468c3cb7aaa0cd5232c229",
+          "bytes": 8865
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/attention/step.py",
+          "sha": "da03981ba94412417466f9deb490760f140236cb",
+          "bytes": 11602
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/boundary/__init__.py",
+          "sha": "4ad5808b7a171bb2815b9ce78867b834e0beb8e7",
+          "bytes": 6739
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/boundary/boundaries.py",
+          "sha": "334e57cae2b30490b5c900ac303cb7242c813703",
+          "bytes": 22763
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/boundary/hop_a.py",
+          "sha": "dc071946125f33379838983ac3c06ea24d07e430",
+          "bytes": 5280
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/boundary/prenorm.py",
+          "sha": "b9dfdbc253fe3e2362620dffe4219accb2c65b9e",
+          "bytes": 4627
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/draft.py",
+          "sha": "36529f0a42b547eb53be377a8f4e8af7c35279ce",
+          "bytes": 4699
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/draft_attention.py",
+          "sha": "76846b7cd591546a19b3d1a53565f8ba13871dda",
+          "bytes": 17901
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/draft_step.py",
+          "sha": "91a7557c4d6b37564d6bb053580774ecbb09f446",
+          "bytes": 14055
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/engram/__init__.py",
+          "sha": "e59b4ca317385cf7f62493898e445545d8393ebb",
+          "bytes": 4107
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/engram/prefetch.py",
+          "sha": "3ee3a808a382a0f88357072843e462241433b04b",
+          "bytes": 14562
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/logits/__init__.py",
+          "sha": "2fb090748465be4edcacb9a86d98f4708ea0a71c",
+          "bytes": 9187
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/moe/__init__.py",
+          "sha": "98b6d9a8513fd903ac0d99fd8dd7e2c5f66e8fc2",
+          "bytes": 1772
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/moe/routed.py",
+          "sha": "fe9d6c405b1422223b561abb022bf231578bde4f",
+          "bytes": 11364
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/moe/shared_ll.py",
+          "sha": "1ee4cfa564902d7ccbc8c52035309147fc66fcc5",
+          "bytes": 4448
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/moe/step.py",
+          "sha": "a4eefc3d416b2999951c2e447fc5f55eaa96d509",
+          "bytes": 12157
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/plan.py",
+          "sha": "f23afd9d5f9e488f680b0119698f612e9f039e9e",
+          "bytes": 5603
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/runtime/__init__.py",
+          "sha": "95b720f124bb3471e92aa9604c8f1be7d94920f0",
+          "bytes": 15542
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/runtime/embedding.py",
+          "sha": "9f959ee9a466cf243fc2a91ab9936af3a75c4d53",
+          "bytes": 5454
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/runtime/executor.py",
+          "sha": "130a0682b0e1e68490fb56b3b2f30fd6601fcc5d",
+          "bytes": 10948
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/runtime/parity.py",
+          "sha": "f4f3cca9d195038471b4c91ece75b91a2f9a70cc",
+          "bytes": 2241
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/runtime/state.py",
+          "sha": "9bd09312331df5661e8d9131950b0acae58dec8d",
+          "bytes": 2820
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sampler/__init__.py",
+          "sha": "4b151afcdd9a2db77e64488b91a45a9437c36e38",
+          "bytes": 17513
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sampler/pinned.py",
+          "sha": "0ba2ece56b4cc03d86252435468c08cbcf2cdcc0",
+          "bytes": 4079
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sglang_ops.py",
+          "sha": "98c240ea633c47756ac5c0b802a71b8a49e34317",
+          "bytes": 3005
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/__init__.py",
+          "sha": "59434c26c0de66ad7ca3854ca93b53aba34e26ea",
+          "bytes": 206
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/all_reduce_mhc.py",
+          "sha": "3bd745849542d6723e2c8bbfc84b08de8bb90ee7",
+          "bytes": 64563
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/attention/__init__.py",
+          "sha": "f46530d30b2800baaf253a9d31827902cf8f507d",
+          "bytes": 296
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/attention/kv_layout.py",
+          "sha": "72b059f8802d57f4ab87b3251d83b55e1147ebe3",
+          "bytes": 1031
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/attention/q_norm_quant.py",
+          "sha": "7c14bf0de5ba7e77c9dc898fa317d5daa3d0606f",
+          "bytes": 8101
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/attention/src/wo_a_fused.cu",
+          "sha": "1479b07498c3595b68ea98e5e0ed718feef797fa",
+          "bytes": 36393
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/attention/swapab.py",
+          "sha": "92241811edee3b84901d87bb03af29a99028366c",
+          "bytes": 6830
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/attention/swapab_gluon.py",
+          "sha": "bf9648d0b04fa8f654410e8784984f2d67a905ac",
+          "bytes": 9093
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/attention/wo_a.py",
+          "sha": "e8f01e72818748aed746dde2f63dd9258ee48be4",
+          "bytes": 10484
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/markov.cu",
+          "sha": "5a1bf419e24e4e9dc10a5f5849692e1f098a455c",
+          "bytes": 43364
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/markov.py",
+          "sha": "9a9824e664a47e0cd071164ca6f88ee960ef93f1",
+          "bytes": 22058
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/__init__.py",
+          "sha": "ba0917cde7cda83d913b9c14650fe26b1d23b494",
+          "bytes": 209
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/routed_expert_gemm.py",
+          "sha": "1950d98b12aa65680bca00e70c70548809564cde",
+          "bytes": 21046
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/gate_topk.cu",
+          "sha": "3d2fccf72350c53dc4a8fe7dcd5ec7297ae65c30",
+          "bytes": 714
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/gate_topk.cuh",
+          "sha": "2eb13b9360a3de7ab80e64fe0465049aa5f14b50",
+          "bytes": 6735
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/gate_topk_draft.cu",
+          "sha": "0923533d93ae558f1fe115927f0a90027407fa78",
+          "bytes": 728
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/gemm1.cu",
+          "sha": "87877aec2f4603c7e3626d49e3d7dc5abf81fc00",
+          "bytes": 86329
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/gemm2.cu",
+          "sha": "01df96f291c05930e56a745ce93ccf8912c322f2",
+          "bytes": 89759
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/launch.json",
+          "sha": "193317de63a3c657710f6b30608b86dcf2f53002",
+          "bytes": 724
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/route.cu",
+          "sha": "080c7ca0feb568678554c79f4f1bcae8a9d50415",
+          "bytes": 1542
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/route.cuh",
+          "sha": "602105e7edd464aaf95138bc5c393852e787200f",
+          "bytes": 5678
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/moe/src/route_wide.cu",
+          "sha": "fd4b42634e11d30e880073d01dbeca79832c4b11",
+          "bytes": 4163
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/mxfp8_ll.py",
+          "sha": "662a212364341fcc0bcbe3cec4ef08eb9a67f20c",
+          "bytes": 10624
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/runner.py",
+          "sha": "f07e57172413d812554e3e8ca7c8fc73cc3ba1ad",
+          "bytes": 6775
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/src/two_shot_mhc.cu",
+          "sha": "255bab89c196ecdbce4d820736b1862099c9dde8",
+          "bytes": 19759
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/step_inputs.py",
+          "sha": "9abfc7c211755f7286980b8fc1d13c9129d7b6ef",
+          "bytes": 3441
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/two_shot_mhc.py",
+          "sha": "f49466a0bcef6cad1d25964b0b9d2dcdaa5eb010",
+          "bytes": 13488
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/sm103/wo_b_publish.py",
+          "sha": "62338a7a28872c1e7572755b25c23120be59d3a6",
+          "bytes": 28097
+        },
+        {
+          "path": "sgl_nvidia_mega/deepseek_v41/spec.py",
+          "sha": "00914119929edd029416c5873df663119000bb86",
+          "bytes": 12154
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/__init__.py",
+          "sha": "3c44389fd264a9a2688d049649c85dd3ef159f9c",
+          "bytes": 147
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/compat.py",
+          "sha": "cba532c28b11e9aa676c4b3b1902a22ac3dc3ce7",
+          "bytes": 6710
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/attn_res/ADAPTATIONS.md",
+          "sha": "dcd37b8bc17a774949e114d4b06270bc57be0398",
+          "bytes": 1141
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/attn_res/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/attn_res/kernel.py",
+          "sha": "cac2cfafb09ea05742f206af5d8425d097f05b7c",
+          "bytes": 13071
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/attn_res/prepared.py",
+          "sha": "53b3fc5b4b521ecf43cb98c99dea4c5d14033733",
+          "bytes": 3910
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/embedding.py",
+          "sha": "cc6fbfefb70048c4fdf26fb5390fbaf9ecb7e9f6",
+          "bytes": 3645
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/host.py",
+          "sha": "d791f4a1654c283b06fd2f211abab9e1302302db",
+          "bytes": 5275
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/mailbox.py",
+          "sha": "730e5e4b123aa9c0d17d67465141bfb2d58ccaa2",
+          "bytes": 1768
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/policy.py",
+          "sha": "b56e913cf4c693ae3070901af5b10dd0d9ebccf6",
+          "bytes": 700
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/prefetch.py",
+          "sha": "cc875659e1be6183f3dcef33b7b9a27bdf0d1bc2",
+          "bytes": 2413
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/primitives.py",
+          "sha": "554450d54f0ccd0dab39cbf0945fa916c4c85b14",
+          "bytes": 35915
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/common/twoshot.py",
+          "sha": "decaef2d02f05d4a872d5ff1a3f9293713e0f706",
+          "bytes": 5691
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/gemm/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/gemm/projection.py",
+          "sha": "a80d9b1311447bc3e38b7ddb0c87de12572774c9",
+          "bytes": 4771
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/gemm/splitk.py",
+          "sha": "cc080d3a02faa0dba5892e483febdba4b2a79b47",
+          "bytes": 17992
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/gemm/ws_gemm.py",
+          "sha": "04bfa0b6d5c1a11683f288977bb8e7a68ee97733",
+          "bytes": 14398
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/kda/ADAPTATIONS.md",
+          "sha": "c3ae6228abad9a5697048ffbc8ad092767933aea",
+          "bytes": 2336
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/kda/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/kda/kernel.py",
+          "sha": "e339e3a12d8f627d5bfa009e4978ef430fac3787",
+          "bytes": 40513
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/kda/prepared.py",
+          "sha": "b53b2eb7e9bba22c9501cc7a316e387fefd99e1e",
+          "bytes": 12338
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/mla/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/mla/dcp.py",
+          "sha": "0f6387da76bf41fa7e40d6d82f06ece56e376b3c",
+          "bytes": 18426
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/mla/prepared.py",
+          "sha": "32e1ecf59675be0e5f839ba9fb8da8764d7cda0b",
+          "bytes": 13823
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/mla/query.py",
+          "sha": "8f8eacb0c78b005bd24d6bc03f80a53ffa9c7ba3",
+          "bytes": 22706
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/mla/value.py",
+          "sha": "d72f3b5e84b842cc47629cc4db0bed45f2f67f3c",
+          "bytes": 3697
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/dense.py",
+          "sha": "9e0694180e69b7b5b0e9ada4c06ea46e8d7d6478",
+          "bytes": 3610
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/experts.py",
+          "sha": "992e6ace0184e5d264f5c4eec1d58813c43b7af8",
+          "bytes": 76926
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/experts_runtime.py",
+          "sha": "b2513eed51c4662a6a9160172de84e7e5d6cd146",
+          "bytes": 9582
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/front.py",
+          "sha": "2423418c569a7989f43bf1d989392d23db11f00e",
+          "bytes": 26001
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/prepared.py",
+          "sha": "cdbd647e572b1c03828fd85dc1b3d68464239862",
+          "bytes": 5428
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/routing.py",
+          "sha": "516492b9e2096010eb878be70e9e7bdd8f8ea508",
+          "bytes": 11220
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/shared.py",
+          "sha": "17ec0bf7593dddb2b6aa5786750bb34bb7cdde06",
+          "bytes": 31159
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/small_batch/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/small_batch/chain.py",
+          "sha": "b0f75bed8d4e342968474e47be057e9338d13dad",
+          "bytes": 8514
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/small_batch/experts.py",
+          "sha": "c23d0f6ceb8a07caf9c54201bd568ad1acd325d6",
+          "bytes": 25978
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/small_batch/front_tp16.py",
+          "sha": "0e056aaf25066c29ae4f6f861259b251c1e0327d",
+          "bytes": 26197
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/small_batch/front_tp8.py",
+          "sha": "27050c10c853fde0795610681cd897b7e5851646",
+          "bytes": 16008
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/tail.py",
+          "sha": "267b4ce8b0d192cc1855c999b4ec15b04a413339",
+          "bytes": 52499
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/moe/tail_runtime.py",
+          "sha": "bf439c736ca2642eef43df392e7fcd18f1b32870",
+          "bytes": 12485
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/oproj/__init__.py",
+          "sha": "4e8d73694ca39c7eb24bed6898a3f24f123c94bb",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/oproj/consumer.py",
+          "sha": "8a379e3b2892f66c9fbc33d573f07540d1dcf66c",
+          "bytes": 18825
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/oproj/prepared.py",
+          "sha": "c2ea7ab3bdbf2c600edcf474d5f78542568fa85f",
+          "bytes": 8221
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/cutedsl/oproj/producer.py",
+          "sha": "092b36808bcfc65b9d5c20b51534d5eac4526f21",
+          "bytes": 21181
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/dcp_execution.py",
+          "sha": "7cb699ac67be87c2a11758a39711bcfd54f460e9",
+          "bytes": 16595
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/dcp_resources.py",
+          "sha": "026679bbf274656cef52963af34c3791fe151bfd",
+          "bytes": 23217
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/dcp_verify_execution.py",
+          "sha": "1119d53181ec978918e5341fe19ecf9d8cfbe3b4",
+          "bytes": 20204
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/embedding.py",
+          "sha": "a7fcb45e030e85f09df7ff43526740dc080638f9",
+          "bytes": 4224
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/executor.py",
+          "sha": "8c96c4b1380755da12581a78c6af455a8346d354",
+          "bytes": 16143
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/projection_storage.py",
+          "sha": "e761ab994e6910daf70cf67b30e5d4a0c62add89",
+          "bytes": 11632
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/providers.py",
+          "sha": "c22f5a837975ed772000026df5c9f5271c547381",
+          "bytes": 57999
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/shape_policy.py",
+          "sha": "6a33f5a44406ea5aa10282b751c4dbaa5ea86d5e",
+          "bytes": 3563
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/spec.py",
+          "sha": "191f7b0f4fbd53fdd2cc7fb7238ee5526067113d",
+          "bytes": 17545
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/tensor_adapter.py",
+          "sha": "c70aee8033594f52a280896c813696727299aceb",
+          "bytes": 826
+        },
+        {
+          "path": "sgl_nvidia_mega/kimi_k3/weight_prefetch.py",
+          "sha": "b7e02c73df939553a611b61b01dfb68f3b9e93b6",
+          "bytes": 10967
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/PORT-NOTES-sm103.md",
+          "sha": "25a4afd9860d7b23ca4af00dfcaf83ef8613de6d",
+          "bytes": 3720
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/__init__.py",
+          "sha": "e7d073a108c1ae37448c50f19fbe9ff409903f4a",
+          "bytes": 434
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/__init__.py",
+          "sha": "77531c428a492e8bb5fff457c9aacba83c2cbe48",
+          "bytes": 7697
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ar2_norm_residual.py",
+          "sha": "c5609ed223a8d4bf307e05bb4bde64c15343150c",
+          "bytes": 6335
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ar_attn_boundary.py",
+          "sha": "4eca9b3798cc799dbd7712d27192b9083b03d39b",
+          "bytes": 19862
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ar_norm_residual.py",
+          "sha": "cabaa46de2e3426a794d7243ff73b82b6ac799f2",
+          "bytes": 5793
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/bed.py",
+          "sha": "2407085e4a55acb035284f37205d4e3a0d79c1c3",
+          "bytes": 6680
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/ar2_norm_residual.cuh",
+          "sha": "7bbb70648cfc8b2bd20a8c0480b89262ca94ea3a",
+          "bytes": 32833
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/ar_norm_residual.cuh",
+          "sha": "1b4def10c45edeead4a1d5b73e56db4bb2e44af1",
+          "bytes": 28711
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/draft_ar_norm.cuh",
+          "sha": "8cbb358e1ff023e89e5fafb2256c41de2209dbd6",
+          "bytes": 17901
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/draft_candidates.cuh",
+          "sha": "af6ed63d3d276489a0fd48ed6c2bdac0b21ec995",
+          "bytes": 19428
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/draft_gemv.cuh",
+          "sha": "dffc7e912d007587736ad0a7143092da5ded9232",
+          "bytes": 34545
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/draft_kv_append.cuh",
+          "sha": "8420e98a92281799c41656a30da8823b66f2b9d3",
+          "bytes": 3966
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/final_norm.cuh",
+          "sha": "5d585e58d44f987b9add8e604ece54f5467533d7",
+          "bytes": 8480
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/full_attn_wide.cuh",
+          "sha": "3f49eb5df58e1f665b7120bafc961c30f4ed0ace",
+          "bytes": 77895
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/full_verify_attn.cuh",
+          "sha": "f3038c71738a97ff9fc378750ca04cdecb2c121a",
+          "bytes": 62018
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/input_norm.cuh",
+          "sha": "92968da799205260ebe9c973e365eac83fc4124e",
+          "bytes": 9227
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/kv4_attn_wide.cuh",
+          "sha": "5bab518e40081f1e648535d492dd7f0f687d0207",
+          "bytes": 149075
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/nvfp4_kv_store.cuh",
+          "sha": "2c5b923193df8d39a21846c30bfdbe4f79cb9c0d",
+          "bytes": 11712
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/nvfp4_prefill_dq.cuh",
+          "sha": "da33320753165be1c757d77557b822c2f7417b01",
+          "bytes": 15289
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/nvfp4_verify_attn.cuh",
+          "sha": "4260f8fd74ba3f262abd8ff68d3274d553506ee4",
+          "bytes": 46536
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/pfin.cuh",
+          "sha": "e4fa0c131dafb12c92a68839911ded2460bd5b51",
+          "bytes": 22468
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/pfront.cuh",
+          "sha": "b1769464fecc10b9df75df8164ed96865ffc0eb7",
+          "bytes": 11319
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/prefill_attn.cuh",
+          "sha": "7a7b821b8667feee708de9a42060f20b829bc4a5",
+          "bytes": 62429
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/prefill_qkn.cuh",
+          "sha": "c71b24cdc6444d6e3a1314824547f71f7546427b",
+          "bytes": 12268
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/prefill_qkn_q8.cuh",
+          "sha": "2c1a87f1c4afcb251983d9fc440c8f8dfdf43ae9",
+          "bytes": 9682
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/pull_gather_bounded.cuh",
+          "sha": "556722a7fa5c59fc07c77e1c54713cb8773b78a6",
+          "bytes": 14717
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/shard_topk.cuh",
+          "sha": "0ff418fc6696dfd568e826854dadfbf07143c860",
+          "bytes": 7828
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/swa_t_verify_attn.cuh",
+          "sha": "a1c120ef8a5a5d02391d75d5cf844d3df0b934b3",
+          "bytes": 155591
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/swa_verify_attn.cuh",
+          "sha": "4e672c0355dd431104f2f00455046549c4562bc1",
+          "bytes": 48600
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/swa_verify_t5.cuh",
+          "sha": "343ae91736caf6c074bee8e531813fdb602b60f5",
+          "bytes": 95921
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/csrc/verify_topk.cuh",
+          "sha": "51a78633bdc28dfcc8eeb176cf342a2e880016d8",
+          "bytes": 14212
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ctx_proj_lt.py",
+          "sha": "d77d6ecf56bfed639a0f53956be8e3c7be83d411",
+          "bytes": 13997
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ctx_proj_overlap.py",
+          "sha": "9a11a982034ceb7a20087608159e93fff7052c68",
+          "bytes": 38418
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ctx_proj_prefill.py",
+          "sha": "88a3ed490d035418a6e042ca9a9b67a82b160f3f",
+          "bytes": 39766
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/draft_boundary.py",
+          "sha": "6eb489b20ed8ddc937dc904a49dd0adbbf62f055",
+          "bytes": 23981
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/draft_candidates.py",
+          "sha": "5d1a1c18c9e89247e64ed96483edbefac1346639",
+          "bytes": 18038
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/draft_kv_append.py",
+          "sha": "dd84d5bc499362c0fad7fd1ebbdcd844bb7fba3c",
+          "bytes": 8556
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/extend_attn_b/__init__.py",
+          "sha": "656ee9531afce34f11d0b69551bd39c48fece489",
+          "bytes": 12369
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/extend_attn_b/launch.py",
+          "sha": "84c01dbfe21c3a46e18a2a94a7549b8f03f6cd6c",
+          "bytes": 12711
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/extend_attn_b/plan.py",
+          "sha": "0a652ea36ba7d8d775291f94febd52ce2d2115b9",
+          "bytes": 7905
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/final_norm.py",
+          "sha": "e1a58627fba1ed24df784e7ba9477ac9d4d827bd",
+          "bytes": 10796
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/gemm_lt.py",
+          "sha": "e1e1eced1675d52695de2bc76d70ee2576e26750",
+          "bytes": 23692
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/gemm_pick.py",
+          "sha": "7308597f76143f13b6c1fdfd829ccb552ae43d0b",
+          "bytes": 7738
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/LICENSE.flashinfer",
+          "sha": "ba557f2bb968c1334057e4c0c567bd4a4fe76380",
+          "bytes": 12332
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/LICENSE.sglang",
+          "sha": "9c422689c8f5c317c7c65153b1209349ec57007e",
+          "bytes": 11346
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/NOTICE.flashinfer",
+          "sha": "f7a1d2da45a48f2da466f0450fa2dc5a50b08c1a",
+          "bytes": 435
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/compat_main/muse_spark_v12/all_gather_norm_residual.cuh",
+          "sha": "5c875204d2b1deaa1a095a368bec6efce4346639",
+          "bytes": 475
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/compat_main/muse_spark_v12/norm_fp4_quant.cuh",
+          "sha": "515c6bddcddae1fc67c744f99a47d5b54c8c5155",
+          "bytes": 455
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/compat_main/muse_spark_v12/norm_gate.cuh",
+          "sha": "077ae51ad6441f25bcc178221f4ab606226f688a",
+          "bytes": 445
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/compat_main/muse_spark_v12/norm_residual.cuh",
+          "sha": "e2d5e9c6d03991b5a4b6de69014a5f1d2c4c165e",
+          "bytes": 453
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/compat_main/muse_spark_v12/routing.cuh",
+          "sha": "03a5f37cb750fc7164181c295534ae6aaafd105b",
+          "bytes": 441
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/licenses/LICENSE.cutlass.txt",
+          "sha": "525500841ed2f46dbe5e60adf5245f1b59bbb621",
+          "bytes": 1547
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/licenses/LICENSE.flashattention3.txt",
+          "sha": "5860e4b33f3d9d85fc636137c559331d51783a5b",
+          "bytes": 1558
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/licenses/LICENSE.fmt.txt",
+          "sha": "f0ec3db4d2a03368a9f1357b38e79486bdf41076",
+          "bytes": 1408
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/licenses/LICENSE.spdlog.txt",
+          "sha": "c46826e51e3ab354d1da95a6295886f1f3e44b63",
+          "bytes": 1288
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/include/sgl_kernel/warp.cuh",
+          "sha": "9470ad35a98656654420c7f2fac5e57527f92a95",
+          "bytes": 12612
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/input_norm.py",
+          "sha": "d7e0b5c54da081e81d453f5ff2ae46cbf012fa7c",
+          "bytes": 9929
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/kv4_dec.py",
+          "sha": "b611fa5a5a0f865d1d335271741be92d3a52b46c",
+          "bytes": 4128
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/kv_draftwin.py",
+          "sha": "c7a5c70da277f9f2888dbb0a58bb596ac8fe3b51",
+          "bytes": 23098
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_kv.py",
+          "sha": "aeccd5d814e6292236a098dfe053bbd1e9b12167",
+          "bytes": 36839
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_kv_host.py",
+          "sha": "ea9b62b4e1b18ffc31ff14c19ba93442f9c53f4f",
+          "bytes": 24935
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_kv_mixed.py",
+          "sha": "d856782bb78f38109e4085ebc21104b6c6b9d85c",
+          "bytes": 8187
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_kv_pool.py",
+          "sha": "ff8329b5661bd356df4dd335bc0e57e6fe257910",
+          "bytes": 8315
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_kv_resolution.py",
+          "sha": "9b88105af6ea6937de4edcd86f48ddfb5d912c7a",
+          "bytes": 10450
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_kv_scales.py",
+          "sha": "479b9cb2b1f7be89ce1a90282767430b14052c83",
+          "bytes": 9693
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_kv_verify.py",
+          "sha": "a209b1383c1074d0a5514d18aa14c6641872401e",
+          "bytes": 11348
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/nvfp4_prefill_dq.py",
+          "sha": "4897ca6e0249f422d372f6ab3132c99f7b2d8679",
+          "bytes": 14840
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/__init__.py",
+          "sha": "6fc7ca4ac1cd7343259a6144f3d2e7f2e8543cf2",
+          "bytes": 187
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/draft_ar_norm.py",
+          "sha": "51ac6012af1667201227f74ceb9f3a2794dd61b4",
+          "bytes": 3254
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/draft_gemv.py",
+          "sha": "78c116aa99ba8c0a7058403c74646c28537ae36d",
+          "bytes": 5080
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/draft_qk.py",
+          "sha": "f86921b5c83383455e0244c43161afc2c00836d9",
+          "bytes": 3550
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/full_attn_wide.py",
+          "sha": "5b483b9724d71a6245f225cc0bb884375bd6158e",
+          "bytes": 15601
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/full_verify_attn.py",
+          "sha": "c3be8f791743dd0d62a92f428693886ec15efd53",
+          "bytes": 10128
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/kv4_attn_wide.py",
+          "sha": "bf2eba4dec5ab65bb90eb5d45bee99abf4b4b398",
+          "bytes": 10994
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/nvfp4_kv_store.py",
+          "sha": "ad3a687a5e2ee1eaf18021850375f286548896f6",
+          "bytes": 5234
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/nvfp4_prefill_dq.py",
+          "sha": "e3c28994d56d1c3439dc600ead78b4ee3fde8636",
+          "bytes": 5426
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/nvfp4_verify_attn.py",
+          "sha": "60efa4604b500799fffec13d73f04668f4ef36f1",
+          "bytes": 7343
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/pfin.py",
+          "sha": "53223134a17c22d3cf4d5177b25a646dd18d56de",
+          "bytes": 3440
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/pfront.py",
+          "sha": "56a8d86d2e1237de0d83464372b9e4ed8ede16dc",
+          "bytes": 1906
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/prefill_qkn.py",
+          "sha": "97706dad982fb98312fd1c1faaa150dda0c6d3da",
+          "bytes": 7808
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/shard_topk.py",
+          "sha": "dd0823200ef6329158b0b60cafe585b0b7c7d259",
+          "bytes": 2049
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/swa_t.py",
+          "sha": "bdbe03dc9921201a76eb5d23db46b31d97681f39",
+          "bytes": 16293
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/swa_verify_attn.py",
+          "sha": "c8c710691e54bebf2fa59f513e5bdcf7b16f479c",
+          "bytes": 13210
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/ops/swa_verify_t5.py",
+          "sha": "4654d5dddeb2e94332a246f7b15df7b3721063e2",
+          "bytes": 11485
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/pfin.py",
+          "sha": "7695764a5331c04ee0ed885e85e11ea53fde5972",
+          "bytes": 9102
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/prefill_qkn.py",
+          "sha": "9b716825e53a17a65c19984903df29adbfc51f4b",
+          "bytes": 22549
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/pull_bounded.py",
+          "sha": "4932799c5f1e7759f62a9f0e245a31061b0f6f22",
+          "bytes": 7278
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/sgl_compat.py",
+          "sha": "d83992b3849757c4287edeef2144e3fad7db771f",
+          "bytes": 10375
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/sgl_shims.py",
+          "sha": "d143e822431545f96587c11aba52eef3c4bb7f12",
+          "bytes": 8283
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/small_extend_attn.py",
+          "sha": "b2fb5b5b344578c908aad0a7670fd06422fde710",
+          "bytes": 9212
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/sp_combine_inplace.py",
+          "sha": "2fabe7a9552c073525762d46d4f5123396de9443",
+          "bytes": 12097
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/sp_fp4_dispatch.py",
+          "sha": "6b3256f763e3c37be7de5893cd303f0446f58477",
+          "bytes": 19452
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/sp_gate.py",
+          "sha": "d09957068757ce8c11e9f3ab7b0674641ba66202",
+          "bytes": 9885
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/spec_sample_split.py",
+          "sha": "0ad28b272cf5d56791ff86c192497c0211d473fa",
+          "bytes": 19901
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/README.md",
+          "sha": "b84a3dcdb5b90d2a2c7a75a4a78e76042ee7a84f",
+          "bytes": 1469
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/__init__.py",
+          "sha": "ac82bebbd67794309c790a66e5622b43559526bc",
+          "bytes": 102
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr46724/__init__.py",
+          "sha": "ac82bebbd67794309c790a66e5622b43559526bc",
+          "bytes": 102
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr46724/muse_spark_finalize_workspace.py",
+          "sha": "02367e47ecb1f794e0eb7c6879bab07a71015a63",
+          "bytes": 6383
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr46724/muse_spark_moe_finalize_all_reduce.py",
+          "sha": "20f18e0c3362475fa9b376348709f851eb16c301",
+          "bytes": 18192
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr46724/muse_spark_moe_finalize_all_reduce_cutedsl.py",
+          "sha": "27ec586f3cf9147ed733b1910de8cb6e08525742",
+          "bytes": 59703
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr47174/__init__.py",
+          "sha": "ac82bebbd67794309c790a66e5622b43559526bc",
+          "bytes": 102
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr47174/all_reduce_norm_residual.cuh",
+          "sha": "e2489a75e78bc89132e835495ae5795d929383c6",
+          "bytes": 22942
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr47174/muse_spark_all_reduce_norm_residual.py",
+          "sha": "620f7d1d5368346d20397770b4518e533c8e9d64",
+          "bytes": 10749
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/vendor/sglang_pr47174/norm_residual.cuh",
+          "sha": "224218fec3bc8fdf8309f9a433eb507bc3e8b3ea",
+          "bytes": 29963
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/verify_attn.py",
+          "sha": "fd738dbdf72346a00d6dc55740edb2fba146450f",
+          "bytes": 66494
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/verify_topk_sample.py",
+          "sha": "48dea8ce83933e90b1f6f31c17ff0b8e016297a4",
+          "bytes": 52541
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/components/xattn_b.py",
+          "sha": "81bdc2854b3ae543af7eb05338b730540f62f3f3",
+          "bytes": 22072
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/plan.py",
+          "sha": "45fcaa1c77127c7f1f79151b417542422cb3b5b1",
+          "bytes": 2520
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/runtime/__init__.py",
+          "sha": "b68a8c687f0a715ed0ee702546d02b7c8c79d390",
+          "bytes": 3364
+        },
+        {
+          "path": "sgl_nvidia_mega/muse_spark/spec.py",
+          "sha": "b66dd96929a82c8305d02c897522c4c556d039ed",
+          "bytes": 5671
+        },
+        {
+          "path": "sgl_nvidia_mega/plugin.py",
+          "sha": "1b2733d6cb6dfbba8e474a68d604bd42ea1b7a8f",
+          "bytes": 3333
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/__init__.py",
+          "sha": "697b402ee3e673dc7dcdd11b3068d1c137260f91",
+          "bytes": 1917
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/attention/__init__.py",
+          "sha": "f4712bbf2ae83b1625e7550556f1a9019a8c9f5a",
+          "bytes": 6320
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/attention/mka.py",
+          "sha": "c170c15d3a72669b192f77e8e7fdb2469d7bd8c5",
+          "bytes": 16238
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/attention/route.py",
+          "sha": "b302fb810569e38c21b7759477bcc4331b08e2e9",
+          "bytes": 6441
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/attention/split_kv.py",
+          "sha": "b51bd2f1db3e86842e2761d6a24cc3359e1d65c4",
+          "bytes": 13466
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/boundary/__init__.py",
+          "sha": "7532e13a0926e4941bd8e05517d97bd8a4715a1c",
+          "bytes": 3252
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/boundary/hop.py",
+          "sha": "1f2ee62e2999047bc2b5d074e2892a2736c15408",
+          "bytes": 18933
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/__init__.py",
+          "sha": "4f4f7fe97a54f3a375c19427bd78b4dff60eeae5",
+          "bytes": 9132
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/attention.py",
+          "sha": "e948c896fc84c979ece725cafca7874107834c14",
+          "bytes": 22416
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/extend.py",
+          "sha": "a2c6f21d64d81869b22032b85ef76e8c691c96ca",
+          "bytes": 5115
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/finalize.py",
+          "sha": "20fa5b5a6290224a1897496f96dd36e5af2a2ae6",
+          "bytes": 2474
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/hop.py",
+          "sha": "3d03e57ba2a7adc3be3c6d3c77e0b70f12e8c17d",
+          "bytes": 7787
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/layer.py",
+          "sha": "f117cc361a081f4b4012fbeec8fcd78e19dcd724",
+          "bytes": 12795
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/loop.py",
+          "sha": "9f39ca70f0331fc2a79ea2d5fa433f6ae7e47c93",
+          "bytes": 7808
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/moe.py",
+          "sha": "a279bb99eea1cc00c0123fcf6d0a0c38fa3b6373",
+          "bytes": 7604
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/moe_mkm.py",
+          "sha": "4a976391a4f018c8a557228ae174a6dc5d263a42",
+          "bytes": 4894
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/parts.py",
+          "sha": "0319e873fc24da726743c719961a8af0205145ee",
+          "bytes": 12844
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/draft/xchg.py",
+          "sha": "00c5d33d7b6da10d8cc16c289cfbb5650d0e369b",
+          "bytes": 31880
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/__init__.py",
+          "sha": "5413f1c582d75462bfe86bfeaf76bf085ab5b456",
+          "bytes": 11510
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/conv.py",
+          "sha": "21c0ae021cc50cf38d5030c59ecf200cb218d7c5",
+          "bytes": 14782
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/front.py",
+          "sha": "82f6744f500a1dd00139c76d3a2264d8a089832f",
+          "bytes": 13709
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/front_norm.py",
+          "sha": "da969edad776d25ba1deb448713355b0c714ee32",
+          "bytes": 8912
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/norm_fp8.py",
+          "sha": "b5a99a0dcdbf383c802cbce6858d7de8f28af208",
+          "bytes": 6450
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/prefill.py",
+          "sha": "039fa6b9bd79ae3ccd08d29eda3fc3b01fc341a6",
+          "bytes": 6503
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/replayssm.py",
+          "sha": "54d420576d69df6d48a52eaf16148f03faa9455c",
+          "bytes": 24331
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/gdn/verify.py",
+          "sha": "17ade29dc17178b2a23c21e56c8b8e924eb9f282",
+          "bytes": 22195
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/logits/__init__.py",
+          "sha": "21cd96f3040a3a2399bd2394eeb2278b229b51a4",
+          "bytes": 729
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/lowm.py",
+          "sha": "4887ea38491e2e9f9a72dfead96ef012705b9d58",
+          "bytes": 23731
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/moe/__init__.py",
+          "sha": "e1b4d382995cf7559d0008992e10f806a7e6abb1",
+          "bytes": 14491
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/moe/body.py",
+          "sha": "e0eb002fd22d67604a37d7ea9dd23cbcb1863b98",
+          "bytes": 11189
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/moe/mkm.py",
+          "sha": "c3a07a2886ee9d08a5edc5c83e43cfe2f7b358b5",
+          "bytes": 7395
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/moe/route.py",
+          "sha": "b9cb8f17927b846cd22b2ceee8569e268727eb3c",
+          "bytes": 31507
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/moe/tactics.py",
+          "sha": "2593006fc621415b5612a746dcb6dd76c31daf41",
+          "bytes": 4347
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/plan.py",
+          "sha": "373a86ea4ae70c537c78db6d3249e7a7dd69121f",
+          "bytes": 17706
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/runtime/__init__.py",
+          "sha": "cdcaedd0bab0210bbbbeb3a71178ed1a204bdc68",
+          "bytes": 26024
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/runtime/embedding.py",
+          "sha": "cb15bf31b8bc658592adc887035fa9ce951f08a3",
+          "bytes": 1708
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/runtime/executor.py",
+          "sha": "dfd3cb12b85f772467870387da5d9074171e0d6c",
+          "bytes": 11697
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/runtime/hooks.py",
+          "sha": "c409387a4396cecd30f160d50343009419373066",
+          "bytes": 9179
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/runtime/parity.py",
+          "sha": "199938804bd8c1f86dc493f0a1c654292c324ead",
+          "bytes": 13315
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/runtime/prefill.py",
+          "sha": "afd8b1ae77f7d248252399ad1bca96cfee36944a",
+          "bytes": 10722
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/runtime/state.py",
+          "sha": "271e9ba1cc682e2ab97550a7d8d379b6660c7c5b",
+          "bytes": 1610
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/__init__.py",
+          "sha": "945c4b9720e7acc2b63b5ff3395e6c3e46e6b6ca",
+          "bytes": 230
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/__init__.py",
+          "sha": "c42f68ac34af179cddc610a0d8c857e52fe77ed8",
+          "bytes": 315
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/gate_quant.py",
+          "sha": "d4d863c6ae226bb9c3e07c3f7bf520e5cf2cdaa6",
+          "bytes": 1966
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/mka.py",
+          "sha": "a272b81a9d6e6bc89bee59413fa2600871091a2a",
+          "bytes": 11570
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/q35_cp_fused.py",
+          "sha": "d2bbfd32fc5532b26210790d9152bc9950f773ef",
+          "bytes": 31644
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/q35_cp_lite.py",
+          "sha": "bf3e67551631ac99260f6aa52a9eaee74a0ce382",
+          "bytes": 80901
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/q35_cp_partial_attn.py",
+          "sha": "fd5ab58cceff3c81590b7f5e04536dd9a0c97c70",
+          "bytes": 165346
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/skv2.py",
+          "sha": "100329cfd5fd1b0878d0bba507ff882fb26865be",
+          "bytes": 31805
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/attention/src/mka.cu",
+          "sha": "dac44ef9b1896cc9145514ab681cb2a4383162c3",
+          "bytes": 43562
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/__init__.py",
+          "sha": "549b5c620c1e90b2a831fec6005f6d3ed78505ab",
+          "bytes": 377
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/embed.py",
+          "sha": "50a6b2474b0082581f0e71a67128ffab43249486",
+          "bytes": 4641
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/front.py",
+          "sha": "e726a277a3da9f8e75e4a27a8ba846defc0e53f1",
+          "bytes": 17563
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/hop.py",
+          "sha": "6c0fbbd9f162c2af8547ef4231ff62949f1fa596",
+          "bytes": 10016
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/moe.py",
+          "sha": "413e4f4e69976d82efa7a863ecba92d993e86abf",
+          "bytes": 10171
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/q1.py",
+          "sha": "6ba899a22b88b38da771d7c8ccd3331d3e8b5d75",
+          "bytes": 14684
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/q1_kernel.py",
+          "sha": "1e11294cd5e2eb9c1aaf235054f55a17530fd6cb",
+          "bytes": 31238
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/draft_embed.cu",
+          "sha": "fe06868f07bfd16ed43cd32146b8d8dc1a0cbcc4",
+          "bytes": 5649
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/draft_fc.cu",
+          "sha": "defb8e3c9823bb1e9a899a652c7f676a7847710c",
+          "bytes": 10907
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/draft_fc_sum.cu",
+          "sha": "1d63b51ebd7eccda4bf520f6b2ce2bfcd3b903ae",
+          "bytes": 6432
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/draft_gemv.cu",
+          "sha": "0ab64549f936558e7fd0f9aab98c3787cb65487a",
+          "bytes": 20360
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/draft_hop.cu",
+          "sha": "93d06aff8f3bce69d877683cc6518dba44a7bd91",
+          "bytes": 26985
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/draft_moe.cu",
+          "sha": "57d181481e9dafbf911e41053196fe4941c5700a",
+          "bytes": 31573
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/draft_top1.cu",
+          "sha": "7bfc074a8fcb736721f88278c7a00decee0f1bfd",
+          "bytes": 8241
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/mkd_common.cuh",
+          "sha": "293f72c63ea46db68b4f38f2573e2afa1ad2da0d",
+          "bytes": 4145
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/mkd_fc.cu",
+          "sha": "6ee3d5ce60c328c3896325ad171b94157e83fe49",
+          "bytes": 15059
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/mkd_head.cu",
+          "sha": "66d963c825ddebc97d5c2a758d62bb8d916905bf",
+          "bytes": 4661
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/src/mkd_xchg.cu",
+          "sha": "b4952b7b8d19624241be88e28495b4fc1e3313e0",
+          "bytes": 21191
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/top1.py",
+          "sha": "25ce5d2c2dd67e1c32cd86be5bcd25c76900b608",
+          "bytes": 6919
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/draft/xchg.py",
+          "sha": "6604c167902301558348da7ac8e1d3a28a05fbef",
+          "bytes": 31674
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/gdn/__init__.py",
+          "sha": "08ed8217fd044d0b9819374f7779e32cd923af73",
+          "bytes": 200
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/gdn/core.py",
+          "sha": "4fdf4ac27f119f6afde6a76e948542d614eb0620",
+          "bytes": 11269
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/gdn/front.py",
+          "sha": "d32face8734b49791aa179d30ca64a51aa831422",
+          "bytes": 9703
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/gdn/src/core.cu",
+          "sha": "f538b64335326fccace7dda475a5983166afc935",
+          "bytes": 30010
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/gdn/src/front.cu",
+          "sha": "3efba9a2d2ebbcc2b1a5e06ca916b4d5d68d18b8",
+          "bytes": 27352
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/gdn/trt_front.py",
+          "sha": "33b4a813308e6d8f8fa72e34f71f56bf60c585e6",
+          "bytes": 5560
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/hop/__init__.py",
+          "sha": "035fe002bace31df307d2ad1e77222e0c0e9f763",
+          "bytes": 20063
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/hop/src/hop.cu",
+          "sha": "76c2e3eade0edefa1f4440454b6a8aad3c263796",
+          "bytes": 11842
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/hop/src/q35_hop.cuh",
+          "sha": "ad5c350594c6192d7324ce0edc76ea41b965863f",
+          "bytes": 14718
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/hop/src/rlin.cu",
+          "sha": "fb2935f3ee3ad109ee5a043845fcd8b914a8bf4c",
+          "bytes": 19316
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/lowm/__init__.py",
+          "sha": "a280f49c707c239c56f4865d78fa9526147980de",
+          "bytes": 11006
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/lowm/src/lowm.cu",
+          "sha": "081bdcd3975b5400df4819d9c1fafc16f190d1c1",
+          "bytes": 15691
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/__init__.py",
+          "sha": "4ebe480298cf8fa464efae34f3fdd0fae4ef561d",
+          "bytes": 191
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/mkm.py",
+          "sha": "ed1694571ffae75dab18d7dc043ac854179caf1b",
+          "bytes": 16962
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/router.py",
+          "sha": "d8194c92b6bfd6ca31f4bb1edf13e212e6a6d630",
+          "bytes": 20417
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/shared_act_quant.py",
+          "sha": "467f572b38dbd24f9b281f70e66b1f580de66666",
+          "bytes": 3431
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/mkm_moe.cu",
+          "sha": "959908cd5c92c3ba5a6b56004ffcf59285ff2cb0",
+          "bytes": 47592
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/mkm_moe_m128.cu",
+          "sha": "6845a58c590c8724fb573440cb10c586577a5a34",
+          "bytes": 66204
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/mkm_moe_m16.cu",
+          "sha": "6a8b938ede897a8dc98100290ceb8f5aa157eaa6",
+          "bytes": 54455
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/mkm_moe_m32.cu",
+          "sha": "ee77095626d17ca3b74f8195f14cbeef9cab283e",
+          "bytes": 67524
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/mkm_moe_m64.cu",
+          "sha": "9fac5e876425f3ec2a995d302124d55d60c362a0",
+          "bytes": 70794
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/mkm_moe_tp4.cu",
+          "sha": "50b4b04bdb75ce030c6a3781352ac44475a0640d",
+          "bytes": 47671
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/mkm_moe_wide.cu",
+          "sha": "6775109290099f88ea2bdab28f1022b6624087dc",
+          "bytes": 65188
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/route_big.cu",
+          "sha": "b15e3a1a6d5d425cecd23534abeff8665e4ae642",
+          "bytes": 14283
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/route_tables.cuh",
+          "sha": "8a6ad2e9fa936d43dcefe95c8358fe40fd00b4ab",
+          "bytes": 15516
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/route_topk.cu",
+          "sha": "72b840f390be71a308b649afaf071f18ad192e21",
+          "bytes": 7784
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/moe/src/router_front.cu",
+          "sha": "23d458fe6cb66c2ae42510b0656256e06237afc1",
+          "bytes": 43332
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/sharded_gumbel.py",
+          "sha": "256eafb3a4a1d3bbe1b2af0eafae89cb686f2541",
+          "bytes": 8749
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/trt_lowm/__init__.py",
+          "sha": "53b399946f5a6be072d03ab35f7194d30fabdcf0",
+          "bytes": 11848
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/trt_lowm/lowm_linear.py",
+          "sha": "707cc780f2fd96406ae7cd8c3dace724b8833d61",
+          "bytes": 8884
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/trt_lowm/lowm_mma_gemm.py",
+          "sha": "636bbd4572719d6b91ee4e354981ecff192422cf",
+          "bytes": 60723
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/sm103/trt_lowm/utils.py",
+          "sha": "0dc2b6f2aceaf21e5566ad3cf1c9cf3f950cd019",
+          "bytes": 15574
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/spec.py",
+          "sha": "b76adb3b0dddd90e118960e07cba61dd831f70cb",
+          "bytes": 13254
+        },
+        {
+          "path": "sgl_nvidia_mega/qwen3_5/topology.py",
+          "sha": "e1c53f1e187bbb27f7fa4075f502c40d2a96dc5f",
+          "bytes": 7842
+        },
+        {
+          "path": "test/e2e/deepseek_v41_server.py",
+          "sha": "6cc1cf133fbbce5534c52ea133e1936dbbd1c377",
+          "bytes": 1590
+        },
+        {
+          "path": "test/e2e/qwen3_5_server.py",
+          "sha": "88cdddc220e32cb0a99a4a6195a5b57dd09a7cd5",
+          "bytes": 1663
+        },
+        {
+          "path": "test/e2e/test_deepseek_v41_server.py",
+          "sha": "2896c0d1ce6c8c6a751fa0e64dd9c1f6a5640b46",
+          "bytes": 3430
+        },
+        {
+          "path": "test/e2e/test_deepseek_v41_switch.py",
+          "sha": "16a5f0719d749ddc8aa705551408f9d997d99c1d",
+          "bytes": 3424
+        },
+        {
+          "path": "test/e2e/test_qwen3_5_stock_parity.py",
+          "sha": "f33f3d1f9a01de5e43ebd727b71af21e7156caa5",
+          "bytes": 5584
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_0_poisoned_scales.py",
+          "sha": "9d697fc30681f25b1d5a5cdf7c054a41c454fe8e",
+          "bytes": 4726
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_attn_gemm.py",
+          "sha": "28d3df7c80f3b4a03c67653cdbc63007c2e97efa",
+          "bytes": 29407
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_draft.py",
+          "sha": "5ea7c626ae9867a84daa9120449e87d0d547d998",
+          "bytes": 10874
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_engram.py",
+          "sha": "5283b2e4c952e5e2ee86483f0f23c3bc517a6bfc",
+          "bytes": 7442
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_fail_stop.py",
+          "sha": "68693b2c4f138cd06263f7dd860c0fb38fca9bcc",
+          "bytes": 4994
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_hop_b.py",
+          "sha": "2fba8c37a83588f247940db2950af561fcc221d0",
+          "bytes": 17293
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_hops.py",
+          "sha": "239db0bf4c8e9815d9c1b6df75e4ecdb0df93b0e",
+          "bytes": 27725
+        },
+        {
+          "path": "test/kernels/test_deepseek_v41_moe.py",
+          "sha": "4d2e8b1b743350aa6a650fc33695fbf17aa054b2",
+          "bytes": 11040
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_attention.py",
+          "sha": "ad616e1f05c1a427aae9c104526829bae8a6f1ae",
+          "bytes": 28208
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_draft_front.py",
+          "sha": "b527d0a2e67267301f3ffbfece13e03d53198de9",
+          "bytes": 6499
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_draft_hop.py",
+          "sha": "7ed90ec9cfdd33ca81629e2e17e06fde2fe749f4",
+          "bytes": 12666
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_draft_moe.py",
+          "sha": "c29a53350586a8214dba7cd403d42d3d8d88c282",
+          "bytes": 9010
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_draft_q1.py",
+          "sha": "873badf6579d089621a38b3716cbd82eb6a0b9fa",
+          "bytes": 9754
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_draft_xchg.py",
+          "sha": "c1a07091864f5557dabadd5e25841d54e1fb4460",
+          "bytes": 28764
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_gdn.py",
+          "sha": "b0b66c6aa8bf7792d797675244a3e7b5a223c80f",
+          "bytes": 50307
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_hop.py",
+          "sha": "7cb914d785feeffb389737602b3e1a6b12c341df",
+          "bytes": 14691
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_lowm.py",
+          "sha": "4db2aba712fcaed1783b5ef19bd2486c6a3ec893",
+          "bytes": 7387
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_moe.py",
+          "sha": "af32c262e2ea22f593b9c7cb7ee712537cbef81f",
+          "bytes": 52202
+        },
+        {
+          "path": "test/kernels/test_qwen3_5_sharded_gumbel.py",
+          "sha": "0496401138f4d802fbdd5214c276883731b3e803",
+          "bytes": 15730
+        },
+        {
+          "path": "test/unit/scheduler_init.py",
+          "sha": "c7112e60f0c4f02eba09738e194cfec45fb87af6",
+          "bytes": 12996
+        },
+        {
+          "path": "test/unit/test_contract.py",
+          "sha": "a81ad36e4b966062336400386e3c75056108b2aa",
+          "bytes": 14763
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_attention_indexer.py",
+          "sha": "29441c062930090437e25f871b60b2c90077987a",
+          "bytes": 15761
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_engram_host_table.py",
+          "sha": "6dd309ac1f7c5d8081af7c5b1b73434be4c7459e",
+          "bytes": 1495
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_hop_b_row_tiles.py",
+          "sha": "c670302d8b491107cf8656745b3864fe5de4d96f",
+          "bytes": 6476
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_lm_head_pinned.py",
+          "sha": "88401a676ca86240d6694ec37766ac46736e5050",
+          "bytes": 3714
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_runtime.py",
+          "sha": "6d294d21c025d6f7b00f2266e317d3baeee7a657",
+          "bytes": 14380
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_sglang_ops.py",
+          "sha": "30fc843f10ce7d2fe89368e5582c8f16b4d33dfa",
+          "bytes": 463
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_spec.py",
+          "sha": "b2f54518638f03a32569412f12e8bdda3498ad63",
+          "bytes": 6849
+        },
+        {
+          "path": "test/unit/test_deepseek_v41_target_lm_head.py",
+          "sha": "3d5448721e2187d74a66ad506bea653c726b4cf1",
+          "bytes": 7678
+        },
+        {
+          "path": "test/unit/test_kimi_k3_a1_guards.py",
+          "sha": "f331c2cba3fd110bec01a33b84f81b634abb7440",
+          "bytes": 22259
+        },
+        {
+          "path": "test/unit/test_kimi_k3_contract.py",
+          "sha": "36aa8b1db8ca9bb5b381bb3c10b38b31e27ed9c7",
+          "bytes": 22172
+        },
+        {
+          "path": "test/unit/test_kimi_k3_deadline.py",
+          "sha": "b762687377074c8bcdeaf5d4e3e2e46799593cea",
+          "bytes": 7432
+        },
+        {
+          "path": "test/unit/test_kimi_k3_dspark.py",
+          "sha": "947679ecc743adfcdfd1760e0c3664093cda02cd",
+          "bytes": 15322
+        },
+        {
+          "path": "test/unit/test_kimi_k3_import_compat.py",
+          "sha": "44977a26cdf34b777c9f033870f11c515edf0ca7",
+          "bytes": 6033
+        },
+        {
+          "path": "test/unit/test_kimi_k3_optional.py",
+          "sha": "f2c49076afe4ba82306675d505740c84253be430",
+          "bytes": 16506
+        },
+        {
+          "path": "test/unit/test_kimi_k3_policy.py",
+          "sha": "52bd09488d419a1521675ce832a631213b02e4f3",
+          "bytes": 5842
+        },
+        {
+          "path": "test/unit/test_kimi_k3_projection_storage.py",
+          "sha": "7403fb4f59519ef66d72a0df314296af765bf4fb",
+          "bytes": 11141
+        },
+        {
+          "path": "test/unit/test_plugin.py",
+          "sha": "c404320dd2389f1401276ccdaeada13e81ed40ad",
+          "bytes": 1892
+        },
+        {
+          "path": "test/unit/test_qwen3_5_moe_tactics.py",
+          "sha": "cb11cd93531d0fc999e907e2b7552de56a00b549",
+          "bytes": 1940
+        },
+        {
+          "path": "test/unit/test_qwen3_5_runtime.py",
+          "sha": "abc7e797dc6db4fcede64e35f9168e7ce33e4658",
+          "bytes": 81777
+        },
+        {
+          "path": "test/unit/test_qwen3_5_runtime_hooks.py",
+          "sha": "ae31a8bb5fbbc70b541972c2fc9a2b07b96ddfe5",
+          "bytes": 14050
+        },
+        {
+          "path": "test/unit/test_qwen3_5_spec.py",
+          "sha": "68b2b71f1ee2df9f64835fc71514e62dde954f76",
+          "bytes": 27037
+        },
+        {
+          "path": "test/unit/test_qwen3_5_steps.py",
+          "sha": "5f089e2de10fb85cdb80ddc882c0f5bb3fbeb0ea",
+          "bytes": 141011
+        },
+        {
+          "path": "test/unit/test_qwen3_5_wide_balance_plan.py",
+          "sha": "cf25eab736a1bccb28a969eef07cdb77ca8e18b0",
+          "bytes": 520
+        },
+        {
+          "path": "test/unit/test_tp2_cp_build.py",
+          "sha": "04717844a87d13ca644c2d2fe33ed5e52a4d25fd",
+          "bytes": 3581
+        }
+      ],
+      "fetched": [
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "NOTICE",
+          "sha": "617a62473939c3b0bda3495b6671829c3e3ad543",
+          "bytes": 4577,
+          "sha256": "cc6cf1f85fd1ebd2970146d217dafd6883368594ff54c97ef9130f5867142388"
+        },
+        {
+          "path": "README.md",
+          "sha": "61d4b1b885139605e65c48646c53430950c510bb",
+          "bytes": 26847,
+          "sha256": "518155d4e07eb788e9528a3236922b96ac1f426e7d48a39cf084047816f0edab"
+        }
+      ]
+    },
+    {
+      "repository": "keell0renz/muse-open-kernel-challenge",
+      "url": "https://github.com/keell0renz/muse-open-kernel-challenge",
+      "head": "890809cee421500b00126d084e81b338ef9181ab",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": "LESSONS.md",
+          "sha": "36fa83cb4e913f05a1f7feb83e216cb651d05a28",
+          "bytes": 7770
+        },
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358
+        },
+        {
+          "path": "NOTICE",
+          "sha": "3d086c00575f0caca10942974e6ae65244be4703",
+          "bytes": 2471
+        },
+        {
+          "path": "README.md",
+          "sha": "b9cb76624f3e2944f56a93053e1e84345269b91c",
+          "bytes": 4667
+        },
+        {
+          "path": "kernels/muse_attention_decode.py",
+          "sha": "607bc1567944361edf53466f74fe7c3fe4a1ec74",
+          "bytes": 281018
+        },
+        {
+          "path": "kernels/muse_bf16_proj.py",
+          "sha": "f57e73d0e0248beecf1dc88e7d0f8ea1e4708472",
+          "bytes": 643105
+        },
+        {
+          "path": "kernels/muse_decode_layer.py",
+          "sha": "4aa86640b593add917e7f10e716dcc9ca24a077d",
+          "bytes": 979654
+        },
+        {
+          "path": "kernels/muse_moe_w4a16.py",
+          "sha": "521611ff84a1df48cc3e106e9d8a595e39688d8a",
+          "bytes": 360637
+        },
+        {
+          "path": "kernels/muse_prefill_layer.py",
+          "sha": "c455520a2cc44f0c3c45a167d7a641baf516a76a",
+          "bytes": 370116
+        }
+      ],
+      "fetched": [
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "NOTICE",
+          "sha": "3d086c00575f0caca10942974e6ae65244be4703",
+          "bytes": 2471,
+          "sha256": "43ac9707b8c367e0c92c2d2e9b0506170df89690e5af3d68df82af544fe37e08"
+        },
+        {
+          "path": "README.md",
+          "sha": "b9cb76624f3e2944f56a93053e1e84345269b91c",
+          "bytes": 4667,
+          "sha256": "7326af3bb75dd3b00219dd4c2a8aefd8ee23bff357224cc4a95496ded51cdab1"
+        }
+      ]
+    }
+  ]
+}

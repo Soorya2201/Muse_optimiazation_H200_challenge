@@ -1,0 +1,75 @@
+diff --git a/python/sglang/kernels/ops/moe/map_marlin_expert_ids.py b/python/sglang/kernels/ops/moe/map_marlin_expert_ids.py
+new file mode 100644
+index 0000000..b82aec6
+--- /dev/null
++++ b/python/sglang/kernels/ops/moe/map_marlin_expert_ids.py
+@@ -0,0 +1,40 @@
++"""Fuse Marlin's int32 route cast, local mapping and drop-sentinel selection."""
++
++import torch
++import triton
++import triton.language as tl
++
++
++@triton.jit
++def _map_kernel(ids, mapping, out, N: tl.constexpr, BLOCK: tl.constexpr):
++    offset = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
++    live = offset < N
++    # Match the original cast before indexing, including int64 wraparound.
++    expert = tl.load(ids + offset, live, other=-1).to(tl.int32)
++    mapped = tl.load(mapping + expert, live & (expert >= 0), other=-1)
++    tl.store(out + offset, mapped, live)
++
++
++def map_marlin_expert_ids(ids: torch.Tensor, mapping: torch.Tensor) -> torch.Tensor:
++    """Return contiguous int32 IDs; valid nonnegative routes index ``mapping``.
++
++    Negative IDs all become -1. As with the stock router and gather, nonnegative
++    IDs must be within the global expert vocabulary. Scratch is per invocation.
++    """
++    if (
++        ids.is_cuda
++        and ids.dtype in (torch.int32, torch.int64)
++        and ids.is_contiguous()
++        and mapping.is_contiguous()
++        and mapping.ndim == 1
++        and mapping.dtype == torch.int32
++        and ids.device == mapping.device
++    ):
++        out = torch.empty_like(ids, dtype=torch.int32)
++        if ids.numel():
++            _map_kernel[(triton.cdiv(ids.numel(), 256),)](
++                ids, mapping, out, ids.numel(), 256
++            )
++        return out
++    cast = ids.to(torch.int32)
++    return torch.where(cast < 0, -1, mapping[cast.clamp_min(0)]).contiguous()
+diff --git a/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py b/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py
+index 41c463d..a1612f4 100644
+--- a/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py
++++ b/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py
+@@ -389,8 +389,8 @@ class MuseSpark1xFp4Experts(nn.Module):
+         from sglang.kernels.ops.activation.activation import silu_and_mul
+         from sglang.kernels.ops.moe.moe_wna16_marlin import moe_wna16_marlin_gemm
+         from sglang.srt.layers.moe.fused_moe_triton import moe_align_block_size
+-        from sglang.srt.layers.moe.token_dispatcher.standard import (
+-            _map_topk_ids_to_local_experts,
++        from sglang.kernels.ops.moe.map_marlin_expert_ids import (
++            map_marlin_expert_ids,
+         )
+         from sglang.srt.layers.quantization.marlin_utils import marlin_make_workspace
+ 
+@@ -401,10 +401,10 @@ class MuseSpark1xFp4Experts(nn.Module):
+         gemm1_n = 2 * size_n
+         expert_map = self._expert_map
+ 
+-        local_topk_ids = topk_ids.to(torch.int32)
+         if expert_map is not None:
+-            local_topk_ids = _map_topk_ids_to_local_experts(local_topk_ids, expert_map)
+-        local_topk_ids = local_topk_ids.contiguous()
++            local_topk_ids = map_marlin_expert_ids(topk_ids, expert_map)
++        else:
++            local_topk_ids = topk_ids.to(torch.int32).contiguous()
+         topk_weights = topk_scores.to(torch.float32).contiguous()
+ 
+         for block_size_m in _MARLIN_BLOCK_SIZE_M_CANDIDATES:

@@ -1,5 +1,12 @@
 # Public source and research coverage
 
+Follow-up coverage and the implementation/rejection matrix are now in
+[OPTIMIZATION_LIBRARY.md](OPTIMIZATION_LIBRARY.md). Added exact trees for
+lee101/openkernels, sgl-project/sgl-nvidia-mega and keell0renz, plus an upstream
+vLLM/Humming screen. Candidate06adapts lee101's documented local-align/prefix
+approach;04is a new fused implementation of the inspected stock mapping path.
+Below is the preserved initial six-tree review. No measured serving gain yet.
+
 This is a bounded review, not a claim to have searched the entire internet or
 audited every entrant. A public-only model-name query retrieved155repository
 matches across two pages; these include unrelated model projects, not155

@@ -1,0 +1,10 @@
+{
+  "scope": "Exact CPU fallback wrapper only; Triton branch uncompiled and unexecuted.",
+  "torch": "2.15.0",
+  "device": "cpu",
+  "source_sha256": "c1eb33ed94bb3ed5da24a9f3704b4765e24776b41b5b07cbd70c57d026e12826",
+  "cases": 480,
+  "fresh_input_calls": 480,
+  "graphs": [],
+  "timings": []
+}

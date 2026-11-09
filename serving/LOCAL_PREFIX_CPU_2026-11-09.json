@@ -1,0 +1,9 @@
+{
+  "scope": "Exercise the exact candidate06 method with CPU align/GEMM contract doubles.\n\nThis validates argument wiring and route coverage, not native CUDA alignment,\nMarlin arithmetic, CUDA graph safety or serving quality/performance.\n",
+  "cases": 420,
+  "instrumented_gemm_calls": 840,
+  "patch_sha256": "8a28f4c5273f62ebaf80ef95abe540d714b98eaffa299b2f3bb2c4a9e836f642",
+  "source_sha256": "6638bed1cbcc5d3a6b38af49f863127b922d75421fe511b14a592defdb70a6f4",
+  "torch": "2.15.0",
+  "native_gpu_executed": false
+}

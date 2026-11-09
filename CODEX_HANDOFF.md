@@ -1,5 +1,21 @@
 # Current handoff: serving challenge (November9)
 
+Latest follow-up: official candidate01check request rejected at23:07:40UTC:
+track opensNov12at9amPT, no handle/job. Saved request/response; jobs[]after.
+Repo freshly verifiedPRIVATE. Added isolated04fused expert-ID remap and06local
+alignment/inactive-prefix specialization, plus05/07combinations. NewCPU480map
+fallback/420exact-method contract cases pass; no nativeCUDA/Marlin arithmetic
+or serving validation. Existing01/02/03frozen unchanged. Current ignoredSG
+checkout and current/patch.diff match07,12,186bytes/4files, SHA0ae82e6badc3bd52a669a75d6e3bcfbf8ebd0df378ebffb7f1de31442e5d8cf2.
+Full reports/new tools and OPTIMIZATION_LIBRARY.md document bounds and source
+attribution. Public review now nine selected trees/1,351paths/41downloaded
+files plus two upstreamvLLMfiles (fetch != fullread). Candidate06draws from
+lee101upstreamanalysis; sourceconfirmedEPflagdisablessorted/prefixfastpaths.
+Rejected sharedMarlinworkspace reuse on upstream graph-lock alias warning;
+do not implement a persistent cache without proving graph/stream safety.
+First-day officialcheck order01/06/02;04separately then measured composition.
+Prior paragraphs below describe the earlier checkpoint; currentstatuswins.
+
 The owner revoked the earlier AGENTS.md workflow and explicitly replaced the
 kernel objective with winning the serving challenge. Start with
 serving/OBJECTIVE.md and serving/CURRENT_STATUS.md. The old kernel sequence

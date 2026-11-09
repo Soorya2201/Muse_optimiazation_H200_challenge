@@ -1,5 +1,17 @@
 # Run log
 
+Serving Nov9 follow-up: an official candidate01check request at23:07:40UTC
+was rejected before job creation because serving opens Nov12at9amPT. Exact
+request/response: serving/OFFICIAL_CHECK_ATTEMPT_2026-11-09.json; jobs remained
+empty. There is no serving score or rank. Added isolated fused expert-map04
+and local-align/prefix06candidates, plus combinations05/07. CPU480fallback
+and420route-contract cases pass; all seven source packages pass their respective
+manifests. No GPU/serving improvement demonstrated. Workspace-reuse idea was
+rejected on source evidence of graph-lock alias/deadlock risk. See
+serving/OPTIMIZATION_LIBRARY.md and serving/EXPERIMENT_LOG.md for sources,
+scope, failure details and next official checks. These notes do not alter any
+historical kernel results below.
+
 | Date | Problem | File | Job | Mode | Speedup | Notes |
 |---|---|---|---|---|---|---|
 | 2026-10-27 | muse_moe_w4a16 | submission (v1 class) | d0805799cf2245be | submit | 1.554x | scored |
