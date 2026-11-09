@@ -3,6 +3,9 @@
 The project objective is now [winning the serving challenge](OBJECTIVE.md).
 There is no official serving run, score or verified rank for this work yet.
 
+Private review: [draft PR1](https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/pull/1),
+branch `serving/20261109`. Initial implementation/research checkpoint46e0902.
+
 Fresh `okc serve init` pins **297e54fd105e974cdf401e5b4d20253a22c16f90**.
 Its rules allow400KB of source diff under `python/sglang/`, with no added line
 over400characters, and3checks/1scored run per day. The initializer says
