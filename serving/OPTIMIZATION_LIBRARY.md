@@ -12,6 +12,12 @@ upstream and the exact0.1.12dependency already declared by SGLang. Its older
 API/tuner, Muse's post-expert norm and graph lock ownership constrain a port.
 No Humming install, execution, speedup or new submission patch is claimed.
 
+The [development adapter](HUMMING_PROTOTYPE.md) is now implemented separately
+from the submission set, with CPU protocol evidence only. The deeper precision
+audit found that the pinned default Stream-K path reduces BF16 partial outputs
+even when MMA is FP32. The adapter excludes it, retains FP8 scale storage and
+keeps stock finalization. Its performance advantage remains a hypothesis.
+
 ## Implemented mechanisms
 
 | Mechanism | Source/evidence | Our implementation and unresolved question |

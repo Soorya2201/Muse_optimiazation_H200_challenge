@@ -13,6 +13,7 @@ import argparse
 import ast
 import datetime
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -23,6 +24,7 @@ import tempfile
 import traceback
 from types import MethodType, SimpleNamespace
 from unittest.mock import patch
+from contextlib import ExitStack
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '297e54fd105e974cdf401e5b4d20253a22c16f90'
@@ -125,6 +127,25 @@ def run_cuda(args, codes, report, save):
             setattr(weights, prefix+'_'+suffix,
                     torch.nn.Parameter(torch.stack(tensors), requires_grad=False))
         refs.append(torch.stack(reference))
+    humming_layer = None
+    if args.humming_prototype:
+        report.update(phase='humming_preparation', inflight_candidate='humming_prototype')
+        save()
+        spec = importlib.util.spec_from_file_location('muse_humming_prototype',
+                    ROOT/'serving/prototypes/humming_moe.py')
+        adapter = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(adapter)
+        humming_layer = torch.nn.Module()
+        humming_layer.params_dtype = dtype
+        humming_layer.num_local_experts = local
+        humming_layer.global_num_experts = args.experts
+        humming_layer.intermediate_size_per_partition = args.intermediate
+        # Shared raw tensors during preparation only. Each backend then replaces
+        # its own parameters. Two layouts coexist solely for this A/B fixture.
+        for attr, tensor in weights.named_parameters():
+            setattr(humming_layer, attr, tensor)
+        adapter.prepare_humming_moe(humming_layer)
+        humming_layer._marlin_expert_outputs = MethodType(adapter.humming_expert_outputs, humming_layer)
     prepare_moe_nvfp4_layer_for_marlin(weights)
     mapping = torch.full((args.experts,), -1, device='cuda', dtype=torch.int32)
     start = args.rank*local
@@ -142,6 +163,17 @@ def run_cuda(args, codes, report, save):
         for method in METHODS:
             setattr(layer, method, MethodType(scope[method], layer))
         functions[name] = layer
+    if humming_layer is not None:
+        scope = dict(vars(muse))
+        exec(codes['stock'], scope)
+        humming_layer._forward_marlin = MethodType(scope['_forward_marlin'], humming_layer)
+        humming_layer._expert_map = mapping if args.ep > 1 else None
+        functions['humming_prototype'] = humming_layer
+        humming_forward_module = importlib.import_module('humming.forward')
+        true_humming_forward = humming_forward_module.humming_forward
+        report['humming_precision'] = dict(use_f16_accum=False, use_stream_k=False,
+                                         input='bf16', group_scale='fp8', output='bf16')
+        save()
 
     def configure_norm(weight_first, fused):
         cls = MuseSpark1xRMSNormWithInputScale if weight_first else MuseSpark1xRMSNorm
@@ -197,7 +229,17 @@ def run_cuda(args, codes, report, save):
                         return true_gemm(a, c, *pos, **kw)
 
                     outputs = {}
-                    with patch.object(native, 'moe_wna16_marlin_gemm', side_effect=poisoned_gemm):
+                    def poisoned_humming(config, *pos, **kw):
+                        c = kw['outputs']
+                        c.fill_(float('nan'))
+                        c[inactive.reshape(-1), 0] = float('inf')
+                        return true_humming_forward(config, *pos, **kw)
+
+                    with ExitStack() as hooks:
+                        hooks.enter_context(patch.object(native, 'moe_wna16_marlin_gemm', side_effect=poisoned_gemm))
+                        if humming_layer is not None:
+                            hooks.enter_context(patch.object(humming_forward_module, 'humming_forward',
+                                                             side_effect=poisoned_humming))
                         for name, layer in functions.items():
                             report['inflight_candidate'] = name
                             save()
@@ -283,7 +325,7 @@ def run_cuda(args, codes, report, save):
                     for _ in range(5):
                         graph.replay()
                 torch.cuda.synchronize()
-                for name in args.candidates:
+                for name in [key for key in functions if key != 'stock']:
                     report['inflight_candidate'] = name
                     save()
                     samples = []
@@ -305,6 +347,8 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--plan-only', action='store_true')
     parser.add_argument('--benchmark', action='store_true')
+    parser.add_argument('--humming-prototype', action='store_true',
+                        help='Include the separate development adapter; not a submission patch')
     parser.add_argument('--candidates', nargs='+', choices=list(PATCHES), default=list(PATCHES))
     parser.add_argument('--rows', type=int, nargs='+',
                         default=[1, 4, 7, 8, 16, 28, 32, 112, 128, 224, 256])
@@ -335,6 +379,11 @@ def main():
     try:
         codes, manifest = prepare_sources(args.sglang, args.candidates)
         report['sources'] = manifest
+        if args.humming_prototype:
+            data = (ROOT/'serving/prototypes/humming_moe.py').read_bytes()
+            compile(ast.parse(data.decode()), '<development Humming adapter>', 'exec')
+            report['humming_prototype'] = dict(sha256=hashlib.sha256(data).hexdigest(),
+                scope='Development projection adapter only; no serving integration or GPU pass.')
         if args.plan_only:
             report['state'] = 'source_preparation_passed_only'
         else:

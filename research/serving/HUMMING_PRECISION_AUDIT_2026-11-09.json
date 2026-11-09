@@ -1,0 +1,62 @@
+{
+  "captured_utc": "2026-11-09T23:41:11.136420+00:00",
+  "source_archive_sha256": "c96c37c95f74379067d2d2d0c5154d12ee9a8cfa29a7c3370a7f3e34f207ca72",
+  "scope": "Source evidence, not a GPU run. Stream-K reduction branch stores and adds 16-bit partial output; select no-Stream-K with FP32 MMA for the prototype.",
+  "evidence": {
+    "partial_reduction": "humming/include/humming/epilogue/gmem_writer.cuh:112-117",
+    "conversion_to_bf16": "humming/include/humming/epilogue/smem_writer.cuh:157",
+    "mma_fp32_selection": "humming/kernel/humming.py:254-258",
+    "within_cta_reduction": "humming/include/humming/epilogue/smem_reducer.cuh:77-82",
+    "pinned_api": "humming/layer.py"
+  },
+  "pinned_sources": [
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+    },
+    {
+      "path": "humming/layer.py",
+      "bytes": 21229,
+      "sha256": "7444eb85300b6d09d102867d0597dab6ce95a5fedc504a9497792264b6940890"
+    },
+    {
+      "path": "humming/forward.py",
+      "bytes": 4407,
+      "sha256": "0ebbf281e3bca07d61b113958006ec2efd41d6de4aa640cab5087d53039839d7"
+    },
+    {
+      "path": "humming/kernel/humming.py",
+      "bytes": 21463,
+      "sha256": "97712961bfcfbfe4057211564cea439d08d63d372e7eb0fd000dbaf35f675a2b"
+    },
+    {
+      "path": "humming/include/humming/epilogue/gmem_writer.cuh",
+      "bytes": 6219,
+      "sha256": "fb52647224da17c52a2bef0cbe6c5f48e52e4057c9a61269a985677b643bdca8"
+    },
+    {
+      "path": "humming/include/humming/epilogue/smem_writer.cuh",
+      "bytes": 7575,
+      "sha256": "898589a11b27b9e14c34a44dbd29e137a211854be02e9ca6769bce4f5822f002"
+    },
+    {
+      "path": "humming/include/humming/epilogue/smem_reducer.cuh",
+      "bytes": 4209,
+      "sha256": "4402c9a767082de66f2e3a4310a3bc2e8a8e29048b3cd00e12818cc7a4cc5048"
+    },
+    {
+      "path": "humming/tune/base.py",
+      "bytes": 11369,
+      "sha256": "6856484fd0742a23b3aeeba7f116b360f3da127430e5d7f3518a896aae27af76"
+    },
+    {
+      "path": "humming/tune/sm90.py",
+      "bytes": 6158,
+      "sha256": "ebbcc1d834a46087299d1148373f8be307afcb6b6a60a09c9ca3ff6711558fc5"
+    }
+  ],
+  "prototype_sha256": "2bbec6b86f2f7789387de8bc4155930196bf0c11ef812ed11f868c7988adff5d",
+  "prototype_uses_stream_k": false,
+  "native_gpu_executed": false
+}

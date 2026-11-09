@@ -109,3 +109,49 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
   context; inspected status and reapplied with correct anchors. No evidence or
   source candidate was overwritten. No official check request was repeated;
   serving remains unopened, no live GPU handle or new score.
+
+## Nov 9 continuation: precision-constrained Humming adapter
+
+- Previous turn was progress: native validation preparation and the pinned
+  Humming feasibility audit were pushed as b7499c2. No live GPU process/job
+  was claimed. Continued the owner's serving objective from current files.
+- Deeper pinned0.1.12 audit found a material precision distinction: FP32 MMA
+  does not imply FP32 Stream-K reduction. The epilogue converts partial outputs
+  to16bits and adds BF16/FP16 pairs across slices. Stock Muse requests FP32
+  Marlin reduction. Excluded that default path; the development adapter sets
+  no Stream-K and rejects every tactic that enables it or FP16 accumulation.
+  Shared-memory reduction retains FP32 values for FP32 MMA in the inspected
+  code. No compiled arithmetic or quality equivalence is inferred from this.
+- Implemented development-only `serving/prototypes/humming_moe.py`, separate
+  from all seven frozen submission diffs. It uses the existing0.1.12 API,
+  packed FP4 weights/FP8 group scales, stock gate-column/BF16 outer-scale
+  rounding, separate alignment tables when G1/G2 blocks differ, masked SiLU
+  and the exact stock finalizer. No full-model checkpoint aliases/preparation
+  hook, native run, performance win or novelty claim is provided.
+- Initially considered expanding group scales to BF16; dropped before tests
+  because it adds one byte per16weights, about11.1% to packed-weight/group-scale
+  storage. Retained FP8 instead. The adapter replaces conventional parameters
+  rather than retaining a Marlin fallback layout. Transient native repacking
+  and full-model memory/cache effects still require measurement.
+- CPU protocol doubles passed96cases/8mock preparations, EP1/2/4/8 last ranks,
+  four row counts and random/local/dropped routes, equal/different block sizes.
+  Verified gate-scale choice/rounding, six parameters, released references to
+  old parameter objects, route coverage and call flow. Two forbidden precision
+  configurations rejected. Fake tensor CUDA flags and fake operators are used;
+  no actual Humming package or GPU kernel was imported/executed. API bind shapes
+  come from pinned source with annotations/default values omitted, not changed
+  required/optional arguments. The rerun with repo-pinned sources also passed.
+- Pinned nine unchanged API/precision/source files including the package's
+  LICENSE (no NOTICE exists in this archive), with archive/file hashes and
+  explicit bounded read scope. This avoids dependence on temporary downloads
+  for reproducing the CPU API checks. Full package extraction under/tmp was
+  read-only and not an audit/execution of all133package files.
+- Native comparison tool now has optional `--humming-prototype`, using the
+  stock finalizer and the same poisoned slots/dense/paired/graph/timing gates.
+  Only its source-plan mode ran. A function-local importlib binding that would
+  shadow the earlier loader reference was caught in review and removed before
+  native-plan validation; no GPU result or numerical failure was fabricated.
+- All original candidate hashes and current candidate07patch are unchanged.
+  No official request repeated, rented node ordered or service score obtained.
+  Next gate is real native validation/timing; a no-Stream-K regression must be
+  recorded/rejected rather than relaxed to lower precision for a faster score.

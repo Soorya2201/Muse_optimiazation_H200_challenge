@@ -1,5 +1,22 @@
 # Current handoff: serving challenge (November9)
 
+Latest: separate serving/prototypes/humming_moe.py now exists, SHA256
+2bbec6b86f2f7789387de8bc4155930196bf0c11ef812ed11f868c7988adff5d.
+No submission integration or native GPU run. Crucial audit: Humming 0.1.12
+Stream-K writes/adds BF16 partial outputs despite FP32 MMA; stock Marlin uses
+FP32 reduction. Prototype requires no Stream-K, no FP16 accumulation, packed
+FP4/FP8 scales, stock gate-column/BF16 outer rounding and stock finalization.
+Independent alignment tables if G1/G2 blocks differ. No runtime dual-layout
+fallback. CPU protocol doubles pass 96 cases/8 preparations and reject two
+forbidden configs; API bind shapes extracted from pinned source, not actual
+Humming execution. Flags/operators are simulated; do not call it a GPU pass.
+Nine unchanged source/license files pinned at research/public/humming_0_1_12;
+default CPU preflight uses those files and verifies source hashes. Native tool
+accepts --humming-prototype; only source-plan mode ran. Synthetic A/B holds
+both layouts solely for comparison. Full checkpoint preparation, actual layout
+memory, native math/graphs/speed and serving remain unproven. See
+HUMMING_PROTOTYPE.md and receipts. Frozen01..07/currentpatch unchanged.
+
 Latest native-validation/Humming checkpoint: the new MoE component harness is
 prepared and GPU-unrun. CPU source-preparation reports apply 01/04/06/07 to
 isolated indices and compile ten exact methods including stock. Finalization

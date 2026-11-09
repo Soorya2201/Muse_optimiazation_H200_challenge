@@ -3,6 +3,12 @@
 This source audit changes the next experiment, but establishes no speedup.
 No Humming package was installed, built, imported or benchmarked.
 
+Follow-up: the [development prototype](HUMMING_PROTOTYPE.md) now exists with
+CPU protocol-only evidence. Further source audit found BF16 partial reduction
+in the default Stream-K path despite FP32 MMA; that path is excluded. The
+prototype uses no Stream-K, retains FP8 scales and stock finalization, and
+requires native validation before any serving integration.
+
 The official SGLang base declares `humming-kernels[cu13]==0.1.12` in
 `python/pyproject.toml:43`. That makes the installed backend a promising
 candidate for a small source adapter. It is not proof that the remote image
@@ -82,5 +88,6 @@ route; a bounded tuning adaptation would need exact old-API validation.
    Default small synthetic dimensions do not establish real-layer throughput;
    stock full-model quality, acceptance, TTFT and all four loads still gate use.
 
-This is an unimplemented candidate. The four existing mechanisms and frozen
-patches remain unchanged while the native validation harness is prepared.
+The four existing mechanisms and frozen patches remain unchanged. A separate
+development adapter is prepared; serving integration and GPU testing remain
+unimplemented/unrun. See the follow-up above for its tighter precision guard.

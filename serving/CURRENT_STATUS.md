@@ -92,9 +92,17 @@ that static incompatibility is documented, not hidden or called a GPU failure.
    These are unimplemented hypotheses, not novelty or performance claims.
    The [Humming feasibility audit](HUMMING_FEASIBILITY_2026-11-09.md) found the
    base already declares Humming0.1.12. Its exact source/API was inspected
-   separately from current upstream: no package install, execution or port.
+   separately from current upstream: no package install or execution.
    Next larger-kernel experiment is that pinned backend with unchanged BF16/
    FP32 precision and Muse normalization, avoiding duplicated model layouts.
+
+An [isolated Humming adapter](HUMMING_PROTOTYPE.md) is now prepared outside
+all submission diffs. It rejects Stream-K because the pinned implementation
+adds BF16 partial outputs, unlike stock's FP32 reduction. It keeps packed FP4/
+FP8 scales and stock finalization, and uses separate route tables if G1/G2
+block sizes differ. 96 CPU protocol cases and 8 mock preparations pass against
+the pinned API shapes; two forbidden precision configurations are rejected.
+Real library/GPU execution and native checkpoint integration remain unproven.
 
 The new [optimization library](OPTIMIZATION_LIBRARY.md) records implemented
 mechanisms, precise public sources, rejected workspace reuse (graph-lock

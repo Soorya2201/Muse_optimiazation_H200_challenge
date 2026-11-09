@@ -1,5 +1,15 @@
 # Run log
 
+Serving Humming adapter checkpoint, Nov9: implemented a separate development
+projection adapter; no submission integration or GPU execution. Source audit
+found BF16 Stream-K partial reduction despite FP32 MMA, so the adapter excludes
+that path. Retains packed FP4/FP8 scales and stock finalization. CPU protocol
+doubles pass96cases/8preparations and reject two forbidden precision configs;
+these are not NVFP4 arithmetic or speed measurements. Native source-plan mode
+passes, relevant unchanged Apache2sources/LICENSE are pinned, and all seven
+submission patches retain their prior hashes. See serving/HUMMING_PROTOTYPE.md
+and the serving ledger for scope, design rejections and the actual GPU gate.
+
 Serving native-validation checkpoint, Nov9: prepared exact-method native MoE
 comparison/graph/timing harness; only CPU source preparation ran (ten compiled
 methods, five source hashes, identical finalization AST). No GPU result or new

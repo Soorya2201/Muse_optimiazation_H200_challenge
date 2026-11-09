@@ -1,5 +1,11 @@
 # Native validation prepared for an existing Hopper node
 
+Optional `--humming-prototype` now adds the separate development adapter.
+See [HUMMING_PROTOTYPE.md](HUMMING_PROTOTYPE.md) for source/CPU evidence and
+the no-Stream-K precision guard. That flag has run in source-plan mode only;
+no actual library/GPU result is claimed. The default four frozen candidates
+and their seven patches are unchanged.
+
 The laptop has no CUDA GPU. All commands below are prepared and unrun on a
 GPU. Only the source-preparation mode has run locally; the latest immutable
 report is MOE_NATIVE_PLAN_READY_2026-11-09.json. It applies each frozen diff to an isolated git
