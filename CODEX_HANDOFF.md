@@ -1,4 +1,41 @@
-# Codex Handoff: Muse Spark Open Kernel Challenge
+# Current handoff: serving challenge (November9)
+
+The owner revoked the earlier AGENTS.md workflow and explicitly replaced the
+kernel objective with winning the serving challenge. Start with
+serving/OBJECTIVE.md and serving/CURRENT_STATUS.md. The old kernel sequence
+below is historical, not the active work order. No subagents used this turn.
+
+New isolated root worktree /Users/soorya/muse_work/serving_20261109, branch
+serving/20261109 from b7f94e9. External stale checkout/untracked research is
+untouched. Current ignored official SGLang clone: serving/current/sglang.
+Fresh init pins297e54fd105e974cdf401e5b4d20253a22c16f90,400KB source patch,
+400character added lines,3checks/1scored/day, and announcesNov12at9amPT.
+Cached Nov3webnotice saysNov10; direct pages403. Recheck before runs.
+
+Implemented isolated candidates01EPglobalroute-density fix and02single-gather
+draft greedy transport;03combined7065bytes/3files. Exact source/patch manifests
+and current downloadedRULES are saved. CPU65540policy/786432selection/360class
+cases pass;72empty cases matchstockrejection. Allpatchesapplytoexactbase and
+passpath/mode/size/addedline/PythonASTchecks. No Triton/NCCL/CUDAgraph/full-model
+validation and no servingcheck/submit/score/rank yet. GPUdevelopment script
+prepared/unrun. Official runs only assumed pending existing-hardware question.
+
+Public-only broad model query155repositorymatches(not155entrants),six selected
+trees329paths/31hash-verifieddownloads, boundedreadscope/attribution in
+serving/PUBLIC_SOURCES_2026-11-09.md. HariappiApache2one-linefix adapted to new
+path; externalH100layerfiguresnotours/noH200whole-modelgain. Meta1,109tok/s is
+GB300/differentKVsettings,notportableH200evidence. No source executed from peers.
+Next: keepcurrentcandidatehashes, obtainrealGPUvalidation, firstofficialcheck
+candidate01onceopen, then02andonlythencomposition. Fullscoredrunneededforall
+rungsquality/TTFT/performance;shortchecknotcompletevalidation. Futureideas
+acceptance-cost-awareprefixverify/single-layoutMarlinexpertfusionremainhypotheses.
+
+Goal API rejected replacement because old kernel goal is unfinished; do not
+falsely complete it. User's replacement goal is recorded in serving/OBJECTIVE.md.
+
+---
+
+# Historical Codex Handoff: Muse Spark Open Kernel Challenge
 
 You are taking over a GPU-kernel optimization effort. Work through the tracks **one at a time, in the order below**. Do not run parallel agents or sub-agents. Finish a track (or hit its stop condition), record results, then move to the next.
 

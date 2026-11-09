@@ -1,0 +1,1964 @@
+{
+  "captured_utc": "2026-11-09T22:38:26.736547+00:00",
+  "scope": "Exact public trees/selected files fetched and hash verified; fetched does not mean read in full or valid performance evidence.",
+  "repositories": [
+    {
+      "repository": "facebookresearch/sgl-muse-mega",
+      "head": "ddb7925ff45167250201f35743a19c5152254052",
+      "url": "https://github.com/facebookresearch/sgl-muse-mega",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "description": "Ultrafast low latency megakernel for Muse Spark Open - 1000+ tok/s",
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": ".clang-format",
+          "sha": "2edc88f8919218ba25e57512f42f2f7d8e953a20",
+          "bytes": 394
+        },
+        {
+          "path": ".gitignore",
+          "sha": "88e16289c9218c017cd7e137bafa1bb5c60fb99a",
+          "bytes": 66
+        },
+        {
+          "path": "LICENSE",
+          "sha": "b93be90515ccd0b9daedaa589e42bf5929693f1f",
+          "bytes": 1088
+        },
+        {
+          "path": "NOTICE",
+          "sha": "29e0f080292f5ac4cd26dfd25890108891361d6c",
+          "bytes": 304
+        },
+        {
+          "path": "README.md",
+          "sha": "d69c145096f368bf0311abff1a622f7a9b14aa68",
+          "bytes": 4187
+        },
+        {
+          "path": "benchmark/bench_gsm8k.py",
+          "sha": "29a8c95d3470903dcdad8fd9116706254c8735f2",
+          "bytes": 6460
+        },
+        {
+          "path": "benchmark/bench_verify.py",
+          "sha": "6b3312710ac1fef0790db7ec820a11d6decd7291",
+          "bytes": 7677
+        },
+        {
+          "path": "docs/layer.png",
+          "sha": "17da14c0ba298b1ac946289ac2d1f76305d84ed5",
+          "bytes": 100808
+        },
+        {
+          "path": "docs/layer_dark.png",
+          "sha": "0b5414092f99c3a66c3cf23c250e2918ff1828b1",
+          "bytes": 100088
+        },
+        {
+          "path": "docs/step.png",
+          "sha": "bc00695cca71bf3a0ad9546a8d231bac4fcfeaf4",
+          "bytes": 62567
+        },
+        {
+          "path": "docs/step_dark.png",
+          "sha": "aae4aa76ca6b6bbfe27fc355a1824e2f1044c8b9",
+          "bytes": 62349
+        },
+        {
+          "path": "docs/tok_s.png",
+          "sha": "70967521aece0cbb8b37651c8e410bcbeaa8659b",
+          "bytes": 47001
+        },
+        {
+          "path": "docs/tok_s_dark.png",
+          "sha": "bfb8ca16f837280a06dcab5b23cb4c335352cfa8",
+          "bytes": 46811
+        },
+        {
+          "path": "pyproject.toml",
+          "sha": "404897281de55036aadaff9a214b35ca4908726d",
+          "bytes": 770
+        },
+        {
+          "path": "sgl_muse_mega/__init__.py",
+          "sha": "7f3a936a915f8920e83e883ab2c329c2d43c6c64",
+          "bytes": 130
+        },
+        {
+          "path": "sgl_muse_mega/common/__init__.py",
+          "sha": "b7d488d07c51a083a04dbada6644952e32cec037",
+          "bytes": 114
+        },
+        {
+          "path": "sgl_muse_mega/common/host.py",
+          "sha": "b24e5d4aa98ab8bb548a0bc9ea00e4353c98bf16",
+          "bytes": 6734
+        },
+        {
+          "path": "sgl_muse_mega/common/jit.py",
+          "sha": "45d625112e9c6c0b84c7b457d4518562adf7e175",
+          "bytes": 5301
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/__init__.py",
+          "sha": "d421b72b48970683c7924c36deb0ff78de755988",
+          "bytes": 109
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/config.py",
+          "sha": "2ef16186019dc1bcbe32fc8546036adc355a8070",
+          "bytes": 7810
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/draft.py",
+          "sha": "5795d50abc1a568273d5932ef36b5d820578eed1",
+          "bytes": 3154
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/runtime/__init__.py",
+          "sha": "30423026742a73a44d8e968431fe7770ee906ba5",
+          "bytes": 78
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/runtime/build.py",
+          "sha": "58a22ed1a0eb77085a75f8e85c3fe336b1d8331c",
+          "bytes": 12415
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/runtime/executor.py",
+          "sha": "8650b27078e964b760eb4ee63e7327a78837c098",
+          "bytes": 10021
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/runtime/iteration.py",
+          "sha": "1f588a0af381b0ac21e184ca821bcb01b4880a14",
+          "bytes": 17167
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/__init__.py",
+          "sha": "871068c0c6f916f5ad8b3031160f1f4a499127c8",
+          "bytes": 378
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/artifacts.py",
+          "sha": "fcd7e83ee0a7ef4bef768a1e68d88cfc079eaf0d",
+          "bytes": 8391
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/buffers.py",
+          "sha": "106ebaa6a790d177e1202748ef413ddc65205b9a",
+          "bytes": 16809
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/dflash/__init__.py",
+          "sha": "f71e84ab944408a5503328b43258e945e51acfa0",
+          "bytes": 458
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/dflash/head.py",
+          "sha": "d2aec18a8946e66fcd25b05851cb4fb9a0c96c28",
+          "bytes": 16926
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/dflash/iteration.py",
+          "sha": "612b29b49fc82ac5bc39664ad4492185f2ebca2a",
+          "bytes": 32252
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/dflash/layer.py",
+          "sha": "635c4286047d9b2f2317a9de5c0063b04a37c12d",
+          "bytes": 7796
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/dflash/verify_accept.py",
+          "sha": "bee4e58ef003cca0050f769f5f9b099a1efb6717",
+          "bytes": 7220
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/dflash/weights.py",
+          "sha": "9b5ab1c32b08bbb68741db2e4f79548dcefdc2b3",
+          "bytes": 15800
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/host/abi.h",
+          "sha": "9d97890d7c3a1a40fb5b59c6773448a0882fc760",
+          "bytes": 30394
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/host/runtime.cu",
+          "sha": "5d58e8f4c6650acefec94403da27f1105d6f124d",
+          "bytes": 98640
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/README.md",
+          "sha": "86c51fcf979341cfe38639c940ac54784280c1a7",
+          "bytes": 17256
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/attention.cuh",
+          "sha": "ab982c7b81471a0ff0abc2382a86d1aaa8241d6b",
+          "bytes": 94374
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/dflash/common.cuh",
+          "sha": "661110e13d5b93cc8dab2003c96314a3c71c8599",
+          "bytes": 30353
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/dflash/head.cu",
+          "sha": "8d702567019f3b7d6db618cadc309fae0806c89d",
+          "bytes": 60687
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/dflash/kv_sync.cu",
+          "sha": "272cf8fd39433015ed35f18c7925b283fd6edb4e",
+          "bytes": 3322
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/dflash/layer.cu",
+          "sha": "d92f9787d1bba24a67533dffe0b3482d64f27482",
+          "bytes": 94894
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/dflash/sample.cuh",
+          "sha": "f4f6eb4492fd5544517756799471e1feaeb783b2",
+          "bytes": 38805
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/dflash/tree.cuh",
+          "sha": "2f5410f3d148695340c8ccd25ebebeafbd548b54",
+          "bytes": 15585
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/dflash/verify_accept.cu",
+          "sha": "7ad86cd3683ee2abf5c1494b9f9b12edbf5f0959",
+          "bytes": 20173
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/framework.cuh",
+          "sha": "bc6bbfac31ad36d6b142129956a28fa1c349e280",
+          "bytes": 101790
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/head.cu",
+          "sha": "5475339e74ebd57ace1f4b7b0687d83a20294ff2",
+          "bytes": 16123
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/layer.cu",
+          "sha": "a9189ea964a0cce58115f34399a9924096d74e20",
+          "bytes": 33083
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/moe.cuh",
+          "sha": "a934ce37ad91d9f8a183eeadf3873a408f2b647b",
+          "bytes": 169349
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/next_layer.cuh",
+          "sha": "378d4d53da83d0aedb6e9648f16b45b63d96e29e",
+          "bytes": 54824
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/postattn.cuh",
+          "sha": "d9091f9e3612f88b62136217033f5596ac705b2b",
+          "bytes": 87647
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/kernels/ptx.cuh",
+          "sha": "3890a3c7665a49a5247750292d85269da6a30b72",
+          "bytes": 68487
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/verify.py",
+          "sha": "bef4495dad7ca578435bbc9fb2b53bb9e4e5ee8d",
+          "bytes": 19036
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/sm103/weights.py",
+          "sha": "da9c6226e5e18195e22aaef0289dc213f5cc6efc",
+          "bytes": 6972
+        },
+        {
+          "path": "sgl_muse_mega/muse_spark/spec.py",
+          "sha": "dcf89f597c2ddc318da40696cb82c7f4a6a331b6",
+          "bytes": 7826
+        },
+        {
+          "path": "sgl_muse_mega/plugin.py",
+          "sha": "39392ac55615cadb9e8c1d21d50a02fa9242267f",
+          "bytes": 1270
+        },
+        {
+          "path": "test/conftest.py",
+          "sha": "23b8fcf4060dda98a475ded071167e9d3b8dacdd",
+          "bytes": 320
+        },
+        {
+          "path": "test/e2e/test_muse_spark_server.py",
+          "sha": "3fa09f17a58d9fbdc927821c5339e9abeaac935e",
+          "bytes": 13713
+        },
+        {
+          "path": "test/kernels/synthetic.py",
+          "sha": "64782614349f80a352ba2f6229945d34d17b831c",
+          "bytes": 20468
+        },
+        {
+          "path": "test/kernels/test_dflash_iteration.py",
+          "sha": "bea50407ee7ba6e0602d8ae1c8480a1c973de35b",
+          "bytes": 52078
+        },
+        {
+          "path": "test/kernels/test_dflash_sample.py",
+          "sha": "16d47bc01e0721f1c0b4d3ac39ade7e6b04f55a2",
+          "bytes": 19578
+        },
+        {
+          "path": "test/kernels/test_fail_stop.py",
+          "sha": "52b15989ebdb074f972456fe6030f12d815fe618",
+          "bytes": 5035
+        },
+        {
+          "path": "test/kernels/test_verify_step.py",
+          "sha": "f8597145b06bfa081d17ea4ef3e4a788fc60abb9",
+          "bytes": 22345
+        },
+        {
+          "path": "test/reference/__init__.py",
+          "sha": "750f459351bf5aef786147f63a1cf75a06970c00",
+          "bytes": 217
+        },
+        {
+          "path": "test/reference/dflash2.py",
+          "sha": "349517bc3dd5a4d095b1a7259e5ef010b96000b6",
+          "bytes": 56816
+        },
+        {
+          "path": "test/reference/muse_spark.py",
+          "sha": "6381345d355c03838d303fca1ba786b3738a9c08",
+          "bytes": 40335
+        },
+        {
+          "path": "test/unit/test_contract.py",
+          "sha": "c6c01f693211b9c573fffc719706e2b8a37cd5c4",
+          "bytes": 4048
+        },
+        {
+          "path": "test/unit/test_dflash_draft.py",
+          "sha": "5fff1eb4079b9a1755f4b8a8303b003e849e77c7",
+          "bytes": 47684
+        },
+        {
+          "path": "test/unit/test_dflash_head.py",
+          "sha": "dbeded81ff5045e4038e0cd47cedbdc63fded715",
+          "bytes": 48128
+        },
+        {
+          "path": "test/unit/test_dflash_reference.py",
+          "sha": "4a604479d7c2c5054b5b6ce5d967d15419870f24",
+          "bytes": 41626
+        },
+        {
+          "path": "test/unit/test_dflash_tree.py",
+          "sha": "a6770c0f0d2db5ab11e03b60d92307243dafdd08",
+          "bytes": 6032
+        },
+        {
+          "path": "test/unit/test_param_blocks.py",
+          "sha": "ba31b1c9ee8a783c5f654773bcf71aa99a8a70e1",
+          "bytes": 22469
+        },
+        {
+          "path": "test/unit/test_plugin.py",
+          "sha": "77bb6df52c88cb86a5d348aef2a09857db5207d5",
+          "bytes": 10688
+        },
+        {
+          "path": "test/unit/test_reference.py",
+          "sha": "07cd08acfd3c5d34eec49cc25a1aabfd7a4feff1",
+          "bytes": 23019
+        },
+        {
+          "path": "test/unit/test_runtime.py",
+          "sha": "699dba45e43178df523df7f9fbdae18cbed338eb",
+          "bytes": 18078
+        },
+        {
+          "path": "test/unit/tmap_shim.c",
+          "sha": "13b6564d67e5d65a2a6a0036e037c3963b453d38",
+          "bytes": 1659
+        }
+      ],
+      "fetched": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/facebookresearch/sgl-muse-mega/ddb7925ff45167250201f35743a19c5152254052/LICENSE",
+          "blob": "b93be90515ccd0b9daedaa589e42bf5929693f1f",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        },
+        {
+          "path": "NOTICE",
+          "url": "https://raw.githubusercontent.com/facebookresearch/sgl-muse-mega/ddb7925ff45167250201f35743a19c5152254052/NOTICE",
+          "blob": "29e0f080292f5ac4cd26dfd25890108891361d6c",
+          "sha256": "f61a2f4cb0da72ea912897459fbcc03280ae5a81c4e50ad27ce18d335c5a015c",
+          "bytes": 304
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/facebookresearch/sgl-muse-mega/ddb7925ff45167250201f35743a19c5152254052/README.md",
+          "blob": "d69c145096f368bf0311abff1a622f7a9b14aa68",
+          "sha256": "e3d457e44ad777cfaa08ea6c55c93bc226d05a543c01696ddc0458e9f8ef9683",
+          "bytes": 4187
+        }
+      ]
+    },
+    {
+      "repository": "hariappi/okc-muse-spark-kernels",
+      "head": "a3ebb0f2f027f07f38b063c6a74ac355a6b38848",
+      "url": "https://github.com/hariappi/okc-muse-spark-kernels",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "description": "Muse-Spark-Open kernels and SGLang serving work for the Open Kernel Challenge 2026",
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": "LICENSE",
+          "sha": "9c422689c8f5c317c7c65153b1209349ec57007e",
+          "bytes": 11346
+        },
+        {
+          "path": "README.md",
+          "sha": "4b4986d45d8a9b439fa67275b73b4866e3c57632",
+          "bytes": 3487
+        },
+        {
+          "path": "kernels/muse_attention_decode/hybrid_v1.py",
+          "sha": "ec390126906059e0f831f8691c2d40a30901cb51",
+          "bytes": 441234
+        },
+        {
+          "path": "kernels/muse_attention_decode/pub_halfwarpfin_v1.py",
+          "sha": "897fe1992cd049bc95cc68b90ea2f958d0fe5670",
+          "bytes": 158144
+        },
+        {
+          "path": "kernels/muse_attention_decode/pub_vp2_v1.py",
+          "sha": "740bed57b89bedc67d219e55773f45f4c0e3c230",
+          "bytes": 218032
+        },
+        {
+          "path": "kernels/muse_bf16_proj/experiments/lt_sweep_v1.py",
+          "sha": "549fc732f6daffca798fce99fd11e6514218e2f5",
+          "bytes": 12529
+        },
+        {
+          "path": "kernels/muse_bf16_proj/experiments/og_section.py",
+          "sha": "6bb5afa71e5b4dd966a338ccaf5c2c51f09d8aaa",
+          "bytes": 13921
+        },
+        {
+          "path": "kernels/muse_bf16_proj/experiments/pub_og_v1.py",
+          "sha": "fecacc5633798d59b77e8611b8c35a785b69861e",
+          "bytes": 598263
+        },
+        {
+          "path": "kernels/muse_bf16_proj/experiments/pub_og_v2.py",
+          "sha": "e0fdc73ea8dabeed6bfa7f9d2caae0ac6a598833",
+          "bytes": 598678
+        },
+        {
+          "path": "kernels/muse_bf16_proj/experiments/pub_og_v3.py",
+          "sha": "556c619ea626ac3b5a4cfacdf12eac76371a7329",
+          "bytes": 599046
+        },
+        {
+          "path": "kernels/muse_bf16_proj/experiments/rq256_v1.py",
+          "sha": "dfa973f36940ad2d518bebe654b2a055b01a04a0",
+          "bytes": 76646
+        },
+        {
+          "path": "kernels/muse_bf16_proj/pub_rq_v5.py",
+          "sha": "a5443703ef6976dbaff2e62042111d81375f8953",
+          "bytes": 492273
+        },
+        {
+          "path": "kernels/muse_bf16_proj/pub_rq_v5_plain.py",
+          "sha": "d96fe9a253c45bebe1449a98dff586a87a71fd0b",
+          "bytes": 584636
+        },
+        {
+          "path": "kernels/muse_bf16_proj/pub_rq_v6.py",
+          "sha": "e3ebfdcc9b23f26c3e52185570ff0f8c40a60730",
+          "bytes": 585382
+        },
+        {
+          "path": "kernels/muse_decode_layer/experiments/cg_v1.py",
+          "sha": "512fa21ee9b28bf4d01a039b86933046af779599",
+          "bytes": 991801
+        },
+        {
+          "path": "kernels/muse_decode_layer/experiments/cg_v2.py",
+          "sha": "1112e9ffbcaddb06b0a3d9291c0fa1b3a040e66f",
+          "bytes": 992022
+        },
+        {
+          "path": "kernels/muse_decode_layer/keell_sub_v1.py",
+          "sha": "b15cc1023e82df62cec1db62529015849fc9e038",
+          "bytes": 979919
+        },
+        {
+          "path": "kernels/muse_decode_layer/pub_k1_v2.py",
+          "sha": "e23ad6530db97059c20a7c823bd48c55cb65d45b",
+          "bytes": 874734
+        },
+        {
+          "path": "kernels/muse_moe_w4a16/keell_sub_v1.py",
+          "sha": "271774cd0782a6eea0e4b9df32e353d731511fd3",
+          "bytes": 360899
+        },
+        {
+          "path": "kernels/muse_moe_w4a16/pub_dq3_small_v1.py",
+          "sha": "92529de2335fcb5477fa9d6f94002d5d3923e604",
+          "bytes": 332816
+        },
+        {
+          "path": "kernels/muse_moe_w4a16/pub_kg_v1.py",
+          "sha": "578056980f6fdecee5936174e63ecebd3db26450",
+          "bytes": 395726
+        },
+        {
+          "path": "kernels/muse_moe_w4a16/pub_kg_v3.py",
+          "sha": "37d18eb1034d538c816b280dc0f93b4004875e0a",
+          "bytes": 396736
+        },
+        {
+          "path": "kernels/muse_prefill_layer/pub_fmha_o_v4.py",
+          "sha": "2649b8a692c8fa563556ad333e12933e9d2f9545",
+          "bytes": 414682
+        },
+        {
+          "path": "serving/moe_harness/ab_blocksize.json",
+          "sha": "9863f1b9ccfc03d17e511e467d3a04692ba8a103",
+          "bytes": 2870
+        },
+        {
+          "path": "serving/moe_harness/ab_blocksize.py",
+          "sha": "fe58efcaa992aeddc29467ab30b6a6d83fdca4d9",
+          "bytes": 2081
+        },
+        {
+          "path": "serving/moe_harness/ablate.py",
+          "sha": "5408bdec4121720e3ceb68fdd4e3f4483de2536a",
+          "bytes": 1502
+        },
+        {
+          "path": "serving/moe_harness/baseline_h100nvl.json",
+          "sha": "af6bd5bc0f7d498caa786dca9827150fe1598a36",
+          "bytes": 1318
+        },
+        {
+          "path": "serving/moe_harness/harness.py",
+          "sha": "71600fd977c8af9fa82c1c31c3eff3f4701e00b1",
+          "bytes": 11568
+        },
+        {
+          "path": "serving/moe_harness/nvfp4_moe_triton.py",
+          "sha": "46fc784c52fceb92707faa031e0d1dc63f8b2302",
+          "bytes": 7183
+        },
+        {
+          "path": "serving/moe_harness/nvfp4_moe_triton_a.py",
+          "sha": "4093cd63a2cba52042c90528ddd476f5d0154e9a",
+          "bytes": 7032
+        },
+        {
+          "path": "serving/moe_harness/nvfp4_moe_triton_b.py",
+          "sha": "40c55c4d1adaa60eb1b011822e864c1ff0dc96d0",
+          "bytes": 6695
+        },
+        {
+          "path": "serving/moe_harness/profile_marlin.py",
+          "sha": "85eb3b71ace423effe00df7e3a42213f2dc147ed",
+          "bytes": 1099
+        },
+        {
+          "path": "serving/moe_harness/sweep_marlin.json",
+          "sha": "67bbbcdd0243809098bf509aafc42feb048a5244",
+          "bytes": 6430
+        },
+        {
+          "path": "serving/moe_harness/sweep_marlin.py",
+          "sha": "79b9c0a1d391b236b3e25f5234bec629819098e0",
+          "bytes": 1924
+        },
+        {
+          "path": "serving/moe_harness/test_triton.py",
+          "sha": "148b98766c3881ca741857f9a6ded946287fe40e",
+          "bytes": 3164
+        },
+        {
+          "path": "serving/moe_harness/triton_sweep.json",
+          "sha": "e0b63731e52bd41859219a94370e51575c7e0ef3",
+          "bytes": 1991
+        },
+        {
+          "path": "serving/patch.diff",
+          "sha": "ae7563f06bfa057d7ff8ea813c2b2570a3776de9",
+          "bytes": 952
+        }
+      ],
+      "fetched": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/LICENSE",
+          "blob": "9c422689c8f5c317c7c65153b1209349ec57007e",
+          "sha256": "1495e1e757ef4d0925a2350563cf5754bb23c51701a8ec4fb3c5cdcbedae6747",
+          "bytes": 11346
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/README.md",
+          "blob": "4b4986d45d8a9b439fa67275b73b4866e3c57632",
+          "sha256": "8a4ac6ad4d48342ee3bdaff31475de382571807049e46b10f57c7fce64dbfd66",
+          "bytes": 3487
+        },
+        {
+          "path": "serving/moe_harness/ab_blocksize.json",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/ab_blocksize.json",
+          "blob": "9863f1b9ccfc03d17e511e467d3a04692ba8a103",
+          "sha256": "6da997428071a41876bf4b4eccd5050a6123ed69b24746ea08bd7bd4697bdaff",
+          "bytes": 2870
+        },
+        {
+          "path": "serving/moe_harness/ab_blocksize.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/ab_blocksize.py",
+          "blob": "fe58efcaa992aeddc29467ab30b6a6d83fdca4d9",
+          "sha256": "0865a0c6d537736370333957d897a0b2f8d85039b2bc9e78152eb521f2c168ba",
+          "bytes": 2081
+        },
+        {
+          "path": "serving/moe_harness/ablate.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/ablate.py",
+          "blob": "5408bdec4121720e3ceb68fdd4e3f4483de2536a",
+          "sha256": "86d248e547c2e231c399d739206d1d695f66e8e23599b3f5401d50875feeac88",
+          "bytes": 1502
+        },
+        {
+          "path": "serving/moe_harness/baseline_h100nvl.json",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/baseline_h100nvl.json",
+          "blob": "af6bd5bc0f7d498caa786dca9827150fe1598a36",
+          "sha256": "059e7b12b3eb4aead40e876df89517c7d87b35386de3af3e0e8462153bc5a179",
+          "bytes": 1318
+        },
+        {
+          "path": "serving/moe_harness/harness.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/harness.py",
+          "blob": "71600fd977c8af9fa82c1c31c3eff3f4701e00b1",
+          "sha256": "88b29c95d0008be3561007caaa29960be27c6a5558a8edcfbfaa223739d21b46",
+          "bytes": 11568
+        },
+        {
+          "path": "serving/moe_harness/nvfp4_moe_triton.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/nvfp4_moe_triton.py",
+          "blob": "46fc784c52fceb92707faa031e0d1dc63f8b2302",
+          "sha256": "4848a6835dd7443e030d85d7c71bc019326c0d63aa0b598a6c6866cf656756d8",
+          "bytes": 7183
+        },
+        {
+          "path": "serving/moe_harness/nvfp4_moe_triton_a.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/nvfp4_moe_triton_a.py",
+          "blob": "4093cd63a2cba52042c90528ddd476f5d0154e9a",
+          "sha256": "ef58aa202c9bd94d09320d47cf2e96b6d6fdcb013f61b8d0cfb4006843c46d4d",
+          "bytes": 7032
+        },
+        {
+          "path": "serving/moe_harness/nvfp4_moe_triton_b.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/nvfp4_moe_triton_b.py",
+          "blob": "40c55c4d1adaa60eb1b011822e864c1ff0dc96d0",
+          "sha256": "d271c799ce53def4973d61a91fd52ee3f8155b44e0422fce9bf5b2a5cee86c79",
+          "bytes": 6695
+        },
+        {
+          "path": "serving/moe_harness/profile_marlin.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/profile_marlin.py",
+          "blob": "85eb3b71ace423effe00df7e3a42213f2dc147ed",
+          "sha256": "16847dfb7747f28879467f3c37d71de12131c7986e67ac2ab2e3036186752615",
+          "bytes": 1099
+        },
+        {
+          "path": "serving/moe_harness/sweep_marlin.json",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/sweep_marlin.json",
+          "blob": "67bbbcdd0243809098bf509aafc42feb048a5244",
+          "sha256": "d50c4b38180dd074d1cb02608ce5944b4e4c73fe56acc1c96901d82f8dc46475",
+          "bytes": 6430
+        },
+        {
+          "path": "serving/moe_harness/sweep_marlin.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/sweep_marlin.py",
+          "blob": "79b9c0a1d391b236b3e25f5234bec629819098e0",
+          "sha256": "94fc571b1bb45e022e3bde43b6fc143ab10a572c39af5e2cf480692a28a38142",
+          "bytes": 1924
+        },
+        {
+          "path": "serving/moe_harness/test_triton.py",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/test_triton.py",
+          "blob": "148b98766c3881ca741857f9a6ded946287fe40e",
+          "sha256": "3731ac21b8fb5858f0ce101411d91b70d27cc3d8add2944efb8704f4d50d0494",
+          "bytes": 3164
+        },
+        {
+          "path": "serving/moe_harness/triton_sweep.json",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/moe_harness/triton_sweep.json",
+          "blob": "e0b63731e52bd41859219a94370e51575c7e0ef3",
+          "sha256": "668733243339bf4553d478c4338701ab66163cda949c88c2a9cb735e4e1aa67a",
+          "bytes": 1991
+        },
+        {
+          "path": "serving/patch.diff",
+          "url": "https://raw.githubusercontent.com/hariappi/okc-muse-spark-kernels/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving/patch.diff",
+          "blob": "ae7563f06bfa057d7ff8ea813c2b2570a3776de9",
+          "sha256": "a21ebdd248a7b0f63562edfb8cd059db2ff2776c4c37f359c189879939f27b41",
+          "bytes": 952
+        }
+      ]
+    },
+    {
+      "repository": "arihantbansal/open-kernel-challenge",
+      "head": "a6966ea2d68b877bbe527180625c40d8889f46a7",
+      "url": "https://github.com/arihantbansal/open-kernel-challenge",
+      "license": null,
+      "description": "GPU kernels for Muse Spark Open on NVIDIA H200. Peak #1 on the MoE leaderboard in the Open Kernel Challenge.",
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": ".gitattributes",
+          "sha": "f130c659d862fe1e5104380e59639f5ce15e593a",
+          "bytes": 78
+        },
+        {
+          "path": ".github/workflows/tests.yml",
+          "sha": "caa267d4082918d6eb14975c3ca77a2569de939d",
+          "bytes": 369
+        },
+        {
+          "path": ".gitignore",
+          "sha": "de1028158c24de9b1ace13844d833926555a22cc",
+          "bytes": 136
+        },
+        {
+          "path": ".python-version",
+          "sha": "e4fba2183587225f216eeada4c78dfab6b2e65f5",
+          "bytes": 5
+        },
+        {
+          "path": "README.md",
+          "sha": "e2168e8a707d81ec7a8111ebf969f8247fe25695",
+          "bytes": 1485
+        },
+        {
+          "path": "benchmark/NOTES.md",
+          "sha": "f8213837b765bcbf592e96511d97062377a510aa",
+          "bytes": 1193
+        },
+        {
+          "path": "benchmark/README.md",
+          "sha": "b29ff76fcd0a5578c8fb728d29a3371e390dc32e",
+          "bytes": 1342
+        },
+        {
+          "path": "benchmark/assemble.py",
+          "sha": "ebe525261a55385526acc6cf7b0cc77dbd2a41fc",
+          "bytes": 9197
+        },
+        {
+          "path": "benchmark/budget.py",
+          "sha": "6a2da397978c606b989e7fdda99899e02b0fe935",
+          "bytes": 4066
+        },
+        {
+          "path": "benchmark/build.py",
+          "sha": "6c3d381dfec93a88cafb9c3537ee5c1d82d4598c",
+          "bytes": 2125
+        },
+        {
+          "path": "benchmark/conftest.py",
+          "sha": "6d159405387d8a113f44ef6cc5c8020bf74e285c",
+          "bytes": 138
+        },
+        {
+          "path": "benchmark/engine.py",
+          "sha": "5a6e6da9f0c3b6816cf93e9f925e42b947058dc0",
+          "bytes": 24127
+        },
+        {
+          "path": "benchmark/example_aa.py",
+          "sha": "86865c886e171901a0239f067f3d0a79e07c1ba1",
+          "bytes": 543
+        },
+        {
+          "path": "benchmark/gpu.py",
+          "sha": "8f7b6e3d9c9b57260207391cfb5ce083bb28fda0",
+          "bytes": 8932
+        },
+        {
+          "path": "benchmark/recipes/attn.py",
+          "sha": "9c4436098d7633c099c7708384ad9b315359678c",
+          "bytes": 1103
+        },
+        {
+          "path": "benchmark/recipes/layer.py",
+          "sha": "fd41ed33ff88efc121476262515907f004607c62",
+          "bytes": 16465
+        },
+        {
+          "path": "benchmark/recipes/moe.py",
+          "sha": "fd6f6b30f08d98d122c51d83fbd9cb68d6d18edf",
+          "bytes": 1223
+        },
+        {
+          "path": "benchmark/report.py",
+          "sha": "ae123965ef86ed9b3bd617f95cdd10fff00552f3",
+          "bytes": 10680
+        },
+        {
+          "path": "benchmark/schema.py",
+          "sha": "3c6ff0e737ea0c2cbab5eb5704148fcb93c8b8f4",
+          "bytes": 7556
+        },
+        {
+          "path": "benchmark/score.py",
+          "sha": "5a3bb1007802ddf49a3acfee75d18e709483f94f",
+          "bytes": 3729
+        },
+        {
+          "path": "benchmark/stats.py",
+          "sha": "7673059d2919062ed152890c8901c989aa44067f",
+          "bytes": 4326
+        },
+        {
+          "path": "benchmark/test_assemble.py",
+          "sha": "c591630ca29f000838c9d3a352bb00a8a1547edd",
+          "bytes": 4837
+        },
+        {
+          "path": "benchmark/test_budget_schema.py",
+          "sha": "aa27fed87ad9e3657a5cdf5eb7d1f91424b56473",
+          "bytes": 8617
+        },
+        {
+          "path": "benchmark/test_engine.py",
+          "sha": "791b123997cd8474e91d47379a063f0e262b8cf1",
+          "bytes": 1746
+        },
+        {
+          "path": "benchmark/test_engine_flow.py",
+          "sha": "fb403760b52d7131502937f2cad587c5d57cd7a4",
+          "bytes": 19380
+        },
+        {
+          "path": "benchmark/test_layer_integrity.py",
+          "sha": "f12c01427b72b52ea383c5c8fa05e2cd7beda14d",
+          "bytes": 8909
+        },
+        {
+          "path": "benchmark/test_report.py",
+          "sha": "9be2ee551816c01fa50926c0025db5dd6234583a",
+          "bytes": 14510
+        },
+        {
+          "path": "benchmark/test_stats.py",
+          "sha": "52c7fa48e3ee284a46993b97f039fbc2034d7965",
+          "bytes": 3785
+        },
+        {
+          "path": "benchmark/xray.py",
+          "sha": "912cb0945d2d260a4d3a0144f8e499656a600023",
+          "bytes": 10961
+        },
+        {
+          "path": "pyproject.toml",
+          "sha": "66929ebdb1e992d327f65e94f9c99f93f71d1391",
+          "bytes": 86
+        },
+        {
+          "path": "requirements-test.txt",
+          "sha": "d65e6dc55725c142d4c473d9196ea56e2a69b762",
+          "bytes": 41
+        },
+        {
+          "path": "results/README.md",
+          "sha": "927c72305aed939fa3fe05b493f08ad36a85d093",
+          "bytes": 1805
+        },
+        {
+          "path": "results/peak-rank.json",
+          "sha": "ed00eaa680bf548bc3df0b0939e151e0390fe3f6",
+          "bytes": 339
+        },
+        {
+          "path": "results/progress.json",
+          "sha": "0f23b76776fec75be637e6eb4e4ec82636cc7674",
+          "bytes": 4033
+        },
+        {
+          "path": "results/results.json",
+          "sha": "db00437b86877d4a25521a68c84db69897a1f071",
+          "bytes": 32672
+        },
+        {
+          "path": "submissions/muse_attention_decode.py",
+          "sha": "bbff88bb1dc3c879123ad9c33cc3d0b987f4df8b",
+          "bytes": 158845
+        },
+        {
+          "path": "submissions/muse_bf16_proj.py",
+          "sha": "63ae95f0e58e69e46b10e028a3ffeb7249ba02db",
+          "bytes": 639814
+        },
+        {
+          "path": "submissions/muse_decode_layer.py",
+          "sha": "ab71ca9efa087523e8f99b62b1e0f6e066902077",
+          "bytes": 865544
+        },
+        {
+          "path": "submissions/muse_moe_w4a16.py",
+          "sha": "f7a86aa741d82923a5258d4dccac805c69d2d63d",
+          "bytes": 476680
+        },
+        {
+          "path": "submissions/muse_prefill_layer.py",
+          "sha": "925c2815e806b0708a2b8f0df4d31d5236162a05",
+          "bytes": 371323
+        },
+        {
+          "path": "tests/test_release.py",
+          "sha": "de2446bcecd4e30e25a78fb414ef2d0c87c8dc1f",
+          "bytes": 1982
+        },
+        {
+          "path": "tools/Dockerfile",
+          "sha": "354743a1298207a83124a5acd37c8c72ea595d0b",
+          "bytes": 2022
+        },
+        {
+          "path": "tools/README.md",
+          "sha": "8a05e243f4dca7d2118e986055ce364753b30eb0",
+          "bytes": 1389
+        },
+        {
+          "path": "tools/dock",
+          "sha": "ddfcfcab58530a799337db57079052f732ac9f41",
+          "bytes": 2084
+        },
+        {
+          "path": "tools/okc-docs/muse_attention_decode.json",
+          "sha": "d19d995491285485be892712141b739d4d55d12c",
+          "bytes": 2945
+        },
+        {
+          "path": "tools/okc-docs/muse_bf16_proj.json",
+          "sha": "83a7709e5b1650a702daf0bd8a746de56d1e2515",
+          "bytes": 3685
+        },
+        {
+          "path": "tools/okc-docs/muse_decode_layer.json",
+          "sha": "f7fc762da7fb6c0a17221be44b046696d98cf454",
+          "bytes": 2691
+        },
+        {
+          "path": "tools/okc-docs/muse_moe_w4a16.json",
+          "sha": "b9a93ba4c286fb067f619329bfe11e7b916076fc",
+          "bytes": 873
+        },
+        {
+          "path": "tools/okc-docs/muse_prefill_layer.json",
+          "sha": "cadd4427eecce42af3f619fc2219861110acc073",
+          "bytes": 1927
+        },
+        {
+          "path": "tools/precheck",
+          "sha": "95cc2c8dd702f33fb2693d4fa579291e18aa998f",
+          "bytes": 131467
+        },
+        {
+          "path": "tools/test_precheck.py",
+          "sha": "f1cfaef156cdde3009b9292ea4db95c6e656a7c4",
+          "bytes": 25954
+        },
+        {
+          "path": "tools/verify.py",
+          "sha": "01d25650aaf9a741cc07242af406362c1813ea8b",
+          "bytes": 5824
+        }
+      ],
+      "fetched": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/arihantbansal/open-kernel-challenge/a6966ea2d68b877bbe527180625c40d8889f46a7/README.md",
+          "blob": "e2168e8a707d81ec7a8111ebf969f8247fe25695",
+          "sha256": "5bad0aaf2e59bdc173052da07f9668b822d3bfdb5be0d3af36042e5729d1a942",
+          "bytes": 1485
+        }
+      ]
+    },
+    {
+      "repository": "ruwwww/open-kernel-challenge",
+      "head": "c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d",
+      "url": "https://github.com/ruwwww/open-kernel-challenge",
+      "license": null,
+      "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)",
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": ".gitignore",
+          "sha": "c07450ec7745fbab41b92bafe43a7ed00003975f",
+          "bytes": 73
+        },
+        {
+          "path": "README.md",
+          "sha": "6810d4696a092762f6b65927faab3dc0a99c2f50",
+          "bytes": 7802
+        },
+        {
+          "path": "muse_attention_decode/AGENTS.md",
+          "sha": "022830ad5b238b619bee802f9ddb3c23f005a841",
+          "bytes": 2720
+        },
+        {
+          "path": "muse_attention_decode/TASK.md",
+          "sha": "13089e62828ceea600cf2a30bb8bad6c151d48e4",
+          "bytes": 9638
+        },
+        {
+          "path": "muse_attention_decode/baseline.py",
+          "sha": "2ac5e2e62360a28bcc03170c946b52347b021cfe",
+          "bytes": 6178
+        },
+        {
+          "path": "muse_attention_decode/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_attention_decode/profiles/submission.2827c6e61a784868.json",
+          "sha": "0b7c7f5cad56ae99d6bcd4eec46e2b57e182ce39",
+          "bytes": 74650
+        },
+        {
+          "path": "muse_attention_decode/profiles/submission.2827c6e61a784868.txt",
+          "sha": "ea183d6e70653fe045daf7e8499dcd4b7d0ef77e",
+          "bytes": 6287
+        },
+        {
+          "path": "muse_attention_decode/reference.py",
+          "sha": "490ef92dbfc085784802a65047f12ffbfda2ac32",
+          "bytes": 19275
+        },
+        {
+          "path": "muse_attention_decode/submission.py",
+          "sha": "3ae30d24058745a28f13c50021f7f387fe3da7bc",
+          "bytes": 154604
+        },
+        {
+          "path": "muse_bf16_proj/AGENTS.md",
+          "sha": "f7ac0dfe39ab6684e8243dbada2789230fcaee10",
+          "bytes": 2706
+        },
+        {
+          "path": "muse_bf16_proj/TASK.md",
+          "sha": "da91e807376dbf0b3ffc1f0b3fa7347351817be7",
+          "bytes": 8264
+        },
+        {
+          "path": "muse_bf16_proj/baseline.py",
+          "sha": "a4cde4b06c4c75622bafbd78d19fe4e3406c7a8d",
+          "bytes": 2397
+        },
+        {
+          "path": "muse_bf16_proj/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_bf16_proj/profiles/submission.66361edeab434645.json",
+          "sha": "f45cb028f1dfc6d0b3a0b48b7bb2c6696b07f23e",
+          "bytes": 176266
+        },
+        {
+          "path": "muse_bf16_proj/profiles/submission.66361edeab434645.txt",
+          "sha": "2c978bb6ec16b1429795ac405e40b00fab111a4c",
+          "bytes": 12387
+        },
+        {
+          "path": "muse_bf16_proj/profiles/submission.c512f73af0454fa2.json",
+          "sha": "df2dc80547c9aaacd283c35c5845c13dce1c42f4",
+          "bytes": 176587
+        },
+        {
+          "path": "muse_bf16_proj/profiles/submission.c512f73af0454fa2.txt",
+          "sha": "b1b0bcdbf9080f098ae7ba28341f20c442665f2c",
+          "bytes": 12387
+        },
+        {
+          "path": "muse_bf16_proj/reference.py",
+          "sha": "ab244d54a6b77bd990fe56f8eb047658f815c3ce",
+          "bytes": 5155
+        },
+        {
+          "path": "muse_bf16_proj/submission.py",
+          "sha": "3999820b14433482a18a9c0f3f5672dd47dcee48",
+          "bytes": 633375
+        },
+        {
+          "path": "muse_decode_layer/AGENTS.md",
+          "sha": "4d69f6867322a260a2784096ab38d3219139c5d4",
+          "bytes": 2712
+        },
+        {
+          "path": "muse_decode_layer/TASK.md",
+          "sha": "fcf3c2e9c317578fe1b9edee0489d73e9aa85bfe",
+          "bytes": 9853
+        },
+        {
+          "path": "muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "bytes": 18993
+        },
+        {
+          "path": "muse_decode_layer/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_decode_layer/nvfp4.py",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "bytes": 5929
+        },
+        {
+          "path": "muse_decode_layer/profiles/submission.5e7cbd571cc54e31.json",
+          "sha": "46e3299d5c434c89c4374f6b9dcf41e88351172b",
+          "bytes": 60717
+        },
+        {
+          "path": "muse_decode_layer/profiles/submission.5e7cbd571cc54e31.txt",
+          "sha": "0b71126fd9fbff27538fd54f309bab519084bad9",
+          "bytes": 16813
+        },
+        {
+          "path": "muse_decode_layer/profiles/submission.f60b136cfdc242cb.json",
+          "sha": "b5688fa973bb9fc3b9e8a74d755f9bce0c18ed27",
+          "bytes": 59268
+        },
+        {
+          "path": "muse_decode_layer/profiles/submission.f60b136cfdc242cb.txt",
+          "sha": "3f42710cc51ea11dfedb7566932de64b083290e0",
+          "bytes": 15389
+        },
+        {
+          "path": "muse_decode_layer/reference.py",
+          "sha": "f92aa2db6ba064bc686ed5369f979cfe00d4ff44",
+          "bytes": 35035
+        },
+        {
+          "path": "muse_decode_layer/submission.py",
+          "sha": "a2556dbdddf85ab6b72866bf756a5953d6be6521",
+          "bytes": 568813
+        },
+        {
+          "path": "muse_moe_w4a16/AGENTS.md",
+          "sha": "699b46245ad2f96c8ed4b757ec8ed5380363fcd6",
+          "bytes": 2706
+        },
+        {
+          "path": "muse_moe_w4a16/TASK.md",
+          "sha": "1755b9ecebe4f52825244681682b68822af97b97",
+          "bytes": 6782
+        },
+        {
+          "path": "muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "bytes": 7086
+        },
+        {
+          "path": "muse_moe_w4a16/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_moe_w4a16/nvfp4.py",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "bytes": 5929
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.3ed21907cbff49be.json",
+          "sha": "908d5e6f28cfdf5774e4a6e8f0541761c81d0b3d",
+          "bytes": 51864
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.3ed21907cbff49be.txt",
+          "sha": "62ba50b24c37fa7f9959ace1da821e745d477698",
+          "bytes": 2833
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.43a32a0907484ff0.json",
+          "sha": "891384bc3396c19ea29513f6bbbe9dbe76d71578",
+          "bytes": 53697
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.43a32a0907484ff0.txt",
+          "sha": "1305ad08bd7670752b17c41ee669ff2fac526979",
+          "bytes": 4613
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.c31a014ad5d948da.json",
+          "sha": "637425e02b4aeddb3d62f11f1d61816d4d2f5a30",
+          "bytes": 53342
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.c31a014ad5d948da.txt",
+          "sha": "49542aa2d7b0f94ad7462f9250115f28f8552b5a",
+          "bytes": 4258
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.d56631b167db4a14.json",
+          "sha": "33dd27a83ec15be684bdffaed81e59a638d164e6",
+          "bytes": 53372
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.d56631b167db4a14.txt",
+          "sha": "62632656d4fb1a400b727297cec232328ac29063",
+          "bytes": 4256
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.e3f7712e6e274a00.json",
+          "sha": "8b3d239f05e1effcd7bf9885fabd9743fe490a92",
+          "bytes": 53373
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.e3f7712e6e274a00.txt",
+          "sha": "6dd211003c5cbcb3b39c7378b5546a45d28124df",
+          "bytes": 4257
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.e78fb610673d40e2.json",
+          "sha": "128c93a9331ecaece99534e33f1574f5e422ff86",
+          "bytes": 53606
+        },
+        {
+          "path": "muse_moe_w4a16/profiles/submission.e78fb610673d40e2.txt",
+          "sha": "c34e055f66f9ccaf7af54d6b90269330f6fcea48",
+          "bytes": 4613
+        },
+        {
+          "path": "muse_moe_w4a16/reference.py",
+          "sha": "b937352204a206cc2de669d3aa36a014755afe86",
+          "bytes": 6764
+        },
+        {
+          "path": "muse_moe_w4a16/submission.py",
+          "sha": "95b7860157c2d7289f07955c6683401707d22d57",
+          "bytes": 179162
+        },
+        {
+          "path": "muse_prefill_layer/AGENTS.md",
+          "sha": "6dda036652f97fe1424f21d268687b2617438074",
+          "bytes": 2714
+        },
+        {
+          "path": "muse_prefill_layer/TASK.md",
+          "sha": "a2c3b51a981085c76b3dcf55a01b1de76f6c62d8",
+          "bytes": 8706
+        },
+        {
+          "path": "muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "bytes": 18993
+        },
+        {
+          "path": "muse_prefill_layer/checks.py",
+          "sha": "bc51923c9041b04b0ce9e57348f10cfae84b73d9",
+          "bytes": 2484
+        },
+        {
+          "path": "muse_prefill_layer/nvfp4.py",
+          "sha": "aa688f50e4bdbf500c5a09e9f546ec37c68e3dad",
+          "bytes": 5929
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.0ceef6beb3f24141.json",
+          "sha": "d0b29efb646d3a62999420753a7452d1c95bef32",
+          "bytes": 31914
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.0ceef6beb3f24141.txt",
+          "sha": "910baf21a64f1402b595cba40a394641e0564834",
+          "bytes": 12668
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.466e2943491845bf.json",
+          "sha": "68806c67df7febc8702077025fbdfb030604859c",
+          "bytes": 31967
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.466e2943491845bf.txt",
+          "sha": "ea5a61b90ecb8bea0fc4f7faedec58c2ec5dd393",
+          "bytes": 12669
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.4bfc19c5ce554ac4.json",
+          "sha": "4af7a92fd66ce66031d2cc8bf2f1c9db7d9bb2d9",
+          "bytes": 32135
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.4bfc19c5ce554ac4.txt",
+          "sha": "b510155db1d13e9ed49424bf06b52bd4726b8884",
+          "bytes": 12848
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.72b01a0fde704971.json",
+          "sha": "b8c7c2725991838b920ad49386adf5832fa48423",
+          "bytes": 32292
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.72b01a0fde704971.txt",
+          "sha": "70f016f00dffb1e7e00f5c42b485b9d18fdc52a4",
+          "bytes": 13021
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.81e220459e5344b7.json",
+          "sha": "9e8cb528ee1bf218227f85208ae4f52fbdf260b7",
+          "bytes": 32114
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.81e220459e5344b7.txt",
+          "sha": "950170b480d847e6f9051e9034ea45e425eb9c89",
+          "bytes": 12848
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.9398f4d27aec44a3.json",
+          "sha": "f08143561df0fb0cfb47a9d5dc1224bd1923d878",
+          "bytes": 32274
+        },
+        {
+          "path": "muse_prefill_layer/profiles/submission.9398f4d27aec44a3.txt",
+          "sha": "3752311faab5df341c86c00162fe56f3a89cbd00",
+          "bytes": 13019
+        },
+        {
+          "path": "muse_prefill_layer/reference.py",
+          "sha": "f92aa2db6ba064bc686ed5369f979cfe00d4ff44",
+          "bytes": 35035
+        },
+        {
+          "path": "muse_prefill_layer/submission.py",
+          "sha": "21771c340f77f15dc9314932881ff89a2fb833ab",
+          "bytes": 292815
+        },
+        {
+          "path": "serving/RULES.md",
+          "sha": "a755379762986cd504ef0bcfacacf30da101757b",
+          "bytes": 3583
+        },
+        {
+          "path": "serving/patch.diff",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "bytes": 0
+        }
+      ],
+      "fetched": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/ruwwww/open-kernel-challenge/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/README.md",
+          "blob": "6810d4696a092762f6b65927faab3dc0a99c2f50",
+          "sha256": "1ac8bee95b7ffd8ae0a224c95ccb51a66a3310212d400556b99a30be28639d94",
+          "bytes": 7802
+        },
+        {
+          "path": "serving/RULES.md",
+          "url": "https://raw.githubusercontent.com/ruwwww/open-kernel-challenge/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/serving/RULES.md",
+          "blob": "a755379762986cd504ef0bcfacacf30da101757b",
+          "sha256": "3df0c5358d0d26af4709bff8911570c3a620fd3a5be2ee0dc1c7adecc2a04f6c",
+          "bytes": 3583
+        },
+        {
+          "path": "serving/patch.diff",
+          "url": "https://raw.githubusercontent.com/ruwwww/open-kernel-challenge/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/serving/patch.diff",
+          "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "repository": "alygg77/okc-muse-spark-kernels",
+      "head": "6cae49a639ee6d14b929a5fd4a63c627f96d7dc0",
+      "url": "https://github.com/alygg77/okc-muse-spark-kernels",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "description": "Open-source H200 CUDA kernels for the Muse Spark Open Kernel Challenge (OKC): decode layer 2.21x, NVFP4 MoE 2.40x, BF16 proj 1.55x, prefill 1.82x, attention 2.65x vs SGLang; judge results, measured H200 facts, negative results",
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358
+        },
+        {
+          "path": "NOTICE",
+          "sha": "8d1069372b982b1f4fc7bcf263635ba56594a73c",
+          "bytes": 1547
+        },
+        {
+          "path": "README.md",
+          "sha": "c2f6b29065b0f16c20bab470d0bcc49853383fba",
+          "bytes": 6781
+        },
+        {
+          "path": "RESULTS.md",
+          "sha": "5f4b447663c135532a33859086c16b7f04d08921",
+          "bytes": 8844
+        },
+        {
+          "path": "docs/H200_MEASURED_FACTS.md",
+          "sha": "3659ac29fa57158da7440e3a74cf5e939c1582f3",
+          "bytes": 32034
+        },
+        {
+          "path": "docs/NEGATIVE_RESULTS.md",
+          "sha": "41275c011ce424ce5145e6112f51a390451e2785",
+          "bytes": 30726
+        },
+        {
+          "path": "kernels/muse_attention_decode.py",
+          "sha": "2d713a57b764b737cd2b8de6c7c34ed97c65d50f",
+          "bytes": 154807
+        },
+        {
+          "path": "kernels/muse_bf16_proj.py",
+          "sha": "bd40c597dd4840a542868fdcc04aa0df46dc6c68",
+          "bytes": 382614
+        },
+        {
+          "path": "kernels/muse_decode_layer.py",
+          "sha": "02389585ece4c36bf983e2cd616a50c0f3a9364f",
+          "bytes": 839695
+        },
+        {
+          "path": "kernels/muse_moe_w4a16.py",
+          "sha": "4143c3f596f7ab23a154e4b344d077f995f4d61b",
+          "bytes": 326062
+        },
+        {
+          "path": "kernels/muse_prefill_layer.py",
+          "sha": "2d29c2c54a7e2dd1875690ef0a56b21c17e64593",
+          "bytes": 292650
+        },
+        {
+          "path": "licenses/LICENSE_NathenFernandes_muse-bf16-proj.txt",
+          "sha": "7d77c3299a31acaac789ee1d8ad0327d7cda8e9c",
+          "bytes": 1073
+        },
+        {
+          "path": "llms.txt",
+          "sha": "be8f65a6a745138f2ade8baec4f776ff791a34f4",
+          "bytes": 2961
+        },
+        {
+          "path": "results.json",
+          "sha": "bbe2bdfe27d398391dff893fd2a3a57199bf4592",
+          "bytes": 19529
+        },
+        {
+          "path": "timing_kit/README.md",
+          "sha": "673afaabb6638261b8dbe883807d66d3b564613c",
+          "bytes": 2334
+        },
+        {
+          "path": "timing_kit/__init__.py",
+          "sha": "604395b8671a8bee596ec9f836704e2da26a14de",
+          "bytes": 47
+        },
+        {
+          "path": "timing_kit/paired.py",
+          "sha": "2720d7e3331e07dff3de649461f7ccae892db41a",
+          "bytes": 11430
+        },
+        {
+          "path": "timing_kit/pool_runs.py",
+          "sha": "19db4ffa8809fa0f08fc457da71fc4c73e713ca2",
+          "bytes": 5981
+        },
+        {
+          "path": "timing_kit/stalls.py",
+          "sha": "7f12c1804460ef5d38311e933a60b76a468c6ea8",
+          "bytes": 3030
+        }
+      ],
+      "fetched": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/alygg77/okc-muse-spark-kernels/6cae49a639ee6d14b929a5fd4a63c627f96d7dc0/LICENSE",
+          "blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        },
+        {
+          "path": "NOTICE",
+          "url": "https://raw.githubusercontent.com/alygg77/okc-muse-spark-kernels/6cae49a639ee6d14b929a5fd4a63c627f96d7dc0/NOTICE",
+          "blob": "8d1069372b982b1f4fc7bcf263635ba56594a73c",
+          "sha256": "3ff2a7331b3ee752377c9147edb3fd986e78d78a448ad487850e15a38bf833d5",
+          "bytes": 1547
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/alygg77/okc-muse-spark-kernels/6cae49a639ee6d14b929a5fd4a63c627f96d7dc0/README.md",
+          "blob": "c2f6b29065b0f16c20bab470d0bcc49853383fba",
+          "sha256": "b25cf87b18933d4c073e48f0ab6ebeb0e44995b2b6dffffbbf5762eba6ebc59a",
+          "bytes": 6781
+        },
+        {
+          "path": "docs/H200_MEASURED_FACTS.md",
+          "url": "https://raw.githubusercontent.com/alygg77/okc-muse-spark-kernels/6cae49a639ee6d14b929a5fd4a63c627f96d7dc0/docs/H200_MEASURED_FACTS.md",
+          "blob": "3659ac29fa57158da7440e3a74cf5e939c1582f3",
+          "sha256": "b93f838aad5790a69db6b6f7b1e84690e275d9caf9b516b72dccd1fa98193c41",
+          "bytes": 32034
+        },
+        {
+          "path": "docs/NEGATIVE_RESULTS.md",
+          "url": "https://raw.githubusercontent.com/alygg77/okc-muse-spark-kernels/6cae49a639ee6d14b929a5fd4a63c627f96d7dc0/docs/NEGATIVE_RESULTS.md",
+          "blob": "41275c011ce424ce5145e6112f51a390451e2785",
+          "sha256": "2f3c826efe27f11d4f92ab4f4984cf615f90ba7249619c53575d032dc24f8720",
+          "bytes": 30726
+        }
+      ]
+    },
+    {
+      "repository": "erkin98/muse-open-kernel-challenge",
+      "head": "cf977def7ea72d870151b0610474e54d9c589479",
+      "url": "https://github.com/erkin98/muse-open-kernel-challenge",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "description": null,
+      "tree_truncated": false,
+      "paths": [
+        {
+          "path": ".gitignore",
+          "sha": "44f77bd7af68fa130fff0b8fac5867d3ec434d0e",
+          "bytes": 55
+        },
+        {
+          "path": "LICENSE",
+          "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358
+        },
+        {
+          "path": "NOTICE",
+          "sha": "9c9b0db4c5a33a844515cd48110cf3f32b808fc3",
+          "bytes": 913
+        },
+        {
+          "path": "README.md",
+          "sha": "e98b2a27d3312b3882d7959a47b5473d914b3080",
+          "bytes": 3816
+        },
+        {
+          "path": "kernels/muse_attention_decode/submission.py",
+          "sha": "d654414874fe7377b420c6f618280815b4144c2f",
+          "bytes": 163378
+        },
+        {
+          "path": "kernels/muse_bf16_proj/submission.py",
+          "sha": "65b135ce94276185412de0c544b8589cd51f7da7",
+          "bytes": 193426
+        },
+        {
+          "path": "kernels/muse_decode_layer/submission.py",
+          "sha": "1fb056ff3f580ad46b6b4e612e3d9e0b37efee5f",
+          "bytes": 598992
+        },
+        {
+          "path": "kernels/muse_moe_w4a16/submission.py",
+          "sha": "b2909643f5c6aaa1eb5b3d2788aa559b4e25955b",
+          "bytes": 198445
+        },
+        {
+          "path": "kernels/muse_prefill_layer/submission.py",
+          "sha": "614e67c0d5b1ae2ff123a639e8edccb78f15da8d",
+          "bytes": 19027
+        },
+        {
+          "path": "notes/attention.md",
+          "sha": "2ba7b9ac85b02c5677f55ddfad92c0fbb0edb796",
+          "bytes": 4087
+        },
+        {
+          "path": "notes/method.md",
+          "sha": "2b7e4a4d9e282f246bf266b1104e0ea3f5e5e2bd",
+          "bytes": 2538
+        },
+        {
+          "path": "research/README.md",
+          "sha": "8bb59b29eced20a22ee2c50f513ad213454a633d",
+          "bytes": 17429
+        },
+        {
+          "path": "research/attention/cost-model-and-breakdown.md",
+          "sha": "8b0c35a8b70f0651b2ef9e2aa495f687351522b0",
+          "bytes": 8210
+        },
+        {
+          "path": "research/attention/gap-to-the-leaders.md",
+          "sha": "ab7e979c6580647396bc9af3265d2bf4cec3073c",
+          "bytes": 5252
+        },
+        {
+          "path": "research/attention/how-the-top-teams-reach-3x.md",
+          "sha": "e919802dcb3c20efe4a9f29ff3b6f84d46982b57",
+          "bytes": 4160
+        },
+        {
+          "path": "research/attention/ideas-tried-and-results.md",
+          "sha": "1ac00a97ee3cb0ed0943cfa7ae010b2af41ee53a",
+          "bytes": 8724
+        },
+        {
+          "path": "research/attention/judge-runs-and-noise.md",
+          "sha": "477a7685029716920b47c0fe8af14d35ce5e6692",
+          "bytes": 4857
+        },
+        {
+          "path": "research/attention/launch-plan-sweep.md",
+          "sha": "71242039a7434263904ea9b31c035a81d832ca8b",
+          "bytes": 4958
+        },
+        {
+          "path": "research/attention/linear-exp2-and-cold-code-warming.md",
+          "sha": "4bd174b6243ca7b41401833fb5396658ddb0b70b",
+          "bytes": 9826
+        },
+        {
+          "path": "research/attention/literature-and-public-notes.md",
+          "sha": "581d287da292e314c2c9ecc0e879a451cb313c91",
+          "bytes": 6996
+        },
+        {
+          "path": "research/bf16/judge-environment-and-validation.md",
+          "sha": "d8242e100d3698345e1519c582d8581e94502655",
+          "bytes": 13833
+        },
+        {
+          "path": "research/bf16/judge-results.md",
+          "sha": "4f86d2eed0a967aa3e4767276f21721e82569a85",
+          "bytes": 7119
+        },
+        {
+          "path": "research/bf16/large-m-plan-and-results.md",
+          "sha": "b23000822d08546929b349e73b70b379ff4cf451",
+          "bytes": 12601
+        },
+        {
+          "path": "research/bf16/lossless-weight-packing-and-formats.md",
+          "sha": "d61af4ffb7dec0d3de335edc18ad096031a31bf5",
+          "bytes": 7488
+        },
+        {
+          "path": "research/bf16/router-and-small-m-kernels.md",
+          "sha": "aad6846b507c51412cde814ba1f7425db31546ee",
+          "bytes": 19622
+        },
+        {
+          "path": "research/bf16/techniques-considered-and-verdicts.md",
+          "sha": "94866cffb6d5d5df947deb38464c42756ca550df",
+          "bytes": 9933
+        },
+        {
+          "path": "research/bf16/where-the-score-comes-from.md",
+          "sha": "cd1320644511f97117cf25b732e4050f8d307a03",
+          "bytes": 17793
+        },
+        {
+          "path": "research/decode-layer/cgemv-failure-under-pdl.md",
+          "sha": "cf176ceab9632b696e39cc67dfb9bacbeb2f53c2",
+          "bytes": 5548
+        },
+        {
+          "path": "research/decode-layer/fp32-router-input-rule.md",
+          "sha": "01790e0798c9cc127699ee1efac63a60178109ed",
+          "bytes": 10858
+        },
+        {
+          "path": "research/decode-layer/moe-port-and-other-ideas.md",
+          "sha": "6b4e6375fcafde540b8d2571f23fbadaa6234408",
+          "bytes": 10884
+        },
+        {
+          "path": "research/decode-layer/results.md",
+          "sha": "d42ff671632eae82f2926926972f40f983191897",
+          "bytes": 6444
+        },
+        {
+          "path": "research/experiments/attention-extra/untested-ideas-results.md",
+          "sha": "e428c3dfd7c37c9ca994605b6117e4a6945e0878",
+          "bytes": 8555
+        },
+        {
+          "path": "research/experiments/attention/experiment-ledger.md",
+          "sha": "6214a8ea1b01d64534646d630566ec832cc7cd37",
+          "bytes": 9190
+        },
+        {
+          "path": "research/experiments/attention/lab-ab-method-and-results.md",
+          "sha": "4c47490a09f5bfa4a311abf30d7d32125c3166fa",
+          "bytes": 17446
+        },
+        {
+          "path": "research/experiments/attention/latency-chain-study.md",
+          "sha": "c2c748fa6dfe64aa73e2ce9b06fe7778b8455072",
+          "bytes": 21088
+        },
+        {
+          "path": "research/experiments/bf16/split-128-experiment.md",
+          "sha": "7039bdc63293b7af5318039477a21006273c783c",
+          "bytes": 11119
+        },
+        {
+          "path": "research/experiments/decode-layer/pdl-cap-and-other-checks.md",
+          "sha": "de278c56f2027ab01ea631a7efe754c66ec4d94b",
+          "bytes": 10324
+        },
+        {
+          "path": "research/experiments/general/check-launch-lock-wrapper.md",
+          "sha": "395532bfea041f8d798baac2a599980d4f676301",
+          "bytes": 10019
+        },
+        {
+          "path": "research/experiments/general/claims-in-a-public-post.md",
+          "sha": "5dd22e0635a720762b613e5f2c2b20ce6ea11784",
+          "bytes": 15066
+        },
+        {
+          "path": "research/experiments/general/untested-ideas-moe-and-bf16.md",
+          "sha": "c47d3fd47a683b8c878759cf6d13b3ccfa08a275",
+          "bytes": 8202
+        },
+        {
+          "path": "research/experiments/moe/dequant-and-scheduling-variants.md",
+          "sha": "004b41a9595bd06e29aae4c2e2d253217c1384be",
+          "bytes": 18829
+        },
+        {
+          "path": "research/experiments/moe/experiment-ledger.md",
+          "sha": "3520efddac8da8d993b77e24c0408be51f7a4c26",
+          "bytes": 7382
+        },
+        {
+          "path": "research/experiments/moe/fixed-cost-anatomy.md",
+          "sha": "7a905f3d23905348bc8a4c54703061f3c3592142",
+          "bytes": 10228
+        },
+        {
+          "path": "research/headroom-and-top-teams/headroom-model-all-boards.md",
+          "sha": "c9655deb41ccae28e28cf1901cb429d2101710f9",
+          "bytes": 22233
+        },
+        {
+          "path": "research/headroom-and-top-teams/ideas-from-keell0renz-repo.md",
+          "sha": "fcd71f15b0682d789440d320c045e80ab81010ed",
+          "bytes": 27143
+        },
+        {
+          "path": "research/headroom-and-top-teams/research-gaps-and-answers.md",
+          "sha": "47cb6e0050df4de713f2e221dfa79033ba40a916",
+          "bytes": 7930
+        },
+        {
+          "path": "research/headroom-and-top-teams/top-teams-public-record.md",
+          "sha": "b8509b95edf88a153ce061dca3b370169b551606",
+          "bytes": 16418
+        },
+        {
+          "path": "research/literature/attention-papers.md",
+          "sha": "913ab082f8dc572f615555ede16dac72aaaeb243",
+          "bytes": 17467
+        },
+        {
+          "path": "research/literature/cuda-docs-and-replay-hazards.md",
+          "sha": "f82d79cc7f45f6508e06d3716885e02b16a1f03c",
+          "bytes": 15520
+        },
+        {
+          "path": "research/literature/gemm-moe-and-compression-papers.md",
+          "sha": "b5bdff1d588441866221b8d1b2d14d32b8746db8",
+          "bytes": 21572
+        },
+        {
+          "path": "research/literature/ideas-ledger.md",
+          "sha": "e98e89f851bb97ac23487230c4f0613d5f6d6c82",
+          "bytes": 16908
+        },
+        {
+          "path": "research/literature/papers-read-and-what-they-changed.md",
+          "sha": "bbdab3e100e3124de411d61d27fe33666cc460ab",
+          "bytes": 12586
+        },
+        {
+          "path": "research/literature/tuning-and-automation-papers.md",
+          "sha": "3336cc9f215f2663f59e025b48088edb334a2d89",
+          "bytes": 13016
+        },
+        {
+          "path": "research/method/challenge-rules-as-we-read-them.md",
+          "sha": "017489a7c07611d782c3de87be0020d404d95619",
+          "bytes": 11367
+        },
+        {
+          "path": "research/method/how-the-speedups-happened.md",
+          "sha": "0a0c14b01bc67dda4695fb5221e54fe63b9c4e78",
+          "bytes": 16001
+        },
+        {
+          "path": "research/method/lessons-learned.md",
+          "sha": "3189540b228a4c380fe65d2f239ec7ea0da0659d",
+          "bytes": 6798
+        },
+        {
+          "path": "research/method/measuring-on-the-judge.md",
+          "sha": "e70ec52ca15d7147c35050978878ac91b2b72c30",
+          "bytes": 8211
+        },
+        {
+          "path": "research/method/replay-race-hazards.md",
+          "sha": "b37e189079afc2c1e8134ee5f7ac2826c04ffd14",
+          "bytes": 30532
+        },
+        {
+          "path": "research/method/what-matters-for-the-score.md",
+          "sha": "d89132e47356b278c24b40b6d734137d870bebff",
+          "bytes": 9416
+        },
+        {
+          "path": "research/moe/ideas-tried-and-closed.md",
+          "sha": "b4ef44698aecc4a4227e6eafe2ece3330bba808f",
+          "bytes": 9115
+        },
+        {
+          "path": "research/moe/kperm-and-6-bit-scales.md",
+          "sha": "3d5c2dbeb9ed70f5cd5006ff3ce1f6c62af581b4",
+          "bytes": 11727
+        },
+        {
+          "path": "research/moe/results.md",
+          "sha": "936f0a3392f7f3b933d32dac773a0cd4c3d70bc2",
+          "bytes": 7094
+        },
+        {
+          "path": "research/other-teams/alygg77-okc-muse-spark-kernels.md",
+          "sha": "7466f75fc80334265875bfc73aa769e07fcb898a",
+          "bytes": 6213
+        },
+        {
+          "path": "research/other-teams/blog-posts.md",
+          "sha": "42ecdbfbc34eacd8a4128d97ea9dd691c2886c1f",
+          "bytes": 5134
+        },
+        {
+          "path": "research/other-teams/lee101-openkernels.md",
+          "sha": "f75656f61b27fbea45294ce24a12e3262404cee8",
+          "bytes": 15454
+        },
+        {
+          "path": "research/other-teams/scattered-findings.md",
+          "sha": "2aabec43d6e8f2f383ab6b866f372293fc2fd953",
+          "bytes": 3233
+        },
+        {
+          "path": "research/surveys/alygg77-repo-digest.md",
+          "sha": "bfea0f65dc54bca5a5fabc87a9dfbdbdafd10aef",
+          "bytes": 19483
+        },
+        {
+          "path": "research/surveys/community-and-forum-notes.md",
+          "sha": "4b0b013cd7cc0bb10b6c3684c76e1f74d873c357",
+          "bytes": 13863
+        },
+        {
+          "path": "research/surveys/public-repos-survey.md",
+          "sha": "59b60bfd2a9e7bfd8c60225c655c56c987d3f29e",
+          "bytes": 39104
+        },
+        {
+          "path": "research/surveys/social-post-claims.md",
+          "sha": "e999552bbf36e104ed1b36c4f1d14c378a730b7d",
+          "bytes": 16252
+        },
+        {
+          "path": "research/surveys/source-coverage.md",
+          "sha": "04b0e590128b36943cd4b5d43aaa6da9b7ecc8b5",
+          "bytes": 9914
+        },
+        {
+          "path": "research/surveys/top-board-arithmetic.md",
+          "sha": "eddd2595cceba34d8179afb487e6e8a1c0b29fc8",
+          "bytes": 4318
+        },
+        {
+          "path": "results/SHA256SUMS",
+          "sha": "2f7f5a8a4212f4e5bdbec7cc41a390fab899ef49",
+          "bytes": 529
+        },
+        {
+          "path": "results/board-2026-11-05.md",
+          "sha": "579cabb59c0fd591841c0ffe6da9027e1a4e6482",
+          "bytes": 885
+        }
+      ],
+      "fetched": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/erkin98/muse-open-kernel-challenge/cf977def7ea72d870151b0610474e54d9c589479/LICENSE",
+          "blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        },
+        {
+          "path": "NOTICE",
+          "url": "https://raw.githubusercontent.com/erkin98/muse-open-kernel-challenge/cf977def7ea72d870151b0610474e54d9c589479/NOTICE",
+          "blob": "9c9b0db4c5a33a844515cd48110cf3f32b808fc3",
+          "sha256": "38b9380e508e56e7c3b9d22cdcd72c264566272883f9ab686dcfde60c73d7ea3",
+          "bytes": 913
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/erkin98/muse-open-kernel-challenge/cf977def7ea72d870151b0610474e54d9c589479/README.md",
+          "blob": "e98b2a27d3312b3882d7959a47b5473d914b3080",
+          "sha256": "afd405ce435a3c031d32659f5633495d0bcdd1a956d3258bff58861a3d284393",
+          "bytes": 3816
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "captured_utc": "2026-11-09T22:50:26.667341+00:00",
+  "pages": [
+    {
+      "url": "https://openkernelchallenge.dev/updates",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://openkernelchallenge.dev/rules",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

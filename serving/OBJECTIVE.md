@@ -1,0 +1,29 @@
+# Current objective: win the serving challenge
+
+On Nov9 the owner explicitly replaced the kernel-track objective with serving.
+Optimize Muse Spark Open through a compliant, maintainable SGLang patch on the
+official8×H200 workload. Aim for first place and substantiate improvements with
+official serving results. Preserve the released model/drafter, required precision,
+output agreement,220 output tokens/request and interactivity/TTFT requirements.
+
+Research public challenge code, related projects and primary technical work.
+Pin useful sources and licenses, distinguish external results from our results,
+and document attempted mechanisms, failures, scope and next experiments. Develop
+new mechanisms where evidence supports them; do not claim historical novelty
+without a defensible prior-art review. Push work to the existing private GitHub.
+
+Success requires actual full-model validation and the organizer's final winning
+result. A CPU test, an isolated component gain or a proposed architecture does
+not establish that result. The organizer's cached announcement says the serving
+leaderboard will remain private until the track ends; monitor our own official
+results rather than inventing a live serving rank.
+
+The old kernel work remains reference material. Its old per-track sequence and
+old AGENTS.md instructions were revoked by the owner. The earlier serving plan
+used an obsolete SGLang commit and patch limit; use CURRENT_STATUS.md instead.
+
+The goal-management API refused to replace the unfinished kernel goal, returning
+`cannot create a new goal because this thread has an unfinished goal; complete the existing goal first`.
+The old objective was not achieved and must not be falsely marked complete.
+This file records the user's replacement objective; the tracker limitation is
+not a blocker to carrying out serving work.

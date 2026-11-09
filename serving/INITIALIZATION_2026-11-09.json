@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-11-09T22:53:34.878474+00:00",
+  "initializer": "okc serve init /tmp/muse-serving-current-20261109",
+  "observed_notice": "The kernel track has closed. The serving track opens Nov 12 at 9 am PT.",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "rules_sha256": "54174e0aebf4fddd192b2e895972a7f03721ed4209f5994ee3d98c61302cffbe",
+  "patch_bytes_limit_conservative": 400000,
+  "added_line_limit": 400,
+  "service_checks_per_day": 3,
+  "service_scored_per_day": 1,
+  "official_check_posts": 0,
+  "official_submit_posts": 0,
+  "existing_serving_job": null,
+  "serving_board_snapshot": {
+    "rows": [],
+    "stock": {}
+  },
+  "priority_snapshot": {
+    "priority": null,
+    "serving_priority": null
+  },
+  "limits": "Empty public serving board is not proof no other team is working. Official cached Nov3 web notice said Nov10; live CLI initialization says Nov12. Direct rules/update HTTP reads returned403. Recheck before submitting.",
+  "user_requested_goal": "Win the serving challenge with compliant measured end-to-end optimizations, research public work and new mechanisms, and document/push all experiments.",
+  "goal_tracker_change_error": "cannot create a new goal because this thread has an unfinished goal; complete the existing goal first"
+}

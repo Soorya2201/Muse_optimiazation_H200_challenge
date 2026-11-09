@@ -1,4 +1,9 @@
-# Serving track plan (opens Nov 5 2026, noon PT)
+# Historical serving plan (Oct29)
+
+Superseded on Nov9 by [CURRENT_STATUS.md](CURRENT_STATUS.md) and
+[OBJECTIVE.md](OBJECTIVE.md). Fresh official base is297e54fd, patch cap400KB,
+and live initialization announces Nov12opening. The a55ab7d5/720KB notes below
+are historical context, not current submission instructions.
 
 All $100K of prize money is in this track. The kernel boards only decide who gets priority on
 the node queue (top 50 overall). This file is the starting point. It was written on Oct 29 from

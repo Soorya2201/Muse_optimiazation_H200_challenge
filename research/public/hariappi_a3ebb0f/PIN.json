@@ -1,0 +1,33 @@
+{
+  "repository": "hariappi/okc-muse-spark-kernels",
+  "commit": "a3ebb0f2f027f07f38b063c6a74ac355a6b38848",
+  "license": "Apache-2.0",
+  "scope": "Static review only; public harness not executed. Reported H100 NVL measurements are not our H200/full-serving evidence.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "1495e1e757ef4d0925a2350563cf5754bb23c51701a8ec4fb3c5cdcbedae6747",
+      "bytes": 11346
+    },
+    {
+      "path": "serving/patch.diff",
+      "sha256": "a21ebdd248a7b0f63562edfb8cd059db2ff2776c4c37f359c189879939f27b41",
+      "bytes": 952
+    },
+    {
+      "path": "serving/moe_harness/ab_blocksize.py",
+      "sha256": "0865a0c6d537736370333957d897a0b2f8d85039b2bc9e78152eb521f2c168ba",
+      "bytes": 2081
+    },
+    {
+      "path": "serving/moe_harness/ab_blocksize.json",
+      "sha256": "6da997428071a41876bf4b4eccd5050a6123ed69b24746ea08bd7bd4697bdaff",
+      "bytes": 2870
+    },
+    {
+      "path": "serving/moe_harness/harness.py",
+      "sha256": "88b29c95d0008be3561007caaa29960be27c6a5558a8edcfbfaa223739d21b46",
+      "bytes": 11568
+    }
+  ]
+}

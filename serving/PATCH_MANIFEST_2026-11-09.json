@@ -1,0 +1,60 @@
+{
+  "scope": "Source patch/package verification only; no GPU, numerical, serving or throughput validation.",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "patches": [
+    {
+      "patch": "serving/candidates/01_ep_route_density.diff",
+      "sha256": "19e7e68418c960399c9721dcf6f6e6927328414a19ae0cb67af15abc7fcd66f7",
+      "bytes": 987,
+      "maximum_added_line_bytes": 79,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha256": "c0a7a3bd71e36af6daabe5c61a53fc4df370ef4ef38e275aa679dd0d9e322741"
+        }
+      ]
+    },
+    {
+      "patch": "serving/candidates/02_draft_single_collective.diff",
+      "sha256": "83edfbaf18762273e9223d66324f81ec2ab2d46e87a8b3b2e9dd9108737966bf",
+      "bytes": 6078,
+      "maximum_added_line_bytes": 86,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/kernels/ops/speculative/draft_head_collective.py",
+          "sha256": "4b493eb3f614f92a801e81637ad61ca1d1a857adb16f85f2f4a6b301b476caef"
+        },
+        {
+          "path": "python/sglang/srt/speculative/dflash_worker_v2.py",
+          "sha256": "ade2d28822d36c5c498d7842955a63985b3a073e6d57f30ec9268f1712fcf547"
+        }
+      ]
+    },
+    {
+      "patch": "serving/candidates/03_combined.diff",
+      "sha256": "d993efc6451b2a7f2b5856745d5fbe331f81bffb5b10204732895476e22fb7ab",
+      "bytes": 7065,
+      "maximum_added_line_bytes": 86,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/kernels/ops/speculative/draft_head_collective.py",
+          "sha256": "4b493eb3f614f92a801e81637ad61ca1d1a857adb16f85f2f4a6b301b476caef"
+        },
+        {
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha256": "c0a7a3bd71e36af6daabe5c61a53fc4df370ef4ef38e275aa679dd0d9e322741"
+        },
+        {
+          "path": "python/sglang/srt/speculative/dflash_worker_v2.py",
+          "sha256": "ade2d28822d36c5c498d7842955a63985b3a073e6d57f30ec9268f1712fcf547"
+        }
+      ]
+    }
+  ]
+}

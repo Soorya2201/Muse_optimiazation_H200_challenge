@@ -1,0 +1,2785 @@
+{
+  "captured_utc": "2026-11-09T22:36:44.931360+00:00",
+  "scope": "Public indexed repository/code search only; results require source/license/provenance review. Not exhaustive.",
+  "queries": [
+    {
+      "kind": "code",
+      "query": "\"okc serve\"",
+      "total": 29,
+      "incomplete": false,
+      "items": [
+        {
+          "name": "llms.txt",
+          "path": "notes/llms.txt",
+          "sha": "f5d32fd298c968976791198f2fed6d194dbea7e9",
+          "html_url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/notes/llms.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "lee101/openkernels"
+        },
+        {
+          "name": "RULES.md",
+          "path": "serving/RULES.md",
+          "sha": "a755379762986cd504ef0bcfacacf30da101757b",
+          "html_url": "https://github.com/ruwwww/open-kernel-challenge/blob/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/serving/RULES.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ruwwww/open-kernel-challenge"
+        },
+        {
+          "name": "FindUsers.py",
+          "path": "FindUsers.py",
+          "sha": "b9ffde9960fa6415046da83db0051c848ad5c96e",
+          "html_url": "https://github.com/wetchler/okcupid/blob/d43ad8db4c9116b610efd864bab2b824b05300a1/FindUsers.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "wetchler/okcupid"
+        },
+        {
+          "name": "FetchProfiles.py",
+          "path": "FetchProfiles.py",
+          "sha": "1f1f9bdfe4cfe60b5ee7dfade93324fc1a5af154",
+          "html_url": "https://github.com/wetchler/okcupid/blob/d43ad8db4c9116b610efd864bab2b824b05300a1/FetchProfiles.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "wetchler/okcupid"
+        },
+        {
+          "name": "llms.txt",
+          "path": "meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/notes/llms.txt",
+          "sha": "f5d32fd298c968976791198f2fed6d194dbea7e9",
+          "html_url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/notes/llms.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "4gatepylon/LearningML"
+        },
+        {
+          "name": "challenge-rules-as-we-read-them.md",
+          "path": "research/method/challenge-rules-as-we-read-them.md",
+          "sha": "017489a7c07611d782c3de87be0020d404d95619",
+          "html_url": "https://github.com/erkin98/muse-open-kernel-challenge/blob/cf977def7ea72d870151b0610474e54d9c589479/research/method/challenge-rules-as-we-read-them.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "erkin98/muse-open-kernel-challenge"
+        },
+        {
+          "name": "privacy-fence-in-oklahoma-city.html",
+          "path": "privacy-fence-in-oklahoma-city.html",
+          "sha": "c20f4d53855a5992d0b0083aaafebaa0b008942e",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/privacy-fence-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "fence-in-oklahoma-city.html",
+          "path": "fence-in-oklahoma-city.html",
+          "sha": "a969bfc25e009135d9e6a39bfd90bb6dd64936c9",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/fence-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "farm-fence-in-oklahoma-city.html",
+          "path": "farm-fence-in-oklahoma-city.html",
+          "sha": "3473761682ae5b9a81464708355de6ac81244264",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/farm-fence-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "wood-fence-in-oklahoma-city.html",
+          "path": "wood-fence-in-oklahoma-city.html",
+          "sha": "eeae4fd392c42f7e2f60667c5de6539d143827d7",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/wood-fence-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "cedar-fence-in-oklahoma-city.html",
+          "path": "cedar-fence-in-oklahoma-city.html",
+          "sha": "5a975f77eddb56af2ec3d2b5892a6840f68df8b6",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/cedar-fence-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "okc-auto-visiting.py",
+          "path": "okc-auto-visiting.py",
+          "sha": "b6bd6f590e0d82961524e8a959628533515d8045",
+          "html_url": "https://github.com/sjqtentacles/okc-auto-visitor/blob/c0cc6811a11d7eccbbeced246e1c478ccfabf848/okc-auto-visiting.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "sjqtentacles/okc-auto-visitor"
+        },
+        {
+          "name": "fence-companies-in-oklahoma-city.html",
+          "path": "fence-companies-in-oklahoma-city.html",
+          "sha": "810f50ead0d867d650df4def9ed7e41431cee96b",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/fence-companies-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "ornamental-iron-in-oklahoma-city.html",
+          "path": "ornamental-iron-in-oklahoma-city.html",
+          "sha": "3e0ea3687e0a515c618f1c2e9b7ccfc3ec4038ce",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/ornamental-iron-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "chain-link-fence-in-oklahoma-city.html",
+          "path": "chain-link-fence-in-oklahoma-city.html",
+          "sha": "7f68829ac2ca8c58ee75bdf2ebcfc9736d68c5fb",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/chain-link-fence-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "commercial-fence-in-oklahoma-city.html",
+          "path": "commercial-fence-in-oklahoma-city.html",
+          "sha": "e52f5de52b1cbadba3d2a7a6269f667e64cf7d23",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/commercial-fence-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "residential-fence-contracting-in-oklahoma-city.html",
+          "path": "residential-fence-contracting-in-oklahoma-city.html",
+          "sha": "9d0eb3d5df113d34b2f48820c7ee041ae4153dd1",
+          "html_url": "https://github.com/seomagicianph06-bot/metro-fence-installa-77916/blob/f51a232b421e7c2b1a3a046c9d91802a6dbfbc7a/residential-fence-contracting-in-oklahoma-city.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "seomagicianph06-bot/metro-fence-installa-77916"
+        },
+        {
+          "name": "open-kernel-challenge-h200.md",
+          "path": "hermes-skills/cuda-programming-and-benchmarking/references/open-kernel-challenge-h200.md",
+          "sha": "e96d4e7e4d289e3fdce4b7d9a59e444df6d54510",
+          "html_url": "https://github.com/ruwwww/agent-skills/blob/469fbfa8ac2b6de75c66892f54b47ba94ff15a87/hermes-skills/cuda-programming-and-benchmarking/references/open-kernel-challenge-h200.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ruwwww/agent-skills"
+        },
+        {
+          "name": "competitions_and_benchmarks.md",
+          "path": "research_notes/Inference techniques by source/competitions_and_benchmarks.md",
+          "sha": "ff8bc37c8f6a3c1c7d65d05bd0da1d270724acd2",
+          "html_url": "https://github.com/Okohedeki/autoinference/blob/58bf0375846e610d364b17dc58b7263f2e565dc7/research_notes/Inference techniques by source/competitions_and_benchmarks.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "Okohedeki/autoinference"
+        },
+        {
+          "name": "setting-up-the-lab-okc-sglang-image-and-nsight.md",
+          "path": "content/blog/machine-learning/gpu-kernel-engineering/setting-up-the-lab-okc-sglang-image-and-nsight.md",
+          "sha": "8e4bb15f4f36cf7dc79db92830d8c6b979656573",
+          "html_url": "https://github.com/hieptran1812/my-website/blob/e437a3aa16bf8b7297c61e5ba75837c683f551e3/content/blog/machine-learning/gpu-kernel-engineering/setting-up-the-lab-okc-sglang-image-and-nsight.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "hieptran1812/my-website"
+        },
+        {
+          "name": "__main__.py",
+          "path": "okcscrape3/__main__.py",
+          "sha": "67247b818b3eae8cae62b79ddf050e5982125b6a",
+          "html_url": "https://github.com/stevendevan/okcscrape3/blob/c0c3632f182eacb7f3be9b39719169bc2f87b2c1/okcscrape3/__main__.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "stevendevan/okcscrape3"
+        },
+        {
+          "name": "DEPLOYMENT.md",
+          "path": "docs/DEPLOYMENT.md",
+          "sha": "fcf1475a5b98f39d659c4fceeb87c16c37249e02",
+          "html_url": "https://github.com/httrp/one-key-communicator/blob/947bb52dd3ea60c813ffaeb224c3e76c2da6eb80/docs/DEPLOYMENT.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "httrp/one-key-communicator"
+        },
+        {
+          "name": "index.md",
+          "path": "content/problog/2012/10/okcupid-closer/index.md",
+          "sha": "db336d16a887641c678fe888cc61071223abf9d5",
+          "html_url": "https://github.com/focusaurus/peterlyons.com-zola/blob/a7befa138a68b25dd1b10e264dc369b4819783aa/content/problog/2012/10/okcupid-closer/index.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "focusaurus/peterlyons.com-zola"
+        },
+        {
+          "name": "FindUsers.py",
+          "path": "crawler/FindUsers.py",
+          "sha": "f70e49adc4b5dc08b2cee1db95d9cbede51edd24",
+          "html_url": "https://github.com/GraphMatch/FormosaMatch/blob/83ec23870518334d2893bd04657fada37b8b05af/crawler/FindUsers.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "GraphMatch/FormosaMatch"
+        },
+        {
+          "name": "FetchProfiles2.py",
+          "path": "crawler/FetchProfiles2.py",
+          "sha": "e4538b3b5870e9fcfd2220b90c40f80eabe17327",
+          "html_url": "https://github.com/GraphMatch/FormosaMatch/blob/83ec23870518334d2893bd04657fada37b8b05af/crawler/FetchProfiles2.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "GraphMatch/FormosaMatch"
+        },
+        {
+          "name": "storage.ts",
+          "path": "apps/datasist/server/storage.ts",
+          "sha": "a41d75e5facdafbd5cb8dac0f9859c994c3d14fe",
+          "html_url": "https://github.com/aliasist/aliasist-web/blob/091a272a0ea45a47fff1ac3961e1bc0a49a280d3/apps/datasist/server/storage.ts",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "aliasist/aliasist-web"
+        },
+        {
+          "name": "oklahoma.json",
+          "path": "server/data/pantries/oklahoma.json",
+          "sha": "f22d273f416d48b8e8f1e7f3d5440b684587359a",
+          "html_url": "https://github.com/bakpakin/FooFii/blob/72f89f8ad464b2e73a1ca56a229fa76b0d3333ae/server/data/pantries/oklahoma.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "bakpakin/FooFii"
+        },
+        {
+          "name": "ok_food_pantries.json",
+          "path": "Datasets/ok_food_pantries.json",
+          "sha": "37bc6f0fa9ec5315c688ffdf9a0784526073cb9e",
+          "html_url": "https://github.com/OpLumina/FoodBankBrowser/blob/2d997b584e52ff518c3c40ae8f0714218bc1879b/Datasets/ok_food_pantries.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "OpLumina/FoodBankBrowser"
+        },
+        {
+          "name": "ok_food_pantries_20251102_163341.json",
+          "path": "kadence-child/assets/datasets/ok_food_pantries_20251102_163341.json",
+          "sha": "37bc6f0fa9ec5315c688ffdf9a0784526073cb9e",
+          "html_url": "https://github.com/carlygaejepsen/survivorsunrestrained/blob/0b8dba3bef72347755be13f1aea77e1effa1d77e/kadence-child/assets/datasets/ok_food_pantries_20251102_163341.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "carlygaejepsen/survivorsunrestrained"
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"297e54fd\"",
+      "total": 86,
+      "incomplete": false,
+      "items": [
+        {
+          "name": "UPSTREAM.md",
+          "path": "docs/UPSTREAM.md",
+          "sha": "b9855e5512a3e2c13439d4bd1d65a055bb3352b2",
+          "html_url": "https://github.com/noonghunna/club-3090/blob/af5d468ecee074ac169cacfeb040d6872f258f87/docs/UPSTREAM.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "noonghunna/club-3090"
+        },
+        {
+          "name": "adapters.md",
+          "path": "docs/adapters.md",
+          "sha": "2d40b771c415d4f109d660d422b9438e36861a6e",
+          "html_url": "https://github.com/OrbitInfra/OrbitKV/blob/69992358ba6729c4b3646fe4aab0811d9cf571c3/docs/adapters.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "OrbitInfra/OrbitKV"
+        },
+        {
+          "name": "README.md",
+          "path": "lib/sidecar/sglang/proto/README.md",
+          "sha": "c6f7e1fe788bfaca990bbc919dfe1c5da75e955c",
+          "html_url": "https://github.com/ai-dynamo/dynamo/blob/6cca9110b9dec8e0e46fb57cbd97dc9378b320db/lib/sidecar/sglang/proto/README.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ai-dynamo/dynamo"
+        },
+        {
+          "name": "summary.txt",
+          "path": "bench/pgx/receipts/pgx-shake-1/summary.txt",
+          "sha": "b95399dc2122e9b31abdcd7ed8eec54e6fadb4a6",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-1/summary.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "versions.txt",
+          "path": "bench/pgx/receipts/pgx-shake-1/versions.txt",
+          "sha": "e7d5b2fd99959acbd41ce90cf443265ec068b478",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-1/versions.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "versions.txt",
+          "path": "bench/pgx/receipts/pgx-shake-r1/versions.txt",
+          "sha": "5238e9f21463db62a629ab8e1495cecd475d5f51",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-r1/versions.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "summary.txt",
+          "path": "bench/pgx/receipts/pgx-4090-1-2-1/summary.txt",
+          "sha": "d527befc7a5f5e916158383c9b55ee0830ad98a5",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-4090-1-2-1/summary.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "versions.txt",
+          "path": "bench/pgx/receipts/pgx-4090-1-2-1/versions.txt",
+          "sha": "6defffb6291fbbbe72d42bea025952316e280b6a",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-4090-1-2-1/versions.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "summary.txt",
+          "path": "bench/pgx/receipts/pgx-shake-r1/summary.txt",
+          "sha": "32c710fc9c3c3503c1ad067b76baf6ae3bbbf9cc",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-r1/summary.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "outer.log",
+          "path": "bench/pgx/receipts/pgx-shake-1/outer.log",
+          "sha": "82cead614bc34d833b120387ee10b7096d111eba",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-1/outer.log",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "outer.log",
+          "path": "bench/pgx/receipts/pgx-4090-1-2-1/outer.log",
+          "sha": "464cd285cfb7d03b35e35121ef3af2bf1e095378",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-4090-1-2-1/outer.log",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "sglang_install.log",
+          "path": "bench/pgx/receipts/pgx-shake-1/logs/sglang_install.log",
+          "sha": "0777ede2c9ab7595b34b83bc632c6d41c8980f4c",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-1/logs/sglang_install.log",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "sglang_install.log",
+          "path": "bench/pgx/receipts/pgx-shake-r1/logs/sglang_install.log",
+          "sha": "cfb5e61ff52871ba408fcac6da2ab7963a3e0451",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-r1/logs/sglang_install.log",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "agent-rebase-0523-cpu-half.md",
+          "path": "benchmarks/radiance-parity/notes/agent-rebase-0523-cpu-half.md",
+          "sha": "84231665041cd96243cae8303ecd861648d9608e",
+          "html_url": "https://github.com/mattbucci/2x-R9700-RDNA4-GFX1201-sglang-inference/blob/746ced86e58f4c038c89eb8c548c365cc0a7fcb6/benchmarks/radiance-parity/notes/agent-rebase-0523-cpu-half.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "mattbucci/2x-R9700-RDNA4-GFX1201-sglang-inference"
+        },
+        {
+          "name": "sglang_install.log",
+          "path": "bench/pgx/receipts/pgx-4090-1-2-1/logs/sglang_install.log",
+          "sha": "539ba7c4308519171a56bf50f563c07a041c4bf6",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-4090-1-2-1/logs/sglang_install.log",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "PREREG-pgx.md",
+          "path": "bench/pgx/PREREG-pgx.md",
+          "sha": "4f1872b5480b74c04186a9629afc0b361a7710f7",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/PREREG-pgx.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "pgx_residency.py",
+          "path": "bench/pgx/pgx_residency.py",
+          "sha": "4a3d175625f2daded149c49e61b9bdef645a9ed3",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/pgx_residency.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "outer.log",
+          "path": "bench/pgx/receipts/pgx-shake-r1/outer.log",
+          "sha": "44438981af9f58d4dcb150cc4b7b21f57e891e1f",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-r1/outer.log",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "compatibility.rst",
+          "path": "docs/compatibility.rst",
+          "sha": "6d21950773a0627f7328013e6cf8f6c6c9c07dca",
+          "html_url": "https://github.com/AMD-AGI/Hyperloom/blob/19853208b44b53254e82a56a024cbbf6c5021350/docs/compatibility.rst",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "AMD-AGI/Hyperloom"
+        },
+        {
+          "name": "sglang-stable.yml",
+          "path": "scripts/lib/profiles/engines/sglang-stable.yml",
+          "sha": "e0d80db9b1204e8ed0431b12663376903cfb5097",
+          "html_url": "https://github.com/noonghunna/club-3090/blob/af5d468ecee074ac169cacfeb040d6872f258f87/scripts/lib/profiles/engines/sglang-stable.yml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "noonghunna/club-3090"
+        },
+        {
+          "name": "PR-43913.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-43913.md",
+          "sha": "b476738aa06f1d91c9b4748f7c122354f8c0f72f",
+          "html_url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-43913.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "yuguo-Jack/HCU-TrainFlow"
+        },
+        {
+          "name": "serving-client.yaml",
+          "path": "inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h100-bf16/serving-client.yaml",
+          "sha": "2dd20f1f7a8ce6cafbd7eb4f1a1a74428a7bdd30",
+          "html_url": "https://github.com/SemiAnalysisAI/InferenceX/blob/fb5950091af88cae29c1553a6a78c5c3777afab1/inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h100-bf16/serving-client.yaml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "SemiAnalysisAI/InferenceX"
+        },
+        {
+          "name": "serving-client.yaml",
+          "path": "inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h200-bf16/serving-client.yaml",
+          "sha": "c5ebf27717bdbb86ba9e8991ba18ae58469ef8ac",
+          "html_url": "https://github.com/SemiAnalysisAI/InferenceX/blob/fb5950091af88cae29c1553a6a78c5c3777afab1/inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h200-bf16/serving-client.yaml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "SemiAnalysisAI/InferenceX"
+        },
+        {
+          "name": "serving-client.yaml",
+          "path": "inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/b200-bf16/serving-client.yaml",
+          "sha": "83c575a2bbc664053aaac81789704b86714df6a4",
+          "html_url": "https://github.com/SemiAnalysisAI/InferenceX/blob/fb5950091af88cae29c1553a6a78c5c3777afab1/inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/b200-bf16/serving-client.yaml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "SemiAnalysisAI/InferenceX"
+        },
+        {
+          "name": "PR-46619.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-46619.md",
+          "sha": "e4420c6a29a08ac435e8940337873903cc9a0a38",
+          "html_url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-46619.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "yuguo-Jack/HCU-TrainFlow"
+        },
+        {
+          "name": "serving-client.yaml",
+          "path": "inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/mi355x-bf16/serving-client.yaml",
+          "sha": "1c38403fca6ef479f49a40041670d86ffe27be08",
+          "html_url": "https://github.com/SemiAnalysisAI/InferenceX/blob/fb5950091af88cae29c1553a6a78c5c3777afab1/inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/mi355x-bf16/serving-client.yaml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "SemiAnalysisAI/InferenceX"
+        },
+        {
+          "name": "serving-client-tp2.yaml",
+          "path": "inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h100-bf16/serving-client-tp2.yaml",
+          "sha": "c37238dee1f4c749a31d5866f6396d20cbeac208",
+          "html_url": "https://github.com/SemiAnalysisAI/InferenceX/blob/fb5950091af88cae29c1553a6a78c5c3777afab1/inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h100-bf16/serving-client-tp2.yaml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "SemiAnalysisAI/InferenceX"
+        },
+        {
+          "name": "serving-client-tp2-ulysses4.yaml",
+          "path": "inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h100-bf16/serving-client-tp2-ulysses4.yaml",
+          "sha": "c09ae2077a44f9effafe04606c2cf0eeb8db1749",
+          "html_url": "https://github.com/SemiAnalysisAI/InferenceX/blob/fb5950091af88cae29c1553a6a78c5c3777afab1/inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/sglang/h100-bf16/serving-client-tp2-ulysses4.yaml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "SemiAnalysisAI/InferenceX"
+        },
+        {
+          "name": "serving.md",
+          "path": "okf/systems/serving.md",
+          "sha": "8e0f80c241531f61ff1a4e570cb21055265936c7",
+          "html_url": "https://github.com/electrocucaracha/inference-learn/blob/fc4ef4d125a83110303ed80834738390756dd8f3/okf/systems/serving.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "electrocucaracha/inference-learn"
+        },
+        {
+          "name": "install_baremetal.sh",
+          "path": "src/hyperloom/inference_optimizer/assets/install_baremetal.sh",
+          "sha": "b26eac692e2e8dc37e16d843f5c388e5995107e2",
+          "html_url": "https://github.com/AMD-AGI/Hyperloom/blob/19853208b44b53254e82a56a024cbbf6c5021350/src/hyperloom/inference_optimizer/assets/install_baremetal.sh",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "AMD-AGI/Hyperloom"
+        },
+        {
+          "name": "multimodal.md",
+          "path": "okf/foundations/multimodal.md",
+          "sha": "b73acf12b7086748509e13aafedb24b03f6c2ac8",
+          "html_url": "https://github.com/electrocucaracha/inference-learn/blob/fc4ef4d125a83110303ed80834738390756dd8f3/okf/foundations/multimodal.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "electrocucaracha/inference-learn"
+        },
+        {
+          "name": "Dockerfile",
+          "path": "Dockerfile",
+          "sha": "2ee3e4fe561e21e17575fd1de443c8ca34cd4355",
+          "html_url": "https://github.com/mattbucci/2x-3090-GA102-300-A1-sglang-inference/blob/c9b898716a944475ee75601234a832c8a9505109/Dockerfile",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "mattbucci/2x-3090-GA102-300-A1-sglang-inference"
+        },
+        {
+          "name": "sources.md",
+          "path": "docs/sources.md",
+          "sha": "56bcffe66648686d3383a1c4009a4a412f08988f",
+          "html_url": "https://github.com/electrocucaracha/inference-learn/blob/fc4ef4d125a83110303ed80834738390756dd8f3/docs/sources.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "electrocucaracha/inference-learn"
+        },
+        {
+          "name": "README.md",
+          "path": "patches/README.md",
+          "sha": "3da87d60e990d6a403266223b6fda13e5aca96b1",
+          "html_url": "https://github.com/mattbucci/2x-3090-GA102-300-A1-sglang-inference/blob/c9b898716a944475ee75601234a832c8a9505109/patches/README.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "mattbucci/2x-3090-GA102-300-A1-sglang-inference"
+        },
+        {
+          "name": "v0.5.23-rebase-status.md",
+          "path": "patches/v0.5.23-rebase-status.md",
+          "sha": "b9db4b901e46511485607f40b7d4246ffac1b7ef",
+          "html_url": "https://github.com/mattbucci/2x-3090-GA102-300-A1-sglang-inference/blob/c9b898716a944475ee75601234a832c8a9505109/patches/v0.5.23-rebase-status.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "mattbucci/2x-3090-GA102-300-A1-sglang-inference"
+        },
+        {
+          "name": "pgx_run.sh",
+          "path": "bench/pgx/pgx_run.sh",
+          "sha": "f2694ec5a5afb3e4bb80491c42abdccf1fc1a88a",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/pgx_run.sh",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "PR-47375.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-47375.md",
+          "sha": "237b2c4c892e130de327a2eab1f856b1c230fd8a",
+          "html_url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-47375.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "yuguo-Jack/HCU-TrainFlow"
+        },
+        {
+          "name": "SGLANG_EXPERIMENTAL.md",
+          "path": "chalkcompute/weights/serving/SGLANG_EXPERIMENTAL.md",
+          "sha": "517d2a982e2216f1f26573c77c9fbb1865fcb4a4",
+          "html_url": "https://github.com/chalk-ai/chalk-sandbox-sdk/blob/5701d2a51950dfbd68932f6bed83c22262129ab1/chalkcompute/weights/serving/SGLANG_EXPERIMENTAL.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "chalk-ai/chalk-sandbox-sdk"
+        },
+        {
+          "name": "SR01ScoutPins.md",
+          "path": ".ufo/waves/round-80/w1/SR01ScoutPins.md",
+          "sha": "e2e5adfa56913cef98ca242b9d685ed5a296af64",
+          "html_url": "https://github.com/VeigaPunk/kama-shokunin/blob/e53eeac42e735418daee9851997f5d4ded774c9f/.ufo/waves/round-80/w1/SR01ScoutPins.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "VeigaPunk/kama-shokunin"
+        },
+        {
+          "name": "versions.json",
+          "path": "baselines/versions.json",
+          "sha": "79e34f1477cb51577ccc98274c768ffec95838c6",
+          "html_url": "https://github.com/qiansen0809-droid/ai4ai-deployment-bench/blob/3a478f7b4d257fc6d4e2afe8a3979dd7ef76b3a3/baselines/versions.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "qiansen0809-droid/ai4ai-deployment-bench"
+        },
+        {
+          "name": "ChangeLog.md",
+          "path": "ChangeLog.md",
+          "sha": "d99b74341c55b79039a19cd577aec7d627c88734",
+          "html_url": "https://github.com/Evarisk/digiquali/blob/489939e4fcfbd118900fbde2e1d30faa944d79b0/ChangeLog.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "Evarisk/digiquali"
+        },
+        {
+          "name": "sglang_tripwire.json",
+          "path": "bench/pgx/receipts/pgx-shake-1/sglang_tripwire.json",
+          "sha": "0fd0bdbdecf8592488f3b281cf0452b5a4aefa69",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-1/sglang_tripwire.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "sglang_tripwire.json",
+          "path": "bench/pgx/receipts/pgx-shake-r1/sglang_tripwire.json",
+          "sha": "0fd0bdbdecf8592488f3b281cf0452b5a4aefa69",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-shake-r1/sglang_tripwire.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "Social.md",
+          "path": "iOS/26_5_23F77_vs_27_0_24A5355q/MACHOS/filesystem/System/Library/Assistant/Plugins/Social.assistantBundle/Social.md",
+          "sha": "f49fc4d5d8e7e0bab0eb9459d926d0405429394a",
+          "html_url": "https://github.com/blacktop/ipsw-diffs/blob/57effe19324543d25890f86669214d8fdb285d3f/iOS/26_5_23F77_vs_27_0_24A5355q/MACHOS/filesystem/System/Library/Assistant/Plugins/Social.assistantBundle/Social.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "blacktop/ipsw-diffs"
+        },
+        {
+          "name": "sglang_tripwire.json",
+          "path": "bench/pgx/receipts/pgx-4090-1-2-1/sglang_tripwire.json",
+          "sha": "0fd0bdbdecf8592488f3b281cf0452b5a4aefa69",
+          "html_url": "https://github.com/pjordanandrsn/experts4bit-qlora/blob/b146e2e95d56f7a7d280299d0aa6a151501e20ba/bench/pgx/receipts/pgx-4090-1-2-1/sglang_tripwire.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "pjordanandrsn/experts4bit-qlora"
+        },
+        {
+          "name": "notes.md",
+          "path": "comm-parallel/sglang-tp8-ep1-4-8-mixtral/notes.md",
+          "sha": "8dd341863f4d63fa113f2080aaaabd63bf28aee9",
+          "html_url": "https://github.com/qqtang-code/show-me/blob/ed8601446cfe35df656515ec395ed70d697ce8f0/comm-parallel/sglang-tp8-ep1-4-8-mixtral/notes.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "qqtang-code/show-me"
+        },
+        {
+          "name": "all-capture-inventory.yaml",
+          "path": "conformance/all-capture-inventory.yaml",
+          "sha": "c9d7b8123fe9a6397e3974aec4d4c9626ca7ae0d",
+          "html_url": "https://github.com/ai-dynamo/frontend-crates/blob/7f755944537ca15aea1750dba6755997f3ba9ce8/conformance/all-capture-inventory.yaml",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ai-dynamo/frontend-crates"
+        },
+        {
+          "name": "43913-a00282ad5938cb227f65d499600bc9daeaa032a99584068ca53866c9b4990042.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/43913-a00282ad5938cb227f65d499600bc9daeaa032a99584068ca53866c9b4990042.json",
+          "sha": "998f3123f3a9657aa9a4967d98605c8538252e3b",
+          "html_url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/43913-a00282ad5938cb227f65d499600bc9daeaa032a99584068ca53866c9b4990042.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "yuguo-Jack/HCU-TrainFlow"
+        },
+        {
+          "name": "46619-3a449b4add5b1ca0c0929f6a8c2b415cf7b073f0f426127232a553c459363caf.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/46619-3a449b4add5b1ca0c0929f6a8c2b415cf7b073f0f426127232a553c459363caf.json",
+          "sha": "ebae3de8438029ba4cf32e621bb448826eb83cb7",
+          "html_url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/46619-3a449b4add5b1ca0c0929f6a8c2b415cf7b073f0f426127232a553c459363caf.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "yuguo-Jack/HCU-TrainFlow"
+        },
+        {
+          "name": "ENGINE_COMPARISON.md",
+          "path": "evaluation/inference/dgx-spark-2026-11-03/ENGINE_COMPARISON.md",
+          "sha": "aaad24ab1d0723d8bf0014904cffffefc2bb4292",
+          "html_url": "https://github.com/ivangalkindeveloper/DoglyadAI/blob/d618aa0a1b1f7eb56bb3a90e1e8628b1b928f724/evaluation/inference/dgx-spark-2026-11-03/ENGINE_COMPARISON.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ivangalkindeveloper/DoglyadAI"
+        },
+        {
+          "name": "sglang.tags.txt",
+          "path": ".ufo/waves/round-80/w1/SR01ScoutPins/sglang.tags.txt",
+          "sha": "00e67455154eee86889a7b8004d6aac5883b6679",
+          "html_url": "https://github.com/VeigaPunk/kama-shokunin/blob/e53eeac42e735418daee9851997f5d4ded774c9f/.ufo/waves/round-80/w1/SR01ScoutPins/sglang.tags.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "VeigaPunk/kama-shokunin"
+        },
+        {
+          "name": "sglang.txt",
+          "path": ".ufo/waves/round-80/measured/after/c2-tags/sglang.txt",
+          "sha": "00e67455154eee86889a7b8004d6aac5883b6679",
+          "html_url": "https://github.com/VeigaPunk/kama-shokunin/blob/e53eeac42e735418daee9851997f5d4ded774c9f/.ufo/waves/round-80/measured/after/c2-tags/sglang.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "VeigaPunk/kama-shokunin"
+        },
+        {
+          "name": "sglang.py",
+          "path": "chalkcompute/weights/serving/adapters/sglang.py",
+          "sha": "bf816a4139fff92c09a981debea86bc6563e8ea4",
+          "html_url": "https://github.com/chalk-ai/chalk-sandbox-sdk/blob/5701d2a51950dfbd68932f6bed83c22262129ab1/chalkcompute/weights/serving/adapters/sglang.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "chalk-ai/chalk-sandbox-sdk"
+        },
+        {
+          "name": "engine-profiles.json",
+          "path": "engine-profiles.json",
+          "sha": "caaece77e424e0ba74a594f559621153ab227b7c",
+          "html_url": "https://github.com/tangle-network/tangle-inference-core/blob/7f9eb4d57f94a20b655f3aa8768211f6b18f1785/engine-profiles.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "tangle-network/tangle-inference-core"
+        },
+        {
+          "name": "sglang-tags.out",
+          "path": ".ufo/waves/round-84/w1/out/EX05PinRecheck/sglang-tags.out",
+          "sha": "00e67455154eee86889a7b8004d6aac5883b6679",
+          "html_url": "https://github.com/VeigaPunk/kama-shokunin/blob/e53eeac42e735418daee9851997f5d4ded774c9f/.ufo/waves/round-84/w1/out/EX05PinRecheck/sglang-tags.out",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "VeigaPunk/kama-shokunin"
+        },
+        {
+          "name": "index.html",
+          "path": "comm-parallel/sglang-tp8-ep1-4-8-mixtral/index.html",
+          "sha": "fe19383ebd2dfa091682ac0457c0af6258aa4b6d",
+          "html_url": "https://github.com/qqtang-code/show-me/blob/ed8601446cfe35df656515ec395ed70d697ce8f0/comm-parallel/sglang-tp8-ep1-4-8-mixtral/index.html",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "qqtang-code/show-me"
+        },
+        {
+          "name": "sglang-image.json",
+          "path": "evaluation/inference/dgx-spark-2026-11-03/engine-comparison/sglang-image.json",
+          "sha": "7215205d42be3733c2e743de085660cde94b0509",
+          "html_url": "https://github.com/ivangalkindeveloper/DoglyadAI/blob/d618aa0a1b1f7eb56bb3a90e1e8628b1b928f724/evaluation/inference/dgx-spark-2026-11-03/engine-comparison/sglang-image.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ivangalkindeveloper/DoglyadAI"
+        },
+        {
+          "name": "possibile.possible",
+          "path": "urls/possibile.possible",
+          "sha": "d37c50321f7e6f6ae777e6cd0d60f6fa4972bfe4",
+          "html_url": "https://github.com/marwahaha/github-typo/blob/9b9f39654d86ca014438368da4905d78b65207a0/urls/possibile.possible",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "marwahaha/github-typo"
+        },
+        {
+          "name": "meta.json",
+          "path": "comm-parallel/sglang-tp8-ep1-4-8-mixtral/meta.json",
+          "sha": "25c4bf38482b374efd0f2f17549b2199a2a3c14d",
+          "html_url": "https://github.com/qqtang-code/show-me/blob/ed8601446cfe35df656515ec395ed70d697ce8f0/comm-parallel/sglang-tp8-ep1-4-8-mixtral/meta.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "qqtang-code/show-me"
+        },
+        {
+          "name": "SR01.json",
+          "path": ".ufo/waves/round-80/w1/SR01ScoutPins/SR01.json",
+          "sha": "2e4520f26f2d38b23ce3d43ce1817a190da19116",
+          "html_url": "https://github.com/VeigaPunk/kama-shokunin/blob/e53eeac42e735418daee9851997f5d4ded774c9f/.ufo/waves/round-80/w1/SR01ScoutPins/SR01.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "VeigaPunk/kama-shokunin"
+        },
+        {
+          "name": "river-city-girls.md",
+          "path": "_franchises/river-city-girls.md",
+          "sha": "d35da6775e740428f65b1c76a3ad765b8cef464a",
+          "html_url": "https://github.com/ebenbruyns/junkstore-website/blob/c333cf37a85332be5e83e6eed40e3c7d02f8d349/_franchises/river-city-girls.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ebenbruyns/junkstore-website"
+        },
+        {
+          "name": "sglang-tags.raw",
+          "path": ".ufo/waves/round-84/w1/out/SCO01Upstream/sglang-tags.raw",
+          "sha": "c2969ac159d8b40610b59b59379f4e3f99990265",
+          "html_url": "https://github.com/VeigaPunk/kama-shokunin/blob/e53eeac42e735418daee9851997f5d4ded774c9f/.ufo/waves/round-84/w1/out/SCO01Upstream/sglang-tags.raw",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "VeigaPunk/kama-shokunin"
+        },
+        {
+          "name": "import-summary.txt",
+          "path": "import-summary.txt",
+          "sha": "1224f1bafd4bb408c8398abdb0000e18c38a51e8",
+          "html_url": "https://github.com/Pirez/iaeste_inter/blob/47dab9b5739abade29ccb31f5fbee0ab4ab7c23e/import-summary.txt",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "Pirez/iaeste_inter"
+        },
+        {
+          "name": "60.db",
+          "path": "db/fc/60.db",
+          "sha": "ceacc03cabb1c464ba430274c97a18ad25359659",
+          "html_url": "https://github.com/holalluis/descarregar_base_dades_onvotar/blob/bc7c36f72a4d64ec7520af433760a27fa808a1fb/db/fc/60.db",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "holalluis/descarregar_base_dades_onvotar"
+        },
+        {
+          "name": "anova_full_matrix_results.tsv",
+          "path": "analysis/ANOVA/ANOVA_results/anova_full_matrix_results.tsv",
+          "sha": "c56b4c8338c99f36d83a9b176f6dc17988b2c856",
+          "html_url": "https://github.com/shchurch/hawaiian_drosophilidae_expression_2021/blob/5f3142f03924e5cce3236c6ec781ad3e0cb872c3/analysis/ANOVA/ANOVA_results/anova_full_matrix_results.tsv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "shchurch/hawaiian_drosophilidae_expression_2021"
+        },
+        {
+          "name": "anova_ratio_matrix_results.tsv",
+          "path": "analysis/ANOVA/ANOVA_results/anova_ratio_matrix_results.tsv",
+          "sha": "695e0285eceb9fcc69ccfb67ec69c166e0bf12c8",
+          "html_url": "https://github.com/shchurch/hawaiian_drosophilidae_expression_2021/blob/5f3142f03924e5cce3236c6ec781ad3e0cb872c3/analysis/ANOVA/ANOVA_results/anova_ratio_matrix_results.tsv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "shchurch/hawaiian_drosophilidae_expression_2021"
+        },
+        {
+          "name": "anova_ovary_matrix_results.tsv",
+          "path": "analysis/ANOVA/ANOVA_results/anova_ovary_matrix_results.tsv",
+          "sha": "9c02f6864faeea388044e2a6f04e60aae34df1b4",
+          "html_url": "https://github.com/shchurch/hawaiian_drosophilidae_expression_2021/blob/5f3142f03924e5cce3236c6ec781ad3e0cb872c3/analysis/ANOVA/ANOVA_results/anova_ovary_matrix_results.tsv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "shchurch/hawaiian_drosophilidae_expression_2021"
+        },
+        {
+          "name": "anova_reduced_matrix_results.tsv",
+          "path": "analysis/ANOVA/ANOVA_results/anova_reduced_matrix_results.tsv",
+          "sha": "6f6bdc01e469238dbfa140d742e453207832fa03",
+          "html_url": "https://github.com/shchurch/hawaiian_drosophilidae_expression_2021/blob/5f3142f03924e5cce3236c6ec781ad3e0cb872c3/analysis/ANOVA/ANOVA_results/anova_reduced_matrix_results.tsv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "shchurch/hawaiian_drosophilidae_expression_2021"
+        },
+        {
+          "name": "anova_full_matrix_individual_results.tsv",
+          "path": "analysis/ANOVA/ANOVA_results/anova_full_matrix_individual_results.tsv",
+          "sha": "afef866c5bd1af4ba6e17d8f905bdadac0799f3d",
+          "html_url": "https://github.com/shchurch/hawaiian_drosophilidae_expression_2021/blob/5f3142f03924e5cce3236c6ec781ad3e0cb872c3/analysis/ANOVA/ANOVA_results/anova_full_matrix_individual_results.tsv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "shchurch/hawaiian_drosophilidae_expression_2021"
+        },
+        {
+          "name": "47198-2d23784cedede46e33bac246b53df7f85eba2a040b30ec55b97935400ee5f548.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/47198-2d23784cedede46e33bac246b53df7f85eba2a040b30ec55b97935400ee5f548.json",
+          "sha": "2c56535ed33eff5e4f2587f2610fd4c18e4c03ed",
+          "html_url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/47198-2d23784cedede46e33bac246b53df7f85eba2a040b30ec55b97935400ee5f548.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "yuguo-Jack/HCU-TrainFlow"
+        },
+        {
+          "name": "47375-a59d3dff276127e119fde735491d88da6df471c8d182fa20443c9b91424ad27c.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/47375-a59d3dff276127e119fde735491d88da6df471c8d182fa20443c9b91424ad27c.json",
+          "sha": "494dcf97cbfd474f526b7902f044aad8f3e4239c",
+          "html_url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/47375-a59d3dff276127e119fde735491d88da6df471c8d182fa20443c9b91424ad27c.json",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "yuguo-Jack/HCU-TrainFlow"
+        },
+        {
+          "name": "river-city-girls.md",
+          "path": "_games/epic/river-city-girls.md",
+          "sha": "f06193ff5277abfd5a941f77989a2648e72cc644",
+          "html_url": "https://github.com/ebenbruyns/junkstore-website/blob/c333cf37a85332be5e83e6eed40e3c7d02f8d349/_games/epic/river-city-girls.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ebenbruyns/junkstore-website"
+        },
+        {
+          "name": "IMG20220324085821_aug6.jpg",
+          "path": "Tomato-Village-main/Variant-c(Object Detection)/train/images/IMG20220324085821_aug6.jpg",
+          "sha": "87b00afc402917b459261322a2e873721115e16d",
+          "html_url": "https://github.com/Priyanshu3649/AgriSathi/blob/4472d83725b552962673e1f4bcfdee0edc6c0684/Tomato-Village-main/Variant-c(Object Detection)/train/images/IMG20220324085821_aug6.jpg",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "Priyanshu3649/AgriSathi"
+        },
+        {
+          "name": "Social.md",
+          "path": "diffs/26_5_23F77_vs_27_0_24A5355q/MACHOS/filesystem/System/Library/Assistant/Plugins/Social.assistantBundle/Social.md",
+          "sha": "f49fc4d5d8e7e0bab0eb9459d926d0405429394a",
+          "html_url": "https://github.com/ipsw-diffs/ios-27/blob/0f795dbc046c4aed3802ab895f13279e85eddf9e/diffs/26_5_23F77_vs_27_0_24A5355q/MACHOS/filesystem/System/Library/Assistant/Plugins/Social.assistantBundle/Social.md",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "ipsw-diffs/ios-27"
+        },
+        {
+          "name": "results.jsonl",
+          "path": "phase8/steering/results.jsonl",
+          "sha": "de07f49333bda1b745418452664d1c9bb38d1db7",
+          "html_url": "https://github.com/vigji/llmchar/blob/1c9a40662ed6ac9b82fc0e0aac83ebee569fc1a0/phase8/steering/results.jsonl",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "vigji/llmchar"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232049-shock-cr1000-NT0-seed10/metrics.csv",
+          "sha": "9ed0aea03d4884b7e8de84f0afde1ef7aedc0009",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232049-shock-cr1000-NT0-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232333-shock-cr2000-NT0-seed10/metrics.csv",
+          "sha": "8b097fdd05cdb2cdfaf0d4de72281b1844f00145",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232333-shock-cr2000-NT0-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232616-shock-cr5000-NT0-seed10/metrics.csv",
+          "sha": "3f7f4ffd4a8a5e88154103858817b9a1860dc390",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232616-shock-cr5000-NT0-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/riot/runs/20261018-232427-riot-flood12-NT40-seed10/metrics.csv",
+          "sha": "0da90421f99fcb8ba1c5c299a411e4f313e8f186",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/riot/runs/20261018-232427-riot-flood12-NT40-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232212-shock-cr2000-NT40-seed10/metrics.csv",
+          "sha": "8b097fdd05cdb2cdfaf0d4de72281b1844f00145",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232212-shock-cr2000-NT40-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232456-shock-cr5000-NT40-seed10/metrics.csv",
+          "sha": "3f7f4ffd4a8a5e88154103858817b9a1860dc390",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/shock/runs/20261018-232456-shock-cr5000-NT40-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/discovery/runs/20261018-232042-discovery-margin-s0.6-seed10/metrics.csv",
+          "sha": "453d8f5f275a18a09e71185499c4201a4b50d78d",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/discovery/runs/20261018-232042-discovery-margin-s0.6-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/redteam/runs/20261018-231928-redteam-low0-stingy0-bbt-off-seed10/metrics.csv",
+          "sha": "453d8f5f275a18a09e71185499c4201a4b50d78d",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/redteam/runs/20261018-231928-redteam-low0-stingy0-bbt-off-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "metrics.csv",
+          "path": "agentic_sim/results/studies/2.0.0-price/knobs/runs/20261018-231928-knobs-lam0.2-cdt-cost-iss10-cda-off-seed10/metrics.csv",
+          "sha": "453d8f5f275a18a09e71185499c4201a4b50d78d",
+          "html_url": "https://github.com/baruchih/elef-economy/blob/2417219bab5eb7c57136a9c3401b2cdfe07af2a0/agentic_sim/results/studies/2.0.0-price/knobs/runs/20261018-231928-knobs-lam0.2-cdt-cost-iss10-cda-off-seed10/metrics.csv",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "baruchih/elef-economy"
+        },
+        {
+          "name": "installed_artifacts.py",
+          "path": "python/tests/support/installed_artifacts.py",
+          "sha": "edaa523e5c86589b68816656763a88229cb06d6b",
+          "html_url": "https://github.com/OrbitInfra/OrbitKV/blob/69992358ba6729c4b3646fe4aab0811d9cf571c3/python/tests/support/installed_artifacts.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "OrbitInfra/OrbitKV"
+        },
+        {
+          "name": "test_sglang_reload.py",
+          "path": "tests/test_sglang_reload.py",
+          "sha": "e95666952b4f51f2b553c9d1e1ee7e931f14066c",
+          "html_url": "https://github.com/chalk-ai/chalk-sandbox-sdk/blob/5701d2a51950dfbd68932f6bed83c22262129ab1/tests/test_sglang_reload.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "chalk-ai/chalk-sandbox-sdk"
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"SGLANG_OKC\"",
+      "total": 2,
+      "incomplete": false,
+      "items": [
+        {
+          "name": "engine.py",
+          "path": "campaign/engine.py",
+          "sha": "44e831df1b7be8bb6d9468842759f36368de9254",
+          "html_url": "https://github.com/Pareton-ai/pareton/blob/ed6526d9fa8e3b72896048c705c798b8a106f0b6/campaign/engine.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "Pareton-ai/pareton"
+        },
+        {
+          "name": "test_seed.py",
+          "path": "tests/test_seed.py",
+          "sha": "96b75227b34de82b2e57a3c528aa764c5b9d5947",
+          "html_url": "https://github.com/Pareton-ai/pareton/blob/ed6526d9fa8e3b72896048c705c798b8a106f0b6/tests/test_seed.py",
+          "full_name": null,
+          "description": null,
+          "default_branch": null,
+          "license": null,
+          "repository": "Pareton-ai/pareton"
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"muse\" path:patch.diff",
+      "total": 0,
+      "incomplete": false,
+      "items": []
+    },
+    {
+      "kind": "repositories",
+      "query": "Muse-Spark-Open",
+      "total": 156,
+      "incomplete": false,
+      "items": [
+        {
+          "name": "maos-ind_",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Amitakshya333/maos-ind_",
+          "full_name": "Amitakshya333/maos-ind_",
+          "description": "MAOS Industrial: evidence-first plant-floor software. Ring is its industrial agent on Meta's Muse Spark Open. Meta hackathon 2026.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "video2urdf",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/SungHyunC/video2urdf",
+          "full_name": "SungHyunC/video2urdf",
+          "description": "One phone video of an articulated object in, a measured URDF/MJCF out, checked by replaying it in MuJoCo over the video. A Muse Spark agent drives SAM 3.1; it also runs on open weights.",
+          "default_branch": "master",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "Muse-Spark-OpenCode",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/modexcheats-web/Muse-Spark-OpenCode",
+          "full_name": "modexcheats-web/Muse-Spark-OpenCode",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "okc",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/yelgabo/okc",
+          "full_name": "yelgabo/okc",
+          "description": "Muse Spark Open Kernel Challenge experiments",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "Muse-FlashSpeed-Kernel",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/GiulianoIntelligence/Muse-FlashSpeed-Kernel",
+          "full_name": "GiulianoIntelligence/Muse-FlashSpeed-Kernel",
+          "description": "Muse Spark Open Kernel Challenge entries",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-spark-open",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Kushagrabainsla/muse-spark-open",
+          "full_name": "Kushagrabainsla/muse-spark-open",
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "Muse-Spark-Open",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/chillqoder/Muse-Spark-Open",
+          "full_name": "chillqoder/Muse-Spark-Open",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse_bf16_optimization",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/KingCobra52/muse_bf16_optimization",
+          "full_name": "KingCobra52/muse_bf16_optimization",
+          "description": "Optimizing the the muse_bf16 kernel in Meta's Muse Spark Open AI model for the Muse Spark Open Kernel Challenge",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-spark-open-charter",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/vigji/muse-spark-open-charter",
+          "full_name": "vigji/muse-spark-open-charter",
+          "description": "Reconstruction of Muse Spark Open's Charter from its chain of thought, cross-linked to every CoT sample",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-spark-open-kernels",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/AutoclickerI/muse-spark-open-kernels",
+          "full_name": "AutoclickerI/muse-spark-open-kernels",
+          "description": "Our Muse Spark Open Kernel Challenge entry: a 1.89x-over-SGLang H200 decoder layer (NVFP4 MoE, FP8 paged attention), with its judge receipts",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "muse-spark-open-kernels",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/theluckystrike/muse-spark-open-kernels",
+          "full_name": "theluckystrike/muse-spark-open-kernels",
+          "description": "Open source must win \u00b7 Muse Spark Open Kernel Challenge kernels (Apache-2.0), published after the boards close",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-spark-openkernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Snehan2k2/muse-spark-openkernel-challenge",
+          "full_name": "Snehan2k2/muse-spark-openkernel-challenge",
+          "description": "documenting my solution for the muse spark okc",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "muse-spark-open-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/nvbkdw/muse-spark-open-challenge",
+          "full_name": "nvbkdw/muse-spark-open-challenge",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-spark-open-bench",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Studio1-OSS/muse-spark-open-bench",
+          "full_name": "Studio1-OSS/muse-spark-open-bench",
+          "description": "An open benchmark for Meta's Muse Spark Open on Nebius Token Factory. Muse reviews 50 real merged pull requests from popular open-source projects.",
+          "default_branch": "main",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null,
+            "node_id": "MDc6TGljZW5zZTA="
+          }
+        },
+        {
+          "name": "PrLens",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/RushSh/PrLens",
+          "full_name": "RushSh/PrLens",
+          "description": "A review budget for AI-agent merges. Built with Muse Code, Muse Spark Open and the Muse Spark API.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "muse-spark-open-2x-dgx-spark",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/jlacroix82/muse-spark-open-2x-dgx-spark",
+          "full_name": "jlacroix82/muse-spark-open-2x-dgx-spark",
+          "description": "Run Meta's Muse Spark Open 816B-A42B (816B total / 42B active MoE) on two NVIDIA DGX Sparks via llama.cpp RPC \u2014 measured recipe: 6.76-7.01 tok/s decode, 263 tok/s prefill, 32K context",
+          "default_branch": "master",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "Muse-Spark-Open-Kernel-Challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Mithun-033/Muse-Spark-Open-Kernel-Challenge",
+          "full_name": "Mithun-033/Muse-Spark-Open-Kernel-Challenge",
+          "description": "Muse Spark OpenKernel Challenge : `muse_bf16_proj`: Optimized BF16 GPU projection kernels achieving 1.255\u00d7 speedup over the SGLang inference engine through low-level GPU kernel optimization.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-spark-open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/islamborghini/muse-spark-open-kernel-challenge",
+          "full_name": "islamborghini/muse-spark-open-kernel-challenge",
+          "description": "My submission on Muse Spark Open Kernel Challenge (rank 352/2014)",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-spark-open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/zimo0110/muse-spark-open-kernel-challenge",
+          "full_name": "zimo0110/muse-spark-open-kernel-challenge",
+          "description": "muse_moe_w4a16",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "meowbert-ai-agent",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/XInTheDark/meowbert-ai-agent",
+          "full_name": "XInTheDark/meowbert-ai-agent",
+          "description": "Self-hosted workspace where AI agents do real work in sandboxed containers, with any model. Open alternative to: muse, dots, grok bot, spark, ...",
+          "default_branch": "main",
+          "license": {
+            "key": "agpl-3.0",
+            "name": "GNU Affero General Public License v3.0",
+            "spdx_id": "AGPL-3.0",
+            "url": "https://api.github.com/licenses/agpl-3.0",
+            "node_id": "MDc6TGljZW5zZTE="
+          }
+        },
+        {
+          "name": "rental-pilot-preflight",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Rental-Pilot/rental-pilot-preflight",
+          "full_name": "Rental-Pilot/rental-pilot-preflight",
+          "description": "Preflight: AI walkaround inspections for rented equipment, built on Meta's Muse Spark, Muse Spark Open, SAM 3.1, Muse Wonder and Muse Voice Transcribe",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "meta-hackathon-2026",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/hyper07/meta-hackathon-2026",
+          "full_name": "hyper07/meta-hackathon-2026",
+          "description": "Watch Me: a voice-locked personal-security agent. Muse Spark Open (open weights) and Muse agents ask \"Are you OK?\" and alert your people with a map link.",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "okc-decode-layer",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/paper-19/okc-decode-layer",
+          "full_name": "paper-19/okc-decode-layer",
+          "description": "https://openkernelchallenge.dev/ muse spark open / sglang kernel challenge",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "Muse_optimiazation_H200_challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Soorya2201/Muse_optimiazation_H200_challenge",
+          "full_name": "Soorya2201/Muse_optimiazation_H200_challenge",
+          "description": "Muse Spark Open H200 kernel optimization experiments and results",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "harvey-taxi-voice-agent",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Williebee615/harvey-taxi-voice-agent",
+          "full_name": "Williebee615/harvey-taxi-voice-agent",
+          "description": "Voice-first, verifiable AI ride-booking agent built from scratch with Meta Muse Spark, Muse Voice Transcribe & Muse Spark Open (28/28 passing)",
+          "default_branch": "main",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null,
+            "node_id": "MDc6TGljZW5zZTA="
+          }
+        },
+        {
+          "name": "muse-bf16-proj",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/NathenFernandes/muse-bf16-proj",
+          "full_name": "NathenFernandes/muse-bf16-proj",
+          "description": "H200 projection kernels for the Muse Spark Open Kernel Challenge. Best judged speedup: 1.5186x over SGLang.",
+          "default_branch": "solution",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "1Thing-Meta-AI",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/KingKharid/1Thing-Meta-AI",
+          "full_name": "KingKharid/1Thing-Meta-AI",
+          "description": "1Thing \u2014 one physical next step. Open-weights extraction (muse-spark-open-1026 on Baseten) + Meta Muse Spark/Wonder. Demo + honesty docs in README.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "okc-2026",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/vjeux/okc-2026",
+          "full_name": "vjeux/okc-2026",
+          "description": "Open Kernel Challenge 2026 - Muse Spark kernel entries (team vjeux)",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/lilaclilac09/open-kernel-challenge",
+          "full_name": "lilaclilac09/open-kernel-challenge",
+          "description": "Muse Spark Open Kernel Challenge (openkernelchallenge.dev) \u2014 kernel starters + notes",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "BoardDream",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/AnnieQian1212/BoardDream",
+          "full_name": "AnnieQian1212/BoardDream",
+          "description": "Describe a board game in one sentence. Play it with your friends tonight. Built on Muse Spark, Muse Image, SAM 3.1 and Muse Spark Open.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6243836f",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6243836f",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6243836f",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "sgl-muse-mega",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/facebookresearch/sgl-muse-mega",
+          "full_name": "facebookresearch/sgl-muse-mega",
+          "description": "Ultrafast low latency megakernel for Muse Spark Open - 1000+ tok/s",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-aa4005ac",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-aa4005ac",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-aa4005ac",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-253cadb6",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-253cadb6",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-253cadb6",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "PartSnap",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/jsuryacodes/PartSnap",
+          "full_name": "jsuryacodes/PartSnap",
+          "description": "PartSnap: phone photos of a chipped furniture edge \u2192 a verified, 3D-printable repair part, built with Muse Spark Open, Muse Spark 1.3, SAM 3.1 and Muse Wonder.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "okc-muse-spark-kernels",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/hariappi/okc-muse-spark-kernels",
+          "full_name": "hariappi/okc-muse-spark-kernels",
+          "description": "Muse-Spark-Open kernels and SGLang serving work for the Open Kernel Challenge 2026",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "bug2pr",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/lehuubao2909/bug2pr",
+          "full_name": "lehuubao2909/bug2pr",
+          "description": "Turn a screen recording of a web bug into a reproduced failing test and a verified pull request. Built on Meta SAM 3.1, Muse Spark, Muse Wonder and open-weight Muse Spark Open.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "muse-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/iddqdld/muse-kernel-challenge",
+          "full_name": "iddqdld/muse-kernel-challenge",
+          "description": "Muse Spark Open Kernel Challenge entry: custom GPU kernels for five benchmarks",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-8cad921b",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-8cad921b",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-8cad921b",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "Meta-Vision-CAD",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/aimsrocky1-spec/Meta-Vision-CAD",
+          "full_name": "aimsrocky1-spec/Meta-Vision-CAD",
+          "description": "Vision-to-CAD automation using Meta Muse Spark Open and CATIA V5.  ",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-bf1462f4",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-bf1462f4",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-bf1462f4",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "sarkiai-policy-sandbox-meta",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/rouftom/sarkiai-policy-sandbox-meta",
+          "full_name": "rouftom/sarkiai-policy-sandbox-meta",
+          "description": "Policy-grounded, multi-agent incident-response engine. Meta Model API (Muse Spark, SAM 3.1, Muse Voice Transcribe) + Muse Glimmer on open weights.",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "100proof",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/NextTyrCreator/100proof",
+          "full_name": "NextTyrCreator/100proof",
+          "description": "Film a 100-second walkthrough \u2192 verifiable, insurance-grade home inventory. Built for the Meta Global AI Developer Hackathon on Meta Model API (SAM 3.1, Muse Spark 1.3, Muse Wonder, Muse Image, Muse Spark Open).",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-421fb6f7",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-421fb6f7",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-421fb6f7",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-05fea2b9",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-05fea2b9",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-05fea2b9",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6a9a5277",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6a9a5277",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6a9a5277",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "meta-hackathon",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/icebrkn-hq/meta-hackathon",
+          "full_name": "icebrkn-hq/meta-hackathon",
+          "description": "Noa, the relationship AI that remembers the little things and helps you show up. Built with Meta Muse Spark, Muse Spark Open on Baseten, and Muse Code for the Meta AI Hackathon.",
+          "default_branch": "main",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null,
+            "node_id": "MDc6TGljZW5zZTA="
+          }
+        },
+        {
+          "name": "bidledger",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/WAOmaster/bidledger",
+          "full_name": "WAOmaster/bidledger",
+          "description": "Every shouted bid, on the record. Open-cry auction audio to verified ledger with Meta Muse Voice + Muse Spark.",
+          "default_branch": "master",
+          "license": null
+        },
+        {
+          "name": "kernel-credit-lab",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/DiegoLLBB/kernel-credit-lab",
+          "full_name": "DiegoLLBB/kernel-credit-lab",
+          "description": "Credit monitoring you can audit: an agent reads SEC filings, records only exact quotes, and a second Meta model checks every alert. Muse Spark, Muse Spark Open, Muse Wonder, SAM 3.1.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "candivision-roleplay",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/hoanghonn/candivision-roleplay",
+          "full_name": "hoanghonn/candivision-roleplay",
+          "description": "Voice role-play training built on research, not guesswork. Meta Muse Spark, Spark Open, Voice Transcribe and Image.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "meta-models-Muse-Spark-Open-816B-A42B-NVFP4-8xDgx-Spark",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/openzeka/meta-models-Muse-Spark-Open-816B-A42B-NVFP4-8xDgx-Spark",
+          "full_name": "openzeka/meta-models-Muse-Spark-Open-816B-A42B-NVFP4-8xDgx-Spark",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "retrofit",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/nur-srijan/retrofit",
+          "full_name": "nur-srijan/retrofit",
+          "description": "Point a camera at a legacy control panel - every instrument becomes a live, typed, queryable data stream. SAM 3.1 + Muse Spark + Muse Spark Open (Baseten) + Muse Wonder + Muse Voice Transcribe. Built during the Meta Global AI Developer Hackathon.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "pinpoint",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/ManasMehta1110/pinpoint",
+          "full_name": "ManasMehta1110/pinpoint",
+          "description": "Evidence-grounded oversight for autonomous AI agents, powered by Meta's Muse Spark Open.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "aketud-verify",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/parvindd/aketud-verify",
+          "full_name": "parvindd/aketud-verify",
+          "description": "Insurance answers that prove themselves, or refuse. Muse Spark proposes, Muse Spark Open verifies, the 2024 IRDAI rules govern. Built for the Meta Global AI Developer Hackathon.",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "pi-muse",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/souta-lab/pi-muse",
+          "full_name": "souta-lab/pi-muse",
+          "description": "Muse Code harness (system prompt + tool interface) on top of Pi's agent runtime. Run Muse Spark on an open harness.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-f1d6b8bb",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-f1d6b8bb",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-f1d6b8bb",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "newton",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Vikhas/newton",
+          "full_name": "Vikhas/newton",
+          "description": "Predicts where a thrown ball lands from the first 0.25 s of video, using Meta SAM 3.1, Muse Spark, Muse Spark Open and Muse Voice. Built for the Meta Global AI Developer Hackathon.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-5de4a4c6",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-5de4a4c6",
+          "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-5de4a4c6",
+          "description": null,
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "okc-muse-spark-kernels",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/alygg77/okc-muse-spark-kernels",
+          "full_name": "alygg77/okc-muse-spark-kernels",
+          "description": "Open-source H200 CUDA kernels for the Muse Spark Open Kernel Challenge (OKC): decode layer 2.21x, NVFP4 MoE 2.40x, BF16 proj 1.55x, prefill 1.82x, attention 2.65x vs SGLang; judge results, measured H200 facts, negative results",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "groundtruth",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/compiler-aditya/groundtruth",
+          "full_name": "compiler-aditya/groundtruth",
+          "description": "An agent that checks a construction site against its design package, with evidence, using Meta's models (Muse Wonder, Muse Spark, Muse Spark Open, SAM 3.1). Built for the Meta Global AI Developer Hackathon.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "batik-guard-8in1",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/AIchaliveret/batik-guard-8in1",
+          "full_name": "AIchaliveret/batik-guard-8in1",
+          "description": "IR SUPER BATIK GUARD 8-in-1 - 20x110M Autonomous Factory - Muse Spark Open 1026 + Modal",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "ChronoRig",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/mhtpsd/ChronoRig",
+          "full_name": "mhtpsd/ChronoRig",
+          "description": "Autonomous Video-to-Physics 3D Rigging & Simulation Engine. Converts standard video of moving mechanisms into self-verifying Three.js/Rapier & Blender (bpy) physics rigs using Meta SAM 3.1, Muse Spark 1.3, Muse Spark Open (1026), Muse Image/Wonder, and Muse Code.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "DemoDoctor",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/est4ever/DemoDoctor",
+          "full_name": "est4ever/DemoDoctor",
+          "description": "Evidence-grounded robot failure investigation powered by Meta SAM 3.1 and Muse Spark Open.",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "Muse_Attention_Decode",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Reedo3/Muse_Attention_Decode",
+          "full_name": "Reedo3/Muse_Attention_Decode",
+          "description": "The Muse Spark Open Kernel Challenge had a competition for muse's attention decode. The link for this is located here: https://openkernelchallenge.dev/problems/muse_attention_decode",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "reefcase",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Aditya-Patil27/reefcase",
+          "full_name": "Aditya-Patil27/reefcase",
+          "description": "Turn a diver's reef video into a cited investigation. SAM 3 + Muse Spark Open.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "synchro-api-monorepo",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Althaf2406/synchro-api-monorepo",
+          "full_name": "Althaf2406/synchro-api-monorepo",
+          "description": "SynchroAPI: Autonomous Cross-Repository CI/CD Multi-Agent Remediation Engine (Meta Muse Spark Open, Muse Code, Hybrid Tree-sitter GraphRAG & Modal.com Sandbox)",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "lastseen",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/h-a-forster/lastseen",
+          "full_name": "h-a-forster/lastseen",
+          "description": "Drone search and rescue for a volunteer with one drone: where to fly next, and whether the missing person is in the photos. Built on Muse Spark, SAM 3.1, Muse Voice Transcribe and Muse Spark Open.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "kappa",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/RaYYeR220/kappa",
+          "full_name": "RaYYeR220/kappa",
+          "description": "A measuring instrument made from any camera: experiment video in, evidence-linked behavioural measurements out. SAM 3.1 + Muse Spark Open + Muse Wonder.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "Investigating-the-role-of-AI-in-prompt-engineering",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/muskaanmishra5426-lab/Investigating-the-role-of-AI-in-prompt-engineering",
+          "full_name": "muskaanmishra5426-lab/Investigating-the-role-of-AI-in-prompt-engineering",
+          "description": "Open-Source research:- Human vs AI-generated promote across Muse Spark, GPT, Claude. Published with DOI",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "muse-open-kernel-log",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/gonzalezerik/muse-open-kernel-log",
+          "full_name": "gonzalezerik/muse-open-kernel-log",
+          "description": "Engineering log of a Muse Spark Open Kernel Challenge entry: kernels, H200 lab, data, dead ends",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "muse-research-workbench",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/open-indiana-law/muse-research-workbench",
+          "full_name": "open-indiana-law/muse-research-workbench",
+          "description": "Open Indiana Law: Muse Spark research workbench with source-linked notes and observable legal research tools",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "spiralai",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/khatabx-king/spiralai",
+          "full_name": "khatabx-king/spiralai",
+          "description": "Physics-verified AI agent for exploring graphene mechanical energy-storage architectures using Meta Muse Spark Open.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "JupiBuddy",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/hadiproz/JupiBuddy",
+          "full_name": "hadiproz/JupiBuddy",
+          "description": "Notebook Autopilot \u2014 standalone AI-native Jupyter notebook editor. An AI agent performs end-to-end data analysis inside live notebooks through MCP (currently supports Muse Spark and Muse Spark Open only).",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "meta-global-ai-developer-hackathon-2026",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/iamsourabhraikwar/meta-global-ai-developer-hackathon-2026",
+          "full_name": "iamsourabhraikwar/meta-global-ai-developer-hackathon-2026",
+          "description": "Autonomous AI CCTV Control Room Operator powered by Meta Muse Spark Open 1026 and Meta SAM 3.1. Built for Meta Global AI Developer Hackathon 2026.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "connectorforge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Muneeb007j/connectorforge",
+          "full_name": "Muneeb007j/connectorforge",
+          "description": "Turn any small business website into a secure, tested MCP connector for AI assistants. Powered by Meta's Muse Spark Open and Muse Glimmer.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/arihantbansal/open-kernel-challenge",
+          "full_name": "arihantbansal/open-kernel-challenge",
+          "description": "GPU kernels for Muse Spark Open on NVIDIA H200. Peak #1 on the MoE leaderboard in the Open Kernel Challenge.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "life-agent",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/ayoubna99/life-agent",
+          "full_name": "ayoubna99/life-agent",
+          "description": "Life: an autonomous, self-improving agent. It plans your day, sets your alarms and limits, steps in when you're stuck scrolling, and learns every night what works on you. Android + Meta Muse Spark, Muse Spark Open, Muse Image & Voice Transcribe.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "faultcase",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/dochavez/faultcase",
+          "full_name": "dochavez/faultcase",
+          "description": "Turn your laptop\u2019s crashes into a warranty case. FaultCase reads Windows failure logs, finds the pattern behind repeated crashes and drafts a manufacturer-ready report. Built with Meta\u2019s Muse Spark, Muse Spark Open (Baseten, Fireworks) and Muse Code.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "beecensus",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/b84330808/beecensus",
+          "full_name": "b84330808/beecensus",
+          "description": "Count pollinator flower visits in field video with zero-shot Meta SAM 3 and Muse Spark Open",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "thal3s16-hackathon-public-submission",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/CygnusA2/thal3s16-hackathon-public-submission",
+          "full_name": "CygnusA2/thal3s16-hackathon-public-submission",
+          "description": "THAL3S 16: Meta Muse Spark Open financial intelligence research, FIP protocol, V9 report and safe public example",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "testpilot-ai",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Walid-Khalfa/testpilot-ai",
+          "full_name": "Walid-Khalfa/testpilot-ai",
+          "description": "Autonomous AI QA agent powered by Meta Muse Spark Open and Playwright, with evidence-backed defect detection.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "Nudged",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/moyocodes/Nudged",
+          "full_name": "moyocodes/Nudged",
+          "description": "Nudged is the reminder app that nudges back. Say or type everything on your mind: Muse Spark turns it into reminders and an agent plans your day. Nudges by Muse Spark Open on Baseten and Modal, voice by Muse Voice Transcribe, photo proof by SAM 3.1, badges by Muse Wonder and Muse Image.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/ruwwww/open-kernel-challenge",
+          "full_name": "ruwwww/open-kernel-challenge",
+          "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "say-and-grasp",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/adoodevv/say-and-grasp",
+          "full_name": "adoodevv/say-and-grasp",
+          "description": "Open-vocabulary pick-and-place for the SO-101 arm with Meta\u2019s Muse Spark and SAM 3.1.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "Large-MoE-Precision-and-Deployment-Guide",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/turbo998/Large-MoE-Precision-and-Deployment-Guide",
+          "full_name": "turbo998/Large-MoE-Precision-and-Deployment-Guide",
+          "description": "Azure AMD MI300X Large OSS MoE (Muse Spark Open, Nemotron 3 Ultra, Inkling) BF16 vs MXFP4 Precision & Deployment Guide",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "curtain-tryon-meta",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/A1exZabr/curtain-tryon-meta",
+          "full_name": "A1exZabr/curtain-tryon-meta",
+          "description": "Curtain try-on on Meta models: SAM 3.1 finds the window, Muse Image draws the curtains, Muse Spark Open checks the result. Meta AI Developer Hackathon, ZabSoft.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "spark-muse",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/jaemin-jo/spark-muse",
+          "full_name": "jaemin-jo/spark-muse",
+          "description": "Fast, safe browser agent on Meta Muse - the open-source core of Spark AI (Meta Global AI Developer Hackathon)",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "muse-sputter",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/lachydotmcg/muse-sputter",
+          "full_name": "lachydotmcg/muse-sputter",
+          "description": "Correct answers. Eventually. Muse Spark Open dense projections, deliberately 143.8x slower overall than PyTorch on an RTX 3060.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "Reunite",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/ayandipe/Reunite",
+          "full_name": "ayandipe/Reunite",
+          "description": "A privacy-first bridge for families and friends separated by war and displacement. Muse Spark parses memories, Muse Wonder resolves matches, SAM 3.1 redacts documents. Consent, not search, opens the door. Building with muse code",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "okc-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/infraax/okc-kernel-challenge",
+          "full_name": "infraax/okc-kernel-challenge",
+          "description": "Open Kernel Challenge 2026 (Muse Spark Open, H200): an AI-agent-driven GPU kernel campaign \u2014 results, hypotheses, method, kernels and judge data, archived",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "rackwatch",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Acidni-LLC/rackwatch",
+          "full_name": "Acidni-LLC/rackwatch",
+          "description": "Photo of a server rack to a CMDB, then 512 alerts to 3 verified incidents, on Meta's Muse Spark, Muse Spark Open, SAM 3.1 and Voice Transcribe. Built for the Meta Global AI Developer Hackathon.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "inkling",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/MartinSWDev/inkling",
+          "full_name": "MartinSWDev/inkling",
+          "description": "Inkling: a game that helps UK school leavers find the degree subjects that fit them. Four rounds of cards fill a paper-craft room; then your top 3, a wildcard, real UK courses and apprenticeships. Built with Muse Spark Open on Baseten, Muse Spark, Muse Image, SAM 3.1 and Muse Code for the Meta AI Developer Hackathon.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "flood-triage",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Aryan787913/flood-triage",
+          "full_name": "Aryan787913/flood-triage",
+          "description": "Triage for citizen flood photos with Meta's Muse Spark Open: flood level vs vehicle parts, or can't tell.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "meta-quant-auditor",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/aungsan-portfolio/meta-quant-auditor",
+          "full_name": "aungsan-portfolio/meta-quant-auditor",
+          "description": "Synthetic event demo explaining deterministic quote-gate audits with Meta Muse Spark Open on Baseten (Meta Global AI Developer Hackathon)",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "okc-2026-muse-kernels",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/trxphxle/okc-2026-muse-kernels",
+          "full_name": "trxphxle/okc-2026-muse-kernels",
+          "description": "Muse Spark Open Kernel Challenge 2026 (team trxphxle): H200 kernels, results, and every experiment we ran. Peaked top 200 (#185).",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "okc-muse-spark-kernels",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/EROREx/okc-muse-spark-kernels",
+          "full_name": "EROREx/okc-muse-spark-kernels",
+          "description": "My best H200 CUDA kernels for Meta's Open Kernel Challenge 2026 (Muse Spark Open): overall rank 110/1915, up to 2.68x over SGLang",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "muspark-2dgx",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/ajensenwaud/muspark-2dgx",
+          "full_name": "ajensenwaud/muspark-2dgx",
+          "description": "Muspark: Meta's Muse Spark Open 816B on 2x DGX Spark with TensorFold. EXL3 1.8 bpw, ~905K context, 32 tok/s greedy / 23 at temperature 1.0",
+          "default_branch": "main",
+          "license": {
+            "key": "bsd-3-clause",
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "spdx_id": "BSD-3-Clause",
+            "url": "https://api.github.com/licenses/bsd-3-clause",
+            "node_id": "MDc6TGljZW5zZTU="
+          }
+        },
+        {
+          "name": "omnigaze-agent",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/vatsShashwat07/omnigaze-agent",
+          "full_name": "vatsShashwat07/omnigaze-agent",
+          "description": "Autonomous Cyber-Physical SCADA Resilience Node: Closed-loop pipeline mitigation powered by Meta SAM 2.1 and Meta Muse Spark Open.",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "wellpilot",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/EmilJaf/wellpilot",
+          "full_name": "EmilJaf/wellpilot",
+          "description": "AI agent for oil & gas well performance analysis on Meta Muse Spark Open. Built at the Meta AI Developer Hackathon 2026",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        },
+        {
+          "name": "PharmacyGuard-Meta",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/nanadjan996-debug/PharmacyGuard-Meta",
+          "full_name": "nanadjan996-debug/PharmacyGuard-Meta",
+          "description": "Dual-safety clinical pharmacy decision support & student simulation powered by Meta Muse Spark Open for the Meta Global AI Developer Hackathon.",
+          "default_branch": "main",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "repositories",
+      "query": "openkernelchallenge",
+      "total": 5,
+      "incomplete": false,
+      "items": [
+        {
+          "name": "openkernelchallenge-audit",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/msaroufim/openkernelchallenge-audit",
+          "full_name": "msaroufim/openkernelchallenge-audit",
+          "description": "Evidence, limitations, and reproducible static analysis of Open Kernel Challenge and KernelBot similarities",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "openkernelchallenge-submission",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/razramon/openkernelchallenge-submission",
+          "full_name": "razramon/openkernelchallenge-submission",
+          "description": null,
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "okc-decode-layer",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/paper-19/okc-decode-layer",
+          "full_name": "paper-19/okc-decode-layer",
+          "description": "https://openkernelchallenge.dev/ muse spark open / sglang kernel challenge",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        },
+        {
+          "name": "open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/lilaclilac09/open-kernel-challenge",
+          "full_name": "lilaclilac09/open-kernel-challenge",
+          "description": "Muse Spark Open Kernel Challenge (openkernelchallenge.dev) \u2014 kernel starters + notes",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "Muse_Attention_Decode",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/Reedo3/Muse_Attention_Decode",
+          "full_name": "Reedo3/Muse_Attention_Decode",
+          "description": "The Muse Spark Open Kernel Challenge had a competition for muse's attention decode. The link for this is located here: https://openkernelchallenge.dev/problems/muse_attention_decode",
+          "default_branch": "main",
+          "license": null
+        }
+      ]
+    },
+    {
+      "kind": "repositories",
+      "query": "muse spark serving",
+      "total": 2,
+      "incomplete": false,
+      "items": [
+        {
+          "name": "meta-muse-tpu-sglang-serving",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/ankdeshm/meta-muse-tpu-sglang-serving",
+          "full_name": "ankdeshm/meta-muse-tpu-sglang-serving",
+          "description": "Meta Muse (Muse-Glimmer-30B, Muse-Spark) serving benchmarks on Cloud TPU v7x and v5p with SGLang-TorchTPU",
+          "default_branch": "main",
+          "license": null
+        },
+        {
+          "name": "okc-muse-spark-kernels",
+          "path": null,
+          "sha": null,
+          "html_url": "https://github.com/hariappi/okc-muse-spark-kernels",
+          "full_name": "hariappi/okc-muse-spark-kernels",
+          "description": "Muse-Spark-Open kernels and SGLang serving work for the Open Kernel Challenge 2026",
+          "default_branch": "main",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          }
+        }
+      ]
+    }
+  ],
+  "limits": "Initial authenticated discovery included our own private repository metadata and many unrelated lexical matches. That private result is excluded from public-source evidence. Use PUBLIC_ONLY_DISCOVERY and separately verified public source metadata for coverage; zero code-search results are not absence proof."
+}
