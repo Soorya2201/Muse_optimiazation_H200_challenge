@@ -5,6 +5,13 @@ not an exhaustive web survey or evidence of a winning score. Exact public
 commits, paths, Git blobs and download hashes are recorded in the discovery
 and source metadata under `research/serving/`. No peer harness was executed.
 
+Next checkpoint: [native MoE validation](NATIVE_VALIDATION.md) now has a
+prepared real-kernel comparison tool, with source-preparation evidence only.
+The [Humming audit](HUMMING_FEASIBILITY_2026-11-09.md) pins both current public
+upstream and the exact0.1.12dependency already declared by SGLang. Its older
+API/tuner, Muse's post-expert norm and graph lock ownership constrain a port.
+No Humming install, execution, speedup or new submission patch is claimed.
+
 ## Implemented mechanisms
 
 | Mechanism | Source/evidence | Our implementation and unresolved question |

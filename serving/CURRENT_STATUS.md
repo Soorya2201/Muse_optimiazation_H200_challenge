@@ -62,6 +62,14 @@ collective. They do not execute GPU code or validate the deployed image. The
 developer GPU component script uses real Triton/PyTorch NCCL and graphs but is
 unrun; it still cannot replace full SGLang/serving validation.
 
+The new [native MoE validation harness](NATIVE_VALIDATION.md) is also prepared
+and GPU-unrun. Its CPU plan applies four isolated/combined MoE variants,
+extracts ten exact methods including stock, and confirms identical finalization
+AST hashes. It plans real NVFP4 preparation, native projections and finalizers,
+poisoned inactive slots, dense references, fresh-input graphs and paired timing.
+The pinned upstream unit test's EP-policy assertions conflict with candidate06;
+that static incompatibility is documented, not hidden or called a GPU failure.
+
 ## Next execution steps
 
 1. Recheck current rules/opening and available serving checks. With the current
@@ -82,11 +90,17 @@ unrun; it still cannot replace full SGLang/serving validation.
    released 8-position drafter; single-layout expert fusion without duplicate
    model weights; communication overlap that preserves state/stream correctness.
    These are unimplemented hypotheses, not novelty or performance claims.
+   The [Humming feasibility audit](HUMMING_FEASIBILITY_2026-11-09.md) found the
+   base already declares Humming0.1.12. Its exact source/API was inspected
+   separately from current upstream: no package install, execution or port.
+   Next larger-kernel experiment is that pinned backend with unchanged BF16/
+   FP32 precision and Muse normalization, avoiding duplicated model layouts.
 
 The new [optimization library](OPTIMIZATION_LIBRARY.md) records implemented
 mechanisms, precise public sources, rejected workspace reuse (graph-lock
 alias/deadlock risk), constraints and prioritized next work. The public review
-now includes nine selected repository trees plus two upstream vLLM files.
+includes nine selected project trees plus upstream Humming source/archive
+screens and two upstream vLLM files; downloaded does not mean fully audited.
 No peer harness was executed, and external performance is not our score.
 
 No rented hardware has been ordered. An asynchronous question about existing

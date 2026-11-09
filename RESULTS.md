@@ -1,5 +1,14 @@
 # Run log
 
+Serving native-validation checkpoint, Nov9: prepared exact-method native MoE
+comparison/graph/timing harness; only CPU source preparation ran (ten compiled
+methods, five source hashes, identical finalization AST). No GPU result or new
+serving score. Audited the exact Humming0.1.12dependency declared by the base,
+separately from current upstream. Its NVFP4 API is a possible larger-kernel
+experiment, but newer tuning, Muse normalization, canonical layout memory and
+graph lock safety require validation. See serving/NATIVE_VALIDATION.md and
+serving/HUMMING_FEASIBILITY_2026-11-09.md. Existing candidate hashes unchanged.
+
 Serving Nov9 follow-up: an official candidate01check request at23:07:40UTC
 was rejected before job creation because serving opens Nov12at9amPT. Exact
 request/response: serving/OFFICIAL_CHECK_ATTEMPT_2026-11-09.json; jobs remained

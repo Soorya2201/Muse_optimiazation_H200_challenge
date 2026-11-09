@@ -1,0 +1,52 @@
+{
+  "captured_utc": "2026-11-09T23:24:10.133303+00:00",
+  "artifact_sha256": "c96c37c95f74379067d2d2d0c5154d12ee9a8cfa29a7c3370a7f3e34f207ca72",
+  "scope": "Additional pinned0.1.12 source reads; no library execution or port.",
+  "files": [
+    {
+      "path": "humming/config/config.py",
+      "bytes": 15937,
+      "sha256": "1506582adac8e9332298f10d9798be7b04f2eee96a84732b2c724fce4ee66dd1"
+    },
+    {
+      "path": "humming/forward.py",
+      "bytes": 4407,
+      "sha256": "0ebbf281e3bca07d61b113958006ec2efd41d6de4aa640cab5087d53039839d7"
+    },
+    {
+      "path": "humming/jit/compiler.py",
+      "bytes": 9771,
+      "sha256": "eec1a446cb2cf1ef7c05610b8b22b88dc6782a3436a137a415861fabff764d64"
+    },
+    {
+      "path": "humming/jit/runtime.py",
+      "bytes": 4207,
+      "sha256": "5966afcc5d0ad0d45bc14e9353b4b90d68740d6cce52c3e7bc76bb53227d291f"
+    },
+    {
+      "path": "humming/schema/base.py",
+      "bytes": 11300,
+      "sha256": "ae2bd0108511186d2cc3940496d764c58d665985dd2ed87e9c837a8d83c73662"
+    },
+    {
+      "path": "humming/schema/humming.py",
+      "bytes": 14655,
+      "sha256": "b4d97879731e4d12ea5adbf6b56a66425bd698b77ae85c0574d2b4fde8fd93f1"
+    },
+    {
+      "path": "humming/schema/modelopt.py",
+      "bytes": 8644,
+      "sha256": "8d4528f1ac4206619c86e1515ba314a637de1ecf5f84a3c796cea44ffe8a9a63"
+    },
+    {
+      "path": "humming/transform.py",
+      "bytes": 19495,
+      "sha256": "3ef5c6e7281d1335f33239994c3b1cccbb131d92c3b5ff37fcbd1099a5dcbe0e"
+    },
+    {
+      "path": "humming/tune/sm90.py",
+      "bytes": 6158,
+      "sha256": "ebbcc1d834a46087299d1148373f8be307afcb6b6a60a09c9ca3ff6711558fc5"
+    }
+  ]
+}

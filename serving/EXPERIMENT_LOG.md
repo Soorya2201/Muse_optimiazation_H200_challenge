@@ -71,3 +71,41 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
 - First official check sequence when open: 01, 06, 02. Test04 separately as budget
   or an existing development node permits. Only choose a scored composition
   after sufficient evidence; avoid treating a small check as all-load validation.
+
+## Nov 9 continuation: native validation and pinned Humming feasibility
+
+- Previous goal turn was progress: two isolated candidates and documented
+  sources were pushed as6640357. Continuing the owner's serving objective;
+  the old kernel tracker text was not treated as a new task replacement.
+- New native MoE component harness prepares exact stock/01/04/06/07methods
+  from frozen patches. CPU source-preparation receipts preserve the initial
+  plan, explicit unchanged-finalization assertion, and expanded row coverage
+  for seven/eight positions per request at concurrency1/4/16/32. Five source
+  hashes match the prior manifests; all ten methods compile. This is source
+  preparation only, not a GPU or numerical pass. No candidate diff changed.
+- Inspected pinned upstream `test_muse_marlin_inactive_routes`: its strong
+  poisoned-buffer/dense-reference tests also assert old EP flags/count shape.
+  Eight parameter combinations would conflict with06before checking arithmetic.
+  This is static evidence; no native test run or quality waiver is claimed.
+  No upstream test was edited. The new harness adds actual native projections,
+  normalization, stock pairing, poison masks, dense references and fresh-input
+  graphs, with incremental receipts/errors and optional balanced paired timing.
+- Found official SGLang pyproject already declaresHumming0.1.12cu13. Verified
+  and inventoried the exact PyPI source archive by SHA256,291regular files;
+  six initial/nine additional selected files fetched. Read bounded schema/API/
+  tuning sections, not every source file. No install/build/import/execution.
+- Also inventoried current Apache2publicHumming3f2fa223,309files/eightselected
+  downloads. Current small-row tuning uses newer abstractions absent from the
+  pinned tuner; latest advertised H200 figures cannot be assigned to0.1.12.
+  The current header tree alone is533,181bytes, exceeding the400KBdiffcap.
+  The old fullhumming tree is816,019bytes; archive compression is irrelevant
+  to submission source size. Existing dependency is the practical first route.
+- Humming's generic SGLang runner directly weights/sums down projections,
+  without Muse post-expert normalization. Direct substitution is unsuitable.
+  Future spike must use the projection API, one canonical weight layout,
+  unchanged BF16/FP32 precision, stock gate/up scales, existing finalization
+  and demonstrated graph lock ownership. No speculative Humming patch added.
+- A documentation patch first failed atomically on an incorrect library-file
+  context; inspected status and reapplied with correct anchors. No evidence or
+  source candidate was overwritten. No official check request was repeated;
+  serving remains unopened, no live GPU handle or new score.

@@ -1,5 +1,23 @@
 # Current handoff: serving challenge (November9)
 
+Latest native-validation/Humming checkpoint: the new MoE component harness is
+prepared and GPU-unrun. CPU source-preparation reports apply 01/04/06/07 to
+isolated indices and compile ten exact methods including stock. Finalization
+AST hashes are identical across five variants; source hashes match the frozen
+manifests. See NATIVE_VALIDATION.md for scope, commands and unrun GPU checks.
+Default dimensions are synthetic 256/128, with one GPU simulating EP ownership.
+Upstream inactive-route tests assert the old EP flags before arithmetic;
+candidate 06 conflicts with those assertions. No upstream test was run/waived.
+The pinned base declares Humming 0.1.12. Downloaded/hashed its exact source
+archive c96c37c95f74379067d2d2d0c5154d12ee9a8cfa29a7c3370a7f3e34f207ca72.
+Screened old NVFP4/schema/API/SM90 sections against current head 3f2fa223.
+Current tuning is newer; do not assume it exists in 0.1.12. No package was
+installed/executed or port implemented. Feasibility notes identify the next
+spike: one canonical layout, BF16/FP32, exact Muse norm and graph lock ownership.
+The generic runner combines experts without Muse post-norm, so it cannot be
+used unchanged. Source metadata is under research/serving. No official request
+was repeated this turn; the serving objective remains incomplete.
+
 Latest follow-up: official candidate01check request rejected at23:07:40UTC:
 track opensNov12at9amPT, no handle/job. Saved request/response; jobs[]after.
 Repo freshly verifiedPRIVATE. Added isolated04fused expert-ID remap and06local
