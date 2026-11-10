@@ -1,5 +1,28 @@
 # Native validation prepared for an existing Hopper node
 
+The separate `--norm-overlap` mode now prepares stock/candidate08 coordinator
+comparison using the exact stock Marlin methods, actual router/fused routing,
+BF16 projection and standard pre-norm/weight-first post-norm. It uses the same
+small one-GPU synthetic weights and installed candidate07 source fixture below;
+the candidate08 coordinator is compiled from its isolated patch rather than
+installed into that checkout. This isolates scheduling from the other fixes.
+It covers projection present/absent, random/local/peer routing, eager norm and
+route observations, fresh-input/bias graph replay and paired AB/BA whole-MoE
+timing. Optional eager profiler timelines are saved separately and never used
+as timing samples. No inter-rank communication is executed.
+
+```sh
+python tools/benchmark_serving_moe_candidates.py --norm-overlap --plan-only --output /tmp/norm-plan.json
+python tools/benchmark_serving_moe_candidates.py --norm-overlap --norm-overlap-traces --benchmark --output /tmp/norm-native.json
+```
+
+Only source-plan mode has run. The final receipt is
+`NORM_OVERLAP_NATIVE_PLAN_CHECKED_2026-11-10.json`; it hashes the fixture tools,
+norm and coordinator sources and records `native_gpu_executed: false`.
+CUDA-selected norm and exact coordinator CPU checks are in
+`NORM_OVERLAP_CPU_CHECKED_2026-11-10.json`, with explicit routing/stream/expert
+doubles. See [the design](designs/HOPPER_NORM_OVERLAP.md) for promotion gates.
+
 Optional `--humming-prototype` now adds the separate development adapter.
 See [HUMMING_PROTOTYPE.md](HUMMING_PROTOTYPE.md) for source/CPU evidence and
 the no-Stream-K precision guard. That flag has run in source-plan mode only;

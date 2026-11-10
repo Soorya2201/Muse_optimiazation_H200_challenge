@@ -1,0 +1,105 @@
+{
+  "scope": "Native one-GPU Muse MoE validation; synthetic weights, no serving score.\n\nCPU source preparation:\n  python tools/benchmark_serving_moe_candidates.py --plan-only --output /tmp/moe-plan.json\nOn an existing Hopper development node with candidate07 installed in the pinned image:\n  python tools/benchmark_serving_moe_candidates.py --benchmark --output /tmp/moe-gpu.json\nDefaults use small synthetic dimensions. Local EP ownership is simulated on one\nGPU; this does not run inter-rank communication or validate the full model.\n",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "requested_utc": "2026-11-10T03:49:38.670438+00:00",
+  "configuration": {
+    "sglang": "/Users/soorya/muse_work/serving_20261109/serving/current/sglang",
+    "output": "serving/NORM_OVERLAP_NATIVE_PLAN_CHECKED_2026-11-10.json",
+    "plan_only": true,
+    "benchmark": false,
+    "humming_prototype": false,
+    "norm_overlap": true,
+    "norm_overlap_traces": true,
+    "candidates": [
+      "density",
+      "map",
+      "prefix",
+      "combined"
+    ],
+    "rows": [
+      1,
+      4,
+      7,
+      8,
+      16,
+      28,
+      32,
+      112,
+      128,
+      224,
+      256
+    ],
+    "experts": 256,
+    "ep": 8,
+    "rank": 0,
+    "hidden": 256,
+    "intermediate": 128,
+    "topk": 8,
+    "rounds": 20,
+    "repeats": 10,
+    "rtol": 0.01,
+    "atol": 0.01
+  },
+  "state": "source_preparation_passed_only",
+  "native_gpu_executed": false,
+  "sources": {
+    "stock": {
+      "source_sha256": "145f49706a272e388e069eb13039c96805b35ab71dd5aa71c7b2b44cef9b0be1",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "dcaa9bc36a3c12818a0bd88eda6d79938fa127f15c36352d7934a3955720b77e",
+        "_forward_marlin": "24ae29dce14cc4906175fe1f0929cf60e509dd687fb8cbf48fefd6b337ed4ad5"
+      }
+    },
+    "density": {
+      "patch_sha256": "19e7e68418c960399c9721dcf6f6e6927328414a19ae0cb67af15abc7fcd66f7",
+      "source_sha256": "c0a7a3bd71e36af6daabe5c61a53fc4df370ef4ef38e275aa679dd0d9e322741",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "a85d10fc63406fd7e0ab995025260c31f5ce6b8172c8382d9025e496864b7c50",
+        "_forward_marlin": "24ae29dce14cc4906175fe1f0929cf60e509dd687fb8cbf48fefd6b337ed4ad5"
+      }
+    },
+    "map": {
+      "patch_sha256": "7439113a2be0084832bb3ae0b86086ec64b64d277b70b926478145060a8ef3c1",
+      "source_sha256": "dce4a39d45166e6096b284cb98fc45290a4c98cfff9f37e419fee3d70f2414f9",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "9b0e338735bff775ce9c7bf74d50cb7186328d92a5992b5bbbdafa3fca68f813",
+        "_forward_marlin": "24ae29dce14cc4906175fe1f0929cf60e509dd687fb8cbf48fefd6b337ed4ad5"
+      }
+    },
+    "prefix": {
+      "patch_sha256": "8a28f4c5273f62ebaf80ef95abe540d714b98eaffa299b2f3bb2c4a9e836f642",
+      "source_sha256": "6638bed1cbcc5d3a6b38af49f863127b922d75421fe511b14a592defdb70a6f4",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "7aa10a2eb0d83d44682fd48c8d8c4998a5a7ce631d9460c10d5c4c9e27c8e8f2",
+        "_forward_marlin": "24ae29dce14cc4906175fe1f0929cf60e509dd687fb8cbf48fefd6b337ed4ad5"
+      }
+    },
+    "combined": {
+      "patch_sha256": "0ae82e6badc3bd52a669a75d6e3bcfbf8ebd0df378ebffb7f1de31442e5d8cf2",
+      "source_sha256": "5d9f6b167d578f69775f8c1de45b1846984d67784cbe94212897ceb13b79830f",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "42046e79076c7014b8de285a83182c6bc75475fe2026e45094494a1ba1b48020",
+        "_forward_marlin": "24ae29dce14cc4906175fe1f0929cf60e509dd687fb8cbf48fefd6b337ed4ad5"
+      }
+    }
+  },
+  "norm_overlap_sources": {
+    "stock": {
+      "source_sha256": "71bbed3a8c253b046c21e18fcb2f09a9fc09820c6e7fbc1451ba693d93513a95",
+      "method_ast_sha256": "fe9d6e9e540d3a0f0b6390c988ea37683f7814464071153f137b90b4e2594a38"
+    },
+    "overlap": {
+      "source_sha256": "c4f70af5859a8cd7db49baf4a8f057b39fbdd57c68540f751fffc48780a12bc3",
+      "method_ast_sha256": "9f14680919777f05a605546f24548c3614e374ad4d05a368918656b44bf05484"
+    },
+    "norm_source_sha256": "930e66da715bae576ae681f2dfd8353a36a9ca469a229d88fa3f77bc1e74cef0",
+    "patch_sha256": "da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108",
+    "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "ast_hash_scope": "Interpreter-specific AST schema; compare source SHA256 across Python versions"
+  },
+  "norm_overlap_tools": {
+    "benchmark_serving_moe_candidates.py": "3cacc4a88f593eea3b82f2ca75cba0e36046bfbf182f328942491bdbecd5e2c5",
+    "preflight_serving_norm_overlap.py": "32e5d1342530b36ff1eb6f1e17a74a12eda2507bd038a2d584eabef8f6a80323",
+    "serving_norm_overlap_cuda.py": "5777d6430b0baf77cc5c6d471c80e11f43059836c7881a5ee193eaa93a5d1dc0"
+  }
+}

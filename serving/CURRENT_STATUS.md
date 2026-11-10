@@ -1,5 +1,23 @@
 # Serving checkpoint — Nov 9 2026
 
+Nov 10 UTC approach-development continuation: isolated
+[candidate08](candidates/08_marlin_norm_overlap.diff) now moves the existing
+Marlin pre-norm before the router join. It is 1,343 bytes, applies to the
+official base and passes 4,320 paired CPU coordinator/norm cases. This includes
+128 eligible nonempty relocations; the other 4,192 empty/fallback cases retain
+stock ordering. Simulated streams/experts are not CUDA/Marlin validation.
+The [design and gates](designs/HOPPER_NORM_OVERLAP.md) explain its conditional
+benefit and why it can regress. An optional native whole-coordinator experiment
+with actual router/Marlin, fresh-input graphs, paired timing and profiler traces
+is prepared; only source-plan mode ran. Receipts end in
+`NORM_OVERLAP_CPU_CHECKED_2026-11-10.json` and
+`NORM_OVERLAP_NATIVE_PLAN_CHECKED_2026-11-10.json`.
+Candidate07/current patch and the Humming prototype are unchanged. Candidate08
+is not part of a combined submission and does not displace the first planned
+official checks without representative evidence. No official run or GPU job
+was requested in this continuation. The previous goal turn was research
+progress; this resumed turn adds an executable experiment, not a verified wait.
+
 Owner requested continued concept research while GPU execution is unavailable.
 The [new research playbook](RESEARCH_PLAYBOOK_2026-11-10.md) covers 18 concept
 families from 12 primary sources, with bounded read scopes. It adds a
@@ -44,6 +62,7 @@ diffs and downloaded current rules are committed and reproducible.
 | [05_combined_with_expert_map.diff](candidates/05_combined_with_expert_map.diff) |01+02+04 | Packaging only |
 | [06_local_alignment_prefix.diff](candidates/06_local_alignment_prefix.diff) | Align local expert buckets and enable existing Marlin sorted/inactive-prefix specialization after global-to-local mapping |420 exact-method CPU contract cases/840 instrumented GEMM calls pass; native kernels untested |
 | [07_all_candidates.diff](candidates/07_all_candidates.diff) | All four mechanisms | Packaging only; not a proven strongest submission |
+| [08_marlin_norm_overlap.diff](candidates/08_marlin_norm_overlap.diff) | Move the same pre-expert norm before the existing router join on non-SP CUDA Marlin |4,320 paired CPU cases and packaging pass; native scheduling/math/performance unproven |
 
 Candidate 03 is 7,065 bytes across 3 files. The latest development checkout and
 `current/patch.diff` match candidate 07, 12,186 bytes across 4 files. Longest added

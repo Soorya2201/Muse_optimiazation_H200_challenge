@@ -1,0 +1,37 @@
+{
+  "captured_utc": "2026-11-10T03:46:04.489655+00:00",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "sources": {
+    "stock": {
+      "source_sha256": "71bbed3a8c253b046c21e18fcb2f09a9fc09820c6e7fbc1451ba693d93513a95",
+      "method_ast_sha256": "fe9d6e9e540d3a0f0b6390c988ea37683f7814464071153f137b90b4e2594a38"
+    },
+    "overlap": {
+      "source_sha256": "c4f70af5859a8cd7db49baf4a8f057b39fbdd57c68540f751fffc48780a12bc3",
+      "method_ast_sha256": "9f14680919777f05a605546f24548c3614e374ad4d05a368918656b44bf05484"
+    },
+    "norm_source_sha256": "930e66da715bae576ae681f2dfd8353a36a9ca469a229d88fa3f77bc1e74cef0",
+    "patch_sha256": "da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108"
+  },
+  "tool_sha256": "09af69cee08a3ac6487c7ada2854f20b60e0288dedba78301690f0f7eeaace46",
+  "checks": {
+    "paired_cases": 4320,
+    "eligible_nonempty_cases": 128,
+    "empty_cases": 864,
+    "fallback_nonempty_cases": 3328,
+    "exact_outputs": 4320,
+    "norm_kind_cases": {
+      "none": 1440,
+      "standard": 1440,
+      "weight_first": 1440
+    },
+    "configurations": {
+      "cpu": 1440,
+      "cuda_unavailable": 1440,
+      "simulated_cuda": 1440
+    },
+    "torch": "2.15.0",
+    "cuda_executed": false,
+    "scope": "CPU exact coordinator/norm bodies; simulated streams/routing/experts; no GPU math, capture or performance validation"
+  }
+}

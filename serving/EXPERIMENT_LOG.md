@@ -217,3 +217,30 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
 - No official request repeated, new submission diff, native timing, serving
   score or rank. Frozen candidate/prototype hashes are preserved. Publish
   research/model/design artifacts to the existing private branch and draft PR.
+
+## Nov 10 UTC: implement the norm-overlap experiment
+
+- User explicitly resumed approach development; new goal tracker is active.
+  Prior goal turn was concrete research progress, not a verified wait.
+- Candidate08 moves the same pre-expert norm before the existing router join
+  only for non-SP CUDA NVFP4 Marlin with a norm. The later call receives None
+  for that invocation; module state, routing, weights and precision are unchanged.
+  Source packaging passes: 1,343 bytes, one file, longest added line74 bytes.
+- Exact stock/candidate coordinator bodies and actual stock norm bodies execute
+  on CPU:4,320 paired output/input matches,128 eligible relocations,3,328
+  nonempty fallbacks and864 empty cases. Stream/routing/expert doubles explicitly
+  exclude CUDA, native Marlin arithmetic, capture correctness and performance.
+- First fixture failed on stock record_stream because fake packed route IDs
+  were a tuple. Corrected that double to a tensor; no candidate change. One
+  documentation anchor failed atomically and was corrected. Development JSON
+  preserves these failures. AST hashes vary by Python schema; final receipts
+  include the interpreter and portable source SHA256. Earlier receipts retained.
+- Optional --norm-overlap native mode now prepares the exact coordinators with
+  actual router/fused routing/BF16 projection/norm and stock Marlin. It plans
+  eager norm/route comparisons, fresh-input/bias graph replay, paired AB/BA
+  whole-coordinator timing and separate optional profiler timelines. Only its
+  source-plan mode ran. One-GPU synthetic EP fixture is not full serving.
+- Candidate07/current patch and Humming prototype hashes unchanged. No composite
+  candidate, official request, GPU job, paid hardware or performance claim.
+  Candidate08 needs representative slack/contended-timing evidence and native
+  validation before promotion; first official checks remain01/06/02.

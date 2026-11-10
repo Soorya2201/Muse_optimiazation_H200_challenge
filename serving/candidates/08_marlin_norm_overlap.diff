@@ -1,0 +1,30 @@
+diff --git a/python/sglang/srt/models/muse_spark.py b/python/sglang/srt/models/muse_spark.py
+--- a/python/sglang/srt/models/muse_spark.py
++++ b/python/sglang/srt/models/muse_spark.py
+@@ -836,6 +836,17 @@
+             topk_scores, topk_ids, packed_topk_ids = self._routing_op()(
+                 None, router_logits, self.top_k, True, want_packed=True
+             )
++        pre_expert_norm = self.pre_expert_norm
++        if (
++            use_side_stream
++            and self.nvfp4_checkpoint
++            and getattr(self.experts, "use_marlin", False)
++            and not sp_active
++            and pre_expert_norm is not None
++        ):
++            # Norm depends on expert input, not on the side-stream router.
++            expert_input = pre_expert_norm(expert_input)
++            pre_expert_norm = None
+         if use_side_stream:
+             main_stream.wait_stream(side_stream)
+         if use_side_stream and not torch.cuda.is_current_stream_capturing():
+@@ -867,7 +878,7 @@
+                 topk_scores,
+                 topk_ids,
+                 self.experts.post_expert_norm,
+-                pre_expert_norm=self.pre_expert_norm,
++                pre_expert_norm=pre_expert_norm,
+                 prepared_input=prepared_input,
+                 packed_topk_ids=packed_topk_ids,
+                 ar_workspace=ar_workspace,

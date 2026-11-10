@@ -1,5 +1,22 @@
 # Current handoff: serving challenge (November9)
 
+Nov10 UTC resumed approach development: isolated candidate08 implements
+pre-norm-before-router-join (1,343B; SHA da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108).
+4,320 exact stock/candidate CPU coordinator cases pass:128 eligible nonempty,
+3,328 nonempty fallback,864empty. Norm bodies are official CUDA-selected
+arithmetic on CPU; streams/routing/experts are doubles. First fixture failure
+used a tuple for a tensor packed-route handle; fixed the fixture, not patch.
+Final receipts NORM_OVERLAP_CPU_CHECKED / NORM_OVERLAP_NATIVE_PLAN_CHECKED
+2026-11-10 include source/tool hashes. Python AST hashes depend on interpreter
+schema; portable source SHA256 agrees. Optional native --norm-overlap mode
+uses actual router/projection/norm and stock Marlin, fresh graphs, AB/BA timing,
+optional profiler timelines; GPU-unrun. It does not alter candidate07/current
+patch, create a combined candidate or replace first official checks01/06/02.
+No native win or score. Do not promote without traces/native/full-model gates.
+User cleared old tracker and resumed active approach-development goal;
+tools.get_goal confirms it. Previous goal turn and current turn are concrete
+progress, no live GPU wait, no blocked status update in this resumed turn.
+
 Latest owner explicitly requested concept research until GPU execution opens.
 RESEARCH_PLAYBOOK_2026-11-10.md now covers 18 families/12 primary sources with
 versioned bounded read scopes. Six official-base source hashes recorded.
@@ -12,7 +29,8 @@ New source-derived design at serving/designs/HOPPER_NORM_OVERLAP.md: existing
 router/projection streams already permit overlap; Marlin norm is after join.
 Potential same-op norm-before-join saving min(N,max(0,R-P)) under fixed phase
 durations; no gain when router already finishes first, contention can regress.
-Do not implement/claim it without trace evidence and native tests. Primary
+An isolated experiment is now prepared above; do not promote or claim it
+without trace evidence and native tests. Primary
 papers and pinned DeepEP README screened, no new library execution. Public
 released-model config read got401; no dimensions invented/access bypass.
 Research was authorized despite the unchanged GPU execution blocker. Continue

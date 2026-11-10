@@ -1,0 +1,38 @@
+{
+  "recorded_utc": "2026-11-10T03:51:45.725160+00:00",
+  "scope": "Approach-development observations; not a GPU or official run",
+  "prior_turn_classification": "progress: private research playbook, primary-source audit and analytical tools committed/pushed as f35aeec",
+  "goal": "User cleared prior tracker and resumed approach development; current tracker confirmed active",
+  "candidate": "serving/candidates/08_marlin_norm_overlap.diff",
+  "failures": [
+    {
+      "phase": "initial CPU coordinator fixture",
+      "error": "AttributeError: 'tuple' object has no attribute 'record_stream'",
+      "location": "official stock _forward_experts, cross_stream_tensors iteration",
+      "cause": "Fixture represented packed_topk_ids as a Python tuple rather than a tensor",
+      "resolution": "Corrected the routing double to return a tensor; candidate source unchanged",
+      "classification": "test fixture error, not native or candidate failure",
+      "initial_tool_sha256": null,
+      "initial_tool_sha256_note": "Not captured before the fixture correction; do not invent a hash"
+    },
+    {
+      "phase": "documentation edit",
+      "error": "apply_patch expected-line mismatch in HOPPER_NORM_OVERLAP.md",
+      "cause": "Paragraph wrapping differed from edit anchor",
+      "resolution": "Applied corrected exact context; first attempt changed no file",
+      "classification": "atomic documentation edit failure"
+    }
+  ],
+  "interpretation_notes": [
+    "Early CPU/plan reports used different Python AST schemas. Portable source SHA256 agrees; final receipts record Python version and interpreter-specific AST hash scope.",
+    "4,320 paired CPU cases are dataflow/norm checks with doubles, not Marlin/CUDA numerical or stream checks.",
+    "Source-plan success does not import/execute native coordinator code on GPU.",
+    "No official check, submit, hardware rental or GPU job was requested this continuation.",
+    "Candidate07/current patch and Humming prototype remain frozen. Candidate08 stays isolated and unselected."
+  ],
+  "final_evidence": [
+    "serving/PATCH_MANIFEST_NORM_OVERLAP_2026-11-10.json",
+    "serving/NORM_OVERLAP_CPU_CHECKED_2026-11-10.json",
+    "serving/NORM_OVERLAP_NATIVE_PLAN_CHECKED_2026-11-10.json"
+  ]
+}

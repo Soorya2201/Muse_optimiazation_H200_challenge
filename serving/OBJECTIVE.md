@@ -27,8 +27,11 @@ The old kernel work remains reference material. Its old per-track sequence and
 old AGENTS.md instructions were revoked by the owner. The earlier serving plan
 used an obsolete SGLang commit and patch limit; use CURRENT_STATUS.md instead.
 
-The goal-management API refused to replace the unfinished kernel goal, returning
+Historically the goal-management API refused to replace the unfinished kernel goal, returning
 `cannot create a new goal because this thread has an unfinished goal; complete the existing goal first`.
 The old objective was not achieved and must not be falsely marked complete.
-This file records the user's replacement objective; the tracker limitation is
-not a blocker to carrying out serving work.
+That limitation did not block serving work. On this continuation the user
+cleared the old goal and explicitly created the active goal
+`resume ( but for makeing thebets approcach )`. The tracker now confirms that
+objective is active. It authorizes continued approach development toward the
+serving objective above; CPU/source progress does not complete the full goal.

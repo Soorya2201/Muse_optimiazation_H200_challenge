@@ -1,5 +1,11 @@
 # Serving research and experiment playbook
 
+Approach-development update: the norm-overlap design now has an isolated
+[candidate08 experiment](candidates/08_marlin_norm_overlap.diff), 4,320 paired
+CPU coordinator/norm checks, and an optional native whole-MoE experiment.
+The native path has only passed source preparation; no measured benefit or
+submission selection follows. See [design/evidence](designs/HOPPER_NORM_OVERLAP.md).
+
 This pass answers the owner's request to keep learning/developing while GPU
 execution is unavailable. Twelve primary sources and six pinned SGLang files
 were reviewed in bounded sections; exact versions/read limits are recorded in

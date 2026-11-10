@@ -1,5 +1,13 @@
 # Serving optimization library
 
+Approach-development update: [candidate08](candidates/08_marlin_norm_overlap.diff)
+implements the playbook's norm-before-router-join experiment in isolation.
+4,320 paired CPU cases pass; native whole-coordinator comparison and timelines
+are prepared and GPU-unrun. It can only hide normalization within remaining
+router slack, and may lose to resource contention. It remains outside the
+combined patch and needs representative traces/native evidence before an
+official check. [Design/evidence](designs/HOPPER_NORM_OVERLAP.md).
+
 The [concept research playbook](RESEARCH_PLAYBOOK_2026-11-10.md) expands this
 library to 18 concept families with 12 primary sources, exact read scopes and
 an experiment decision order. It includes a source-derived normalization

@@ -186,6 +186,13 @@ def run_cuda(args, codes, report, save):
             layer._post_expert_norm_weight_first = weight_first
         return norm
 
+    if args.norm_overlap:
+        from serving_norm_overlap_cuda import run as run_norm_overlap
+        with torch.inference_mode():
+            norm = configure_norm(True, True)
+            run_norm_overlap(args, functions['stock'], norm, report, save)
+        return
+
     def inputs(rows, pattern):
         ids = torch.rand(rows, args.experts, device='cuda').topk(args.topk, dim=1).indices.int()
         if pattern == 'local':
@@ -349,6 +356,10 @@ def main():
     parser.add_argument('--benchmark', action='store_true')
     parser.add_argument('--humming-prototype', action='store_true',
                         help='Include the separate development adapter; not a submission patch')
+    parser.add_argument('--norm-overlap', action='store_true',
+                        help='Isolated stock/candidate08 coordinator experiment with stock Marlin')
+    parser.add_argument('--norm-overlap-traces', action='store_true',
+                        help='Export separate eager CPU/CUDA timelines for that experiment')
     parser.add_argument('--candidates', nargs='+', choices=list(PATCHES), default=list(PATCHES))
     parser.add_argument('--rows', type=int, nargs='+',
                         default=[1, 4, 7, 8, 16, 28, 32, 112, 128, 224, 256])
@@ -368,6 +379,8 @@ def main():
     assert 0 <= args.rank < args.ep and 0 < args.topk <= args.experts//args.ep
     assert args.hidden % 128 == args.intermediate % 128 == 0
     assert args.hidden > 0 and args.intermediate > 0
+    assert not (args.norm_overlap and args.humming_prototype), 'Keep backend and scheduling experiments isolated'
+    assert not args.norm_overlap_traces or args.norm_overlap
     assert len(set(args.candidates)) == len(args.candidates)
     assert min(args.rows) > 0 and args.rounds >= 2 and args.repeats > 0
     report = dict(scope=__doc__, base=BASE, requested_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -379,6 +392,13 @@ def main():
     try:
         codes, manifest = prepare_sources(args.sglang, args.candidates)
         report['sources'] = manifest
+        if args.norm_overlap:
+            from preflight_serving_norm_overlap import prepare_sources as prepare_coordinator
+            _, report['norm_overlap_sources'] = prepare_coordinator(args.sglang)
+            report['norm_overlap_tools'] = {name: hashlib.sha256((ROOT/'tools'/name).read_bytes()).hexdigest()
+                for name in ('benchmark_serving_moe_candidates.py', 'preflight_serving_norm_overlap.py',
+                             'serving_norm_overlap_cuda.py')}
+            compile(ast.parse((ROOT/'tools/serving_norm_overlap_cuda.py').read_text()), '<CUDA coordinator fixture>', 'exec')
         if args.humming_prototype:
             data = (ROOT/'serving/prototypes/humming_moe.py').read_bytes()
             compile(ast.parse(data.decode()), '<development Humming adapter>', 'exec')
