@@ -1,5 +1,17 @@
 # Serving checkpoint — Nov 9 2026
 
+Latest execution audit: at06:34UTCNov10 the official candidate01 check was
+again rejected before job creation; the endpoint confirms **Nov12,9a.m.Pacific**.
+Fresh jobs are empty; local CUDA count is0; the successful compiler CI is
+terminal. See [the new blocked audit](EXECUTION_BLOCKER_AUDIT_2026-11-10.md)
+and exact request/resource receipts. Native numerical/graph/all-load quality,
+TTFT, throughput and winning evidence remain missing. The same runtime gate
+has persisted through three consecutive resumed work turns plus this audit.
+Publish this checkpoint, then request the goal's blocked transition; objective
+not complete. First isolated sequence01/06/09 and all frozen source/artifacts
+are preserved. Resume on official opening or an existing authorized Hopper
+node; no GPU job, CI wait or future automatic schedule is running.
+
 The [offline Triton compiler gate](TRITON_OFFLINE_COMPILATION.md) now passes
 actual Hopper code generation/assembly in private CPU CI: five kernels from
 02/04/09 across25specializations. Verified125assembly hashes and25CUDAELF

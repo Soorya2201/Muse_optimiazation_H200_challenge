@@ -1,5 +1,19 @@
 # Current handoff: serving challenge (November9)
 
+Latest gate audit06:34UTCNov10: official check01 rejected exit1beforejob/handle,
+opensNov12at9amPacific. Freshjobs[], localDarwinarm64CUDAfalse/devices0;
+CI42768362132terminalsuccess. EXECUTION_BLOCKER_AUDIT_2026-11-10.md/JSON
+maps full requirements: source/CPU/AOT evidence is bounded; GPU numerics,
+SGLang/NCCL/graphs, actual profiles, all-load answers/220tokens/TTFT, measured
+best composition and winning result remain missing. Not goal completion.
+Same runtime gate persisted through resumedc005d9e/6e3eff8/953b663/currentaudit;
+those prior turns were progress, not verified waits. Fresh blocked audit
+threshold met, independent of old pre-resume goal. Publish checkpoint then
+requestblocked; no native job/CI/future schedule remainslive. Resume onofficial
+execution or existingauthorizedHopper, verifyrules/base/budget, then01/06/09.
+Poll actual returnedJOB_ID using okc serve status JOB_ID --json, never restart
+after an observation timeout. Preserve all9frozenpatch/current07/Humminghashes.
+
 Latest Nov10: actual offline Hopper compilation now passes in private GitHub
 CPU CI. Run42768362132,commit446889ad768d2e52ebe2d025af342ecacb7df4b2,
 25specializations across5exactkernelbodies from frozen02/04/09(9greedy,

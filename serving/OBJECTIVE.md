@@ -32,6 +32,7 @@ Historically the goal-management API refused to replace the unfinished kernel go
 The old objective was not achieved and must not be falsely marked complete.
 That limitation did not block serving work. On this continuation the user
 cleared the old goal and explicitly created the active goal
-`resume ( but for makeing thebets approcach )`. The tracker now confirms that
-objective is active. It authorizes continued approach development toward the
-serving objective above; CPU/source progress does not complete the full goal.
+`resume ( but for makeing thebets approcach )`. The tracker accepted that
+objective. Its status follows the current execution/validation audit. It
+authorizes continued approach development toward the serving objective above;
+CPU/source progress does not complete the full goal.

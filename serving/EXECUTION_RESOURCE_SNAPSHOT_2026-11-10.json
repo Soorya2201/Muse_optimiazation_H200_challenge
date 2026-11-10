@@ -1,0 +1,101 @@
+{
+  "captured_utc": "2026-11-10T06:39:15.634840+00:00",
+  "scope": "Current execution/resources, read-only observations after rejected check; no running wait",
+  "serving_status": {
+    "command": [
+      "/Users/soorya/.okc/bin/okc",
+      "serve",
+      "status",
+      "--json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"priority\": null,\n  \"serving_priority\": null\n}\n",
+    "stderr": "",
+    "parsed": {
+      "priority": null,
+      "serving_priority": null
+    }
+  },
+  "serving_jobs": {
+    "command": [
+      "/Users/soorya/.okc/bin/okc",
+      "serve",
+      "jobs",
+      "--json"
+    ],
+    "returncode": 0,
+    "stdout": "[]\n",
+    "stderr": "",
+    "parsed": []
+  },
+  "local_cuda": {
+    "command": [
+      "/Users/soorya/muse_work/serving_cpu_env/bin/python",
+      "-c",
+      "import json,torch,platform;print(json.dumps(dict(system=platform.system(),machine=platform.machine(),torch=torch.__version__,cuda_available=torch.cuda.is_available(),cuda_devices=torch.cuda.device_count())))"
+    ],
+    "returncode": 0,
+    "stdout": "{\"system\": \"Darwin\", \"machine\": \"arm64\", \"torch\": \"2.15.0\", \"cuda_available\": false, \"cuda_devices\": 0}\n",
+    "stderr": "",
+    "parsed": {
+      "system": "Darwin",
+      "machine": "arm64",
+      "torch": "2.15.0",
+      "cuda_available": false,
+      "cuda_devices": 0
+    }
+  },
+  "ci_run": {
+    "command": [
+      "gh",
+      "run",
+      "view",
+      "42768362132",
+      "--json",
+      "status,conclusion,headSha,url"
+    ],
+    "returncode": 0,
+    "stdout": "{\"conclusion\":\"success\",\"headSha\":\"446889ad768d2e52ebe2d025af342ecacb7df4b2\",\"status\":\"completed\",\"url\":\"https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/actions/runs/42768362132\"}\n",
+    "stderr": "",
+    "parsed": {
+      "conclusion": "success",
+      "headSha": "446889ad768d2e52ebe2d025af342ecacb7df4b2",
+      "status": "completed",
+      "url": "https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/actions/runs/42768362132"
+    }
+  },
+  "private_repo": {
+    "command": [
+      "gh",
+      "repo",
+      "view",
+      "--json",
+      "isPrivate,nameWithOwner"
+    ],
+    "returncode": 0,
+    "stdout": "{\"isPrivate\":true,\"nameWithOwner\":\"Soorya2201/Muse_optimiazation_H200_challenge\"}\n",
+    "stderr": "",
+    "parsed": {
+      "isPrivate": true,
+      "nameWithOwner": "Soorya2201/Muse_optimiazation_H200_challenge"
+    }
+  },
+  "pr": {
+    "command": [
+      "gh",
+      "pr",
+      "view",
+      "1",
+      "--json",
+      "headRefOid,url,isDraft"
+    ],
+    "returncode": 0,
+    "stdout": "{\"headRefOid\":\"953b663c7cb7ab9f620311d4ab594da31e6ceae9\",\"isDraft\":true,\"url\":\"https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/pull/1\"}\n",
+    "stderr": "",
+    "parsed": {
+      "headRefOid": "953b663c7cb7ab9f620311d4ab594da31e6ceae9",
+      "isDraft": true,
+      "url": "https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/pull/1"
+    }
+  }
+}

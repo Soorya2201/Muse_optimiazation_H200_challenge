@@ -327,3 +327,26 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
 - Final git whitespace verification rejected trailing whitespace in the raw
   provider log atline148. Preserved identical raw bytes as gzip with hashes
   instead of editing that log or bypassing the check. No source/compiler change.
+
+## Nov10: native execution blocker audit after compilation
+
+- Previous953b663goal turn was concrete progress: actual offline Hopper code
+  generation/assembly, not a live wait or measured serving gain.
+- One official01check at06:34UTCNov10 after that gate again returned exit1:
+  serving opensNov12at9amPT. Stdout empty, no job/handle. Exact source SHA
+  and raw response preserved in OFFICIAL_EXECUTION_RECHECK_2026-11-10.json.
+- Fresh read-only serving jobs are empty; local Torch2.15reports CUDAfalse/0
+  devices onDarwinarm64. CompilerCI42768362132terminalsuccess; no existing
+  authorizedHopper node supplied. No GPU process or CI wait remains live.
+- New blocked audit maps source/CPU/compiler evidence to full requirements.
+  Native numerics/precision/bounds, SGLang/NCCL/graphs, actual workload profiles,
+  all-load stockanswers/220tokens/TTFT, strongest measured composition and
+  final winning result remain unverified. No completion/score/rank claim.
+- The same runtime gate persisted through resumedc005d9e/6e3eff8/953b663
+  and this fresh audit. Earlier turns made offline progress; the current next
+  empirical action needs an external execution-state change. Fresh blocked
+  threshold satisfied without counting old pre-resume goal turns.
+- Nine frozen patch hashes/current07/compiler archive remain intact. Publish
+  audit privately, then requestblocked. Resume on official opening or existing
+  authorizedHopper; revalidate live rules/base/budget before01/06/09. Poll only
+  an accepted returned handle. No future automatic task or GPU rental created.

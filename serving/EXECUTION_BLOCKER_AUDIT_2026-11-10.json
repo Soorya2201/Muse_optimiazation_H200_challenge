@@ -1,0 +1,143 @@
+{
+  "captured_utc": "2026-11-10T06:39:15.634840+00:00",
+  "goal_objective": "resume ( but for makeing thebets approcach )",
+  "goal_scope": "Continue the full serving improvement/winning objective; do not redefine success as CPU/source preparation",
+  "prior_goal_turn_classification": "progress:953b663 archived verified actual Hopper compilation, not a live wait",
+  "current_turn": "Revalidated required execution gate; no new measured optimization",
+  "same_blocker": "Official serving closed, no existing authorized Hopper node supplied, localCUDA unavailable; remaining strongest-approach decisions require native/full-model evidence",
+  "resumed_consecutive_turn_evidence": [
+    {
+      "checkpoint": "c005d9e",
+      "work": "Norm-overlap experiment; CPU/source evidence only; no GPU route"
+    },
+    {
+      "checkpoint": "6e3eff8",
+      "work": "Selector targeting correction/09 and intake; source/CPU evidence, officialjobs empty"
+    },
+    {
+      "checkpoint": "953b663",
+      "work": "Actual offline compiler closes codegen gate; CPU CI executes no GPU kernel"
+    },
+    {
+      "checkpoint": "current audit",
+      "work": "Official check rejected Nov12opening; freshjobs empty, CUDA0, CIterminal"
+    }
+  ],
+  "blocked_audit_threshold_met": true,
+  "completion_audit": "Not achieved: native correctness, all-load quality/TTFT, measured best composition and winning result remain unverified",
+  "requirements": [
+    {
+      "requirement": "Public concepts/source library and provenance",
+      "evidence": [
+        "serving/RESEARCH_PLAYBOOK_2026-11-10.md",
+        "serving/OPTIMIZATION_LIBRARY.md",
+        "research/serving/SELECTOR_REACHABILITY_AUDIT_2026-11-10.json"
+      ],
+      "status": "Recorded bounded review; not exhaustive-world research or proof of novelty/winning"
+    },
+    {
+      "requirement": "Source package compliance against downloaded official base",
+      "evidence": [
+        "serving/PATCH_MANIFEST_2026-11-09.json",
+        "serving/PATCH_MANIFEST_EXPERT_MAP_2026-11-09.json",
+        "serving/PATCH_MANIFEST_LOCAL_PREFIX_2026-11-09.json",
+        "serving/PATCH_MANIFEST_NORM_OVERLAP_2026-11-10.json",
+        "serving/PATCH_MANIFEST_SELECTOR_2026-11-10.json"
+      ],
+      "status": "Nine immutable diff hashes match application/path/size/AST receipts; revalidate live rules/base on resume"
+    },
+    {
+      "requirement": "Actual compilation of new Triton kernels",
+      "evidence": [
+        "serving/TRITON_AOT_COMPILED_2026-11-10.json",
+        "serving/TRITON_AOT_VERIFIED_2026-11-10.json",
+        "serving/TRITON_AOT_SOURCE_AUDIT_2026-11-10.json"
+      ],
+      "status": "Five kernel bodies /25specializations code-generated and assembled for Hopper; no GPU execution or full-image verification"
+    },
+    {
+      "requirement": "GPU numerical correctness, precision behavior and memory safety",
+      "evidence": [
+        "serving/NATIVE_VALIDATION.md",
+        "serving/SELECTOR_NATIVE_PLAN_2026-11-10.json"
+      ],
+      "status": "Incomplete; only CPU/protocol and source-plan evidence, no native kernel execution"
+    },
+    {
+      "requirement": "Eight-rank transport, SGLang coordinator and graph replay",
+      "evidence": [
+        "tools/benchmark_serving_selector_collective.py",
+        "tools/benchmark_serving_draft_collective.py"
+      ],
+      "status": "Incomplete; prepared PyTorch NCCL fixtures are GPU-unrun and cannot replace full SGLang validation"
+    },
+    {
+      "requirement": "Actual per-load profiles, acceptance and active/padded batch measurements",
+      "evidence": [
+        "serving/MEASUREMENT_INTAKE.md",
+        "serving/ACCEPTANCE_SYNTHETIC_INTAKE_2026-11-10.json"
+      ],
+      "status": "Incomplete; existing observability and parser ready, all intake examples synthetic; no real serving sample"
+    },
+    {
+      "requirement": "Stock-output agreement,220tokens and TTFT<=2x at loads1/4/16/32",
+      "evidence": [
+        "serving/current/RULES.md",
+        "serving/OFFICIAL_EXECUTION_RECHECK_2026-11-10.json"
+      ],
+      "status": "Unverified; official request rejected before job creation"
+    },
+    {
+      "requirement": "Strongest measured composition and repeated full-node performance",
+      "evidence": [
+        "serving/SELECTOR_COLLECTIVE.md",
+        "serving/CURRENT_STATUS.md"
+      ],
+      "status": "Unselected/unmeasured; current07 is historical development composition, first isolated checks01/06/09"
+    },
+    {
+      "requirement": "Official scored result and final first-place evidence",
+      "evidence": [
+        "serving/EXECUTION_RESOURCE_SNAPSHOT_2026-11-10.json"
+      ],
+      "status": "Missing; jobs empty, no score/rank or winner evidence"
+    },
+    {
+      "requirement": "Private GitHub publication and failure log",
+      "evidence": [
+        "serving/EXPERIMENT_LOG.md",
+        "RESULTS.md",
+        "https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/pull/1"
+      ],
+      "status": "Prior implementation/research pushed through953b663; current audit to be pushed before requested goal transition"
+    }
+  ],
+  "source_patch_sha256": {
+    "serving/candidates/09_selector_single_collective.diff": "053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb",
+    "serving/candidates/04_fused_expert_map.diff": "7439113a2be0084832bb3ae0b86086ec64b64d277b70b926478145060a8ef3c1",
+    "serving/candidates/05_combined_with_expert_map.diff": "861ae4cca415edf8f2afa1e5e1a9fa178758fbf12fca801f354894297b21691b",
+    "serving/candidates/01_ep_route_density.diff": "19e7e68418c960399c9721dcf6f6e6927328414a19ae0cb67af15abc7fcd66f7",
+    "serving/candidates/02_draft_single_collective.diff": "83edfbaf18762273e9223d66324f81ec2ab2d46e87a8b3b2e9dd9108737966bf",
+    "serving/candidates/03_combined.diff": "d993efc6451b2a7f2b5856745d5fbe331f81bffb5b10204732895476e22fb7ab",
+    "serving/candidates/08_marlin_norm_overlap.diff": "da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108",
+    "serving/candidates/06_local_alignment_prefix.diff": "8a28f4c5273f62ebaf80ef95abe540d714b98eaffa299b2f3bb2c4a9e836f642",
+    "serving/candidates/07_all_candidates.diff": "0ae82e6badc3bd52a669a75d6e3bcfbf8ebd0df378ebffb7f1de31442e5d8cf2"
+  },
+  "official_request_receipt": "serving/OFFICIAL_EXECUTION_RECHECK_2026-11-10.json",
+  "current_resources": "serving/EXECUTION_RESOURCE_SNAPSHOT_2026-11-10.json",
+  "live_gpu_job_handle": null,
+  "live_ci_run": null,
+  "recommended_goal_transition_after_publication": "blocked",
+  "resume_conditions": [
+    "Official execution accepts jobs (latest rejection saysNov12at9amPacific) or an existing authorized Hopper node is supplied",
+    "Reinitialize and verify live rules/base/budget; preserve frozen candidates and rebase into new artifacts if necessary",
+    "Run first isolated01/06/09checks, record returned handle and poll same handle; preserve failures and verify actual selector path",
+    "Use full-model scored run for all-load correctness/TTFT/performance only after isolated evidence; select strongest composition from measurements"
+  ],
+  "not_authorized_or_done": [
+    "No rented GPU node ordered",
+    "No automatic future run/schedule created",
+    "No old kernel evaluator repurposed",
+    "No rank1/completion claim"
+  ]
+}
