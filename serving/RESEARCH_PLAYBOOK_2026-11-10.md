@@ -1,5 +1,12 @@
 # Serving research and experiment playbook
 
+Latest source correction: the published DFlash2 configuration uses a rank256/
+top-k16 selector, which bypasses candidate02's plain greedy sampler. The
+[selector audit/candidate09](SELECTOR_COLLECTIVE.md) now targets its actual
+top-k metadata exchange. First planned checks are01/06/09; previous01/06/02
+guidance is superseded. [Existing observability intake](MEASUREMENT_INTAKE.md)
+provides a source-traced path to real acceptance histograms and profiles.
+
 Approach-development update: the norm-overlap design now has an isolated
 [candidate08 experiment](candidates/08_marlin_norm_overlap.diff), 4,320 paired
 CPU coordinator/norm checks, and an optional native whole-MoE experiment.
@@ -29,7 +36,7 @@ We cannot name a fastest composition or guarantee a winning result yet.
 | Register/shared-memory balance | Deeper pipelines can hide latency while reducing occupancy or spilling registers. | Use compiler resources and same-geometry native timing; do not assume more stages or fusion wins. [FlashAttention-3, §3.1–3.2](https://arxiv.org/html/2407.08608v1) |
 | Dataflow overlap | Independent work can execute before a dependent consumer is ready. | New design: move Marlin pre-expert normalization before the existing router join; measure contention. See the overlap design. |
 | Programmatic dependent launch | Independent preambles can overlap on Hopper; dependent reads still need readiness/visibility. Concurrency is opportunistic. | Consider only for a profiled launch-bound chain; a blanket launch flag is insufficient. [CUDA PDL](https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/programmatic-dependent-launch.html) |
-| Collective latency and ordering | Tiny metadata transfers can be launch-limited; all ranks must agree on captured operations and graph launches. | Existing02 combines draft metadata. Validate actual SGLang/NCCL/custom-AR interaction on eight ranks. [NCCL graphs](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/cudagraph.html) |
+| Collective latency and ordering | Tiny metadata transfers can be launch-limited; all ranks must agree on captured operations and graph launches. |09 packs selector metadata in the expected active path;02 serves the plain greedy fallback. Validate actual SGLang/NCCL/custom-AR interaction on eight ranks. [NCCL graphs](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/cudagraph.html) |
 | Expert communication overlap | Dispatch/compute/combine can overlap with explicit ownership and completion events. | DeepEP offers design lessons, but current V2 is not a drop-in replacement for our pinned path. Its BF16 mode avoids an unnecessary precision change. [Pinned README](https://github.com/deepseek-ai/DeepEP/tree/f6aa38fe06cd4a0489e7730365d4e0114970a2f3) |
 | Draft cost versus accepted yield | Parallel DFlash drafting does not have the same cost curve as serial autoregressive drafting. | Minimize complete cycle time per committed token. Keep the released 8-position drafter. [DFlash, §3](https://arxiv.org/html/2602.06036v2) |
 | Hardware-aware verification | A larger speculative budget can improve acceptance and still lose when verifier cost grows. | Measure real graph-bucket costs before considering shorter verified prefixes. Reuse the cost principle, not Sequoia's replacement tree/drafter. [Sequoia, §3.3](https://arxiv.org/html/2402.12374v2) |
@@ -95,7 +102,7 @@ The tool does not select a runtime policy or produce a serving score.
 
 ## Development order supported by the evidence
 
-1. **Validate current isolated mechanisms first.** Official checks 01/06/02,
+1. **Validate current isolated mechanisms first.** Official checks01/06/09,
    then map fusion as budget permits. Preserve every failing result. A check
    covers one short rung; the scored run is still needed for all-load results.
 2. **Collect one useful profile per load.** Capture actual batch and graph

@@ -244,3 +244,40 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
   candidate, official request, GPU job, paid hardware or performance claim.
   Candidate08 needs representative slack/contended-timing evidence and native
   validation before promotion; first official checks remain01/06/02.
+
+## Nov10: correct DFlash2 targeting and use existing observability
+
+- Prior candidate08 turn was progress, not a live wait. Fresh read-only status
+  is null/empty jobs at06:06UTCNov10; no check, submit or GPU job requested.
+- Traced existing CPU acceptance copies -> per-request histogram -> native
+  response metadata and existing profile endpoints/step annotations. Built
+  offline JSON/JSONL/SSE intake with230 synthetic checks using actual official
+  histogram/metric bodies. Counts finals once, validates weighted counters,
+  preserves incomplete captures and separates raw A+1 from client C/V. No
+  generated tokens, active-batch inference, latency, quality or score evidence.
+- Important planning correction: public unauthenticated DFlash2 config fetched
+  and pinned at46c90f4 declares DFlash2DraftModel with rank256/top-k16 selector.
+  Base source creates CandidateSelector; worker selects that sampler before
+  the plain class changed by02. CPU constructor doubles confirm that branch.
+  The deployed service revision/effective TP/path remain unobserved. Earlier
+  first-day01/06/02 was incomplete; new plan01/06/09.02 retained as fallback.
+- Candidate09 packs FP32 bits +31-bit globally bounded ID into int64:8vs12B
+  per candidate and one metadata collective instead of two; unchanged local
+  radix, dense projection, global top-k, selector, RNG and verification. All
+  rank predicates use shared model/platform facts; partition/LSE/large-ID/CPU/
+  HIP/FP64/TP1 paths keep original code.4,170B/2files packaging passes.
+- CPU196608protocol values and2304function cases pass:216fast,2088fallback.
+  Projection/collectives/Triton/admission are doubles and local top-k is Torch;
+  actual Triton/NCCL/FlashInfer/capture unrun. First builder fixture missed a
+  logger and raised NameError; fixed fixture only. Native eight-Hopper
+  head/radix/Triton/PyTorchNCCL harness passes source preparation only. Plans
+  native bits, fresh-input graphs and rank-max AB/BA timing; not full lattice
+  or SGLang GroupCoordinator/serving validation.
+- A documentation context failed atomically and was corrected; guessed old
+  source paths/glob misses were resolved by rg discovery. Web raw-config
+  retrieval failed, public HTTP resolve succeeded200 and pinned bytes match.
+  Audits record these failures; no native regression or win invented. Raw
+  model README kept temporary; only factual config/API/pin evidence published.
+- Candidate01..08/current07/Humming remain frozen; no composite or winning
+  submission selected. Need actual path/profile/native/quality/TTFT/all-load
+  evidence; no rank or throughput claim. Push corrected approach privately.

@@ -1,5 +1,13 @@
 # Native validation prepared for an existing Hopper node
 
+The released DFlash2 selector now has a separate eight-Hopper transport/head
+fixture: `tools/benchmark_serving_selector_collective.py`. See
+[SELECTOR_COLLECTIVE.md](SELECTOR_COLLECTIVE.md). It uses base dflash.py and
+loads its frozen helper/exact function variants separately; do not confuse its
+source requirements with the candidate07 MoE fixture below. Both native paths
+remain GPU-unrun. Existing response/profile acquisition is documented in
+[MEASUREMENT_INTAKE.md](MEASUREMENT_INTAKE.md).
+
 The separate `--norm-overlap` mode now prepares stock/candidate08 coordinator
 comparison using the exact stock Marlin methods, actual router/fused routing,
 BF16 projection and standard pre-norm/weight-first post-norm. It uses the same

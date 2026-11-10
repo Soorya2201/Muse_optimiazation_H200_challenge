@@ -1,0 +1,37 @@
+{
+  "scope": "Eight-Hopper selector candidate_topk validation/timing; GPU-unrun locally.\n\nCPU source preparation:\n  python tools/benchmark_serving_selector_collective.py --plan-only --output /tmp/selector-plan.json\nExisting official-image Hopper node, pinned SGLang installed:\n  torchrun --standalone --nproc-per-node=8 tools/benchmark_serving_selector_collective.py --output /tmp/selector.json\nUses real dense head/radix top-k/Triton and a PyTorch NCCL adapter. Synthetic\nweights, no full selector lattice, SGLang GroupCoordinator or serving score.\nEach GPU writes a rank-suffixed receipt; no paid hardware is provisioned.\n",
+  "requested_utc": "2026-11-10T06:05:39.182465+00:00",
+  "configuration": {
+    "sglang": "/Users/soorya/muse_work/serving_20261109/serving/current/sglang",
+    "output": "serving/SELECTOR_NATIVE_PLAN_2026-11-10.json",
+    "plan_only": true,
+    "rows": [
+      7,
+      28,
+      112,
+      224
+    ],
+    "hidden": 8192,
+    "local_vocab": 25256,
+    "k": 16,
+    "rounds": 20,
+    "repeats": 10
+  },
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "state": "source_preparation_passed_only",
+  "native_gpu_executed": false,
+  "sources": {
+    "stock": {
+      "source_sha256": "1c8307ba7f63fd41f53435fbdabdad8c9e9a04847bef4959f1f8fc16ea6db0ae"
+    },
+    "candidate": {
+      "source_sha256": "80dafc99d5bb91f6c99422e6e0db4c9c2c3ab5a0feefed9a72be8bc06c66277c"
+    },
+    "patch_sha256": "053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb",
+    "helper_sha256": "d9d89fc56d65ef02f786e660145482b94e5bc93298c4c3082a4fda26e14dfecd"
+  },
+  "tools": {
+    "benchmark_serving_selector_collective.py": "2372925baac5fe0f48f10ddca8cbd1ad2bd7c7527d9712c65af1556a8f641120",
+    "preflight_serving_selector_collective.py": "69d179b2b093f6b60e5160f0741ff1167abaafa0150299a9c7c2eca0cdf15d99"
+  }
+}

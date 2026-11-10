@@ -1,5 +1,14 @@
 # Serving optimization library
 
+Source-path correction: public DFlash2 revision46c90f4 uses a candidate
+selector. Candidate02's greedy class is bypassed under those inputs.
+[Candidate09](SELECTOR_COLLECTIVE.md) implements lossless single-collective
+metadata transport in the selector's actual candidate_topk path.196,608 CPU
+values/2,304 function cases pass; native head-path comparison is prepared and
+GPU-unrun. New first checks01/06/09 supersede earlier01/06/02 guidance.
+The [measurement intake](MEASUREMENT_INTAKE.md) obtains existing histograms
+without adding production synchronization;230 synthetic checks pass.
+
 Approach-development update: [candidate08](candidates/08_marlin_norm_overlap.diff)
 implements the playbook's norm-before-router-join experiment in isolation.
 4,320 paired CPU cases pass; native whole-coordinator comparison and timelines
@@ -38,6 +47,7 @@ keeps stock finalization. Its performance advantage remains a hypothesis.
 |---|---|---|
 | Global route density for Marlin tile selection | [hariappi's Apache2 patch and H100 layer experiments](https://github.com/hariappi/okc-muse-spark-kernels/tree/a3ebb0f2f027f07f38b063c6a74ac355a6b38848/serving) | Candidate 01. Correct denominator for globally replicated tokens. Public layer results do not establish our H200 model gain; skew and numerical behavior need official checks. |
 | One collective for draft maximum and token ID | Established distributed-argmax/packing technique; implemented against our exact SGLang sampler | Candidate 02. Preserves FP32 value bits and int64 IDs; payload grows to16 bytes/rank/token. Need real collective/graph and end-to-end timing; fewer collectives do not guarantee lower latency. |
+| One packed collective for selector candidate values/IDs | Published DFlash2 architecture/config and exact stock candidate_topk path; own bounded-ID bit packing | Candidate09.8vs12bytes/candidate and one fewer collective; unchanged global top-k. Expected active path, not measured; CPU protocol/function evidence and GPU-unrun native fixture. |
 | Fused cast, local expert lookup and sentinel handling | Inspection of stock `_map_topk_ids_to_local_experts` and Muse's Marlin caller | Candidate 04. One Triton launch replaces several tensor operations for contiguous CUDA routes. Keeps scratch per call and EP1 unchanged.480 CPU fallback cases pass; CUDA branch uncompiled/unrun locally. |
 | Local expert alignment and inactive-prefix specialization | [lee101's upstream analysis, item2](https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/docs/upstream_ideas.md); independently traced exact official base | Candidate 06. Input IDs are already local, so align 32 local buckets at EP8 and publish the inactive block count. Invoke Marlin's local sorted/prefix specialization for both GEMMs. The base wrapper disables that specialization when `is_ep=True`, despite the caller certifying sorted IDs.420 CPU method/route-contract cases pass; native ordering, arithmetic and performance remain untested. |
 
@@ -58,7 +68,7 @@ from the public write-up is treated as our measured gain.
 
 | Priority | Approach and primary source | Concrete next experiment / constraint |
 |---|---|---|
-| 1 | Measure the four isolated mechanisms on the actual node | First official checks01,06,02; check04 separately when budget/hardware permits. Run a combined scored patch only after enough quality/TTFT evidence. Preserve failures and interactions. Three checks/day cannot validate every subset in one day. |
+| 1 | Measure the isolated mechanisms on the actual node | First official checks01,06,09 after the DFlash2 selector correction; check04 separately when budget/hardware permits. Run a combined scored patch only after enough quality/TTFT evidence. Preserve failures and interactions. Three checks/day cannot validate every subset in one day. |
 | 2 | Humming-style Hopper W4A16 scheduling | [vLLM priority source](https://github.com/vllm-project/vllm/blob/ef5f913afdf2af46559655633bf4c3f0960d14fc/vllm/model_executor/layers/quantization/utils/humming/priority.py) explicitly prefers Humming to Marlin at capability 90. [MoE adapter](https://github.com/vllm-project/vllm/blob/ef5f913afdf2af46559655633bf4c3f0960d14fc/vllm/model_executor/layers/fused_moe/experts/fused_humming_moe.py) was downloaded; only selected support/configuration sections screened. Audit the actual NVFP4 kernel, packaging dependencies, scale/gate/post-norm contract and one-layout memory footprint before any port. No Humming speedup or compatibility established here. |
 | 3 | Fuse/overlap layer operations and communication | [Meta Muse Mega](https://github.com/facebookresearch/sgl-muse-mega/tree/ddb7925ff45167250201f35743a19c5152254052) and [SGLang NVIDIA Mega](https://github.com/sgl-project/sgl-nvidia-mega/tree/750004efd8bc0db852cdd4efbebb807c73bedd4b) provide design leads: early loads, mailboxes, PDL and whole-step coverage. The latter's advertised model matrix is GB300/B300; a Muse directory does not demonstrate an H200-serving implementation. Need stream/order and capture proof; no blanket plugin enablement under different fixed flags. |
 | 4 | Acceptance/cost-aware target verification of a prefix of the released 8-position draft | Retain the released drafter and target verification. Establish stock acceptance/verification costs and KV rollback/capture contracts before changing verification width. No unverified token emission, fixed validation-prompt routing or model change. Hypothesis only. |

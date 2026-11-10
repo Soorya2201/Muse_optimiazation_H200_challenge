@@ -1,0 +1,30 @@
+{
+  "captured_utc": "2026-11-10T04:00:58.019929+00:00",
+  "scope": "Public draft metadata/config only; no auth tokens, weights, install or model load",
+  "requests": [
+    {
+      "url": "https://huggingface.co/api/models/RadixArk/Muse-Spark-Open-DFlash2",
+      "status": 200,
+      "bytes": 1315,
+      "sha256": "8115579f2a4176b84816eaa316d49eb8dd715c538d2e5c2a01942ca5e28018ef",
+      "revision": "46c90f412549c472941a68382d91a99e5e6372a0",
+      "public_private_field": false,
+      "gated": false,
+      "saved_path": "research/serving/DFLASH2_PUBLIC_METADATA_2026-11-10.json"
+    },
+    {
+      "url": "https://huggingface.co/RadixArk/Muse-Spark-Open-DFlash2/resolve/main/config.json",
+      "status": 200,
+      "bytes": 1423,
+      "sha256": "2f88d111418b4018678b8a80ed0bdf83c14b0e395cd6cc163153bce4dd8ba0ae",
+      "saved_path": "research/serving/DFLASH2_PUBLIC_CONFIG_2026-11-10.json"
+    },
+    {
+      "url": "https://huggingface.co/RadixArk/Muse-Spark-Open-DFlash2/resolve/main/README.md",
+      "status": 200,
+      "bytes": 3847,
+      "sha256": "22576df20c9dcb0e4da8adaecbb296efd0dc4d0b9560be5264c8087552585d8f",
+      "saved_path": "research/serving/DFLASH2_PUBLIC_README_2026-11-10.md"
+    }
+  ]
+}

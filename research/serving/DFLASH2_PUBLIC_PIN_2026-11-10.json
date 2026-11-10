@@ -1,0 +1,23 @@
+{
+  "captured_utc": "2026-11-10T06:06:37.595456+00:00",
+  "revision": "46c90f412549c472941a68382d91a99e5e6372a0",
+  "scope": "Public factual metadata/config and bounded README review; no weights or models loaded",
+  "files": [
+    {
+      "url": "https://huggingface.co/RadixArk/Muse-Spark-Open-DFlash2/resolve/46c90f412549c472941a68382d91a99e5e6372a0/config.json",
+      "sha256": "2f88d111418b4018678b8a80ed0bdf83c14b0e395cd6cc163153bce4dd8ba0ae",
+      "bytes": 1423,
+      "matches_prior_main_fetch": true,
+      "saved_path": "research/serving/DFLASH2_PUBLIC_CONFIG_2026-11-10.json"
+    },
+    {
+      "url": "https://huggingface.co/RadixArk/Muse-Spark-Open-DFlash2/resolve/46c90f412549c472941a68382d91a99e5e6372a0/README.md",
+      "sha256": "22576df20c9dcb0e4da8adaecbb296efd0dc4d0b9560be5264c8087552585d8f",
+      "bytes": 3847,
+      "matches_prior_main_fetch": true,
+      "temporary_raw_path": "/tmp/muse_dflash2_readme_46c90f4_20261110.md",
+      "publication": "Raw README omitted from repository; factual selector findings and direct source link recorded instead",
+      "read_scope": "Model Specifications and evaluation caveats; no external performance transferred"
+    }
+  ]
+}

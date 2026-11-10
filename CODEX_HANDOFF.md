@@ -1,5 +1,29 @@
 # Current handoff: serving challenge (November9)
 
+Latest Nov10 correction supersedes earlier first-day01/06/02 guidance:
+public DFlash2 config46c90f412549c472941a68382d91a99e5e6372a0 declares
+DFlash2DraftModel,selector_rank256/top_k16,block8,vocab202048. Pinned source
+instantiates CandidateSelector and takes _SelectorDraftSampler before the
+plain class optimized by02. Exact builder with constructor doubles confirms
+that branch; real service loaded revision/path remain unobserved. New checks
+01/06/09.09 packs FP32 bits +31-bit bounded ID into int64,8vs12B/candidate,
+one collective instead of two; existing global topk/selector/RNG untouched.
+09SHA053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb,
+4170B/2files. CPU196608protocolvalues+2304functioncases pass (216fast,
+2088fallback); native8GPUhead/radix/Triton/PyTorchNCCL fixture source-plan only.
+First builder fixture lacked logger and failed NameError; fixed double only.
+SELECTOR_COLLECTIVE.md and research/serving/SELECTOR_REACHABILITY_AUDIT contain
+evidence/bounds. Config/API/pinned URLs public200; no weight download/model load.
+Raw README only temporary, not republished. Prior target-model401 unchanged.
+New inspect_serving_acceptance tool uses existing native response histograms,
+counts finals once, preserves errors, treats histogram raw A+1 separately from
+client completion/verify.230 synthetic checks using actual stock counter bodies
+pass, no GPU or generated tokens. MEASUREMENT_INTAKE.md documents profiler
+controls, actual/graph/client batch distinctions and the CPU/GPU timing trap.
+No native score; candidate07/currentpatch,08,Humming frozen. Jobs empty/priority
+null at06:06UTCNov10, no new check/submit or active GPU wait. Prior c005d9e
+turn and current source-path/intake/09 continuation are concrete progress.
+
 Nov10 UTC resumed approach development: isolated candidate08 implements
 pre-norm-before-router-join (1,343B; SHA da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108).
 4,320 exact stock/candidate CPU coordinator cases pass:128 eligible nonempty,

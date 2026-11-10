@@ -109,7 +109,8 @@ parameters. Record rank maxima and both branch timings to expose contention;
 a faster norm kernel with slower MoE completion is a failed experiment.
 Only a native win should advance to full-model answer/TTFT/all-load checks.
 Candidate08 does not displace the planned first three official checks
-(01/06/02) without stronger representative evidence. Preserve regressions
+(01/06/09, corrected after the DFlash2 selector audit) without stronger
+representative evidence. Preserve regressions
 and inconclusive profiles; a zero ideal bound closes this overlap experiment
 for that workload rather than justifying a composite submission.
 

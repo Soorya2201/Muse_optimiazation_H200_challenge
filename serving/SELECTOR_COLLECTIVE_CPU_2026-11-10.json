@@ -1,0 +1,31 @@
+{
+  "captured_utc": "2026-11-10T04:06:41.628227+00:00",
+  "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "sources": {
+    "stock": {
+      "source_sha256": "1c8307ba7f63fd41f53435fbdabdad8c9e9a04847bef4959f1f8fc16ea6db0ae"
+    },
+    "candidate": {
+      "source_sha256": "80dafc99d5bb91f6c99422e6e0db4c9c2c3ab5a0feefed9a72be8bc06c66277c"
+    },
+    "patch_sha256": "053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb",
+    "helper_sha256": "d9d89fc56d65ef02f786e660145482b94e5bc93298c4c3082a4fda26e14dfecd"
+  },
+  "tool_sha256": "69d179b2b093f6b60e5160f0741ff1167abaafa0150299a9c7c2eca0cdf15d99",
+  "reachability": {
+    "config_sha256": "2f88d111418b4018678b8a80ed0bdf83c14b0e395cd6cc163153bce4dd8ba0ae",
+    "worker_source_sha256": "87a7f5808ea12bec0fb4abb8ffc0d2082963a79b5de9ab435063e0dfa8ce8431",
+    "expected_builder_branch": "selector, not _DflashDraftSampler",
+    "scope": "Pinned configuration facts + actual builder with CPU constructor doubles; no model load"
+  },
+  "checks": {
+    "protocol_values": 196608,
+    "exact_function_cases": 2304,
+    "one_collective_cases": 216,
+    "unchanged_fallback_cases": 2088,
+    "torch": "2.15.0",
+    "native_gpu_executed": false,
+    "scope": "CPU transport and exact candidate_topk flow; no Triton/CUDA execution.\n\nCUDA admission and the two transport kernels are explicit CPU doubles. Local\ntop-k uses Torch, not FlashInfer. Native kernels, TP capture and performance\nare unproven. The released-config/stock-builder check proves source-path\nreachability under those inputs, not that an official model was loaded.\n"
+  }
+}

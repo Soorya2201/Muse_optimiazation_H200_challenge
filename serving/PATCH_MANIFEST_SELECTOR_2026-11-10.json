@@ -1,0 +1,24 @@
+{
+  "scope": "Source patch/package verification only; no GPU, numerical, serving or throughput validation.",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "patches": [
+    {
+      "patch": "serving/candidates/09_selector_single_collective.diff",
+      "sha256": "053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb",
+      "bytes": 4170,
+      "maximum_added_line_bytes": 82,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/kernels/ops/speculative/selector_collective.py",
+          "sha256": "d9d89fc56d65ef02f786e660145482b94e5bc93298c4c3082a4fda26e14dfecd"
+        },
+        {
+          "path": "python/sglang/srt/models/dflash.py",
+          "sha256": "80dafc99d5bb91f6c99422e6e0db4c9c2c3ab5a0feefed9a72be8bc06c66277c"
+        }
+      ]
+    }
+  ]
+}

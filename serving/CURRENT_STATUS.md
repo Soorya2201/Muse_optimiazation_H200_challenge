@@ -1,5 +1,32 @@
 # Serving checkpoint — Nov 9 2026
 
+Latest Nov10 source correction: the public DFlash2 configuration declares a
+rank256/top-k16 candidate selector. The pinned worker therefore selects its
+selector sampler rather than candidate02's plain greedy sampler. See
+[the reachability audit and corrected approach](SELECTOR_COLLECTIVE.md).
+First isolated official checks are now **01/06/09**, subject to current
+rules/budget and confirming the deployed model/path. Earlier01/06/02 guidance
+below and in historical receipts is superseded;02 remains a generic fallback.
+
+[Candidate09](candidates/09_selector_single_collective.diff) is4,170bytes and
+packs unchanged FP32 value bits plus a bounded vocabulary ID into one int64.
+It replaces two selector metadata all-gathers with one,8vs12bytes/candidate,
+then restores the original values/ID order for unchanged global top-k. It does
+not change the selector model, dense head, local top-k or sampling.196,608 CPU
+protocol values and2,304 exact-function cases pass;216 use one collective and
+2,088 keep stock fallbacks. Triton/CUDA/NCCL/graphs and serving gains remain
+unproven. The eight-Hopper native head-path harness has passed source-plan
+mode only.09 is isolated; no new combined/current patch was selected.
+
+[Measurement intake](MEASUREMENT_INTAKE.md) now uses existing response metadata
+and profiling controls.230 synthetic parser checks pass, including final
+snapshot deduplication and stock acceptance-counter semantics. The fixtures
+contain no generated output/GPU run. This avoids inventing a histogram from a
+mean acceptance length or treating client concurrency as real active batch.
+Fresh read-only jobs are empty and priority is null at06:06UTCNov10; no new
+official check or GPU job was requested. This turn and the previous candidate08
+turn made concrete source/implementation progress; neither is a live GPU wait.
+
 Nov 10 UTC approach-development continuation: isolated
 [candidate08](candidates/08_marlin_norm_overlap.diff) now moves the existing
 Marlin pre-norm before the router join. It is 1,343 bytes, applies to the
@@ -63,6 +90,7 @@ diffs and downloaded current rules are committed and reproducible.
 | [06_local_alignment_prefix.diff](candidates/06_local_alignment_prefix.diff) | Align local expert buckets and enable existing Marlin sorted/inactive-prefix specialization after global-to-local mapping |420 exact-method CPU contract cases/840 instrumented GEMM calls pass; native kernels untested |
 | [07_all_candidates.diff](candidates/07_all_candidates.diff) | All four mechanisms | Packaging only; not a proven strongest submission |
 | [08_marlin_norm_overlap.diff](candidates/08_marlin_norm_overlap.diff) | Move the same pre-expert norm before the existing router join on non-SP CUDA Marlin |4,320 paired CPU cases and packaging pass; native scheduling/math/performance unproven |
+| [09_selector_single_collective.diff](candidates/09_selector_single_collective.diff) | One smaller lossless collective in the released DFlash2 selector's candidate top-k |196,608 CPU protocol values/2,304 exact-function cases and source plan pass; native validation pending |
 
 Candidate 03 is 7,065 bytes across 3 files. The latest development checkout and
 `current/patch.diff` match candidate 07, 12,186 bytes across 4 files. Longest added
@@ -107,9 +135,11 @@ that static incompatibility is documented, not hidden or called a GPU failure.
 1. Recheck current rules/opening and available serving checks. With the current
    evidence, check candidate 01 first; use the stock comparison supplied by the
    official run. Record the exact handle and poll it to terminal.
-2. Check candidate 06 and candidate 02 independently. Check 04 separately when
+2. Check candidate06 and candidate09 independently. Candidate02 affects the
+   plain greedy sampler, bypassed by the released DFlash2 selector; inspect
+   runtime path evidence before spending a check on that fallback. Check04 when
    budget or existing development hardware permits; no combination is a winner
-   until measured. The first-day sequence 01/06/02 uses the three-check limit.
+   until measured. The first-day sequence01/06/09 uses the three-check limit.
    Reject failed quality/TTFT paths and preserve their evidence. Component wins
    need not translate into full-model wins.
 3. Use the1/day scored budget for the strongest validated patch, then independently
