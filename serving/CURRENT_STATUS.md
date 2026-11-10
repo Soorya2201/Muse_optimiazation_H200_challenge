@@ -1,5 +1,11 @@
 # Serving checkpoint — Nov 9 2026
 
+A new [offline Triton compiler gate](TRITON_OFFLINE_COMPILATION.md) is prepared
+for private GitHub CPU CI. It checks the actual five new kernels in02/04/09
+against Hopper using a pinned compiler, without launching a GPU kernel. Local
+source preparation passes25specializations; CI result is pending this push.
+This gate can establish compilation/assembly, not numerical or serving gains.
+
 Latest Nov10 source correction: the public DFlash2 configuration declares a
 rank256/top-k16 candidate selector. The pinned worker therefore selects its
 selector sampler rather than candidate02's plain greedy sampler. See

@@ -1,0 +1,550 @@
+{
+  "scope": "Compile exact frozen Triton kernel bodies for Hopper without a GPU.\n\nUses an explicit CUDA GPUTarget and never launches a kernel or loads Torch.\nExtracts only @triton.jit definitions from added source files, preserving their\ntext/AST. Host wrappers, numerical correctness, collectives, actual image\ncompatibility, CUDA graphs and serving performance are outside this check.\n",
+  "requested_utc": "2026-11-10T06:21:26.958232+00:00",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "state": "source_plan_only",
+  "native_compiler_executed": false,
+  "gpu_kernel_executed": false,
+  "tool_sha256": "861bc7d55461e13e8319d38cb695c851f45db033a815128c39a53837d1b7a20f",
+  "compiled_cases": [],
+  "ci": {
+    "GITHUB_SHA": null,
+    "GITHUB_RUN_ID": null,
+    "GITHUB_RUN_ATTEMPT": null,
+    "RUNNER_OS": null,
+    "RUNNER_ARCH": null
+  },
+  "sources": {
+    "greedy": {
+      "patch": "serving/candidates/02_draft_single_collective.diff",
+      "patch_sha256": "83edfbaf18762273e9223d66324f81ec2ab2d46e87a8b3b2e9dd9108737966bf",
+      "source_path": "python/sglang/kernels/ops/speculative/draft_head_collective.py",
+      "source_sha256": "4b493eb3f614f92a801e81637ad61ca1d1a857adb16f85f2f4a6b301b476caef",
+      "extracted_module": "/tmp/muse-serving-aot-plan-checked-20261110/greedy_kernels.py",
+      "extracted_module_sha256": "5a1d97997ad6ebdf39efec2358d316e0711d7928ea1687b91e0de05bdf445e5a",
+      "kernels": {
+        "_pack_greedy_pairs": {
+          "arguments": [
+            "values",
+            "indices",
+            "pairs",
+            "n",
+            "vocab_start",
+            "BLOCK"
+          ],
+          "ast_sha256": "5ba4d6e07fe80b63fdd9e1a0a1e395a465369de609dba2045aadb0374ac11978"
+        },
+        "_select_greedy_pairs": {
+          "arguments": [
+            "gathered",
+            "output",
+            "n",
+            "tp_size",
+            "RANKS",
+            "BLOCK"
+          ],
+          "ast_sha256": "7c709b52c6013265ad95298420e2f2882900362489d44183913f30e3995889c0"
+        }
+      }
+    },
+    "map": {
+      "patch": "serving/candidates/04_fused_expert_map.diff",
+      "patch_sha256": "7439113a2be0084832bb3ae0b86086ec64b64d277b70b926478145060a8ef3c1",
+      "source_path": "python/sglang/kernels/ops/moe/map_marlin_expert_ids.py",
+      "source_sha256": "c1eb33ed94bb3ed5da24a9f3704b4765e24776b41b5b07cbd70c57d026e12826",
+      "extracted_module": "/tmp/muse-serving-aot-plan-checked-20261110/map_kernels.py",
+      "extracted_module_sha256": "5940396365df110628aed97d7f2509dd593b7923adbd782a079d5d486db99e38",
+      "kernels": {
+        "_map_kernel": {
+          "arguments": [
+            "ids",
+            "mapping",
+            "out",
+            "N",
+            "BLOCK"
+          ],
+          "ast_sha256": "52327e7f5c8267177d7a2bd5434382f455c610572c3427e83d9e069a4985b3bc"
+        }
+      }
+    },
+    "selector": {
+      "patch": "serving/candidates/09_selector_single_collective.diff",
+      "patch_sha256": "053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb",
+      "source_path": "python/sglang/kernels/ops/speculative/selector_collective.py",
+      "source_sha256": "d9d89fc56d65ef02f786e660145482b94e5bc93298c4c3082a4fda26e14dfecd",
+      "extracted_module": "/tmp/muse-serving-aot-plan-checked-20261110/selector_kernels.py",
+      "extracted_module_sha256": "d2dba6ff3a3884fb531d34cac319e0c93438cd7f2c0355f75f21fdf459daeb65",
+      "kernels": {
+        "_pack": {
+          "arguments": [
+            "values",
+            "ids",
+            "packed",
+            "size",
+            "columns",
+            "vs0",
+            "vs1",
+            "is0",
+            "is1",
+            "start",
+            "BLOCK"
+          ],
+          "ast_sha256": "1f5c12fb131c18dc81671be213d2126acd8c4c870865848f9c7510e13c85dfa1"
+        },
+        "_unpack": {
+          "arguments": [
+            "packed",
+            "values",
+            "ids",
+            "size",
+            "columns",
+            "ps0",
+            "ps1",
+            "BLOCK"
+          ],
+          "ast_sha256": "4ef39538dd8f8afbd2f245abb91084cf127abb34545deb7774e22cfb583f679b"
+        }
+      }
+    }
+  },
+  "planned_cases": [
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_fp16",
+      "pointer_types": {
+        "values": "*fp16",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_bf16",
+      "pointer_types": {
+        "values": "*bf16",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_fp32",
+      "pointer_types": {
+        "values": "*fp32",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp2_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 2,
+        "RANKS": 2,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp2_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 2,
+        "RANKS": 2,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp3_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 3,
+        "RANKS": 4,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp3_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 3,
+        "RANKS": 4,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp8_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 8,
+        "RANKS": 8,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp8_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 8,
+        "RANKS": 8,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "map",
+      "kernel": "_map_kernel",
+      "label": "map_i32",
+      "pointer_types": {
+        "ids": "*i32",
+        "mapping": "*i32",
+        "out": "*i32"
+      },
+      "constexprs": {
+        "N": 2049,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "map",
+      "kernel": "_map_kernel",
+      "label": "map_i64",
+      "pointer_types": {
+        "ids": "*i64",
+        "mapping": "*i32",
+        "out": "*i32"
+      },
+      "constexprs": {
+        "N": 2049,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i32_strided0",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i32_strided1",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i64_strided0",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i64_strided1",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i32_strided0",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i32_strided1",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i64_strided0",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i64_strided1",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i32_strided0",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i32_strided1",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i64_strided0",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i64_strided1",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_unpack",
+      "label": "selector_unpack_strided0",
+      "pointer_types": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64"
+      },
+      "constexprs": {
+        "size": 896,
+        "columns": 128,
+        "ps0": 128,
+        "ps1": 1,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_unpack",
+      "label": "selector_unpack_strided1",
+      "pointer_types": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64"
+      },
+      "constexprs": {
+        "size": 10752,
+        "columns": 48,
+        "ps0": 97,
+        "ps1": 2,
+        "BLOCK": 256
+      }
+    }
+  ]
+}

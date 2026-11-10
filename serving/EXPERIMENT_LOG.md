@@ -281,3 +281,24 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
 - Candidate01..08/current07/Humming remain frozen; no composite or winning
   submission selected. Need actual path/profile/native/quality/TTFT/all-load
   evidence; no rank or throughput claim. Push corrected approach privately.
+
+## Nov10: actual offline Triton compilation gate
+
+- Previous6e3eff8turn was concrete source-path/intake/selector progress, not a
+  verified wait. Local Mac still lacks CUDA and Docker/Podman/Colima/Lima/NVCC;
+  fresh read-only jobs remain empty. No official check/submit was requested.
+- Found a useful execution route: private repository Actions is enabled. Prepare
+  an8-minute-bounded CPU job compiling the five exact added Triton kernels from
+  frozen02/04/09 for an explicit Hopper target. This is actual code generation/
+  assembly, not another CPU protocol double and not a GPU numerical test.
+- SGLang pins Torch2.14.1; its Linux metadata requests Triton~=3.8.0. Pin the
+  exact3.8.0CPython3.12/Linuxx86wheel hash; no Torch/model/GPUdriver install.
+  Action commit SHAs verified via public GitHub API. Deployed image still unknown.
+- First local source extractor dropped the final newline before a following
+  diff header; existing source-hash validation rejected it. Fixed extraction,
+  preserved TRITON_AOT_PLAN_FAILED receipt; all five source/AST hashes now match.
+  Source plan passes25specializations,0compiled locally. No frozen patch changed.
+- Push the compiler/workflow, follow its specific run handle to terminal, and
+  preserve failure/assembly artifacts. GPU/NCCL/graphs/quality/TTFT/performance
+  remain required even if offline compilation succeeds. No fastest composition
+  or new serving rank is implied.
