@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-11-10T06:32:36.614765+00:00",
+  "run_id": 42768362132,
+  "raw_log_sha256": "fb1a83a22e245bc5300547f2d94201ab85f575fce61b0f646dd342538aa9813f",
+  "raw_log_bytes": 30476,
+  "compressed_path": "research/serving/TRITON_AOT_CI_LOG_2026-11-10.txt.gz",
+  "compressed_sha256": "3bcfc1515960eef474ddb03ccc30ad01ee7c7f4a5e44582a70d61ed376e5d03a",
+  "compressed_bytes": 5026,
+  "exact_raw_bytes_preserved": true,
+  "reason": "Provider log contains trailing whitespace on line148. Preserve exact raw bytes as gzip rather than stripping them or waiving source whitespace checks.",
+  "gpu_kernel_executed": false
+}

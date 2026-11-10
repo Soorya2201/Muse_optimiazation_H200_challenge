@@ -1,0 +1,26 @@
+{
+  "captured_utc": "2026-11-10T06:06:37.872344+00:00",
+  "scope": "Read-only official status; no check/submit requested and no GPU execution",
+  "status": {
+    "command": [
+      "/Users/soorya/.okc/bin/okc",
+      "serve",
+      "status",
+      "--json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"priority\": null,\n  \"serving_priority\": null\n}\n",
+    "stderr": ""
+  },
+  "jobs": {
+    "command": [
+      "/Users/soorya/.okc/bin/okc",
+      "serve",
+      "jobs",
+      "--json"
+    ],
+    "returncode": 0,
+    "stdout": "[]\n",
+    "stderr": ""
+  }
+}

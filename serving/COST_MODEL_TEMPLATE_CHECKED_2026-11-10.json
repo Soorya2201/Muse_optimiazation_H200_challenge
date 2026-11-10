@@ -1,0 +1,8 @@
+{
+  "state": "needs_measurements",
+  "native_gpu_executed": false,
+  "message": "No costs or acceptance observations supplied; no candidate ranking computed.",
+  "tool_sha256": "52dbe678f1cc7c94f724d8e47d78f94c20c52c6d84364df070558db70d8ec1af",
+  "captured_utc": "2026-11-10T01:18:35.304936+00:00",
+  "input_sha256": "9143ac3c960d2c67c2cdf9b142bb159726b2b8fbed9db8644d6adc7d3f9ad2cd"
+}

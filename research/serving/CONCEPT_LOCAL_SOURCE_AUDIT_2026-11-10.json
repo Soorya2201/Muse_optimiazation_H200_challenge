@@ -1,0 +1,37 @@
+{
+  "captured_utc": "2026-11-10T01:15:00.970494+00:00",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "scope": "Bounded source review only; no GPU execution or new submission diff.",
+  "files": [
+    {
+      "path": "python/sglang/srt/models/muse_spark.py",
+      "base_sha256": "71bbed3a8c253b046c21e18fcb2f09a9fc09820c6e7fbc1451ba693d93513a95",
+      "read_scope": "Read _forward_tp/_forward_experts, stream wait/record handling, and finalize-AR device guard."
+    },
+    {
+      "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+      "base_sha256": "145f49706a272e388e069eb13039c96805b35ab71dd5aa71c7b2b44cef9b0be1",
+      "read_scope": "Read stock _forward_marlin/pre-expert normalization and forward Marlin dispatch; candidate changes exist in other portions."
+    },
+    {
+      "path": "python/sglang/srt/layers/muse_spark/muse_spark_layers.py",
+      "base_sha256": "930e66da715bae576ae681f2dfd8353a36a9ca469a229d88fa3f77bc1e74cef0",
+      "read_scope": "Read both RMSNorm forward functions to inspect out-of-place behavior."
+    },
+    {
+      "path": "python/sglang/srt/speculative/dflash_worker_v2.py",
+      "base_sha256": "87a7f5808ea12bec0fb4abb8ffc0d2082963a79b5de9ab435063e0dfa8ce8431",
+      "read_scope": "Read block_size anchor/proposal allocation, _commit_accept, and sampling Philox/uniform handling; no complete worker audit."
+    },
+    {
+      "path": "python/sglang/srt/model_executor/cuda_graph_config.py",
+      "base_sha256": "0f6774dd498548e2220606c5e60eeb6c5a768ab50d7d978384ed0eab677ef8d0",
+      "read_scope": "Read capture-bucket documentation and configuration fields, not all runners."
+    },
+    {
+      "path": "docs/docs/advanced_features/hicache_design.mdx",
+      "base_sha256": "155351af3811c3e131619d60fb2c46c11494cbd7c03840e79d53684f408181a9",
+      "read_scope": "Read hierarchy, private/shared scope, prefetch/writeback/overlap/multi-rank descriptions."
+    }
+  ]
+}

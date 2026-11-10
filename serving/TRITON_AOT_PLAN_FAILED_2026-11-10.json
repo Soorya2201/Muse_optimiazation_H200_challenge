@@ -1,0 +1,19 @@
+{
+  "scope": "Compile exact frozen Triton kernel bodies for Hopper without a GPU.\n\nUses an explicit CUDA GPUTarget and never launches a kernel or loads Torch.\nExtracts only @triton.jit definitions from added source files, preserving their\ntext/AST. Host wrappers, numerical correctness, collectives, actual image\ncompatibility, CUDA graphs and serving performance are outside this check.\n",
+  "requested_utc": "2026-11-10T06:21:14.361349+00:00",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "state": "failed",
+  "native_compiler_executed": false,
+  "gpu_kernel_executed": false,
+  "tool_sha256": "62a1ed5ed66cc1d8306e02468a13b1f0d230a6e40e660e9d42e8c973fb10bd1f",
+  "compiled_cases": [],
+  "ci": {
+    "GITHUB_SHA": null,
+    "GITHUB_RUN_ID": null,
+    "GITHUB_RUN_ATTEMPT": null,
+    "RUNNER_OS": null,
+    "RUNNER_ARCH": null
+  },
+  "error": "Traceback (most recent call last):\n  File \"/Users/soorya/muse_work/serving_20261109/tools/compile_serving_triton_offline.py\", line 190, in main\n    sources = prepare(args.output_dir)\n  File \"/Users/soorya/muse_work/serving_20261109/tools/compile_serving_triton_offline.py\", line 67, in prepare\n    assert digest(source) == expected['sha256'], 'Source extraction differs from verified patch'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Source extraction differs from verified patch\n"
+}

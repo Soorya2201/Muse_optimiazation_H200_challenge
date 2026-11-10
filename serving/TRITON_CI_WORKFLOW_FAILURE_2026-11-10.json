@@ -1,0 +1,14 @@
+{
+  "captured_utc": "2026-11-10T06:24:59.293331+00:00",
+  "run": {
+    "conclusion": "failure",
+    "headSha": "cfbaf73d689fb70ce151bd49e11494d398566995",
+    "jobs": [],
+    "status": "completed",
+    "url": "https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/actions/runs/42768219289"
+  },
+  "classification": "Workflow parsing failure; zero jobs, no kernel compilation or GPU execution",
+  "cause": "Unquoted run scalar included pip --only-binary=:all: followed by a space, which YAML parses as a mapping delimiter",
+  "resolution": "Use a YAML block scalar for the pip command; local Ruby YAML parse passed",
+  "kernel_changes": false
+}

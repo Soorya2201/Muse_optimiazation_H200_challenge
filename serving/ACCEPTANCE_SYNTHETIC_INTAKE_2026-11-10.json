@@ -1,0 +1,98 @@
+{
+  "captured_utc": "2026-11-10T03:59:46.052777+00:00",
+  "tool_sha256": "13bc5b9b4fd9a9205993e42b8cc8fbb4d0093fee04b3ec828a8ae2f0061e132c",
+  "cost_tool_sha256": "52dbe678f1cc7c94f724d8e47d78f94c20c52c6d84364df070558db70d8ec1af",
+  "input_sha256": "83f8565d13c6fbbca37f13a6cb9f978f0ce642b237da0a3f95c3f47481a1a8bd",
+  "input_path": "serving/fixtures/acceptance_synthetic_2026-11-10.jsonl",
+  "native_gpu_executed_by_this_tool": false,
+  "state": "metadata_consistent",
+  "scope": "Inspect native /generate metadata offline, without GPU or server changes.\n\nSupports a JSON body, JSONL snapshots, or native SSE. Final cumulative\nhistograms are counted once per request; partial frames are not observations\nof independent decode rounds. This cannot establish quality, TTFT, active\nbatch, latency, a serving score, or shortened-policy steady-state acceptance.\n",
+  "provenance": "Synthetic metadata generated from pinned SGLang counter methods; no server, tokens or GPU executed",
+  "caller_declared_algorithm": "DFLASH",
+  "caller_declared_block_size": 8,
+  "caller_declared_client_concurrency": 32,
+  "actual_active_batch_size": null,
+  "unique_requests_seen": 2,
+  "unique_final_requests": 2,
+  "unfinished_requests": 0,
+  "partial_frames_ignored": 1,
+  "identical_final_duplicates_ignored": 1,
+  "metadata_gates": {
+    "all_seen_requests_final": true,
+    "all_finals_have_220_tokens": true,
+    "all_finals_normal": true
+  },
+  "accepted_draft_histogram": [
+    0,
+    0,
+    0,
+    55,
+    0,
+    0,
+    0,
+    28
+  ],
+  "verify_request_rounds": 83,
+  "mean_correct_drafts": 4.349397590361446,
+  "mean_raw_commit_length_including_bonus": 5.349397590361446,
+  "client_completion_tokens": 440,
+  "counterfactual_raw_yield_by_proposals": {
+    "1": 2.0,
+    "3": 4.0,
+    "7": 5.349397590361446
+  },
+  "requests": [
+    {
+      "request_id_sha256": "3b0a7ca3a01569f4af07368009f9b6480354618beb93b7241df7c3dcf22619f5",
+      "accepted_draft_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        28
+      ],
+      "verify_request_rounds": 28,
+      "correct_drafts": 196,
+      "proposed_drafts": 196,
+      "completion_tokens": 220,
+      "finish_type": "length",
+      "normal_finish": true,
+      "expected_220_tokens": true,
+      "raw_commit_tokens_including_bonus": 224,
+      "client_tokens_minus_raw_commits": -4
+    },
+    {
+      "request_id_sha256": "11ae3038c1fe627502b6596d5598808bb5339e26b1bfed1924adec0458cc1b26",
+      "accepted_draft_histogram": [
+        0,
+        0,
+        0,
+        55,
+        0,
+        0,
+        0,
+        0
+      ],
+      "verify_request_rounds": 55,
+      "correct_drafts": 165,
+      "proposed_drafts": 385,
+      "completion_tokens": 220,
+      "finish_type": "length",
+      "normal_finish": true,
+      "expected_220_tokens": true,
+      "raw_commit_tokens_including_bonus": 220,
+      "client_tokens_minus_raw_commits": 0
+    }
+  ],
+  "limitations": [
+    "Caller-supplied bytes and labels are not proof of hardware, flags or official execution.",
+    "Client concurrency is not the active or CUDA-graph-padded batch size.",
+    "Histograms are request-round weighted and have no cycle timing or per-round remaining-budget association.",
+    "Counters precede final output-length clipping; mean(A+1) need not equal completion_tokens/verify_ct.",
+    "Raw yields are full-policy counterfactuals, not shortened-policy steady-state acceptance.",
+    "No answers, TTFT, speedup, winner or serving score are validated by this tool."
+  ]
+}

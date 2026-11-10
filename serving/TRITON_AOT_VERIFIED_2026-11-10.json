@@ -1,0 +1,128 @@
+{
+  "verified_utc": "2026-11-10T06:26:29.716569+00:00",
+  "run": {
+    "conclusion": "success",
+    "headSha": "446889ad768d2e52ebe2d025af342ecacb7df4b2",
+    "jobs": [
+      {
+        "completedAt": "2026-11-10T06:25:31Z",
+        "conclusion": "success",
+        "databaseId": 129670093720,
+        "name": "compile",
+        "startedAt": "2026-11-10T06:25:07Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-10T06:25:09Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-10T06:25:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:11Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "startedAt": "2026-11-10T06:25:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:11Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "number": 3,
+            "startedAt": "2026-11-10T06:25:11Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:24Z",
+            "conclusion": "success",
+            "name": "Install pinned Linux compiler wheel",
+            "number": 4,
+            "startedAt": "2026-11-10T06:25:11Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:27Z",
+            "conclusion": "success",
+            "name": "Compile exact frozen kernels for Hopper",
+            "number": 5,
+            "startedAt": "2026-11-10T06:25:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:28Z",
+            "conclusion": "success",
+            "name": "Preserve compilation reports and assemblies",
+            "number": 6,
+            "startedAt": "2026-11-10T06:25:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:29Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "number": 11,
+            "startedAt": "2026-11-10T06:25:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:29Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 12,
+            "startedAt": "2026-11-10T06:25:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-10T06:25:29Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "startedAt": "2026-11-10T06:25:29Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/actions/runs/42768362132/job/129670093720"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/actions/runs/42768362132"
+  },
+  "artifact_metadata": {
+    "id": 13740856683,
+    "node_id": "MDg6QXJ0aWZhY3QxMzc0MDg1NjY4Mw==",
+    "name": "serving-triton-aot-446889ad768d2e52ebe2d025af342ecacb7df4b2",
+    "size_in_bytes": 253721,
+    "url": "https://api.github.com/repos/Soorya2201/Muse_optimiazation_H200_challenge/actions/artifacts/13740856683",
+    "archive_download_url": "https://api.github.com/repos/Soorya2201/Muse_optimiazation_H200_challenge/actions/artifacts/13740856683/zip",
+    "expired": false,
+    "digest": "sha256:adee42e1e98ae6694a181d222ffdf233f966e66a946ddd4fe5f109906c627ec3",
+    "created_at": "2026-11-10T06:25:28Z",
+    "updated_at": "2026-11-10T06:25:28Z",
+    "expires_at": "2026-11-24T06:25:27Z",
+    "workflow_run": {
+      "id": 42768362132,
+      "repository_id": 1436931643,
+      "head_repository_id": 1436931643,
+      "head_branch": "serving/20261109",
+      "head_sha": "446889ad768d2e52ebe2d025af342ecacb7df4b2"
+    }
+  },
+  "archive": {
+    "path": "research/serving/TRITON_AOT_ASSEMBLIES_2026-11-10.zip",
+    "sha256": "adee42e1e98ae6694a181d222ffdf233f966e66a946ddd4fe5f109906c627ec3",
+    "bytes": 253721
+  },
+  "checks": {
+    "compiled_cases": 25,
+    "all_125_assembly_hashes_match": true,
+    "all_cubins_cuda_elf": true,
+    "tool_hash_matches": true,
+    "ci_sha_matches": true,
+    "gpu_kernel_executed": false
+  },
+  "scope": "Actual explicit-target compilation and assembly only; no GPU numerical/graph/collective/serving validation"
+}

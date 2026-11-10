@@ -1,0 +1,1292 @@
+{
+  "captured_utc": "2026-11-09T23:07:32.450822+00:00",
+  "scope": "First page per query only; authenticated results filtered to public repositories; not exhaustive entrants or source audit.",
+  "queries": [
+    {
+      "kind": "code",
+      "query": "\"okc serve check\"",
+      "returncode": 0,
+      "total_count": 5,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "lee101/openkernels",
+          "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/notes/llms.txt",
+          "path": "notes/llms.txt",
+          "sha": "f5d32fd298c968976791198f2fed6d194dbea7e9",
+          "description": "kernels"
+        },
+        {
+          "repository": "ruwwww/open-kernel-challenge",
+          "url": "https://github.com/ruwwww/open-kernel-challenge/blob/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/serving/RULES.md",
+          "path": "serving/RULES.md",
+          "sha": "a755379762986cd504ef0bcfacacf30da101757b",
+          "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)"
+        },
+        {
+          "repository": "erkin98/muse-open-kernel-challenge",
+          "url": "https://github.com/erkin98/muse-open-kernel-challenge/blob/cf977def7ea72d870151b0610474e54d9c589479/research/method/challenge-rules-as-we-read-them.md",
+          "path": "research/method/challenge-rules-as-we-read-them.md",
+          "sha": "017489a7c07611d782c3de87be0020d404d95619",
+          "description": null
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/notes/llms.txt",
+          "path": "meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/notes/llms.txt",
+          "sha": "f5d32fd298c968976791198f2fed6d194dbea7e9",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "hieptran1812/my-website",
+          "url": "https://github.com/hieptran1812/my-website/blob/e437a3aa16bf8b7297c61e5ba75837c683f551e3/content/blog/machine-learning/gpu-kernel-engineering/setting-up-the-lab-okc-sglang-image-and-nsight.md",
+          "path": "content/blog/machine-learning/gpu-kernel-engineering/setting-up-the-lab-okc-sglang-image-and-nsight.md",
+          "sha": "8e4bb15f4f36cf7dc79db92830d8c6b979656573",
+          "description": null
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"muse_spark_fp4_moe\"",
+      "returncode": 0,
+      "total_count": 63,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "sgl-project/sglang",
+          "url": "https://github.com/sgl-project/sglang/blob/bcd6a81466c0859aaf1d97626bc7ea217624cf7f/python/sglang/srt/models/muse_spark.py",
+          "path": "python/sglang/srt/models/muse_spark.py",
+          "sha": "ad879dee32f678bdcf519b8d5e3060165de2516f",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+        },
+        {
+          "repository": "sgl-project/sglang",
+          "url": "https://github.com/sgl-project/sglang/blob/bcd6a81466c0859aaf1d97626bc7ea217624cf7f/python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "sha": "059a08ccc10691021886f43056c91ce72aa5468a",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+        },
+        {
+          "repository": "sgl-project/sgl-nvidia-mega",
+          "url": "https://github.com/sgl-project/sgl-nvidia-mega/blob/750004efd8bc0db852cdd4efbebb807c73bedd4b/sgl_nvidia_mega/muse_spark/components/sgl_compat.py",
+          "path": "sgl_nvidia_mega/muse_spark/components/sgl_compat.py",
+          "sha": "d83992b3849757c4287edeef2144e3fad7db771f",
+          "description": null
+        },
+        {
+          "repository": "sgl-project/sgl-nvidia-mega",
+          "url": "https://github.com/sgl-project/sgl-nvidia-mega/blob/750004efd8bc0db852cdd4efbebb807c73bedd4b/sgl_nvidia_mega/muse_spark/components/sp_combine_inplace.py",
+          "path": "sgl_nvidia_mega/muse_spark/components/sp_combine_inplace.py",
+          "sha": "2fabe7a9552c073525762d46d4f5123396de9443",
+          "description": null
+        },
+        {
+          "repository": "HYGON-AI/sglang-das",
+          "url": "https://github.com/HYGON-AI/sglang-das/blob/c573a9d707d47eb1272fb7e20a542efb9fd52a05/python/sglang/srt/models/muse_spark.py",
+          "path": "python/sglang/srt/models/muse_spark.py",
+          "sha": "7899b710c70aa1fe25774c56fa026e046a816c21",
+          "description": "\u57fa\u4e8e sgl-project/sglang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u5efa\u8bbe\u7684 das \u4e0b\u6e38\u9002\u914d\u4ed3\u5e93\uff0c\u9762\u5411 hcu \u5e73\u53f0\u8fdb\u884c\u529f\u80fd\u9002\u914d\u4e0e\u4f18\u5316\u3002"
+        },
+        {
+          "repository": "lee101/openkernels",
+          "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/docs/upstream_ideas.md",
+          "path": "docs/upstream_ideas.md",
+          "sha": "8a6753655193727934a3db4f17d15d921a9d5441",
+          "description": "kernels"
+        },
+        {
+          "repository": "sgl-project/sgl-nvidia-mega",
+          "url": "https://github.com/sgl-project/sgl-nvidia-mega/blob/750004efd8bc0db852cdd4efbebb807c73bedd4b/sgl_nvidia_mega/muse_spark/components/sp_fp4_dispatch.py",
+          "path": "sgl_nvidia_mega/muse_spark/components/sp_fp4_dispatch.py",
+          "sha": "6b3256f763e3c37be7de5893cd303f0446f58477",
+          "description": null
+        },
+        {
+          "repository": "HYGON-AI/sglang-das",
+          "url": "https://github.com/HYGON-AI/sglang-das/blob/c573a9d707d47eb1272fb7e20a542efb9fd52a05/python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "sha": "b8bca06017da08f664cb1351eb9e252dbaf54046",
+          "description": "\u57fa\u4e8e sgl-project/sglang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u5efa\u8bbe\u7684 das \u4e0b\u6e38\u9002\u914d\u4ed3\u5e93\uff0c\u9762\u5411 hcu \u5e73\u53f0\u8fdb\u884c\u529f\u80fd\u9002\u914d\u4e0e\u4f18\u5316\u3002"
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44554.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44554.md",
+          "sha": "9082ede22dec0ea62f6be80b45185906baae4595",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44717.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44717.md",
+          "sha": "00a55b2766920954be4f6f8fd83512a002c52032",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-47561.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-47561.md",
+          "sha": "1e304bace55a38b7bf8496873c4ab7f42f1f1964",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45462.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45462.md",
+          "sha": "0e4833c57d289023d790815ff3a80bfda27be123",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44668.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44668.md",
+          "sha": "ff5e438257e072b2c157b2e579aba6f9039b554e",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "HYGON-AI/sglang-plugin-das",
+          "url": "https://github.com/HYGON-AI/sglang-plugin-das/blob/ec08e08134f0de571ba3f5fff02dc180af82e638/hcu_sglang/models/muse_spark/model.py",
+          "path": "hcu_sglang/models/muse_spark/model.py",
+          "sha": "fb2250abab218325fbcb45d5d3c6c4c2b4cbf7b1",
+          "description": "\u57fa\u4e8e SGLang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u7684\u5b98\u65b9\u63d2\u4ef6\u673a\u5236\u5efa\u8bbe\u7684 das \u63d2\u4ef6\u4ed3\u5e93\uff0c\u4e3a hcu \u5e73\u53f0\u63d0\u4f9b\u4f18\u5316\u9002\u914d\u80fd\u529b\u2014\u2014\u91cf\u5316\u65b9\u6848\u3001\u6ce8\u610f\u529b\u540e\u7aef\u3001\u524d\u7f00\u7f13\u5b58\u7b49\u8fd0\u884c\u65f6\u6269\u5c55\u4e0e\u6027\u80fd\u4f18\u5316\uff1b\u4e0e adapter-das \u9002\u914d\u5e95\u5ea7\u7ec4\u5408\u90e8\u7f72\u3002"
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-47636.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-47636.md",
+          "sha": "451a342a7bcdc749e11b806a1bb1a0fbe2ed0746",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "ArthurJianLin/sglang-work",
+          "url": "https://github.com/ArthurJianLin/sglang-work/blob/4099eee5ad2b6c0c38f4505729c2350dfec492f2/python/sglang/srt/models/muse_spark.py",
+          "path": "python/sglang/srt/models/muse_spark.py",
+          "sha": "35a458bedf3f85299888cc7502ada3527249778c",
+          "description": "SGLang mirror for multi-environment sync and patch development (auto-synced from upstream)"
+        },
+        {
+          "repository": "Kleenelan/sglang-rtx2080Ti",
+          "url": "https://github.com/Kleenelan/sglang-rtx2080Ti/blob/b48aba306bf8e030be447d9fb70ad078d8495985/python/sglang/srt/models/muse_spark.py",
+          "path": "python/sglang/srt/models/muse_spark.py",
+          "sha": "6b638e9f5ebd3b74271fe4c5eb7fa81c13bdcba1",
+          "description": null
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-46724.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-46724.md",
+          "sha": "3c1db3670a7f5e98569f35ebcfdac81d2937566f",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45680.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45680.md",
+          "sha": "e759b31170c7db82cd80d95328cbea3e82d78c05",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-48045.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-48045.md",
+          "sha": "3db209972d03f3f42b5cb7cbd15c4b034dc372e9",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44993.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44993.md",
+          "sha": "67c720ad5fb50ff140d8dec3dd9e81348b757bcd",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44994.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44994.md",
+          "sha": "662b44ba9534949381b529a99498fb87405c8f89",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "HYGON-AI/sglang-plugin-das",
+          "url": "https://github.com/HYGON-AI/sglang-plugin-das/blob/ec08e08134f0de571ba3f5fff02dc180af82e638/hcu_sglang/layers/muse_spark/muse_spark_bf16_moe.py",
+          "path": "hcu_sglang/layers/muse_spark/muse_spark_bf16_moe.py",
+          "sha": "48c810c2d238470a954de6f4457f10b6bac7a940",
+          "description": "\u57fa\u4e8e SGLang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u7684\u5b98\u65b9\u63d2\u4ef6\u673a\u5236\u5efa\u8bbe\u7684 das \u63d2\u4ef6\u4ed3\u5e93\uff0c\u4e3a hcu \u5e73\u53f0\u63d0\u4f9b\u4f18\u5316\u9002\u914d\u80fd\u529b\u2014\u2014\u91cf\u5316\u65b9\u6848\u3001\u6ce8\u610f\u529b\u540e\u7aef\u3001\u524d\u7f00\u7f13\u5b58\u7b49\u8fd0\u884c\u65f6\u6269\u5c55\u4e0e\u6027\u80fd\u4f18\u5316\uff1b\u4e0e adapter-das \u9002\u914d\u5e95\u5ea7\u7ec4\u5408\u90e8\u7f72\u3002"
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44666.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44666.md",
+          "sha": "7610935b79c910154c2cb8df93f53d4aba45c31a",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44530.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-44530.md",
+          "sha": "95eb17d65a796453e8a11a8d36e94b3988e7acd5",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45112.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45112.md",
+          "sha": "29604465c21bf2d4bf8b1841b9eb41d8ccbc471f",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45567.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45567.md",
+          "sha": "2025a6be2c5e9020caa3694698609749e032c362",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45566.md",
+          "path": "knowledge/projects/sglang/knowledgebase/upstream/prs/sgl-project--sglang/PR-45566.md",
+          "sha": "8d5d7e32740145dfd6bcd02ebf90cca9e1e1620f",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "ArthurJianLin/sglang-work",
+          "url": "https://github.com/ArthurJianLin/sglang-work/blob/4099eee5ad2b6c0c38f4505729c2350dfec492f2/python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "sha": "787a10dfac3df89a07ebec7af7b8d4e52b091681",
+          "description": "SGLang mirror for multi-environment sync and patch development (auto-synced from upstream)"
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/docs/upstream_ideas.md",
+          "path": "meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/docs/upstream_ideas.md",
+          "sha": "8a6753655193727934a3db4f17d15d921a9d5441",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44717-1268c75e1a2956baf14c0071201ed2ece8081e3e7317aa3bdc8e675c11315dd1.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44717-1268c75e1a2956baf14c0071201ed2ece8081e3e7317aa3bdc8e675c11315dd1.json",
+          "sha": "8ec9a5dd0333d782ba9f7939f181011db1081b35",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44717-3438fb8a10a9bc6c7f20f9894824fde3934b2a7c1fad9545b31ab0ca8691cfc0.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44717-3438fb8a10a9bc6c7f20f9894824fde3934b2a7c1fad9545b31ab0ca8691cfc0.json",
+          "sha": "119473c7103476064f0893ad855aaeee5998187b",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "shivajid/sglang-rtx-pro-6000",
+          "url": "https://github.com/shivajid/sglang-rtx-pro-6000/blob/13f037c5a4526f521f036a9132a2971e9669f94b/models/Meta-Muse-Spark/nvfp4-g4-gke-dflash-muse-spark-agentx-hicache.yaml",
+          "path": "models/Meta-Muse-Spark/nvfp4-g4-gke-dflash-muse-spark-agentx-hicache.yaml",
+          "sha": "adb6a13502b7c9b59f5ad62df54ed19b834fef0c",
+          "description": "This repo is related to Google G4 machine types."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44554-56aebe4ad4fc928f5b6b8154d8c9da14964b76eaf1dbcd4093413ebbd2c40539.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44554-56aebe4ad4fc928f5b6b8154d8c9da14964b76eaf1dbcd4093413ebbd2c40539.json",
+          "sha": "5c6cddc89c6a81e5714727aefd7f62fe9d8be52e",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44554-f77e992ced6aa74754989acf6485ee8cb5d80a94405a72f3a960582b0de2dc08.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44554-f77e992ced6aa74754989acf6485ee8cb5d80a94405a72f3a960582b0de2dc08.json",
+          "sha": "ee8d29dbcb022c4ce3f57ed01eb642ffe3297025",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/46724-aae2fc56cb8176e8cc310e6412231291dd90c23e87d0e05421506ed51ec7afc7.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/46724-aae2fc56cb8176e8cc310e6412231291dd90c23e87d0e05421506ed51ec7afc7.json",
+          "sha": "f3d514defcadbb02656e4ec94a9c5c8cf631d387",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/47561-a54f9d3155fef61f3589bf51e3eafc6aa114df6edd3669429e87866d7e0fbc59.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/47561-a54f9d3155fef61f3589bf51e3eafc6aa114df6edd3669429e87866d7e0fbc59.json",
+          "sha": "76617d818ceb709ace229eb5468b49ebd3cd09dc",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/45462-0e18320f9acc23260fefd5e07d40a9617833f34d90b6984f15e5f2b897e5fd70.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/45462-0e18320f9acc23260fefd5e07d40a9617833f34d90b6984f15e5f2b897e5fd70.json",
+          "sha": "2ba32a9b90f6f2cf0ea5c6c069e46f12fd751086",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44668-8991a291d7fd4358085a8bdf230ed1a6ab35a3cde2a6bffde0fa1dddb4048c23.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44668-8991a291d7fd4358085a8bdf230ed1a6ab35a3cde2a6bffde0fa1dddb4048c23.json",
+          "sha": "75e7a1e550cb7b3f78793f5e3d27bff919f9c147",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44668-d095197f61619b54b75010a2f32c213080dce558e35c8c814063f48f265576ca.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44668-d095197f61619b54b75010a2f32c213080dce558e35c8c814063f48f265576ca.json",
+          "sha": "f52df8472a51c0f55320e0f72a64eb2031a2d405",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/47636-7929dce6c662d9f3bd364cb853cc396c3428c459a472db4b6318d4e9e8cee1d8.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/47636-7929dce6c662d9f3bd364cb853cc396c3428c459a472db4b6318d4e9e8cee1d8.json",
+          "sha": "d1e956ee4c4d13b0ba4d0d4bf71eb8b388a6b3dc",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44993-4a2285b1e38a2c80074c84857b07ceba5acc43747c31a0145248fa2667788140.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44993-4a2285b1e38a2c80074c84857b07ceba5acc43747c31a0145248fa2667788140.json",
+          "sha": "b7bd84c9e47c332d20e00f51aab6abe2f4760472",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44993-1eb418f11ae8060e79139e62042d204fc1bc8b55020eb17709df068d098226b4.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44993-1eb418f11ae8060e79139e62042d204fc1bc8b55020eb17709df068d098226b4.json",
+          "sha": "ec7512f228c11420c0eaf2d127c91c8ae4354fdc",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/44994-5b28a737b7d8701d4939b3a1ecf14c4f5f8e50fa72d8692e4d87388dcee21bc6.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/44994-5b28a737b7d8701d4939b3a1ecf14c4f5f8e50fa72d8692e4d87388dcee21bc6.json",
+          "sha": "4a2ed6c2a0a94b7903a0bd8a2722f0073a0ed5a8",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/sgl-project--sglang/46701-46173b6b78fdf8c7e6fae57b674f0951dc153186144f06b71dc92674fbd4b3b3.json",
+          "path": "knowledge/evidence/prs/sgl-project--sglang/46701-46173b6b78fdf8c7e6fae57b674f0951dc153186144f06b71dc92674fbd4b3b3.json",
+          "sha": "915eae31cae7024921a09b88f1ad72568d4cdd04",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "sgl-project/sglang",
+          "url": "https://github.com/sgl-project/sglang/blob/bcd6a81466c0859aaf1d97626bc7ea217624cf7f/test/registered/kernels/ops/moe/test_muse_spark_routing.py",
+          "path": "test/registered/kernels/ops/moe/test_muse_spark_routing.py",
+          "sha": "569fd16c7c17ca67e1da451e4f4c22dc2fdee18f",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+        },
+        {
+          "repository": "sgl-project/sglang",
+          "url": "https://github.com/sgl-project/sglang/blob/bcd6a81466c0859aaf1d97626bc7ea217624cf7f/test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "path": "test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "sha": "3cc59ecd3027923966cb933a4908e6b3e4397113",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+        },
+        {
+          "repository": "sgl-project/sglang",
+          "url": "https://github.com/sgl-project/sglang/blob/bcd6a81466c0859aaf1d97626bc7ea217624cf7f/test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "path": "test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "sha": "3120ef00111f7c207c0b9d04a2d8e238f10f377b",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+        },
+        {
+          "repository": "Kleenelan/sglang-rtx2080Ti",
+          "url": "https://github.com/Kleenelan/sglang-rtx2080Ti/blob/b48aba306bf8e030be447d9fb70ad078d8495985/test/registered/kernels/ops/moe/test_muse_spark_routing.py",
+          "path": "test/registered/kernels/ops/moe/test_muse_spark_routing.py",
+          "sha": "56af2534606025da4c91f7a46f73828cf4fc23b1",
+          "description": null
+        },
+        {
+          "repository": "ArthurJianLin/sglang-work",
+          "url": "https://github.com/ArthurJianLin/sglang-work/blob/4099eee5ad2b6c0c38f4505729c2350dfec492f2/test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "path": "test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "sha": "c76859f053867cbf458d2d5d5d7d91bec6af7095",
+          "description": "SGLang mirror for multi-environment sync and patch development (auto-synced from upstream)"
+        },
+        {
+          "repository": "ArthurJianLin/sglang-work",
+          "url": "https://github.com/ArthurJianLin/sglang-work/blob/4099eee5ad2b6c0c38f4505729c2350dfec492f2/test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "path": "test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "sha": "f7d8884acebdb117c4c31c669b1f739b3cf668d5",
+          "description": "SGLang mirror for multi-environment sync and patch development (auto-synced from upstream)"
+        },
+        {
+          "repository": "Kleenelan/sglang-rtx2080Ti",
+          "url": "https://github.com/Kleenelan/sglang-rtx2080Ti/blob/b48aba306bf8e030be447d9fb70ad078d8495985/test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "path": "test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "sha": "cb8874eb96231bc62ad8bd2e63652339ce12a6a3",
+          "description": null
+        },
+        {
+          "repository": "HYGON-AI/sglang-plugin-das",
+          "url": "https://github.com/HYGON-AI/sglang-plugin-das/blob/ec08e08134f0de571ba3f5fff02dc180af82e638/tests/contracts/owned_model_sources.json",
+          "path": "tests/contracts/owned_model_sources.json",
+          "sha": "720420de03936f1dd3af7d3f52b5f7984fa0ec89",
+          "description": "\u57fa\u4e8e SGLang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u7684\u5b98\u65b9\u63d2\u4ef6\u673a\u5236\u5efa\u8bbe\u7684 das \u63d2\u4ef6\u4ed3\u5e93\uff0c\u4e3a hcu \u5e73\u53f0\u63d0\u4f9b\u4f18\u5316\u9002\u914d\u80fd\u529b\u2014\u2014\u91cf\u5316\u65b9\u6848\u3001\u6ce8\u610f\u529b\u540e\u7aef\u3001\u524d\u7f00\u7f13\u5b58\u7b49\u8fd0\u884c\u65f6\u6269\u5c55\u4e0e\u6027\u80fd\u4f18\u5316\uff1b\u4e0e adapter-das \u9002\u914d\u5e95\u5ea7\u7ec4\u5408\u90e8\u7f72\u3002"
+        },
+        {
+          "repository": "HYGON-AI/sglang-plugin-das",
+          "url": "https://github.com/HYGON-AI/sglang-plugin-das/blob/ec08e08134f0de571ba3f5fff02dc180af82e638/tests/contracts/runtime_owned_sources.json",
+          "path": "tests/contracts/runtime_owned_sources.json",
+          "sha": "486682e22cc96f9098bcd60fa9434b8c70951510",
+          "description": "\u57fa\u4e8e SGLang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u7684\u5b98\u65b9\u63d2\u4ef6\u673a\u5236\u5efa\u8bbe\u7684 das \u63d2\u4ef6\u4ed3\u5e93\uff0c\u4e3a hcu \u5e73\u53f0\u63d0\u4f9b\u4f18\u5316\u9002\u914d\u80fd\u529b\u2014\u2014\u91cf\u5316\u65b9\u6848\u3001\u6ce8\u610f\u529b\u540e\u7aef\u3001\u524d\u7f00\u7f13\u5b58\u7b49\u8fd0\u884c\u65f6\u6269\u5c55\u4e0e\u6027\u80fd\u4f18\u5316\uff1b\u4e0e adapter-das \u9002\u914d\u5e95\u5ea7\u7ec4\u5408\u90e8\u7f72\u3002"
+        },
+        {
+          "repository": "moirai-internal/sglang",
+          "url": "https://github.com/moirai-internal/sglang/blob/112b3b97b3a76934779e4c11d6fa74567e3aaf58/python/sglang/srt/models/muse_spark.py",
+          "path": "python/sglang/srt/models/muse_spark.py",
+          "sha": "ad879dee32f678bdcf519b8d5e3060165de2516f",
+          "description": null
+        },
+        {
+          "repository": "moirai-internal/sglang",
+          "url": "https://github.com/moirai-internal/sglang/blob/112b3b97b3a76934779e4c11d6fa74567e3aaf58/python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "sha": "059a08ccc10691021886f43056c91ce72aa5468a",
+          "description": null
+        },
+        {
+          "repository": "confidential-dot-ai/confidential-sglang",
+          "url": "https://github.com/confidential-dot-ai/confidential-sglang/blob/a7fd2e1158c389c33077bae67fb797efa8dd09bd/python/sglang/srt/models/muse_spark.py",
+          "path": "python/sglang/srt/models/muse_spark.py",
+          "sha": "7899b710c70aa1fe25774c56fa026e046a816c21",
+          "description": "Fork of SGLang to run confidentially. Patched and tuned for performance and stability under CC."
+        },
+        {
+          "repository": "confidential-dot-ai/confidential-sglang",
+          "url": "https://github.com/confidential-dot-ai/confidential-sglang/blob/a7fd2e1158c389c33077bae67fb797efa8dd09bd/python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "sha": "b8bca06017da08f664cb1351eb9e252dbaf54046",
+          "description": "Fork of SGLang to run confidentially. Patched and tuned for performance and stability under CC."
+        },
+        {
+          "repository": "Kleenelan/sglang-rtx2080Ti",
+          "url": "https://github.com/Kleenelan/sglang-rtx2080Ti/blob/b48aba306bf8e030be447d9fb70ad078d8495985/python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_bf16_moe.py",
+          "sha": "787a10dfac3df89a07ebec7af7b8d4e52b091681",
+          "description": null
+        },
+        {
+          "repository": "moirai-internal/sglang",
+          "url": "https://github.com/moirai-internal/sglang/blob/112b3b97b3a76934779e4c11d6fa74567e3aaf58/test/registered/kernels/ops/moe/test_muse_spark_routing.py",
+          "path": "test/registered/kernels/ops/moe/test_muse_spark_routing.py",
+          "sha": "569fd16c7c17ca67e1da451e4f4c22dc2fdee18f",
+          "description": null
+        },
+        {
+          "repository": "moirai-internal/sglang",
+          "url": "https://github.com/moirai-internal/sglang/blob/112b3b97b3a76934779e4c11d6fa74567e3aaf58/test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "path": "test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "sha": "3cc59ecd3027923966cb933a4908e6b3e4397113",
+          "description": null
+        },
+        {
+          "repository": "moirai-internal/sglang",
+          "url": "https://github.com/moirai-internal/sglang/blob/112b3b97b3a76934779e4c11d6fa74567e3aaf58/test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "path": "test/registered/kernels/ops/moe/test_moe_wna16_marlin.py",
+          "sha": "3120ef00111f7c207c0b9d04a2d8e238f10f377b",
+          "description": null
+        },
+        {
+          "repository": "Kleenelan/sglang-rtx2080Ti",
+          "url": "https://github.com/Kleenelan/sglang-rtx2080Ti/blob/b48aba306bf8e030be447d9fb70ad078d8495985/test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "path": "test/registered/unit/layers/muse_spark/test_muse_spark_runner_dispatch.py",
+          "sha": "c76859f053867cbf458d2d5d5d7d91bec6af7095",
+          "description": null
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"Muse Spark\" \"block_size_m\"",
+      "returncode": 0,
+      "total_count": 75,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "sgl-project/sglang",
+          "url": "https://github.com/sgl-project/sglang/blob/bcd6a81466c0859aaf1d97626bc7ea217624cf7f/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha": "c1e80e25e24eaf3577affb36f2d8a7e2905775de",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+        },
+        {
+          "repository": "sgl-project/sglang",
+          "url": "https://github.com/sgl-project/sglang/blob/bcd6a81466c0859aaf1d97626bc7ea217624cf7f/python/sglang/srt/environ.py",
+          "path": "python/sglang/srt/environ.py",
+          "sha": "739a6cfd03573f70f91784ab44fedee7a3788b5e",
+          "description": "SGLang is a high-performance serving framework for large language models and multimodal models."
+        },
+        {
+          "repository": "vllm-project/vllm-daily",
+          "url": "https://github.com/vllm-project/vllm-daily/blob/27dfdce91ad1a1ecd1f439a89340a73e320d8d48/2026/10/2026-10-16.md",
+          "path": "2026/10/2026-10-16.md",
+          "sha": "18fb3a17f30c53ec96fe47ac094a3c445d6c0d02",
+          "description": "vLLM Daily Summarization of Merged PRs"
+        },
+        {
+          "repository": "vllm-project/vllm-daily",
+          "url": "https://github.com/vllm-project/vllm-daily/blob/27dfdce91ad1a1ecd1f439a89340a73e320d8d48/2026/10/2026-10-26.md",
+          "path": "2026/10/2026-10-26.md",
+          "sha": "8d831390a0a8f34f147ba019cef677651426c279",
+          "description": "vLLM Daily Summarization of Merged PRs"
+        },
+        {
+          "repository": "vllm-project/vllm-daily",
+          "url": "https://github.com/vllm-project/vllm-daily/blob/27dfdce91ad1a1ecd1f439a89340a73e320d8d48/2026/11/2026-11-04.md",
+          "path": "2026/11/2026-11-04.md",
+          "sha": "2b59acfa415009b146392efbe8343f9c0057b7a2",
+          "description": "vLLM Daily Summarization of Merged PRs"
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "path": "benchmarks/data/kernel-starters/muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "lee101/openkernels",
+          "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_moe_w4a16/baseline.py",
+          "path": "muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "kernels"
+        },
+        {
+          "repository": "gauravjain14/muse-okc-submissions",
+          "url": "https://github.com/gauravjain14/muse-okc-submissions/blob/30a2bcfcee0f0f4b1a10043191a359c725c2f5e1/muse_moe_w4a16/tools/baseline.py",
+          "path": "muse_moe_w4a16/tools/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": null
+        },
+        {
+          "repository": "HYGON-AI/sglang-das",
+          "url": "https://github.com/HYGON-AI/sglang-das/blob/c573a9d707d47eb1272fb7e20a542efb9fd52a05/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha": "ae6705d84a4bb367a46d8f212615cb1a4aa63d99",
+          "description": "\u57fa\u4e8e sgl-project/sglang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u5efa\u8bbe\u7684 das \u4e0b\u6e38\u9002\u914d\u4ed3\u5e93\uff0c\u9762\u5411 hcu \u5e73\u53f0\u8fdb\u884c\u529f\u80fd\u9002\u914d\u4e0e\u4f18\u5316\u3002"
+        },
+        {
+          "repository": "manymoats/cleankpf",
+          "url": "https://github.com/manymoats/cleankpf/blob/cfaf4af98249215b8ad2819d5c613c6c4047fedc/README.md",
+          "path": "README.md",
+          "sha": "1c34d58405f7c858430367407e07c270409858ab",
+          "description": "CleanKPF: the public, receipted record of ManyMoats and ICEBLOCK (mirror of brennandec/cleankpf; both links stay live)"
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_moe_w4a16/submission.py",
+          "sha": "96e0fb0bfc05a7e27430229cfc3645f7bffb2339",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/kernel-starters/muse_decode_layer/baseline.py",
+          "path": "benchmarks/data/kernel-starters/muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/kernel-starters/muse_prefill_layer/baseline.py",
+          "path": "benchmarks/data/kernel-starters/muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "lee101/openkernels",
+          "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_decode_layer/baseline.py",
+          "path": "muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "kernels"
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/submission.py",
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_moe_w4a16/submission.py",
+          "sha": "086eb2ba975608311de7382f1e43d9bc5d51815f",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "lee101/openkernels",
+          "url": "https://github.com/lee101/openkernels/blob/c565e373d34575c5f7df862b05f8be7619078b0f/muse_prefill_layer/baseline.py",
+          "path": "muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "kernels"
+        },
+        {
+          "repository": "gauravjain14/muse-okc-submissions",
+          "url": "https://github.com/gauravjain14/muse-okc-submissions/blob/30a2bcfcee0f0f4b1a10043191a359c725c2f5e1/muse_decode_layer/tools/baseline.py",
+          "path": "muse_decode_layer/tools/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": null
+        },
+        {
+          "repository": "gauravjain14/muse-okc-submissions",
+          "url": "https://github.com/gauravjain14/muse-okc-submissions/blob/30a2bcfcee0f0f4b1a10043191a359c725c2f5e1/muse_prefill_layer/tools/baseline.py",
+          "path": "muse_prefill_layer/tools/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": null
+        },
+        {
+          "repository": "PostTrainLLM/posttrainllm",
+          "url": "https://github.com/PostTrainLLM/posttrainllm/blob/65abbc8acce6be9fed2881475d2cf06b553a0681/experiments/openkernel/muse_moe_w4a16/submission.py",
+          "path": "experiments/openkernel/muse_moe_w4a16/submission.py",
+          "sha": "d7b4e00ad664ff7a563e242625f393275ded3e2d",
+          "description": "A Mac-local specialist-model factory for data, post-training, evaluation, packaging, and evidence-backed decisions."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_decode_layer/submission.py",
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_decode_layer/submission.py",
+          "sha": "785aa6a20afe1e96fcac348bbffe1525a7f5220e",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_prefill_layer/submission.py",
+          "path": "benchmarks/data/candidates/gpt-5.6-sol/kernel-muse_prefill_layer/submission.py",
+          "sha": "614e67c0d5b1ae2ff123a639e8edccb78f15da8d",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/gpt-6-astra/kernel-muse_prefill_layer/submission.py",
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_prefill_layer/submission.py",
+          "sha": "7c2be30c774cad876eaf79e26477fba3d25e0e55",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_prefill_layer/submission.py",
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_prefill_layer/submission.py",
+          "sha": "62eb8cc2a094049d01c469986812f56311ae59f2",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_decode_layer/submission.py",
+          "path": "benchmarks/data/candidates/claude-sonnet-5-5/kernel-muse_decode_layer/submission.py",
+          "sha": "f4fdacebfc9797613bedc87c7b54b83e485b8746",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/claude-opus-5-5/kernel-muse_decode_layer/submission.py",
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_decode_layer/submission.py",
+          "sha": "a0d050f09dbba9555d76b6f3fc92de868d7ed616",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/gpt-6-astra/kernel-muse_decode_layer/submission.py",
+          "path": "benchmarks/data/candidates/gpt-6-astra/kernel-muse_decode_layer/submission.py",
+          "sha": "20885e0920161dc78068a9069835555c99d31c15",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "rohanarun/Auto-research-agent",
+          "url": "https://github.com/rohanarun/Auto-research-agent/blob/023046877c6eb209bff662a64ca011fbe7403da7/benchmarks/data/candidates/claude-opus-5-5/kernel-muse_prefill_layer/submission.py",
+          "path": "benchmarks/data/candidates/claude-opus-5-5/kernel-muse_prefill_layer/submission.py",
+          "sha": "bf7438314bfd94ca52533eafab81726674a6027a",
+          "description": "A native macOS auto-research harness for Codex and Claude Code. Pick an open research project and press Play."
+        },
+        {
+          "repository": "erkin98/muse-open-kernel-challenge",
+          "url": "https://github.com/erkin98/muse-open-kernel-challenge/blob/cf977def7ea72d870151b0610474e54d9c589479/kernels/muse_prefill_layer/submission.py",
+          "path": "kernels/muse_prefill_layer/submission.py",
+          "sha": "614e67c0d5b1ae2ff123a639e8edccb78f15da8d",
+          "description": null
+        },
+        {
+          "repository": "LokeshVenkatachalam/Meta-Open-Kernel-Challenge",
+          "url": "https://github.com/LokeshVenkatachalam/Meta-Open-Kernel-Challenge/blob/a3f120af9df0b7ea61704696608b8ba67d426831/kernels/muse_decode_layer/submission.py",
+          "path": "kernels/muse_decode_layer/submission.py",
+          "sha": "272039afee5d1671c4739b771b7621b0578f2fc5",
+          "description": null
+        },
+        {
+          "repository": "PostTrainLLM/posttrainllm",
+          "url": "https://github.com/PostTrainLLM/posttrainllm/blob/65abbc8acce6be9fed2881475d2cf06b553a0681/experiments/openkernel/candidates/final-layer.py",
+          "path": "experiments/openkernel/candidates/final-layer.py",
+          "sha": "75e778e5ed0a7020904992b316b9727be489cd66",
+          "description": "A Mac-local specialist-model factory for data, post-training, evaluation, packaging, and evidence-backed decisions."
+        },
+        {
+          "repository": "Ranoobaba/okc-campaign",
+          "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_moe_w4a16/baseline.py",
+          "path": "problems/muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "Autonomous kernel-optimization campaign for the Open Kernel Challenge: Modal H200 judge replica, overnight experiment loop, Triton kernels vs SGLang"
+        },
+        {
+          "repository": "HYGON-AI/sglang-das",
+          "url": "https://github.com/HYGON-AI/sglang-das/blob/c573a9d707d47eb1272fb7e20a542efb9fd52a05/python/sglang/srt/environ.py",
+          "path": "python/sglang/srt/environ.py",
+          "sha": "fd8e9ddbfb987dc30728d465d0d12c07292193a1",
+          "description": "\u57fa\u4e8e sgl-project/sglang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u5efa\u8bbe\u7684 das \u4e0b\u6e38\u9002\u914d\u4ed3\u5e93\uff0c\u9762\u5411 hcu \u5e73\u53f0\u8fdb\u884c\u529f\u80fd\u9002\u914d\u4e0e\u4f18\u5316\u3002"
+        },
+        {
+          "repository": "xharshvardhan/open-kernel-challenge",
+          "url": "https://github.com/xharshvardhan/open-kernel-challenge/blob/4958d3141aa977c4b6b26df7a8d06c90dd094ee9/kernels/decoder_layer.py",
+          "path": "kernels/decoder_layer.py",
+          "sha": "bf2806607653a9f71f3fc75a0252ab8256a0f1e2",
+          "description": "Optimized GPU kernels for Open Kernel Challenge with verified standings and concise implementation notes"
+        },
+        {
+          "repository": "HYGON-AI/sglang-plugin-das",
+          "url": "https://github.com/HYGON-AI/sglang-plugin-das/blob/ec08e08134f0de571ba3f5fff02dc180af82e638/hcu_sglang/layers/muse_spark/muse_spark_fp4_moe.py",
+          "path": "hcu_sglang/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha": "0fcd8aa432827b7cc6cac8bdbfdcb9f85b81ea18",
+          "description": "\u57fa\u4e8e SGLang \u4e0a\u6e38\u793e\u533a\u7248\u672c\u7684\u5b98\u65b9\u63d2\u4ef6\u673a\u5236\u5efa\u8bbe\u7684 das \u63d2\u4ef6\u4ed3\u5e93\uff0c\u4e3a hcu \u5e73\u53f0\u63d0\u4f9b\u4f18\u5316\u9002\u914d\u80fd\u529b\u2014\u2014\u91cf\u5316\u65b9\u6848\u3001\u6ce8\u610f\u529b\u540e\u7aef\u3001\u524d\u7f00\u7f13\u5b58\u7b49\u8fd0\u884c\u65f6\u6269\u5c55\u4e0e\u6027\u80fd\u4f18\u5316\uff1b\u4e0e adapter-das \u9002\u914d\u5e95\u5ea7\u7ec4\u5408\u90e8\u7f72\u3002"
+        },
+        {
+          "repository": "PostTrainLLM/posttrainllm",
+          "url": "https://github.com/PostTrainLLM/posttrainllm/blob/65abbc8acce6be9fed2881475d2cf06b553a0681/experiments/openkernel/muse_decode_layer/submission.py",
+          "path": "experiments/openkernel/muse_decode_layer/submission.py",
+          "sha": "75e778e5ed0a7020904992b316b9727be489cd66",
+          "description": "A Mac-local specialist-model factory for data, post-training, evaluation, packaging, and evidence-backed decisions."
+        },
+        {
+          "repository": "ArthurJianLin/sglang-work",
+          "url": "https://github.com/ArthurJianLin/sglang-work/blob/4099eee5ad2b6c0c38f4505729c2350dfec492f2/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha": "61313d2ac95fbfeec34573a0bc1c0886e06ef844",
+          "description": "SGLang mirror for multi-environment sync and patch development (auto-synced from upstream)"
+        },
+        {
+          "repository": "Kleenelan/sglang-rtx2080Ti",
+          "url": "https://github.com/Kleenelan/sglang-rtx2080Ti/blob/b48aba306bf8e030be447d9fb70ad078d8495985/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha": "41c463dcfabe782eb681e9b2ab7b5c37c81d0df2",
+          "description": null
+        },
+        {
+          "repository": "gauravjain14/muse-okc-submissions",
+          "url": "https://github.com/gauravjain14/muse-okc-submissions/blob/30a2bcfcee0f0f4b1a10043191a359c725c2f5e1/muse_prefill_layer/01_fp8_attention_full_layers/build.py",
+          "path": "muse_prefill_layer/01_fp8_attention_full_layers/build.py",
+          "sha": "f305fc87e1b1f37f83ca2517325e3e86d04b1bae",
+          "description": null
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/4gatepylon_official_work/muse_moe_w4a16/baseline.py",
+          "path": "meta_muse_spark100k_challenge/4gatepylon_official_work/muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "Ranoobaba/okc-campaign",
+          "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_decode_layer/baseline.py",
+          "path": "problems/muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "Autonomous kernel-optimization campaign for the Open Kernel Challenge: Modal H200 judge replica, overnight experiment loop, Triton kernels vs SGLang"
+        },
+        {
+          "repository": "Ranoobaba/okc-campaign",
+          "url": "https://github.com/Ranoobaba/okc-campaign/blob/3831ab3c3538a9878031b667624240bd24bb7082/problems/muse_prefill_layer/baseline.py",
+          "path": "problems/muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "Autonomous kernel-optimization campaign for the Open Kernel Challenge: Modal H200 judge replica, overnight experiment loop, Triton kernels vs SGLang"
+        },
+        {
+          "repository": "ruwwww/agent-skills",
+          "url": "https://github.com/ruwwww/agent-skills/blob/469fbfa8ac2b6de75c66892f54b47ba94ff15a87/hermes-skills/cuda-programming-and-benchmarking/references/open-kernel-challenge-h200.md",
+          "path": "hermes-skills/cuda-programming-and-benchmarking/references/open-kernel-challenge-h200.md",
+          "sha": "e96d4e7e4d289e3fdce4b7d9a59e444df6d54510",
+          "description": "Universal agent skills and superpowers for coding agents (Claude Code, Codex, Hermes)"
+        },
+        {
+          "repository": "Madhavan113/ParadigmKernelChallenge",
+          "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_decode_layer/layer_glue.py",
+          "path": "muse_decode_layer/layer_glue.py",
+          "sha": "78dcb77c2b6597958b24369229f91d8e34f7a99e",
+          "description": null
+        },
+        {
+          "repository": "Kushagrabainsla/muse-spark-open",
+          "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/submission.py",
+          "path": "muse_decode_layer/submission.py",
+          "sha": "c003855fb057136ee06f38b4419f4812f92efa73",
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer"
+        },
+        {
+          "repository": "Kushagrabainsla/muse-spark-open",
+          "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/submission_l5.py",
+          "path": "muse_decode_layer/submission_l5.py",
+          "sha": "77e68d2be552d4403c78d286139e1274e0d802ff",
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer"
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/muse_moe_w4a16/baseline.py",
+          "path": "meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "Kushagrabainsla/muse-spark-open",
+          "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/submission_l6.py",
+          "path": "muse_decode_layer/submission_l6.py",
+          "sha": "58755ca4689080a2b2edc3828ca0a2eeb05d9166",
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer"
+        },
+        {
+          "repository": "Kushagrabainsla/muse-spark-open",
+          "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/submission_l7.py",
+          "path": "muse_decode_layer/submission_l7.py",
+          "sha": "1c7f00963e64702ecd387d8836bb98f7c6a15a96",
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer"
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/4gatepylon_official_work/muse_decode_layer/baseline.py",
+          "path": "meta_muse_spark100k_challenge/4gatepylon_official_work/muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/4gatepylon_official_work/muse_prefill_layer/baseline.py",
+          "path": "meta_muse_spark100k_challenge/4gatepylon_official_work/muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/muse_decode_layer/baseline.py",
+          "path": "meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "4gatepylon/LearningML",
+          "url": "https://github.com/4gatepylon/LearningML/blob/872d5bbc9b817a0eecd6a15b9a180d632672a935/meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/muse_prefill_layer/baseline.py",
+          "path": "meta_muse_spark100k_challenge/lee_101_openkernels_example/openkernels/muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "A (mono)repo to share my ML learnings. Initially, this may focus on (mechanistic) interpretability."
+        },
+        {
+          "repository": "gauravjain14/muse-okc-submissions",
+          "url": "https://github.com/gauravjain14/muse-okc-submissions/blob/30a2bcfcee0f0f4b1a10043191a359c725c2f5e1/muse_prefill_layer/01_fp8_attention_full_layers/evidence/base_codex_candidate_native_parallel_lt.py",
+          "path": "muse_prefill_layer/01_fp8_attention_full_layers/evidence/base_codex_candidate_native_parallel_lt.py",
+          "sha": "58edbf801ef1500a7f68eb3fae6164d7924515f5",
+          "description": null
+        },
+        {
+          "repository": "lHrHenry233/vllm-report",
+          "url": "https://github.com/lHrHenry233/vllm-report/blob/5924ee80f3d866bf640d4a8a77a0f75c33ac4e59/data/vllm/analysis/2026-10-17.json",
+          "path": "data/vllm/analysis/2026-10-17.json",
+          "sha": "aab547fdcc126be3f92f0c58ed735b0b12e8bc41",
+          "description": "vLLM SIG-Centric Commit Monitoring Dashboard"
+        },
+        {
+          "repository": "gauravjain14/muse-okc-submissions",
+          "url": "https://github.com/gauravjain14/muse-okc-submissions/blob/30a2bcfcee0f0f4b1a10043191a359c725c2f5e1/muse_moe_w4a16/01_persistent_fused_kernel_tma_ring/change.diff",
+          "path": "muse_moe_w4a16/01_persistent_fused_kernel_tma_ring/change.diff",
+          "sha": "81ee3e66122fc9fd2edb04d194b0c85582851c2d",
+          "description": null
+        },
+        {
+          "repository": "confidential-dot-ai/confidential-sglang",
+          "url": "https://github.com/confidential-dot-ai/confidential-sglang/blob/a7fd2e1158c389c33077bae67fb797efa8dd09bd/python/sglang/srt/environ.py",
+          "path": "python/sglang/srt/environ.py",
+          "sha": "8b73503ecf73c35ffa82150c7bdb527c4f361a1e",
+          "description": "Fork of SGLang to run confidentially. Patched and tuned for performance and stability under CC."
+        },
+        {
+          "repository": "ArthurJianLin/sglang-work",
+          "url": "https://github.com/ArthurJianLin/sglang-work/blob/4099eee5ad2b6c0c38f4505729c2350dfec492f2/python/sglang/srt/environ.py",
+          "path": "python/sglang/srt/environ.py",
+          "sha": "818e011a61562a2530a44ad777a75e4c3ddea4c7",
+          "description": "SGLang mirror for multi-environment sync and patch development (auto-synced from upstream)"
+        },
+        {
+          "repository": "Kleenelan/sglang-rtx2080Ti",
+          "url": "https://github.com/Kleenelan/sglang-rtx2080Ti/blob/b48aba306bf8e030be447d9fb70ad078d8495985/python/sglang/srt/environ.py",
+          "path": "python/sglang/srt/environ.py",
+          "sha": "9f35c4ea409a793a02983cffc54afcd5b7bd3a4c",
+          "description": null
+        },
+        {
+          "repository": "moirai-internal/sglang",
+          "url": "https://github.com/moirai-internal/sglang/blob/112b3b97b3a76934779e4c11d6fa74567e3aaf58/python/sglang/srt/environ.py",
+          "path": "python/sglang/srt/environ.py",
+          "sha": "f0c08587b3f6a7730f34ed7f550b1c10e7c856fc",
+          "description": null
+        },
+        {
+          "repository": "wxsms/llm-router-utils",
+          "url": "https://github.com/wxsms/llm-router-utils/blob/54a19998922c8c9ca19524fdb81e3987da4a0471/src/llm_router_utils/sglang/srt/environ.py",
+          "path": "src/llm_router_utils/sglang/srt/environ.py",
+          "sha": "1fcd46ba634f13ecf0d7a848d61d2842452994b7",
+          "description": "tokenize/detokenize/reasoning parser/toolcall parser adopted from famours inference engine but remove the heavy part."
+        },
+        {
+          "repository": "yuguo-Jack/HCU-TrainFlow",
+          "url": "https://github.com/yuguo-Jack/HCU-TrainFlow/blob/0f2e883b101fc1cebf627d9203b03068827a6a5a/knowledge/evidence/prs/vllm-project--vllm/63727-4b707e998533e4a96a063374075ad030709d81102fc6540ab18fb0baea70b6c4.json",
+          "path": "knowledge/evidence/prs/vllm-project--vllm/63727-4b707e998533e4a96a063374075ad030709d81102fc6540ab18fb0baea70b6c4.json",
+          "sha": "618eaa052049873cede9a0102320f446333512dc",
+          "description": "An agentic workflow for end-to-end large-model training adaptation, optimization, and resilient scaling on HCU."
+        },
+        {
+          "repository": "shivajid/sglang-rtx-pro-6000",
+          "url": "https://github.com/shivajid/sglang-rtx-pro-6000/blob/13f037c5a4526f521f036a9132a2971e9669f94b/models/Meta-Muse-Spark/nvfp4-g4-gke-dflash-muse-spark-agentx-hicache.yaml",
+          "path": "models/Meta-Muse-Spark/nvfp4-g4-gke-dflash-muse-spark-agentx-hicache.yaml",
+          "sha": "adb6a13502b7c9b59f5ad62df54ed19b834fef0c",
+          "description": "This repo is related to Google G4 machine types."
+        },
+        {
+          "repository": "moirai-internal/sglang",
+          "url": "https://github.com/moirai-internal/sglang/blob/112b3b97b3a76934779e4c11d6fa74567e3aaf58/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha": "c1e80e25e24eaf3577affb36f2d8a7e2905775de",
+          "description": null
+        },
+        {
+          "repository": "Kushagrabainsla/muse-spark-open",
+          "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_moe_w4a16/baseline.py",
+          "path": "muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer"
+        },
+        {
+          "repository": "lilaclilac09/open-kernel-challenge",
+          "url": "https://github.com/lilaclilac09/open-kernel-challenge/blob/d9bdcc9f01dff1018f2f256a0a1a63911a16557e/muse_moe_w4a16/baseline.py",
+          "path": "muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "Muse Spark Open Kernel Challenge (openkernelchallenge.dev) \u2014 kernel starters + notes"
+        },
+        {
+          "repository": "Madhavan113/ParadigmKernelChallenge",
+          "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_moe_w4a16/baseline.py",
+          "path": "muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": null
+        },
+        {
+          "repository": "ruwwww/open-kernel-challenge",
+          "url": "https://github.com/ruwwww/open-kernel-challenge/blob/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/muse_moe_w4a16/baseline.py",
+          "path": "muse_moe_w4a16/baseline.py",
+          "sha": "489b210f27a38ffb3f83b8da3f297b6f569ea57f",
+          "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)"
+        },
+        {
+          "repository": "confidential-dot-ai/confidential-sglang",
+          "url": "https://github.com/confidential-dot-ai/confidential-sglang/blob/a7fd2e1158c389c33077bae67fb797efa8dd09bd/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha": "ae6705d84a4bb367a46d8f212615cb1a4aa63d99",
+          "description": "Fork of SGLang to run confidentially. Patched and tuned for performance and stability under CC."
+        },
+        {
+          "repository": "Kushagrabainsla/muse-spark-open",
+          "url": "https://github.com/Kushagrabainsla/muse-spark-open/blob/ca71144194e993c9769f20654fade8008c6868c7/muse_decode_layer/baseline.py",
+          "path": "muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer"
+        },
+        {
+          "repository": "lilaclilac09/open-kernel-challenge",
+          "url": "https://github.com/lilaclilac09/open-kernel-challenge/blob/d9bdcc9f01dff1018f2f256a0a1a63911a16557e/muse_decode_layer/baseline.py",
+          "path": "muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "Muse Spark Open Kernel Challenge (openkernelchallenge.dev) \u2014 kernel starters + notes"
+        },
+        {
+          "repository": "Madhavan113/ParadigmKernelChallenge",
+          "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_decode_layer/baseline.py",
+          "path": "muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": null
+        },
+        {
+          "repository": "ruwwww/open-kernel-challenge",
+          "url": "https://github.com/ruwwww/open-kernel-challenge/blob/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/muse_decode_layer/baseline.py",
+          "path": "muse_decode_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)"
+        },
+        {
+          "repository": "ruwwww/open-kernel-challenge",
+          "url": "https://github.com/ruwwww/open-kernel-challenge/blob/c035bf9d5a7d2445d8c8ee5ce49e63b8bb36f49d/muse_prefill_layer/baseline.py",
+          "path": "muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)"
+        },
+        {
+          "repository": "lilaclilac09/open-kernel-challenge",
+          "url": "https://github.com/lilaclilac09/open-kernel-challenge/blob/d9bdcc9f01dff1018f2f256a0a1a63911a16557e/muse_prefill_layer/baseline.py",
+          "path": "muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": "Muse Spark Open Kernel Challenge (openkernelchallenge.dev) \u2014 kernel starters + notes"
+        },
+        {
+          "repository": "Madhavan113/ParadigmKernelChallenge",
+          "url": "https://github.com/Madhavan113/ParadigmKernelChallenge/blob/721c62729fa0b407799692f311790643706f292d/muse_prefill_layer/baseline.py",
+          "path": "muse_prefill_layer/baseline.py",
+          "sha": "7706aee5c085b4fc8819835e5a7ec4e3f59a0833",
+          "description": null
+        }
+      ]
+    },
+    {
+      "kind": "repositories",
+      "query": "\"openkernelchallenge\" is:public",
+      "returncode": 0,
+      "total_count": 5,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "msaroufim/openkernelchallenge-audit",
+          "url": "https://github.com/msaroufim/openkernelchallenge-audit",
+          "path": null,
+          "sha": null,
+          "description": "Evidence, limitations, and reproducible static analysis of Open Kernel Challenge and KernelBot similarities"
+        },
+        {
+          "repository": "razramon/openkernelchallenge-submission",
+          "url": "https://github.com/razramon/openkernelchallenge-submission",
+          "path": null,
+          "sha": null,
+          "description": null
+        },
+        {
+          "repository": "paper-19/okc-decode-layer",
+          "url": "https://github.com/paper-19/okc-decode-layer",
+          "path": null,
+          "sha": null,
+          "description": "https://openkernelchallenge.dev/ muse spark open / sglang kernel challenge"
+        },
+        {
+          "repository": "lilaclilac09/open-kernel-challenge",
+          "url": "https://github.com/lilaclilac09/open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "description": "Muse Spark Open Kernel Challenge (openkernelchallenge.dev) \u2014 kernel starters + notes"
+        },
+        {
+          "repository": "Reedo3/Muse_Attention_Decode",
+          "url": "https://github.com/Reedo3/Muse_Attention_Decode",
+          "path": null,
+          "sha": null,
+          "description": "The Muse Spark Open Kernel Challenge had a competition for muse's attention decode. The link for this is located here: https://openkernelchallenge.dev/problems/muse_attention_decode"
+        }
+      ]
+    },
+    {
+      "kind": "repositories",
+      "query": "\"Muse Spark\" \"H200\" is:public",
+      "returncode": 0,
+      "total_count": 15,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "alygg77/okc-muse-spark-kernels",
+          "url": "https://github.com/alygg77/okc-muse-spark-kernels",
+          "path": null,
+          "sha": null,
+          "description": "Open-source H200 CUDA kernels for the Muse Spark Open Kernel Challenge (OKC): decode layer 2.21x, NVFP4 MoE 2.40x, BF16 proj 1.55x, prefill 1.82x, attention 2.65x vs SGLang; judge results, measured H200 facts, negative results"
+        },
+        {
+          "repository": "NathenFernandes/muse-bf16-proj",
+          "url": "https://github.com/NathenFernandes/muse-bf16-proj",
+          "path": null,
+          "sha": null,
+          "description": "H200 projection kernels for the Muse Spark Open Kernel Challenge. Best judged speedup: 1.5186x over SGLang."
+        },
+        {
+          "repository": "theluckystrike/muse-spark-open-kernels",
+          "url": "https://github.com/theluckystrike/muse-spark-open-kernels",
+          "path": null,
+          "sha": null,
+          "description": "Open source must win \u00b7 Muse Spark Open Kernel Challenge kernels (Apache-2.0), published after the boards close"
+        },
+        {
+          "repository": "Kushagrabainsla/muse-spark-open",
+          "url": "https://github.com/Kushagrabainsla/muse-spark-open",
+          "path": null,
+          "sha": null,
+          "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer"
+        },
+        {
+          "repository": "bharath03-a/muse-spark-kernel",
+          "url": "https://github.com/bharath03-a/muse-spark-kernel",
+          "path": null,
+          "sha": null,
+          "description": "H200 CUDA/Triton kernels for the Muse Open Kernel Challenge: decoder layer 2.258x vs SGLang, own BF16 and MoE kernels"
+        },
+        {
+          "repository": "AutoclickerI/muse-spark-open-kernels",
+          "url": "https://github.com/AutoclickerI/muse-spark-open-kernels",
+          "path": null,
+          "sha": null,
+          "description": "Our Muse Spark Open Kernel Challenge entry: a 1.89x-over-SGLang H200 decoder layer (NVFP4 MoE, FP8 paged attention), with its judge receipts"
+        },
+        {
+          "repository": "EROREx/okc-muse-spark-kernels",
+          "url": "https://github.com/EROREx/okc-muse-spark-kernels",
+          "path": null,
+          "sha": null,
+          "description": "My best H200 CUDA kernels for Meta's Open Kernel Challenge 2026 (Muse Spark Open): overall rank 110/1915, up to 2.68x over SGLang"
+        },
+        {
+          "repository": "gonzalezerik/muse-open-kernel-log",
+          "url": "https://github.com/gonzalezerik/muse-open-kernel-log",
+          "path": null,
+          "sha": null,
+          "description": "Engineering log of a Muse Spark Open Kernel Challenge entry: kernels, H200 lab, data, dead ends"
+        },
+        {
+          "repository": "yigitkucuk/muse-spark-kernels",
+          "url": "https://github.com/yigitkucuk/muse-spark-kernels",
+          "path": null,
+          "sha": null,
+          "description": "2.318x speedup over the SGLang reference for Muse Spark"
+        },
+        {
+          "repository": "arihantbansal/open-kernel-challenge",
+          "url": "https://github.com/arihantbansal/open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "description": "GPU kernels for Muse Spark Open on NVIDIA H200. Peak #1 on the MoE leaderboard in the Open Kernel Challenge."
+        },
+        {
+          "repository": "trxphxle/okc-2026-muse-kernels",
+          "url": "https://github.com/trxphxle/okc-2026-muse-kernels",
+          "path": null,
+          "sha": null,
+          "description": "Muse Spark Open Kernel Challenge 2026 (team trxphxle): H200 kernels, results, and every experiment we ran. Peaked top 200 (#185)."
+        },
+        {
+          "repository": "infraax/okc-kernel-challenge",
+          "url": "https://github.com/infraax/okc-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "description": "Open Kernel Challenge 2026 (Muse Spark Open, H200): an AI-agent-driven GPU kernel campaign \u2014 results, hypotheses, method, kernels and judge data, archived"
+        },
+        {
+          "repository": "ruwwww/open-kernel-challenge",
+          "url": "https://github.com/ruwwww/open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)"
+        },
+        {
+          "repository": "arunjyotisarmarsece24-jpg/neuro-spark-accel",
+          "url": "https://github.com/arunjyotisarmarsece24-jpg/neuro-spark-accel",
+          "path": null,
+          "sha": null,
+          "description": " Full-Stack AI Acceleration Engine: From Bio-Inspired Spiking Neural Networks (LIF) & BitNet b1.58 on Spartan-7       FPGA to Hopper H200 Triton Kernels for Meta Muse Spark Open."
+        },
+        {
+          "repository": "keell0renz/muse-open-kernel-challenge",
+          "url": "https://github.com/keell0renz/muse-open-kernel-challenge",
+          "path": null,
+          "sha": null,
+          "description": "Team keell0renz's fair H200 kernels for the OKC Muse Spark Open Kernel Challenge: decode layer 2.2659 (#38/1085, overall), attention #35, bf16 #26, prefill #29, MoE #58. Highest-ranked public OKC code we know of on all 5 boards (Nov 1). Apache-2.0, with lessons from ~460 experiments."
+        }
+      ]
+    },
+    {
+      "kind": "repositories",
+      "query": "\"muse\" \"dflash\" is:public",
+      "returncode": 0,
+      "total_count": 13,
+      "incomplete_results": false,
+      "items": [
+        {
+          "repository": "ARahim3/mlx-dspark",
+          "url": "https://github.com/ARahim3/mlx-dspark",
+          "path": null,
+          "sha": null,
+          "description": "Up to 4\u00d7 faster LLM decoding on Apple Silicon, lossless. Native MLX port of DeepSeek's DSpark & z-lab's DFlash speculative decoding \u2014 Gemma-4, Qwen3.8, Muse-Glimmer, Nemotron, LFM2.5, Ornith-1.0, ternary Bonsai-27B."
+        },
+        {
+          "repository": "mgaruccio/muse-glimmer-b70",
+          "url": "https://github.com/mgaruccio/muse-glimmer-b70",
+          "path": null,
+          "sha": null,
+          "description": "Muse Glimmer 30B on one Arc Pro B70 with vLLM-XPU and DFlash"
+        },
+        {
+          "repository": "AIwork4me/Muse-Glimmer-30B-ROCm",
+          "url": "https://github.com/AIwork4me/Muse-Glimmer-30B-ROCm",
+          "path": null,
+          "sha": null,
+          "description": "Reproducible RDNA reference for Meta Muse-Glimmer-30B \u2014 adapting MI-series ROCm recipes to Ryzen AI and Radeon with vLLM, llama.cpp, DFlash and auditable benchmarks."
+        },
+        {
+          "repository": "homerquan/muse_glimmer_dgx_spark",
+          "url": "https://github.com/homerquan/muse_glimmer_dgx_spark",
+          "path": null,
+          "sha": null,
+          "description": "The script to deploy meta muse glimmer 30b nvfp4 with dflash on Nvidia DGX Spark"
+        },
+        {
+          "repository": "say4n/muse-glimmer-dspark",
+          "url": "https://github.com/say4n/muse-glimmer-dspark",
+          "path": null,
+          "sha": null,
+          "description": "meta's muse glimmer with dspark drafter instead of dflash"
+        },
+        {
+          "repository": "dangkhoa2016/Muse-Glimmer-30B-GGUF-DFlash2-Kaggle-GPU-T4x2",
+          "url": "https://github.com/dangkhoa2016/Muse-Glimmer-30B-GGUF-DFlash2-Kaggle-GPU-T4x2",
+          "path": null,
+          "sha": null,
+          "description": "Self-hosted llama.cpp serving stack for Muse-Glimmer-30B GGUF with DFlash2 speculative decoding on Kaggle NVIDIA T4x2 and an authenticated OpenAI-compatible API gateway."
+        },
+        {
+          "repository": "Praecise/llama.cpp",
+          "url": "https://github.com/Praecise/llama.cpp",
+          "path": null,
+          "sha": null,
+          "description": "Praecise's pinned llama.cpp backend fork (muse-glimmer, DFlash, MTP, Blackwell/GB10 tuning)."
+        },
+        {
+          "repository": "mpfaffenberger/Muse-Glimmer-30B-BF16-DFlash-vLLM-RTX-PRO-6000",
+          "url": "https://github.com/mpfaffenberger/Muse-Glimmer-30B-BF16-DFlash-vLLM-RTX-PRO-6000",
+          "path": null,
+          "sha": null,
+          "description": "Muse Glimmer 30B BF16 with DFlash on one RTX PRO 6000 using pinned vLLM PR overlays"
+        },
+        {
+          "repository": "b-ostrov/muser",
+          "url": "https://github.com/b-ostrov/muser",
+          "path": null,
+          "sha": null,
+          "description": "Standalone Muse Glimmer (~30B) inference engine: Apple Silicon Metal decode, a kquant DFlash speculative lane, and disaggregated NVFP4 prefill handed off from a GB10 node."
+        },
+        {
+          "repository": "High-Performance-AI-Lab/muser",
+          "url": "https://github.com/High-Performance-AI-Lab/muser",
+          "path": null,
+          "sha": null,
+          "description": "Standalone Muse Glimmer (~30B) inference engine: Apple Silicon Metal decode, a kquant DFlash speculative lane, and disaggregated NVFP4 prefill handed off from a GB10 node."
+        },
+        {
+          "repository": "sxuff/muse-glimmer-dgx-spark",
+          "url": "https://github.com/sxuff/muse-glimmer-dgx-spark",
+          "path": null,
+          "sha": null,
+          "description": "Measured Muse Glimmer 30B recipe for NVIDIA DGX Spark, with llama.cpp, DFlash parity checks, vision, tools, and GB10 benchmarks."
+        },
+        {
+          "repository": "airawatraj/dgx-spark-muse-glimmer-agent",
+          "url": "https://github.com/airawatraj/dgx-spark-muse-glimmer-agent",
+          "path": null,
+          "sha": null,
+          "description": "Muse-Glimmer-30B NVFP4 + DFlash on NVIDIA DGX Spark (GB10): 27.5 tok/s avg, 90/100 tool-eval, 128K context."
+        },
+        {
+          "repository": "munikor/glimmer-b70-cookbook",
+          "url": "https://github.com/munikor/glimmer-b70-cookbook",
+          "path": null,
+          "sha": null,
+          "description": "Muse Glimmer 30B on 2x Intel Arc Pro B70: llm-scaler port cookbook, dflash spec decode, 196K YaRN lane, BetterBench reports. 100 tok/s median, 222 on summarization, stock 180W."
+        }
+      ]
+    }
+  ]
+}

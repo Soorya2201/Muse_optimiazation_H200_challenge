@@ -1,5 +1,52 @@
 # Run log
 
+Owner-requested offline research, Nov10UTC/Nov9Pacific: added an18-concept
+playbook from12primarysources, six local-source hashes and a conditional
+Marlin pre-norm overlap design. Added analytical cost screening;170math
+checks pass and an unmeasured template returns needs_measurements/no ranking.
+No GPU result, serving run, submission change or rank improvement. See
+serving/RESEARCH_PLAYBOOK_2026-11-10.md and the experiment ledger. Preserved
+DeepEP retrieval repair and public model-configHTTP401 as research limits.
+
+Execution gate rechecked Nov9at23:48UTC: official candidate01check request
+again rejected before job creation, opening Nov12at9amPacific. Saved exact
+response and fresh resource snapshot (empty serving jobs; local CUDA devices0).
+No optimization, GPU timing, new rank or verified wait resulted. See
+serving/EXECUTION_BLOCKER_AUDIT_2026-11-09.md for the repeated constraint,
+incomplete gates and resume criteria. Existing source/candidate hashes remain
+unchanged. This is a blocked checkpoint, not a winning/completed objective.
+
+Serving Humming adapter checkpoint, Nov9: implemented a separate development
+projection adapter; no submission integration or GPU execution. Source audit
+found BF16 Stream-K partial reduction despite FP32 MMA, so the adapter excludes
+that path. Retains packed FP4/FP8 scales and stock finalization. CPU protocol
+doubles pass96cases/8preparations and reject two forbidden precision configs;
+these are not NVFP4 arithmetic or speed measurements. Native source-plan mode
+passes, relevant unchanged Apache2sources/LICENSE are pinned, and all seven
+submission patches retain their prior hashes. See serving/HUMMING_PROTOTYPE.md
+and the serving ledger for scope, design rejections and the actual GPU gate.
+
+Serving native-validation checkpoint, Nov9: prepared exact-method native MoE
+comparison/graph/timing harness; only CPU source preparation ran (ten compiled
+methods, five source hashes, identical finalization AST). No GPU result or new
+serving score. Audited the exact Humming0.1.12dependency declared by the base,
+separately from current upstream. Its NVFP4 API is a possible larger-kernel
+experiment, but newer tuning, Muse normalization, canonical layout memory and
+graph lock safety require validation. See serving/NATIVE_VALIDATION.md and
+serving/HUMMING_FEASIBILITY_2026-11-09.md. Existing candidate hashes unchanged.
+
+Serving Nov9 follow-up: an official candidate01check request at23:07:40UTC
+was rejected before job creation because serving opens Nov12at9amPT. Exact
+request/response: serving/OFFICIAL_CHECK_ATTEMPT_2026-11-09.json; jobs remained
+empty. There is no serving score or rank. Added isolated fused expert-map04
+and local-align/prefix06candidates, plus combinations05/07. CPU480fallback
+and420route-contract cases pass; all seven source packages pass their respective
+manifests. No GPU/serving improvement demonstrated. Workspace-reuse idea was
+rejected on source evidence of graph-lock alias/deadlock risk. See
+serving/OPTIMIZATION_LIBRARY.md and serving/EXPERIMENT_LOG.md for sources,
+scope, failure details and next official checks. These notes do not alter any
+historical kernel results below.
+
 | Date | Problem | File | Job | Mode | Speedup | Notes |
 |---|---|---|---|---|---|---|
 | 2026-10-27 | muse_moe_w4a16 | submission (v1 class) | d0805799cf2245be | submit | 1.554x | scored |
@@ -256,3 +303,15 @@ all submits0,reserve untouched. No live GPU job. Next sequential trackprefill.
 2026-11-01 | muse_moe_w4a16 | service-blocked audit | no GPU job | read-only availability | no score | Around20:30UTC freshproblems/jobsbothAPI530. SameannouncedGPU-node maintenancehaspersistedthreeconsecutivegoalturns. Previousgoalturnc5b94e2wasconcreteprogress,notverifiedwait;thisturnauditsblocker/readiness,noPOST/job/quotaused. V41hash867444e3andcanonicalprefixverified;allresearch/preflights/compilerfailuresarecommitted/pushed,c5b94e2local=origin. CurrentnextrequiredactionislinkedH200resource/numeric/cold-graphvalidation;localMac hasnoNVIDIA GPU,FT64fullcompilerresourceevidence remainsinconclusive. No measuredgain/scoredchange/rank1claim. Record goal asblockedpendingOKCservice recovery;preservefullfive-trackobjective. See research/service/OKC_BLOCKED_AUDIT_2026-11-01.json. Onresume readlivebudgetthencheckimmutableV41,logandpollonlyreturnedhandle.
 
 2026-11-05 | all kernel tracks | live status refresh | no GPU job | read-only boards/budgets/status | Overall372/2008 | Captured05:27:38UTC(Nov4 21:27PST). OKC responds;allfivebudgets0used/40checks20scoredserviceallowance,projectreservedcapsstillapply. BF161561/1739at1.1158x,MoE330/1421at2.3723x,attention338/1369at2.6035x,decoder372/1294at2.2115x,prefill312/891at1.7850x. FormerBF16a3d4758c1e174abaofficiallydisqualified: compressed/encodedsource decoded at runtime. CurrentBF16rankedjob167d6e5c85f74682. Otherfourpointsunchangedfromlastsnapshot;no rank1. Onlyread-onlyinspection,no check/submit. PrioritybeforefurtherMoEtesting:restoreBF16sourceeligibilityaftercurrentrules/sourceaudit. Externaldriveisbackbutstale3e4ad7b;internaldd46f7bpreserveslatestwork. Do nottouchuntrackedexternalMadhavanresearch. PrivateGitHubverified. Evidence research/leaderboards/status_20261105052738.json.
+
+2026-11-09 | serving | initial source/protocol implementation | no GPU job | public research/CPU/package verification | no serving score | Owner explicitly replaceskernelgoalwithserving and revokesoldAGENTS. GoalAPIreplacementrefusedunfinishedgoal;OBJECTIVE.mdrecordedwithoutfalsecompletion. Freshinit297e54fd105e974cdf401e5b4d20253a22c16f90/400KB/400addedchars/3check1scored,opensNov12at9PT(CLI),cachedNov10webnotice+direct403discrepancyretained. Public-onlymodelquery155matches,twofullpages;6selectedpublictrees329paths31selectedhashverifiedfiles,notexhaustiveentrant/sourceaudit. HariappiApache2global-routedensityfixadaptedtofreshnestedpath(candidate01);externalH1001.34-1.80xlayerfiguresnotourH200/modelresult. Candidate02losslessFP32bits+int64IDonecollectiveheadtransport;fallbacksretained,payload16vs10B/tokenatBF16 tradeoffunmeasured. Candidate03combined7065B/3files. CPU65540policy/786432transportselection/360exactclassflow pass;72stock/candidatematchingemptyrejections. FirstoldimportanchorpatchfailedatomicallyandfirstCPUzero-shapetestcaughtunsupportedstockcase,bothretainedinservingledger. All3diffsapplytoofficialbaseusingisolatedGitindex,sourcepath/mode/line/size/AST checks pass. No Triton/NCCL/graph/hardware/outputquality/TTFT/throughputclaim;GPUcomponentscriptpreparedunrun. No servingcheck/submit POST,noquotaused;full-nodevalidationawaitsopeningorexistingdevhardware. Publicsources/limits/candidateSHAs/currentrulesloggedunder serving and research/serving. Privatebranchserving/20261109;originalexternaluntrackedresearchuntouched.
+
+2026-11-10 UTC | serving | candidate08 norm-before-router-join | no GPU/official job | CPU/source only | no serving score | Isolated1343B patch da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108 applies to297e54fd. Exact coordinator/norm CPU4320paired cases pass:128eligible,3328nonemptyfallback,864empty; simulatedstreams/routing/experts excludeCUDA/Marlin/capture/performanceclaims. Initialpacked-route doubletuple failedstockrecord_stream,correctedtensorfixture;docanchoratomicfailurealso retainedinNORM_OVERLAP_DEVELOPMENT. Native wholecoordinator router/projection/norm+stockMarlin mode, freshinput/biasgraphs,AB/BAtiming/optionaleagertraces prepared;sourceplanonly. Candidate07/currentpatch/Hummingunchanged,nocombinationorpromotion. Officialfirstchecks01/06/02remain. Userresumedactiveapproachgoal;prior/currentturnconcreteprogress,notGPUwait. PrivateGitHubverified;pushsamebranch/PR.
+
+2026-11-10 UTC | serving | DFlash2 selector targeting + measurement intake | no GPU/official job | source/CPU only | no score | Public config46c90f4+base constructor/worker trace shows selector bypasses02plain sampler; planning correction firstchecks01/06/09. Candidate09SHA053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb4170B/2files packsFP32bits+31bitID onecollective8vs12B/candidate;196608protocol/2304exactfunctionCPU cases pass(216fast2088fallback),nativeunrun. Missingloggerfixturefailedthenfixed;docsanchor/path/webtoolmissesretained. Eight-Hopperhead/radix/Triton/NCCL fixture source-planonly,notfullselector/SGcoordinator. Native responsehistogram intake230syntheticchecks passes; no generatedtokens/activebatch/timing/qualityclaims. Prior08turn/currentturnconcreteprogress; freshstatusnulljobs[]06:06UTC,noPOST/paidGPU/livewait. Earlierpatches/current07/Hummingunchanged.
+
+2026-11-10 UTC | serving | offline Triton compiler gate preparation | private CI pending push | source plan only | no serving score | Mac lacksCUDA/container/compiler; GHActionsenabled. Exactfivekernelbodiesfromfrozen02/04/09 source/ASThashchecked,25specializations planned for explicitHopper target; no hostTorchwrapper/compilerdoubles. PinsTriton3.8.0wheelSHA fromSGtorch2.14.1Linuxrequirement. Initialextractornewlinebugcaughtbyexistinghashgate,failedplanretained;correctedsourceplanpasses0compiled. BoundedCPUCIjob8min,novalidationGPUrunorofficialPOST; preserveactualrun/assembliesafterpush. Earliercandidates/current07/Hummingunchanged.
+
+2026-11-10 UTC | serving | actual offline Hopper compilation | GitHubCI42768362132success | Triton3.8.0/ptxas12.9.86 codegen+assembly only | no serving score | 25specializations/5exactkernels(14selector9greedy2map) producePTX8.8sm_90a+CUDAELF190cubins. Verified125assemblyhashes/source/tool/CI-SHA;253721Brawarchive+CIlog permanentlyprivate. FirstCI42768219289failedYAMLbeforejobs,pipcolonfixed;sourceextractornewlinefailurealso retained. No GPU launch/numerics/NCCL/graphs/quality/TTFT/timing orimagecompatibilityproof. Ninecandidates/current07/Hummingfrozen,noofficialPOST/scored/rankchange. BothCIterminal,notwait;current/priorgoalturnsconcreteprogress.
+
+2026-11-10 UTC | serving | fresh native execution gate and blocked audit | no job created | official endpoint rejects before admission | no score | At06:34UTC immutable01SHA19e7e684 check--no-wait exit1:opensNov12at9amPT;stdoutempty/nohandle. Freshjobs[],Darwinarm64CUDAfalse/0devices,priorCPUCI42768362132terminalsuccess. Fullauditdistinguishessource/CPU/AOTfrommissingGPUprecision/numerics/bounds/NCCL/graphs/realprofiles/all-loadstockanswers220tokensTTFT/throughput/winningevidence. Samegatein4consecutiveresumedturns(c005d9e,6e3eff8,953b663,current);priorprogressnotlivewait. No newoptimization/composition orrankclaim;all9sources/current07/compilerarchivefrozen. Publishauditthenrequestblocked,notcomplete;resumeofficial/existingHopperwithrules/base/budgetcheckand01/06/09.

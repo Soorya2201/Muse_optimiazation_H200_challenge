@@ -1,0 +1,78 @@
+{
+  "scope": "Native one-GPU Muse MoE validation; synthetic weights, no serving score.\n\nCPU source preparation:\n  python tools/benchmark_serving_moe_candidates.py --plan-only --output /tmp/moe-plan.json\nOn an existing Hopper development node with candidate07 installed in the pinned image:\n  python tools/benchmark_serving_moe_candidates.py --benchmark --output /tmp/moe-gpu.json\nDefaults use small synthetic dimensions. Local EP ownership is simulated on one\nGPU; this does not run inter-rank communication or validate the full model.\n",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "requested_utc": "2026-11-09T23:26:17.698549+00:00",
+  "configuration": {
+    "sglang": "/Users/soorya/muse_work/serving_20261109/serving/current/sglang",
+    "output": "serving/MOE_NATIVE_PLAN_CHECKED_2026-11-09.json",
+    "plan_only": true,
+    "benchmark": false,
+    "candidates": [
+      "density",
+      "map",
+      "prefix",
+      "combined"
+    ],
+    "rows": [
+      1,
+      4,
+      16,
+      32,
+      128,
+      256
+    ],
+    "experts": 256,
+    "ep": 8,
+    "rank": 0,
+    "hidden": 256,
+    "intermediate": 128,
+    "topk": 8,
+    "rounds": 20,
+    "repeats": 10,
+    "rtol": 0.01,
+    "atol": 0.01
+  },
+  "state": "source_preparation_passed_only",
+  "native_gpu_executed": false,
+  "sources": {
+    "stock": {
+      "source_sha256": "145f49706a272e388e069eb13039c96805b35ab71dd5aa71c7b2b44cef9b0be1",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "dffbd442231c768946ef75735aff182679f651f00ac70aeca6a3f4337f250d3f",
+        "_forward_marlin": "871d8dea2a9646bbbe8d727ff5e974a477848d648286f032d37eb8aac88d76d4"
+      }
+    },
+    "density": {
+      "patch_sha256": "19e7e68418c960399c9721dcf6f6e6927328414a19ae0cb67af15abc7fcd66f7",
+      "source_sha256": "c0a7a3bd71e36af6daabe5c61a53fc4df370ef4ef38e275aa679dd0d9e322741",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "a72f115711f85c382270d88e5519d4a86401a0149a80899fed6140a3b266e314",
+        "_forward_marlin": "871d8dea2a9646bbbe8d727ff5e974a477848d648286f032d37eb8aac88d76d4"
+      }
+    },
+    "map": {
+      "patch_sha256": "7439113a2be0084832bb3ae0b86086ec64b64d277b70b926478145060a8ef3c1",
+      "source_sha256": "dce4a39d45166e6096b284cb98fc45290a4c98cfff9f37e419fee3d70f2414f9",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "f1a316e7e8ff19b95f8b42eae3092694e2df319b8a16ea1b34cc8236ad1e049b",
+        "_forward_marlin": "871d8dea2a9646bbbe8d727ff5e974a477848d648286f032d37eb8aac88d76d4"
+      }
+    },
+    "prefix": {
+      "patch_sha256": "8a28f4c5273f62ebaf80ef95abe540d714b98eaffa299b2f3bb2c4a9e836f642",
+      "source_sha256": "6638bed1cbcc5d3a6b38af49f863127b922d75421fe511b14a592defdb70a6f4",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "bc0cb1da2bad7ea9fc911b90728b9fbff427896b768b5c154f7a07411459421c",
+        "_forward_marlin": "871d8dea2a9646bbbe8d727ff5e974a477848d648286f032d37eb8aac88d76d4"
+      }
+    },
+    "combined": {
+      "patch_sha256": "0ae82e6badc3bd52a669a75d6e3bcfbf8ebd0df378ebffb7f1de31442e5d8cf2",
+      "source_sha256": "5d9f6b167d578f69775f8c1de45b1846984d67784cbe94212897ceb13b79830f",
+      "method_ast_sha256": {
+        "_marlin_expert_outputs": "7a47f2f37c6a212fbef9454bba56470b9d32f36431750fc3f3e135f4ba189cfd",
+        "_forward_marlin": "871d8dea2a9646bbbe8d727ff5e974a477848d648286f032d37eb8aac88d76d4"
+      }
+    }
+  }
+}

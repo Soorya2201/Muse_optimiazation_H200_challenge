@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-11-10T06:34:18.255229+00:00",
+  "finished_utc": "2026-11-10T06:34:19.329965+00:00",
+  "command": [
+    "/Users/soorya/.okc/bin/okc",
+    "serve",
+    "check",
+    "/Users/soorya/muse_work/serving_20261109/serving/candidates/01_ep_route_density.diff",
+    "--no-wait"
+  ],
+  "candidate_sha256": "19e7e68418c960399c9721dcf6f6e6927328414a19ae0cb67af15abc7fcd66f7",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "\u2717 the serving track isn't open yet: it opens Nov 12 at 9 am PT, and `okc serve init` works already\n",
+  "scope": "One official execution-gate recheck after actual offline compilation; never restart without inspecting a returned handle"
+}

@@ -1,0 +1,2136 @@
+{
+  "scope": "Compile exact frozen Triton kernel bodies for Hopper without a GPU.\n\nUses an explicit CUDA GPUTarget and never launches a kernel or loads Torch.\nExtracts only @triton.jit definitions from added source files, preserving their\ntext/AST. Host wrappers, numerical correctness, collectives, actual image\ncompatibility, CUDA graphs and serving performance are outside this check.\n",
+  "requested_utc": "2026-11-10T06:25:24.890057+00:00",
+  "python": "3.12.16 (main, Oct 26 2026, 02:48:01) [GCC 11.4.0]",
+  "platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.35",
+  "state": "hopper_compilation_passed_only",
+  "native_compiler_executed": true,
+  "gpu_kernel_executed": false,
+  "tool_sha256": "861bc7d55461e13e8319d38cb695c851f45db033a815128c39a53837d1b7a20f",
+  "compiled_cases": [
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_fp16",
+      "pointer_types": {
+        "values": "*fp16",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp16",
+        "indices": "*i64",
+        "pairs": "*i64",
+        "n": "constexpr",
+        "vocab_start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_pack_fp16.ttir",
+          "bytes": 4953,
+          "sha256": "0753d09aa64b42e617ea0e88bc63450a649a071faf603dfb7e83602ab0b9c72a"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_pack_fp16.ttgir",
+          "bytes": 5502,
+          "sha256": "ed46cead727e498543f6720343d09e32349e29dbed369a217fb1b93c38cc0873"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_pack_fp16.llir",
+          "bytes": 5757,
+          "sha256": "f565c06aabfab98c7e3a4bcb397e11f3d8924c35cb071df5e44d0fff2fc07c44"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_pack_fp16.ptx",
+          "bytes": 6555,
+          "sha256": "ea98cb26c3b7201a2b324244776d7aa2823560541dd76cff5c4037c2b437077b"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_pack_fp16.cubin",
+          "bytes": 7056,
+          "sha256": "e11b6f45a5bf4464898ccda27034b72bbf18ee8e88fee87f11d9229c75fe78b0"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_bf16",
+      "pointer_types": {
+        "values": "*bf16",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*bf16",
+        "indices": "*i64",
+        "pairs": "*i64",
+        "n": "constexpr",
+        "vocab_start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_pack_bf16.ttir",
+          "bytes": 4960,
+          "sha256": "8ff528cc3a4609b357f31624d90f8135ee6da5900bc6d98812fbd755b6d8503d"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_pack_bf16.ttgir",
+          "bytes": 5509,
+          "sha256": "25cf3c5b9a807b60ff46dddabc7e0010996822263846658977e47b8bf4868f7b"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_pack_bf16.llir",
+          "bytes": 5585,
+          "sha256": "5078ddc6bfa36816123112aa85083a790908658a544fe43c8a3dd7b6009f4ed8"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_pack_bf16.ptx",
+          "bytes": 6557,
+          "sha256": "48d5b5c2dcfce289f1067da51f8464017d837f023fc164362103ba4dc0d89173"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_pack_bf16.cubin",
+          "bytes": 7056,
+          "sha256": "367762da8433bb69a454a275b63c24e8840127c7732863fe68b7dacb9018df2f"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_fp32",
+      "pointer_types": {
+        "values": "*fp32",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp32",
+        "indices": "*i64",
+        "pairs": "*i64",
+        "n": "constexpr",
+        "vocab_start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_pack_fp32.ttir",
+          "bytes": 4867,
+          "sha256": "0adb9f6908751ea5ca3556fa3f3e80ea1c45d8272f75a5d1325b11d34015f992"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_pack_fp32.ttgir",
+          "bytes": 5396,
+          "sha256": "f92bcf32ceee1a369da65590f03ed43d7950935f36dcaee54b6b2a4457332674"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_pack_fp32.llir",
+          "bytes": 5504,
+          "sha256": "8da4eea8724c337f7c919b2e0b3690aac6fa167af213f287e5870069c59b870f"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_pack_fp32.ptx",
+          "bytes": 6480,
+          "sha256": "fc1fd0500e986a769f2e8fab81f1ab796384d34282cdea262771fc43479ba6e0"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_pack_fp32.cubin",
+          "bytes": 6928,
+          "sha256": "3408b35bbd90f14e69c307ee0f07987895941524ef3ab5109294e7378c7505fe"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp2_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 2,
+        "RANKS": 2,
+        "BLOCK": 128
+      },
+      "signature": {
+        "gathered": "*i64",
+        "output": "*i64",
+        "n": "constexpr",
+        "tp_size": "constexpr",
+        "RANKS": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_select_tp2_n7.ttir",
+          "bytes": 13211,
+          "sha256": "d21045e4b5b79c38ae80a0303428630bf1114bf12f7fe388b57a81f8ea7395bf"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_select_tp2_n7.ttgir",
+          "bytes": 15290,
+          "sha256": "1d8420c5c6cb54d6f64a49eccf18e6509715263d4fb58fb8507c5e4f85cf3002"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_select_tp2_n7.llir",
+          "bytes": 6624,
+          "sha256": "531fc1974a67f29c62fb9e9e64f0df2ed717cf69b35d1cd67ee42039366ee856"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_select_tp2_n7.ptx",
+          "bytes": 13442,
+          "sha256": "38954bdf353ef2334deceb335e7595a4bb7427b24171b67a5b3d27b9c6ddce85"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_select_tp2_n7.cubin",
+          "bytes": 7752,
+          "sha256": "d7f81fea437640b3cfdafdb1f29b8726b72fe2bce863ec236e0c510795e31133"
+        }
+      },
+      "compile_metadata": {
+        "name": "_select_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp2_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 2,
+        "RANKS": 2,
+        "BLOCK": 128
+      },
+      "signature": {
+        "gathered": "*i64",
+        "output": "*i64",
+        "n": "constexpr",
+        "tp_size": "constexpr",
+        "RANKS": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_select_tp2_n224.ttir",
+          "bytes": 13217,
+          "sha256": "ab26301ade24373463a0b05778ab0ebe35ef6f20c8ae146ce5b482d3e06f4328"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_select_tp2_n224.ttgir",
+          "bytes": 15298,
+          "sha256": "3a63a052509f011e5b92a07bff52d7cf97a192d235e2000cd91242c12942835f"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_select_tp2_n224.llir",
+          "bytes": 6630,
+          "sha256": "adbd5778d5239ffa8f23a0748a7409b98bb229efc87ba0ef87689886fb6ec201"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_select_tp2_n224.ptx",
+          "bytes": 13452,
+          "sha256": "70be1f82ed45c02a61ca8cfe0b10b381d03a5ef26d9dd508dfea44104381c376"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_select_tp2_n224.cubin",
+          "bytes": 7752,
+          "sha256": "8d87f9f6ba4e2f0415b66a9bdaf14fed9d373a5663ebab0604aaf2e770b1892c"
+        }
+      },
+      "compile_metadata": {
+        "name": "_select_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp3_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 3,
+        "RANKS": 4,
+        "BLOCK": 128
+      },
+      "signature": {
+        "gathered": "*i64",
+        "output": "*i64",
+        "n": "constexpr",
+        "tp_size": "constexpr",
+        "RANKS": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_select_tp3_n7.ttir",
+          "bytes": 13298,
+          "sha256": "675fcd090f40869a0c009802e8c3ea120cfab5a3c7a0828996bd5309844e78d3"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_select_tp3_n7.ttgir",
+          "bytes": 15370,
+          "sha256": "13a8e280114760065aa3bdd73c5cf554471269600955ccbecb68b64afca674e5"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_select_tp3_n7.llir",
+          "bytes": 7825,
+          "sha256": "e8a55a3c3551c31dc1d158df380dd54f5ada2b635b072a49451bc6f97cd88521"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_select_tp3_n7.ptx",
+          "bytes": 14568,
+          "sha256": "e0ef625d0b5151c3394196aa1777e7a8f239857c987dbe987f5f1bae8ac909f6"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_select_tp3_n7.cubin",
+          "bytes": 8904,
+          "sha256": "19183a99f6203abda30ccc9c045d04a5c0f3502206b5ca1add2b087ffe54de8b"
+        }
+      },
+      "compile_metadata": {
+        "name": "_select_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp3_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 3,
+        "RANKS": 4,
+        "BLOCK": 128
+      },
+      "signature": {
+        "gathered": "*i64",
+        "output": "*i64",
+        "n": "constexpr",
+        "tp_size": "constexpr",
+        "RANKS": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_select_tp3_n224.ttir",
+          "bytes": 13304,
+          "sha256": "108018e4b16f74bafd92767f0365991807fd027fcd30297f9f140bf9ad4eb584"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_select_tp3_n224.ttgir",
+          "bytes": 15378,
+          "sha256": "f37670b7c5e2115405187de32ef3f4f29c8d1412477f5ed2aa0f3d718cfa7bf2"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_select_tp3_n224.llir",
+          "bytes": 7835,
+          "sha256": "fc7da6c82571ec5c4ef6fd87a2ad2ea7e131bcd750ba8d9c94aa00ec9ec9db61"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_select_tp3_n224.ptx",
+          "bytes": 14583,
+          "sha256": "09ff1cc971aeb025ef851155ec8276266778c17883995cba1260048f83ca632c"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_select_tp3_n224.cubin",
+          "bytes": 8904,
+          "sha256": "985ee9724b4f2ce4a0a9a71f428ca7a43692f4eaf1131cb132ab7f9a4602b873"
+        }
+      },
+      "compile_metadata": {
+        "name": "_select_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp8_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 8,
+        "RANKS": 8,
+        "BLOCK": 128
+      },
+      "signature": {
+        "gathered": "*i64",
+        "output": "*i64",
+        "n": "constexpr",
+        "tp_size": "constexpr",
+        "RANKS": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_select_tp8_n7.ttir",
+          "bytes": 13293,
+          "sha256": "dcaa9e684f0ffb1dc905a3552c4b549a809eee14da95e28dbee3023302ee0dc5"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_select_tp8_n7.ttgir",
+          "bytes": 15370,
+          "sha256": "21b0e76f0bdca3dd34f16d7424a5e5c1044c3bc6f86f61de441dcd2579195739"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_select_tp8_n7.llir",
+          "bytes": 12117,
+          "sha256": "8d945bf8b54229a32eb70973b91606356d6a6d4bb8bae281fe00cf64e0c007d1"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_select_tp8_n7.ptx",
+          "bytes": 17982,
+          "sha256": "0ef1d540722e49a706f28f3643cfff83eb6447ee10741ae32c7b16740d49487e"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_select_tp8_n7.cubin",
+          "bytes": 13768,
+          "sha256": "3e0591672752e9da0bde16645ca86d57ebc59cde4084f11c7c2b1d6079484712"
+        }
+      },
+      "compile_metadata": {
+        "name": "_select_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp8_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 8,
+        "RANKS": 8,
+        "BLOCK": 128
+      },
+      "signature": {
+        "gathered": "*i64",
+        "output": "*i64",
+        "n": "constexpr",
+        "tp_size": "constexpr",
+        "RANKS": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/greedy_select_tp8_n224.ttir",
+          "bytes": 13299,
+          "sha256": "eb6184f080c6befdc7ded851d95d16220c5e7ab8972ceab987d064a1ed9a5b72"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/greedy_select_tp8_n224.ttgir",
+          "bytes": 15378,
+          "sha256": "67422172d7c2bcf5c9f62a09653faabbcba5271f2dae118358fbee08bfdab743"
+        },
+        "llir": {
+          "path": "aot-artifacts/greedy_select_tp8_n224.llir",
+          "bytes": 12144,
+          "sha256": "1a3fa8ed99865a7f0afeb6726b76aff0c061194df53e3d5112181a58d99b0cca"
+        },
+        "ptx": {
+          "path": "aot-artifacts/greedy_select_tp8_n224.ptx",
+          "bytes": 18024,
+          "sha256": "152df40cea12019e9a32fc9544e48d87cfd717ffa236aab8cd5fa2ed12ae0ae5"
+        },
+        "cubin": {
+          "path": "aot-artifacts/greedy_select_tp8_n224.cubin",
+          "bytes": 13768,
+          "sha256": "d872db05c1e3f08972dc22635a935bccf85e6ea4cfb781652bc8aff60c7db828"
+        }
+      },
+      "compile_metadata": {
+        "name": "_select_greedy_pairs",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "map",
+      "kernel": "_map_kernel",
+      "label": "map_i32",
+      "pointer_types": {
+        "ids": "*i32",
+        "mapping": "*i32",
+        "out": "*i32"
+      },
+      "constexprs": {
+        "N": 2049,
+        "BLOCK": 256
+      },
+      "signature": {
+        "ids": "*i32",
+        "mapping": "*i32",
+        "out": "*i32",
+        "N": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/map_i32.ttir",
+          "bytes": 3886,
+          "sha256": "25ecc14e227d16ce56acb2b36deb8cfc88eb05d3790a1281c3dff31652263d24"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/map_i32.ttgir",
+          "bytes": 4310,
+          "sha256": "b58b7d34fa00aa4d00d718cf887da354e862891dee4405345e6180e4eabce11d"
+        },
+        "llir": {
+          "path": "aot-artifacts/map_i32.llir",
+          "bytes": 4700,
+          "sha256": "24971886da0db84a3c2af2f2b5a7c9d94c96fd06f3a76ec9469d11f6a02570e1"
+        },
+        "ptx": {
+          "path": "aot-artifacts/map_i32.ptx",
+          "bytes": 5861,
+          "sha256": "bf2679ee6b740d4d0b3528c5f31ae9929b57a9dc7f9457461976f2f6f8b2dbea"
+        },
+        "cubin": {
+          "path": "aot-artifacts/map_i32.cubin",
+          "bytes": 6416,
+          "sha256": "836124d23ae7ed54d256878bc2cf5db46e810672ad7823827200f66f5095590a"
+        }
+      },
+      "compile_metadata": {
+        "name": "_map_kernel",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "map",
+      "kernel": "_map_kernel",
+      "label": "map_i64",
+      "pointer_types": {
+        "ids": "*i64",
+        "mapping": "*i32",
+        "out": "*i32"
+      },
+      "constexprs": {
+        "N": 2049,
+        "BLOCK": 256
+      },
+      "signature": {
+        "ids": "*i64",
+        "mapping": "*i32",
+        "out": "*i32",
+        "N": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/map_i64.ttir",
+          "bytes": 4054,
+          "sha256": "1c817dc9ea4c24837a799cc004dea7b8a365d113f513197463ca24313848850c"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/map_i64.ttgir",
+          "bytes": 4499,
+          "sha256": "29ed3476bc13571ee87e53d69cbb30621cb18beaeb2b711a43990fbc14375cb5"
+        },
+        "llir": {
+          "path": "aot-artifacts/map_i64.llir",
+          "bytes": 5032,
+          "sha256": "a7c7a31f21a85e2e9a0ac823baa2549adb3445f987c5ddd29019e963948d2679"
+        },
+        "ptx": {
+          "path": "aot-artifacts/map_i64.ptx",
+          "bytes": 6020,
+          "sha256": "9a6f92a5813334fc420355cc3eb92cda379203fb3e1f6ab39b637419e73ff8b1"
+        },
+        "cubin": {
+          "path": "aot-artifacts/map_i64.cubin",
+          "bytes": 6672,
+          "sha256": "ce592f0adad133e83158aef2492daf415ad997a669efcff47028fd5699aed837"
+        }
+      },
+      "compile_metadata": {
+        "name": "_map_kernel",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i32_strided0",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided0.ttir",
+          "bytes": 5705,
+          "sha256": "5e9296456675abd5c3d2babbd5de9b29242c2a5f490169f532b738f143539cde"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided0.ttgir",
+          "bytes": 6314,
+          "sha256": "fbb7e5fb85583ace289c3a6e615e941dbe3b1f7036334cdaee60939806dcc0c4"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided0.llir",
+          "bytes": 6441,
+          "sha256": "954e0d08776126695f33292f964ddae24e6e4d294eb3ab5d93e7c9f60cc60179"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided0.ptx",
+          "bytes": 6912,
+          "sha256": "4d5049ae7d08a19724e2999c310a9efd220a2d201029d502ee10e1822f830681"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided0.cubin",
+          "bytes": 7312,
+          "sha256": "c3114bd7aaee6be2445a5885cce4a482195d85d76619416616d9c80a0d2217da"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i32_strided1",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided1.ttir",
+          "bytes": 6739,
+          "sha256": "028155902e126062f3125d4e04e7c87ce5b606bf52beb49406b9c617fc241f27"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided1.ttgir",
+          "bytes": 7405,
+          "sha256": "fe156b5d462d68a716dafab0f31d4426530b1b2126ee40fd15ba2dfb6ccd171d"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided1.llir",
+          "bytes": 6816,
+          "sha256": "b23eaecf799ca0300595f0b4306add808446f9e1711d81b79b489e4c6e43b84a"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided1.ptx",
+          "bytes": 7421,
+          "sha256": "96de7eb4e7a1a47e1ec3aa19d4ae0aa794214c49b28ee0fc5dd89790b6bb7e92"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp16_i32_strided1.cubin",
+          "bytes": 7696,
+          "sha256": "63255b57a126b50728db1ad50451a68d668a3a814d45f336e8b886c70a63975f"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i64_strided0",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided0.ttir",
+          "bytes": 5623,
+          "sha256": "ac7ae64e08fdfa1949c3096b8cd3844183a9f9237ee4e52d60394369fc7187fa"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided0.ttgir",
+          "bytes": 6207,
+          "sha256": "aba8dff17eed55fd46b6a8b7e86963d1e90dcdd3a34222cb4d57db9c3e984832"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided0.llir",
+          "bytes": 6178,
+          "sha256": "f3c53123d249b6ef10f52dafde920d0367e0e2a08667dea19d01ab7f60dbf8ae"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided0.ptx",
+          "bytes": 6862,
+          "sha256": "bdde61c5b83b79fd199d00411b97303fd89334f32ec379de726b1dca3b47dc53"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided0.cubin",
+          "bytes": 7312,
+          "sha256": "6a2e21f45c184229f63ad973de625324989b2b4ac2e06f0c527a6fa63effc345"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i64_strided1",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided1.ttir",
+          "bytes": 6657,
+          "sha256": "d6d9bc9ebd5798022d23f6570bc7619a08c90d6813b2cfaac2c441a06470866c"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided1.ttgir",
+          "bytes": 7298,
+          "sha256": "dbe5d83bd3e31c43f8fa876a42cf3386eb3c05d155fe694edb42df09245eb4ec"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided1.llir",
+          "bytes": 6553,
+          "sha256": "d69e390cac2134bf34a87bf33b28a3b96cf803c42f4c81b70a4623eff2fdba73"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided1.ptx",
+          "bytes": 7370,
+          "sha256": "9842b7e13800e04eca8ae1737a115a2d6b6a8d17dd3aca9854649a19079916dd"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp16_i64_strided1.cubin",
+          "bytes": 7568,
+          "sha256": "5c7fd4b0e4d37eb23744e0fce68fd3ec096ad28fcbca1ae9e2bf217695e387bd"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i32_strided0",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided0.ttir",
+          "bytes": 5713,
+          "sha256": "5bbd36cdd6228b89af873edaff5051d7507735a200d0abbde494daa4d2002abb"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided0.ttgir",
+          "bytes": 6322,
+          "sha256": "02baefaf572965ee8d7db055b25de6be8d8777cadc01f72be3d8009c8062a846"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided0.llir",
+          "bytes": 6269,
+          "sha256": "b950bff1bbba132ed139d8be8647f90d4ea1d076fe40cf2c39c8db102b856709"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided0.ptx",
+          "bytes": 6914,
+          "sha256": "27012fbe5645ac3dbf60f19055555e44ecc4d8e127ce4055d8937d752fa90d71"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided0.cubin",
+          "bytes": 7312,
+          "sha256": "984151c957e33de912070fd2143d46d2deca464212c5c119ba7be3c27e2becd1"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i32_strided1",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided1.ttir",
+          "bytes": 6747,
+          "sha256": "81364cbd364e72dc8fb9ab5dcba698d8c7dd7b5c115c4e3c55035ad4e735cf86"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided1.ttgir",
+          "bytes": 7413,
+          "sha256": "40ddec50a5a5cbcb22be2dd59c8153682a5ee35019e56fd10ee1288c13683317"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided1.llir",
+          "bytes": 6644,
+          "sha256": "d8d9cd0574a5ad9fc7366afd1471e68c2bb02ad3e6cc64782f6aae8ac26c6ad4"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided1.ptx",
+          "bytes": 7423,
+          "sha256": "fa628e2534929ec6858ac627830c82b39a69defd12e89c34c04ac93268b5dd05"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_bf16_i32_strided1.cubin",
+          "bytes": 7696,
+          "sha256": "ed54a5a0c5790322977fb2d28173791642600c94482135c695b71e02914131ff"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i64_strided0",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided0.ttir",
+          "bytes": 5631,
+          "sha256": "887e60f773c247e40079cb081d77789df96be38f94fa59537fd470288750b054"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided0.ttgir",
+          "bytes": 6215,
+          "sha256": "99c309198bb41bf7700f17826113c704b7677f6fdc6940fd819e8bbdeef206cc"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided0.llir",
+          "bytes": 6006,
+          "sha256": "d8fec76130807e35b85ce116dcf21c835567aa8eeb83b3a3cc4fc0e0c755dbd6"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided0.ptx",
+          "bytes": 6864,
+          "sha256": "53bf87b11b04f3c8003d1bbfa96731f36e1fb52d28c0a55cbadd146e25737e28"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided0.cubin",
+          "bytes": 7312,
+          "sha256": "9855d7d04149a6eb4891ddfdfff9d579ecb52c484af09ce10e7b0e083def0e25"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i64_strided1",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided1.ttir",
+          "bytes": 6665,
+          "sha256": "2eb0d0fa9920fc57fe7ddbbb32e4284826605f2c541310983f228ce52156370e"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided1.ttgir",
+          "bytes": 7306,
+          "sha256": "196db1b430f349626b59a018dffa9a18f5fb3719e456757fc775eba0ae60afdb"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided1.llir",
+          "bytes": 6381,
+          "sha256": "8db8426b81a2164a0bb563a623000879c9ad4d2842a67666574313bf50fccb9d"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided1.ptx",
+          "bytes": 7372,
+          "sha256": "6d119876a842b579d8241826537e52c8715d6712070e75c8e397d05d00c22e3d"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_bf16_i64_strided1.cubin",
+          "bytes": 7568,
+          "sha256": "42c4bc0585178af68e26271a7d60257d0a6fc72d9a9c18c6352c7f223022954a"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i32_strided0",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided0.ttir",
+          "bytes": 5619,
+          "sha256": "166df856b47a428510d9397c64978bef542bbdb582a89be00b5bec863d34e343"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided0.ttgir",
+          "bytes": 6208,
+          "sha256": "9a1e2fc0ce560f90a17f72928f316ce4efe14207a44176ea1da1614a5e20f7bd"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided0.llir",
+          "bytes": 6188,
+          "sha256": "441e37b5cbb4ac128669ecd72b4bcbe1448e24beb0680c5d3c3fab0e5c763696"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided0.ptx",
+          "bytes": 6843,
+          "sha256": "14cd1a1bf85f2ec3c0d48060c53021f2530f1cb2d5be3879779fdb959c729503"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided0.cubin",
+          "bytes": 7056,
+          "sha256": "bfdbc69ccdc0b5e8ead7c323592cf90ec4c93d7bcceb8604106f58265aece39b"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i32_strided1",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided1.ttir",
+          "bytes": 6653,
+          "sha256": "256830c4723fb4e5ffa82e00f4039e9ad45b7cffe6abab1b1afb1b663ca90fe4"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided1.ttgir",
+          "bytes": 7299,
+          "sha256": "38fa8b7a891bd3ad5589a62f2e431ed7c55af319f845f7166a5f960fb8774781"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided1.llir",
+          "bytes": 6563,
+          "sha256": "d9ad4ff347935846038f40a6cf551a8849a2a495501ece28d4a17906d19d0688"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided1.ptx",
+          "bytes": 7349,
+          "sha256": "0f1c1fda17f36fbb55cb77fa711e2f3f6e7c6dd5bd8bc10ecb16cd3aa2aae9f2"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp32_i32_strided1.cubin",
+          "bytes": 7568,
+          "sha256": "f0bc334e0ebfec3dbb6e73705649ca1d8106f91f80a93c2b9d425cd6200297d5"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i64_strided0",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided0.ttir",
+          "bytes": 5537,
+          "sha256": "f846d34d1d49319750bc1485800b7f16e603d010013d67118951a2093163c12c"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided0.ttgir",
+          "bytes": 6101,
+          "sha256": "e81475641128c67ecb884ab218dedfa07f135178258ae6471108d28bfb8f73a1"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided0.llir",
+          "bytes": 5925,
+          "sha256": "4ece61cb0a725c426efc5109c008eb052bfa36a8e2ccc27ca83625a94b859a72"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided0.ptx",
+          "bytes": 6788,
+          "sha256": "ec28dbd3f3630da9d0bf8f44dad6f42b4b30ac61a09431d18b543adb6f3df385"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided0.cubin",
+          "bytes": 7184,
+          "sha256": "c853e8462369685647c67e2d38fc73cc7a171d699421f8a356004ff89feda948"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i64_strided1",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      },
+      "signature": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "vs0": "constexpr",
+        "vs1": "constexpr",
+        "is0": "constexpr",
+        "is1": "constexpr",
+        "start": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided1.ttir",
+          "bytes": 6571,
+          "sha256": "ad7ccdb64f55b0588f47c8cd2d5efa9f483ae4b52aff58b3e9f7e50c5acdee9e"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided1.ttgir",
+          "bytes": 7192,
+          "sha256": "47b2c611760a2cf27d545e45c5b05fd621164d5f45a2e7518958dd4a31cf4f5d"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided1.llir",
+          "bytes": 6300,
+          "sha256": "ed34045238704a6b205f94d3d9c5dc9991d0d3aad25a1dedfa81947654c91878"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided1.ptx",
+          "bytes": 7297,
+          "sha256": "87ddd37e64463b7c4ce8371417d2fe3e18886cb2936e741d3608e2322d159185"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_pack_fp32_i64_strided1.cubin",
+          "bytes": 7440,
+          "sha256": "caec9a2ec1c8591aae310efb68c3d55e04dc0170856781d20b60ac0e545e4284"
+        }
+      },
+      "compile_metadata": {
+        "name": "_pack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_unpack",
+      "label": "selector_unpack_strided0",
+      "pointer_types": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64"
+      },
+      "constexprs": {
+        "size": 896,
+        "columns": 128,
+        "ps0": 128,
+        "ps1": 1,
+        "BLOCK": 256
+      },
+      "signature": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "ps0": "constexpr",
+        "ps1": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_unpack_strided0.ttir",
+          "bytes": 4779,
+          "sha256": "aad0ce0325a91285bbac814367bb726f6a8d90da3f74755b157fd1c0adf1de60"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_unpack_strided0.ttgir",
+          "bytes": 5298,
+          "sha256": "8751458648bcdb77c72609820a445401928f54bdf3a30014241b20675ae130b1"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_unpack_strided0.llir",
+          "bytes": 5517,
+          "sha256": "9111d5a203250cd0826dc15ae3c2f55514ee0df00326f2787e3fb60f37274daf"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_unpack_strided0.ptx",
+          "bytes": 6342,
+          "sha256": "387299cfd4776dd0d73e4cfea7b59e0977dd6943460bbc4f0d584edc44372e33"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_unpack_strided0.cubin",
+          "bytes": 6672,
+          "sha256": "b4f573e00eef1a588179c568993ee0a0274f25fe223c289fe51ed03a4b0fa18f"
+        }
+      },
+      "compile_metadata": {
+        "name": "_unpack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_unpack",
+      "label": "selector_unpack_strided1",
+      "pointer_types": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64"
+      },
+      "constexprs": {
+        "size": 10752,
+        "columns": 48,
+        "ps0": 97,
+        "ps1": 2,
+        "BLOCK": 256
+      },
+      "signature": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64",
+        "size": "constexpr",
+        "columns": "constexpr",
+        "ps0": "constexpr",
+        "ps1": "constexpr",
+        "BLOCK": "constexpr"
+      },
+      "files": {
+        "ttir": {
+          "path": "aot-artifacts/selector_unpack_strided1.ttir",
+          "bytes": 5167,
+          "sha256": "43e5ec7f9fbb7c4a16ce96ba5ad551270f669be33ca2b83a34b478ec4424b1ea"
+        },
+        "ttgir": {
+          "path": "aot-artifacts/selector_unpack_strided1.ttgir",
+          "bytes": 5712,
+          "sha256": "41900494f3faa48cf0ea5c663a2db0e6e37dde7b9e02f71c1cb051a0b7a52fae"
+        },
+        "llir": {
+          "path": "aot-artifacts/selector_unpack_strided1.llir",
+          "bytes": 5827,
+          "sha256": "dda19687ec410378bff90fcf0d14da274be9d9d00280fe8d56e1fb62073265f2"
+        },
+        "ptx": {
+          "path": "aot-artifacts/selector_unpack_strided1.ptx",
+          "bytes": 6554,
+          "sha256": "6c1e0c9669f8b81a07d649786f79d5fccce39c3fe335418d462269399f318fcd"
+        },
+        "cubin": {
+          "path": "aot-artifacts/selector_unpack_strided1.cubin",
+          "bytes": 7184,
+          "sha256": "9bf8420045b26f4d196419d55234e94dd041e1625f7e1bed5ca8d954409cdb52"
+        }
+      },
+      "compile_metadata": {
+        "name": "_unpack",
+        "num_warps": 4,
+        "num_ctas": 1,
+        "shared": 0,
+        "global_scratch_size": 0,
+        "profile_scratch_size": 0
+      }
+    }
+  ],
+  "ci": {
+    "GITHUB_SHA": "446889ad768d2e52ebe2d025af342ecacb7df4b2",
+    "GITHUB_RUN_ID": "42768362132",
+    "GITHUB_RUN_ATTEMPT": "1",
+    "RUNNER_OS": "Linux",
+    "RUNNER_ARCH": "X64"
+  },
+  "sources": {
+    "greedy": {
+      "patch": "serving/candidates/02_draft_single_collective.diff",
+      "patch_sha256": "83edfbaf18762273e9223d66324f81ec2ab2d46e87a8b3b2e9dd9108737966bf",
+      "source_path": "python/sglang/kernels/ops/speculative/draft_head_collective.py",
+      "source_sha256": "4b493eb3f614f92a801e81637ad61ca1d1a857adb16f85f2f4a6b301b476caef",
+      "extracted_module": "aot-artifacts/greedy_kernels.py",
+      "extracted_module_sha256": "5a1d97997ad6ebdf39efec2358d316e0711d7928ea1687b91e0de05bdf445e5a",
+      "kernels": {
+        "_pack_greedy_pairs": {
+          "arguments": [
+            "values",
+            "indices",
+            "pairs",
+            "n",
+            "vocab_start",
+            "BLOCK"
+          ],
+          "ast_sha256": "3a30355c8a15cdbef473c2370d5380bf782556cadf594e42547b8ddbdee99188"
+        },
+        "_select_greedy_pairs": {
+          "arguments": [
+            "gathered",
+            "output",
+            "n",
+            "tp_size",
+            "RANKS",
+            "BLOCK"
+          ],
+          "ast_sha256": "d80daae65913c279168362b6e0759fd86b7dc4684fbb41c2359bfdc22d64a3e0"
+        }
+      }
+    },
+    "map": {
+      "patch": "serving/candidates/04_fused_expert_map.diff",
+      "patch_sha256": "7439113a2be0084832bb3ae0b86086ec64b64d277b70b926478145060a8ef3c1",
+      "source_path": "python/sglang/kernels/ops/moe/map_marlin_expert_ids.py",
+      "source_sha256": "c1eb33ed94bb3ed5da24a9f3704b4765e24776b41b5b07cbd70c57d026e12826",
+      "extracted_module": "aot-artifacts/map_kernels.py",
+      "extracted_module_sha256": "5940396365df110628aed97d7f2509dd593b7923adbd782a079d5d486db99e38",
+      "kernels": {
+        "_map_kernel": {
+          "arguments": [
+            "ids",
+            "mapping",
+            "out",
+            "N",
+            "BLOCK"
+          ],
+          "ast_sha256": "d9b8dcc68af6010ca5c1c6833587f19ab4ec79f8c5611ece51dc82b00f62d292"
+        }
+      }
+    },
+    "selector": {
+      "patch": "serving/candidates/09_selector_single_collective.diff",
+      "patch_sha256": "053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb",
+      "source_path": "python/sglang/kernels/ops/speculative/selector_collective.py",
+      "source_sha256": "d9d89fc56d65ef02f786e660145482b94e5bc93298c4c3082a4fda26e14dfecd",
+      "extracted_module": "aot-artifacts/selector_kernels.py",
+      "extracted_module_sha256": "d2dba6ff3a3884fb531d34cac319e0c93438cd7f2c0355f75f21fdf459daeb65",
+      "kernels": {
+        "_pack": {
+          "arguments": [
+            "values",
+            "ids",
+            "packed",
+            "size",
+            "columns",
+            "vs0",
+            "vs1",
+            "is0",
+            "is1",
+            "start",
+            "BLOCK"
+          ],
+          "ast_sha256": "56a3ddac9ef5f3fe81d44c12a7651c77bac7fe08da83a7bb85067182271d6f86"
+        },
+        "_unpack": {
+          "arguments": [
+            "packed",
+            "values",
+            "ids",
+            "size",
+            "columns",
+            "ps0",
+            "ps1",
+            "BLOCK"
+          ],
+          "ast_sha256": "d4551a5fde01c50d2e411160f8b59372c922844d5bfb04f5ee1909129ba75255"
+        }
+      }
+    }
+  },
+  "planned_cases": [
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_fp16",
+      "pointer_types": {
+        "values": "*fp16",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_bf16",
+      "pointer_types": {
+        "values": "*bf16",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_pack_greedy_pairs",
+      "label": "greedy_pack_fp32",
+      "pointer_types": {
+        "values": "*fp32",
+        "indices": "*i64",
+        "pairs": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "vocab_start": 18014398509481984,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp2_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 2,
+        "RANKS": 2,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp2_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 2,
+        "RANKS": 2,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp3_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 3,
+        "RANKS": 4,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp3_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 3,
+        "RANKS": 4,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp8_n7",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 7,
+        "tp_size": 8,
+        "RANKS": 8,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "greedy",
+      "kernel": "_select_greedy_pairs",
+      "label": "greedy_select_tp8_n224",
+      "pointer_types": {
+        "gathered": "*i64",
+        "output": "*i64"
+      },
+      "constexprs": {
+        "n": 224,
+        "tp_size": 8,
+        "RANKS": 8,
+        "BLOCK": 128
+      }
+    },
+    {
+      "helper": "map",
+      "kernel": "_map_kernel",
+      "label": "map_i32",
+      "pointer_types": {
+        "ids": "*i32",
+        "mapping": "*i32",
+        "out": "*i32"
+      },
+      "constexprs": {
+        "N": 2049,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "map",
+      "kernel": "_map_kernel",
+      "label": "map_i64",
+      "pointer_types": {
+        "ids": "*i64",
+        "mapping": "*i32",
+        "out": "*i32"
+      },
+      "constexprs": {
+        "N": 2049,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i32_strided0",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i32_strided1",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i64_strided0",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp16_i64_strided1",
+      "pointer_types": {
+        "values": "*fp16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i32_strided0",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i32_strided1",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i64_strided0",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_bf16_i64_strided1",
+      "pointer_types": {
+        "values": "*bf16",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i32_strided0",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i32_strided1",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i32",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i64_strided0",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 112,
+        "columns": 16,
+        "vs0": 16,
+        "vs1": 1,
+        "is0": 16,
+        "is1": 1,
+        "start": 176792,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_pack",
+      "label": "selector_pack_fp32_i64_strided1",
+      "pointer_types": {
+        "values": "*fp32",
+        "ids": "*i64",
+        "packed": "*i64"
+      },
+      "constexprs": {
+        "size": 3584,
+        "columns": 16,
+        "vs0": 37,
+        "vs1": 2,
+        "is0": 53,
+        "is1": 3,
+        "start": 2147483616,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_unpack",
+      "label": "selector_unpack_strided0",
+      "pointer_types": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64"
+      },
+      "constexprs": {
+        "size": 896,
+        "columns": 128,
+        "ps0": 128,
+        "ps1": 1,
+        "BLOCK": 256
+      }
+    },
+    {
+      "helper": "selector",
+      "kernel": "_unpack",
+      "label": "selector_unpack_strided1",
+      "pointer_types": {
+        "packed": "*i64",
+        "values": "*fp32",
+        "ids": "*i64"
+      },
+      "constexprs": {
+        "size": 10752,
+        "columns": 48,
+        "ps0": 97,
+        "ps1": 2,
+        "BLOCK": 256
+      }
+    }
+  ],
+  "compiler_version": "3.8.0",
+  "target": {
+    "backend": "cuda",
+    "arch": 90,
+    "warp_size": 32
+  },
+  "ptxas": {
+    "sha256": "983b0e9283855979f42cebfd80d43f9b6e786eb84f03f7570bf941c4d3a3c461",
+    "version": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_May_27_02:18:05_PDT_2025\nCuda compilation tools, release 12.9, V12.9.86\nBuild cuda_12.9.r12.9/compiler.36037853_0\n"
+  },
+  "inflight_case": "selector_unpack_strided1"
+}

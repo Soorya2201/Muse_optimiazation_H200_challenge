@@ -1,0 +1,7 @@
+{
+  "captured_utc": "2026-11-10T01:20:57.828157+00:00",
+  "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B-NVFP4/raw/main/config.json",
+  "scope": "Public configuration read only; no weights or credentials requested.",
+  "http_status": 401,
+  "error": "Public configuration request rejected; no authentication bypass attempted."
+}

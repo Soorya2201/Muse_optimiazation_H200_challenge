@@ -1,0 +1,1207 @@
+{
+  "captured_utc": "2026-11-09T23:23:27.992459+00:00",
+  "metadata_url": "https://pypi.org/pypi/humming-kernels/0.1.12/json",
+  "artifact_url": "https://files.pythonhosted.org/packages/93/b9/53797fff4b1b31b4567453a365646d724469b1bb0d76c07f8746617d0cb6/humming_kernels-0.1.12.tar.gz",
+  "version": "0.1.12",
+  "sha256": "c96c37c95f74379067d2d2d0c5154d12ee9a8cfa29a7c3370a7f3e34f207ca72",
+  "bytes": 259323,
+  "scope": "Verified source archive read only; no package installation/build/import/execution. Exact old SGLang dependency, not current Humming.",
+  "members": [
+    {
+      "path": ".clang-format",
+      "bytes": 564
+    },
+    {
+      "path": ".github/workflows/build-wheel.yml",
+      "bytes": 3018
+    },
+    {
+      "path": ".github/workflows/publish.yml",
+      "bytes": 508
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 298
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358
+    },
+    {
+      "path": "PKG-INFO",
+      "bytes": 4027
+    },
+    {
+      "path": "README.md",
+      "bytes": 3143
+    },
+    {
+      "path": "benchmarks/bench_cutlass_w8a8.py",
+      "bytes": 2900
+    },
+    {
+      "path": "benchmarks/bench_humming.py",
+      "bytes": 9920
+    },
+    {
+      "path": "benchmarks/bench_marlin.py",
+      "bytes": 8649
+    },
+    {
+      "path": "benchmarks/bench_torch.py",
+      "bytes": 7177
+    },
+    {
+      "path": "benchmarks/bench_triton_moe.py",
+      "bytes": 7856
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/cutlass_w8a8_float8e4m3_float16.json",
+      "bytes": 2792
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w1a16_int1_float16.json",
+      "bytes": 3013
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w1a8_int1_float8e4m3.json",
+      "bytes": 3010
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w2a16_int2_float16.json",
+      "bytes": 3011
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w2a8_int2_float8e4m3.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w3a16_int3_float16.json",
+      "bytes": 3006
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w3a8_int3_float8e4m3.json",
+      "bytes": 3010
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w4a16_int4_float16.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w4a8_float4e2m1_float8e4m3.json",
+      "bytes": 3017
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w5a16_int5_float16.json",
+      "bytes": 3003
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w5a8_float5e2m2_float8e4m3.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w6a16_int6_float16.json",
+      "bytes": 3003
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w6a8_float6e2m3_float8e4m3.json",
+      "bytes": 3017
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w7a16_int7_float16.json",
+      "bytes": 3007
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w7a8_float7e3m3_float8e4m3.json",
+      "bytes": 2999
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w8a16_int8_float16.json",
+      "bytes": 2999
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/humming_w8a8_float8e4m3_float8e4m3.json",
+      "bytes": 3010
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/marlin_w4a16_int4_float16.json",
+      "bytes": 2924
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/marlin_w4a8_int4_int8.json",
+      "bytes": 2918
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/marlin_w8a16_float8e4m3_float16.json",
+      "bytes": 2931
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0/torch_w16a16_float16.json",
+      "bytes": 2744
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w1a16_int1_float16.json",
+      "bytes": 3015
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w1a8_int1_float8e4m3.json",
+      "bytes": 3007
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w2a16_int2_float16.json",
+      "bytes": 3007
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w2a8_int2_float8e4m3.json",
+      "bytes": 3001
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w3a16_int3_float16.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w3a8_int3_float8e4m3.json",
+      "bytes": 3010
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w4a16_int4_float16.json",
+      "bytes": 3007
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w4a8_float4e2m1_float8e4m3.json",
+      "bytes": 3014
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w5a16_int5_float16.json",
+      "bytes": 2999
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w5a8_float5e2m2_float8e4m3.json",
+      "bytes": 3009
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w6a16_int6_float16.json",
+      "bytes": 2998
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w6a8_float6e2m3_float8e4m3.json",
+      "bytes": 3002
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w7a16_int7_float16.json",
+      "bytes": 2999
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w7a8_float7e3m3_float8e4m3.json",
+      "bytes": 3013
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w8a16_int8_float16.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/humming_w8a8_float8e4m3_float8e4m3.json",
+      "bytes": 3007
+    },
+    {
+      "path": "benchmarks/results/4090/dense_n8192_k8192_g0_f16accum/torch_w16a16_float16.json",
+      "bytes": 2770
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/cutlass_w8a8_int8_float16.json",
+      "bytes": 2798
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w1a16_int1_float16.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w1a4_int1_int4.json",
+      "bytes": 3009
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w1a8_int1_int8.json",
+      "bytes": 3010
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w2a16_int2_float16.json",
+      "bytes": 3002
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w2a4_int2_int4.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w2a8_int2_int8.json",
+      "bytes": 3002
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w3a16_int3_float16.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w3a4_int3_int4.json",
+      "bytes": 3003
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w3a8_int3_int8.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w4a16_int4_float16.json",
+      "bytes": 2994
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w4a4_int4_int4.json",
+      "bytes": 3003
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w4a8_int4_int8.json",
+      "bytes": 2993
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w5a16_int5_float16.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w5a8_int5_int8.json",
+      "bytes": 2994
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w6a16_int6_float16.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w6a8_float6e3m2_int8.json",
+      "bytes": 2995
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w7a16_int7_float16.json",
+      "bytes": 3007
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w7a8_float7e4m2_int8.json",
+      "bytes": 3001
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w8a16_int8_float16.json",
+      "bytes": 2998
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/humming_w8a8_int8_int8.json",
+      "bytes": 3001
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/marlin_w4a16_int4_float16.json",
+      "bytes": 2922
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/marlin_w4a8_int4_int8.json",
+      "bytes": 2924
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/marlin_w8a16_int8_float16.json",
+      "bytes": 2918
+    },
+    {
+      "path": "benchmarks/results/a800/dense_n8192_k8192_g0/torch_w16a16_float16.json",
+      "bytes": 2741
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/cutlass_w8a8_float8e4m3_float16.json",
+      "bytes": 2790
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w1a16_int1_float16.json",
+      "bytes": 2992
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w1a8_int1_float8e4m3.json",
+      "bytes": 3005
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w2a16_int2_float16.json",
+      "bytes": 2991
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w2a8_int2_float8e4m3.json",
+      "bytes": 2997
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w3a16_int3_float16.json",
+      "bytes": 2999
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w3a8_int3_float8e4m3.json",
+      "bytes": 2992
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w4a16_int4_float16.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w4a8_int4_float8e4m3.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w5a16_int5_float16.json",
+      "bytes": 2996
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w5a8_int5_float8e4m3.json",
+      "bytes": 3001
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w6a16_int6_float16.json",
+      "bytes": 3001
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w6a8_float6e3m2_float8e4m3.json",
+      "bytes": 3006
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w7a16_int7_float16.json",
+      "bytes": 2994
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w7a8_float7e4m2_float8e4m3.json",
+      "bytes": 3007
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w8a16_int8_float16.json",
+      "bytes": 2993
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/humming_w8a8_float8e4m3_float8e4m3.json",
+      "bytes": 3004
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/marlin_w4a16_int4_float16.json",
+      "bytes": 2907
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/marlin_w4a8_int4_int8.json",
+      "bytes": 2917
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/marlin_w8a16_float8e4m3_float16.json",
+      "bytes": 2921
+    },
+    {
+      "path": "benchmarks/results/h20/dense_n8192_k8192_g0/torch_w16a16_float16.json",
+      "bytes": 2732
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w1a8_int1_float8e4m3.json",
+      "bytes": 3071
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w2a8_int2_float8e4m3.json",
+      "bytes": 3075
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w3a8_int3_float8e4m3.json",
+      "bytes": 3082
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w4a8_int4_float8e4m3.json",
+      "bytes": 3088
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w5a8_int5_float8e4m3.json",
+      "bytes": 3078
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w6a8_float6e3m2_float8e4m3.json",
+      "bytes": 3088
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w7a8_float7e4m2_float8e4m3.json",
+      "bytes": 3084
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/humming_w8a8_float8e4m3_float8e4m3.json",
+      "bytes": 3085
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n512_k7168_g128x128/triton_w8a8_float8e4m3_float16.json",
+      "bytes": 6622
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w1a8_int1_float8e4m3.json",
+      "bytes": 3081
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w2a8_int2_float8e4m3.json",
+      "bytes": 3075
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w3a8_int3_float8e4m3.json",
+      "bytes": 3074
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w4a8_int4_float8e4m3.json",
+      "bytes": 3070
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w5a8_int5_float8e4m3.json",
+      "bytes": 3070
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w6a8_float6e3m2_float8e4m3.json",
+      "bytes": 3089
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w7a8_float7e4m2_float8e4m3.json",
+      "bytes": 3083
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/humming_w8a8_float8e4m3_float8e4m3.json",
+      "bytes": 3080
+    },
+    {
+      "path": "benchmarks/results/h20/moe_e256_k8_n7168_k256_g128x128/triton_w8a8_float8e4m3_float16.json",
+      "bytes": 6616
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/cutlass_w8a8_float8e4m3_float16.json",
+      "bytes": 2794
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w1a16_int1_float16.json",
+      "bytes": 2994
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w1a8_int1_float8e4m3.json",
+      "bytes": 3005
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w2a16_int2_float16.json",
+      "bytes": 2992
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w2a8_int2_float8e4m3.json",
+      "bytes": 2998
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w3a16_int3_float16.json",
+      "bytes": 2993
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w3a8_int3_float8e4m3.json",
+      "bytes": 3010
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w4a16_int4_float16.json",
+      "bytes": 2998
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w4a8_float4e2m1_float8e4m3.json",
+      "bytes": 3006
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w5a16_int5_float16.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w5a8_float5e2m2_float8e4m3.json",
+      "bytes": 3006
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w6a16_int6_float16.json",
+      "bytes": 2991
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w6a8_float6e2m3_float8e4m3.json",
+      "bytes": 3008
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w7a16_int7_float16.json",
+      "bytes": 2996
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w7a8_float7e3m3_float8e4m3.json",
+      "bytes": 3003
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w8a16_int8_float16.json",
+      "bytes": 2993
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/humming_w8a8_float8e4m3_float8e4m3.json",
+      "bytes": 3000
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/marlin_w4a16_int4_float16.json",
+      "bytes": 2921
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/marlin_w4a8_int4_int8.json",
+      "bytes": 2910
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/marlin_w8a16_int8_float16.json",
+      "bytes": 2916
+    },
+    {
+      "path": "benchmarks/results/h200/dense_n8192_k8192_g0/torch_w16a16_float16.json",
+      "bytes": 2726
+    },
+    {
+      "path": "docs/config.md",
+      "bytes": 6131
+    },
+    {
+      "path": "humming/__init__.py",
+      "bytes": 444
+    },
+    {
+      "path": "humming/_version.py",
+      "bytes": 530
+    },
+    {
+      "path": "humming/build.py",
+      "bytes": 4131
+    },
+    {
+      "path": "humming/config/__init__.py",
+      "bytes": 373
+    },
+    {
+      "path": "humming/config/base.py",
+      "bytes": 4021
+    },
+    {
+      "path": "humming/config/config.py",
+      "bytes": 15937
+    },
+    {
+      "path": "humming/config/enum.py",
+      "bytes": 476
+    },
+    {
+      "path": "humming/config/mma.py",
+      "bytes": 19461
+    },
+    {
+      "path": "humming/csrc/launcher/elf.h",
+      "bytes": 3373
+    },
+    {
+      "path": "humming/csrc/launcher/launcher.cpp",
+      "bytes": 13444
+    },
+    {
+      "path": "humming/csrc/launcher/tensor.h",
+      "bytes": 18112
+    },
+    {
+      "path": "humming/csrc/launcher/tma.h",
+      "bytes": 2770
+    },
+    {
+      "path": "humming/csrc/launcher/torch_api.h",
+      "bytes": 1892
+    },
+    {
+      "path": "humming/csrc/launcher/utils.h",
+      "bytes": 2884
+    },
+    {
+      "path": "humming/csrc/nvrtc_compile.cpp",
+      "bytes": 7863
+    },
+    {
+      "path": "humming/csrc/patch_cubin.cpp",
+      "bytes": 14799
+    },
+    {
+      "path": "humming/dtypes.py",
+      "bytes": 6284
+    },
+    {
+      "path": "humming/forward.py",
+      "bytes": 4407
+    },
+    {
+      "path": "humming/include/humming/arith/epilogue_arith.cuh",
+      "bytes": 7737
+    },
+    {
+      "path": "humming/include/humming/arith/exp_offset.cuh",
+      "bytes": 5031
+    },
+    {
+      "path": "humming/include/humming/arith/mainloop_arith.cuh",
+      "bytes": 27555
+    },
+    {
+      "path": "humming/include/humming/datatype/base_conversion.cuh",
+      "bytes": 2487
+    },
+    {
+      "path": "humming/include/humming/datatype/dequant.cuh",
+      "bytes": 5850
+    },
+    {
+      "path": "humming/include/humming/datatype/dequant_fused.cuh",
+      "bytes": 2373
+    },
+    {
+      "path": "humming/include/humming/datatype/dequant_prepare.cuh",
+      "bytes": 3126
+    },
+    {
+      "path": "humming/include/humming/datatype/dequant_single.cuh",
+      "bytes": 7559
+    },
+    {
+      "path": "humming/include/humming/datatype/dtypes.cuh",
+      "bytes": 2628
+    },
+    {
+      "path": "humming/include/humming/epilogue/gmem_writer.cuh",
+      "bytes": 6219
+    },
+    {
+      "path": "humming/include/humming/epilogue/pipeline.cuh",
+      "bytes": 3649
+    },
+    {
+      "path": "humming/include/humming/epilogue/smem_reducer.cuh",
+      "bytes": 4209
+    },
+    {
+      "path": "humming/include/humming/epilogue/smem_writer.cuh",
+      "bytes": 7575
+    },
+    {
+      "path": "humming/include/humming/kernel/dequant_weight.cuh",
+      "bytes": 1565
+    },
+    {
+      "path": "humming/include/humming/kernel/hadamard.cuh",
+      "bytes": 10839
+    },
+    {
+      "path": "humming/include/humming/kernel/hadamard_quant.cuh",
+      "bytes": 18100
+    },
+    {
+      "path": "humming/include/humming/kernel/hadamard_quant_wide.cuh",
+      "bytes": 15603
+    },
+    {
+      "path": "humming/include/humming/kernel/humming.cuh",
+      "bytes": 6605
+    },
+    {
+      "path": "humming/include/humming/kernel/humming_ws.cuh",
+      "bytes": 9215
+    },
+    {
+      "path": "humming/include/humming/kernel/pack_weight.cuh",
+      "bytes": 3250
+    },
+    {
+      "path": "humming/include/humming/kernel/process.cuh",
+      "bytes": 13314
+    },
+    {
+      "path": "humming/include/humming/kernel/process_mxfp4.cuh",
+      "bytes": 2079
+    },
+    {
+      "path": "humming/include/humming/kernel/quant_weight.cuh",
+      "bytes": 11423
+    },
+    {
+      "path": "humming/include/humming/kernel/tops_bench.cuh",
+      "bytes": 1676
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_loader/loader_a.cuh",
+      "bytes": 7738
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_loader/loader_as.cuh",
+      "bytes": 11471
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_loader/loader_b.cuh",
+      "bytes": 3083
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_loader/loader_bias.cuh",
+      "bytes": 1828
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_loader/loader_bs.cuh",
+      "bytes": 6175
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_loader/loader_bs2.cuh",
+      "bytes": 1824
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_loader/loader_bzp.cuh",
+      "bytes": 3820
+    },
+    {
+      "path": "humming/include/humming/memory/g2s_pipeline.cuh",
+      "bytes": 15780
+    },
+    {
+      "path": "humming/include/humming/memory/s2r_loader/loader_a.cuh",
+      "bytes": 2182
+    },
+    {
+      "path": "humming/include/humming/memory/s2r_loader/loader_as.cuh",
+      "bytes": 3687
+    },
+    {
+      "path": "humming/include/humming/memory/s2r_loader/loader_b.cuh",
+      "bytes": 3631
+    },
+    {
+      "path": "humming/include/humming/memory/s2r_loader/loader_bias.cuh",
+      "bytes": 1246
+    },
+    {
+      "path": "humming/include/humming/memory/s2r_loader/loader_bs.cuh",
+      "bytes": 6239
+    },
+    {
+      "path": "humming/include/humming/memory/s2r_loader/loader_bzp.cuh",
+      "bytes": 3435
+    },
+    {
+      "path": "humming/include/humming/memory/s2r_pipeline.cuh",
+      "bytes": 4328
+    },
+    {
+      "path": "humming/include/humming/mma/all.cuh",
+      "bytes": 708
+    },
+    {
+      "path": "humming/include/humming/mma/mxmma.cuh",
+      "bytes": 7296
+    },
+    {
+      "path": "humming/include/humming/mma/wgmma.cuh",
+      "bytes": 7842
+    },
+    {
+      "path": "humming/include/humming/mma/wmma.cuh",
+      "bytes": 4820
+    },
+    {
+      "path": "humming/include/humming/scheduler.cuh",
+      "bytes": 12888
+    },
+    {
+      "path": "humming/include/humming/utils/all.cuh",
+      "bytes": 430
+    },
+    {
+      "path": "humming/include/humming/utils/base.cuh",
+      "bytes": 2225
+    },
+    {
+      "path": "humming/include/humming/utils/context.cuh",
+      "bytes": 4764
+    },
+    {
+      "path": "humming/include/humming/utils/enum.cuh",
+      "bytes": 331
+    },
+    {
+      "path": "humming/include/humming/utils/ptx/barrier.cuh",
+      "bytes": 5666
+    },
+    {
+      "path": "humming/include/humming/utils/ptx/legacy_load.cuh",
+      "bytes": 6994
+    },
+    {
+      "path": "humming/include/humming/utils/ptx/math.cuh",
+      "bytes": 540
+    },
+    {
+      "path": "humming/include/humming/utils/ptx/shared.cuh",
+      "bytes": 1816
+    },
+    {
+      "path": "humming/include/humming/utils/ptx/tma.cuh",
+      "bytes": 5987
+    },
+    {
+      "path": "humming/include/humming/utils/ptx/warp.cuh",
+      "bytes": 568
+    },
+    {
+      "path": "humming/include/humming/utils/ptx/wgmma.cuh",
+      "bytes": 553
+    },
+    {
+      "path": "humming/include/humming/utils/storage.cuh",
+      "bytes": 9407
+    },
+    {
+      "path": "humming/jit/__init__.py",
+      "bytes": 75
+    },
+    {
+      "path": "humming/jit/compiler.py",
+      "bytes": 9771
+    },
+    {
+      "path": "humming/jit/runtime.py",
+      "bytes": 4207
+    },
+    {
+      "path": "humming/kernel/__init__.py",
+      "bytes": 574
+    },
+    {
+      "path": "humming/kernel/dequant_weight.py",
+      "bytes": 1658
+    },
+    {
+      "path": "humming/kernel/hadamard.py",
+      "bytes": 2969
+    },
+    {
+      "path": "humming/kernel/hadamard_quant.py",
+      "bytes": 5154
+    },
+    {
+      "path": "humming/kernel/hadamard_quant_wide.py",
+      "bytes": 5582
+    },
+    {
+      "path": "humming/kernel/humming.py",
+      "bytes": 21463
+    },
+    {
+      "path": "humming/kernel/pack_weight.py",
+      "bytes": 1306
+    },
+    {
+      "path": "humming/kernel/process_mxfp4.py",
+      "bytes": 1804
+    },
+    {
+      "path": "humming/kernel/quant_weight.py",
+      "bytes": 2735
+    },
+    {
+      "path": "humming/kernel/repack_weight.py",
+      "bytes": 3463
+    },
+    {
+      "path": "humming/kernel/tops_bench.py",
+      "bytes": 2930
+    },
+    {
+      "path": "humming/kernel/unpack_weight.py",
+      "bytes": 1336
+    },
+    {
+      "path": "humming/layer.py",
+      "bytes": 21229
+    },
+    {
+      "path": "humming/ops/__init__.py",
+      "bytes": 6406
+    },
+    {
+      "path": "humming/ops/bench.py",
+      "bytes": 1213
+    },
+    {
+      "path": "humming/ops/hadamard.py",
+      "bytes": 7559
+    },
+    {
+      "path": "humming/ops/input.py",
+      "bytes": 12315
+    },
+    {
+      "path": "humming/ops/moe.py",
+      "bytes": 5127
+    },
+    {
+      "path": "humming/ops/utils.py",
+      "bytes": 4823
+    },
+    {
+      "path": "humming/ops/weight.py",
+      "bytes": 7375
+    },
+    {
+      "path": "humming/schema/__init__.py",
+      "bytes": 1633
+    },
+    {
+      "path": "humming/schema/autoround.py",
+      "bytes": 3239
+    },
+    {
+      "path": "humming/schema/awq.py",
+      "bytes": 4047
+    },
+    {
+      "path": "humming/schema/base.py",
+      "bytes": 11300
+    },
+    {
+      "path": "humming/schema/bitnet.py",
+      "bytes": 3667
+    },
+    {
+      "path": "humming/schema/compressed_tensors.py",
+      "bytes": 12506
+    },
+    {
+      "path": "humming/schema/fp8.py",
+      "bytes": 4930
+    },
+    {
+      "path": "humming/schema/gpt_oss_mxfp4.py",
+      "bytes": 1227
+    },
+    {
+      "path": "humming/schema/gptq.py",
+      "bytes": 3600
+    },
+    {
+      "path": "humming/schema/humming.py",
+      "bytes": 14655
+    },
+    {
+      "path": "humming/schema/modelopt.py",
+      "bytes": 8644
+    },
+    {
+      "path": "humming/schema/mxfp4.py",
+      "bytes": 2386
+    },
+    {
+      "path": "humming/testing/__init__.py",
+      "bytes": 535
+    },
+    {
+      "path": "humming/testing/benchmark.py",
+      "bytes": 1646
+    },
+    {
+      "path": "humming/testing/data.py",
+      "bytes": 6165
+    },
+    {
+      "path": "humming/testing/device.py",
+      "bytes": 1961
+    },
+    {
+      "path": "humming/testing/runner.py",
+      "bytes": 24224
+    },
+    {
+      "path": "humming/testing/tuning.py",
+      "bytes": 15600
+    },
+    {
+      "path": "humming/transform.py",
+      "bytes": 19495
+    },
+    {
+      "path": "humming/tune/__init__.py",
+      "bytes": 3621
+    },
+    {
+      "path": "humming/tune/base.py",
+      "bytes": 11369
+    },
+    {
+      "path": "humming/tune/raster.py",
+      "bytes": 1750
+    },
+    {
+      "path": "humming/tune/sm100.py",
+      "bytes": 312
+    },
+    {
+      "path": "humming/tune/sm120.py",
+      "bytes": 4775
+    },
+    {
+      "path": "humming/tune/sm75.py",
+      "bytes": 1795
+    },
+    {
+      "path": "humming/tune/sm8x.py",
+      "bytes": 3978
+    },
+    {
+      "path": "humming/tune/sm90.py",
+      "bytes": 6158
+    },
+    {
+      "path": "humming/tune/sm90_h20.py",
+      "bytes": 11232
+    },
+    {
+      "path": "humming/utils/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "humming/utils/cubin.py",
+      "bytes": 6360
+    },
+    {
+      "path": "humming/utils/cuda.py",
+      "bytes": 7380
+    },
+    {
+      "path": "humming/utils/device.py",
+      "bytes": 5858
+    },
+    {
+      "path": "humming/utils/jit.py",
+      "bytes": 6030
+    },
+    {
+      "path": "humming/utils/nvrtc.py",
+      "bytes": 4519
+    },
+    {
+      "path": "humming/utils/smem.py",
+      "bytes": 6766
+    },
+    {
+      "path": "humming/utils/weight.py",
+      "bytes": 11412
+    },
+    {
+      "path": "humming_kernels.egg-info/PKG-INFO",
+      "bytes": 4027
+    },
+    {
+      "path": "humming_kernels.egg-info/SOURCES.txt",
+      "bytes": 15611
+    },
+    {
+      "path": "humming_kernels.egg-info/dependency_links.txt",
+      "bytes": 1
+    },
+    {
+      "path": "humming_kernels.egg-info/requires.txt",
+      "bytes": 264
+    },
+    {
+      "path": "humming_kernels.egg-info/scm_file_list.json",
+      "bytes": 17299
+    },
+    {
+      "path": "humming_kernels.egg-info/scm_version.json",
+      "bytes": 161
+    },
+    {
+      "path": "humming_kernels.egg-info/top_level.txt",
+      "bytes": 8
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1355
+    },
+    {
+      "path": "setup.cfg",
+      "bytes": 38
+    },
+    {
+      "path": "tests/kernels/humming/test_accumulation.py",
+      "bytes": 3780
+    },
+    {
+      "path": "tests/kernels/humming/test_datatype.py",
+      "bytes": 4431
+    },
+    {
+      "path": "tests/kernels/humming/test_moe.py",
+      "bytes": 3785
+    },
+    {
+      "path": "tests/kernels/humming/test_mxfp4.py",
+      "bytes": 2701
+    },
+    {
+      "path": "tests/kernels/humming/test_mxmma.py",
+      "bytes": 7162
+    },
+    {
+      "path": "tests/kernels/humming/test_scale.py",
+      "bytes": 5081
+    },
+    {
+      "path": "tests/kernels/humming/test_shape.py",
+      "bytes": 4764
+    },
+    {
+      "path": "tests/kernels/humming/test_special_paths.py",
+      "bytes": 5557
+    },
+    {
+      "path": "tests/kernels/humming/test_zero_point.py",
+      "bytes": 3922
+    },
+    {
+      "path": "tests/test_hadamard.py",
+      "bytes": 2544
+    },
+    {
+      "path": "tests/test_hadamard_quant.py",
+      "bytes": 5055
+    },
+    {
+      "path": "tests/test_jit_infrastructure.py",
+      "bytes": 7231
+    },
+    {
+      "path": "tools/build_native.py",
+      "bytes": 551
+    }
+  ],
+  "selected": [
+    {
+      "path": "LICENSE",
+      "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
+      "bytes": 11358
+    },
+    {
+      "path": "README.md",
+      "sha256": "a77c814c8eb390d2acf60f08e27122ba337bea49c3f8cb84d50cd92cbf08518d",
+      "bytes": 3143
+    },
+    {
+      "path": "humming/dtypes.py",
+      "sha256": "560bbd9515a20837007a571599aa92e795d0562096e01d9d86cac29fe17f5b5c",
+      "bytes": 6284
+    },
+    {
+      "path": "humming/kernel/repack_weight.py",
+      "sha256": "05b70381223e18f09ade5a84cd7747195251819fbcc7c421a2ca4c88eb9dee9a",
+      "bytes": 3463
+    },
+    {
+      "path": "humming/layer.py",
+      "sha256": "7444eb85300b6d09d102867d0597dab6ce95a5fedc504a9497792264b6940890",
+      "bytes": 21229
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "adf4121c1ffbd6a2c454f7a4a980a1c225b4d068d39205af3bcef18391b55c51",
+      "bytes": 1355
+    }
+  ]
+}

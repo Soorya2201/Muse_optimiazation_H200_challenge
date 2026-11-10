@@ -1,0 +1,50 @@
+{
+  "scope": "Source patch/package verification only; no GPU, numerical, serving or throughput validation.",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "patches": [
+    {
+      "patch": "serving/candidates/04_fused_expert_map.diff",
+      "sha256": "7439113a2be0084832bb3ae0b86086ec64b64d277b70b926478145060a8ef3c1",
+      "bytes": 3356,
+      "maximum_added_line_bytes": 84,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/kernels/ops/moe/map_marlin_expert_ids.py",
+          "sha256": "c1eb33ed94bb3ed5da24a9f3704b4765e24776b41b5b07cbd70c57d026e12826"
+        },
+        {
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha256": "dce4a39d45166e6096b284cb98fc45290a4c98cfff9f37e419fee3d70f2414f9"
+        }
+      ]
+    },
+    {
+      "patch": "serving/candidates/05_combined_with_expert_map.diff",
+      "sha256": "861ae4cca415edf8f2afa1e5e1a9fa178758fbf12fca801f354894297b21691b",
+      "bytes": 9886,
+      "maximum_added_line_bytes": 86,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/kernels/ops/moe/map_marlin_expert_ids.py",
+          "sha256": "c1eb33ed94bb3ed5da24a9f3704b4765e24776b41b5b07cbd70c57d026e12826"
+        },
+        {
+          "path": "python/sglang/kernels/ops/speculative/draft_head_collective.py",
+          "sha256": "4b493eb3f614f92a801e81637ad61ca1d1a857adb16f85f2f4a6b301b476caef"
+        },
+        {
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha256": "481c8458608d756e7213fcf8b378504382bd6a049e020a1daec1813ba33436a5"
+        },
+        {
+          "path": "python/sglang/srt/speculative/dflash_worker_v2.py",
+          "sha256": "ade2d28822d36c5c498d7842955a63985b3a073e6d57f30ec9268f1712fcf547"
+        }
+      ]
+    }
+  ]
+}

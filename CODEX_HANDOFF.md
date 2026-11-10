@@ -1,4 +1,195 @@
-# Codex Handoff: Muse Spark Open Kernel Challenge
+# Current handoff: serving challenge (November9)
+
+Latest gate audit06:34UTCNov10: official check01 rejected exit1beforejob/handle,
+opensNov12at9amPacific. Freshjobs[], localDarwinarm64CUDAfalse/devices0;
+CI42768362132terminalsuccess. EXECUTION_BLOCKER_AUDIT_2026-11-10.md/JSON
+maps full requirements: source/CPU/AOT evidence is bounded; GPU numerics,
+SGLang/NCCL/graphs, actual profiles, all-load answers/220tokens/TTFT, measured
+best composition and winning result remain missing. Not goal completion.
+Same runtime gate persisted through resumedc005d9e/6e3eff8/953b663/currentaudit;
+those prior turns were progress, not verified waits. Fresh blocked audit
+threshold met, independent of old pre-resume goal. Publish checkpoint then
+requestblocked; no native job/CI/future schedule remainslive. Resume onofficial
+execution or existingauthorizedHopper, verifyrules/base/budget, then01/06/09.
+Poll actual returnedJOB_ID using okc serve status JOB_ID --json, never restart
+after an observation timeout. Preserve all9frozenpatch/current07/Humminghashes.
+
+Latest Nov10: actual offline Hopper compilation now passes in private GitHub
+CPU CI. Run42768362132,commit446889ad768d2e52ebe2d025af342ecacb7df4b2,
+25specializations across5exactkernelbodies from frozen02/04/09(9greedy,
+2map,14selector). Triton3.8.0, bundledptxas12.9.86, PTX8.8targetsm_90a;
+not an audit of actual organizerCUDA13image. Source/decorators extracted with
+identicalAST andmanifestSHA; no hostTorchwrapper or mockedcompiler. Downloaded
+archive253721B contains125assembly/IRfiles+generatedmodules/metadata; all
+filehashes/source/tool/CI-SHAverified,25ELFmachine190cubins. Rawprivatezip/log
+inresearch/serving/TRITON_AOT*, reportsinserving/TRITON_AOT_COMPILED/VERIFIED.
+GPU kernel execution=false; native numeric/NCCL/SGLang/graphs/quality/TTFT/
+timing remainunproven. No compiler source change to any candidate/current07.
+Initialextractornewlinebugfailedmanifesthash; fixedbeforeCI,failedplanretained.
+InitialCI42768219289failedYAMLbeforejobs(unquotedpipflagcolon); fixedblockscalar,
+originalRubysyntaxerrorreproduced. BothCIrunsterminal;no verifiedwaitremains.
+Workflowread-only,servingbranchpaths,bounded8min; noOKCrequestorGPUrental.
+Prior6e3eff8turn andthiscompilerturnareconcreteprogress,notgoalcompletion.
+
+Latest Nov10 correction supersedes earlier first-day01/06/02 guidance:
+public DFlash2 config46c90f412549c472941a68382d91a99e5e6372a0 declares
+DFlash2DraftModel,selector_rank256/top_k16,block8,vocab202048. Pinned source
+instantiates CandidateSelector and takes _SelectorDraftSampler before the
+plain class optimized by02. Exact builder with constructor doubles confirms
+that branch; real service loaded revision/path remain unobserved. New checks
+01/06/09.09 packs FP32 bits +31-bit bounded ID into int64,8vs12B/candidate,
+one collective instead of two; existing global topk/selector/RNG untouched.
+09SHA053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb,
+4170B/2files. CPU196608protocolvalues+2304functioncases pass (216fast,
+2088fallback); native8GPUhead/radix/Triton/PyTorchNCCL fixture source-plan only.
+First builder fixture lacked logger and failed NameError; fixed double only.
+SELECTOR_COLLECTIVE.md and research/serving/SELECTOR_REACHABILITY_AUDIT contain
+evidence/bounds. Config/API/pinned URLs public200; no weight download/model load.
+Raw README only temporary, not republished. Prior target-model401 unchanged.
+New inspect_serving_acceptance tool uses existing native response histograms,
+counts finals once, preserves errors, treats histogram raw A+1 separately from
+client completion/verify.230 synthetic checks using actual stock counter bodies
+pass, no GPU or generated tokens. MEASUREMENT_INTAKE.md documents profiler
+controls, actual/graph/client batch distinctions and the CPU/GPU timing trap.
+No native score; candidate07/currentpatch,08,Humming frozen. Jobs empty/priority
+null at06:06UTCNov10, no new check/submit or active GPU wait. Prior c005d9e
+turn and current source-path/intake/09 continuation are concrete progress.
+
+Nov10 UTC resumed approach development: isolated candidate08 implements
+pre-norm-before-router-join (1,343B; SHA da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108).
+4,320 exact stock/candidate CPU coordinator cases pass:128 eligible nonempty,
+3,328 nonempty fallback,864empty. Norm bodies are official CUDA-selected
+arithmetic on CPU; streams/routing/experts are doubles. First fixture failure
+used a tuple for a tensor packed-route handle; fixed the fixture, not patch.
+Final receipts NORM_OVERLAP_CPU_CHECKED / NORM_OVERLAP_NATIVE_PLAN_CHECKED
+2026-11-10 include source/tool hashes. Python AST hashes depend on interpreter
+schema; portable source SHA256 agrees. Optional native --norm-overlap mode
+uses actual router/projection/norm and stock Marlin, fresh graphs, AB/BA timing,
+optional profiler timelines; GPU-unrun. It does not alter candidate07/current
+patch, create a combined candidate or replace first official checks01/06/02.
+No native win or score. Do not promote without traces/native/full-model gates.
+User cleared old tracker and resumed active approach-development goal;
+tools.get_goal confirms it. Previous goal turn and current turn are concrete
+progress, no live GPU wait, no blocked status update in this resumed turn.
+
+Latest owner explicitly requested concept research until GPU execution opens.
+RESEARCH_PLAYBOOK_2026-11-10.md now covers 18 families/12 primary sources with
+versioned bounded read scopes. Six official-base source hashes recorded.
+tools/serving_cost_models.py passes 170 synthetic math/boundary checks, using
+histograms not IID acceptance, full DFlash draft cost, actual fixed active
+batch distinct from client concurrency, and caller-supplied cost intervals.
+Empty template correctly yields needs_measurements/no ranking. No runtime
+controller, native benchmark or submission change. Final tool SHA in receipts.
+New source-derived design at serving/designs/HOPPER_NORM_OVERLAP.md: existing
+router/projection streams already permit overlap; Marlin norm is after join.
+Potential same-op norm-before-join saving min(N,max(0,R-P)) under fixed phase
+durations; no gain when router already finishes first, contention can regress.
+An isolated experiment is now prepared above; do not promote or claim it
+without trace evidence and native tests. Primary
+papers and pinned DeepEP README screened, no new library execution. Public
+released-model config read got401; no dimensions invented/access bypass.
+Research was authorized despite the unchanged GPU execution blocker. Continue
+using source/CPU evidence at its proper scope; frozen01..07/prototype unchanged.
+
+Execution-gate checkpoint: at 23:48 UTC candidate 01's check was again rejected
+before job creation; opens Nov 12 at 9 am PT. Fresh serving jobs are empty,
+priority null, local arm64 Darwin with zero CUDA devices. See EXECUTION_GATE_RECHECK,
+EXECUTION_RESOURCE_SNAPSHOT and EXECUTION_BLOCKER_AUDIT_2026-11-09.md. The
+same resource constraint persisted through 6640357/b7499c2/f0338b6/this turn.
+Prior turns made offline progress; now native execution is the required gate.
+No active GPU process or job handle: not a verified wait. Do not keep adding
+unmeasured variants or rerun denied requests before the condition changes.
+Goal blocked transition is requested after checkpoint push; objective not met.
+Resume on official opening or supplied existing authorized Hopper node, then
+revalidate rules/base/budgets and follow documented check/validation sequence.
+
+Latest: separate serving/prototypes/humming_moe.py now exists, SHA256
+2bbec6b86f2f7789387de8bc4155930196bf0c11ef812ed11f868c7988adff5d.
+No submission integration or native GPU run. Crucial audit: Humming 0.1.12
+Stream-K writes/adds BF16 partial outputs despite FP32 MMA; stock Marlin uses
+FP32 reduction. Prototype requires no Stream-K, no FP16 accumulation, packed
+FP4/FP8 scales, stock gate-column/BF16 outer rounding and stock finalization.
+Independent alignment tables if G1/G2 blocks differ. No runtime dual-layout
+fallback. CPU protocol doubles pass 96 cases/8 preparations and reject two
+forbidden configs; API bind shapes extracted from pinned source, not actual
+Humming execution. Flags/operators are simulated; do not call it a GPU pass.
+Nine unchanged source/license files pinned at research/public/humming_0_1_12;
+default CPU preflight uses those files and verifies source hashes. Native tool
+accepts --humming-prototype; only source-plan mode ran. Synthetic A/B holds
+both layouts solely for comparison. Full checkpoint preparation, actual layout
+memory, native math/graphs/speed and serving remain unproven. See
+HUMMING_PROTOTYPE.md and receipts. Frozen01..07/currentpatch unchanged.
+
+Latest native-validation/Humming checkpoint: the new MoE component harness is
+prepared and GPU-unrun. CPU source-preparation reports apply 01/04/06/07 to
+isolated indices and compile ten exact methods including stock. Finalization
+AST hashes are identical across five variants; source hashes match the frozen
+manifests. See NATIVE_VALIDATION.md for scope, commands and unrun GPU checks.
+Default dimensions are synthetic 256/128, with one GPU simulating EP ownership.
+Upstream inactive-route tests assert the old EP flags before arithmetic;
+candidate 06 conflicts with those assertions. No upstream test was run/waived.
+The pinned base declares Humming 0.1.12. Downloaded/hashed its exact source
+archive c96c37c95f74379067d2d2d0c5154d12ee9a8cfa29a7c3370a7f3e34f207ca72.
+Screened old NVFP4/schema/API/SM90 sections against current head 3f2fa223.
+Current tuning is newer; do not assume it exists in 0.1.12. No package was
+installed/executed or port implemented. Feasibility notes identify the next
+spike: one canonical layout, BF16/FP32, exact Muse norm and graph lock ownership.
+The generic runner combines experts without Muse post-norm, so it cannot be
+used unchanged. Source metadata is under research/serving. No official request
+was repeated this turn; the serving objective remains incomplete.
+
+Latest follow-up: official candidate01check request rejected at23:07:40UTC:
+track opensNov12at9amPT, no handle/job. Saved request/response; jobs[]after.
+Repo freshly verifiedPRIVATE. Added isolated04fused expert-ID remap and06local
+alignment/inactive-prefix specialization, plus05/07combinations. NewCPU480map
+fallback/420exact-method contract cases pass; no nativeCUDA/Marlin arithmetic
+or serving validation. Existing01/02/03frozen unchanged. Current ignoredSG
+checkout and current/patch.diff match07,12,186bytes/4files, SHA0ae82e6badc3bd52a669a75d6e3bcfbf8ebd0df378ebffb7f1de31442e5d8cf2.
+Full reports/new tools and OPTIMIZATION_LIBRARY.md document bounds and source
+attribution. Public review now nine selected trees/1,351paths/41downloaded
+files plus two upstreamvLLMfiles (fetch != fullread). Candidate06draws from
+lee101upstreamanalysis; sourceconfirmedEPflagdisablessorted/prefixfastpaths.
+Rejected sharedMarlinworkspace reuse on upstream graph-lock alias warning;
+do not implement a persistent cache without proving graph/stream safety.
+First-day officialcheck order01/06/02;04separately then measured composition.
+Prior paragraphs below describe the earlier checkpoint; currentstatuswins.
+
+The owner revoked the earlier AGENTS.md workflow and explicitly replaced the
+kernel objective with winning the serving challenge. Start with
+serving/OBJECTIVE.md and serving/CURRENT_STATUS.md. The old kernel sequence
+below is historical, not the active work order. No subagents used this turn.
+
+New isolated root worktree /Users/soorya/muse_work/serving_20261109, branch
+serving/20261109 from b7f94e9. External stale checkout/untracked research is
+untouched. Current ignored official SGLang clone: serving/current/sglang.
+Fresh init pins297e54fd105e974cdf401e5b4d20253a22c16f90,400KB source patch,
+400character added lines,3checks/1scored/day, and announcesNov12at9amPT.
+Cached Nov3webnotice saysNov10; direct pages403. Recheck before runs.
+
+Implemented isolated candidates01EPglobalroute-density fix and02single-gather
+draft greedy transport;03combined7065bytes/3files. Exact source/patch manifests
+and current downloadedRULES are saved. CPU65540policy/786432selection/360class
+cases pass;72empty cases matchstockrejection. Allpatchesapplytoexactbase and
+passpath/mode/size/addedline/PythonASTchecks. No Triton/NCCL/CUDAgraph/full-model
+validation and no servingcheck/submit/score/rank yet. GPUdevelopment script
+prepared/unrun. Official runs only assumed pending existing-hardware question.
+
+Public-only broad model query155repositorymatches(not155entrants),six selected
+trees329paths/31hash-verifieddownloads, boundedreadscope/attribution in
+serving/PUBLIC_SOURCES_2026-11-09.md. HariappiApache2one-linefix adapted to new
+path; externalH100layerfiguresnotours/noH200whole-modelgain. Meta1,109tok/s is
+GB300/differentKVsettings,notportableH200evidence. No source executed from peers.
+Next: keepcurrentcandidatehashes, obtainrealGPUvalidation, firstofficialcheck
+candidate01onceopen, then02andonlythencomposition. Fullscoredrunneededforall
+rungsquality/TTFT/performance;shortchecknotcompletevalidation. Futureideas
+acceptance-cost-awareprefixverify/single-layoutMarlinexpertfusionremainhypotheses.
+
+Goal API rejected replacement because old kernel goal is unfinished; do not
+falsely complete it. User's replacement goal is recorded in serving/OBJECTIVE.md.
+
+---
+
+# Historical Codex Handoff: Muse Spark Open Kernel Challenge
 
 You are taking over a GPU-kernel optimization effort. Work through the tracks **one at a time, in the order below**. Do not run parallel agents or sub-agents. Finish a track (or hit its stop condition), record results, then move to the next.
 

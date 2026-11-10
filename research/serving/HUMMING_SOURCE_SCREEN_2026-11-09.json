@@ -1,0 +1,26 @@
+{
+  "captured_utc": "2026-11-09T23:13:06.797649+00:00",
+  "scope": "Public upstream source downloads only. No Humming kernel audit/port/benchmark.",
+  "files": [
+    {
+      "repository": "vllm-project/vllm",
+      "commit": "ef5f913afdf2af46559655633bf4c3f0960d14fc",
+      "path": "vllm/model_executor/layers/quantization/utils/humming/priority.py",
+      "returncode": 0,
+      "blob": "4a1452c2a96a8a2be6cd94e46eb0d96f6f57c644",
+      "sha256": "d38c749e36da425add3841a0d0f239f72ebcebc99c189c5fb77b5e576ea8cec8",
+      "bytes": 1735,
+      "url": "https://github.com/vllm-project/vllm/blob/ef5f913afdf2af46559655633bf4c3f0960d14fc/vllm/model_executor/layers/quantization/utils/humming/priority.py"
+    },
+    {
+      "repository": "vllm-project/vllm",
+      "commit": "ef5f913afdf2af46559655633bf4c3f0960d14fc",
+      "path": "vllm/model_executor/layers/fused_moe/experts/fused_humming_moe.py",
+      "returncode": 0,
+      "blob": "30a3ebda1a69bb95f2b03adbdcef003ee50897d5",
+      "sha256": "411d19be9975f6311ed3bd1ae7f76572fcd1f4cb42c1ece9daad4bb224f336c8",
+      "bytes": 41859,
+      "url": "https://github.com/vllm-project/vllm/blob/ef5f913afdf2af46559655633bf4c3f0960d14fc/vllm/model_executor/layers/fused_moe/experts/fused_humming_moe.py"
+    }
+  ]
+}

@@ -1,0 +1,1457 @@
+{
+  "captured_utc": "2026-11-09T22:41:20.330633+00:00",
+  "scope": "Public-only queries; repository query paginated through retrieved results, bounded code search. Not exhaustive research of all contents.",
+  "queries": [
+    {
+      "kind": "repositories",
+      "query": "Muse-Spark-Open is:public",
+      "pages": [
+        {
+          "page": 1,
+          "total": 155,
+          "incomplete": false,
+          "items": [
+            {
+              "full_name": "Amitakshya333/maos-ind_",
+              "name": "maos-ind_",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Amitakshya333/maos-ind_",
+              "description": "MAOS Industrial: evidence-first plant-floor software. Ring is its industrial agent on Meta's Muse Spark Open. Meta hackathon 2026.",
+              "private": false
+            },
+            {
+              "full_name": "SungHyunC/video2urdf",
+              "name": "video2urdf",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/SungHyunC/video2urdf",
+              "description": "One phone video of an articulated object in, a measured URDF/MJCF out, checked by replaying it in MuJoCo over the video. A Muse Spark agent drives SAM 3.1; it also runs on open weights.",
+              "private": false
+            },
+            {
+              "full_name": "modexcheats-web/Muse-Spark-OpenCode",
+              "name": "Muse-Spark-OpenCode",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/modexcheats-web/Muse-Spark-OpenCode",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "yelgabo/okc",
+              "name": "okc",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/yelgabo/okc",
+              "description": "Muse Spark Open Kernel Challenge experiments",
+              "private": false
+            },
+            {
+              "full_name": "GiulianoIntelligence/Muse-FlashSpeed-Kernel",
+              "name": "Muse-FlashSpeed-Kernel",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/GiulianoIntelligence/Muse-FlashSpeed-Kernel",
+              "description": "Muse Spark Open Kernel Challenge entries",
+              "private": false
+            },
+            {
+              "full_name": "Kushagrabainsla/muse-spark-open",
+              "name": "muse-spark-open",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Kushagrabainsla/muse-spark-open",
+              "description": "CUDA/Triton kernels for the Muse Spark Open Kernel Challenge on H200: gated attention decode, NVFP4 MoE, BF16 projections, decoder layer",
+              "private": false
+            },
+            {
+              "full_name": "chillqoder/Muse-Spark-Open",
+              "name": "Muse-Spark-Open",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/chillqoder/Muse-Spark-Open",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "KingCobra52/muse_bf16_optimization",
+              "name": "muse_bf16_optimization",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/KingCobra52/muse_bf16_optimization",
+              "description": "Optimizing the the muse_bf16 kernel in Meta's Muse Spark Open AI model for the Muse Spark Open Kernel Challenge",
+              "private": false
+            },
+            {
+              "full_name": "vigji/muse-spark-open-charter",
+              "name": "muse-spark-open-charter",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/vigji/muse-spark-open-charter",
+              "description": "Reconstruction of Muse Spark Open's Charter from its chain of thought, cross-linked to every CoT sample",
+              "private": false
+            },
+            {
+              "full_name": "AutoclickerI/muse-spark-open-kernels",
+              "name": "muse-spark-open-kernels",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/AutoclickerI/muse-spark-open-kernels",
+              "description": "Our Muse Spark Open Kernel Challenge entry: a 1.89x-over-SGLang H200 decoder layer (NVFP4 MoE, FP8 paged attention), with its judge receipts",
+              "private": false
+            },
+            {
+              "full_name": "theluckystrike/muse-spark-open-kernels",
+              "name": "muse-spark-open-kernels",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/theluckystrike/muse-spark-open-kernels",
+              "description": "Open source must win \u00b7 Muse Spark Open Kernel Challenge kernels (Apache-2.0), published after the boards close",
+              "private": false
+            },
+            {
+              "full_name": "Snehan2k2/muse-spark-openkernel-challenge",
+              "name": "muse-spark-openkernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Snehan2k2/muse-spark-openkernel-challenge",
+              "description": "documenting my solution for the muse spark okc",
+              "private": false
+            },
+            {
+              "full_name": "nvbkdw/muse-spark-open-challenge",
+              "name": "muse-spark-open-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/nvbkdw/muse-spark-open-challenge",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "Studio1-OSS/muse-spark-open-bench",
+              "name": "muse-spark-open-bench",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Studio1-OSS/muse-spark-open-bench",
+              "description": "An open benchmark for Meta's Muse Spark Open on Nebius Token Factory. Muse reviews 50 real merged pull requests from popular open-source projects.",
+              "private": false
+            },
+            {
+              "full_name": "RushSh/PrLens",
+              "name": "PrLens",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/RushSh/PrLens",
+              "description": "A review budget for AI-agent merges. Built with Muse Code, Muse Spark Open and the Muse Spark API.",
+              "private": false
+            },
+            {
+              "full_name": "jlacroix82/muse-spark-open-2x-dgx-spark",
+              "name": "muse-spark-open-2x-dgx-spark",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/jlacroix82/muse-spark-open-2x-dgx-spark",
+              "description": "Run Meta's Muse Spark Open 816B-A42B (816B total / 42B active MoE) on two NVIDIA DGX Sparks via llama.cpp RPC \u2014 measured recipe: 6.76-7.01 tok/s decode, 263 tok/s prefill, 32K context",
+              "private": false
+            },
+            {
+              "full_name": "Mithun-033/Muse-Spark-Open-Kernel-Challenge",
+              "name": "Muse-Spark-Open-Kernel-Challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Mithun-033/Muse-Spark-Open-Kernel-Challenge",
+              "description": "Muse Spark OpenKernel Challenge : `muse_bf16_proj`: Optimized BF16 GPU projection kernels achieving 1.255\u00d7 speedup over the SGLang inference engine through low-level GPU kernel optimization.",
+              "private": false
+            },
+            {
+              "full_name": "islamborghini/muse-spark-open-kernel-challenge",
+              "name": "muse-spark-open-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/islamborghini/muse-spark-open-kernel-challenge",
+              "description": "My submission on Muse Spark Open Kernel Challenge (rank 352/2014)",
+              "private": false
+            },
+            {
+              "full_name": "zimo0110/muse-spark-open-kernel-challenge",
+              "name": "muse-spark-open-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/zimo0110/muse-spark-open-kernel-challenge",
+              "description": "muse_moe_w4a16",
+              "private": false
+            },
+            {
+              "full_name": "XInTheDark/meowbert-ai-agent",
+              "name": "meowbert-ai-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/XInTheDark/meowbert-ai-agent",
+              "description": "Self-hosted workspace where AI agents do real work in sandboxed containers, with any model. Open alternative to: muse, dots, grok bot, spark, ...",
+              "private": false
+            },
+            {
+              "full_name": "Rental-Pilot/rental-pilot-preflight",
+              "name": "rental-pilot-preflight",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Rental-Pilot/rental-pilot-preflight",
+              "description": "Preflight: AI walkaround inspections for rented equipment, built on Meta's Muse Spark, Muse Spark Open, SAM 3.1, Muse Wonder and Muse Voice Transcribe",
+              "private": false
+            },
+            {
+              "full_name": "hyper07/meta-hackathon-2026",
+              "name": "meta-hackathon-2026",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/hyper07/meta-hackathon-2026",
+              "description": "Watch Me: a voice-locked personal-security agent. Muse Spark Open (open weights) and Muse agents ask \"Are you OK?\" and alert your people with a map link.",
+              "private": false
+            },
+            {
+              "full_name": "paper-19/okc-decode-layer",
+              "name": "okc-decode-layer",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/paper-19/okc-decode-layer",
+              "description": "https://openkernelchallenge.dev/ muse spark open / sglang kernel challenge",
+              "private": false
+            },
+            {
+              "full_name": "Williebee615/harvey-taxi-voice-agent",
+              "name": "harvey-taxi-voice-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Williebee615/harvey-taxi-voice-agent",
+              "description": "Voice-first, verifiable AI ride-booking agent built from scratch with Meta Muse Spark, Muse Voice Transcribe & Muse Spark Open (28/28 passing)",
+              "private": false
+            },
+            {
+              "full_name": "NathenFernandes/muse-bf16-proj",
+              "name": "muse-bf16-proj",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/NathenFernandes/muse-bf16-proj",
+              "description": "H200 projection kernels for the Muse Spark Open Kernel Challenge. Best judged speedup: 1.5186x over SGLang.",
+              "private": false
+            },
+            {
+              "full_name": "KingKharid/1Thing-Meta-AI",
+              "name": "1Thing-Meta-AI",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/KingKharid/1Thing-Meta-AI",
+              "description": "1Thing \u2014 one physical next step. Open-weights extraction (muse-spark-open-1026 on Baseten) + Meta Muse Spark/Wonder. Demo + honesty docs in README.",
+              "private": false
+            },
+            {
+              "full_name": "vjeux/okc-2026",
+              "name": "okc-2026",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/vjeux/okc-2026",
+              "description": "Open Kernel Challenge 2026 - Muse Spark kernel entries (team vjeux)",
+              "private": false
+            },
+            {
+              "full_name": "lilaclilac09/open-kernel-challenge",
+              "name": "open-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/lilaclilac09/open-kernel-challenge",
+              "description": "Muse Spark Open Kernel Challenge (openkernelchallenge.dev) \u2014 kernel starters + notes",
+              "private": false
+            },
+            {
+              "full_name": "AnnieQian1212/BoardDream",
+              "name": "BoardDream",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/AnnieQian1212/BoardDream",
+              "description": "Describe a board game in one sentence. Play it with your friends tonight. Built on Muse Spark, Muse Image, SAM 3.1 and Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6243836f",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6243836f",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6243836f",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "facebookresearch/sgl-muse-mega",
+              "name": "sgl-muse-mega",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/facebookresearch/sgl-muse-mega",
+              "description": "Ultrafast low latency megakernel for Muse Spark Open - 1000+ tok/s",
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-aa4005ac",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-aa4005ac",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-aa4005ac",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-253cadb6",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-253cadb6",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-253cadb6",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "jsuryacodes/PartSnap",
+              "name": "PartSnap",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/jsuryacodes/PartSnap",
+              "description": "PartSnap: phone photos of a chipped furniture edge \u2192 a verified, 3D-printable repair part, built with Muse Spark Open, Muse Spark 1.3, SAM 3.1 and Muse Wonder.",
+              "private": false
+            },
+            {
+              "full_name": "hariappi/okc-muse-spark-kernels",
+              "name": "okc-muse-spark-kernels",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/hariappi/okc-muse-spark-kernels",
+              "description": "Muse-Spark-Open kernels and SGLang serving work for the Open Kernel Challenge 2026",
+              "private": false
+            },
+            {
+              "full_name": "lehuubao2909/bug2pr",
+              "name": "bug2pr",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/lehuubao2909/bug2pr",
+              "description": "Turn a screen recording of a web bug into a reproduced failing test and a verified pull request. Built on Meta SAM 3.1, Muse Spark, Muse Wonder and open-weight Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "iddqdld/muse-kernel-challenge",
+              "name": "muse-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/iddqdld/muse-kernel-challenge",
+              "description": "Muse Spark Open Kernel Challenge entry: custom GPU kernels for five benchmarks",
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-8cad921b",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-8cad921b",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-8cad921b",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "aimsrocky1-spec/Meta-Vision-CAD",
+              "name": "Meta-Vision-CAD",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/aimsrocky1-spec/Meta-Vision-CAD",
+              "description": "Vision-to-CAD automation using Meta Muse Spark Open and CATIA V5.  ",
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-bf1462f4",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-bf1462f4",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-bf1462f4",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "rouftom/sarkiai-policy-sandbox-meta",
+              "name": "sarkiai-policy-sandbox-meta",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/rouftom/sarkiai-policy-sandbox-meta",
+              "description": "Policy-grounded, multi-agent incident-response engine. Meta Model API (Muse Spark, SAM 3.1, Muse Voice Transcribe) + Muse Glimmer on open weights.",
+              "private": false
+            },
+            {
+              "full_name": "NextTyrCreator/100proof",
+              "name": "100proof",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/NextTyrCreator/100proof",
+              "description": "Film a 100-second walkthrough \u2192 verifiable, insurance-grade home inventory. Built for the Meta Global AI Developer Hackathon on Meta Model API (SAM 3.1, Muse Spark 1.3, Muse Wonder, Muse Image, Muse Spark Open).",
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-421fb6f7",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-421fb6f7",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-421fb6f7",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-05fea2b9",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-05fea2b9",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-05fea2b9",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6a9a5277",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6a9a5277",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-6a9a5277",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "icebrkn-hq/meta-hackathon",
+              "name": "meta-hackathon",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/icebrkn-hq/meta-hackathon",
+              "description": "Noa, the relationship AI that remembers the little things and helps you show up. Built with Meta Muse Spark, Muse Spark Open on Baseten, and Muse Code for the Meta AI Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "WAOmaster/bidledger",
+              "name": "bidledger",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/WAOmaster/bidledger",
+              "description": "Every shouted bid, on the record. Open-cry auction audio to verified ledger with Meta Muse Voice + Muse Spark.",
+              "private": false
+            },
+            {
+              "full_name": "DiegoLLBB/kernel-credit-lab",
+              "name": "kernel-credit-lab",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/DiegoLLBB/kernel-credit-lab",
+              "description": "Credit monitoring you can audit: an agent reads SEC filings, records only exact quotes, and a second Meta model checks every alert. Muse Spark, Muse Spark Open, Muse Wonder, SAM 3.1.",
+              "private": false
+            },
+            {
+              "full_name": "hoanghonn/candivision-roleplay",
+              "name": "candivision-roleplay",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/hoanghonn/candivision-roleplay",
+              "description": "Voice role-play training built on research, not guesswork. Meta Muse Spark, Spark Open, Voice Transcribe and Image.",
+              "private": false
+            },
+            {
+              "full_name": "openzeka/meta-models-Muse-Spark-Open-816B-A42B-NVFP4-8xDgx-Spark",
+              "name": "meta-models-Muse-Spark-Open-816B-A42B-NVFP4-8xDgx-Spark",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/openzeka/meta-models-Muse-Spark-Open-816B-A42B-NVFP4-8xDgx-Spark",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "nur-srijan/retrofit",
+              "name": "retrofit",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/nur-srijan/retrofit",
+              "description": "Point a camera at a legacy control panel - every instrument becomes a live, typed, queryable data stream. SAM 3.1 + Muse Spark + Muse Spark Open (Baseten) + Muse Wonder + Muse Voice Transcribe. Built during the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "ManasMehta1110/pinpoint",
+              "name": "pinpoint",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ManasMehta1110/pinpoint",
+              "description": "Evidence-grounded oversight for autonomous AI agents, powered by Meta's Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "parvindd/aketud-verify",
+              "name": "aketud-verify",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/parvindd/aketud-verify",
+              "description": "Insurance answers that prove themselves, or refuse. Muse Spark proposes, Muse Spark Open verifies, the 2024 IRDAI rules govern. Built for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "souta-lab/pi-muse",
+              "name": "pi-muse",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/souta-lab/pi-muse",
+              "description": "Muse Code harness (system prompt + tool interface) on top of Pi's agent runtime. Run Muse Spark on an open harness.",
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-f1d6b8bb",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-f1d6b8bb",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-f1d6b8bb",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "Vikhas/newton",
+              "name": "newton",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Vikhas/newton",
+              "description": "Predicts where a thrown ball lands from the first 0.25 s of video, using Meta SAM 3.1, Muse Spark, Muse Spark Open and Muse Voice. Built for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-5de4a4c6",
+              "name": "tcab-pong-opencode-openrouter-meta-muse-spark-1-2-5de4a4c6",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/TheClockwyrks/tcab-pong-opencode-openrouter-meta-muse-spark-1-2-5de4a4c6",
+              "description": null,
+              "private": false
+            },
+            {
+              "full_name": "alygg77/okc-muse-spark-kernels",
+              "name": "okc-muse-spark-kernels",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/alygg77/okc-muse-spark-kernels",
+              "description": "Open-source H200 CUDA kernels for the Muse Spark Open Kernel Challenge (OKC): decode layer 2.21x, NVFP4 MoE 2.40x, BF16 proj 1.55x, prefill 1.82x, attention 2.65x vs SGLang; judge results, measured H200 facts, negative results",
+              "private": false
+            },
+            {
+              "full_name": "compiler-aditya/groundtruth",
+              "name": "groundtruth",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/compiler-aditya/groundtruth",
+              "description": "An agent that checks a construction site against its design package, with evidence, using Meta's models (Muse Wonder, Muse Spark, Muse Spark Open, SAM 3.1). Built for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "AIchaliveret/batik-guard-8in1",
+              "name": "batik-guard-8in1",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/AIchaliveret/batik-guard-8in1",
+              "description": "IR SUPER BATIK GUARD 8-in-1 - 20x110M Autonomous Factory - Muse Spark Open 1026 + Modal",
+              "private": false
+            },
+            {
+              "full_name": "mhtpsd/ChronoRig",
+              "name": "ChronoRig",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/mhtpsd/ChronoRig",
+              "description": "Autonomous Video-to-Physics 3D Rigging & Simulation Engine. Converts standard video of moving mechanisms into self-verifying Three.js/Rapier & Blender (bpy) physics rigs using Meta SAM 3.1, Muse Spark 1.3, Muse Spark Open (1026), Muse Image/Wonder, and Muse Code.",
+              "private": false
+            },
+            {
+              "full_name": "est4ever/DemoDoctor",
+              "name": "DemoDoctor",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/est4ever/DemoDoctor",
+              "description": "Evidence-grounded robot failure investigation powered by Meta SAM 3.1 and Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "Reedo3/Muse_Attention_Decode",
+              "name": "Muse_Attention_Decode",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Reedo3/Muse_Attention_Decode",
+              "description": "The Muse Spark Open Kernel Challenge had a competition for muse's attention decode. The link for this is located here: https://openkernelchallenge.dev/problems/muse_attention_decode",
+              "private": false
+            },
+            {
+              "full_name": "Aditya-Patil27/reefcase",
+              "name": "reefcase",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Aditya-Patil27/reefcase",
+              "description": "Turn a diver's reef video into a cited investigation. SAM 3 + Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "Althaf2406/synchro-api-monorepo",
+              "name": "synchro-api-monorepo",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Althaf2406/synchro-api-monorepo",
+              "description": "SynchroAPI: Autonomous Cross-Repository CI/CD Multi-Agent Remediation Engine (Meta Muse Spark Open, Muse Code, Hybrid Tree-sitter GraphRAG & Modal.com Sandbox)",
+              "private": false
+            },
+            {
+              "full_name": "h-a-forster/lastseen",
+              "name": "lastseen",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/h-a-forster/lastseen",
+              "description": "Drone search and rescue for a volunteer with one drone: where to fly next, and whether the missing person is in the photos. Built on Muse Spark, SAM 3.1, Muse Voice Transcribe and Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "RaYYeR220/kappa",
+              "name": "kappa",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/RaYYeR220/kappa",
+              "description": "A measuring instrument made from any camera: experiment video in, evidence-linked behavioural measurements out. SAM 3.1 + Muse Spark Open + Muse Wonder.",
+              "private": false
+            },
+            {
+              "full_name": "muskaanmishra5426-lab/Investigating-the-role-of-AI-in-prompt-engineering",
+              "name": "Investigating-the-role-of-AI-in-prompt-engineering",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/muskaanmishra5426-lab/Investigating-the-role-of-AI-in-prompt-engineering",
+              "description": "Open-Source research:- Human vs AI-generated promote across Muse Spark, GPT, Claude. Published with DOI",
+              "private": false
+            },
+            {
+              "full_name": "gonzalezerik/muse-open-kernel-log",
+              "name": "muse-open-kernel-log",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/gonzalezerik/muse-open-kernel-log",
+              "description": "Engineering log of a Muse Spark Open Kernel Challenge entry: kernels, H200 lab, data, dead ends",
+              "private": false
+            },
+            {
+              "full_name": "open-indiana-law/muse-research-workbench",
+              "name": "muse-research-workbench",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/open-indiana-law/muse-research-workbench",
+              "description": "Open Indiana Law: Muse Spark research workbench with source-linked notes and observable legal research tools",
+              "private": false
+            },
+            {
+              "full_name": "khatabx-king/spiralai",
+              "name": "spiralai",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/khatabx-king/spiralai",
+              "description": "Physics-verified AI agent for exploring graphene mechanical energy-storage architectures using Meta Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "hadiproz/JupiBuddy",
+              "name": "JupiBuddy",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/hadiproz/JupiBuddy",
+              "description": "Notebook Autopilot \u2014 standalone AI-native Jupyter notebook editor. An AI agent performs end-to-end data analysis inside live notebooks through MCP (currently supports Muse Spark and Muse Spark Open only).",
+              "private": false
+            },
+            {
+              "full_name": "iamsourabhraikwar/meta-global-ai-developer-hackathon-2026",
+              "name": "meta-global-ai-developer-hackathon-2026",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/iamsourabhraikwar/meta-global-ai-developer-hackathon-2026",
+              "description": "Autonomous AI CCTV Control Room Operator powered by Meta Muse Spark Open 1026 and Meta SAM 3.1. Built for Meta Global AI Developer Hackathon 2026.",
+              "private": false
+            },
+            {
+              "full_name": "Muneeb007j/connectorforge",
+              "name": "connectorforge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Muneeb007j/connectorforge",
+              "description": "Turn any small business website into a secure, tested MCP connector for AI assistants. Powered by Meta's Muse Spark Open and Muse Glimmer.",
+              "private": false
+            },
+            {
+              "full_name": "arihantbansal/open-kernel-challenge",
+              "name": "open-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/arihantbansal/open-kernel-challenge",
+              "description": "GPU kernels for Muse Spark Open on NVIDIA H200. Peak #1 on the MoE leaderboard in the Open Kernel Challenge.",
+              "private": false
+            },
+            {
+              "full_name": "ayoubna99/life-agent",
+              "name": "life-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ayoubna99/life-agent",
+              "description": "Life: an autonomous, self-improving agent. It plans your day, sets your alarms and limits, steps in when you're stuck scrolling, and learns every night what works on you. Android + Meta Muse Spark, Muse Spark Open, Muse Image & Voice Transcribe.",
+              "private": false
+            },
+            {
+              "full_name": "dochavez/faultcase",
+              "name": "faultcase",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/dochavez/faultcase",
+              "description": "Turn your laptop\u2019s crashes into a warranty case. FaultCase reads Windows failure logs, finds the pattern behind repeated crashes and drafts a manufacturer-ready report. Built with Meta\u2019s Muse Spark, Muse Spark Open (Baseten, Fireworks) and Muse Code.",
+              "private": false
+            },
+            {
+              "full_name": "b84330808/beecensus",
+              "name": "beecensus",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/b84330808/beecensus",
+              "description": "Count pollinator flower visits in field video with zero-shot Meta SAM 3 and Muse Spark Open",
+              "private": false
+            },
+            {
+              "full_name": "CygnusA2/thal3s16-hackathon-public-submission",
+              "name": "thal3s16-hackathon-public-submission",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/CygnusA2/thal3s16-hackathon-public-submission",
+              "description": "THAL3S 16: Meta Muse Spark Open financial intelligence research, FIP protocol, V9 report and safe public example",
+              "private": false
+            },
+            {
+              "full_name": "Walid-Khalfa/testpilot-ai",
+              "name": "testpilot-ai",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Walid-Khalfa/testpilot-ai",
+              "description": "Autonomous AI QA agent powered by Meta Muse Spark Open and Playwright, with evidence-backed defect detection.",
+              "private": false
+            },
+            {
+              "full_name": "moyocodes/Nudged",
+              "name": "Nudged",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/moyocodes/Nudged",
+              "description": "Nudged is the reminder app that nudges back. Say or type everything on your mind: Muse Spark turns it into reminders and an agent plans your day. Nudges by Muse Spark Open on Baseten and Modal, voice by Muse Voice Transcribe, photo proof by SAM 3.1, badges by Muse Wonder and Muse Image.",
+              "private": false
+            },
+            {
+              "full_name": "ruwwww/open-kernel-challenge",
+              "name": "open-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ruwwww/open-kernel-challenge",
+              "description": "High-performance GPU kernels on NVIDIA H200 (SM90a) for Meta's Muse Spark Open 816B NVFP4 MoE model (Open Kernel Challenge)",
+              "private": false
+            },
+            {
+              "full_name": "adoodevv/say-and-grasp",
+              "name": "say-and-grasp",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/adoodevv/say-and-grasp",
+              "description": "Open-vocabulary pick-and-place for the SO-101 arm with Meta\u2019s Muse Spark and SAM 3.1.",
+              "private": false
+            },
+            {
+              "full_name": "turbo998/Large-MoE-Precision-and-Deployment-Guide",
+              "name": "Large-MoE-Precision-and-Deployment-Guide",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/turbo998/Large-MoE-Precision-and-Deployment-Guide",
+              "description": "Azure AMD MI300X Large OSS MoE (Muse Spark Open, Nemotron 3 Ultra, Inkling) BF16 vs MXFP4 Precision & Deployment Guide",
+              "private": false
+            },
+            {
+              "full_name": "A1exZabr/curtain-tryon-meta",
+              "name": "curtain-tryon-meta",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/A1exZabr/curtain-tryon-meta",
+              "description": "Curtain try-on on Meta models: SAM 3.1 finds the window, Muse Image draws the curtains, Muse Spark Open checks the result. Meta AI Developer Hackathon, ZabSoft.",
+              "private": false
+            },
+            {
+              "full_name": "jaemin-jo/spark-muse",
+              "name": "spark-muse",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/jaemin-jo/spark-muse",
+              "description": "Fast, safe browser agent on Meta Muse - the open-source core of Spark AI (Meta Global AI Developer Hackathon)",
+              "private": false
+            },
+            {
+              "full_name": "lachydotmcg/muse-sputter",
+              "name": "muse-sputter",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/lachydotmcg/muse-sputter",
+              "description": "Correct answers. Eventually. Muse Spark Open dense projections, deliberately 143.8x slower overall than PyTorch on an RTX 3060.",
+              "private": false
+            },
+            {
+              "full_name": "ayandipe/Reunite",
+              "name": "Reunite",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ayandipe/Reunite",
+              "description": "A privacy-first bridge for families and friends separated by war and displacement. Muse Spark parses memories, Muse Wonder resolves matches, SAM 3.1 redacts documents. Consent, not search, opens the door. Building with muse code",
+              "private": false
+            },
+            {
+              "full_name": "infraax/okc-kernel-challenge",
+              "name": "okc-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/infraax/okc-kernel-challenge",
+              "description": "Open Kernel Challenge 2026 (Muse Spark Open, H200): an AI-agent-driven GPU kernel campaign \u2014 results, hypotheses, method, kernels and judge data, archived",
+              "private": false
+            },
+            {
+              "full_name": "Acidni-LLC/rackwatch",
+              "name": "rackwatch",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Acidni-LLC/rackwatch",
+              "description": "Photo of a server rack to a CMDB, then 512 alerts to 3 verified incidents, on Meta's Muse Spark, Muse Spark Open, SAM 3.1 and Voice Transcribe. Built for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "MartinSWDev/inkling",
+              "name": "inkling",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/MartinSWDev/inkling",
+              "description": "Inkling: a game that helps UK school leavers find the degree subjects that fit them. Four rounds of cards fill a paper-craft room; then your top 3, a wildcard, real UK courses and apprenticeships. Built with Muse Spark Open on Baseten, Muse Spark, Muse Image, SAM 3.1 and Muse Code for the Meta AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "Aryan787913/flood-triage",
+              "name": "flood-triage",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Aryan787913/flood-triage",
+              "description": "Triage for citizen flood photos with Meta's Muse Spark Open: flood level vs vehicle parts, or can't tell.",
+              "private": false
+            },
+            {
+              "full_name": "aungsan-portfolio/meta-quant-auditor",
+              "name": "meta-quant-auditor",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/aungsan-portfolio/meta-quant-auditor",
+              "description": "Synthetic event demo explaining deterministic quote-gate audits with Meta Muse Spark Open on Baseten (Meta Global AI Developer Hackathon)",
+              "private": false
+            },
+            {
+              "full_name": "trxphxle/okc-2026-muse-kernels",
+              "name": "okc-2026-muse-kernels",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/trxphxle/okc-2026-muse-kernels",
+              "description": "Muse Spark Open Kernel Challenge 2026 (team trxphxle): H200 kernels, results, and every experiment we ran. Peaked top 200 (#185).",
+              "private": false
+            },
+            {
+              "full_name": "EROREx/okc-muse-spark-kernels",
+              "name": "okc-muse-spark-kernels",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/EROREx/okc-muse-spark-kernels",
+              "description": "My best H200 CUDA kernels for Meta's Open Kernel Challenge 2026 (Muse Spark Open): overall rank 110/1915, up to 2.68x over SGLang",
+              "private": false
+            },
+            {
+              "full_name": "ajensenwaud/muspark-2dgx",
+              "name": "muspark-2dgx",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ajensenwaud/muspark-2dgx",
+              "description": "Muspark: Meta's Muse Spark Open 816B on 2x DGX Spark with TensorFold. EXL3 1.8 bpw, ~905K context, 32 tok/s greedy / 23 at temperature 1.0",
+              "private": false
+            },
+            {
+              "full_name": "vatsShashwat07/omnigaze-agent",
+              "name": "omnigaze-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/vatsShashwat07/omnigaze-agent",
+              "description": "Autonomous Cyber-Physical SCADA Resilience Node: Closed-loop pipeline mitigation powered by Meta SAM 2.1 and Meta Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "EmilJaf/wellpilot",
+              "name": "wellpilot",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/EmilJaf/wellpilot",
+              "description": "AI agent for oil & gas well performance analysis on Meta Muse Spark Open. Built at the Meta AI Developer Hackathon 2026",
+              "private": false
+            },
+            {
+              "full_name": "nanadjan996-debug/PharmacyGuard-Meta",
+              "name": "PharmacyGuard-Meta",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/nanadjan996-debug/PharmacyGuard-Meta",
+              "description": "Dual-safety clinical pharmacy decision support & student simulation powered by Meta Muse Spark Open for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "ranjanj1/muse-spark-moe-experiments",
+              "name": "muse-spark-moe-experiments",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ranjanj1/muse-spark-moe-experiments",
+              "description": "Opening up Meta's Muse Spark Open: routing traces and mixture-of-experts experiments on the real weights (It's Not Magic)",
+              "private": false
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "total": 155,
+          "incomplete": false,
+          "items": [
+            {
+              "full_name": "SirlamoDE/atelier-os",
+              "name": "atelier-os",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/SirlamoDE/atelier-os",
+              "description": "An open-source multimodal garment engineering and workshop orchestration engine. Bridges custom fashion consultations and precision workshop execution using Meta AI models (Voice Transcribe, SAM 3.1, Muse Spark, and Muse Image).",
+              "private": false
+            },
+            {
+              "full_name": "Sveder/mifgash",
+              "name": "mifgash",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Sveder/mifgash",
+              "description": "Meet friends on your terms; let agents handle the rest. Built for the Meta AI Developer Hackathon 2026 on Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "taku629/whiteboard2repo",
+              "name": "whiteboard2repo",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/taku629/whiteboard2repo",
+              "description": "Snap a whiteboard architecture sketch -> get a running, tested FastAPI + docker-compose repo. Built with Meta SAM 3.1 + Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "nickthelegend/thyra",
+              "name": "thyra",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/nickthelegend/thyra",
+              "description": "Thyra \u03b8\u03cd\u03c1\u03b1 \u2014 open a door in your real wall on Meta Quest 3/3S. Muse Spark writes a world that fits your room, Muse Image paints it, and you step through. WebXR + IWSDK.",
+              "private": false
+            },
+            {
+              "full_name": "anojaagnanes/mathmate-ai",
+              "name": "mathmate-ai",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/anojaagnanes/mathmate-ai",
+              "description": "An agentic AI maths tutor powered by Meta Muse Spark Open, combining handwritten-work verification, bilingual teaching, adaptive practice, and interactive visual learning.",
+              "private": false
+            },
+            {
+              "full_name": "iamsourabhraikwar/segmio-copilot-agent",
+              "name": "segmio-copilot-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/iamsourabhraikwar/segmio-copilot-agent",
+              "description": "AI-native video editing & composition copilot powered by Meta SAM 3.1 & Muse Spark Open, with serverless inference on Modal, Baseten & Fireworks AI.",
+              "private": false
+            },
+            {
+              "full_name": "falcon123212/matterlift",
+              "name": "matterlift",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/falcon123212/matterlift",
+              "description": "Point at anything. Type what you want. Get a game-ready PBR material. Open-source tool powered by Meta's Muse Spark, SAM 3.1, Muse Image and Voice Transcribe. Meta's Hackathon 2026",
+              "private": false
+            },
+            {
+              "full_name": "Narubyx/voxel-sam-ar",
+              "name": "voxel-sam-ar",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Narubyx/voxel-sam-ar",
+              "description": "Phone video to true-scale WebAR twin: SAM segmentation (Modal) + Muse Spark Open geometry (Baseten) + agentic watertight mesh loop. Meta Global AI Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "edward321416-maker/fieldless",
+              "name": "fieldless",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/edward321416-maker/fieldless",
+              "description": "Fieldless: street surveys without the fieldwork. Surveys street assets and conditions from open Mapillary street photos with Meta SAM 3.1, Muse Spark and Muse Glimmer. Built at the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "thanhdat5639/vtt-aura-sentinel",
+              "name": "vtt-aura-sentinel",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/thanhdat5639/vtt-aura-sentinel",
+              "description": "VTT Aura Sentinel OS - Autonomous Hardware Actuation with Meta Muse Spark Open 1026 & Meta SAM 3.1 for Solar Microgrids and CCTV Optical Tracking",
+              "private": false
+            },
+            {
+              "full_name": "kimdooo-a/callreader",
+              "name": "callreader",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/kimdooo-a/callreader",
+              "description": "Reads open calls (contests, grants, hackathons) and only tells you what it can quote \u2014 Muse Spark + citation verifier. Meta Global AI Developer Hackathon 2026.",
+              "private": false
+            },
+            {
+              "full_name": "toiyeugym19-cmyk/vtt-aura-sentinel",
+              "name": "vtt-aura-sentinel",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/toiyeugym19-cmyk/vtt-aura-sentinel",
+              "description": "VTT Aura Sentinel OS - Autonomous Hardware Actuation with Meta Muse Spark Open 1026 & Meta SAM 3.1 for Solar Microgrids and CCTV Optical Tracking",
+              "private": false
+            },
+            {
+              "full_name": "jai-rathore/agentboard",
+              "name": "agentboard",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/jai-rathore/agentboard",
+              "description": "AI agents keep redoing the same web tasks from scratch. Show a browser task once: Meta's Muse Spark turns it into a verified skill any MCP agent can find and replay, signed and self-healing. Built with Muse Spark Open. Meta hackathon: Build for Your World.",
+              "private": false
+            },
+            {
+              "full_name": "MarcoZuno/Retina",
+              "name": "Retina",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/MarcoZuno/Retina",
+              "description": "Retina rewrites the first seconds of your video, draws them and checks the fix before you publish. Built with Muse Spark Open and Meta's models.",
+              "private": false
+            },
+            {
+              "full_name": "joymin5655/airlens-agent",
+              "name": "airlens-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/joymin5655/airlens-agent",
+              "description": "An AI agent that watches Korea's air every hour and works out what caused each pollution event, with the evidence. Built with Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "MicroQuack/told-here",
+              "name": "told-here",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/MicroQuack/told-here",
+              "description": "Told Here: a 3D map of Northampton's old shoe factories, with an Ask agent on Meta's Muse Spark Open and memories shared with consent",
+              "private": false
+            },
+            {
+              "full_name": "shaunmortal/crossing-watch",
+              "name": "crossing-watch",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/shaunmortal/crossing-watch",
+              "description": "Proof of near-misses at a school or college gate from one phone video: SAM 3.1 measures, code checks every number, Muse Spark writes the letter, and a fine-tuned open-weights Muse Glimmer judge reviews it.",
+              "private": false
+            },
+            {
+              "full_name": "Kevin19980730/muse-spark-inferencex",
+              "name": "muse-spark-inferencex",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Kevin19980730/muse-spark-inferencex",
+              "description": "Muse Spark Open on SemiAnalysis InferenceX - daily trend of throughput per MW / per chip, cost per M tokens, tokens per $1 TCO, token revenue per GPU-hr",
+              "private": false
+            },
+            {
+              "full_name": "sese0318/catch-up",
+              "name": "catch-up",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/sese0318/catch-up",
+              "description": "Missed what was just said? One key turns the last 30 seconds of audio into a card in your language, built on Meta's Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "mysteriolaflamme/Temoin",
+              "name": "Temoin",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/mysteriolaflamme/Temoin",
+              "description": "Neutral visual witness for remote trade: proves the delivered item is the one sold, by its flaws. Meta Muse Spark Open, SAM 3.1, Voice Transcribe & MMS.",
+              "private": false
+            },
+            {
+              "full_name": "fariha-nirjana/tellwater",
+              "name": "tellwater",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/fariha-nirjana/tellwater",
+              "description": "A garment's label leads back to the wastewater its dye run made. Tellwater checks whether it was really treated, from the factory's own meters and records, with Meta's Muse Spark and a fine-tuned open Muse Glimmer.",
+              "private": false
+            },
+            {
+              "full_name": "chokri29/SentryVision",
+              "name": "SentryVision",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/chokri29/SentryVision",
+              "description": "Solidity security verification powered by Meta AI: Slither detects, Muse Spark Open explains and ranks findings, Slither re-checks proposed fixes, and optional Muse Wonder retries a rejected patch up to three times. Built for Web3 developers and non-technical founders.",
+              "private": false
+            },
+            {
+              "full_name": "chanochrosenthal/invoicepilot",
+              "name": "invoicepilot",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/chanochrosenthal/invoicepilot",
+              "description": "AI accounts-payable agent on Meta's open-weights Muse Spark Open: it extracts invoices, writes its own audit code that runs in a no-network sandbox, and queues payments for human approval",
+              "private": false
+            },
+            {
+              "full_name": "tridaai/blueprint-manufacturing-plant-operations",
+              "name": "blueprint-manufacturing-plant-operations",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/tridaai/blueprint-manufacturing-plant-operations",
+              "description": "Plant operations loop agent blueprint \u2014 two nested agent loops (board + case) powered by Muse Spark; diagnose, plan, verify, converge or escalate; supervisor-gated. A Trida AI open blueprint.",
+              "private": false
+            },
+            {
+              "full_name": "my5757980/meta-global-hackathone",
+              "name": "meta-global-hackathone",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/my5757980/meta-global-hackathone",
+              "description": "AutoFTE \u2014 a used-car exporter's whole business (website, CRM, auction, chat, Android app) run by eight Digital FTEs on Meta's Muse Spark Open. Demo data only.",
+              "private": false
+            },
+            {
+              "full_name": "leonardo-vanschaik/offertest-ai",
+              "name": "offertest-ai",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/leonardo-vanschaik/offertest-ai",
+              "description": "Test your Meta ads before they spend. An AI agent clicks through the funnel like a customer and checks every promise (discount codes, prices, free shipping, trials) with quotes and screenshots. Built on Muse Wonder, Muse Spark Open, and SAM 3.1.",
+              "private": false
+            },
+            {
+              "full_name": "bharath03-a/perfpilot",
+              "name": "perfpilot",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/bharath03-a/perfpilot",
+              "description": "Agent swarm that bisects vLLM on a real A100, names the commit that slowed your Llama endpoint, and proves it with statistics. Open weights end to end (Llama-3.2-1B + muse-spark-open).",
+              "private": false
+            },
+            {
+              "full_name": "arunjyotisarmarsece24-jpg/neuro-spark-accel",
+              "name": "neuro-spark-accel",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/arunjyotisarmarsece24-jpg/neuro-spark-accel",
+              "description": " Full-Stack AI Acceleration Engine: From Bio-Inspired Spiking Neural Networks (LIF) & BitNet b1.58 on Spartan-7       FPGA to Hopper H200 Triton Kernels for Meta Muse Spark Open.",
+              "private": false
+            },
+            {
+              "full_name": "DarkWhige/GuardianBees-beta",
+              "name": "GuardianBees-beta",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/DarkWhige/GuardianBees-beta",
+              "description": "Real-time home network anomaly detection using AI. Detects unusual  network behavior in seconds, identifies threats, and enables parental  controls. Built with Muse Spark Open running locally for privacy.",
+              "private": false
+            },
+            {
+              "full_name": "akorite/okc-findings",
+              "name": "okc-findings",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/akorite/okc-findings",
+              "description": "Measured findings and post-mortem from the Muse Spark Open Kernel Challenge kernel track: five boards, final decode-layer 2.2837x, falsified mechanisms, and the measurement discipline behind them.",
+              "private": false
+            },
+            {
+              "full_name": "kaiseraz/reality",
+              "name": "reality",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/kaiseraz/reality",
+              "description": "Reality: an open-source AI workspace where a team of bots builds the work and independent code checks every result. Built during the Meta Global AI Developer Hackathon on Muse Spark.",
+              "private": false
+            },
+            {
+              "full_name": "Jieyi-Deng/agent-beans",
+              "name": "agent-beans",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Jieyi-Deng/agent-beans",
+              "description": "Agent Beans: an always-on AI growth team for Meta ads, for small businesses and indie developers. Built on Meta's Muse models.",
+              "private": false
+            },
+            {
+              "full_name": "mohiddin7/IndexReel",
+              "name": "IndexReel",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/mohiddin7/IndexReel",
+              "description": "Is this video really new? IndexReel finds earlier uploads of a video and shows the frames side by side. Open-source X bot @askIndexReel, built with Meta's SSCD and Muse Spark.",
+              "private": false
+            },
+            {
+              "full_name": "mehmetyz/mixray",
+              "name": "mixray",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/mehmetyz/mixray",
+              "description": "Point at a sound in a song or video, hear it alone, and learn to play it on a keyboard. Built with Muse Spark Open for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "sushantkonar/continuum",
+              "name": "continuum",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/sushantkonar/continuum",
+              "description": "AI clinical chart for unconnected hospital wards. Reads monitor photos, lab reports, referral letters and voice rounds with Meta's open-weights Muse Spark Open, cites and verifies every value, and drafts evidence-linked SBAR handovers. Synthetic data only.",
+              "private": false
+            },
+            {
+              "full_name": "Nivetha200111/Diocle",
+              "name": "Diocle",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Nivetha200111/Diocle",
+              "description": "AI system integrator that modernizes legacy COBOL to Java and SQL, built on Meta Muse Spark",
+              "private": false
+            },
+            {
+              "full_name": "AhmadCM01/Along",
+              "name": "Along",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/AhmadCM01/Along",
+              "description": "Voice-first shared-ride booking for Abuja corridors. Pidgin, Hausa and English requests are understood by Muse Spark Open, with safe filling-station pickups, boarding codes and family tracking. Hackathon demo with simulated payments.",
+              "private": false
+            },
+            {
+              "full_name": "F1nnSBK/beeJEPA-metaai-hackathon",
+              "name": "beeJEPA-metaai-hackathon",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/F1nnSBK/beeJEPA-metaai-hackathon",
+              "description": "Autonomous hive entrance monitoring and active perception edge system combining V-JEPA 2.1 latent surprise detection, Meta SAM 3.1 spatial segmentation, and Muse Spark Open reasoning on Raspberry Pi 4 (Java 25 / GraalVM).",
+              "private": false
+            },
+            {
+              "full_name": "ShortEditor/labdebug",
+              "name": "labdebug",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ShortEditor/labdebug",
+              "description": "Lab-debugging assistant for college practicals (Java/Android XML) - explains bugs, shows fixes, AI re-checks your fix. Built with Muse Spark Open via the Baseten Model API for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "thekaifansari01/cortex-meta-agent",
+              "name": "cortex-meta-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/thekaifansari01/cortex-meta-agent",
+              "description": "\ud83e\udde0 An autonomous AI OS agent for Windows powered by Meta Muse Spark Open (Baseten). Controls your PC, executes terminal commands, manages files, and sends WhatsApp/Email. Built for the Meta Global AI Hackathon 2026.",
+              "private": false
+            },
+            {
+              "full_name": "vignesh2027/neermattam",
+              "name": "neermattam",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/vignesh2027/neermattam",
+              "description": "Street-level flood depth from one phone photo: two Meta open models (Muse Spark Open, SAM 2.1) check each other, then a live map routes every vehicle around the water and watches data centres, hospitals and telecom sites. Rust, Go, Python.",
+              "private": false
+            },
+            {
+              "full_name": "Prashant-thakur77/partsmith",
+              "name": "partsmith",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Prashant-thakur77/partsmith",
+              "description": "Photo of a broken plastic part \u2192 a measured, parametric, printable replacement. Your laptop screen is the ruler. SAM 3.1 and code measure millimetres, Muse Spark Open writes CadQuery, and a deterministic verifier decides what passes. Open registry over REST and MCP.",
+              "private": false
+            },
+            {
+              "full_name": "srthorat/CoverPilot",
+              "name": "CoverPilot",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/srthorat/CoverPilot",
+              "description": "Two voice agents on Meta models for a term-life insurance application: OmniCB fills the form with the customer by voice, Integrity Guardian (Muse Spark Open) reviews the proposed policy before signing. Meta Global AI Developer Hackathon 2026.",
+              "private": false
+            },
+            {
+              "full_name": "Nzangi20/Meta-Hackathon---DukaBrainAi",
+              "name": "Meta-Hackathon---DukaBrainAi",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Nzangi20/Meta-Hackathon---DukaBrainAi",
+              "description": "DukaBrain AI is an intelligent visual inventory management platform using Meta SAM 3.1 to identify and count products from shelf photographs, human verification to guarantee accuracy, and Muse Spark Open to explain discrepancies and provide actionable insights.",
+              "private": false
+            },
+            {
+              "full_name": "Krekker0101/OzmoLab",
+              "name": "OzmoLab",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Krekker0101/OzmoLab",
+              "description": "Photo-to-circuit lab agent: Meta Muse Spark Open reads a circuit photo, a deterministic MNA solver computes the real result, and the tutor explains only what the solver found, so it never invents physics. Tajik, Russian, English.",
+              "private": false
+            },
+            {
+              "full_name": "joker7blue/lessoncast",
+              "name": "lessoncast",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/joker7blue/lessoncast",
+              "description": "A teacher photographs a textbook page or uploads a PDF book, and gets back a short narrated, illustrated video lesson in the language children speak at home: French, English, Pidgin, Hausa, Fulfulde, Yoruba, Fon or Swahili. Built on Muse Spark, Muse Image, SAM 3.1 and Meta's open MMS voices for the Meta AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "Kylne700/torpor-muse",
+              "name": "torpor-muse",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Kylne700/torpor-muse",
+              "description": "Say what works in Muse Code. Muse Spark writes a check from your words, Torpor runs it at the end of a later AI turn and tells the AI if it fails, so it can fix it in the same turn. Spoken claims work too. Hooks and check-writer built for the Meta hackathon on the pinned open-source Torpor engine.",
+              "private": false
+            },
+            {
+              "full_name": "MuraliKrishnaGR/retrodict",
+              "name": "retrodict",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/MuraliKrishnaGR/retrodict",
+              "description": "Retrodict: from one photo, works out what most likely happened before it was taken (steps, order, timing) with the evidence for each step. Built with Muse Spark Open, SAM 3.1 and V-JEPA 2 for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "ImageekCompany/nubi-mixed-reality-ai-companion",
+              "name": "nubi-mixed-reality-ai-companion",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/ImageekCompany/nubi-mixed-reality-ai-companion",
+              "description": "Nubi: an open-source AI companion that lives in your real room on Meta Quest 3. It walks, talks, and sees what you hold up. Built with Unity, Muse Spark and SAM 3.1 for the Meta AI Global Developer Hackathon 2026.",
+              "private": false
+            },
+            {
+              "full_name": "Mahesh-Paul/AutoPatch-Kernel-Autonomous-Self-Healing-Codebase-Agent-Built-on-MCP",
+              "name": "AutoPatch-Kernel-Autonomous-Self-Healing-Codebase-Agent-Built-on-MCP",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Mahesh-Paul/AutoPatch-Kernel-Autonomous-Self-Healing-Codebase-Agent-Built-on-MCP",
+              "description": "AutoPatch-Kernel is an autonomous MCP codebase healer powered by Meta Muse Spark 1.3 and Modal sandboxes. It localizes faults via Tree-sitter AST call graphs and syscall tracing, tests parallel Git worktree patches inside read-only containers, and opens verified GitHub Pull Requests.",
+              "private": false
+            },
+            {
+              "full_name": "Swayam13-exe/VoltProof",
+              "name": "VoltProof",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Swayam13-exe/VoltProof",
+              "description": "VoltProof AI: an AI operator for solar + battery sites. Muse Spark Open writes the rules, an optimizer plans the day, and checks verify the plan before anything runs. 98.8% of goals met vs 90.4% for AI-written schedules. Built for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "keell0renz/muse-open-kernel-challenge",
+              "name": "muse-open-kernel-challenge",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/keell0renz/muse-open-kernel-challenge",
+              "description": "Team keell0renz's fair H200 kernels for the OKC Muse Spark Open Kernel Challenge: decode layer 2.2659 (#38/1085, overall), attention #35, bf16 #26, prefill #29, MoE #58. Highest-ranked public OKC code we know of on all 5 boards (Nov 1). Apache-2.0, with lessons from ~460 experiments.",
+              "private": false
+            },
+            {
+              "full_name": "coder-RT/recall",
+              "name": "recall",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/coder-RT/recall",
+              "description": "Voice-first 3D memory of your home. Built first for blind and low-vision people, useful to anyone. Scan a room once with an iPhone (LiDAR + Meta models), then ask \u201cwhere are my keys?\u201d and hear step-by-step directions. SAM 3.1, MapAnything and Muse Spark Open on Baseten. Meta Global AI Developer Hackathon, Oct 26 to Nov 4, 2026.",
+              "private": false
+            },
+            {
+              "full_name": "Unclefole/yebo-muse-agent",
+              "name": "yebo-muse-agent",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/Unclefole/yebo-muse-agent",
+              "description": "Yebo AP Agent: AI pays your invoices. It cannot be tricked into paying anyone else. Muse Spark reads invoices and proposes payments; Yebo authorizes each one against limits a human approved. Built for the Meta Global AI Developer Hackathon.",
+              "private": false
+            },
+            {
+              "full_name": "smashburger-dev/synthexis",
+              "name": "synthexis",
+              "path": null,
+              "sha": null,
+              "html_url": "https://github.com/smashburger-dev/synthexis",
+              "description": "Audio Plugin that lets hands, fingers, face and head act as a playable control layer for the plugins producers already own.",
+              "private": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"muse\" \"serve check\" is:public",
+      "pages": [
+        {
+          "page": 1,
+          "total": 0,
+          "incomplete": false,
+          "items": []
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"muse_spark_fp4_moe\" \"routes_per_expert\" is:public",
+      "pages": [
+        {
+          "page": 1,
+          "total": 0,
+          "incomplete": false,
+          "items": []
+        }
+      ]
+    },
+    {
+      "kind": "code",
+      "query": "\"DFLASH\" \"packed\" \"gather\" is:public",
+      "pages": [
+        {
+          "page": 1,
+          "total": 0,
+          "incomplete": false,
+          "items": []
+        }
+      ]
+    }
+  ]
+}

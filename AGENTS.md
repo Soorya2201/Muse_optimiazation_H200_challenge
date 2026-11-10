@@ -1,8 +1,14 @@
-# Instructions for Codex (project root)
+# Current project direction
 
-Read `CODEX_HANDOFF.md` in this folder first. It holds the full context, rules, current results and the step-by-step plan.
-Then read `CODEX_NEXT_STEPS.md` (Oct 29 review + competitor audit). Its priorities override the handoff's "next" lines. Serving-track prep is in `serving/SERVING_PLAN.md`.
+The owner revoked the previous AGENTS.md instructions and changed the project
+objective to the serving challenge on November9,2026.
 
-- Work on one track at a time, in the order given there. No parallel agents or sub-agents.
-- Each problem folder also has its own `AGENTS.md` and `TASK.md` from the challenge. Read those when you enter that folder.
-- Log every okc run in `RESULTS.md`.
+Read serving/OBJECTIVE.md and serving/CURRENT_STATUS.md for the current
+objective, official baseline/rules, implemented patches and validation limits.
+The earlier kernel-track sequence and serving plan are historical context.
+
+Keep the owner's unrelated work and untracked research intact. Push serving
+work to the existing private GitHub repository. Record official runs, source
+hashes, results and failures in RESULTS.md and the serving experiment ledger.
+Use current official rules and budgets when the service opens; distinguish
+CPU/component evidence from full-model quality and throughput results.

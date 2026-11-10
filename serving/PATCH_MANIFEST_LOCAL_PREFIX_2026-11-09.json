@@ -1,0 +1,46 @@
+{
+  "scope": "Source patch/package verification only; no GPU, numerical, serving or throughput validation.",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "patches": [
+    {
+      "patch": "serving/candidates/06_local_alignment_prefix.diff",
+      "sha256": "8a28f4c5273f62ebaf80ef95abe540d714b98eaffa299b2f3bb2c4a9e836f642",
+      "bytes": 2589,
+      "maximum_added_line_bytes": 78,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha256": "6638bed1cbcc5d3a6b38af49f863127b922d75421fe511b14a592defdb70a6f4"
+        }
+      ]
+    },
+    {
+      "patch": "serving/candidates/07_all_candidates.diff",
+      "sha256": "0ae82e6badc3bd52a669a75d6e3bcfbf8ebd0df378ebffb7f1de31442e5d8cf2",
+      "bytes": 12186,
+      "maximum_added_line_bytes": 86,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/kernels/ops/moe/map_marlin_expert_ids.py",
+          "sha256": "c1eb33ed94bb3ed5da24a9f3704b4765e24776b41b5b07cbd70c57d026e12826"
+        },
+        {
+          "path": "python/sglang/kernels/ops/speculative/draft_head_collective.py",
+          "sha256": "4b493eb3f614f92a801e81637ad61ca1d1a857adb16f85f2f4a6b301b476caef"
+        },
+        {
+          "path": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+          "sha256": "5d9f6b167d578f69775f8c1de45b1846984d67784cbe94212897ceb13b79830f"
+        },
+        {
+          "path": "python/sglang/srt/speculative/dflash_worker_v2.py",
+          "sha256": "ade2d28822d36c5c498d7842955a63985b3a073e6d57f30ec9268f1712fcf547"
+        }
+      ]
+    }
+  ]
+}

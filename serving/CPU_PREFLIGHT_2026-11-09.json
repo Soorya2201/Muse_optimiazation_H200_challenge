@@ -1,0 +1,83 @@
+{
+  "scope": "CPU exact Python policy/class flow plus independent lossless-transport/selection models. Triton kernels, NCCL, CUDA graphs, full-model output quality and H200 speed are NOT validated.",
+  "torch_version": "2.15.0",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "policy_cases": 65540,
+  "policy_table": [
+    {
+      "tokens": 1,
+      "stock_block": 8,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 4,
+      "stock_block": 8,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 8,
+      "stock_block": 8,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 16,
+      "stock_block": 8,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 32,
+      "stock_block": 16,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 64,
+      "stock_block": 32,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 128,
+      "stock_block": 48,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 192,
+      "stock_block": 64,
+      "global_density_block": 8
+    },
+    {
+      "tokens": 256,
+      "stock_block": 64,
+      "global_density_block": 16
+    },
+    {
+      "tokens": 384,
+      "stock_block": 64,
+      "global_density_block": 16
+    },
+    {
+      "tokens": 768,
+      "stock_block": 64,
+      "global_density_block": 32
+    },
+    {
+      "tokens": 2048,
+      "stock_block": 64,
+      "global_density_block": 64
+    },
+    {
+      "tokens": 16384,
+      "stock_block": 64,
+      "global_density_block": 64
+    }
+  ],
+  "transport_and_selection_columns": 786432,
+  "exhaustive_16bit_value_encodings": 131072,
+  "randomized_fp32_encodings": 65536,
+  "cpu_sampler_flow_cases": 360,
+  "stock_and_candidate_matching_empty_batch_rejections": 72,
+  "fresh_inputs_and_output_pointer_reuse": true,
+  "patches": {
+    "01_ep_route_density.diff": "19e7e68418c960399c9721dcf6f6e6927328414a19ae0cb67af15abc7fcd66f7",
+    "02_draft_single_collective.diff": "83edfbaf18762273e9223d66324f81ec2ab2d46e87a8b3b2e9dd9108737966bf"
+  }
+}

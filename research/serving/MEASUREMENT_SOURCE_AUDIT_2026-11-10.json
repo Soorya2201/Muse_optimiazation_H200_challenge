@@ -1,0 +1,82 @@
+{
+  "captured_utc": "2026-11-10T06:12:00.077459+00:00",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "scope": "Bounded source trace; source hashes are full-file identity, not full-file review claims",
+  "sources": [
+    {
+      "path": "python/sglang/srt/managers/scheduler_components/batch_result_processor.py",
+      "base_sha256": "c446e77cbd2ba7af1c5d6d2b6a0dfd9dc94f2724d862112ff6b2945058c64ad2",
+      "read_scope": "_resolve_spec_v2_tokens; _normalize_decode_outputs: CPU result counters, histogram update and callback ordering"
+    },
+    {
+      "path": "python/sglang/srt/managers/schedule_batch.py",
+      "base_sha256": "0e66c8af3cd653e7db646f31c02219587afc6c617311b72c4e286307b97e68a7",
+      "read_scope": "Req.update_spec_correct_drafts_histogram; finished_len/committed-prefix comment"
+    },
+    {
+      "path": "python/sglang/srt/managers/tokenizer_manager.py",
+      "base_sha256": "bc18c6a24cb43329d4180d7a90b58533684e0f7787deb93b71397ff5ef7c38ba",
+      "read_scope": "Native meta_info construction/finality; _calculate_spec_decoding_metrics body; method also executed with CPU doubles"
+    },
+    {
+      "path": "python/sglang/srt/managers/scheduler_components/output_streamer.py",
+      "base_sha256": "317a9a2713a0e48f6a328a3f4af62f995767ba894f7e8bb9cc35e41aa49d4862",
+      "read_scope": "spec counters and histogram publication"
+    },
+    {
+      "path": "python/sglang/srt/managers/io_struct.py",
+      "base_sha256": "0518aa62b3d864be6f4d76a7fcf14720a2f5854b557df19ddd8ea717de62cb57",
+      "read_scope": "ProfileReq fields only"
+    },
+    {
+      "path": "python/sglang/srt/entrypoints/http_server.py",
+      "base_sha256": "d5d7ae6c5e8f403f9a46617377ab96977d9d4f1f263c0b90fc9fd2769eef061e",
+      "read_scope": "start_profile/stop_profile handlers and nearby route registrations"
+    },
+    {
+      "path": "python/sglang/srt/managers/tokenizer_control_mixin.py",
+      "base_sha256": "74c6834d7498484926a5161a295176ec752761502a7ff1811bb483a68821bef3",
+      "read_scope": "start_profile/stop_profile/_execute_profile only"
+    },
+    {
+      "path": "python/sglang/srt/managers/scheduler_components/profiler_manager.py",
+      "base_sha256": "5bf4828dbb4471c87cbd6c363fe1ddd211efb9bf8b4ab9bebec1de6b710af90d",
+      "read_scope": "_init_profile, manual vs stage start/stop and _profile dispatch; selected stage accounting"
+    },
+    {
+      "path": "python/sglang/srt/utils/profile_utils.py",
+      "base_sha256": "3f6fec78e3aec1ae90c6dcc730baddfa532330d102f7fe16f88f0d6429839a7c",
+      "read_scope": "ProfileManager.configure/manual_start and build_step_span_name"
+    },
+    {
+      "path": "python/sglang/srt/model_executor/step_span_utils.py",
+      "base_sha256": "92c86a5354ec279d160d843049e8c6e26d71ed80c14659079fa9bdf50cae33ca",
+      "read_scope": "Annotation width and CPU query/KV aggregate construction"
+    },
+    {
+      "path": "python/sglang/srt/model_executor/model_runner.py",
+      "base_sha256": "2ef478a3c5093c476e606c46d182184722350dd87e3e84284ef421eb4cf624f0",
+      "read_scope": "forward() step_span_ctx construction only"
+    },
+    {
+      "path": "python/sglang/srt/model_executor/runner/decode_cuda_graph_runner.py",
+      "base_sha256": "3cd9da4d67263b2cbb1541a80768988b82428768a9e91cec942f14e3e2880e4a",
+      "read_scope": "prepare/replay raw_bs vs padded bucket computation near lines1600..1644"
+    },
+    {
+      "path": "python/sglang/srt/environ.py",
+      "base_sha256": "967ede87488967cf87a95f8c38ccd72a3a0055a03cbdac303b38c2322b987c55",
+      "read_scope": "SGLANG_PROFILE_V2 default declaration"
+    },
+    {
+      "path": "python/sglang/srt/speculative/base_spec_worker.py",
+      "base_sha256": "74cb38b5d42fa4418e661b7a626ca421dd8c0477edf83677ec86b5956b344b30",
+      "read_scope": "on_verify_complete_cpu no-op base callback only"
+    },
+    {
+      "path": "python/sglang/srt/managers/scheduler_components/metrics_reporter.py",
+      "base_sha256": "db788b8f156a79823f43caadd2dc1e10660854a50e66a8fba1f30c1fb206cc5d",
+      "read_scope": "speculative log counter reset and accept_length/rate formulas"
+    }
+  ]
+}

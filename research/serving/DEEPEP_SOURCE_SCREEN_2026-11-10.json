@@ -1,0 +1,19 @@
+{
+  "captured_utc": "2026-11-10T01:11:23.869478+00:00",
+  "repository": "deepseek-ai/DeepEP",
+  "public": true,
+  "commit": "f6aa38fe06cd4a0489e7730365d4e0114970a2f3",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "file": "README.md",
+  "git_blob": "8c949a4adbc4113bc4199ffb096ae1a7125f6a5d",
+  "sha256": "86415f7fc11381dceb14c112b6c602103d975936444601666ab1fcfd65e8fceb",
+  "bytes": 32914,
+  "scope": "README source screen only; no device code audit, install, execution or port.",
+  "retrieval_failure": "Initial repository metadata request included a trailing slash and returned404. Removed that slash; public source then retrieved normally."
+}

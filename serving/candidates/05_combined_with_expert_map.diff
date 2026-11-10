@@ -1,0 +1,227 @@
+diff --git a/python/sglang/kernels/ops/moe/map_marlin_expert_ids.py b/python/sglang/kernels/ops/moe/map_marlin_expert_ids.py
+new file mode 100644
+index 0000000..b82aec6
+--- /dev/null
++++ b/python/sglang/kernels/ops/moe/map_marlin_expert_ids.py
+@@ -0,0 +1,40 @@
++"""Fuse Marlin's int32 route cast, local mapping and drop-sentinel selection."""
++
++import torch
++import triton
++import triton.language as tl
++
++
++@triton.jit
++def _map_kernel(ids, mapping, out, N: tl.constexpr, BLOCK: tl.constexpr):
++    offset = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
++    live = offset < N
++    # Match the original cast before indexing, including int64 wraparound.
++    expert = tl.load(ids + offset, live, other=-1).to(tl.int32)
++    mapped = tl.load(mapping + expert, live & (expert >= 0), other=-1)
++    tl.store(out + offset, mapped, live)
++
++
++def map_marlin_expert_ids(ids: torch.Tensor, mapping: torch.Tensor) -> torch.Tensor:
++    """Return contiguous int32 IDs; valid nonnegative routes index ``mapping``.
++
++    Negative IDs all become -1. As with the stock router and gather, nonnegative
++    IDs must be within the global expert vocabulary. Scratch is per invocation.
++    """
++    if (
++        ids.is_cuda
++        and ids.dtype in (torch.int32, torch.int64)
++        and ids.is_contiguous()
++        and mapping.is_contiguous()
++        and mapping.ndim == 1
++        and mapping.dtype == torch.int32
++        and ids.device == mapping.device
++    ):
++        out = torch.empty_like(ids, dtype=torch.int32)
++        if ids.numel():
++            _map_kernel[(triton.cdiv(ids.numel(), 256),)](
++                ids, mapping, out, ids.numel(), 256
++            )
++        return out
++    cast = ids.to(torch.int32)
++    return torch.where(cast < 0, -1, mapping[cast.clamp_min(0)]).contiguous()
+diff --git a/python/sglang/kernels/ops/speculative/draft_head_collective.py b/python/sglang/kernels/ops/speculative/draft_head_collective.py
+new file mode 100644
+index 0000000..a035f13
+--- /dev/null
++++ b/python/sglang/kernels/ops/speculative/draft_head_collective.py
+@@ -0,0 +1,73 @@
++"""Lossless value/ID transport for one-collective distributed greedy sampling."""
++
++import torch
++import triton
++import triton.language as tl
++
++
++@triton.jit
++def _pack_greedy_pairs(
++    values,
++    indices,
++    pairs,
++    n: tl.constexpr,
++    vocab_start: tl.constexpr,
++    BLOCK: tl.constexpr,
++):
++    offsets = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
++    value = tl.load(values + offsets, offsets < n, other=0).to(tl.float32)
++    index = tl.load(indices + offsets, offsets < n, other=0).to(tl.int64)
++    # FP16/BF16 -> FP32 is lossless. Transport the bits, without quantization
++    # or floating-point conversion of the potentially large token IDs.
++    bits = value.to(tl.int32, bitcast=True).to(tl.int64)
++    tl.store(pairs + 2 * offsets, bits, offsets < n)
++    tl.store(pairs + 2 * offsets + 1, index + vocab_start, offsets < n)
++
++
++@triton.jit
++def _select_greedy_pairs(
++    gathered,
++    output,
++    n: tl.constexpr,
++    tp_size: tl.constexpr,
++    RANKS: tl.constexpr,
++    BLOCK: tl.constexpr,
++):
++    offsets = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
++    ranks = tl.arange(0, RANKS)
++    valid = (ranks[:, None] < tp_size) & (offsets[None, :] < n)
++    address = (ranks[:, None] * n + offsets[None, :]) * 2
++    bits = tl.load(gathered + address, valid, other=0).to(tl.int32)
++    values = bits.to(tl.float32, bitcast=True)
++    is_nan = valid & (values != values)
++    has_nan = tl.max(is_nan.to(tl.int32), axis=0) != 0
++    maximum = tl.max(tl.where(valid & ~is_nan, values, -float("inf")), axis=0)
++    # Match torch.argmax: first NaN, otherwise first maximum. Rank order,
++    # rather than token-ID order, preserves the existing sampler's tie rule.
++    matches = valid & tl.where(has_nan[None, :], is_nan, values == maximum[None, :])
++    rank = tl.min(tl.where(matches, ranks[:, None], RANKS), axis=0)
++    token = tl.load(gathered + (rank * n + offsets) * 2 + 1, offsets < n, other=0)
++    tl.store(output + offsets, token, offsets < n)
++
++
++def pack_greedy_pairs(
++    local_max: torch.Tensor,
++    local_arg: torch.Tensor,
++    pairs: torch.Tensor,
++    vocab_start: int,
++) -> None:
++    n = local_max.numel()
++    if n:
++        _pack_greedy_pairs[(triton.cdiv(n, 256),)](
++            local_max, local_arg, pairs, n, vocab_start, 256
++        )
++
++
++def select_greedy_pairs(
++    gathered: torch.Tensor, output: torch.Tensor, tp_size: int
++) -> None:
++    n = output.numel()
++    if n:
++        _select_greedy_pairs[(triton.cdiv(n, 128),)](
++            gathered, output, n, tp_size, triton.next_power_of_2(tp_size), 128
++        )
+diff --git a/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py b/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py
+index 41c463d..2e83417 100644
+--- a/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py
++++ b/python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py
+@@ -389,8 +389,8 @@ class MuseSpark1xFp4Experts(nn.Module):
+         from sglang.kernels.ops.activation.activation import silu_and_mul
+         from sglang.kernels.ops.moe.moe_wna16_marlin import moe_wna16_marlin_gemm
+         from sglang.srt.layers.moe.fused_moe_triton import moe_align_block_size
+-        from sglang.srt.layers.moe.token_dispatcher.standard import (
+-            _map_topk_ids_to_local_experts,
++        from sglang.kernels.ops.moe.map_marlin_expert_ids import (
++            map_marlin_expert_ids,
+         )
+         from sglang.srt.layers.quantization.marlin_utils import marlin_make_workspace
+ 
+@@ -401,14 +401,17 @@ class MuseSpark1xFp4Experts(nn.Module):
+         gemm1_n = 2 * size_n
+         expert_map = self._expert_map
+ 
+-        local_topk_ids = topk_ids.to(torch.int32)
+         if expert_map is not None:
+-            local_topk_ids = _map_topk_ids_to_local_experts(local_topk_ids, expert_map)
+-        local_topk_ids = local_topk_ids.contiguous()
++            local_topk_ids = map_marlin_expert_ids(topk_ids, expert_map)
++        else:
++            local_topk_ids = topk_ids.to(torch.int32).contiguous()
+         topk_weights = topk_scores.to(torch.float32).contiguous()
+ 
++        # EP ranks see the global token batch, including routes owned by peers.
++        # Estimate rows per expert over the full router vocabulary.
++        routes_per_expert = num_tokens * topk / self.global_num_experts
+         for block_size_m in _MARLIN_BLOCK_SIZE_M_CANDIDATES:
+-            if num_tokens * topk / self.num_local_experts / block_size_m < 0.9:
++            if routes_per_expert / block_size_m < 0.9:
+                 break
+ 
+         if num_tokens == 1 and topk <= 32 and expert_map is None:
+diff --git a/python/sglang/srt/speculative/dflash_worker_v2.py b/python/sglang/srt/speculative/dflash_worker_v2.py
+index 27b845e..ce99119 100644
+--- a/python/sglang/srt/speculative/dflash_worker_v2.py
++++ b/python/sglang/srt/speculative/dflash_worker_v2.py
+@@ -14,6 +14,10 @@ from sglang.kernels.ops.speculative.dflash import (
+     _prepare_dflash_draft_block_unchecked,
+     compute_dflash_correct_drafts_and_bonus,
+ )
++from sglang.kernels.ops.speculative.draft_head_collective import (
++    pack_greedy_pairs,
++    select_greedy_pairs,
++)
+ from sglang.kernels.ops.speculative.dspark.dspark_accept import (
+     accept_sampling,
+ )
+@@ -139,6 +143,8 @@ class _DflashDraftSampler:
+ 
+     tp=1: plain argmax over the local (full) vocab shard.
+     tp>1: per-rank shard (max, global id) -> all-gather -> first-max select.
++    CUDA FP16/BF16/FP32 maxima and int64 IDs travel as one lossless pair,
++    reducing the two collectives to one while preserving first-rank ties.
+     Tie resolution is bit-exact vs a full-vocab argmax: ranks own contiguous
+     ascending vocab shards and torch.argmax returns the FIRST max index.
+     No added-vocab support (the builder bails to eager in that case).
+@@ -157,6 +163,11 @@ class _DflashDraftSampler:
+         device = weight.device
+         self.out = torch.empty((max_tokens,), dtype=torch.int64, device=device)
+         if self.tp_size > 1:
++            self._single_gather = (
++                weight.is_cuda
++                and is_cuda()
++                and weight.dtype in (torch.float16, torch.bfloat16, torch.float32)
++            )
+             # Static buffers (fixed addresses) keep the in-graph select replay-safe.
+             self.local_max = torch.empty(
+                 (max_tokens,), dtype=weight.dtype, device=device
+@@ -164,6 +175,14 @@ class _DflashDraftSampler:
+             self.local_arg = torch.empty(
+                 (max_tokens,), dtype=torch.int64, device=device
+             )
++            if self._single_gather:
++                self.local_pairs = torch.empty(
++                    (max_tokens, 2), dtype=torch.int64, device=device
++                )
++                self.gathered_pairs = torch.empty(
++                    (self.tp_size * max_tokens, 2), dtype=torch.int64, device=device
++                )
++                return
+             self.gathered_max = torch.empty(
+                 (self.tp_size * max_tokens,), dtype=weight.dtype, device=device
+             )
+@@ -196,6 +215,13 @@ class _DflashDraftSampler:
+         local_max = self.local_max[:n]
+         local_arg = self.local_arg[:n]
+         torch.max(logits, dim=-1, out=(local_max, local_arg))
++        if self._single_gather:
++            local_pairs = self.local_pairs[:n]
++            gathered_pairs = self.gathered_pairs[: self.tp_size * n]
++            pack_greedy_pairs(local_max, local_arg, local_pairs, self.org_vocab_start)
++            self.tp_group.all_gather_into_tensor(gathered_pairs, local_pairs)
++            select_greedy_pairs(gathered_pairs, self.out[:n], self.tp_size)
++            return
+         if self.org_vocab_start:
+             local_arg.add_(self.org_vocab_start)
+         gathered_max = self.gathered_max[: self.tp_size * n]

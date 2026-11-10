@@ -1,0 +1,15 @@
+{
+  "scope": "CPU adapter protocol doubles; never imports/executes Humming or CUDA code.\n\nChecks exact pinned API signatures, parameter replacement, routing/table reuse,\nprecision guards, source scale rounding and projection call flow. Numerical\noperations stand in for kernels and cannot establish NVFP4/GPU correctness.\n",
+  "source_sha256": "2bbec6b86f2f7789387de8bc4155930196bf0c11ef812ed11f868c7988adff5d",
+  "protocol_cases": 96,
+  "preparations": 8,
+  "unsafe_tactic_rejections": 2,
+  "humming_imported": false,
+  "native_gpu_executed": false,
+  "api_signatures": {
+    "prepare_layer_meta": "(cls, layer, shape_n, shape_k, weight_schema, input_schema=None, num_experts=None, pad_n_to_multiple=None, pad_k_to_multiple=None, has_bias=None, torch_dtype=None, sublayer_name=None)",
+    "transform_humming_layer": "(cls, layer, sublayer_name=None, already_padded=None)",
+    "get_default_tuning_configs": "(cls, layer, use_f16_accum=None, use_batch_invariant=None, use_m_major_input_scale=None, gemm_type=None, sublayer_name=None)",
+    "humming_forward": "(config, inputs, weight, weight_scale=None, zero_point=None, bias=None, weight_scale_2=None, outputs=None, input_scale=None, sorted_ids=None, expert_ids=None, num_tokens_padded=None, expert_layout=None, locks=None, top_k=None, valid_shape_m=None, compute_config=None, tuning_config=None, hadamard_block_size=None)"
+  }
+}

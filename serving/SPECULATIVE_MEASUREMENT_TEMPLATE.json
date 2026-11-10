@@ -1,0 +1,14 @@
+{
+  "data_origin": "unmeasured_template",
+  "block_size": 8,
+  "concurrency": 1,
+  "active_batch_size": 1,
+  "context_bin": null,
+  "provenance": null,
+  "accepted_draft_histogram": null,
+  "full_draft_us": null,
+  "other_cycle_us": null,
+  "verify_us_by_prefix": {},
+  "remaining_tokens": 220,
+  "instructions": "Replace nulls only with observed data and change data_origin to observed_component_trace. Histogram has eight counts for accepted draft lengths0..7, excluding the bonus token. Costs use [low, high] microsecond bounds. Verification keys1/3/7 mean logical rows2/4/8; time the real graph bucket and all rollback/scheduling overhead. This is a counterfactual screening tool, not a deployed runtime policy or measured serving result."
+}

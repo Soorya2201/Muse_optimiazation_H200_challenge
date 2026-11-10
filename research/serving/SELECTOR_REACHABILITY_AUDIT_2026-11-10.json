@@ -1,0 +1,100 @@
+{
+  "captured_utc": "2026-11-10T06:12:00.366772+00:00",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "scope": "Public pinned config + bounded base-source reachability; not a model/hardware/official run",
+  "public_config_revision": "46c90f412549c472941a68382d91a99e5e6372a0",
+  "public_config_sha256": "2f88d111418b4018678b8a80ed0bdf83c14b0e395cd6cc163153bce4dd8ba0ae",
+  "sources": [
+    {
+      "path": "python/sglang/srt/models/dflash.py",
+      "base_sha256": "1c8307ba7f63fd41f53435fbdabdad8c9e9a04847bef4959f1f8fc16ea6db0ae",
+      "read_scope": "DFlash2DraftModel constructor/compute_candidates; candidate_topk/project/radix helpers; CandidateSelector constructor/build_lattice/sample_path selected bodies"
+    },
+    {
+      "path": "python/sglang/srt/speculative/dflash_worker_v2.py",
+      "base_sha256": "87a7f5808ea12bec0fb4abb8ffc0d2082963a79b5de9ab435063e0dfa8ce8431",
+      "read_scope": "_maybe_build_draft_sampler, init_cuda_graphs, _selector_lattice, selector sampler and eager proposal dispatch; selected main decode/accept/commit flow"
+    },
+    {
+      "path": "python/sglang/srt/speculative/draft_parallel.py",
+      "base_sha256": "488ebea4aca2e8186bf183e6205102989881c1d69937af9a03ee6a9e2f0cb521",
+      "read_scope": "model_draft_parallel_spec/resolve_draft_parallel_layout"
+    },
+    {
+      "path": "python/sglang/srt/configs/draft_parallel.py",
+      "base_sha256": "4e4833f50abbddece9995efb8168559e1f7ac3f663150b2eeeb6fea9db1f025d",
+      "read_scope": "DraftParallelSpec/Layout declarations"
+    },
+    {
+      "path": "python/sglang/srt/distributed/communication_op.py",
+      "base_sha256": "f93114fdfe4583bcb93ce80505476691453b19aec51ec67c9c0207834afe97b9",
+      "read_scope": "tensor_model_parallel_all_gather wrapper"
+    },
+    {
+      "path": "python/sglang/srt/distributed/parallel_state.py",
+      "base_sha256": "bd356b92933a4e5eb08f22cf3eda8b788cc09efbbb2fb421745803847b8d2f5c",
+      "read_scope": "GroupCoordinator.all_gather rank-major -> requested dimension layout"
+    }
+  ],
+  "conclusion": "Published DFlash2 architecture instantiates CandidateSelector; expected selector sampler/eager lattice use candidate_topk, bypassing candidate02 plain greedy sampler. Official loaded revision/path and effective TP remain unobserved.",
+  "changed_next_action": "Demote candidate02 from first three official checks. Plan isolated01/06/09, confirm real path/eligibility and preserve official budget.",
+  "candidate09": {
+    "patch": "serving/candidates/09_selector_single_collective.diff",
+    "sha256": "053740859dd794a886b81a1ef27403832c98ababc11282d97f777c93967d2cdb",
+    "bytes": 4170,
+    "maximum_added_line_bytes": 82,
+    "applies_to_base": true,
+    "python_syntax": true,
+    "files": [
+      {
+        "path": "python/sglang/kernels/ops/speculative/selector_collective.py",
+        "sha256": "d9d89fc56d65ef02f786e660145482b94e5bc93298c4c3082a4fda26e14dfecd"
+      },
+      {
+        "path": "python/sglang/srt/models/dflash.py",
+        "sha256": "80dafc99d5bb91f6c99422e6e0db4c9c2c3ab5a0feefed9a72be8bc06c66277c"
+      }
+    ]
+  },
+  "cpu_evidence": "serving/SELECTOR_COLLECTIVE_CPU_2026-11-10.json",
+  "native_evidence": "serving/SELECTOR_NATIVE_PLAN_2026-11-10.json",
+  "cpu_scope_notes": "Actual candidate_topk bodies, but projection/collective/pack/unpack/admission are CPU doubles; local top-k is Torch rather than FlashInfer.",
+  "failures_and_limits": [
+    {
+      "phase": "first selector CPU fixture",
+      "error": "NameError: name 'logger' is not defined",
+      "resolution": "Added logger double for actual stock builder; candidate unchanged",
+      "classification": "fixture error, not GPU/candidate failure"
+    },
+    {
+      "phase": "documentation patch",
+      "error": "Atomic apply_patch context mismatch for optimization priority table",
+      "resolution": "Read exact current row and applied corrected context; no partial edits",
+      "classification": "documentation edit failure"
+    },
+    {
+      "phase": "initial file discovery",
+      "error": "Some guessed legacy scheduler/CUDA-graph paths were missing; a zsh glob did not match",
+      "resolution": "Used rg --files and actual reorganized paths",
+      "classification": "source-discovery misses, not unavailable public code"
+    },
+    {
+      "phase": "web tool config open",
+      "error": "Web tool could not open raw/main config",
+      "resolution": "Public unauthenticated HTTP resolve and revision-pinned resolve both returned200 with identical SHA; no access bypass",
+      "classification": "tool retrieval limitation"
+    },
+    {
+      "phase": "earlier plan",
+      "error": "Candidate02 first-day priority assumed the plain greedy draft class; actual released architecture has selector",
+      "resolution": "Corrected source-path targeting and documented superseding01/06/09 sequence",
+      "classification": "planning error discovered before any accepted serving request"
+    },
+    {
+      "phase": "execution",
+      "error": "No serving job exists; GPU/native validation is still unavailable locally",
+      "resolution": "Prepared isolated native fixture; no denied check repeated or paid hardware ordered",
+      "classification": "outstanding measurement gate"
+    }
+  ]
+}

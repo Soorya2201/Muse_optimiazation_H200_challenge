@@ -1,0 +1,20 @@
+{
+  "scope": "Source patch/package verification only; no GPU, numerical, serving or throughput validation.",
+  "base": "297e54fd105e974cdf401e5b4d20253a22c16f90",
+  "patches": [
+    {
+      "patch": "serving/candidates/08_marlin_norm_overlap.diff",
+      "sha256": "da29f689e85fb8e14a8a429608902c3da3f7d03b5975ebaf23851a9cd801e108",
+      "bytes": 1343,
+      "maximum_added_line_bytes": 74,
+      "applies_to_base": true,
+      "python_syntax": true,
+      "files": [
+        {
+          "path": "python/sglang/srt/models/muse_spark.py",
+          "sha256": "c4f70af5859a8cd7db49baf4a8f057b39fbdd57c68540f751fffc48780a12bc3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+diff --git a/python/sglang/kernels/ops/speculative/draft_head_collective.py b/python/sglang/kernels/ops/speculative/draft_head_collective.py
+new file mode 100644
+index 0000000..a035f13
+--- /dev/null
++++ b/python/sglang/kernels/ops/speculative/draft_head_collective.py
+@@ -0,0 +1,73 @@
++"""Lossless value/ID transport for one-collective distributed greedy sampling."""
++
++import torch
++import triton
++import triton.language as tl
++
++
++@triton.jit
++def _pack_greedy_pairs(
++    values,
++    indices,
++    pairs,
++    n: tl.constexpr,
++    vocab_start: tl.constexpr,
++    BLOCK: tl.constexpr,
++):
++    offsets = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
++    value = tl.load(values + offsets, offsets < n, other=0).to(tl.float32)
++    index = tl.load(indices + offsets, offsets < n, other=0).to(tl.int64)
++    # FP16/BF16 -> FP32 is lossless. Transport the bits, without quantization
++    # or floating-point conversion of the potentially large token IDs.
++    bits = value.to(tl.int32, bitcast=True).to(tl.int64)
++    tl.store(pairs + 2 * offsets, bits, offsets < n)
++    tl.store(pairs + 2 * offsets + 1, index + vocab_start, offsets < n)
++
++
++@triton.jit
++def _select_greedy_pairs(
++    gathered,
++    output,
++    n: tl.constexpr,
++    tp_size: tl.constexpr,
++    RANKS: tl.constexpr,
++    BLOCK: tl.constexpr,
++):
++    offsets = tl.program_id(0) * BLOCK + tl.arange(0, BLOCK)
++    ranks = tl.arange(0, RANKS)
++    valid = (ranks[:, None] < tp_size) & (offsets[None, :] < n)
++    address = (ranks[:, None] * n + offsets[None, :]) * 2
++    bits = tl.load(gathered + address, valid, other=0).to(tl.int32)
++    values = bits.to(tl.float32, bitcast=True)
++    is_nan = valid & (values != values)
++    has_nan = tl.max(is_nan.to(tl.int32), axis=0) != 0
++    maximum = tl.max(tl.where(valid & ~is_nan, values, -float("inf")), axis=0)
++    # Match torch.argmax: first NaN, otherwise first maximum. Rank order,
++    # rather than token-ID order, preserves the existing sampler's tie rule.
++    matches = valid & tl.where(has_nan[None, :], is_nan, values == maximum[None, :])
++    rank = tl.min(tl.where(matches, ranks[:, None], RANKS), axis=0)
++    token = tl.load(gathered + (rank * n + offsets) * 2 + 1, offsets < n, other=0)
++    tl.store(output + offsets, token, offsets < n)
++
++
++def pack_greedy_pairs(
++    local_max: torch.Tensor,
++    local_arg: torch.Tensor,
++    pairs: torch.Tensor,
++    vocab_start: int,
++) -> None:
++    n = local_max.numel()
++    if n:
++        _pack_greedy_pairs[(triton.cdiv(n, 256),)](
++            local_max, local_arg, pairs, n, vocab_start, 256
++        )
++
++
++def select_greedy_pairs(
++    gathered: torch.Tensor, output: torch.Tensor, tp_size: int
++) -> None:
++    n = output.numel()
++    if n:
++        _select_greedy_pairs[(triton.cdiv(n, 128),)](
++            gathered, output, n, tp_size, triton.next_power_of_2(tp_size), 128
++        )
+diff --git a/python/sglang/srt/speculative/dflash_worker_v2.py b/python/sglang/srt/speculative/dflash_worker_v2.py
+index 27b845e..ce99119 100644
+--- a/python/sglang/srt/speculative/dflash_worker_v2.py
++++ b/python/sglang/srt/speculative/dflash_worker_v2.py
+@@ -14,6 +14,10 @@ from sglang.kernels.ops.speculative.dflash import (
+     _prepare_dflash_draft_block_unchecked,
+     compute_dflash_correct_drafts_and_bonus,
+ )
++from sglang.kernels.ops.speculative.draft_head_collective import (
++    pack_greedy_pairs,
++    select_greedy_pairs,
++)
+ from sglang.kernels.ops.speculative.dspark.dspark_accept import (
+     accept_sampling,
+ )
+@@ -139,6 +143,8 @@ class _DflashDraftSampler:
+ 
+     tp=1: plain argmax over the local (full) vocab shard.
+     tp>1: per-rank shard (max, global id) -> all-gather -> first-max select.
++    CUDA FP16/BF16/FP32 maxima and int64 IDs travel as one lossless pair,
++    reducing the two collectives to one while preserving first-rank ties.
+     Tie resolution is bit-exact vs a full-vocab argmax: ranks own contiguous
+     ascending vocab shards and torch.argmax returns the FIRST max index.
+     No added-vocab support (the builder bails to eager in that case).
+@@ -157,6 +163,11 @@ class _DflashDraftSampler:
+         device = weight.device
+         self.out = torch.empty((max_tokens,), dtype=torch.int64, device=device)
+         if self.tp_size > 1:
++            self._single_gather = (
++                weight.is_cuda
++                and is_cuda()
++                and weight.dtype in (torch.float16, torch.bfloat16, torch.float32)
++            )
+             # Static buffers (fixed addresses) keep the in-graph select replay-safe.
+             self.local_max = torch.empty(
+                 (max_tokens,), dtype=weight.dtype, device=device
+@@ -164,6 +175,14 @@ class _DflashDraftSampler:
+             self.local_arg = torch.empty(
+                 (max_tokens,), dtype=torch.int64, device=device
+             )
++            if self._single_gather:
++                self.local_pairs = torch.empty(
++                    (max_tokens, 2), dtype=torch.int64, device=device
++                )
++                self.gathered_pairs = torch.empty(
++                    (self.tp_size * max_tokens, 2), dtype=torch.int64, device=device
++                )
++                return
+             self.gathered_max = torch.empty(
+                 (self.tp_size * max_tokens,), dtype=weight.dtype, device=device
+             )
+@@ -196,6 +215,13 @@ class _DflashDraftSampler:
+         local_max = self.local_max[:n]
+         local_arg = self.local_arg[:n]
+         torch.max(logits, dim=-1, out=(local_max, local_arg))
++        if self._single_gather:
++            local_pairs = self.local_pairs[:n]
++            gathered_pairs = self.gathered_pairs[: self.tp_size * n]
++            pack_greedy_pairs(local_max, local_arg, local_pairs, self.org_vocab_start)
++            self.tp_group.all_gather_into_tensor(gathered_pairs, local_pairs)
++            select_greedy_pairs(gathered_pairs, self.out[:n], self.tp_size)
++            return
+         if self.org_vocab_start:
+             local_arg.add_(self.org_vocab_start)
+         gathered_max = self.gathered_max[: self.tp_size * n]
