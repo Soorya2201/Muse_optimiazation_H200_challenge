@@ -30,7 +30,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install pinned Linux compiler wheel
-        run: python -m pip install --only-binary=:all: --no-deps --require-hashes -r tools/requirements-serving-aot.txt
+        run: |
+          python -m pip install --only-binary=:all: --no-deps --require-hashes -r tools/requirements-serving-aot.txt
       - name: Compile exact frozen kernels for Hopper
         env:
           TRITON_CACHE_DIR: ${{ runner.temp }}/muse-triton-cache
