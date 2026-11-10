@@ -302,3 +302,28 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
   preserve failure/assembly artifacts. GPU/NCCL/graphs/quality/TTFT/performance
   remain required even if offline compilation succeeds. No fastest composition
   or new serving rank is implied.
+
+### Offline compiler result
+
+- CIrun42768219289 oncfbaf73 failed workflow parsing before any job. Local
+  Ruby parsing reproduces the YAML mapping error at the unquoted pip flag's
+  colon. Changed that command to a block scalar; no kernel/candidate change.
+- Specific next run42768362132 on446889a completed successfully. Actual
+  Triton3.8.0/bundledptxas12.9.86 compiled and assembled25specializations
+  across five kernel bodies:14selector,9greedy,2map. Generated PTX8.8
+  targets sm_90a. This is not an audit of the organizer's CUDA13 image.
+- Downloaded private artifacts;125assembly/IR hashes match the report,25
+  cubins have CUDA ELFmachine190, and source/tool/CIcommit identities match.
+  Permanent253721Bzip and rawCIlog archived privately, along with compiled/
+  verified/source-audit JSON. Both CI runs are terminal; no live wait remains.
+- This closes actual code-generation/assembly for those signatures. It does
+  not run GPU numerics, collectives, SGLang host wrappers, graphs, quality,
+  TTFT or timing. All nine candidate/current07/Humming source hashes unchanged.
+  No native runtime win, scored submission or rank claim. Continue through
+  real native/full-model gates when official/existing hardware is available.
+- One final documentation patch used a stale wrapped-line anchor and failed
+  atomically; corrected the anchor, with no partial edits or source changes.
+
+- Final git whitespace verification rejected trailing whitespace in the raw
+  provider log atline148. Preserved identical raw bytes as gzip with hashes
+  instead of editing that log or bypassing the check. No source/compiler change.

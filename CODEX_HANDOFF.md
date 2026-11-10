@@ -1,5 +1,22 @@
 # Current handoff: serving challenge (November9)
 
+Latest Nov10: actual offline Hopper compilation now passes in private GitHub
+CPU CI. Run42768362132,commit446889ad768d2e52ebe2d025af342ecacb7df4b2,
+25specializations across5exactkernelbodies from frozen02/04/09(9greedy,
+2map,14selector). Triton3.8.0, bundledptxas12.9.86, PTX8.8targetsm_90a;
+not an audit of actual organizerCUDA13image. Source/decorators extracted with
+identicalAST andmanifestSHA; no hostTorchwrapper or mockedcompiler. Downloaded
+archive253721B contains125assembly/IRfiles+generatedmodules/metadata; all
+filehashes/source/tool/CI-SHAverified,25ELFmachine190cubins. Rawprivatezip/log
+inresearch/serving/TRITON_AOT*, reportsinserving/TRITON_AOT_COMPILED/VERIFIED.
+GPU kernel execution=false; native numeric/NCCL/SGLang/graphs/quality/TTFT/
+timing remainunproven. No compiler source change to any candidate/current07.
+Initialextractornewlinebugfailedmanifesthash; fixedbeforeCI,failedplanretained.
+InitialCI42768219289failedYAMLbeforejobs(unquotedpipflagcolon); fixedblockscalar,
+originalRubysyntaxerrorreproduced. BothCIrunsterminal;no verifiedwaitremains.
+Workflowread-only,servingbranchpaths,bounded8min; noOKCrequestorGPUrental.
+Prior6e3eff8turn andthiscompilerturnareconcreteprogress,notgoalcompletion.
+
 Latest Nov10 correction supersedes earlier first-day01/06/02 guidance:
 public DFlash2 config46c90f412549c472941a68382d91a99e5e6372a0 declares
 DFlash2DraftModel,selector_rank256/top_k16,block8,vocab202048. Pinned source

@@ -35,16 +35,31 @@ python tools/compile_serving_triton_offline.py --plan-only --output-dir /tmp/aot
 python tools/compile_serving_triton_offline.py --output-dir /tmp/aot-compile-fresh
 ```
 
-Only source-plan mode has run at this initial checkpoint:25 planned,0 compiled,
-no GPU execution. The first extractor attempt lost the added source's final
+The [actual compiler run](https://github.com/Soorya2201/Muse_optimiazation_H200_challenge/actions/runs/42768362132)
+passed all25 specializations on commit446889a. Downloaded artifacts were
+verified against the report:125 assembly/IR hashes,25 CUDA ELF machine190
+cubins, Hopper PTX, matching source/tool/CI-commit identities and no GPU launch.
+The report records Triton3.8.0 and bundled ptxas12.9.86. This compiler toolchain
+is not an audit of the organizer's CUDA13 image. The durable private archive is
+`research/serving/TRITON_AOT_ASSEMBLIES_2026-11-10.zip`, with reports
+`TRITON_AOT_COMPILED_2026-11-10.json` and `TRITON_AOT_VERIFIED_2026-11-10.json`.
+Coverage is14selector,9greedy and2map specializations; no runtime numerical
+test occurred. The earlier local plan still truthfully records0compiled there.
+
+The first extractor attempt lost the added source's final
 newline before the next diff header; the existing source hash check rejected
 it. Fixed that parser and retained the failed plan receipt. No candidate or
-GPU kernel changed.
+GPU kernel changed. The first CI run42768219289 then failed workflow parsing
+before any job started: an unquoted pip flag contained a YAML colon delimiter.
+Local parsing of the original workflow reproduces that error. A block scalar
+fixed it, and the next source-changing push produced the successful run above.
+The failed workflow receipt/log history is retained; it is not a compiler or
+kernel failure. No live CI run remains from this experiment.
 
 The workflow runs on this serving branch only when its compiler inputs change,
 with read-only repository permissions and an8-minute job timeout. It preserves
-failed/partial artifacts and never submits an OKC job. Follow the specific CI
-run to terminal after the push; do not restart it after an observation timeout.
+failed/partial artifacts and never submits an OKC job. Follow any future
+specific CI run to terminal; do not restart it after an observation timeout.
 
 A successful compiler result proves code generation/assembly for the recorded
 compiler and signatures. It does not prove numerical behavior, pointer bounds,

@@ -1,10 +1,13 @@
 # Serving checkpoint — Nov 9 2026
 
-A new [offline Triton compiler gate](TRITON_OFFLINE_COMPILATION.md) is prepared
-for private GitHub CPU CI. It checks the actual five new kernels in02/04/09
-against Hopper using a pinned compiler, without launching a GPU kernel. Local
-source preparation passes25specializations; CI result is pending this push.
-This gate can establish compilation/assembly, not numerical or serving gains.
+The [offline Triton compiler gate](TRITON_OFFLINE_COMPILATION.md) now passes
+actual Hopper code generation/assembly in private CPU CI: five kernels from
+02/04/09 across25specializations. Verified125assembly hashes and25CUDAELF
+cubins against the frozen sources/tool/CI commit. Triton3.8.0/bundledptxas12.9.86
+is not a deployed-image audit. No GPU kernel was launched. This closes a
+compilation gap; numerical behavior, NCCL/SGLang, graphs and performance remain
+unproven. Run42768362132 succeeded after fixing a recorded workflow syntax
+failure in42768219289; neither run remains live. Source patches are unchanged.
 
 Latest Nov10 source correction: the public DFlash2 configuration declares a
 rank256/top-k16 candidate selector. The pinned worker therefore selects its
@@ -20,8 +23,9 @@ It replaces two selector metadata all-gathers with one,8vs12bytes/candidate,
 then restores the original values/ID order for unchanged global top-k. It does
 not change the selector model, dense head, local top-k or sampling.196,608 CPU
 protocol values and2,304 exact-function cases pass;216 use one collective and
-2,088 keep stock fallbacks. Triton/CUDA/NCCL/graphs and serving gains remain
-unproven. The eight-Hopper native head-path harness has passed source-plan
+2,088 keep stock fallbacks. Offline Triton compilation passes separately;
+CUDA numerics/NCCL/graphs and serving gains remain unproven. The eight-Hopper
+native head-path harness has passed source-plan
 mode only.09 is isolated; no new combined/current patch was selected.
 
 [Measurement intake](MEASUREMENT_INTAKE.md) now uses existing response metadata
@@ -89,14 +93,14 @@ diffs and downloaded current rules are committed and reproducible.
 | Candidate | Mechanism | State |
 |---|---|---|
 | [01_ep_route_density.diff](candidates/01_ep_route_density.diff) | Correct Marlin's expected expert occupancy using global expert count for the global token batch. Adapted from hariappi's licensed public fix to the new module path. | CPU policy checks pass; no own GPU/serving result |
-| [02_draft_single_collective.diff](candidates/02_draft_single_collective.diff) | Transport the draft head's maximum value and full int64 token ID in one all-gather; fuse global selection. Preserve stock first-rank ties/NaNs and unchanged dense GEMM. | CPU protocol/class tests pass; Triton/NCCL/graphs pending |
+| [02_draft_single_collective.diff](candidates/02_draft_single_collective.diff) | Transport the draft head's maximum value and full int64 token ID in one all-gather; fuse global selection. Preserve stock first-rank ties/NaNs and unchanged dense GEMM. | CPU protocol/class and offline Triton compilation pass; NCCL/GPU/graphs pending |
 | [03_combined.diff](candidates/03_combined.diff) | Both mechanisms together | Packaging passes; evaluate only after isolated results |
-| [04_fused_expert_map.diff](candidates/04_fused_expert_map.diff) | Fuse int32 cast, local expert mapping and dropped-route selection into one CUDA kernel; retain CPU/noncontiguous fallback |480 CPU fallback cases pass; CUDA branch uncompiled/unrun |
+| [04_fused_expert_map.diff](candidates/04_fused_expert_map.diff) | Fuse int32 cast, local expert mapping and dropped-route selection into one CUDA kernel; retain CPU/noncontiguous fallback |480 CPU fallback cases and offline Triton compilation pass; GPU execution unrun |
 | [05_combined_with_expert_map.diff](candidates/05_combined_with_expert_map.diff) |01+02+04 | Packaging only |
 | [06_local_alignment_prefix.diff](candidates/06_local_alignment_prefix.diff) | Align local expert buckets and enable existing Marlin sorted/inactive-prefix specialization after global-to-local mapping |420 exact-method CPU contract cases/840 instrumented GEMM calls pass; native kernels untested |
 | [07_all_candidates.diff](candidates/07_all_candidates.diff) | All four mechanisms | Packaging only; not a proven strongest submission |
 | [08_marlin_norm_overlap.diff](candidates/08_marlin_norm_overlap.diff) | Move the same pre-expert norm before the existing router join on non-SP CUDA Marlin |4,320 paired CPU cases and packaging pass; native scheduling/math/performance unproven |
-| [09_selector_single_collective.diff](candidates/09_selector_single_collective.diff) | One smaller lossless collective in the released DFlash2 selector's candidate top-k |196,608 CPU protocol values/2,304 exact-function cases and source plan pass; native validation pending |
+| [09_selector_single_collective.diff](candidates/09_selector_single_collective.diff) | One smaller lossless collective in the released DFlash2 selector's candidate top-k |196,608 CPU protocol values/2,304 exact-function cases and offline Hopper compilation pass; native runtime validation pending |
 
 Candidate 03 is 7,065 bytes across 3 files. The latest development checkout and
 `current/patch.diff` match candidate 07, 12,186 bytes across 4 files. Longest added

@@ -1,0 +1,157 @@
+{
+  "verified_utc": "2026-11-10T06:31:14.296395+00:00",
+  "scope": "Compiler/source/artifact identities only; no GPU execution, memory-safety, numerical or performance proof",
+  "source_identity": [
+    {
+      "helper": "greedy",
+      "source_sha256": "4b493eb3f614f92a801e81637ad61ca1d1a857adb16f85f2f4a6b301b476caef",
+      "extracted_module_sha256": "5a1d97997ad6ebdf39efec2358d316e0711d7928ea1687b91e0de05bdf445e5a"
+    },
+    {
+      "helper": "map",
+      "source_sha256": "c1eb33ed94bb3ed5da24a9f3704b4765e24776b41b5b07cbd70c57d026e12826",
+      "extracted_module_sha256": "5940396365df110628aed97d7f2509dd593b7923adbd782a079d5d486db99e38"
+    },
+    {
+      "helper": "selector",
+      "source_sha256": "d9d89fc56d65ef02f786e660145482b94e5bc93298c4c3082a4fda26e14dfecd",
+      "extracted_module_sha256": "d2dba6ff3a3884fb531d34cac319e0c93438cd7f2c0355f75f21fdf459daeb65"
+    }
+  ],
+  "ELF_cubins": [
+    {
+      "case": "greedy_pack_fp16",
+      "ELF_machine": 190,
+      "sha256": "e11b6f45a5bf4464898ccda27034b72bbf18ee8e88fee87f11d9229c75fe78b0"
+    },
+    {
+      "case": "greedy_pack_bf16",
+      "ELF_machine": 190,
+      "sha256": "367762da8433bb69a454a275b63c24e8840127c7732863fe68b7dacb9018df2f"
+    },
+    {
+      "case": "greedy_pack_fp32",
+      "ELF_machine": 190,
+      "sha256": "3408b35bbd90f14e69c307ee0f07987895941524ef3ab5109294e7378c7505fe"
+    },
+    {
+      "case": "greedy_select_tp2_n7",
+      "ELF_machine": 190,
+      "sha256": "d7f81fea437640b3cfdafdb1f29b8726b72fe2bce863ec236e0c510795e31133"
+    },
+    {
+      "case": "greedy_select_tp2_n224",
+      "ELF_machine": 190,
+      "sha256": "8d87f9f6ba4e2f0415b66a9bdaf14fed9d373a5663ebab0604aaf2e770b1892c"
+    },
+    {
+      "case": "greedy_select_tp3_n7",
+      "ELF_machine": 190,
+      "sha256": "19183a99f6203abda30ccc9c045d04a5c0f3502206b5ca1add2b087ffe54de8b"
+    },
+    {
+      "case": "greedy_select_tp3_n224",
+      "ELF_machine": 190,
+      "sha256": "985ee9724b4f2ce4a0a9a71f428ca7a43692f4eaf1131cb132ab7f9a4602b873"
+    },
+    {
+      "case": "greedy_select_tp8_n7",
+      "ELF_machine": 190,
+      "sha256": "3e0591672752e9da0bde16645ca86d57ebc59cde4084f11c7c2b1d6079484712"
+    },
+    {
+      "case": "greedy_select_tp8_n224",
+      "ELF_machine": 190,
+      "sha256": "d872db05c1e3f08972dc22635a935bccf85e6ea4cfb781652bc8aff60c7db828"
+    },
+    {
+      "case": "map_i32",
+      "ELF_machine": 190,
+      "sha256": "836124d23ae7ed54d256878bc2cf5db46e810672ad7823827200f66f5095590a"
+    },
+    {
+      "case": "map_i64",
+      "ELF_machine": 190,
+      "sha256": "ce592f0adad133e83158aef2492daf415ad997a669efcff47028fd5699aed837"
+    },
+    {
+      "case": "selector_pack_fp16_i32_strided0",
+      "ELF_machine": 190,
+      "sha256": "c3114bd7aaee6be2445a5885cce4a482195d85d76619416616d9c80a0d2217da"
+    },
+    {
+      "case": "selector_pack_fp16_i32_strided1",
+      "ELF_machine": 190,
+      "sha256": "63255b57a126b50728db1ad50451a68d668a3a814d45f336e8b886c70a63975f"
+    },
+    {
+      "case": "selector_pack_fp16_i64_strided0",
+      "ELF_machine": 190,
+      "sha256": "6a2e21f45c184229f63ad973de625324989b2b4ac2e06f0c527a6fa63effc345"
+    },
+    {
+      "case": "selector_pack_fp16_i64_strided1",
+      "ELF_machine": 190,
+      "sha256": "5c7fd4b0e4d37eb23744e0fce68fd3ec096ad28fcbca1ae9e2bf217695e387bd"
+    },
+    {
+      "case": "selector_pack_bf16_i32_strided0",
+      "ELF_machine": 190,
+      "sha256": "984151c957e33de912070fd2143d46d2deca464212c5c119ba7be3c27e2becd1"
+    },
+    {
+      "case": "selector_pack_bf16_i32_strided1",
+      "ELF_machine": 190,
+      "sha256": "ed54a5a0c5790322977fb2d28173791642600c94482135c695b71e02914131ff"
+    },
+    {
+      "case": "selector_pack_bf16_i64_strided0",
+      "ELF_machine": 190,
+      "sha256": "9855d7d04149a6eb4891ddfdfff9d579ecb52c484af09ce10e7b0e083def0e25"
+    },
+    {
+      "case": "selector_pack_bf16_i64_strided1",
+      "ELF_machine": 190,
+      "sha256": "42c4bc0585178af68e26271a7d60257d0a6fc72d9a9c18c6352c7f223022954a"
+    },
+    {
+      "case": "selector_pack_fp32_i32_strided0",
+      "ELF_machine": 190,
+      "sha256": "bfdbc69ccdc0b5e8ead7c323592cf90ec4c93d7bcceb8604106f58265aece39b"
+    },
+    {
+      "case": "selector_pack_fp32_i32_strided1",
+      "ELF_machine": 190,
+      "sha256": "f0bc334e0ebfec3dbb6e73705649ca1d8106f91f80a93c2b9d425cd6200297d5"
+    },
+    {
+      "case": "selector_pack_fp32_i64_strided0",
+      "ELF_machine": 190,
+      "sha256": "c853e8462369685647c67e2d38fc73cc7a171d699421f8a356004ff89feda948"
+    },
+    {
+      "case": "selector_pack_fp32_i64_strided1",
+      "ELF_machine": 190,
+      "sha256": "caec9a2ec1c8591aae310efb68c3d55e04dc0170856781d20b60ac0e545e4284"
+    },
+    {
+      "case": "selector_unpack_strided0",
+      "ELF_machine": 190,
+      "sha256": "b4f573e00eef1a588179c568993ee0a0274f25fe223c289fe51ed03a4b0fa18f"
+    },
+    {
+      "case": "selector_unpack_strided1",
+      "ELF_machine": 190,
+      "sha256": "9bf8420045b26f4d196419d55234e94dd041e1625f7e1bed5ca8d954409cdb52"
+    }
+  ],
+  "assembly_file_hashes_verified": 125,
+  "artifact_zip_sha256": "adee42e1e98ae6694a181d222ffdf233f966e66a946ddd4fe5f109906c627ec3",
+  "github_artifact_digest": "sha256:adee42e1e98ae6694a181d222ffdf233f966e66a946ddd4fe5f109906c627ec3",
+  "artifact_digest_matches_zip": true,
+  "original_workflow_parse_failure": {
+    "returncode": 1,
+    "stderr": "/opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/psych/parser.rb:62:in 'Psych::Parser#_native_parse': (<unknown>): mapping values are not allowed in this context at line 33 column 54 (Psych::SyntaxError)\n\tfrom /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/psych/parser.rb:62:in 'Psych::Parser#parse'\n\tfrom /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/psych.rb:457:in 'Psych.parse_stream'\n\tfrom /opt/homebrew/Cellar/ruby/4.0.5/lib/ruby/4.0.0/psych.rb:401:in 'Psych.parse'\n\tfrom -e:1:in '<main>'\n"
+  },
+  "frozen_source_changes": false
+}

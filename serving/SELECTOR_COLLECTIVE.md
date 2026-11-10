@@ -50,6 +50,11 @@ the same value-bit layout, so no new tie-breaking algorithm is introduced.
 
 ## Evidence and next gates
 
+- [Offline Hopper compilation](TRITON_OFFLINE_COMPILATION.md) now passes14
+  selector specializations in actual Triton3.8.0/ptxas, part of25total cases
+  across the five added kernels. Verified CUDA cubins/IR/PTX are archived
+  privately. This is compilation/assembly, not CUDA numerical execution or
+  proof of compatibility with the organizer's installed image.
 - Source packaging/AST checks pass in `PATCH_MANIFEST_SELECTOR_2026-11-10.json`.
 - `SELECTOR_COLLECTIVE_CPU_2026-11-10.json`:196,608 protocol values, including
   every FP16/BF16 encoding and random FP32 bits; boundary IDs through2^31-1.

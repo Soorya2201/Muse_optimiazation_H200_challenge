@@ -1,5 +1,11 @@
 # Native validation prepared for an existing Hopper node
 
+The five added Triton kernels now pass [offline Hopper compilation](TRITON_OFFLINE_COMPILATION.md)
+in private CPU CI across25specializations. Reports and125hashedassembly files
+are archived. No GPU kernel was launched. The real-GPU commands below remain
+unrun; successful source compilation does not satisfy their numerical,
+collective, graph or timing gates.
+
 The released DFlash2 selector now has a separate eight-Hopper transport/head
 fixture: `tools/benchmark_serving_selector_collective.py`. See
 [SELECTOR_COLLECTIVE.md](SELECTOR_COLLECTIVE.md). It uses base dflash.py and
