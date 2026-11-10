@@ -1,5 +1,13 @@
 # Run log
 
+Owner-requested offline research, Nov10UTC/Nov9Pacific: added an18-concept
+playbook from12primarysources, six local-source hashes and a conditional
+Marlin pre-norm overlap design. Added analytical cost screening;170math
+checks pass and an unmeasured template returns needs_measurements/no ranking.
+No GPU result, serving run, submission change or rank improvement. See
+serving/RESEARCH_PLAYBOOK_2026-11-10.md and the experiment ledger. Preserved
+DeepEP retrieval repair and public model-configHTTP401 as research limits.
+
 Execution gate rechecked Nov9at23:48UTC: official candidate01check request
 again rejected before job creation, opening Nov12at9amPacific. Saved exact
 response and fresh resource snapshot (empty serving jobs; local CUDA devices0).

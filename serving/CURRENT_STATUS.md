@@ -1,5 +1,14 @@
 # Serving checkpoint — Nov 9 2026
 
+Owner requested continued concept research while GPU execution is unavailable.
+The [new research playbook](RESEARCH_PLAYBOOK_2026-11-10.md) covers 18 concept
+families from 12 primary sources, with bounded read scopes. It adds a
+source-traced pre-norm overlap design and an analytical cost-screening tool.
+The tool passes 170 math identity/boundary checks; its empty measurement
+template produces `needs_measurements`, not a winning candidate. No runtime
+patch, native run or score was added in this research pass. Dates in the new
+receipts use Nov 10 UTC (Nov 9 Pacific).
+
 The project objective is now [winning the serving challenge](OBJECTIVE.md).
 There is no official serving run, score or verified rank for this work yet.
 Two check requests were rejected before a job was created because serving is closed.

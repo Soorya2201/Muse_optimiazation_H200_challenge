@@ -1,0 +1,5 @@
+{
+  "state": "needs_measurements",
+  "native_gpu_executed": false,
+  "message": "No costs or acceptance observations supplied; no candidate ranking computed."
+}

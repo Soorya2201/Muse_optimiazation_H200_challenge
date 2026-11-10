@@ -1,5 +1,23 @@
 # Current handoff: serving challenge (November9)
 
+Latest owner explicitly requested concept research until GPU execution opens.
+RESEARCH_PLAYBOOK_2026-11-10.md now covers 18 families/12 primary sources with
+versioned bounded read scopes. Six official-base source hashes recorded.
+tools/serving_cost_models.py passes 170 synthetic math/boundary checks, using
+histograms not IID acceptance, full DFlash draft cost, actual fixed active
+batch distinct from client concurrency, and caller-supplied cost intervals.
+Empty template correctly yields needs_measurements/no ranking. No runtime
+controller, native benchmark or submission change. Final tool SHA in receipts.
+New source-derived design at serving/designs/HOPPER_NORM_OVERLAP.md: existing
+router/projection streams already permit overlap; Marlin norm is after join.
+Potential same-op norm-before-join saving min(N,max(0,R-P)) under fixed phase
+durations; no gain when router already finishes first, contention can regress.
+Do not implement/claim it without trace evidence and native tests. Primary
+papers and pinned DeepEP README screened, no new library execution. Public
+released-model config read got401; no dimensions invented/access bypass.
+Research was authorized despite the unchanged GPU execution blocker. Continue
+using source/CPU evidence at its proper scope; frozen01..07/prototype unchanged.
+
 Execution-gate checkpoint: at 23:48 UTC candidate 01's check was again rejected
 before job creation; opens Nov 12 at 9 am PT. Fresh serving jobs are empty,
 priority null, local arm64 Darwin with zero CUDA devices. See EXECUTION_GATE_RECHECK,

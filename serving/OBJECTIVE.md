@@ -12,6 +12,11 @@ and document attempted mechanisms, failures, scope and next experiments. Develop
 new mechanisms where evidence supports them; do not claim historical novelty
 without a defensible prior-art review. Push work to the existing private GitHub.
 
+After the GPU-execution blocker was recorded, the owner explicitly requested
+continued concept learning and approach development until execution is
+available. This authorizes useful offline research/design. It does not change
+the winning objective or turn analytical/CPU evidence into measured success.
+
 Success requires actual full-model validation and the organizer's final winning
 result. A CPU test, an isolated component gain or a proposed architecture does
 not establish that result. The organizer's cached announcement says the serving

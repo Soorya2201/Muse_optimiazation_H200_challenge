@@ -1,5 +1,11 @@
 # Serving optimization library
 
+The [concept research playbook](RESEARCH_PLAYBOOK_2026-11-10.md) expands this
+library to 18 concept families with 12 primary sources, exact read scopes and
+an experiment decision order. It includes a source-derived normalization
+overlap design and a cost-screening tool with explicit uncertainty/units.
+The tool has only mathematical self-check evidence; no GPU winner is inferred.
+
 Updated November 9, 2026. This is a bounded research and implementation library,
 not an exhaustive web survey or evidence of a winning score. Exact public
 commits, paths, Git blobs and download hashes are recorded in the discovery

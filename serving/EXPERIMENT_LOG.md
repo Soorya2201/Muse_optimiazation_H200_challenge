@@ -175,3 +175,45 @@ Preserve invalid/truncated evidence; no success or throughput claim from it.
   source/candidate hashes and CPU-only evidence. Goal status `blocked` is to
   be requested after this checkpoint is pushed; neither the stale kernel
   tracker objective nor current serving objective is complete.
+
+## Nov 10 UTC / Nov 9 Pacific: owner-requested concept research
+
+- Owner explicitly requested continued learning/approach development while
+  execution is unavailable. Resumed useful offline research, not a GPU job
+  or a claim that the execution blocker has disappeared.
+- Reviewed bounded sections from 12 primary sources: DFlash, original
+  speculative decoding, Sequoia, SGLang/RadixAttention, PagedAttention, FA3,
+  CUDA PDL, NCCL graph requirements, pinned HiCache design, Sarathi-Serve,
+  pinned DeepEP README and prior pinned Humming sources. Versions/read scopes
+  saved in CONCEPT_SOURCES; six official-base source hashes recorded separately.
+  No whole-paper/device-source audit or exhaustive-web claim.
+- Developed an 18-family playbook connecting mechanisms to fixed workload,
+  precision, output, memory, capture/ordering and TTFT constraints. Important
+  distinction: distributional speculative correctness is insufficient to
+  assume stock-output/RNG agreement after changing verification cadence.
+- Source trace: projection/router work is already arranged on separate
+  streams. Marlin pre-expert normalization happens after the router join.
+  Prepared a design to move that same out-of-place norm before the join, with
+  ideal saving min(N,max(0,R-P)). Contention/host gaps may erase or reverse it.
+  No new patch implemented; only profile-confirmed slack justifies the test.
+- Implemented analytical cost models: whole-step Amdahl sensitivity, exact
+  accepted-prefix survival/histogram identity with bonus/tail cap, explicit
+  full-block DFlash cost, actual fixed active batch size distinct from client
+  concurrency, supplied cost bounds and no automatic runtime policy.
+  Full-block histograms are counterfactual screens, not evidence of future
+  steady-state acceptance. Real graph-bucket/rollback/RNG costs remain needed.
+- Initial163math checks passed. Extended with seven actual-batch/concurrency
+  unit cases; final170checks pass. Both unmeasured-template runs correctly
+  return needs_measurements without candidate ranking. Latest receipts include
+  tool/input hashes. These synthetic calculations are not GPU benchmarks.
+- DeepEP metadata request initially used a trailing slash and returned404;
+  corrected the URL, then pinned public README commit/hash. Not an access or
+  code-availability failure. CurrentV2/API examples are not a drop-in SGLang
+  adapter. No external device code imported, installed or executed.
+- Public released-model config request returnedHTTP401 after the web tool
+  could not open it. Preserved failure; no access bypass or weight download.
+  Did not invent full-model dimensions from historical kernel floors. The
+  old MoE TASK explicitly uses busiest-rank skew; averages are insufficient.
+- No official request repeated, new submission diff, native timing, serving
+  score or rank. Frozen candidate/prototype hashes are preserved. Publish
+  research/model/design artifacts to the existing private branch and draft PR.

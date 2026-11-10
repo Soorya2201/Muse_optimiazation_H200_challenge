@@ -1,0 +1,102 @@
+{
+  "captured_utc": "2026-11-10T01:15:33.768584+00:00",
+  "scope": "Primary-source concept review, bounded section reads, not exhaustive literature or a measured optimization result. No paper performance figure is treated as this project's result.",
+  "sources": [
+    {
+      "id": "dflash",
+      "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
+      "url": "https://arxiv.org/html/2602.06036v2",
+      "version": "v2, 2026-05-28",
+      "read_scope": "Sections3.1/3.2, selected4.1 and5.5.4; not the whole paper.",
+      "transfer_lesson": "Parallel draft cost and accepted-token yield must be optimized jointly; inference-width studies are not proof for this fixed released drafter."
+    },
+    {
+      "id": "speculative",
+      "title": "Fast Inference from Transformers via Speculative Decoding",
+      "url": "https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf",
+      "version": "ICML2023",
+      "read_scope": "Introduction and cost theorem3.8/assumptions; not the entire PDF.",
+      "transfer_lesson": "Distribution preservation requires the verification algorithm; theoretical speedups assume cost/acceptance conditions."
+    },
+    {
+      "id": "sequoia",
+      "title": "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding",
+      "url": "https://arxiv.org/html/2402.12374v2",
+      "version": "v2, 2024-02-29",
+      "read_scope": "Section3.3 cost-aware tree optimizer and selected background; no tree implementation audit.",
+      "transfer_lesson": "Measure verifier cost as a function of actual hardware/workload; do not optimize acceptance alone or import a replacement drafter."
+    },
+    {
+      "id": "sglang",
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/724be4472168f31ba1c9ac630f15dec8-Paper-Conference.pdf",
+      "version": "NeurIPS2024",
+      "read_scope": "Section3 radix caching/eviction and selected appendix cache-aware scheduling; not full27pages.",
+      "transfer_lesson": "Prefix reuse and cache-aware scheduling can reduce repeated prefill; shared nodes need reference-count/lifetime correctness."
+    },
+    {
+      "id": "paged",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "url": "https://arxiv.org/html/2309.06180v1",
+      "version": "v1, 2023-09-12",
+      "read_scope": "Sections4.1/4.2/4.5, abstract; no full implementation audit.",
+      "transfer_lesson": "Memory allocation/sharing can determine feasible batching; page size trades locality against fragmentation."
+    },
+    {
+      "id": "fa3",
+      "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+      "url": "https://arxiv.org/html/2407.08608v1",
+      "version": "v1, 2024-07-11",
+      "read_scope": "Sections3.1/3.2, register-pressure discussion and selected appendix; not full paper.",
+      "transfer_lesson": "Asynchronous producer/consumer work trades register/shared-memory resources against overlap. Low-precision results are not automatically admissible."
+    },
+    {
+      "id": "pdl",
+      "title": "CUDA Programmatic Dependent Launch and Synchronization",
+      "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/programmatic-dependent-launch.html",
+      "version": "Current documentation accessed2026-11-10",
+      "read_scope": "Section4.5 semantics, visibility/synchronization, opportunistic concurrency and graph use.",
+      "transfer_lesson": "Overlap independent work, enforce producer readiness, and never depend on concurrent block residency for progress."
+    },
+    {
+      "id": "nccl",
+      "title": "Using NCCL with CUDA Graphs",
+      "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/cudagraph.html",
+      "version": "Documentation2.32.3, not proof of deployed version",
+      "read_scope": "Capture/launch requirements and multi-communicator caveats.",
+      "transfer_lesson": "Capture decisions and graph launches must be uniform over participating ranks; graph support does not remove collective ordering requirements."
+    },
+    {
+      "id": "hicache",
+      "title": "HiCache System Design and Optimization",
+      "url": "https://github.com/sgl-project/sglang/blob/297e54fd105e974cdf401e5b4d20253a22c16f90/docs/docs/advanced_features/hicache_design.mdx",
+      "version": "Official base297e54fd",
+      "read_scope": "Local pinned document: hierarchy, tier scope, writeback/prefetch policies, overlap and multi-rank synchronization.",
+      "transfer_lesson": "The fixed workload already enables host cache; optimize observed transfer/recompute stalls rather than enabling it again."
+    },
+    {
+      "id": "sarathi",
+      "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+      "url": "https://arxiv.org/html/2403.02310v3",
+      "version": "v3, 2024-06-17",
+      "read_scope": "Abstract and selected design/chunked-prefill passages; no source port.",
+      "transfer_lesson": "Scheduling must balance prefill and ongoing decode latency; throughput without interactivity compliance is insufficient."
+    },
+    {
+      "id": "deepep",
+      "title": "DeepEP",
+      "url": "https://github.com/deepseek-ai/DeepEP/tree/f6aa38fe06cd4a0489e7730365d4e0114970a2f3",
+      "version": "Exact public commitf6aa38fe",
+      "read_scope": "README introduction, requirements, BF16 input and wait/overlap sections; no device-code audit.",
+      "transfer_lesson": "Communication/compute overlap requires explicit readiness and valid expanded-row ownership; protocol/version changes are not drop-in fixes."
+    },
+    {
+      "id": "humming",
+      "title": "humming-kernels0.1.12",
+      "url": "https://pypi.org/project/humming-kernels/0.1.12/",
+      "version": "Exact package SHA recorded in prior reports",
+      "read_scope": "Prior pinned API/MMA/epilogue/tuning source audit; unchanged source files stored in repo.",
+      "transfer_lesson": "FP32 MMA does not imply FP32 inter-block partial reduction; keep the explicit no-Stream-K prototype guard."
+    }
+  ]
+}
